@@ -1,0 +1,48 @@
+{
+  "name": "github-trending-radar",
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "bin": {
+    "github-trending-radar": "./bin/cli.js",
+    "gtr": "./bin/cli.js"
+  },
+  "scripts": {
+    "digest:dry-run": "tsx scripts/send-trending-digest.ts --dry-run",
+    "digest:send": "tsx scripts/send-trending-digest.ts",
+    "radar:baseline": "tsx scripts/send-ai-developer-radar.ts --mode=daily --dry-run --baseline",
+    "radar:daily:dry-run": "tsx scripts/send-ai-developer-radar.ts --mode=daily --dry-run",
+    "radar:daily:send": "tsx scripts/send-ai-developer-radar.ts --mode=daily --send",
+    "radar:weekly:dry-run": "tsx scripts/send-ai-developer-radar.ts --mode=weekly --dry-run",
+    "radar:weekly:send": "tsx scripts/send-ai-developer-radar.ts --mode=weekly --send",
+    "radar:daily:sample": "RADAR_USE_SAMPLE_DATA=true tsx scripts/send-ai-developer-radar.ts --mode=daily --dry-run",
+    "radar:weekly:sample": "RADAR_USE_SAMPLE_DATA=true tsx scripts/send-ai-developer-radar.ts --mode=weekly --dry-run",
+    "typecheck": "tsc --noEmit --pretty false",
+    "test": "node --import tsx --test tests/**/*.test.ts"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^8.3.2",
+    "chalk": "^5.6.2",
+    "cheerio": "^1.1.2",
+    "citty": "^0.2.1",
+    "domhandler": "^6.0.1",
+    "dotenv": "^17.3.1",
+    "nodemailer": "^8.0.4",
+    "tsx": "^4.21.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.0",
+    "@types/nodemailer": "^7.0.2",
+    "typescript": "^5.9.2"
+  }
+}

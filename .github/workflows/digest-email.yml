@@ -1,0 +1,54 @@
+name: Daily Digest Email
+
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: daily-digest-email
+  cancel-in-progress: false
+
+jobs:
+  send-digest-email:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SMTP_HOST: ${{ secrets.SMTP_HOST }}
+      SMTP_PORT: ${{ secrets.SMTP_PORT }}
+      SMTP_SECURE: ${{ secrets.SMTP_SECURE }}
+      SMTP_USER: ${{ secrets.SMTP_USER }}
+      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      MAIL_FROM: ${{ secrets.MAIL_FROM }}
+      GMAIL_USER: ${{ secrets.GMAIL_USER }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      TRENDING_EMAIL_TO: ${{ secrets.TRENDING_EMAIL_TO }}
+      TRENDING_PROFILE_NOTE: ${{ vars.TRENDING_PROFILE_NOTE }}
+      TRENDING_PROFILE_KEYWORDS: ${{ vars.TRENDING_PROFILE_KEYWORDS }}
+      TRENDING_REPO_LIMIT: ${{ vars.TRENDING_REPO_LIMIT }}
+      TRENDING_RECOMMENDATION_LIMIT: ${{ vars.TRENDING_RECOMMENDATION_LIMIT }}
+      TZ: Asia/Shanghai
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Send digest email
+        run: pnpm digest:send
