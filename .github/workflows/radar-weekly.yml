@@ -1,0 +1,62 @@
+name: AI Developer Radar Weekly
+
+on:
+  schedule:
+    - cron: "0 1 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: ai-developer-radar-weekly
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  radar-weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+      FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+      NOTIFIER_CHANNELS: feishu
+      RADAR_REPO_LIMIT: ${{ vars.RADAR_REPO_LIMIT }}
+      RADAR_RECOMMENDATION_LIMIT: ${{ vars.RADAR_RECOMMENDATION_LIMIT }}
+      RADAR_PROFILE_KEYWORDS: ${{ vars.RADAR_PROFILE_KEYWORDS }}
+      TZ: Asia/Shanghai
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Send weekly radar
+        run: pnpm radar:weekly:send
+
+      - name: Commit radar snapshots
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/radar-store.json
+          git diff --cached --quiet || git commit -m "chore(radar): update weekly snapshots"
+          git push
