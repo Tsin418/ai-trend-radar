@@ -27,7 +27,15 @@ const envSchema = z.object({
   RADAR_EARLY_SIGNAL_WEEKLY_THRESHOLD: z.string().optional(),
   RADAR_PROFILE_KEYWORDS: z.string().optional(),
   RADAR_STORE_PATH: z.string().optional(),
-  RADAR_USE_SAMPLE_DATA: z.string().optional()
+  RADAR_USE_SAMPLE_DATA: z.string().optional(),
+  DEEPSEEK_API_KEY: z.string().optional(),
+  DEEPSEEK_BASE_URL: z.union([z.string().url(), z.literal('')]).optional(),
+  DEEPSEEK_MODEL: z.string().optional(),
+  LLM_ENRICHMENT_ENABLED: z.string().optional(),
+  LLM_ENRICHMENT_LIMIT: z.string().optional(),
+  LLM_README_MAX_CHARS: z.string().optional(),
+  LLM_TIMEOUT_MS: z.string().optional(),
+  LLM_MAX_RETRIES: z.string().optional()
 });
 
 export function getEnv() {

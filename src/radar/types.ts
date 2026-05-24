@@ -80,11 +80,23 @@ export interface RepoScore {
   signals: string[];
 }
 
+export interface RepoLLMSummary {
+  oneLiner: string;
+  problemSolved: string;
+  aiCategory: string;
+  whyTrending: string;
+  developerTakeaway: string;
+  targetUsers: string;
+  riskNotes: string;
+  confidence: 'high' | 'medium' | 'low';
+}
+
 export interface ScoredRadarRepository {
   repository: RadarRepository;
   score: RepoScore;
   whyItMatters: string;
   developerInsight: string;
+  llmSummary?: RepoLLMSummary;
 }
 
 export interface RadarDigest {

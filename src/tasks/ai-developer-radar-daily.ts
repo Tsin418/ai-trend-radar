@@ -1,5 +1,6 @@
-import { loadRadarProfile } from '../radar/config.js';
+import { getLLMEnrichmentConfig, loadRadarProfile } from '../radar/config.js';
 import { getLocalDateLabel } from '../radar/date.js';
+import { enrichRadarDigestWithLLM } from '../llm/repo-enricher.js';
 import { buildDailyRadarDigest } from '../renderers/daily-digest.js';
 import type { RadarRunOptions, RadarRunResult } from './ai-developer-radar-shared.js';
 import { appendErrorsToDigest, collectAndScoreRadarCandidates, getRadarLimits, maybeSendRadarDigest } from './ai-developer-radar-shared.js';
@@ -14,6 +15,14 @@ export async function runAiDeveloperRadarDaily(options: RadarRunOptions = {}): P
     const date = getLocalDateLabel();
     const baselineCreated = options.baselineOnly || storePathContext.scored.length === 0 || storePathContext.scored.every((item) => item.score.dailyStarDelta === null);
     let digest = buildDailyRadarDigest(storePathContext.scored, profile, date, recommendationLimit, baselineCreated);
+    const enriched = await enrichRadarDigestWithLLM(digest, getLLMEnrichmentConfig());
+    digest = enriched.digest;
+    if (enriched.warnings.length > 0) {
+      digest = {
+        ...digest,
+        dataNotes: [...digest.dataNotes, ...enriched.warnings.map((warning) => `LLM warning: ${warning}`)]
+      };
+    }
     digest = appendErrorsToDigest(digest, storePathContext.errors);
     const notify = await maybeSendRadarDigest(digest, options.send);
     storePathContext.store.recordDigestRun('daily', startedAt, 'success', digest.selectedProjects.length);

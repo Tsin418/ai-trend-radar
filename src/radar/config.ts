@@ -92,6 +92,13 @@ function parseNumber(value: string | undefined, fallback: number): number {
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
 }
 
+function parseBoolean(value: string | undefined, fallback: boolean): boolean {
+  if (value === undefined) return fallback;
+  const normalized = value.trim().toLowerCase();
+  if (!normalized) return fallback;
+  return ['true', '1', 'yes', 'on'].includes(normalized);
+}
+
 function parseCsv(value: string | undefined): string[] {
   return value?.split(',').map((item) => item.trim()).filter(Boolean) ?? [];
 }
@@ -168,4 +175,30 @@ export function getRadarRecommendationLimit(): number {
 
 export function getRadarStorePath(): string {
   return process.env.RADAR_STORE_PATH || 'data/radar-store.json';
+}
+
+export interface LLMEnrichmentConfig {
+  enabled: boolean;
+  apiKey?: string;
+  baseUrl: string;
+  model: string;
+  limit: number;
+  readmeMaxChars: number;
+  timeoutMs: number;
+  maxRetries: number;
+  cachePath: string;
+}
+
+export function getLLMEnrichmentConfig(): LLMEnrichmentConfig {
+  return {
+    enabled: parseBoolean(process.env.LLM_ENRICHMENT_ENABLED, true),
+    apiKey: process.env.DEEPSEEK_API_KEY,
+    baseUrl: process.env.DEEPSEEK_BASE_URL || 'https://api.deepseek.com',
+    model: process.env.DEEPSEEK_MODEL || 'deepseek-v4-flash',
+    limit: parseNumber(process.env.LLM_ENRICHMENT_LIMIT, 10),
+    readmeMaxChars: parseNumber(process.env.LLM_README_MAX_CHARS, 12_000),
+    timeoutMs: parseNumber(process.env.LLM_TIMEOUT_MS, 30_000),
+    maxRetries: parseNumber(process.env.LLM_MAX_RETRIES, 2),
+    cachePath: 'data/llm-enrichment-cache.json'
+  };
 }

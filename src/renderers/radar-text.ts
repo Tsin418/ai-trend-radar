@@ -7,17 +7,22 @@ function deltaText(value: number | null, suffix: string): string {
 function renderProject(item: ScoredRadarRepository, index?: number): string[] {
   const repo = item.repository;
   const score = item.score;
+  const summary = item.llmSummary;
   const prefix = index === undefined ? '-' : `${index}.`;
 
   return [
     `${prefix} ${repo.repoFullName}`,
+    `   GitHub: ${repo.repoUrl}`,
     `   Category: ${repo.category}`,
     `   Stars: ${repo.stars.toLocaleString()} (${deltaText(score.dailyStarDelta, '24h')}, ${deltaText(score.weeklyStarDelta, '7d')})`,
     `   Score: ${score.finalScore} | Risk: ${score.riskLevel}`,
-    `   What: ${repo.description || '暂无项目描述'}`,
-    `   Why it matters: ${item.whyItMatters}`,
-    `   Developer insight: ${item.developerInsight}`,
-    `   GitHub: ${repo.repoUrl}`
+    `   One-liner: ${summary?.oneLiner ?? repo.description ?? '暂无项目描述'}`,
+    `   Problem solved: ${summary?.problemSolved ?? 'LLM summary unavailable'}`,
+    `   Why worth watching: ${summary?.whyTrending ?? item.whyItMatters}`,
+    `   Developer takeaway: ${summary?.developerTakeaway ?? item.developerInsight}`,
+    `   Target users: ${summary?.targetUsers ?? 'LLM summary unavailable'}`,
+    `   Risk notes: ${summary?.riskNotes ?? 'LLM summary unavailable'}`,
+    `   LLM confidence: ${summary?.confidence ?? 'unavailable'}`
   ];
 }
 
@@ -50,18 +55,12 @@ export function renderRadarDigestText(digest: RadarDigest): string {
 
   if (digest.earlySignals.length > 0) {
     lines.push(digest.mode === 'weekly' ? '本周早期潜力项目' : 'Early Signals');
-    digest.earlySignals.forEach((item) => {
-      lines.push(`- ${item.repository.repoFullName}: total stars ${item.repository.stars.toLocaleString()}, 7d ${item.score.weeklyStarDelta === null ? '暂无基线' : `+${item.score.weeklyStarDelta}`}，${item.whyItMatters}`);
-    });
-    lines.push('');
+    digest.earlySignals.forEach((item, index) => lines.push(...renderProject(item, index + 1), ''));
   }
 
   if (digest.watchlistMovements.length > 0) {
     lines.push('Watchlist Movements');
-    digest.watchlistMovements.forEach((item) => {
-      lines.push(`- ${item.repository.repoFullName}: ${item.whyItMatters}`);
-    });
-    lines.push('');
+    digest.watchlistMovements.forEach((item, index) => lines.push(...renderProject(item, index + 1), ''));
   }
 
   if (digest.hotProjects.length === 0 && digest.earlySignals.length === 0 && digest.watchlistMovements.length === 0 && digest.selectedProjects.length > 0) {
