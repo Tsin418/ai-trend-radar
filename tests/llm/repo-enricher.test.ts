@@ -25,6 +25,7 @@ function baseOptions(cachePath = tempCachePath()): LLMEnrichmentConfig {
     readmeMaxChars: 500,
     timeoutMs: 1000,
     maxRetries: 0,
+    maxOutputTokens: 1200,
     cachePath
   };
 }

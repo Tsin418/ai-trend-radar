@@ -16,6 +16,7 @@ export interface DeepSeekClientOptions {
   model: string;
   timeoutMs: number;
   maxRetries: number;
+  maxOutputTokens: number;
 }
 
 export async function callDeepSeekJson<T>(
@@ -51,7 +52,9 @@ export async function callDeepSeekJson<T>(
               { role: 'user', content: params.userPrompt }
             ],
             response_format: { type: 'json_object' },
-            temperature: 0.2
+            thinking: { type: 'disabled' },
+            temperature: 0.2,
+            max_tokens: options.maxOutputTokens
           })
         });
 
