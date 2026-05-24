@@ -100,6 +100,6 @@ test('Feishu text renderer includes required radar fields', () => {
   assert.match(text, /AI Developer Radar｜Daily｜2026-05-24/);
   assert.match(text, /Why worth watching/);
   assert.match(text, /Developer takeaway/);
-  assert.match(text, /Risk notes/);
   assert.match(text, /GitHub: https:\/\/github\.com\//);
+  assert.doesNotMatch(text, /LLM summary unavailable/);
 });

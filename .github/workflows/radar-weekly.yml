@@ -28,6 +28,7 @@ jobs:
       LLM_README_MAX_CHARS: ${{ vars.LLM_README_MAX_CHARS }}
       LLM_TIMEOUT_MS: ${{ vars.LLM_TIMEOUT_MS }}
       LLM_MAX_RETRIES: ${{ vars.LLM_MAX_RETRIES }}
+      LLM_MAX_OUTPUT_TOKENS: ${{ vars.LLM_MAX_OUTPUT_TOKENS }}
       NOTIFIER_CHANNELS: feishu
       RADAR_REPO_LIMIT: ${{ vars.RADAR_REPO_LIMIT }}
       RADAR_RECOMMENDATION_LIMIT: ${{ vars.RADAR_RECOMMENDATION_LIMIT }}
@@ -66,5 +67,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/radar-store.json
-          git diff --cached --quiet || git commit -m "chore(radar): update weekly snapshots"
+          [ -f data/llm-enrichment-cache.json ] && git add data/llm-enrichment-cache.json
+          git diff --cached --quiet || git commit -m "chore(radar): update weekly snapshots and llm cache"
           git push

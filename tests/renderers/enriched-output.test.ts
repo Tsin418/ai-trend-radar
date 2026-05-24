@@ -10,7 +10,7 @@ import { buildDailyRadarDigest } from '../../src/renderers/daily-digest.js';
 import { renderRadarDigestText } from '../../src/renderers/radar-text.js';
 import { JsonRadarStore, createSnapshots } from '../../src/storage/json-store.js';
 
-test('enriched renderer includes URL, score, star delta, and LLM summary', () => {
+function createScoredDigestInput() {
   const profile = loadRadarProfile();
   const now = new Date('2026-05-24T01:00:00.000Z');
   const repo = createSampleRepositories(now)[0];
@@ -21,6 +21,11 @@ test('enriched renderer includes URL, score, star delta, and LLM summary', () =>
   }], new Date(now.getTime() - 24 * 60 * 60 * 1000).toISOString()));
   store.addSnapshots(createSnapshots([repo], now.toISOString()));
   const scored = createPotentialScoreRanker().score([repo], profile, store, now.toISOString());
+  return { profile, scored };
+}
+
+test('enriched renderer includes URL, score, star delta, and LLM summary', () => {
+  const { profile, scored } = createScoredDigestInput();
   const digest = buildDailyRadarDigest([{
     ...scored[0],
     llmSummary: {
@@ -43,4 +48,16 @@ test('enriched renderer includes URL, score, star delta, and LLM summary', () =>
   assert.match(text, /Why worth watching: It is gaining developer attention\./);
   assert.match(text, /Developer takeaway: Study its repo context handling\./);
   assert.match(text, /Risk notes: Check production readiness\./);
+});
+
+test('renderer hides LLM unavailable placeholders when summary is missing', () => {
+  const { profile, scored } = createScoredDigestInput();
+  const digest = buildDailyRadarDigest(scored, profile, '2026-05-24', 10, false);
+  const text = renderRadarDigestText(digest);
+
+  assert.doesNotMatch(text, /LLM summary unavailable/);
+  assert.doesNotMatch(text, /LLM confidence: unavailable/);
+  assert.match(text, /GitHub: https:\/\/github\.com\//);
+  assert.match(text, /Why worth watching:/);
+  assert.match(text, /Developer takeaway:/);
 });

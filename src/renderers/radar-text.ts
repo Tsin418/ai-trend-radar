@@ -10,20 +10,27 @@ function renderProject(item: ScoredRadarRepository, index?: number): string[] {
   const summary = item.llmSummary;
   const prefix = index === undefined ? '-' : `${index}.`;
 
-  return [
+  const lines = [
     `${prefix} ${repo.repoFullName}`,
     `   GitHub: ${repo.repoUrl}`,
-    `   Category: ${repo.category}`,
+    `   Category: ${summary?.aiCategory ?? repo.category}`,
     `   Stars: ${repo.stars.toLocaleString()} (${deltaText(score.dailyStarDelta, '24h')}, ${deltaText(score.weeklyStarDelta, '7d')})`,
     `   Score: ${score.finalScore} | Risk: ${score.riskLevel}`,
     `   One-liner: ${summary?.oneLiner ?? repo.description ?? '暂无项目描述'}`,
-    `   Problem solved: ${summary?.problemSolved ?? 'LLM summary unavailable'}`,
     `   Why worth watching: ${summary?.whyTrending ?? item.whyItMatters}`,
-    `   Developer takeaway: ${summary?.developerTakeaway ?? item.developerInsight}`,
-    `   Target users: ${summary?.targetUsers ?? 'LLM summary unavailable'}`,
-    `   Risk notes: ${summary?.riskNotes ?? 'LLM summary unavailable'}`,
-    `   LLM confidence: ${summary?.confidence ?? 'unavailable'}`
+    `   Developer takeaway: ${summary?.developerTakeaway ?? item.developerInsight}`
   ];
+
+  if (summary) {
+    lines.push(
+      `   Problem solved: ${summary.problemSolved}`,
+      `   Target users: ${summary.targetUsers}`,
+      `   Risk notes: ${summary.riskNotes}`,
+      `   LLM confidence: ${summary.confidence}`
+    );
+  }
+
+  return lines;
 }
 
 export function renderRadarDigestText(digest: RadarDigest): string {
@@ -48,29 +55,18 @@ export function renderRadarDigestText(digest: RadarDigest): string {
     lines.push('');
   }
 
-  if (digest.hotProjects.length > 0) {
-    lines.push(digest.mode === 'weekly' ? '本周增长最快项目' : 'Top Hot Projects');
-    digest.hotProjects.forEach((item, index) => lines.push(...renderProject(item, index + 1), ''));
-  }
-
-  if (digest.earlySignals.length > 0) {
-    lines.push(digest.mode === 'weekly' ? '本周早期潜力项目' : 'Early Signals');
-    digest.earlySignals.forEach((item, index) => lines.push(...renderProject(item, index + 1), ''));
-  }
-
-  if (digest.watchlistMovements.length > 0) {
-    lines.push('Watchlist Movements');
-    digest.watchlistMovements.forEach((item, index) => lines.push(...renderProject(item, index + 1), ''));
-  }
-
-  if (digest.hotProjects.length === 0 && digest.earlySignals.length === 0 && digest.watchlistMovements.length === 0 && digest.selectedProjects.length > 0) {
-    lines.push(digest.mode === 'weekly' ? '本周候选项目' : 'Fallback Radar Picks');
+  if (digest.selectedProjects.length > 0) {
+    lines.push(digest.mode === 'weekly' ? '本周精选项目' : '今日精选项目');
     digest.selectedProjects.forEach((item, index) => lines.push(...renderProject(item, index + 1), ''));
   }
 
   if (digest.mode === 'weekly' && digest.researchPicks?.length) {
-    lines.push('本周值得深入研究的 3 个项目');
-    digest.researchPicks.forEach((item, index) => lines.push(...renderProject(item, index + 1), ''));
+    const selected = new Set(digest.selectedProjects.map((item) => item.repository.repoFullName));
+    const extraPicks = digest.researchPicks.filter((item) => !selected.has(item.repository.repoFullName));
+    if (extraPicks.length > 0) {
+      lines.push('本周值得深入研究的 3 个项目');
+      extraPicks.forEach((item, index) => lines.push(...renderProject(item, index + 1), ''));
+    }
   }
 
   lines.push('数据说明：');

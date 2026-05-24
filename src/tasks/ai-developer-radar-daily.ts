@@ -18,9 +18,13 @@ export async function runAiDeveloperRadarDaily(options: RadarRunOptions = {}): P
     const enriched = await enrichRadarDigestWithLLM(digest, getLLMEnrichmentConfig());
     digest = enriched.digest;
     if (enriched.warnings.length > 0) {
+      enriched.warnings.forEach((warning) => console.warn(`[LLM enrichment] ${warning}`));
+      const llmNote = enriched.warnings.some((warning) => warning.includes('missing DEEPSEEK_API_KEY'))
+        ? 'LLM enrichment unavailable; fallback descriptions were used.'
+        : `LLM enrichment partially unavailable for ${enriched.warnings.length} project(s); fallback descriptions were used.`;
       digest = {
         ...digest,
-        dataNotes: [...digest.dataNotes, ...enriched.warnings.map((warning) => `LLM warning: ${warning}`)]
+        dataNotes: [...digest.dataNotes, llmNote]
       };
     }
     digest = appendErrorsToDigest(digest, storePathContext.errors);

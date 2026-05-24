@@ -186,6 +186,7 @@ export interface LLMEnrichmentConfig {
   readmeMaxChars: number;
   timeoutMs: number;
   maxRetries: number;
+  maxOutputTokens: number;
   cachePath: string;
 }
 
@@ -199,6 +200,7 @@ export function getLLMEnrichmentConfig(): LLMEnrichmentConfig {
     readmeMaxChars: parseNumber(process.env.LLM_README_MAX_CHARS, 12_000),
     timeoutMs: parseNumber(process.env.LLM_TIMEOUT_MS, 30_000),
     maxRetries: parseNumber(process.env.LLM_MAX_RETRIES, 2),
+    maxOutputTokens: parseNumber(process.env.LLM_MAX_OUTPUT_TOKENS, 1200),
     cachePath: 'data/llm-enrichment-cache.json'
   };
 }

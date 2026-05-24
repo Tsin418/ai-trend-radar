@@ -27,7 +27,8 @@ test('DeepSeek client returns parsed JSON content', async () => {
     baseUrl: 'https://api.deepseek.com',
     model: 'deepseek-test',
     timeoutMs: 1000,
-    maxRetries: 0
+    maxRetries: 0,
+    maxOutputTokens: 1200
   });
 
   assert.deepEqual(result, { ok: true });
@@ -52,6 +53,41 @@ test('DeepSeek client rejects invalid JSON response content', async () => {
     baseUrl: 'https://api.deepseek.com',
     model: 'deepseek-test',
     timeoutMs: 1000,
-    maxRetries: 0
+    maxRetries: 0,
+    maxOutputTokens: 1200
   }));
+});
+
+test('DeepSeek client sends JSON mode, thinking disabled, and max_tokens', async () => {
+  let requestBody: Record<string, unknown> | undefined;
+
+  globalThis.fetch = async (_url, init) => {
+    requestBody = JSON.parse(String(init?.body)) as Record<string, unknown>;
+
+    return new Response(JSON.stringify({
+      choices: [
+        {
+          message: {
+            content: JSON.stringify({ ok: true })
+          }
+        }
+      ]
+    }), { status: 200 });
+  };
+
+  await callDeepSeekJson<{ ok: boolean }>({
+    systemPrompt: 'system',
+    userPrompt: 'user'
+  }, {
+    apiKey: 'test-key',
+    baseUrl: 'https://api.deepseek.com',
+    model: 'deepseek-test',
+    timeoutMs: 1000,
+    maxRetries: 0,
+    maxOutputTokens: 1200
+  });
+
+  assert.deepEqual(requestBody?.response_format, { type: 'json_object' });
+  assert.deepEqual(requestBody?.thinking, { type: 'disabled' });
+  assert.equal(requestBody?.max_tokens, 1200);
 });

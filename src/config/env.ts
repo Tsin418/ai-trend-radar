@@ -35,7 +35,8 @@ const envSchema = z.object({
   LLM_ENRICHMENT_LIMIT: z.string().optional(),
   LLM_README_MAX_CHARS: z.string().optional(),
   LLM_TIMEOUT_MS: z.string().optional(),
-  LLM_MAX_RETRIES: z.string().optional()
+  LLM_MAX_RETRIES: z.string().optional(),
+  LLM_MAX_OUTPUT_TOKENS: z.string().optional()
 });
 
 export function getEnv() {

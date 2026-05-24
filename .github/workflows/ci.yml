@@ -7,8 +7,9 @@ on:
   pull_request:
 
 jobs:
-  typecheck-and-dry-run:
+  test:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
@@ -30,6 +31,9 @@ jobs:
 
       - name: Typecheck
         run: pnpm typecheck
+
+      - name: Test
+        run: pnpm test
 
       - name: Dry run digest
         run: pnpm digest:dry-run

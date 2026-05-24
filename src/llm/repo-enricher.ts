@@ -124,7 +124,8 @@ export async function enrichReposWithLLM(
     baseUrl: options.baseUrl,
     model: options.model,
     timeoutMs: options.timeoutMs,
-    maxRetries: options.maxRetries
+    maxRetries: options.maxRetries,
+    maxOutputTokens: options.maxOutputTokens
   }));
   const fetchReadme = dependencies.fetchReadme ?? ((repoFullName: string) => fetchGitHubReadme(repoFullName, process.env.GITHUB_TOKEN));
 
