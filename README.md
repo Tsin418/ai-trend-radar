@@ -217,6 +217,30 @@ TRENDING_REPO_LIMIT=10          # Repos to scan
 TRENDING_RECOMMENDATION_LIMIT=5 # Repos to recommend
 ```
 
+### 5. AI Developer Radar + DeepSeek Enrichment
+
+The AI Developer Radar can enrich the final rule-ranked projects with a
+DeepSeek-generated explanation. Ranking still comes from the rule-based scorer;
+the LLM only explains the selected projects.
+
+```env
+RADAR_REPO_LIMIT=100
+RADAR_RECOMMENDATION_LIMIT=10
+RADAR_STORE_PATH=data/radar-store.json
+
+DEEPSEEK_API_KEY=
+DEEPSEEK_BASE_URL=https://api.deepseek.com
+DEEPSEEK_MODEL=deepseek-v4-flash
+LLM_ENRICHMENT_ENABLED=true
+LLM_ENRICHMENT_LIMIT=10
+LLM_README_MAX_CHARS=12000
+LLM_TIMEOUT_MS=30000
+LLM_MAX_RETRIES=2
+```
+
+If `DEEPSEEK_API_KEY` is not configured, the radar skips LLM enrichment and
+continues to send the normal digest.
+
 ### Config Examples
 
 **Email only:**

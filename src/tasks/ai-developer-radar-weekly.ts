@@ -1,5 +1,6 @@
-import { loadRadarProfile } from '../radar/config.js';
+import { getLLMEnrichmentConfig, loadRadarProfile } from '../radar/config.js';
 import { getLocalIsoWeekLabel } from '../radar/date.js';
+import { enrichRadarDigestWithLLM } from '../llm/repo-enricher.js';
 import { buildWeeklyRadarDigest } from '../renderers/weekly-digest.js';
 import type { RadarRunOptions, RadarRunResult } from './ai-developer-radar-shared.js';
 import { appendErrorsToDigest, collectAndScoreRadarCandidates, getRadarLimits, maybeSendRadarDigest } from './ai-developer-radar-shared.js';
@@ -13,6 +14,14 @@ export async function runAiDeveloperRadarWeekly(options: RadarRunOptions = {}): 
   try {
     const insufficientWeeklyData = context.scored.length === 0 || context.scored.every((item) => item.score.weeklyStarDelta === null);
     let digest = buildWeeklyRadarDigest(context.scored, profile, getLocalIsoWeekLabel(), recommendationLimit, insufficientWeeklyData);
+    const enriched = await enrichRadarDigestWithLLM(digest, getLLMEnrichmentConfig());
+    digest = enriched.digest;
+    if (enriched.warnings.length > 0) {
+      digest = {
+        ...digest,
+        dataNotes: [...digest.dataNotes, ...enriched.warnings.map((warning) => `LLM warning: ${warning}`)]
+      };
+    }
     digest = appendErrorsToDigest(digest, context.errors);
     const notify = await maybeSendRadarDigest(digest, options.send);
     context.store.recordDigestRun('weekly', startedAt, 'success', digest.selectedProjects.length);
