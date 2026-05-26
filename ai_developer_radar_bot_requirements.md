@@ -1079,7 +1079,11 @@ MVP 完成时，应满足：
 - release detection；
 - fake-star 检测；
 - dashboard；
-- HN / Reddit / Product Hunt。
+- HN / Reddit。
+
+已在后续实现：
+
+- Product Hunt launch signal：通过 Product Hunt API v2 GraphQL 抓取 featured posts，过滤 AI / developer-tool 相关项目，并在 Cloudflare Worker cron 推送飞书时追加独立的 `Product Hunt Launch Signals` 区块。
 
 ### Phase 2：稳定版
 
@@ -1100,7 +1104,7 @@ MVP 完成时，应满足：
 新增：
 
 - LLM classification and insight；
-- Hacker News / Reddit / Product Hunt signal；
+- Hacker News / Reddit signal；
 - Hugging Face trending；
 - npm / PyPI package growth；
 - release note summary；
