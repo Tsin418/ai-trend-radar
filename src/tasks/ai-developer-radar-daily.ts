@@ -4,6 +4,7 @@ import { enrichRadarDigestWithLLM } from '../llm/repo-enricher.js';
 import { buildDailyRadarDigest } from '../renderers/daily-digest.js';
 import type { RadarRunOptions, RadarRunResult } from './ai-developer-radar-shared.js';
 import { appendErrorsToDigest, collectAndScoreRadarCandidates, getRadarLimits, maybeSendRadarDigest } from './ai-developer-radar-shared.js';
+import { collectMultiSourceSignals } from './multi-source-radar.js';
 
 export async function runAiDeveloperRadarDaily(options: RadarRunOptions = {}): Promise<RadarRunResult> {
   const startedAt = new Date().toISOString();
@@ -15,6 +16,15 @@ export async function runAiDeveloperRadarDaily(options: RadarRunOptions = {}): P
     const date = getLocalDateLabel();
     const baselineCreated = options.baselineOnly || storePathContext.scored.length === 0 || storePathContext.scored.every((item) => item.score.dailyStarDelta === null);
     let digest = buildDailyRadarDigest(storePathContext.scored, profile, date, recommendationLimit, baselineCreated);
+    const multiSource = await collectMultiSourceSignals(storePathContext.scored, recommendationLimit);
+    digest = {
+      ...digest,
+      multiSourceSections: multiSource.sections,
+      dataNotes: [
+        ...digest.dataNotes,
+        ...multiSource.warnings.map((warning) => `Multi-source warning: ${warning}`)
+      ]
+    };
     const enriched = await enrichRadarDigestWithLLM(digest, getLLMEnrichmentConfig());
     digest = enriched.digest;
     if (enriched.warnings.length > 0) {

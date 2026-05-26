@@ -26,6 +26,11 @@ sends a Feishu message when `FEISHU_WEBHOOK_URL` is configured. The Cloudflare
 Worker cron can also append a separate Product Hunt Launch Signals section to
 the Feishu digest when `PRODUCT_HUNT_TOKEN` is configured.
 
+The daily radar can also add free multi-source signals: AIHot curated
+highlights, Hugging Face model/Space momentum, Hacker News developer buzz, and
+Product Hunt launches normalized into a shared `TrendItem` shape for digest
+sections and cross-source highlights.
+
 The first run creates the baseline snapshot. Star deltas become meaningful from
 the next daily run; weekly deltas become meaningful after about seven days.
 
@@ -477,6 +482,20 @@ pnpm producthunt:json
 
 For Cloudflare cron delivery, set `PRODUCT_HUNT_TOKEN` as a Worker secret. See
 `docs/producthunt-collector.md` and `docs/cloudflare-feishu-pusher.md`.
+
+### Multi-source AI Trend Radar
+
+Daily radar supports optional free sources configured in `config/sources.yaml`
+and environment variables:
+
+- `AIHOT_ENABLED` / `AIHOT_LIMIT` for AIHot curated highlights.
+- `HUGGINGFACE_MODELS_ENABLED` / `HUGGINGFACE_SPACES_ENABLED` for Hub metadata only.
+- `HACKERNEWS_ENABLED` / `HACKERNEWS_LISTS` for Hacker News official API lists.
+- `PRODUCT_HUNT_ENABLED` keeps Product Hunt launch signals enabled when `PRODUCT_HUNT_TOKEN` is set.
+
+These sources are failure-isolated: if one source times out or is unavailable,
+the GitHub radar still runs and the digest records a warning. No paid API or
+login-only source is required.
 
 ### Add New Data Source (Collector)
 
