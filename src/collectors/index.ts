@@ -10,6 +10,12 @@ export { GitHubCollector, createGitHubCollector } from './github.js';
 export type { GitHubContributor, GitHubRepoMetadata } from './github.js';
 export { GitHubSearchCollector, createGitHubSearchCollector } from './github-search.js';
 export { loadWatchlist } from './watchlist.js';
+export { ProductHuntCollector, createProductHuntCollector } from './producthunt.js';
+export type {
+  ProductHuntCollectorOptions,
+  ProductHuntPost,
+  ProductHuntPostsOrder
+} from './producthunt-types.js';
 
 // 向后兼容的旧 API
 export { fetchGitHubTrending } from './github-trending.js';
