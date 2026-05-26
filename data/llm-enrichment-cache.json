@@ -138,5 +138,61 @@
     },
     "createdAt": "2026-05-26T05:37:08.612Z",
     "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-05-26T05:42:19Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent CLI that optimizes for prefix-cache stability to keep token costs low across long sessions.",
+      "problemSolved": "Generic AI coding agents waste tokens on long sessions because they don't optimize for DeepSeek's prefix-cache mechanic. Reasonix is built entirely around maintaining cache stability, dramatically reducing costs (e.g., 99.82% cache hit rate, ~$12 vs ~$61 for a real workload).",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "whyTrending": "It offers a unique, cost-efficient approach to AI-assisted coding by deeply integrating with DeepSeek's caching, achieving massive token savings. The project is actively developed with a desktop client, MCP support, and strong community engagement.",
+      "developerTakeaway": "If you use DeepSeek for coding and want to minimize API costs during long sessions, Reasonix is purpose-built for that. Its architecture is tightly coupled to DeepSeek, so it won't work with other LLMs, but the cache optimization is a genuine differentiator.",
+      "targetUsers": "Developers who use DeepSeek models for AI-assisted coding and want a terminal-based agent with low token costs, especially for long-running sessions.",
+      "riskNotes": "DeepSeek-only; not portable to other LLMs. High number of open issues (198) may indicate active development but also potential instability. Desktop client is prerelease and not code-signed.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-26T05:42:47.550Z",
+    "model": "deepseek-v4-flash"
+  },
+  "manaflow-ai/cmux:2026-05-26T05:40:18Z": {
+    "summary": {
+      "oneLiner": "A native macOS terminal built on Ghostty with vertical tabs, notification rings, and an in-app browser, designed for AI coding agents like Claude Code and Codex.",
+      "problemSolved": "Managing multiple parallel AI coding agent sessions in a terminal is chaotic: notifications lack context, tabs become unreadable, and existing orchestrators are slow Electron apps. cmux provides a fast, native terminal with a sidebar showing git branch, PR status, working directory, and notification summaries, plus a scriptable browser for agent interaction.",
+      "aiCategory": "AI Agent Framework",
+      "whyTrending": "It addresses a real pain point for developers running multiple AI coding agents simultaneously, offering a native, performant alternative to Electron-based tools. The 19.6k stars and high daily star delta indicate strong community interest.",
+      "developerTakeaway": "cmux is a composable, scriptable terminal and browser that integrates deeply with agent workflows via CLI and socket API, supporting notification hooks, session restore, and SSH. It's not opinionated—developers can build their own workflows on top of its primitives.",
+      "targetUsers": "Developers who run multiple AI coding agents (Claude Code, Codex, Gemini, etc.) in parallel on macOS and need a fast, native terminal with better visibility and control over agent sessions.",
+      "riskNotes": "The project has a very high number of open issues (2128) relative to its size, which may indicate rapid growth outpacing maintenance or a large backlog. It is macOS-only and relies on Ghostty, which may limit adoption. The README is promotional and may oversell features.",
+      "confidence": "medium"
+    },
+    "createdAt": "2026-05-26T05:42:48.061Z",
+    "model": "deepseek-v4-flash"
+  },
+  "sickn33/antigravity-awesome-skills:2026-05-26T05:37:27Z": {
+    "summary": {
+      "oneLiner": "Installable library of 1,466+ reusable agentic skills (SKILL.md playbooks) for AI coding assistants like Claude Code, Cursor, Codex CLI, Gemini CLI, and Antigravity.",
+      "problemSolved": "Eliminates the need to collect and manage one-off prompt snippets by providing a searchable, installable catalog of structured skills for recurring development tasks (planning, coding, debugging, testing, security, etc.) that work across multiple AI coding tools.",
+      "aiCategory": "MCP / Tool Calling",
+      "whyTrending": "Massive star count (38k+) driven by the rapid adoption of AI coding assistants and the need for reusable, tool-agnostic skill libraries. The project offers a simple npm installer, broad tool support, and a large curated catalog that reduces onboarding friction.",
+      "developerTakeaway": "A practical, ready-to-use skill library that can be installed in one minute and immediately used with major AI coding tools. It provides both breadth (1466+ skills) and curation (bundles, workflows) to accelerate agentic workflows.",
+      "targetUsers": "Developers using AI coding assistants (Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, Kiro, OpenCode, GitHub Copilot) who want to improve agent performance with structured, reusable instructions.",
+      "riskNotes": "README content is untrusted; the project is community-driven and may contain low-quality or outdated skills. Users should review skills before use, especially security-related ones.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-26T05:42:52.196Z",
+    "model": "deepseek-v4-flash"
+  },
+  "code-yeongyu/oh-my-openagent:2026-05-26T05:39:46Z": {
+    "summary": {
+      "oneLiner": "A multi-harness AI agent orchestration framework that lets you run and coordinate multiple LLM agents (Claude Code, Codex, etc.) from a single terminal interface.",
+      "problemSolved": "Eliminates the need to manually switch between different AI coding agents and tools by providing a unified harness that orchestrates them, automates workflows, and keeps agents working until tasks are done.",
+      "aiCategory": "AI Agent Framework / Orchestration",
+      "whyTrending": "Extreme popularity (59k+ stars) driven by viral testimonials claiming it replaces paid subscriptions like Cursor, its 'ultrawork' one-command workflow, and the controversy around Anthropic blocking OpenCode due to this project.",
+      "developerTakeaway": "Offers a practical, open-source alternative to vendor-locked AI coding tools with features like team mode, intent analysis, and hash-anchored edits, but currently in a major refactor and has a restrictive license (SUL-1.0).",
+      "targetUsers": "Developers and power users who want to maximize productivity by orchestrating multiple AI agents without being locked into a single provider or paying high subscription fees.",
+      "riskNotes": "README is promotional and may exaggerate claims; project is in active refactor (multi-harness OS) with 615 open issues; license is SUL-1.0 (not standard open-source); anonymous telemetry enabled by default; some features may be unstable.",
+      "confidence": "medium"
+    },
+    "createdAt": "2026-05-26T05:42:52.461Z",
+    "model": "deepseek-v4-flash"
   }
 }
