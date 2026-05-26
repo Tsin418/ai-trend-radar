@@ -51,6 +51,7 @@ Optional secrets:
 ```bash
 npx wrangler secret put MANUAL_SEND_TOKEN
 npx wrangler secret put GITHUB_TOKEN
+npx wrangler secret put PRODUCT_HUNT_TOKEN
 ```
 
 `MANUAL_SEND_TOKEN` enables authenticated manual sends:
@@ -63,6 +64,10 @@ curl -X POST \
 
 `GITHUB_TOKEN` is only needed if the digest URL moves to a private repository or
 GitHub raw access becomes restricted.
+
+`PRODUCT_HUNT_TOKEN` enables the Worker cron to append a Product Hunt Launch
+Signals section to the Feishu message. Product Hunt collection failures are
+reported as a warning in the message and do not block the GitHub digest send.
 
 ## KV Idempotency
 
@@ -83,6 +88,13 @@ crons = ["0 1 * * *"]
 [vars]
 DIGEST_URL = "https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-daily-digest.json"
 MAX_DIGEST_AGE_HOURS = "36"
+PRODUCT_HUNT_ENABLED = "true"
+PRODUCT_HUNT_POST_LIMIT = "10"
+PRODUCT_HUNT_DAYS_BACK = "1"
+PRODUCT_HUNT_TOPICS = "artificial-intelligence,developer-tools,open-source,productivity,saas"
+PRODUCT_HUNT_KEYWORDS = "ai,llm,agent,rag,mcp,coding,developer,devtool,automation,workflow,open source,api,sdk"
+PRODUCT_HUNT_MIN_VOTES = "10"
+PRODUCT_HUNT_MIN_COMMENTS = "0"
 ```
 
 Cloudflare Cron uses UTC, so `0 1 * * *` means 09:00 in Asia/Shanghai.
