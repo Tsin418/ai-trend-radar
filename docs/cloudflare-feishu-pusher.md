@@ -78,7 +78,7 @@ disabled until `RADAR_STATE` exists.
 crons = ["0 1 * * *"]
 
 [vars]
-DIGEST_URL = "https://raw.githubusercontent.com/Tsin418/repo-radar/main/data/latest-daily-digest.json"
+DIGEST_URL = "https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-daily-digest.json"
 MAX_DIGEST_AGE_HOURS = "36"
 ```
 
