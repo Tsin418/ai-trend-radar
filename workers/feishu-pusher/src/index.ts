@@ -42,7 +42,7 @@ interface SendResult {
 }
 
 const DEFAULT_DIGEST_URL =
-  'https://raw.githubusercontent.com/Tsin418/repo-radar/main/data/latest-daily-digest.json';
+  'https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-daily-digest.json';
 
 function jsonResponse(data: unknown, status = 200): Response {
   return new Response(JSON.stringify(data, null, 2), {

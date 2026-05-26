@@ -41,7 +41,7 @@ function parseNumber(value: string | undefined): number | undefined {
 
 function getSource(): LatestRadarDigestFile['source'] {
   return {
-    repo: process.env.GITHUB_REPOSITORY || 'Tsin418/repo-radar',
+    repo: process.env.GITHUB_REPOSITORY || 'Tsin418/ai-trend-radar',
     branch: process.env.GITHUB_REF_NAME || process.env.GITHUB_HEAD_REF || 'main',
     workflow: process.env.GITHUB_WORKFLOW || 'radar-daily',
     runId: process.env.GITHUB_RUN_ID
