@@ -22,10 +22,13 @@
     "radar:baseline": "tsx scripts/send-ai-developer-radar.ts --mode=daily --dry-run --baseline",
     "radar:daily:dry-run": "tsx scripts/send-ai-developer-radar.ts --mode=daily --dry-run",
     "radar:daily:send": "tsx scripts/send-ai-developer-radar.ts --mode=daily --send",
+    "radar:daily:generate": "tsx scripts/generate-ai-developer-radar-digest.ts",
     "radar:weekly:dry-run": "tsx scripts/send-ai-developer-radar.ts --mode=weekly --dry-run",
     "radar:weekly:send": "tsx scripts/send-ai-developer-radar.ts --mode=weekly --send",
     "radar:daily:sample": "RADAR_USE_SAMPLE_DATA=true tsx scripts/send-ai-developer-radar.ts --mode=daily --dry-run",
+    "radar:daily:generate:sample": "RADAR_USE_SAMPLE_DATA=true tsx scripts/generate-ai-developer-radar-digest.ts",
     "radar:weekly:sample": "RADAR_USE_SAMPLE_DATA=true tsx scripts/send-ai-developer-radar.ts --mode=weekly --dry-run",
+    "worker:feishu:typecheck": "tsc --noEmit --pretty false -p workers/feishu-pusher/tsconfig.json",
     "typecheck": "tsc --noEmit --pretty false",
     "test": "node --import tsx --test tests/*.test.ts tests/**/*.test.ts"
   },
