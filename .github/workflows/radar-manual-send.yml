@@ -1,0 +1,91 @@
+name: AI Developer Radar Manual Send
+
+on:
+  workflow_dispatch:
+    inputs:
+      repo_limit:
+        description: Optional repository collection limit
+        required: false
+        type: string
+      recommendation_limit:
+        description: Optional recommendation limit
+        required: false
+        type: string
+
+concurrency:
+  group: ai-developer-radar-manual-send
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  radar-manual-send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+      FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      DEEPSEEK_BASE_URL: ${{ vars.DEEPSEEK_BASE_URL }}
+      DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+      LLM_ENRICHMENT_ENABLED: ${{ vars.LLM_ENRICHMENT_ENABLED }}
+      LLM_ENRICHMENT_LIMIT: ${{ vars.LLM_ENRICHMENT_LIMIT }}
+      LLM_README_MAX_CHARS: ${{ vars.LLM_README_MAX_CHARS }}
+      LLM_TIMEOUT_MS: ${{ vars.LLM_TIMEOUT_MS }}
+      LLM_MAX_RETRIES: ${{ vars.LLM_MAX_RETRIES }}
+      LLM_MAX_OUTPUT_TOKENS: ${{ vars.LLM_MAX_OUTPUT_TOKENS }}
+      NOTIFIER_CHANNELS: feishu
+      RADAR_REPO_LIMIT: ${{ vars.RADAR_REPO_LIMIT }}
+      RADAR_RECOMMENDATION_LIMIT: ${{ vars.RADAR_RECOMMENDATION_LIMIT }}
+      RADAR_DAILY_STAR_THRESHOLD: ${{ vars.RADAR_DAILY_STAR_THRESHOLD }}
+      RADAR_EARLY_SIGNAL_DAILY_THRESHOLD: ${{ vars.RADAR_EARLY_SIGNAL_DAILY_THRESHOLD }}
+      RADAR_EARLY_SIGNAL_WEEKLY_THRESHOLD: ${{ vars.RADAR_EARLY_SIGNAL_WEEKLY_THRESHOLD }}
+      RADAR_PROFILE_KEYWORDS: ${{ vars.RADAR_PROFILE_KEYWORDS }}
+      TZ: Asia/Shanghai
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Generate and send daily radar digest
+        run: |
+          args=()
+          if [ -n "${{ inputs.repo_limit }}" ]; then
+            args+=("--repo-limit=${{ inputs.repo_limit }}")
+          fi
+          if [ -n "${{ inputs.recommendation_limit }}" ]; then
+            args+=("--recommendation-limit=${{ inputs.recommendation_limit }}")
+          fi
+          pnpm radar:daily:generate-and-send -- "${args[@]}"
+
+      - name: Commit radar snapshots and latest digest
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/radar-store.json
+          [ -f data/latest-daily-digest.json ] && git add data/latest-daily-digest.json
+          [ -f data/llm-enrichment-cache.json ] && git add data/llm-enrichment-cache.json
+          git diff --cached --quiet || git commit -m "chore(radar): manual daily digest send"
+          git push
