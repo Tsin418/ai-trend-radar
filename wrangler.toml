@@ -1,14 +1,17 @@
-name = "ai-trend-radar-feishu-pusher"
+name = "ai-trend-radar"
 main = "workers/feishu-pusher/src/index.ts"
 compatibility_date = "2026-05-26"
-
-[triggers]
-crons = ["0 1 * * *"]
 
 [vars]
 DIGEST_URL = "https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-daily-digest.json"
 MAX_DIGEST_AGE_HOURS = "36"
 
+# Cron triggers are intentionally not declared here. The current Cloudflare
+# account has already reached the 5-trigger plan limit, and declaring crons in
+# the default connected-build config makes every deploy fail with API code
+# 10072. After deleting an unused cron trigger or upgrading the plan, add the
+# daily "0 1 * * *" trigger from the Cloudflare dashboard.
+#
 # Bind a KV namespace named RADAR_STATE in Cloudflare for idempotency.
 # Keep the binding out of this committed file unless you want to manage
 # environment-specific namespace IDs through wrangler.toml.

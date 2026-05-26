@@ -3,7 +3,9 @@
 This project uses a split schedule for reliable 09:00 Asia/Shanghai delivery:
 
 1. GitHub Actions generates `data/latest-daily-digest.json` at 08:35.
-2. Cloudflare Worker Cron fetches that digest at 09:00 and sends it to Feishu.
+2. Cloudflare Worker fetches that digest and sends it to Feishu. For 09:00
+   delivery, attach a Cloudflare Cron Trigger after the account has available
+   cron trigger capacity.
 
 The root `wrangler.toml` makes `npx wrangler deploy` deploy the Worker entry at
 `workers/feishu-pusher/src/index.ts`. It is not a static Pages project.
@@ -33,6 +35,9 @@ Use this deploy command:
 ```bash
 npx wrangler deploy
 ```
+
+The Worker name in `wrangler.toml` is `ai-trend-radar` so it matches the
+connected Cloudflare build project.
 
 Set these Worker secrets:
 
@@ -74,12 +79,27 @@ disabled until `RADAR_STATE` exists.
 `wrangler.toml` includes:
 
 ```toml
-[triggers]
-crons = ["0 1 * * *"]
-
 [vars]
 DIGEST_URL = "https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-daily-digest.json"
 MAX_DIGEST_AGE_HOURS = "36"
 ```
 
+Cron triggers are intentionally not committed in the default `wrangler.toml`.
+This avoids deploy failures when the Cloudflare account has already reached the
+5-trigger limit. After deleting an unused trigger or upgrading the account plan,
+add this trigger in the Cloudflare dashboard:
+
+```text
+0 1 * * *
+```
+
 Cloudflare Cron uses UTC, so `0 1 * * *` means 09:00 in Asia/Shanghai.
+
+Until the cron trigger is attached, you can still test the Worker with the
+manual endpoint if `MANUAL_SEND_TOKEN` is configured:
+
+```bash
+curl -X POST \
+  -H "Authorization: Bearer $MANUAL_SEND_TOKEN" \
+  "https://<worker-host>/send?force=true"
+```
