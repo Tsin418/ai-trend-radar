@@ -48,9 +48,9 @@ Product Hunt output remains a separate launch/product signal. The daily GitHub r
 
 ## Cloudflare Deployment
 
-This repository's current Cloudflare Worker only fetches the generated digest JSON from GitHub and pushes it to Feishu. It does not run the Product Hunt collector yet. That means `PRODUCT_HUNT_TOKEN` must be configured in the environment that generates the digest, not necessarily in the Feishu pusher Worker.
+The Cloudflare Worker cron fetches the generated GitHub digest JSON, collects Product Hunt launch signals at send time, and appends them to the Feishu message as a separate section.
 
-If you later wire Product Hunt collection directly into the Cloudflare Worker, store the token as a Cloudflare secret:
+Store the token as a Cloudflare secret:
 
 ```bash
 npx wrangler secret put PRODUCT_HUNT_TOKEN
@@ -64,7 +64,7 @@ Workers & Pages -> ai-trend-radar -> Settings -> Variables and Secrets -> Add ->
 
 Use `PRODUCT_HUNT_TOKEN` as the name and paste the Product Hunt API token as the value.
 
-Non-secret tuning values can be set as Worker variables in the dashboard or in `wrangler.toml` under `[vars]` after the Worker is wired to use Product Hunt:
+Non-secret tuning values can be set as Worker variables in the dashboard or in `wrangler.toml` under `[vars]`:
 
 ```toml
 [vars]
