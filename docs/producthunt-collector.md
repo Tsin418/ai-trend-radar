@@ -4,7 +4,7 @@ Product Hunt is treated as a launch and product-interest signal for the AI Devel
 
 ## Configuration
 
-Add the token and optional collector settings to `.env.local`:
+For local dry-runs, add the token and optional collector settings to `.env.local`:
 
 ```env
 PRODUCT_HUNT_TOKEN=your_product_hunt_api_token
@@ -45,3 +45,34 @@ heatScore = votesCount + commentsCount * 3
 ```
 
 Product Hunt output remains a separate launch/product signal. The daily GitHub radar digest is not changed by this collector.
+
+## Cloudflare Deployment
+
+This repository's current Cloudflare Worker only fetches the generated digest JSON from GitHub and pushes it to Feishu. It does not run the Product Hunt collector yet. That means `PRODUCT_HUNT_TOKEN` must be configured in the environment that generates the digest, not necessarily in the Feishu pusher Worker.
+
+If you later wire Product Hunt collection directly into the Cloudflare Worker, store the token as a Cloudflare secret:
+
+```bash
+npx wrangler secret put PRODUCT_HUNT_TOKEN
+```
+
+In the Cloudflare dashboard, the same setting is under:
+
+```txt
+Workers & Pages -> ai-trend-radar -> Settings -> Variables and Secrets -> Add -> Secret
+```
+
+Use `PRODUCT_HUNT_TOKEN` as the name and paste the Product Hunt API token as the value.
+
+Non-secret tuning values can be set as Worker variables in the dashboard or in `wrangler.toml` under `[vars]` after the Worker is wired to use Product Hunt:
+
+```toml
+[vars]
+PRODUCT_HUNT_ENABLED = "true"
+PRODUCT_HUNT_POST_LIMIT = "30"
+PRODUCT_HUNT_DAYS_BACK = "1"
+PRODUCT_HUNT_TOPICS = "artificial-intelligence,developer-tools,open-source,productivity,saas"
+PRODUCT_HUNT_KEYWORDS = "ai,llm,agent,rag,mcp,coding,developer,devtool,automation,workflow,open source,api,sdk"
+PRODUCT_HUNT_MIN_VOTES = "10"
+PRODUCT_HUNT_MIN_COMMENTS = "0"
+```
