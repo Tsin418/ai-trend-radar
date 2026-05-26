@@ -2,7 +2,7 @@
 
 **可插拔的趋势信号 → 个性化摘要引擎**
 
-将 GitHub Trending（未来可扩展至 Product Hunt、Reddit 等）转化为个性化推荐，通过多通道（邮件、微信等）推送。
+将 GitHub Trending 和 Product Hunt 发布信号转化为个性化推荐，通过多通道（邮件、微信、飞书等）推送。
 
 [English](./README.md) | 简体中文
 
@@ -20,7 +20,8 @@ pnpm radar:weekly:send
 
 Radar 会从 GitHub Trending、GitHub Search API 和 `config/watchlist.yaml` 收集候选项目，将快照保存到
 `data/radar-store.json`，计算 24h/7d star delta，进行 AI 分类和 Potential Score 排序，并在配置
-`FEISHU_WEBHOOK_URL` 后发送飞书机器人消息。
+`FEISHU_WEBHOOK_URL` 后发送飞书机器人消息。Cloudflare Worker 定时任务在配置
+`PRODUCT_HUNT_TOKEN` 后，会在飞书摘要末尾追加独立的 Product Hunt Launch Signals 区块。
 
 第一次运行只会建立 baseline；第二次日运行开始有 daily delta，约 7 天后 weekly delta 才完整。
 
@@ -69,13 +70,13 @@ Radar 会从 GitHub Trending、GitHub Search API 和 `config/watchlist.yaml` 收
 └──────────────┘    └──────────────┘    └──────────────┘
    │                    │                    │
    ├─ GitHub           ├─ RuleBased         ├─ Email (SMTP)
-   ├─ Product Hunt     ├─ LLM (future)      ├─ WeChat (WeClaw)
-   └─ Reddit           └─ Hybrid            └─ Telegram (future)
+   ├─ Product Hunt     ├─ LLM explain       ├─ WeChat (WeClaw)
+   └─ Reddit (future)  └─ Hybrid            └─ Feishu / Telegram
 ```
 
 **三层解耦设计：**
 
-1. **Collectors** - 数据源抽象（当前：GitHub，未来：Product Hunt、Reddit）
+1. **Collectors** - 数据源抽象（当前：GitHub 和 Product Hunt；未来：Reddit、Hacker News、Hugging Face）
 2. **Rankers** - 排名策略（当前：RuleBased，未来：LLM / Hybrid）
 3. **Notifiers** - 通知通道（当前：邮件、微信，未来：Telegram）
 
@@ -436,25 +437,37 @@ pnpm digest:send -- --wechat-to=filehelper@im.wechat
 
 ## 架构扩展
 
+### Product Hunt Collector
+
+Product Hunt 已实现为 launch/product signal 数据源：
+
+```bash
+pnpm producthunt:dry-run
+pnpm producthunt:json
+```
+
+Cloudflare 定时推送场景下，把 `PRODUCT_HUNT_TOKEN` 配置为 Worker Secret 即可。详见
+`docs/producthunt-collector.md` 和 `docs/cloudflare-feishu-pusher.md`。
+
 ### 添加新的数据源（Collector）
 
 参考 `src/collectors/README.md`，步骤：
 
-1. 创建新 Collector（如 `producthunt.ts`）
+1. 创建新 Collector（如 `reddit.ts`）
 2. 实现 `Collector<TrendingItem>` 接口
 3. 导出到 `src/collectors/index.ts`
 
 **示例：**
 
 ```typescript
-// src/collectors/producthunt.ts
+// src/collectors/reddit.ts
 import type { Collector, TrendingItem } from './types.js';
 
-export class ProductHuntCollector implements Collector {
-  readonly name = 'producthunt';
+export class RedditCollector implements Collector {
+  readonly name = 'reddit';
 
   async fetch(limit: number): Promise<TrendingItem[]> {
-    // 实现 Product Hunt API 抓取
+    // 实现 Reddit API 抓取
     return items;
   }
 }

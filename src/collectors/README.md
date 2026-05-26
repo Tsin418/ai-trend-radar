@@ -66,6 +66,29 @@ interface GitHubRepoMetadata {
 }
 ```
 
+### ProductHuntCollector
+
+通过 Product Hunt API v2 GraphQL 抓取最近 featured posts，按 AI / developer-tool 相关性过滤，并统一转换为 `TrendingItem`。它是 launch/product signal，不与 GitHub stars 或仓库质量信号混用。
+
+**使用方式：**
+
+```typescript
+import { createProductHuntCollector } from './collectors/index.js';
+
+const collector = createProductHuntCollector();
+const items = await collector.fetch(10);
+
+console.log(items[0].title); // Product name
+console.log(items[0].heatScore); // votes + comments * 3
+```
+
+也可以通过脚本 dry-run：
+
+```bash
+pnpm producthunt:dry-run
+pnpm producthunt:json
+```
+
 ## 向后兼容
 
 原有的 `fetchGitHubTrending()` 函数仍然保留：
@@ -82,11 +105,11 @@ const repos = await fetchGitHubTrending(10);
 ### 1. 创建新的 Collector
 
 ```typescript
-// src/collectors/producthunt.ts
+// src/collectors/reddit.ts
 import type { Collector, TrendingItem } from './types.js';
 
-export class ProductHuntCollector implements Collector {
-  readonly name = 'producthunt';
+export class RedditCollector implements Collector {
+  readonly name = 'reddit';
 
   async fetch(limit: number): Promise<TrendingItem[]> {
     // 实现抓取逻辑
@@ -94,8 +117,8 @@ export class ProductHuntCollector implements Collector {
   }
 }
 
-export function createProductHuntCollector(): Collector {
-  return new ProductHuntCollector();
+export function createRedditCollector(): Collector {
+  return new RedditCollector();
 }
 ```
 
@@ -103,13 +126,13 @@ export function createProductHuntCollector(): Collector {
 
 ```typescript
 // src/collectors/index.ts
-export { ProductHuntCollector, createProductHuntCollector } from './producthunt.js';
+export { RedditCollector, createRedditCollector } from './reddit.js';
 ```
 
 ### 3. 使用
 
 ```typescript
-const collector = createProductHuntCollector();
+const collector = createRedditCollector();
 const items = await collector.fetch(10);
 ```
 

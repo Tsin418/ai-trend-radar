@@ -2,7 +2,7 @@
 
 **Pluggable Trend Signal → Personalized Digest Engine**
 
-Transform GitHub Trending (extensible to Product Hunt, Reddit, etc.) into personalized recommendations, delivered via multiple channels (email, WeChat, etc.).
+Transform GitHub Trending and Product Hunt launch signals into personalized recommendations, delivered via multiple channels (email, WeChat, Feishu, etc.).
 
 English | [简体中文](./README_zh.md)
 
@@ -22,7 +22,9 @@ pnpm radar:weekly:send
 The radar collects candidates from GitHub Trending, GitHub Search API, and
 `config/watchlist.yaml`, stores daily snapshots in `data/radar-store.json`,
 calculates 24h/7d star deltas, classifies AI categories, scores potential, and
-sends a Feishu message when `FEISHU_WEBHOOK_URL` is configured.
+sends a Feishu message when `FEISHU_WEBHOOK_URL` is configured. The Cloudflare
+Worker cron can also append a separate Product Hunt Launch Signals section to
+the Feishu digest when `PRODUCT_HUNT_TOKEN` is configured.
 
 The first run creates the baseline snapshot. Star deltas become meaningful from
 the next daily run; weekly deltas become meaningful after about seven days.
@@ -72,13 +74,13 @@ Beyond popularity, it adds a **practical relevance layer**:
 └──────────────┘    └──────────────┘    └──────────────┘
    │                    │                    │
    ├─ GitHub           ├─ RuleBased         ├─ Email (SMTP)
-   ├─ Product Hunt     ├─ LLM (future)      ├─ WeChat (WeClaw)
-   └─ Reddit           └─ Hybrid            └─ Telegram (future)
+   ├─ Product Hunt     ├─ LLM explain       ├─ WeChat (WeClaw)
+   └─ Reddit (future)  └─ Hybrid            └─ Feishu / Telegram
 ```
 
 **Three-layer design:**
 
-1. **Collectors** - Data source abstraction (current: GitHub, future: Product Hunt, Reddit)
+1. **Collectors** - Data source abstraction (current: GitHub and Product Hunt; future: Reddit, Hacker News, Hugging Face)
 2. **Rankers** - Ranking strategy (current: RuleBased, future: LLM / Hybrid)
 3. **Notifiers** - Notification channels (current: Email, WeChat, future: Telegram)
 
@@ -464,25 +466,37 @@ pnpm digest:send -- --wechat-to=filehelper@im.wechat
 
 ## Architecture Extension
 
+### Product Hunt Collector
+
+Product Hunt is implemented as a launch/product signal source:
+
+```bash
+pnpm producthunt:dry-run
+pnpm producthunt:json
+```
+
+For Cloudflare cron delivery, set `PRODUCT_HUNT_TOKEN` as a Worker secret. See
+`docs/producthunt-collector.md` and `docs/cloudflare-feishu-pusher.md`.
+
 ### Add New Data Source (Collector)
 
 See `src/collectors/README.md`, steps:
 
-1. Create new Collector (e.g., `producthunt.ts`)
+1. Create new Collector (e.g., `reddit.ts`)
 2. Implement `Collector<TrendingItem>` interface
 3. Export in `src/collectors/index.ts`
 
 **Example:**
 
 ```typescript
-// src/collectors/producthunt.ts
+// src/collectors/reddit.ts
 import type { Collector, TrendingItem } from './types.js';
 
-export class ProductHuntCollector implements Collector {
-  readonly name = 'producthunt';
+export class RedditCollector implements Collector {
+  readonly name = 'reddit';
 
   async fetch(limit: number): Promise<TrendingItem[]> {
-    // Implement Product Hunt API fetching
+    // Implement Reddit API fetching
     return items;
   }
 }
