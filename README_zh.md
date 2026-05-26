@@ -23,6 +23,10 @@ Radar 会从 GitHub Trending、GitHub Search API 和 `config/watchlist.yaml` 收
 `FEISHU_WEBHOOK_URL` 后发送飞书机器人消息。Cloudflare Worker 定时任务在配置
 `PRODUCT_HUNT_TOKEN` 后，会在飞书摘要末尾追加独立的 Product Hunt Launch Signals 区块。
 
+每日 radar 也可以追加免费多源信号：AIHot 精选热点、Hugging Face 模型与 Space 动量、
+Hacker News 开发者讨论，以及标准化到统一 `TrendItem` 的 Product Hunt 发布信号，用于
+digest 分区和 Cross-source Highlights。
+
 第一次运行只会建立 baseline；第二次日运行开始有 daily delta，约 7 天后 weekly delta 才完整。
 
 ## 核心特性
@@ -448,6 +452,18 @@ pnpm producthunt:json
 
 Cloudflare 定时推送场景下，把 `PRODUCT_HUNT_TOKEN` 配置为 Worker Secret 即可。详见
 `docs/producthunt-collector.md` 和 `docs/cloudflare-feishu-pusher.md`。
+
+### 多源 AI Trend Radar
+
+每日 radar 支持通过 `config/sources.yaml` 和环境变量开启/关闭免费来源：
+
+- `AIHOT_ENABLED` / `AIHOT_LIMIT` 控制 AIHot 精选热点。
+- `HUGGINGFACE_MODELS_ENABLED` / `HUGGINGFACE_SPACES_ENABLED` 只读取 Hugging Face Hub metadata，不使用 Inference API。
+- `HACKERNEWS_ENABLED` / `HACKERNEWS_LISTS` 使用 Hacker News 官方 API。
+- `PRODUCT_HUNT_ENABLED` 在配置 `PRODUCT_HUNT_TOKEN` 时保留 Product Hunt 发布信号。
+
+这些来源都做了失败隔离：某个来源超时或不可用时，GitHub radar 仍会正常运行，并在 digest
+数据说明中记录 warning。不需要付费 API，也不需要登录型来源。
 
 ### 添加新的数据源（Collector）
 

@@ -11,6 +11,10 @@ export type { GitHubContributor, GitHubRepoMetadata } from './github.js';
 export { GitHubSearchCollector, createGitHubSearchCollector } from './github-search.js';
 export { loadWatchlist } from './watchlist.js';
 export { ProductHuntCollector, createProductHuntCollector } from './producthunt.js';
+export { AIHotCollector, createAIHotCollector } from './aihot.js';
+export { HuggingFaceModelsCollector, createHuggingFaceModelsCollector } from './huggingface-models.js';
+export { HuggingFaceSpacesCollector, createHuggingFaceSpacesCollector } from './huggingface-spaces.js';
+export { HackerNewsCollector, createHackerNewsCollector } from './hackernews.js';
 export type {
   ProductHuntCollectorOptions,
   ProductHuntPost,

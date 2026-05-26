@@ -1,4 +1,5 @@
 import type { RadarDigest, ScoredRadarRepository } from '../radar/types.js';
+import type { MergedTrendEntity, TrendItem } from '../trends/types.js';
 
 function deltaText(value: number | null, suffix: string): string {
   return value === null ? `${suffix} 暂无基线` : `${suffix} +${value}`;
@@ -33,6 +34,53 @@ function renderProject(item: ScoredRadarRepository, index?: number): string[] {
   return lines;
 }
 
+function metricText(item: TrendItem): string {
+  const metrics = item.metrics ?? {};
+  const parts = [
+    metrics.stars !== undefined ? `Stars ${metrics.stars.toLocaleString()}` : '',
+    metrics.starDelta24h !== undefined ? `24h +${metrics.starDelta24h}` : '',
+    metrics.upvotes !== undefined ? `Votes ${metrics.upvotes}` : '',
+    metrics.likes !== undefined ? `Likes ${metrics.likes}` : '',
+    metrics.downloads !== undefined ? `Downloads ${metrics.downloads.toLocaleString()}` : '',
+    metrics.commentsCount !== undefined ? `Comments ${metrics.commentsCount}` : ''
+  ].filter(Boolean);
+  return parts.length > 0 ? parts.join(' | ') : 'Signal captured';
+}
+
+function renderTrendItem(item: TrendItem, index: number): string[] {
+  const lines = [
+    `${index}. ${item.title}`,
+    `   Source: ${item.source} | Type: ${item.sourceType}`,
+    `   URL: ${item.url}`,
+    `   ${metricText(item)}`
+  ];
+
+  if (item.category) lines.push(`   Category: ${item.category}`);
+  if (item.summary || item.description) lines.push(`   Summary: ${item.summary ?? item.description}`);
+  if (item.originalSource || item.originalUrl) {
+    lines.push(`   Original: ${[item.originalSource, item.originalUrl].filter(Boolean).join(' - ')}`);
+  }
+  if (item.recommendedReason) lines.push(`   Why it matters: ${item.recommendedReason}`);
+  return lines;
+}
+
+function renderCrossSource(entity: MergedTrendEntity, index: number): string[] {
+  return [
+    `${index}. ${entity.title}`,
+    `   URL: ${entity.canonicalUrl}`,
+    `   Sources: ${entity.sources.join(', ')}`,
+    `   Why it matters: 同一趋势被 ${entity.sourceCount} 个来源同时捕捉，cross-source bonus ${entity.crossSourceBonus}。`
+  ];
+}
+
+function renderTrendSection(title: string, items: TrendItem[]): string[] {
+  if (items.length === 0) return [];
+  return [
+    title,
+    ...items.flatMap((item, index) => [...renderTrendItem(item, index + 1), ''])
+  ];
+}
+
 export function renderRadarDigestText(digest: RadarDigest): string {
   const lines: string[] = [];
 
@@ -58,6 +106,18 @@ export function renderRadarDigestText(digest: RadarDigest): string {
   if (digest.selectedProjects.length > 0) {
     lines.push(digest.mode === 'weekly' ? '本周精选项目' : '今日精选项目');
     digest.selectedProjects.forEach((item, index) => lines.push(...renderProject(item, index + 1), ''));
+  }
+
+  if (digest.mode === 'daily' && digest.multiSourceSections) {
+    const sections = digest.multiSourceSections;
+    lines.push(...renderTrendSection('Product Launches', sections.productLaunches));
+    lines.push(...renderTrendSection('Model & Demo Signals', sections.modelDemoSignals));
+    lines.push(...renderTrendSection('Developer Buzz', sections.developerBuzz));
+    lines.push(...renderTrendSection('AIHot Curated Highlights', sections.aihotHighlights));
+    if (sections.crossSourceHighlights.length > 0) {
+      lines.push('Cross-source Highlights');
+      sections.crossSourceHighlights.forEach((entity, index) => lines.push(...renderCrossSource(entity, index + 1), ''));
+    }
   }
 
   if (digest.mode === 'weekly' && digest.researchPicks?.length) {

@@ -1,3 +1,5 @@
+import type { MultiSourceDigestSections } from '../trends/types.js';
+
 export type RadarRunMode = 'daily' | 'weekly';
 
 export interface RadarProfile {
@@ -113,6 +115,7 @@ export interface RadarDigest {
   selectedProjects: ScoredRadarRepository[];
   categoryStats?: RadarCategoryStat[];
   researchPicks?: ScoredRadarRepository[];
+  multiSourceSections?: MultiSourceDigestSections;
 }
 
 export interface RadarCategoryStat {
