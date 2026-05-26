@@ -53,8 +53,9 @@ function getOutputPath(): string {
 }
 
 async function main(): Promise<void> {
+  const send = hasFlag('send');
   const result = await runAiDeveloperRadarDaily({
-    send: false,
+    send,
     baselineOnly: hasFlag('baseline'),
     useSampleData: hasFlag('sample'),
     repoLimit: parseNumber(getArg('repo-limit')),
@@ -90,6 +91,23 @@ async function main(): Promise<void> {
 
   console.log(text);
   console.log(`\nGenerated ${outputPath} for ${targetDate}`);
+
+  if (result.notify) {
+    if (result.notify.skipped) {
+      console.error(`\n通知已跳过: ${result.notify.reason ?? 'unknown reason'}`);
+      process.exit(1);
+    }
+
+    if (!result.notify.success) {
+      console.error(`\n通知发送失败: ${result.notify.error ?? result.notify.reason ?? 'unknown error'}`);
+      process.exit(1);
+    }
+
+    console.log(`\n通知已发送: ${result.notify.channel}`);
+  } else if (send) {
+    console.error('\n通知发送失败: no notifier result returned.');
+    process.exit(1);
+  }
 }
 
 main().catch((error) => {
