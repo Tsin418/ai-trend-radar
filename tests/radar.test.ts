@@ -5,6 +5,7 @@ import path from 'node:path';
 import test from 'node:test';
 import { classifyAiCategory } from '../src/rankers/ai-category.js';
 import { createPotentialScoreRanker } from '../src/rankers/potential-score.js';
+import { buildLatestDailyDashboardData } from '../src/dashboard/build-dashboard-data.js';
 import { loadRadarProfile } from '../src/radar/config.js';
 import { createSampleRepositories } from '../src/radar/sample-data.js';
 import type { RadarRepository } from '../src/radar/types.js';
@@ -125,4 +126,80 @@ test('Feishu text renderer includes required radar fields', () => {
   assert.match(text, /Trend:/);
   assert.match(text, /GitHub: https:\/\/github\.com\//);
   assert.doesNotMatch(text, /LLM summary unavailable/);
+});
+
+test('daily dashboard exposes homepage sections and growth links', () => {
+  const profile = loadRadarProfile();
+  const store = createTempStore();
+  const now = new Date('2026-05-24T01:00:00.000Z');
+  const repo = createSampleRepositories(now)[0];
+  store.addSnapshots(createSnapshots([withStars(repo, repo.stars - 90)], new Date(now.getTime() - 24 * 60 * 60 * 1000).toISOString()));
+  store.addSnapshots(createSnapshots([repo], now.toISOString()));
+  const scored = createPotentialScoreRanker().score([repo], profile, store, now.toISOString());
+  const digest = {
+    ...buildDailyRadarDigest(scored, profile, '2026-05-24', 10, false),
+    multiSourceSections: {
+      productLaunches: [
+        {
+          id: 'product-hunt:test',
+          source: 'product-hunt',
+          sourceType: 'product_launch' as const,
+          title: 'AI Launch',
+          url: 'https://example.com/product',
+          summary: 'A useful AI product launch.',
+          metrics: { upvotes: 100 },
+          collectedAt: now.toISOString()
+        }
+      ],
+      modelDemoSignals: [],
+      developerBuzz: [
+        {
+          id: 'hackernews:test',
+          source: 'hackernews',
+          sourceType: 'developer_discussion' as const,
+          title: 'OpenAI releases a new coding agent',
+          url: 'https://news.ycombinator.com/item?id=1',
+          tags: ['OpenAI', 'coding agent'],
+          collectedAt: now.toISOString()
+        }
+      ],
+      aihotHighlights: [
+        {
+          id: 'aihot:test',
+          source: 'aihot',
+          sourceType: 'curated_trend' as const,
+          title: 'AIHot trend update',
+          url: 'https://example.com/news',
+          summary: 'A useful AI trend update.',
+          category: 'industry',
+          collectedAt: now.toISOString()
+        }
+      ],
+      crossSourceHighlights: []
+    }
+  };
+
+  const dashboard = buildLatestDailyDashboardData({
+    digest,
+    scored,
+    store,
+    targetDate: '2026-05-24',
+    generatedAt: now.toISOString(),
+    timezone: 'Asia/Shanghai',
+    digestId: 'daily-2026-05-24',
+    source: {
+      repo: 'Tsin418/ai-trend-radar',
+      branch: 'main',
+      workflow: 'radar-daily'
+    }
+  });
+
+  assert.match(dashboard.lastUpdatedLabel, /Last updated: 2026-05-24/);
+  assert.equal(dashboard.growthLinks.githubRepoUrl, 'https://github.com/Tsin418/ai-trend-radar');
+  assert.equal(dashboard.growthLinks.githubProfileUrl, 'https://github.com/Tsin418');
+  assert.ok(dashboard.homepageSections.openSourceRadar.items.length > 0);
+  assert.equal(dashboard.homepageSections.openSourceRadar.items[0].sourceType, 'opensource');
+  assert.equal(dashboard.homepageSections.aiProductRadar.items[0].sourceType, 'product_launch');
+  assert.ok(dashboard.homepageSections.aiNewsRadar.items.some((item) => item.source === 'hackernews'));
+  assert.ok(dashboard.homepageSections.selfHostPush.items.some((item) => item.sourceType === 'self_host'));
 });

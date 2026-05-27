@@ -7,6 +7,12 @@
 
 The digest payload is intentionally unchanged at the top level. Dashboard consumers should read `latest-daily-dashboard.json`.
 
+`latest-daily-dashboard.json` also exposes frontend-ready homepage fields:
+
+- `lastUpdatedLabel`: human-readable generated time.
+- `growthLinks`: GitHub repo/profile and optional personal links for dashboard CTAs.
+- `homepageSections`: four render-ready homepage sections for open-source projects, AI products, AI news, and self-hosted push setup.
+
 ## Dashboard Sections
 
 The dashboard file includes:
