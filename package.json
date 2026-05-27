@@ -29,6 +29,7 @@
     "radar:daily:sample": "RADAR_USE_SAMPLE_DATA=true tsx scripts/send-ai-developer-radar.ts --mode=daily --dry-run",
     "radar:daily:generate:sample": "RADAR_USE_SAMPLE_DATA=true tsx scripts/generate-ai-developer-radar-digest.ts",
     "radar:weekly:sample": "RADAR_USE_SAMPLE_DATA=true tsx scripts/send-ai-developer-radar.ts --mode=weekly --dry-run",
+    "feedback": "tsx scripts/send-trending-digest.ts feedback --stats",
     "producthunt:dry-run": "tsx scripts/send-producthunt-digest.ts --dry-run",
     "producthunt:json": "tsx scripts/send-producthunt-digest.ts --format=json",
     "worker:feishu:typecheck": "tsc --noEmit --pretty false -p workers/feishu-pusher/tsconfig.json",

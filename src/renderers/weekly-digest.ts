@@ -63,6 +63,7 @@ export function buildWeeklyRadarDigest(
       '分类、风险和 insight 均为 rule-based MVP，可在 V2 接入 LLM 增强。'
     ],
     hotProjects: hotProjects.slice(0, limit),
+    acceleratingProjects: [],
     earlySignals: earlySignals.slice(0, limit),
     watchlistMovements: watchlistMovements.slice(0, limit),
     selectedProjects: sortByScore(aiCandidates).slice(0, limit),

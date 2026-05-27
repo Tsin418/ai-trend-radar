@@ -1,4 +1,5 @@
 import { getLLMEnrichmentConfig, getTrendLLMEnrichmentConfig, loadRadarProfile } from '../radar/config.js';
+import { summarizeCurrentFeedback } from '../feedback/summary.js';
 import { getLocalDateLabel } from '../radar/date.js';
 import { enrichRadarDigestWithLLM } from '../llm/repo-enricher.js';
 import { enrichTrendEntitiesWithLLM } from '../llm/trend-enricher.js';
@@ -54,6 +55,10 @@ export async function runAiDeveloperRadarDaily(options: RadarRunOptions = {}): P
       };
     }
     digest = appendErrorsToDigest(digest, storePathContext.errors);
+    digest = {
+      ...digest,
+      feedbackSummary: summarizeCurrentFeedback()
+    };
     const notify = await maybeSendRadarDigest(digest, options.send);
     storePathContext.store.recordDigestRun('daily', startedAt, 'success', digest.selectedProjects.length);
 

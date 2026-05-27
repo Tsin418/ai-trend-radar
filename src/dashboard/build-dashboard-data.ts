@@ -19,9 +19,16 @@ export interface DashboardProject {
   weeklyStarDelta: number | null;
   dailyGrowthRate: number | null;
   weeklyGrowthRate: number | null;
+  yesterdayStarDelta: number | null;
+  threeDayAverageDelta: number | null;
+  sevenDayAverageDelta: number | null;
+  acceleration: number;
+  accelerationConfidence: string;
+  trendType: string;
   score: {
     finalScore: number;
     attentionScore: number;
+    accelerationScore: number;
     earlyPotentialScore: number;
     developerActivityScore: number;
     aiRelevanceScore: number;
@@ -75,6 +82,7 @@ export interface LatestDailyDashboardFile {
   projects: DashboardProject[];
   sections: {
     hotProjects: DashboardProject[];
+    acceleratingProjects: DashboardProject[];
     earlySignals: DashboardProject[];
     watchlistMovements: DashboardProject[];
     productLaunches: TrendItem[];
@@ -127,9 +135,16 @@ function toDashboardProject(item: ScoredRadarRepository): DashboardProject {
     weeklyStarDelta: score.weeklyStarDelta,
     dailyGrowthRate: score.dailyGrowthRate,
     weeklyGrowthRate: score.weeklyGrowthRate,
+    yesterdayStarDelta: score.yesterdayStarDelta,
+    threeDayAverageDelta: score.threeDayAverageDelta,
+    sevenDayAverageDelta: score.sevenDayAverageDelta,
+    acceleration: score.acceleration,
+    accelerationConfidence: score.accelerationConfidence,
+    trendType: score.trendType,
     score: {
       finalScore: score.finalScore,
       attentionScore: score.attentionScore,
+      accelerationScore: score.accelerationScore,
       earlyPotentialScore: score.earlyPotentialScore,
       developerActivityScore: score.developerActivityScore,
       aiRelevanceScore: score.aiRelevanceScore,
@@ -232,6 +247,7 @@ export function buildLatestDailyDashboardData(options: BuildDashboardDataOptions
     projects,
     sections: {
       hotProjects: options.digest.hotProjects.map(toDashboardProject),
+      acceleratingProjects: (options.digest.acceleratingProjects ?? []).map(toDashboardProject),
       earlySignals: options.digest.earlySignals.map(toDashboardProject),
       watchlistMovements: options.digest.watchlistMovements.map(toDashboardProject),
       productLaunches: sections?.productLaunches ?? [],

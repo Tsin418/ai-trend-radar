@@ -1,6 +1,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import type { RadarRepository, RadarRunMode, RadarStoreData, RepoScore, RepoSnapshot } from '../radar/types.js';
+import type {
+  FeedbackEntry,
+  FeedbackStoreData,
+  RadarRepository,
+  RadarRunMode,
+  RadarStoreData,
+  RepoScore,
+  RepoSnapshot
+} from '../radar/types.js';
 
 function emptyStore(): RadarStoreData {
   return {
@@ -8,6 +16,12 @@ function emptyStore(): RadarStoreData {
     snapshots: [],
     scores: [],
     digestRuns: []
+  };
+}
+
+function emptyFeedbackStore(): FeedbackStoreData {
+  return {
+    entries: []
   };
 }
 
@@ -98,6 +112,50 @@ export class JsonRadarStore {
       .sort((a, b) => safeDate(b.collectedAt) - safeDate(a.collectedAt));
 
     return sameRepo[0];
+  }
+
+  findSnapshotsAtDailyOffsets(repoFullName: string, collectedAt: string, maxDaysAgo: number): Array<{ daysAgo: number; snapshot: RepoSnapshot }> {
+    const data = this.load();
+    const result: Array<{ daysAgo: number; snapshot: RepoSnapshot }> = [];
+
+    for (let daysAgo = 1; daysAgo <= maxDaysAgo; daysAgo += 1) {
+      const target = Date.parse(collectedAt) - daysAgo * 24 * 60 * 60 * 1000;
+      const snapshot = data.snapshots
+        .filter((item) => item.repoFullName === repoFullName && safeDate(item.collectedAt) <= target)
+        .sort((a, b) => safeDate(b.collectedAt) - safeDate(a.collectedAt))[0];
+      if (snapshot) {
+        result.push({ daysAgo, snapshot });
+      }
+    }
+
+    return result;
+  }
+}
+
+export class JsonFeedbackStore {
+  constructor(private readonly filePath: string) {}
+
+  load(): FeedbackStoreData {
+    if (!fs.existsSync(this.filePath)) return emptyFeedbackStore();
+    const text = fs.readFileSync(this.filePath, 'utf8');
+    if (!text.trim()) return emptyFeedbackStore();
+    const parsed = JSON.parse(text) as Partial<FeedbackStoreData>;
+    return {
+      entries: parsed.entries ?? []
+    };
+  }
+
+  save(data: FeedbackStoreData): void {
+    fs.mkdirSync(path.dirname(this.filePath), { recursive: true });
+    fs.writeFileSync(this.filePath, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
+  }
+
+  addEntry(entry: FeedbackEntry): FeedbackStoreData {
+    const data = this.load();
+    data.entries.push(entry);
+    data.entries.sort((a, b) => safeDate(a.feedbackAt) - safeDate(b.feedbackAt));
+    this.save(data);
+    return data;
   }
 }
 

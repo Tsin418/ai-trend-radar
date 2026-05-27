@@ -1,5 +1,6 @@
 import type { GitHubTrendingRepo, TrendingProfile, TrendingRecommendation } from '../trending/types.js';
 import type { TrendingRanker } from './types.js';
+import type { TrendType } from '../radar/types.js';
 
 const KEYWORD_GROUPS: Array<{ label: string; keywords: string[] }> = [
   {
@@ -72,9 +73,20 @@ function buildPracticeIdeas(repo: GitHubTrendingRepo): string[] {
 function buildReasons(repo: GitHubTrendingRepo, profile: TrendingProfile, matchedKeywords: string[]): string[] {
   const reasons: string[] = [];
   const text = normalizeText([repo.fullName, repo.description, repo.language ?? ''].join(' '));
+  const trendType = classifyTrendingTrendType(repo);
+  const totalStars = repo.totalStars ?? 0;
+  const dailyGrowthRate = totalStars > 0 ? repo.starsToday / totalStars : 0;
+
+  if (trendType === 'sudden_breakout') {
+    reasons.push(`突然爆火：今天新增约 ${repo.starsToday.toLocaleString()} 星${dailyGrowthRate > 0 ? `，约占总 stars 的 ${(dailyGrowthRate * 100).toFixed(1)}%` : ''}，更像被外部内容或社区讨论集中带动。`);
+  } else if (trendType === 'early_signal') {
+    reasons.push(`早期信号：总 stars ${totalStars.toLocaleString()}，但今天新增 ${repo.starsToday.toLocaleString()}，小体量项目已经出现明显关注度爬升。`);
+  } else {
+    reasons.push(`持续热门：总 stars ${totalStars > 0 ? totalStars.toLocaleString() : '未知'}，今天仍新增 ${repo.starsToday.toLocaleString()}，适合检查近期 release、commit 或社区讨论是否有新变化。`);
+  }
 
   if (matchedKeywords.length > 0) {
-    reasons.push(`和你当前的实战关键词高度重合：${matchedKeywords.slice(0, 3).join('、')}`);
+    reasons.push(`和你的关键词 ${matchedKeywords.slice(0, 3).join('、')} 重合，说明这个热度和当前实战方向有关，不只是泛热门项目。`);
   }
 
   const matchedGroups = KEYWORD_GROUPS
@@ -82,7 +94,7 @@ function buildReasons(repo: GitHubTrendingRepo, profile: TrendingProfile, matche
     .map((group) => group.label);
 
   if (matchedGroups.length > 0) {
-    reasons.push(`项目类型贴近你正在做的方向：${matchedGroups.slice(0, 2).join('、')}`);
+    reasons.push(`它落在 ${matchedGroups.slice(0, 2).join('、')}，可以用来观察这个方向的工具形态和开发者工作流变化。`);
   }
 
   const relatedProjects = PROJECT_HINTS
@@ -90,15 +102,15 @@ function buildReasons(repo: GitHubTrendingRepo, profile: TrendingProfile, matche
     .map((group) => group.label);
 
   if (relatedProjects.length > 0) {
-    reasons.push(`和你当前项目最接近的落地方向是：${relatedProjects.slice(0, 2).join('、')}`);
+    reasons.push(`最接近的落地方向是 ${relatedProjects.slice(0, 2).join('、')}，建议优先看它是否能复用到现有产品或自动化链路。`);
   }
 
   if (repo.language && profile.preferredLanguages.includes(repo.language)) {
-    reasons.push(`技术栈是 ${repo.language}，和你当前常用栈一致，落地成本更低`);
+    reasons.push(`技术栈是 ${repo.language}，验证成本低，可以快速判断它是可集成工具还是只适合围观。`);
   }
 
   if (repo.rank <= 3) {
-    reasons.push('今天在 Trending 排名靠前，值得你优先看一眼，避免错过短周期热点');
+    reasons.push('今天在 Trending 排名靠前，先看 README、最近提交和 issue 质量，判断热度是否能转化为长期价值。');
   }
 
   if (repo.starsToday >= 1000) {
@@ -106,6 +118,14 @@ function buildReasons(repo: GitHubTrendingRepo, profile: TrendingProfile, matche
   }
 
   return reasons.slice(0, 4);
+}
+
+function classifyTrendingTrendType(repo: GitHubTrendingRepo): TrendType {
+  const totalStars = repo.totalStars ?? 0;
+  const dailyGrowthRate = totalStars > 0 ? repo.starsToday / totalStars : 0;
+  if (repo.starsToday >= 1000 || dailyGrowthRate >= 0.12) return 'sudden_breakout';
+  if (totalStars > 0 && totalStars <= 3000 && repo.starsToday >= 40) return 'early_signal';
+  return 'sustained_hot';
 }
 
 function scoreRepo(repo: GitHubTrendingRepo, profile: TrendingProfile): { score: number; matchedKeywords: string[] } {

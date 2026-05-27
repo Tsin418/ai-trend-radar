@@ -3,8 +3,9 @@ import path from 'node:path';
 import { fetchGitHubReadme } from '../collectors/github-readme.js';
 import type { LLMEnrichmentConfig } from '../radar/config.js';
 import type { RadarDigest, RepoLLMSummary, ScoredRadarRepository } from '../radar/types.js';
+import type { TrendItem } from '../trends/types.js';
 import { callDeepSeekJson } from './deepseek-client.js';
-import { buildRepoAnalysisPrompt, REPO_ANALYST_SYSTEM_PROMPT } from './prompts.js';
+import { buildRepoAnalysisPrompt, type RepoExternalBuzz, REPO_ANALYST_SYSTEM_PROMPT } from './prompts.js';
 import { RepoLLMSummarySchema } from './schema.js';
 
 interface LLMCacheEntry {
@@ -19,6 +20,7 @@ export interface LLMEnrichmentDependencies {
   callJson?: (params: { systemPrompt: string; userPrompt: string; model?: string; timeoutMs?: number }) => Promise<unknown>;
   fetchReadme?: (repoFullName: string) => Promise<{ content: string }>;
   now?: () => string;
+  externalBuzzByRepoFullName?: Map<string, RepoExternalBuzz[]>;
 }
 
 export interface LLMEnrichmentResult {
@@ -95,6 +97,15 @@ function withReadmeFallback(summary: RepoLLMSummary, readmeUnavailable: boolean)
   };
 }
 
+function normalizeSummary(summary: RepoLLMSummary): RepoLLMSummary {
+  return {
+    ...summary,
+    whyTrending: summary.whyTrending || summary.whyNow,
+    developerTakeaway: summary.developerTakeaway || summary.developerInsight,
+    developerInsight: summary.developerInsight || summary.developerTakeaway
+  };
+}
+
 export async function enrichReposWithLLM(
   repos: ScoredRadarRepository[],
   options: LLMEnrichmentConfig,
@@ -152,11 +163,11 @@ export async function enrichReposWithLLM(
     try {
       const rawSummary = await callJson({
         systemPrompt: REPO_ANALYST_SYSTEM_PROMPT,
-        userPrompt: buildRepoAnalysisPrompt(item, readmeExcerpt),
+        userPrompt: buildRepoAnalysisPrompt(item, readmeExcerpt, dependencies.externalBuzzByRepoFullName?.get(item.repository.repoFullName) ?? []),
         model: options.model,
         timeoutMs: options.timeoutMs
       });
-      const parsed = RepoLLMSummarySchema.parse(rawSummary);
+      const parsed = normalizeSummary(RepoLLMSummarySchema.parse(rawSummary));
       const summary = withReadmeFallback(parsed, readmeUnavailable);
       cache[key] = {
         summary,
@@ -182,6 +193,34 @@ function replaceRepos(items: ScoredRadarRepository[], enriched: Map<string, Scor
   return items.map((item) => enriched.get(item.repository.repoFullName) ?? item);
 }
 
+function buildHackerNewsBuzzByRepo(items: TrendItem[] | undefined, repos: ScoredRadarRepository[]): Map<string, RepoExternalBuzz[]> {
+  const result = new Map<string, RepoExternalBuzz[]>();
+  if (!items?.length) return result;
+  const hnItems = items.filter((item) => item.source === 'hackernews' || item.sourceType === 'developer_discussion');
+
+  for (const repo of repos) {
+    const fullName = repo.repository.repoFullName.toLowerCase();
+    const name = repo.repository.name.toLowerCase();
+    const matches = hnItems.filter((item) => {
+      const text = [item.title, item.url, item.summary, item.description, item.originalUrl]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase();
+      return text.includes(fullName) || text.includes(name);
+    });
+    if (matches.length === 0) continue;
+    const top = [...matches].sort((a, b) => (b.metrics?.upvotes ?? 0) - (a.metrics?.upvotes ?? 0))[0];
+    result.set(repo.repository.repoFullName, [{
+      source: 'hackernews',
+      discussionCount: matches.length,
+      topPostTitle: top.title,
+      topPostUrl: top.url
+    }]);
+  }
+
+  return result;
+}
+
 export async function enrichRadarDigestWithLLM(
   digest: RadarDigest,
   options: LLMEnrichmentConfig,
@@ -194,7 +233,11 @@ export async function enrichRadarDigestWithLLM(
     ...digest.watchlistMovements,
     ...(digest.researchPicks ?? [])
   ]);
-  const result = await enrichReposWithLLM(candidates, options, dependencies);
+  const externalBuzzByRepoFullName = dependencies.externalBuzzByRepoFullName ?? buildHackerNewsBuzzByRepo(digest.multiSourceItems, candidates);
+  const result = await enrichReposWithLLM(candidates, options, {
+    ...dependencies,
+    externalBuzzByRepoFullName
+  });
   const enriched = new Map(result.repos.map((item) => [item.repository.repoFullName, item]));
 
   return {

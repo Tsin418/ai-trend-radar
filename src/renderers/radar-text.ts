@@ -5,6 +5,17 @@ function deltaText(value: number | null, suffix: string): string {
   return value === null ? `${suffix} 暂无基线` : `${suffix} +${value}`;
 }
 
+function trendTypeText(value: ScoredRadarRepository['score']['trendType']): string {
+  switch (value) {
+    case 'sudden_breakout':
+      return '突然爆火';
+    case 'early_signal':
+      return '早期信号';
+    case 'sustained_hot':
+      return '持续热门';
+  }
+}
+
 function renderProject(item: ScoredRadarRepository, index?: number): string[] {
   const repo = item.repository;
   const score = item.score;
@@ -16,15 +27,17 @@ function renderProject(item: ScoredRadarRepository, index?: number): string[] {
     `   GitHub: ${repo.repoUrl}`,
     `   Category: ${summary?.aiCategory ?? repo.category}`,
     `   Stars: ${repo.stars.toLocaleString()} (${deltaText(score.dailyStarDelta, '24h')}, ${deltaText(score.weeklyStarDelta, '7d')})`,
+    `   Trend: ${trendTypeText(summary?.trendType ?? score.trendType)} | Acceleration: ${score.acceleration}x (${score.accelerationConfidence}, 前 3 日均值 ${score.threeDayAverageDelta ?? 'n/a'})`,
     `   Score: ${score.finalScore} | Risk: ${score.riskLevel}`,
     `   One-liner: ${summary?.oneLiner ?? repo.description ?? '暂无项目描述'}`,
-    `   Why worth watching: ${summary?.whyTrending ?? item.whyItMatters}`,
-    `   Developer takeaway: ${summary?.developerTakeaway ?? item.developerInsight}`
+    `   Why worth watching: ${summary?.whyNow ?? summary?.whyTrending ?? item.whyItMatters}`,
+    `   Developer takeaway: ${summary?.developerInsight ?? summary?.developerTakeaway ?? item.developerInsight}`
   ];
 
   if (summary) {
     lines.push(
       `   Problem solved: ${summary.problemSolved}`,
+      `   What changed: ${summary.whatChanged}`,
       `   Target users: ${summary.targetUsers}`,
       `   Risk notes: ${summary.riskNotes}`,
       `   LLM confidence: ${summary.confidence}`
@@ -108,6 +121,11 @@ export function renderRadarDigestText(digest: RadarDigest): string {
     digest.selectedProjects.forEach((item, index) => lines.push(...renderProject(item, index + 1), ''));
   }
 
+  if (digest.mode === 'daily' && (digest.acceleratingProjects?.length ?? 0) > 0) {
+    lines.push('🚀 Accelerating（近期突然加速的项目）');
+    digest.acceleratingProjects.forEach((item, index) => lines.push(...renderProject(item, index + 1), ''));
+  }
+
   if (digest.mode === 'daily' && digest.multiSourceSections) {
     const sections = digest.multiSourceSections;
     lines.push(...renderTrendSection('Product Launches', sections.productLaunches));
@@ -131,6 +149,22 @@ export function renderRadarDigestText(digest: RadarDigest): string {
 
   lines.push('数据说明：');
   digest.dataNotes.forEach((note) => lines.push(`- ${note}`));
+
+  if (digest.feedbackSummary) {
+    const usefulCategories = digest.feedbackSummary.usefulCategories
+      .slice(0, 3)
+      .map((item) => `${item.category} ${item.count}`)
+      .join('、') || '暂无';
+    lines.push('');
+    lines.push('反馈摘要：');
+    lines.push(`- 本周反馈 ${digest.feedbackSummary.weekEntries} 条：有用 ${digest.feedbackSummary.usefulThisWeek}，不相关 ${digest.feedbackSummary.notUsefulThisWeek}，已看 ${digest.feedbackSummary.seenThisWeek}。`);
+    lines.push(`- 本周有用方向：${usefulCategories}。`);
+  }
+
+  if (digest.mode === 'daily') {
+    lines.push('');
+    lines.push('💬 反馈：对今天的推荐有什么想法？运行 `npx gtr feedback --useful owner/repo`、`--not-useful owner/repo` 或 `--seen owner/repo`。');
+  }
 
   return lines.join('\n').trim();
 }

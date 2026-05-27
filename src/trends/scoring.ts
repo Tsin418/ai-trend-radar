@@ -1,5 +1,12 @@
 import type { TrendItem } from './types.js';
 
+export type AccelerationConfidence = 'high' | 'medium' | 'low';
+
+export interface AccelerationResult {
+  acceleration: number;
+  confidence: AccelerationConfidence;
+}
+
 function metric(value: number | undefined, cap: number): number {
   if (!value || value <= 0) return 0;
   return Math.min(100, (Math.log10(value + 1) / Math.log10(cap + 1)) * 100);
@@ -35,6 +42,24 @@ export function scoreTrendItem(item: TrendItem): number {
     default:
       return recency;
   }
+}
+
+export function calcAcceleration(todayDelta: number, historicalDeltas: number[]): AccelerationResult {
+  const usableDeltas = historicalDeltas.filter((value) => Number.isFinite(value));
+  if (usableDeltas.length < 2) {
+    return { acceleration: 1.0, confidence: 'low' };
+  }
+
+  const avg = usableDeltas.reduce((sum, value) => sum + value, 0) / usableDeltas.length;
+  if (avg <= 0) {
+    return { acceleration: todayDelta > 0 ? 3.0 : 1.0, confidence: 'medium' };
+  }
+
+  const acceleration = todayDelta / avg;
+  return {
+    acceleration: Math.round(acceleration * 10) / 10,
+    confidence: usableDeltas.length >= 3 ? 'high' : 'medium'
+  };
 }
 
 export function sortTrendItems(items: TrendItem[]): TrendItem[] {
