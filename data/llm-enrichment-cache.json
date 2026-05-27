@@ -446,5 +446,159 @@
     },
     "createdAt": "2026-05-26T09:23:08.171Z",
     "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-05-27T05:05:30Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent CLI that optimizes for prefix-cache stability to reduce token costs in long sessions.",
+      "problemSolved": "High token costs and cache inefficiency in long-running AI coding sessions, especially with DeepSeek models.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "whyTrending": "Exceptional cache hit rates (99.82% in a case study) leading to dramatic cost savings, combined with a polished CLI and desktop client.",
+      "developerTakeaway": "If you use DeepSeek for coding, this agent is purpose-built to minimize costs through cache optimization, but it is locked to DeepSeek models.",
+      "targetUsers": "Developers who use DeepSeek models for AI-assisted coding and want a terminal-based agent with low token costs.",
+      "riskNotes": "DeepSeek-only; no support for other LLMs. 213 open issues may indicate active development or unresolved bugs.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-27T05:24:24.533Z",
+    "model": "deepseek-v4-flash"
+  },
+  "rohitg00/ai-engineering-from-scratch:2026-05-26T22:57:15Z": {
+    "summary": {
+      "oneLiner": "A comprehensive, open-source curriculum (435 lessons, 20 phases) that teaches AI engineering from math foundations to autonomous agents, with every lesson producing a reusable artifact.",
+      "problemSolved": "Bridges the gap between using AI tools and understanding how they work internally, providing a structured, hands-on path from linear algebra to production-ready agents and MCP servers.",
+      "aiCategory": "AI Agent Framework",
+      "whyTrending": "Massive star surge (21k stars, +4.4k in 24h) driven by the growing demand for practical, deep AI education that goes beyond API wrappers, and the curriculum's promise of shipping real artifacts (prompts, skills, agents, MCP servers) from every lesson.",
+      "developerTakeaway": "A ready-to-use, free, MIT-licensed curriculum to systematically learn AI engineering by building from scratch, with built-in placement quizzes and agent skills for Claude/Cursor.",
+      "targetUsers": "Developers who can code (Python helpful) and want to deeply understand AI, not just call APIs; from beginners to experienced engineers seeking a structured end-to-end reference.",
+      "riskNotes": "README content is untrusted; curriculum is very large (~320 hours) and may be incomplete or inconsistent; some phases may not be fully implemented yet.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-27T05:24:25.264Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-05-27T05:22:14Z": {
+    "summary": {
+      "oneLiner": "Open Design is an open-source, local-first alternative to Claude Design that lets you use any coding agent CLI (Claude Code, Codex, Gemini, etc.) to generate design artifacts like websites, slides, images, and videos.",
+      "problemSolved": "It removes vendor lock-in from Claude Design by providing a self-hostable, BYOK (bring your own key/agent) design tool that runs locally and works with multiple AI models and coding agents.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "whyTrending": "It gained 53k stars in two weeks as a viral open-source alternative to the popular but closed-source Claude Design, offering freedom from Anthropic's paid, cloud-only ecosystem.",
+      "developerTakeaway": "A modular, extensible platform with 132 skills, 150 design systems, and support for 16 coding agent CLIs, all running locally with a daemon and web UI. Great for building AI-powered design workflows.",
+      "targetUsers": "Developers, designers, and product builders who want to use AI agents for design without being locked into a single vendor or cloud service.",
+      "riskNotes": "README is promotional and may oversell stability (0.8.0-preview). High star count but early stage; 356 open issues suggest active but rough development. Relies on external CLI tools that may not be installed.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-27T05:24:29.202Z",
+    "model": "deepseek-v4-flash"
+  },
+  "HKUDS/nanobot:2026-05-27T05:21:30Z": {
+    "summary": {
+      "oneLiner": "An ultra-lightweight, open-source AI agent that integrates with chat platforms, tools, and workflows.",
+      "problemSolved": "Provides a minimal, readable agent loop that can be deployed locally or as a long-running personal assistant, supporting multiple LLM providers, memory, MCP, and chat channels without heavy overhead.",
+      "aiCategory": "AI Agent Framework",
+      "whyTrending": "Rapid development pace (daily releases), strong community engagement (43k stars, 7.6k forks), and positioning as a lightweight alternative to Claude Code and Codex.",
+      "developerTakeaway": "A practical, extensible agent for building custom AI assistants with support for many providers and channels, but with 876 open issues indicating active but potentially unstable development.",
+      "targetUsers": "Developers and teams wanting to build or deploy lightweight AI agents for chat, automation, and tool integration.",
+      "riskNotes": "High number of open issues (876) suggests ongoing bugs or feature churn; README is image-heavy and lacks detailed documentation; rapid release cycle may lead to instability.",
+      "confidence": "medium"
+    },
+    "createdAt": "2026-05-27T05:24:29.465Z",
+    "model": "deepseek-v4-flash"
+  },
+  "thedotmack/claude-mem:2026-05-26T05:10:19Z": {
+    "summary": {
+      "oneLiner": "A persistent memory compression system for Claude Code and other AI coding agents that captures, summarizes, and injects relevant context across sessions.",
+      "problemSolved": "AI coding agents lose context when sessions end, forcing users to re-explain project details. Claude-Mem automatically captures tool usage observations, generates semantic summaries, and injects relevant context into future sessions, enabling continuity without manual effort.",
+      "aiCategory": "AI Agent Memory / Context Management",
+      "whyTrending": "Extreme popularity (78k+ stars, 919 stars in 24h) due to solving a critical pain point for Claude Code users and other AI coding agents. The project is actively maintained, has extensive documentation, and supports multiple IDEs and agents (Claude Code, Gemini CLI, OpenClaw, etc.).",
+      "developerTakeaway": "Provides a plug-and-play memory layer for AI coding agents with minimal setup (single npx command). Uses a hybrid search (Chroma + SQLite FTS5) and progressive disclosure to keep token costs low. The architecture (lifecycle hooks, worker service, MCP tools) is well-documented and extensible.",
+      "targetUsers": "Developers using Claude Code, Gemini CLI, OpenClaw, Codex, or other AI coding agents who want persistent project context across sessions.",
+      "riskNotes": "README content is untrusted; claims may be exaggerated. The project is complex (multiple components: hooks, worker, DB, vector search) and may have stability issues. Open issues (227) suggest active development but also potential bugs. Privacy concerns: captures all tool usage unless explicitly excluded with <private> tags.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-27T05:24:34.895Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-05-27T06:18:52Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, optimized for prefix-cache stability to keep token costs low across long sessions.",
+      "problemSolved": "Reduces API costs for AI-assisted coding by maximizing cache hit rates on DeepSeek's prefix-cache mechanism, enabling affordable long-running agent sessions.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "whyTrending": "Combines extreme cost efficiency (99.82% cache hit, ~$12 vs ~$61 for a real workload) with a polished CLI/TUI and desktop client, attracting developers seeking affordable AI coding agents.",
+      "developerTakeaway": "A specialized, DeepSeek-only agent that prioritizes cache stability over generality, offering significant cost savings for sustained coding sessions.",
+      "targetUsers": "Developers using DeepSeek models who want a terminal-based AI coding agent with low token costs and long-running session support.",
+      "riskNotes": "DeepSeek-only dependency; cache stability relies on DeepSeek's API behavior; 218 open issues may indicate active development churn.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-27T06:21:19.338Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-05-27T06:20:49Z": {
+    "summary": {
+      "oneLiner": "Open Design is an open-source, local-first alternative to Claude Design that lets you use any coding-agent CLI (Claude Code, Codex, Gemini, etc.) as a design engine to generate web, desktop, mobile prototypes, slides, images, and videos.",
+      "problemSolved": "It eliminates vendor lock-in and cloud dependency for AI-assisted design by providing a self-hostable, BYOK (bring-your-own-key) platform that works with multiple AI models and coding agents, enabling local-first, artifact-driven design workflows without being tied to a single provider.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "whyTrending": "It gained 40k+ stars in two weeks by offering a free, open-source alternative to the popular but closed-source Claude Design, appealing to developers who want local control, multi-agent support, and the ability to customize design systems and skills.",
+      "developerTakeaway": "Developers can integrate Open Design into their toolchain to rapidly prototype UI/UX using natural language prompts, leverage existing coding agents, and export designs as HTML, PDF, PPTX, or MP4 — all while keeping data local and avoiding cloud subscription costs.",
+      "targetUsers": "Developers, designers, and product builders who want an open-source, local-first AI design tool that works with their preferred coding agents and models, and who value customization, privacy, and avoiding vendor lock-in.",
+      "riskNotes": "The project is in preview (0.8.0-preview) and iterating fast on main, so stability and backward compatibility are not guaranteed. It requires significant setup (Node.js, pnpm, and a coding-agent CLI) and may have a learning curve for non-developers.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-27T06:21:21.391Z",
+    "model": "deepseek-v4-flash"
+  },
+  "ruvnet/ruflo:2026-05-27T06:07:35Z": {
+    "summary": {
+      "oneLiner": "Ruflo is a multi-agent orchestration platform for Claude Code that enables coordinated swarms of AI agents with self-learning memory, federation, and enterprise security.",
+      "problemSolved": "It solves the coordination and memory limitations of single-agent AI coding assistants by allowing developers to deploy and manage swarms of specialized agents that collaborate, learn from past tasks, and communicate securely across machines.",
+      "aiCategory": "AI Agent Framework",
+      "whyTrending": "The repository has extremely high star counts (55k+) and daily star growth (395 in 24h), likely due to the growing demand for multi-agent systems, its integration with popular tools like Claude Code and Codex, and the promise of production-ready agent orchestration.",
+      "developerTakeaway": "Ruflo offers a comprehensive plugin ecosystem (33 plugins) covering orchestration, memory, intelligence, testing, security, and more, with both a lightweight plugin mode and a full CLI install. It aims to be a one-stop solution for building complex agent workflows.",
+      "targetUsers": "Developers and teams using Claude Code who need to orchestrate multiple AI agents for complex tasks, automate workflows, and maintain persistent memory across sessions.",
+      "riskNotes": "The README contains promotional language and unverifiable claims (e.g., '22.2M+ ecosystem downloads', '115k git clones 14d'). The project has a high number of open issues (569) and the description mentions a summit in 2026, which may indicate an ambitious roadmap. The actual code quality and stability should be verified independently.",
+      "confidence": "medium"
+    },
+    "createdAt": "2026-05-27T06:21:25.782Z",
+    "model": "deepseek-v4-flash"
+  },
+  "code-yeongyu/oh-my-openagent:2026-05-27T06:08:03Z": {
+    "summary": {
+      "oneLiner": "A multi-harness AI agent orchestration framework that unifies Claude Code, Codex, and other LLM agents under a single CLI with advanced team mode and discipline agents.",
+      "problemSolved": "Eliminates the need to manually configure and switch between multiple AI coding agents (Claude Code, Codex, etc.) by providing a unified harness that orchestrates them, automates workflows, and handles complex multi-agent collaboration.",
+      "aiCategory": "AI Agent Framework",
+      "whyTrending": "Extreme popularity (59k+ stars) driven by viral testimonials claiming it replaces paid subscriptions like Cursor, its 'ultrawork' one-command simplicity, and the controversy around Anthropic blocking OpenCode. The project is actively developed with a large community.",
+      "developerTakeaway": "A powerful tool for developers who want to leverage multiple AI models/agents without vendor lock-in. The 'ultrawork' command and team mode promise significant productivity gains, but the project is in active refactoring and has a non-standard license (SUL-1.0).",
+      "targetUsers": "Developers and engineers who use AI coding assistants (Claude Code, Codex, ChatGPT, etc.) and want a unified, orchestrated experience with advanced multi-agent capabilities.",
+      "riskNotes": "Project is undergoing major refactoring (multi-harness OS), has 663 open issues, uses a custom license (SUL-1.0), and relies on anonymous telemetry. Some claims (e.g., 'Anthropic blocked OpenCode because of us') are unverified and may be marketing.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-27T06:21:27.517Z",
+    "model": "deepseek-v4-flash"
+  },
+  "langgenius/dify:2026-05-27T06:20:48Z": {
+    "summary": {
+      "oneLiner": "Dify is an open-source LLM app development platform that combines AI workflow, RAG pipeline, agent capabilities, and model management into a low-code/no-code interface.",
+      "problemSolved": "It simplifies building and deploying production-ready AI applications by providing a visual canvas for workflows, integrated RAG, agent tools, and observability, reducing the need for extensive coding.",
+      "aiCategory": "AI Workflow Automation / LLM Application Development Platform",
+      "whyTrending": "Extremely high star count (142k+) and rapid growth indicate strong community interest in low-code AI app builders. Its comprehensive feature set (workflow, RAG, agents, model support) and self-hosting option appeal to developers and enterprises.",
+      "developerTakeaway": "A powerful, extensible platform for rapidly prototyping and deploying LLM-based applications with built-in observability and API backend-as-a-service. Ideal for teams wanting to move fast without building from scratch.",
+      "targetUsers": "Developers, AI engineers, product builders, and enterprises looking to create custom AI agents, chatbots, RAG systems, or automated workflows with minimal coding.",
+      "riskNotes": "README is promotional and lacks detailed technical documentation; actual capabilities and limitations should be verified through hands-on use or official docs. High star count may reflect hype; evaluate if it meets specific production needs.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-27T06:21:31.900Z",
+    "model": "deepseek-v4-flash"
+  },
+  "n8n-io/n8n:2026-05-27T06:19:56Z": {
+    "summary": {
+      "oneLiner": "Fair-code workflow automation platform with native AI capabilities, 400+ integrations, and self-hosting options.",
+      "problemSolved": "Automates complex workflows by combining visual no-code building with custom code (JavaScript/Python), enabling technical teams to integrate apps, data, and AI agents without vendor lock-in.",
+      "aiCategory": "AI Workflow Automation",
+      "whyTrending": "Massive adoption (189k+ stars) due to its fair-code license, self-hosted flexibility, native AI/LangChain support, and extensive integration ecosystem.",
+      "developerTakeaway": "A powerful, extensible automation engine that lets you build and deploy workflows with code when needed, while maintaining full data control.",
+      "targetUsers": "Technical teams (developers, DevOps, IT) who need secure, customizable workflow automation with AI capabilities and self-hosting.",
+      "riskNotes": "Fair-code license may restrict commercial use; requires Node.js or Docker for self-hosting; community support only (no official support).",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-27T06:21:32.378Z",
+    "model": "deepseek-v4-flash"
   }
 }
