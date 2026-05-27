@@ -3,10 +3,11 @@ main = "workers/feishu-pusher/src/index.ts"
 compatibility_date = "2026-05-26"
 
 [triggers]
-crons = ["0 1 * * *"]
+crons = ["0 1 * * *", "15 6 * * *", "15 12 * * *", "15 18 * * *"]
 
 [vars]
 DIGEST_URL = "https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-daily-digest.json"
+LIGHTWEIGHT_DIGEST_URL = "https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-intelligence-brief.json"
 MAX_DIGEST_AGE_HOURS = "36"
 PRODUCT_HUNT_ENABLED = "true"
 PRODUCT_HUNT_POST_LIMIT = "10"

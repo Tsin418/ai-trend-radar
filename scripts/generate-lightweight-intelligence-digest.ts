@@ -34,8 +34,9 @@ async function main(): Promise<void> {
     mode: 'lightweight',
     runId: result.runId,
     generatedAt: result.generatedAt,
-    contextRepoCount: result.contextRepoCount,
-    brief: result.brief
+    targetDate: result.brief.date,
+    brief: result.brief,
+    sections: result.sections
   };
   const target = outputPath();
   fs.mkdirSync(path.dirname(target), { recursive: true });
