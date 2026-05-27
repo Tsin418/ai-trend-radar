@@ -4,12 +4,13 @@ import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
 import type { LLMEnrichmentConfig } from '../../src/radar/config.js';
-import type { RepoLLMSummary, ScoredRadarRepository } from '../../src/radar/types.js';
+import type { RadarDigest, RadarRepository, RepoLLMSummary, ScoredRadarRepository } from '../../src/radar/types.js';
 import { loadRadarProfile } from '../../src/radar/config.js';
 import { createSampleRepositories } from '../../src/radar/sample-data.js';
 import { createPotentialScoreRanker } from '../../src/rankers/potential-score.js';
 import { JsonRadarStore, createSnapshots } from '../../src/storage/json-store.js';
-import { enrichReposWithLLM } from '../../src/llm/repo-enricher.js';
+import { enrichRadarDigestWithLLM, enrichReposWithLLM } from '../../src/llm/repo-enricher.js';
+import type { TrendItem } from '../../src/trends/types.js';
 
 function tempCachePath(): string {
   return path.join(fs.mkdtempSync(path.join(os.tmpdir(), 'llm-cache-')), 'cache.json');
@@ -56,6 +57,51 @@ function scoredRepo(): ScoredRadarRepository {
   return createPotentialScoreRanker().score([repo], loadRadarProfile(), store, now.toISOString())[0];
 }
 
+function withRepository(item: ScoredRadarRepository, overrides: Partial<RadarRepository>): ScoredRadarRepository {
+  const repository = {
+    ...item.repository,
+    ...overrides
+  };
+  return {
+    ...item,
+    repository,
+    score: {
+      ...item.score,
+      repoFullName: repository.repoFullName
+    }
+  };
+}
+
+function trendItem(overrides: Partial<TrendItem>): TrendItem {
+  return {
+    id: overrides.id ?? 'hn-1',
+    source: overrides.source ?? 'hackernews',
+    sourceType: overrides.sourceType ?? 'developer_discussion',
+    title: overrides.title ?? 'Discussion',
+    url: overrides.url ?? 'https://news.ycombinator.com/item?id=1',
+    collectedAt: overrides.collectedAt ?? '2026-05-24T01:00:00.000Z',
+    ...overrides
+  };
+}
+
+function digestWithRepos(repos: ScoredRadarRepository[], multiSourceItems: TrendItem[]): RadarDigest {
+  return {
+    mode: 'daily',
+    title: 'Test digest',
+    date: '2026-05-24',
+    generatedAt: '2026-05-24T02:00:00.000Z',
+    summary: 'Test digest',
+    baselineCreated: false,
+    dataNotes: [],
+    hotProjects: [],
+    acceleratingProjects: [],
+    earlySignals: [],
+    watchlistMovements: [],
+    selectedProjects: repos,
+    multiSourceItems
+  };
+}
+
 test('repo enricher adds LLM summary and writes cache', async () => {
   const repo = scoredRepo();
   const cachePath = tempCachePath();
@@ -67,6 +113,7 @@ test('repo enricher adds LLM summary and writes cache', async () => {
       calls += 1;
       return sampleSummary();
     },
+    fetchLatestReleaseDate: async () => null,
     now: () => '2026-05-24T02:00:00.000Z'
   });
 
@@ -82,6 +129,7 @@ test('repo enricher uses cache hit without calling DeepSeek', async () => {
 
   await enrichReposWithLLM([repo], baseOptions(cachePath), {
     fetchReadme: async () => ({ content: '# README\nUseful project.' }),
+    fetchLatestReleaseDate: async () => null,
     callJson: async () => sampleSummary()
   });
 
@@ -118,6 +166,7 @@ test('repo enricher downgrades confidence when README is unavailable', async () 
     fetchReadme: async () => {
       throw new Error('not found');
     },
+    fetchLatestReleaseDate: async () => null,
     callJson: async () => sampleSummary({ confidence: 'high' })
   });
 
@@ -129,6 +178,7 @@ test('repo enricher falls back when DeepSeek fails', async () => {
   const repo = scoredRepo();
   const result = await enrichReposWithLLM([repo], baseOptions(), {
     fetchReadme: async () => ({ content: '# README\nUseful project.' }),
+    fetchLatestReleaseDate: async () => null,
     callJson: async () => {
       throw new Error('timeout');
     }
@@ -136,4 +186,71 @@ test('repo enricher falls back when DeepSeek fails', async () => {
 
   assert.equal(result.repos[0].llmSummary, undefined);
   assert.match(result.warnings[0], /LLM enrichment failed/);
+});
+
+test('repo enricher includes recent release signal in the LLM prompt', async () => {
+  const repo = scoredRepo();
+  let capturedPrompt = '';
+
+  await enrichReposWithLLM([repo], baseOptions(), {
+    fetchReadme: async () => ({ content: '# README\nUseful project.' }),
+    fetchLatestReleaseDate: async () => '2026-05-10T00:00:00.000Z',
+    callJson: async ({ userPrompt }) => {
+      capturedPrompt = userPrompt;
+      return sampleSummary();
+    },
+    now: () => '2026-05-24T02:00:00.000Z'
+  });
+
+  assert.match(capturedPrompt, /hasRecentRelease: yes \(within 30 days\)/);
+});
+
+test('repo enricher filters noisy Hacker News buzz matches', async () => {
+  const base = scoredRepo();
+  const apiRepo = withRepository(base, {
+    repoFullName: 'example/api',
+    repoUrl: 'https://github.com/example/api',
+    owner: 'example',
+    name: 'api',
+    description: 'Short-name API project'
+  });
+  const reactRepo = withRepository(base, {
+    repoFullName: 'example/react',
+    repoUrl: 'https://github.com/example/react',
+    owner: 'example',
+    name: 'react',
+    description: 'React project'
+  });
+  const prompts = new Map<string, string>();
+
+  await enrichRadarDigestWithLLM(digestWithRepos([apiRepo, reactRepo], [
+    trendItem({
+      id: 'api-noise',
+      title: 'API patterns for agent tools',
+      metrics: { upvotes: 200 }
+    }),
+    trendItem({
+      id: 'react-noise',
+      title: 'Reactive systems for agent tools',
+      metrics: { upvotes: 150 }
+    }),
+    trendItem({
+      id: 'react-match',
+      title: 'React for agent dashboards',
+      metrics: { upvotes: 100 }
+    })
+  ]), baseOptions(), {
+    fetchReadme: async () => ({ content: '# README\nUseful project.' }),
+    fetchLatestReleaseDate: async () => null,
+    callJson: async ({ userPrompt }) => {
+      const fullName = userPrompt.match(/- fullName: ([^\n]+)/)?.[1];
+      if (fullName) prompts.set(fullName, userPrompt);
+      return sampleSummary();
+    },
+    now: () => '2026-05-24T02:00:00.000Z'
+  });
+
+  assert.match(prompts.get('example/api') ?? '', /externalBuzz:\nn\/a/);
+  assert.doesNotMatch(prompts.get('example/react') ?? '', /Reactive systems/);
+  assert.match(prompts.get('example/react') ?? '', /top="React for agent dashboards"/);
 });

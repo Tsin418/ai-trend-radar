@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { fetchGitHubReadme } from '../collectors/github-readme.js';
+import { fetchGitHubReadme, fetchLatestReleaseDate } from '../collectors/github-readme.js';
 import type { LLMEnrichmentConfig } from '../radar/config.js';
 import type { RadarDigest, RepoLLMSummary, ScoredRadarRepository } from '../radar/types.js';
 import type { TrendItem } from '../trends/types.js';
@@ -19,6 +19,7 @@ type LLMCache = Record<string, LLMCacheEntry>;
 export interface LLMEnrichmentDependencies {
   callJson?: (params: { systemPrompt: string; userPrompt: string; model?: string; timeoutMs?: number }) => Promise<unknown>;
   fetchReadme?: (repoFullName: string) => Promise<{ content: string }>;
+  fetchLatestReleaseDate?: (repoFullName: string) => Promise<string | null>;
   now?: () => string;
   externalBuzzByRepoFullName?: Map<string, RepoExternalBuzz[]>;
 }
@@ -139,6 +140,7 @@ export async function enrichReposWithLLM(
     maxOutputTokens: options.maxOutputTokens
   }));
   const fetchReadme = dependencies.fetchReadme ?? ((repoFullName: string) => fetchGitHubReadme(repoFullName, process.env.GITHUB_TOKEN));
+  const fetchReleaseDate = dependencies.fetchLatestReleaseDate ?? ((repoFullName: string) => fetchLatestReleaseDate(repoFullName, process.env.GITHUB_TOKEN));
 
   const enrichedPairs = await mapWithConcurrency(limitedRepos, 2, async (item) => {
     const key = cacheKey(item);
@@ -160,10 +162,28 @@ export async function enrichReposWithLLM(
       readmeExcerpt = `README unavailable. Analyze using metadata only. Fetch error: ${error instanceof Error ? error.message : String(error)}`;
     }
 
+    let hasRecentRelease: boolean | null = null;
+    try {
+      const latestReleaseDate = await fetchReleaseDate(item.repository.repoFullName);
+      if (latestReleaseDate) {
+        const releaseAgeMs = Date.parse(createdAt()) - Date.parse(latestReleaseDate);
+        hasRecentRelease = Number.isFinite(releaseAgeMs) ? releaseAgeMs <= 30 * 24 * 60 * 60 * 1000 : null;
+      } else {
+        hasRecentRelease = false;
+      }
+    } catch {
+      hasRecentRelease = null;
+    }
+
     try {
       const rawSummary = await callJson({
         systemPrompt: REPO_ANALYST_SYSTEM_PROMPT,
-        userPrompt: buildRepoAnalysisPrompt(item, readmeExcerpt, dependencies.externalBuzzByRepoFullName?.get(item.repository.repoFullName) ?? []),
+        userPrompt: buildRepoAnalysisPrompt(
+          item,
+          readmeExcerpt,
+          dependencies.externalBuzzByRepoFullName?.get(item.repository.repoFullName) ?? [],
+          hasRecentRelease
+        ),
         model: options.model,
         timeoutMs: options.timeoutMs
       });
@@ -193,6 +213,15 @@ function replaceRepos(items: ScoredRadarRepository[], enriched: Map<string, Scor
   return items.map((item) => enriched.get(item.repository.repoFullName) ?? item);
 }
 
+function escapeRegex(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function hasWordBoundaryMatch(text: string, needle: string): boolean {
+  const regex = new RegExp(`(^|[^a-z0-9])${escapeRegex(needle)}([^a-z0-9]|$)`, 'i');
+  return regex.test(text);
+}
+
 function buildHackerNewsBuzzByRepo(items: TrendItem[] | undefined, repos: ScoredRadarRepository[]): Map<string, RepoExternalBuzz[]> {
   const result = new Map<string, RepoExternalBuzz[]>();
   if (!items?.length) return result;
@@ -201,12 +230,13 @@ function buildHackerNewsBuzzByRepo(items: TrendItem[] | undefined, repos: Scored
   for (const repo of repos) {
     const fullName = repo.repository.repoFullName.toLowerCase();
     const name = repo.repository.name.toLowerCase();
+    const allowNameMatch = name.length >= 5;
     const matches = hnItems.filter((item) => {
       const text = [item.title, item.url, item.summary, item.description, item.originalUrl]
         .filter(Boolean)
         .join(' ')
         .toLowerCase();
-      return text.includes(fullName) || text.includes(name);
+      return text.includes(fullName) || (allowNameMatch && hasWordBoundaryMatch(text, name));
     });
     if (matches.length === 0) continue;
     const top = [...matches].sort((a, b) => (b.metrics?.upvotes ?? 0) - (a.metrics?.upvotes ?? 0))[0];

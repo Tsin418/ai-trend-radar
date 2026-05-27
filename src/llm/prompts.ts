@@ -23,7 +23,8 @@ Rules:
 export function buildRepoAnalysisPrompt(
   item: ScoredRadarRepository,
   readmeExcerpt: string,
-  externalBuzz: RepoExternalBuzz[] = []
+  externalBuzz: RepoExternalBuzz[] = [],
+  hasRecentRelease: boolean | null = null
 ): string {
   const repo = item.repository;
   const score = item.score;
@@ -53,7 +54,7 @@ Repository metadata:
 - acceleration: ${score.acceleration} (${score.accelerationConfidence}; > 2.0 means sudden acceleration)
 - ruleBasedTrendType: ${score.trendType}
 - pushedAt: ${pushedAt}
-- hasRecentRelease: unknown
+- hasRecentRelease: ${hasRecentRelease === null ? 'unknown' : hasRecentRelease ? 'yes (within 30 days)' : 'no recent release found'}
 - hasRecentCommitWithin7d: ${hasRecentCommit}
 - externalBuzz:
 ${buzzText}
