@@ -11,28 +11,126 @@ export const DEFAULT_PRODUCT_HUNT_TOPICS = [
 
 export const DEFAULT_PRODUCT_HUNT_KEYWORDS = [
   'ai',
+  'artificial intelligence',
   'llm',
+  'large language model',
+  'gpt',
+  'machine learning',
+  'deep learning',
+  'neural',
+  'transformer',
+  'diffusion',
   'agent',
   'agents',
+  'agentic',
+  'multi-agent',
+  'autonomous',
+  'coding agent',
+  'swe agent',
+  'ai agent',
   'rag',
+  'retrieval',
+  'knowledge base',
+  'knowledge graph',
+  'vector database',
+  'embeddings',
+  'semantic search',
   'mcp',
   'model context protocol',
+  'tool calling',
+  'function calling',
+  'tool use',
+  'plugin',
+  'extension',
   'openai',
   'claude',
   'gemini',
+  'deepseek',
+  'llama',
+  'mistral',
+  'anthropic',
+  'inference',
+  'fine-tuning',
+  'fine tuning',
+  'local llm',
+  'on-device',
+  'open source model',
+  'developer',
+  'devtool',
+  'developer tool',
+  'sdk',
+  'api',
+  'cli',
+  'terminal',
+  'ide',
+  'code',
   'cursor',
+  'copilot',
+  'codex',
+  'vibe coding',
+  'coding',
+  'github',
+  'git',
+  'open source',
+  'workflow',
+  'automation',
+  'no-code',
+  'low-code',
+  'nocode',
+  'pipeline',
+  'orchestration',
+  'mlops',
+  'monitoring',
+  'observability',
+  'evaluation',
+  'guardrail',
+  'safety',
+  'prompt',
+  'prompt engineering',
+  'ai app',
+  'ai tool',
+  'ai assistant',
+  'copilot',
+  'chatbot',
+  'chat',
+  'conversational',
+  'design',
+  'ui',
+  'frontend',
+  'react',
+  'nextjs',
+  'data',
+  'analytics',
+  'dashboard',
+  'visualization',
+  'productivity',
+  'collaboration',
+  'docs',
+  'documentation',
+  'hackathon',
+  'launch'
+];
+
+const REQUIRED_AI_SIGNAL_KEYWORDS = [
+  'ai',
+  'llm',
+  'agent',
+  'rag',
+  'mcp',
+  'gpt',
+  'claude',
+  'openai',
   'coding',
   'developer',
   'devtool',
+  'inference',
+  'model',
+  'copilot',
   'workflow',
   'automation',
-  'api',
-  'sdk',
-  'open source',
-  'github',
-  'productivity',
-  'knowledge base',
-  'chatbot'
+  'chatbot',
+  'assistant',
+  'prompt'
 ];
 
 const RELEVANCE_THRESHOLD = 20;
@@ -104,7 +202,12 @@ export function isRelevantProductHuntPost(
     return false;
   }
 
-  return calculateProductHuntRelevance(post, options) >= RELEVANCE_THRESHOLD;
+  return hasProductHuntAiSignal(post) && calculateProductHuntRelevance(post, options) >= RELEVANCE_THRESHOLD;
+}
+
+export function hasProductHuntAiSignal(post: ProductHuntPost): boolean {
+  const text = [post.name, post.tagline, post.description ?? ''].join(' ').toLowerCase();
+  return REQUIRED_AI_SIGNAL_KEYWORDS.some((keyword) => keywordMatches(text, keyword));
 }
 
 export function calculateProductHuntRelevance(
@@ -158,7 +261,16 @@ function hasDeveloperSignal(post: ProductHuntPost): boolean {
 
 function containsAnyKeyword(text: string, keywords: string[]): boolean {
   const normalized = text.toLowerCase();
-  return keywords.some((keyword) => normalized.includes(keyword));
+  return keywords.some((keyword) => keywordMatches(normalized, keyword));
+}
+
+function keywordMatches(text: string, keyword: string): boolean {
+  const normalizedKeyword = keyword.trim().toLowerCase();
+  if (!normalizedKeyword) return false;
+  const pattern = normalizedKeyword
+    .replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    .replace(/\s+/g, '[\\s_-]+');
+  return new RegExp(`(^|[^a-z0-9])${pattern}([^a-z0-9]|$)`, 'i').test(text);
 }
 
 function cleanDescription(tagline: string, description?: string | null): string {

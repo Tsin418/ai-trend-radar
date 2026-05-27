@@ -1,6 +1,8 @@
 import type { SourceConfig, TrendItem } from '../trends/types.js';
+import { hasAiDeveloperKeyword } from './ai-dev-keywords.js';
 
 const HF_MODELS_ENDPOINT = 'https://huggingface.co/api/models';
+const DEFAULT_MIN_FILTERED_ITEMS = 5;
 
 interface HuggingFaceModel {
   id?: string;
@@ -20,6 +22,7 @@ interface HuggingFaceModel {
 
 interface HuggingFaceModelsCollectorOptions extends SourceConfig {
   timeoutMs?: number;
+  minFilteredItems?: number;
 }
 
 function timeoutSignal(timeoutMs: number): AbortSignal {
@@ -37,10 +40,12 @@ export class HuggingFaceModelsCollector {
   readonly name = 'huggingface_models';
   private readonly limit: number;
   private readonly timeoutMs: number;
+  private readonly minFilteredItems: number;
 
   constructor(options: HuggingFaceModelsCollectorOptions = {}) {
     this.limit = options.limit ?? 30;
     this.timeoutMs = options.timeoutMs ?? 10_000;
+    this.minFilteredItems = options.minFilteredItems ?? DEFAULT_MIN_FILTERED_ITEMS;
   }
 
   async fetch(limit = this.limit): Promise<TrendItem[]> {
@@ -63,8 +68,14 @@ export class HuggingFaceModelsCollector {
     }
 
     const models = await response.json() as HuggingFaceModel[];
+    const filteredModels = models.filter((model) => hasAiDeveloperKeyword([
+      model.modelId ?? model.id,
+      model.pipeline_tag,
+      model.tags
+    ]));
+    const relevantModels = filteredModels.length >= this.minFilteredItems ? filteredModels : models;
     const collectedAt = new Date().toISOString();
-    return models
+    return relevantModels
       .filter((model) => model.modelId || model.id)
       .map((model) => {
         const id = (model.modelId ?? model.id) as string;

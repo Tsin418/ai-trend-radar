@@ -6,6 +6,7 @@
 import http from 'node:http';
 import https from 'node:https';
 import { getEnv } from '../config/env.js';
+import { renderRadarDigestText } from '../renderers/radar-text.js';
 import type { TrendingDigest } from '../trending/types.js';
 import type { Notifier, NotifyOptions, NotifyResult } from './types.js';
 import { withRetry, isRetryableHttpError } from '../utils/retry.js';
@@ -140,7 +141,7 @@ export class WeChatNotifier implements Notifier {
         async () => {
           const response = await postJson(endpoint, {
             to: recipient,
-            text: buildTextContent(options.digest)
+            text: options.radarDigest ? renderRadarDigestText(options.radarDigest, 'compact') : buildTextContent(options.digest)
           });
 
           const payload = parseResponse(response.statusCode, response.body);

@@ -1,6 +1,7 @@
-import { getLLMEnrichmentConfig, getTrendLLMEnrichmentConfig, loadRadarProfile } from '../radar/config.js';
+import { getDigestNarrativeLLMConfig, getLLMEnrichmentConfig, getTrendLLMEnrichmentConfig, loadRadarProfile } from '../radar/config.js';
 import { summarizeCurrentFeedback } from '../feedback/summary.js';
 import { getLocalDateLabel } from '../radar/date.js';
+import { enrichDailyDigestNarrative } from '../llm/digest-narrative.js';
 import { enrichRadarDigestWithLLM } from '../llm/repo-enricher.js';
 import { enrichTrendEntitiesWithLLM } from '../llm/trend-enricher.js';
 import { buildDailyRadarDigest } from '../renderers/daily-digest.js';
@@ -52,6 +53,15 @@ export async function runAiDeveloperRadarDaily(options: RadarRunOptions = {}): P
       digest = {
         ...digest,
         dataNotes: [...digest.dataNotes, llmNote]
+      };
+    }
+    const narrative = await enrichDailyDigestNarrative(digest, getDigestNarrativeLLMConfig());
+    digest = narrative.digest;
+    if (narrative.warnings.length > 0) {
+      narrative.warnings.forEach((warning) => console.warn(`[Digest narrative] ${warning}`));
+      digest = {
+        ...digest,
+        dataNotes: [...digest.dataNotes, ...narrative.warnings]
       };
     }
     digest = appendErrorsToDigest(digest, storePathContext.errors);

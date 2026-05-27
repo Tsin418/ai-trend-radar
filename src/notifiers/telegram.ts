@@ -135,18 +135,13 @@ export class TelegramNotifier implements Notifier {
     this.botToken = token;
     this.chatId = chatId;
     const sentMessageIds: string[] = [];
-    const summaryText = escapeTelegramHtml(renderRadarDigestText(options.radarDigest));
+    const summaryText = escapeTelegramHtml(renderRadarDigestText(options.radarDigest, 'compact'));
     const payloads: TelegramPayload[] = splitTelegramMessage(summaryText).map((text) => ({
       chat_id: chatId,
       text,
       parse_mode: 'HTML',
       disable_web_page_preview: false
     }));
-
-    for (let index = 0; index < options.radarDigest.selectedProjects.length; index += 1) {
-      const payload = projectMessage(options, index);
-      if (payload) payloads.push({ ...payload, chat_id: chatId });
-    }
 
     try {
       for (const payload of payloads) {
