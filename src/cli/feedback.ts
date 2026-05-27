@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import type { FeedbackEntry } from '../radar/types.js';
 import { buildFeedbackSummary, createFeedbackStore, getFeedbackStorePath } from '../feedback/summary.js';
+import { getRadarStorePath } from '../radar/config.js';
+import { JsonRadarStore } from '../storage/json-store.js';
 
 type FeedbackAction = FeedbackEntry['action'];
 
@@ -61,15 +63,35 @@ function findLatestContext(repoFullName: string): Partial<FeedbackEntry> {
   const dashboard = loadLatestDashboard();
   const projects = dashboard?.projects ?? [];
   const index = projects.findIndex((project) => project.repoFullName.toLowerCase() === repoFullName.toLowerCase());
-  if (index < 0) return {};
-  const project = projects[index];
-  return {
-    source: 'daily-digest',
-    scoredAt: dashboard?.generatedAt ?? dashboard?.targetDate,
-    scoreAtTime: project.score?.finalScore,
-    rankAtTime: index + 1,
-    category: project.category
-  };
+  if (index >= 0) {
+    const project = projects[index];
+    return {
+      source: 'daily-digest',
+      scoredAt: dashboard?.generatedAt ?? dashboard?.targetDate,
+      scoreAtTime: project.score?.finalScore,
+      rankAtTime: index + 1,
+      category: project.category
+    };
+  }
+
+  try {
+    const data = new JsonRadarStore(getRadarStorePath()).load();
+    const latestScore = data.scores
+      .filter((score) => score.repoFullName.toLowerCase() === repoFullName.toLowerCase())
+      .sort((a, b) => Date.parse(b.scoreDate) - Date.parse(a.scoreDate))[0];
+
+    if (latestScore) {
+      return {
+        source: 'daily-digest',
+        scoredAt: latestScore.scoreDate,
+        scoreAtTime: latestScore.finalScore
+      };
+    }
+  } catch {
+    return {};
+  }
+
+  return {};
 }
 
 function printSummary(entries: FeedbackEntry[]): void {

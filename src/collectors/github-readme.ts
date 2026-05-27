@@ -9,6 +9,10 @@ interface GitHubReadmeResponse {
   encoding?: string;
 }
 
+interface GitHubReleaseResponse {
+  published_at: string | null;
+}
+
 export interface GitHubReadmeResult {
   content: string;
   source: 'api' | 'raw-main' | 'raw-master';
@@ -86,5 +90,15 @@ export async function fetchGitHubReadme(repoFullName: string, token?: string): P
     } catch {
       return fetchRawReadme(repoFullName, 'master', token);
     }
+  }
+}
+
+export async function fetchLatestReleaseDate(repoFullName: string, token?: string): Promise<string | null> {
+  try {
+    const text = await fetchText(`${GITHUB_API}/repos/${repoFullName}/releases?per_page=1`, token);
+    const releases = JSON.parse(text) as GitHubReleaseResponse[];
+    return releases[0]?.published_at ?? null;
+  } catch {
+    return null;
   }
 }
