@@ -7,7 +7,7 @@ import { createSampleRepositories } from '../radar/sample-data.js';
 import type { RadarDigest, RadarRepository, ScoredRadarRepository } from '../radar/types.js';
 import { JsonRadarStore, createSnapshots } from '../storage/json-store.js';
 import { createPotentialScoreRanker } from '../rankers/potential-score.js';
-import { createFeishuNotifier } from '../notifiers/feishu.js';
+import { createConfiguredRadarNotifier } from '../notifiers/composite.js';
 import type { NotifyResult } from '../notifiers/types.js';
 import type { SourceHealth, SourceHealthName } from '../trends/types.js';
 
@@ -175,7 +175,7 @@ export async function collectAndScoreRadarCandidates(options: RadarRunOptions = 
 
 export async function maybeSendRadarDigest(digest: RadarDigest, send = false): Promise<NotifyResult | undefined> {
   if (!send) return undefined;
-  const notifier = createFeishuNotifier();
+  const notifier = createConfiguredRadarNotifier();
   return notifier.notify({
     digest: digest as unknown as TrendingDigest,
     radarDigest: digest

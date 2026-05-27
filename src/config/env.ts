@@ -18,6 +18,8 @@ const envSchema = z.object({
   WECLAW_API_URL: z.string().url().optional(),
   FEISHU_WEBHOOK_URL: z.string().url().optional(),
   FEISHU_SECRET: z.string().optional(),
+  TELEGRAM_BOT_TOKEN: z.string().optional(),
+  TELEGRAM_CHAT_ID: z.string().optional(),
   NOTIFIER_CHANNELS: z.string().optional(),
   GITHUB_TOKEN: z.string().optional(),
   PRODUCT_HUNT_TOKEN: z.string().optional(),
@@ -44,7 +46,17 @@ const envSchema = z.object({
   LLM_README_MAX_CHARS: z.string().optional(),
   LLM_TIMEOUT_MS: z.string().optional(),
   LLM_MAX_RETRIES: z.string().optional(),
-  LLM_MAX_OUTPUT_TOKENS: z.string().optional()
+  LLM_MAX_OUTPUT_TOKENS: z.string().optional(),
+  MAILCHIMP_API_KEY: z.string().optional(),
+  MAILCHIMP_SERVER_PREFIX: z.string().optional(),
+  MAILCHIMP_LIST_ID: z.string().optional(),
+  SUBSCRIBER_GITHUB_REPO: z.string().optional(),
+  SUBSCRIBER_ISSUE_LABEL: z.string().optional(),
+  ARXIV_ENABLED: z.string().optional(),
+  ARXIV_LIMIT: z.string().optional(),
+  ARXIV_DAYS_BACK: z.string().optional(),
+  ARXIV_CATEGORIES: z.string().optional(),
+  ARXIV_KEYWORDS: z.string().optional()
 });
 
 export function getEnv() {

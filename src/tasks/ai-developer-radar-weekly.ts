@@ -1,6 +1,7 @@
 import { getLLMEnrichmentConfig, loadRadarProfile } from '../radar/config.js';
 import { getLocalIsoWeekLabel } from '../radar/date.js';
 import { enrichRadarDigestWithLLM } from '../llm/repo-enricher.js';
+import { writeDigestArchive } from '../renderers/archive.js';
 import { buildWeeklyRadarDigest } from '../renderers/weekly-digest.js';
 import type { RadarRunOptions, RadarRunResult } from './ai-developer-radar-shared.js';
 import { appendErrorsToDigest, collectAndScoreRadarCandidates, getRadarLimits, maybeSendRadarDigest } from './ai-developer-radar-shared.js';
@@ -27,6 +28,7 @@ export async function runAiDeveloperRadarWeekly(options: RadarRunOptions = {}): 
       };
     }
     digest = appendErrorsToDigest(digest, context.errors);
+    writeDigestArchive(digest);
     const notify = await maybeSendRadarDigest(digest, options.send);
     context.store.recordDigestRun('weekly', startedAt, 'success', digest.selectedProjects.length);
 

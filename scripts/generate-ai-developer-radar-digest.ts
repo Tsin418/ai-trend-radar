@@ -3,7 +3,9 @@ import path from 'node:path';
 import dotenv from 'dotenv';
 import { buildLatestDailyDashboardData } from '../src/dashboard/build-dashboard-data.js';
 import { getLocalDateLabel, getRadarTimeZone } from '../src/radar/date.js';
+import { writeDigestArchive } from '../src/renderers/archive.js';
 import { renderRadarDigestText } from '../src/renderers/radar-text.js';
+import { renderRssXml } from '../src/renderers/rss-feed.js';
 import { runAiDeveloperRadarDaily } from '../src/tasks/ai-developer-radar-daily.js';
 
 dotenv.config({ path: '.env.local' });
@@ -55,6 +57,10 @@ function getOutputPath(): string {
 
 function getDashboardOutputPath(): string {
   return process.env.RADAR_DAILY_DASHBOARD_PATH || path.join('data', 'latest-daily-dashboard.json');
+}
+
+function getRssOutputPath(): string {
+  return process.env.RADAR_RSS_PATH || path.join('data', 'rss.xml');
 }
 
 async function main(): Promise<void> {
@@ -115,9 +121,25 @@ async function main(): Promise<void> {
     'utf8'
   );
 
+  const rssOutputPath = getRssOutputPath();
+  fs.mkdirSync(path.dirname(rssOutputPath), { recursive: true });
+  fs.writeFileSync(
+    rssOutputPath,
+    renderRssXml(result.digest, {
+      title: 'AI Trend Radar Daily',
+      description: 'Daily AI open-source trend intelligence',
+      link: `https://github.com/${source.repo}`
+    }),
+    'utf8'
+  );
+
+  const archive = writeDigestArchive(result.digest);
+
   console.log(text);
   console.log(`\nGenerated ${outputPath} for ${targetDate}`);
   console.log(`Generated ${dashboardOutputPath} for ${targetDate}`);
+  console.log(`Generated ${rssOutputPath} for ${targetDate}`);
+  console.log(`Archived ${archive.markdownPath}`);
 
   if (result.notify) {
     if (result.notify.skipped) {

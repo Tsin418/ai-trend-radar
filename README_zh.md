@@ -2,7 +2,7 @@
 
 **可插拔的趋势信号 → 个性化摘要引擎**
 
-将 GitHub Trending 和 Product Hunt 发布信号转化为个性化推荐，通过多通道（邮件、微信、飞书等）推送。
+将 GitHub Trending、Product Hunt、AIHot、Hacker News、Hugging Face 和 arXiv 信号转化为个性化推荐，通过多通道（邮件、微信、飞书、Telegram、RSS 等）推送。
 
 [English](./README.md) | 简体中文
 
@@ -24,8 +24,20 @@ Radar 会从 GitHub Trending、GitHub Search API 和 `config/watchlist.yaml` 收
 `PRODUCT_HUNT_TOKEN` 后，会在飞书摘要末尾追加独立的 Product Hunt Launch Signals 区块。
 
 每日 radar 也可以追加免费多源信号：AIHot 精选热点、Hugging Face 模型与 Space 动量、
-Hacker News 开发者讨论，以及标准化到统一 `TrendItem` 的 Product Hunt 发布信号，用于
+Hacker News 开发者讨论、arXiv AI 论文，以及标准化到统一 `TrendItem` 的 Product Hunt 发布信号，用于
 digest 分区和 Cross-source Highlights。
+
+RSS 订阅文件会随每日 radar 生成到 `data/rss.xml`。GitHub Pages 开启后，可通过：
+
+```text
+https://<your-org-or-user>.github.io/<repo>/data/rss.xml
+```
+
+外部用户也可以通过 GitHub Issue 表单订阅邮件摘要：
+
+```text
+https://github.com/Tsin418/ai-trend-radar/issues/new?template=subscribe.yml
+```
 
 第一次运行只会建立 baseline；第二次日运行开始有 daily delta，约 7 天后 weekly delta 才完整。
 
@@ -80,9 +92,9 @@ digest 分区和 Cross-source Highlights。
 
 **三层解耦设计：**
 
-1. **Collectors** - 数据源抽象（当前：GitHub 和 Product Hunt；未来：Reddit、Hacker News、Hugging Face）
+1. **Collectors** - 数据源抽象（当前：GitHub、Product Hunt、AIHot、Hacker News、Hugging Face、arXiv）
 2. **Rankers** - 排名策略（当前：RuleBased，未来：LLM / Hybrid）
-3. **Notifiers** - 通知通道（当前：邮件、微信，未来：Telegram）
+3. **Notifiers** - 通知通道（当前：邮件、微信、飞书、Telegram、RSS）
 
 ## 快速开始
 
@@ -460,10 +472,47 @@ Cloudflare 定时推送场景下，把 `PRODUCT_HUNT_TOKEN` 配置为 Worker Sec
 - `AIHOT_ENABLED` / `AIHOT_LIMIT` 控制 AIHot 精选热点。
 - `HUGGINGFACE_MODELS_ENABLED` / `HUGGINGFACE_SPACES_ENABLED` 只读取 Hugging Face Hub metadata，不使用 Inference API。
 - `HACKERNEWS_ENABLED` / `HACKERNEWS_LISTS` 使用 Hacker News 官方 API。
+- `ARXIV_ENABLED` / `ARXIV_CATEGORIES` 使用 arXiv Atom API 抓取开发者相关 AI 论文。
 - `PRODUCT_HUNT_ENABLED` 在配置 `PRODUCT_HUNT_TOKEN` 时保留 Product Hunt 发布信号。
 
 这些来源都做了失败隔离：某个来源超时或不可用时，GitHub radar 仍会正常运行，并在 digest
 数据说明中记录 warning。不需要付费 API，也不需要登录型来源。
+
+轻量级 intelligence 更新不跑 GitHub collector，只使用上一轮 `data/radar-store.json` 中的评分仓库作为上下文，并采集资讯类来源：
+
+```bash
+pnpm intelligence:lightweight
+```
+
+### RSS、归档和订阅
+
+每日 radar 会生成：
+
+- `data/rss.xml`：RSS 2.0 feed。
+- `data/archive/YYYY/MM/<date>-daily.md`：人类可读归档。
+- `data/archive/index.json` 和 `data/archive/README.md`：归档索引。
+
+也可以手动从最新 dashboard 文件重建：
+
+```bash
+pnpm rss:generate
+pnpm archive:generate
+```
+
+Telegram 推送配置：
+
+```env
+NOTIFIER_CHANNELS=feishu,telegram
+TELEGRAM_BOT_TOKEN=123456:ABC-DEF
+TELEGRAM_CHAT_ID=-100123456789
+```
+
+邮件订阅 MVP 使用 GitHub Issues 作为订阅入口，Mailchimp 可选同步：
+
+```bash
+pnpm subscribers:sync
+pnpm subscribers:send -- --dry-run
+```
 
 ### 添加新的数据源（Collector）
 

@@ -15,6 +15,12 @@ const DEFAULT_CONFIG: MultiSourceConfig = {
     enabled: true,
     lists: ['topstories', 'newstories', 'beststories'],
     limitPerList: 30
+  },
+  arxiv: {
+    enabled: true,
+    limit: 20,
+    daysBack: 1,
+    categories: ['cs.AI', 'cs.CL', 'cs.LG', 'cs.MA']
   }
 };
 
@@ -88,7 +94,9 @@ function mergeYamlSource(fileText: string, sourceKey: string, fallback: SourceCo
     limit: readNumber(block, 'limit') ?? fallback.limit,
     categories: readList(block, 'categories') ?? fallback.categories,
     lists: readList(block, 'lists') ?? fallback.lists,
-    limitPerList: readNumber(block, 'limit_per_list') ?? fallback.limitPerList
+    limitPerList: readNumber(block, 'limit_per_list') ?? fallback.limitPerList,
+    daysBack: readNumber(block, 'days_back') ?? fallback.daysBack,
+    keywords: readList(block, 'keywords') ?? fallback.keywords
   };
 }
 
@@ -100,7 +108,8 @@ export function loadMultiSourceConfig(configPath = 'config/sources.yaml'): Multi
     aihot: mergeYamlSource(fileText, 'aihot', DEFAULT_CONFIG.aihot),
     huggingfaceModels: mergeYamlSource(fileText, 'huggingface_models', DEFAULT_CONFIG.huggingfaceModels),
     huggingfaceSpaces: mergeYamlSource(fileText, 'huggingface_spaces', DEFAULT_CONFIG.huggingfaceSpaces),
-    hackernews: mergeYamlSource(fileText, 'hackernews', DEFAULT_CONFIG.hackernews)
+    hackernews: mergeYamlSource(fileText, 'hackernews', DEFAULT_CONFIG.hackernews),
+    arxiv: mergeYamlSource(fileText, 'arxiv', DEFAULT_CONFIG.arxiv)
   };
 
   return {
@@ -130,6 +139,14 @@ export function loadMultiSourceConfig(configPath = 'config/sources.yaml'): Multi
       enabled: parseBoolean(process.env.HACKERNEWS_ENABLED, yamlConfig.hackernews.enabled ?? true),
       lists: envCsv('HACKERNEWS_LISTS', yamlConfig.hackernews.lists ?? ['topstories']),
       limitPerList: parsePositiveInteger(process.env.HACKERNEWS_LIMIT_PER_LIST, yamlConfig.hackernews.limitPerList ?? 30)
+    },
+    arxiv: {
+      ...yamlConfig.arxiv,
+      enabled: parseBoolean(process.env.ARXIV_ENABLED, yamlConfig.arxiv.enabled ?? true),
+      limit: parsePositiveInteger(process.env.ARXIV_LIMIT, yamlConfig.arxiv.limit ?? 20),
+      daysBack: parsePositiveInteger(process.env.ARXIV_DAYS_BACK, yamlConfig.arxiv.daysBack ?? 1),
+      categories: envCsv('ARXIV_CATEGORIES', yamlConfig.arxiv.categories ?? ['cs.AI', 'cs.CL', 'cs.LG']),
+      keywords: envCsv('ARXIV_KEYWORDS', yamlConfig.arxiv.keywords ?? [])
     }
   };
 }

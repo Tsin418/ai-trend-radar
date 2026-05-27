@@ -1,0 +1,33 @@
+name: Subscribe to AI Trend Radar
+description: Subscribe to receive daily/weekly AI trend digests via email
+title: "[Subscribe] "
+labels: ["subscriber"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Your email address will be visible in this public GitHub issue. For a private subscription flow, wait for the upcoming hosted form.
+  - type: input
+    id: email
+    attributes:
+      label: Email
+      placeholder: your@email.com
+    validations:
+      required: true
+  - type: checkboxes
+    id: frequency
+    attributes:
+      label: Digest Frequency
+      options:
+        - label: Daily Digest (every day)
+        - label: Weekly Digest (every Monday)
+    validations:
+      required: true
+  - type: checkboxes
+    id: categories
+    attributes:
+      label: Topics of interest (optional)
+      options:
+        - label: AI Agent Framework
+        - label: Coding Agent / SWE Agent
+        - label: RAG / Knowledge Base
