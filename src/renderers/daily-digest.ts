@@ -63,6 +63,8 @@ export function buildDailyRadarDigest(
     generatedAt: new Date().toISOString(),
     summary: summaryParts.join(' '),
     baselineCreated,
+    scannedRepoCount: scored.length,
+    aiCandidateCount: aiCandidates.length,
     dataNotes: [
       'GitHub API 只提供当前 stars，总量变化来自本项目保存的历史 snapshot。',
       baselineCreated ? '本次为 baseline run，daily/weekly delta 尚不可用。' : 'daily delta 使用约 24h 前 snapshot，weekly delta 使用约 7 天前 snapshot。',

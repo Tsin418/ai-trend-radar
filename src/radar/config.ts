@@ -204,3 +204,13 @@ export function getLLMEnrichmentConfig(): LLMEnrichmentConfig {
     cachePath: 'data/llm-enrichment-cache.json'
   };
 }
+
+export function getTrendLLMEnrichmentConfig(): LLMEnrichmentConfig {
+  const base = getLLMEnrichmentConfig();
+  return {
+    ...base,
+    enabled: parseBoolean(process.env.TREND_LLM_ENRICHMENT_ENABLED, base.enabled),
+    limit: parseNumber(process.env.TREND_LLM_ENRICHMENT_LIMIT, 10),
+    cachePath: 'data/llm-trend-enrichment-cache.json'
+  };
+}

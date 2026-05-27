@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import dotenv from 'dotenv';
+import { buildLatestDailyDashboardData } from '../src/dashboard/build-dashboard-data.js';
 import { getLocalDateLabel, getRadarTimeZone } from '../src/radar/date.js';
 import { renderRadarDigestText } from '../src/renderers/radar-text.js';
 import { runAiDeveloperRadarDaily } from '../src/tasks/ai-developer-radar-daily.js';
@@ -52,6 +53,10 @@ function getOutputPath(): string {
   return process.env.RADAR_DAILY_DIGEST_PATH || path.join('data', 'latest-daily-digest.json');
 }
 
+function getDashboardOutputPath(): string {
+  return process.env.RADAR_DAILY_DASHBOARD_PATH || path.join('data', 'latest-daily-dashboard.json');
+}
+
 async function main(): Promise<void> {
   const send = hasFlag('send');
   const result = await runAiDeveloperRadarDaily({
@@ -70,14 +75,17 @@ async function main(): Promise<void> {
   const text = renderRadarDigestText(result.digest);
   const timezone = getRadarTimeZone();
   const targetDate = result.digest.date || getLocalDateLabel(new Date(), timezone);
+  const generatedAt = new Date().toISOString();
+  const digestId = `daily-${targetDate}`;
+  const source = getSource();
   const output: LatestRadarDigestFile = {
     schemaVersion: 1,
     mode: 'daily',
     targetDate,
-    generatedAt: new Date().toISOString(),
+    generatedAt,
     timezone,
-    digestId: `daily-${targetDate}`,
-    source: getSource(),
+    digestId,
+    source,
     text
   };
 
@@ -89,8 +97,27 @@ async function main(): Promise<void> {
     'utf8'
   );
 
+  const dashboard = buildLatestDailyDashboardData({
+    digest: result.digest,
+    scored: result.scored,
+    store: result.store,
+    targetDate,
+    generatedAt,
+    timezone,
+    digestId,
+    source
+  });
+  const dashboardOutputPath = getDashboardOutputPath();
+  fs.mkdirSync(path.dirname(dashboardOutputPath), { recursive: true });
+  fs.writeFileSync(
+    dashboardOutputPath,
+    `${JSON.stringify(dashboard, null, 2)}\n`,
+    'utf8'
+  );
+
   console.log(text);
   console.log(`\nGenerated ${outputPath} for ${targetDate}`);
+  console.log(`Generated ${dashboardOutputPath} for ${targetDate}`);
 
   if (result.notify) {
     if (result.notify.skipped) {

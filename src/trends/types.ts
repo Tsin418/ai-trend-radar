@@ -41,15 +41,73 @@ export interface TrendItem {
   raw?: Record<string, unknown>;
 }
 
-export interface MergedTrendEntity {
+export type SourceHealthName =
+  | 'github-trending'
+  | 'github-search'
+  | 'watchlist'
+  | 'product-hunt'
+  | 'aihot'
+  | 'huggingface-models'
+  | 'huggingface-spaces'
+  | 'hackernews';
+
+export interface SourceHealth {
+  source: SourceHealthName;
+  enabled: boolean;
+  success: boolean;
+  itemCount: number;
+  startedAt: string;
+  finishedAt: string;
+  latencyMs: number;
+  error?: string;
+  warning?: string;
+}
+
+export interface TrendLLMSummary {
+  whatItIs: string;
+  whyNow: string;
+  whoShouldCare: string;
+  technicalKeywords: string[];
+  businessRelevance: string;
+  developerRelevance: string;
+  watchDecision: 'track' | 'deep_dive' | 'ignore' | 'wait';
+  riskNotes: string;
+  confidence: 'low' | 'medium' | 'high';
+}
+
+export interface TrendEntity {
+  id: string;
   canonicalId: string;
   title: string;
   canonicalUrl: string;
+  entityType: 'repo' | 'product' | 'model' | 'space' | 'paper' | 'topic' | 'news' | 'unknown';
+  normalizedKeys: string[];
   sources: string[];
-  sourceItems: TrendItem[];
   sourceCount: number;
+  items: TrendItem[];
+  sourceItems: TrendItem[];
+  metrics: {
+    stars?: number;
+    starDelta24h?: number;
+    starDelta7d?: number;
+    votes?: number;
+    likes?: number;
+    downloads?: number;
+    commentsCount?: number;
+    hnScore?: number;
+    crossSourceBonus: number;
+    heatScore: number;
+  };
   crossSourceBonus: number;
+  category?: string;
+  summary?: string;
+  whyItMatters?: string;
+  firstSeenAt: string;
+  lastSeenAt: string;
+  llmSummary?: TrendLLMSummary;
 }
+
+export type MergedTrendEntity = TrendEntity;
 
 export interface MultiSourceDigestSections {
   productLaunches: TrendItem[];
@@ -63,6 +121,9 @@ export interface MultiSourceCollectionResult {
   items: TrendItem[];
   sections: MultiSourceDigestSections;
   warnings: string[];
+  sourceHealth: SourceHealth[];
+  trendEntities: TrendEntity[];
+  topicClusters: TrendEntity[];
 }
 
 export interface SourceConfig {
