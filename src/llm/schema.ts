@@ -4,8 +4,12 @@ export const RepoLLMSummarySchema = z.object({
   oneLiner: z.string().min(1),
   problemSolved: z.string().min(1),
   aiCategory: z.string().min(1),
+  trendType: z.enum(['sustained_hot', 'sudden_breakout', 'early_signal']),
+  whyNow: z.string().min(1),
+  whatChanged: z.string().min(1),
   whyTrending: z.string().min(1),
   developerTakeaway: z.string().min(1),
+  developerInsight: z.string().min(1),
   targetUsers: z.string().min(1),
   riskNotes: z.string().min(1),
   confidence: z.enum(['high', 'medium', 'low'])

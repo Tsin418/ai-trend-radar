@@ -2,7 +2,23 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { productHuntTrendingItemToTrendItem } from '../src/trends/adapters.js';
 import { buildTopicClusters, buildTrendEntities, mergeTrendItems, normalizeTrendUrl } from '../src/trends/dedupe.js';
+import { calcAcceleration } from '../src/trends/scoring.js';
 import type { TrendItem } from '../src/trends/types.js';
+
+test('calculates star acceleration against recent historical deltas', () => {
+  assert.deepEqual(calcAcceleration(80, [20, 20, 20]), {
+    acceleration: 4,
+    confidence: 'high'
+  });
+  assert.deepEqual(calcAcceleration(10, [0, 0, 0]), {
+    acceleration: 3,
+    confidence: 'medium'
+  });
+  assert.deepEqual(calcAcceleration(10, [5]), {
+    acceleration: 1,
+    confidence: 'low'
+  });
+});
 
 test('normalizes common tracking URLs for dedupe', () => {
   assert.equal(

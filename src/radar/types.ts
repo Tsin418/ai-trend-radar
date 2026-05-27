@@ -60,9 +60,16 @@ export interface RepoDeltas {
   weeklyStarDelta: number | null;
   dailyGrowthRate: number | null;
   weeklyGrowthRate: number | null;
+  yesterdayStarDelta: number | null;
+  threeDayAverageDelta: number | null;
+  sevenDayAverageDelta: number | null;
+  acceleration: number;
+  accelerationConfidence: 'high' | 'medium' | 'low';
   newlySeen: boolean;
   baselineOnly: boolean;
 }
+
+export type TrendType = 'sustained_hot' | 'sudden_breakout' | 'early_signal';
 
 export interface RepoScore {
   repoFullName: string;
@@ -70,7 +77,14 @@ export interface RepoScore {
   weeklyStarDelta: number | null;
   dailyGrowthRate: number | null;
   weeklyGrowthRate: number | null;
+  yesterdayStarDelta: number | null;
+  threeDayAverageDelta: number | null;
+  sevenDayAverageDelta: number | null;
+  acceleration: number;
+  accelerationConfidence: 'high' | 'medium' | 'low';
+  trendType: TrendType;
   attentionScore: number;
+  accelerationScore: number;
   earlyPotentialScore: number;
   developerActivityScore: number;
   aiRelevanceScore: number;
@@ -86,8 +100,12 @@ export interface RepoLLMSummary {
   oneLiner: string;
   problemSolved: string;
   aiCategory: string;
+  trendType: TrendType;
+  whyNow: string;
+  whatChanged: string;
   whyTrending: string;
   developerTakeaway: string;
+  developerInsight: string;
   targetUsers: string;
   riskNotes: string;
   confidence: 'high' | 'medium' | 'low';
@@ -112,9 +130,11 @@ export interface RadarDigest {
   aiCandidateCount?: number;
   dataNotes: string[];
   hotProjects: ScoredRadarRepository[];
+  acceleratingProjects: ScoredRadarRepository[];
   earlySignals: ScoredRadarRepository[];
   watchlistMovements: ScoredRadarRepository[];
   selectedProjects: ScoredRadarRepository[];
+  feedbackSummary?: FeedbackSummary;
   categoryStats?: RadarCategoryStat[];
   researchPicks?: ScoredRadarRepository[];
   multiSourceSections?: MultiSourceDigestSections;
@@ -122,6 +142,31 @@ export interface RadarDigest {
   sourceHealth?: SourceHealth[];
   trendEntities?: TrendEntity[];
   topicClusters?: TrendEntity[];
+}
+
+export interface FeedbackEntry {
+  repoFullName: string;
+  action: 'useful' | 'not_useful' | 'seen';
+  source: string;
+  scoredAt?: string;
+  feedbackAt: string;
+  scoreAtTime?: number;
+  rankAtTime?: number;
+  category?: string;
+}
+
+export interface FeedbackStoreData {
+  entries: FeedbackEntry[];
+}
+
+export interface FeedbackSummary {
+  totalEntries: number;
+  weekEntries: number;
+  usefulThisWeek: number;
+  notUsefulThisWeek: number;
+  seenThisWeek: number;
+  usefulCategories: Array<{ category: string; count: number }>;
+  recentUsefulRepos: string[];
 }
 
 export interface RadarCategoryStat {

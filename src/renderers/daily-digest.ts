@@ -24,6 +24,12 @@ export function buildDailyRadarDigest(
 ): RadarDigest {
   const aiCandidates = scored.filter((item) => item.score.aiRelevanceScore >= profile.thresholds.aiRelevanceMin);
   const hotProjects = sortByScore(aiCandidates.filter((item) => (item.score.dailyStarDelta ?? -1) >= profile.thresholds.dailyStarHot));
+  const acceleratingProjects = [...aiCandidates]
+    .filter((item) => item.score.accelerationConfidence === 'high' && item.score.acceleration > 2.0)
+    .sort((a, b) => {
+      if (b.score.acceleration !== a.score.acceleration) return b.score.acceleration - a.score.acceleration;
+      return b.score.finalScore - a.score.finalScore;
+    });
   const earlySignals = sortByScore(aiCandidates.filter((item) => {
     const daily = item.score.dailyStarDelta ?? -1;
     const weekly = item.score.weeklyStarDelta ?? -1;
@@ -42,6 +48,7 @@ export function buildDailyRadarDigest(
 
   const selectedProjects = unique([
     ...hotProjects,
+    ...acceleratingProjects,
     ...earlySignals,
     ...watchlistMovements,
     ...sortByScore(aiCandidates)
@@ -53,8 +60,9 @@ export function buildDailyRadarDigest(
     hotProjects.length > 0
       ? `今日 ${hotProjects.length} 个项目达到 24h stars >= ${profile.thresholds.dailyStarHot}。`
       : `今日新增 stars >= ${profile.thresholds.dailyStarHot} 的 AI 项目不足 ${limit} 个，已补充 Early Signals。`,
+    acceleratingProjects.length > 0 ? `发现 ${acceleratingProjects.length} 个突然加速项目。` : '',
     `当前最强信号集中在 ${topCategory}。`
-  ];
+  ].filter(Boolean);
 
   return {
     mode: 'daily',
@@ -68,9 +76,11 @@ export function buildDailyRadarDigest(
     dataNotes: [
       'GitHub API 只提供当前 stars，总量变化来自本项目保存的历史 snapshot。',
       baselineCreated ? '本次为 baseline run，daily/weekly delta 尚不可用。' : 'daily delta 使用约 24h 前 snapshot，weekly delta 使用约 7 天前 snapshot。',
+      'Accelerating 只展示至少 3 天历史基线且今日 delta 超过前 3 日均值 2 倍的项目。',
       'Potential Score 为规则评分，用于排序，不代表项目质量结论。'
     ],
     hotProjects: hotProjects.slice(0, limit),
+    acceleratingProjects: acceleratingProjects.slice(0, 3),
     earlySignals: earlySignals.slice(0, limit),
     watchlistMovements: watchlistMovements.slice(0, limit),
     selectedProjects

@@ -3,7 +3,7 @@ import { defineCommand, runMain } from 'citty';
 import { runGithubTrendingDigest } from '../src/tasks/github-trending-digest.js';
 import type { TrendingDigest } from '../src/trending/types.js';
 import { formatDemoOutput, formatEnhancedOutput } from '../src/reports/terminal-formatter.js';
-import { runInitWizard } from '../src/cli/init-wizard.js';
+import { runFeedbackCommand } from '../src/cli/feedback.js';
 
 // 只在本地开发环境加载 .env 文件（非 node_modules 运行）
 // npx 场景下应该依赖系统环境变量或 CLI 参数
@@ -76,7 +76,45 @@ const initCommand = defineCommand({
     description: '交互式配置向导 - 3 分钟完成个性化配置'
   },
   async run() {
+    const { runInitWizard } = await import('../src/cli/init-wizard.js');
     await runInitWizard();
+  }
+});
+
+const feedbackCommand = defineCommand({
+  meta: {
+    name: 'feedback',
+    description: '记录 AI Radar 推荐反馈'
+  },
+  args: {
+    useful: {
+      type: 'string',
+      description: '标记某个项目有用',
+      valueHint: 'owner/repo'
+    },
+    'not-useful': {
+      type: 'string',
+      description: '标记某个项目不相关',
+      valueHint: 'owner/repo'
+    },
+    seen: {
+      type: 'string',
+      description: '标记某个项目已看过或已 star',
+      valueHint: 'owner/repo'
+    },
+    stats: {
+      type: 'boolean',
+      description: '查看反馈统计',
+      default: false
+    },
+    source: {
+      type: 'string',
+      description: '反馈来源，默认 cli 或 daily-digest',
+      default: 'cli'
+    }
+  },
+  async run({ args }) {
+    await runFeedbackCommand(args);
   }
 });
 
@@ -87,7 +125,8 @@ const main = defineCommand({
     description: 'GitHub Trending 个性化邮件推荐系统'
   },
   subCommands: {
-    init: initCommand
+    init: initCommand,
+    feedback: feedbackCommand
   },
   args: {
     demo: {
@@ -130,6 +169,11 @@ const main = defineCommand({
     }
   },
   async run({ args }) {
+    const invokedSubCommand = process.argv.slice(2)[0];
+    if (invokedSubCommand === 'init' || invokedSubCommand === 'feedback') {
+      return;
+    }
+
     const isDemoMode = args.demo;
     const dryRun = args['dry-run'] || isDemoMode; // demo 模式强制 dry-run
     const emailTo = args['email-to'] || args.to;

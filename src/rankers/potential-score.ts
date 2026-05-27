@@ -1,5 +1,6 @@
-import type { RadarProfile, RadarRepository, RepoDeltas, RepoScore, RepoSnapshot, ScoredRadarRepository } from '../radar/types.js';
+import type { RadarProfile, RadarRepository, RepoDeltas, RepoScore, RepoSnapshot, ScoredRadarRepository, TrendType } from '../radar/types.js';
 import type { JsonRadarStore } from '../storage/json-store.js';
+import { calcAcceleration } from '../trends/scoring.js';
 import { classifyAiCategory } from './ai-category.js';
 import { calculateRisk } from './risk.js';
 
@@ -27,6 +28,24 @@ function deltaFromSnapshot(current: RadarRepository, snapshot: RepoSnapshot | un
 export function calculateRepoDeltas(repo: RadarRepository, store: JsonRadarStore, collectedAt: string): RepoDeltas {
   const daily = deltaFromSnapshot(repo, store.findSnapshotAtOrBefore(repo.repoFullName, collectedAt, 1));
   const weekly = deltaFromSnapshot(repo, store.findSnapshotAtOrBefore(repo.repoFullName, collectedAt, 7));
+  const snapshotsByOffset = new Map(store.findSnapshotsAtDailyOffsets(repo.repoFullName, collectedAt, 8)
+    .map((item) => [item.daysAgo, item.snapshot]));
+  const historicalDeltas: number[] = [];
+
+  for (let daysAgo = 1; daysAgo <= 7; daysAgo += 1) {
+    const newer = snapshotsByOffset.get(daysAgo);
+    const older = snapshotsByOffset.get(daysAgo + 1);
+    if (!newer || !older || newer.collectedAt.slice(0, 10) === older.collectedAt.slice(0, 10)) continue;
+    historicalDeltas.push(newer.stars - older.stars);
+  }
+
+  const threeDayDeltas = historicalDeltas.slice(0, 3);
+  const sevenDayDeltas = historicalDeltas.slice(0, 7);
+  const average = (values: number[]): number | null => {
+    if (values.length === 0) return null;
+    return Math.round((values.reduce((sum, value) => sum + value, 0) / values.length) * 10) / 10;
+  };
+  const acceleration = calcAcceleration(daily.delta ?? 0, threeDayDeltas);
   const newlySeen = daily.delta === null;
 
   return {
@@ -34,6 +53,11 @@ export function calculateRepoDeltas(repo: RadarRepository, store: JsonRadarStore
     weeklyStarDelta: weekly.delta,
     dailyGrowthRate: daily.growthRate,
     weeklyGrowthRate: weekly.growthRate,
+    yesterdayStarDelta: historicalDeltas[0] ?? null,
+    threeDayAverageDelta: average(threeDayDeltas),
+    sevenDayAverageDelta: average(sevenDayDeltas),
+    acceleration: acceleration.acceleration,
+    accelerationConfidence: acceleration.confidence,
     newlySeen,
     baselineOnly: daily.delta === null && weekly.delta === null
   };
@@ -50,6 +74,16 @@ function attentionScore(repo: RadarRepository, deltas: RepoDeltas): number {
   return clamp(absolute + relative + sourceBoost);
 }
 
+function accelerationScore(deltas: RepoDeltas): number {
+  if (deltas.accelerationConfidence === 'low') return 0;
+  const daily = deltas.dailyStarDelta ?? 0;
+  if (daily <= 0) return 0;
+  const accelerationComponent = Math.min(65, Math.max(0, (deltas.acceleration - 1) * 26));
+  const dailyComponent = Math.min(25, Math.log10(daily + 1) * 12);
+  const confidenceBoost = deltas.accelerationConfidence === 'high' ? 10 : 4;
+  return clamp(accelerationComponent + dailyComponent + confidenceBoost);
+}
+
 function earlyPotentialScore(repo: RadarRepository, deltas: RepoDeltas, profile: RadarProfile, now: Date): number {
   let score = 0;
   const ageDays = daysSince(repo.createdAt, now);
@@ -63,6 +97,17 @@ function earlyPotentialScore(repo: RadarRepository, deltas: RepoDeltas, profile:
   if (daysSince(repo.pushedAt, now) !== null && (daysSince(repo.pushedAt, now) ?? 0) > 30) score -= 20;
 
   return clamp(score);
+}
+
+export function classifyTrendType(repo: RadarRepository, score: Pick<RepoScore, 'dailyStarDelta' | 'weeklyStarDelta' | 'threeDayAverageDelta' | 'acceleration'>): TrendType {
+  const dailyDelta = score.dailyStarDelta ?? 0;
+  const weeklyDelta = score.weeklyStarDelta ?? 0;
+  const threeDayAvg = score.threeDayAverageDelta ?? 0;
+  const acceleration = threeDayAvg > 0 ? dailyDelta / Math.max(threeDayAvg, 1) : score.acceleration;
+
+  if (acceleration >= 2.0 && dailyDelta > 0) return 'sudden_breakout';
+  if (repo.stars <= 3000 && weeklyDelta >= 80) return 'early_signal';
+  return 'sustained_hot';
 }
 
 function developerActivityScore(repo: RadarRepository, now: Date): number {
@@ -99,13 +144,21 @@ export class PotentialScoreRanker {
       };
       const deltas = calculateRepoDeltas(classifiedRepo, store, collectedAt);
       const risk = calculateRisk(classifiedRepo, deltas, now);
+      const acceleration = accelerationScore(deltas);
       const score: RepoScore = {
         repoFullName: classifiedRepo.repoFullName,
         dailyStarDelta: deltas.dailyStarDelta,
         weeklyStarDelta: deltas.weeklyStarDelta,
         dailyGrowthRate: deltas.dailyGrowthRate,
         weeklyGrowthRate: deltas.weeklyGrowthRate,
+        yesterdayStarDelta: deltas.yesterdayStarDelta,
+        threeDayAverageDelta: deltas.threeDayAverageDelta,
+        sevenDayAverageDelta: deltas.sevenDayAverageDelta,
+        acceleration: deltas.acceleration,
+        accelerationConfidence: deltas.accelerationConfidence,
+        trendType: 'sustained_hot',
         attentionScore: attentionScore(classifiedRepo, deltas),
+        accelerationScore: acceleration,
         earlyPotentialScore: earlyPotentialScore(classifiedRepo, deltas, profile, now),
         developerActivityScore: developerActivityScore(classifiedRepo, now),
         aiRelevanceScore: classification.aiRelevanceScore,
@@ -116,8 +169,10 @@ export class PotentialScoreRanker {
         scoreDate: collectedAt.slice(0, 10),
         signals: [...classification.matchedKeywords, ...risk.signals]
       };
+      score.trendType = classifyTrendType(classifiedRepo, score);
       score.finalScore = clamp(
         score.attentionScore * 0.30 +
+        score.accelerationScore * 0.10 +
         score.earlyPotentialScore * 0.20 +
         score.developerActivityScore * 0.20 +
         score.aiRelevanceScore * 0.15 +
@@ -140,8 +195,15 @@ function formatDelta(delta: number | null): string {
 }
 
 function buildWhyItMatters(repo: RadarRepository, score: RepoScore): string {
+  if (score.trendType === 'sudden_breakout') {
+    const threeDay = score.threeDayAverageDelta === null ? '暂无稳定基线' : `前 3 日均值 ${score.threeDayAverageDelta}`;
+    return `${repo.category} 方向出现突然加速：24h stars ${formatDelta(score.dailyStarDelta)}，${threeDay}，加速度 ${score.acceleration}x，今天值得优先排查触发原因。`;
+  }
+  if (score.trendType === 'early_signal') {
+    return `这是一个早期信号项目：总 stars ${repo.stars.toLocaleString()}，7d stars ${formatDelta(score.weeklyStarDelta)}，增长曲线已经超过同体量项目的普通噪音。`;
+  }
   if (score.dailyStarDelta !== null && score.dailyStarDelta >= 50) {
-    return `${repo.category} 方向出现明显关注度增长，24h stars ${formatDelta(score.dailyStarDelta)}，值得优先快速评估。`;
+    return `${repo.category} 方向保持持续热门，24h stars ${formatDelta(score.dailyStarDelta)}，总 stars ${repo.stars.toLocaleString()}，适合看近期 release、commit 或社区讨论是否解释了增长。`;
   }
   if (score.weeklyStarDelta !== null && score.weeklyStarDelta >= 80) {
     return `${repo.category} 方向一周增长 ${formatDelta(score.weeklyStarDelta)}，属于持续升温信号。`;

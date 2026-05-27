@@ -86,6 +86,28 @@ test('daily digest prioritizes hot projects and fills with early signals', () =>
   assert.ok(digest.selectedProjects.length >= 2);
 });
 
+test('daily digest exposes high-confidence accelerating projects', () => {
+  const profile = loadRadarProfile();
+  const store = createTempStore();
+  const now = new Date('2026-05-24T01:00:00.000Z');
+  const repo = createSampleRepositories(now)[0];
+  const dayMs = 24 * 60 * 60 * 1000;
+
+  store.addSnapshots(createSnapshots([withStars(repo, repo.stars - 70)], new Date(now.getTime() - 4 * dayMs).toISOString()));
+  store.addSnapshots(createSnapshots([withStars(repo, repo.stars - 60)], new Date(now.getTime() - 3 * dayMs).toISOString()));
+  store.addSnapshots(createSnapshots([withStars(repo, repo.stars - 50)], new Date(now.getTime() - 2 * dayMs).toISOString()));
+  store.addSnapshots(createSnapshots([withStars(repo, repo.stars - 40)], new Date(now.getTime() - dayMs).toISOString()));
+  store.addSnapshots(createSnapshots([repo], now.toISOString()));
+
+  const scored = createPotentialScoreRanker().score([repo], profile, store, now.toISOString());
+  const digest = buildDailyRadarDigest(scored, profile, '2026-05-24', 10, false);
+
+  assert.equal(scored[0].score.acceleration, 4);
+  assert.equal(scored[0].score.accelerationConfidence, 'high');
+  assert.equal(scored[0].score.trendType, 'sudden_breakout');
+  assert.equal(digest.acceleratingProjects[0].repository.repoFullName, repo.repoFullName);
+});
+
 test('Feishu text renderer includes required radar fields', () => {
   const profile = loadRadarProfile();
   const store = createTempStore();
@@ -100,6 +122,7 @@ test('Feishu text renderer includes required radar fields', () => {
   assert.match(text, /AI Developer Radar｜Daily｜2026-05-24/);
   assert.match(text, /Why worth watching/);
   assert.match(text, /Developer takeaway/);
+  assert.match(text, /Trend:/);
   assert.match(text, /GitHub: https:\/\/github\.com\//);
   assert.doesNotMatch(text, /LLM summary unavailable/);
 });
