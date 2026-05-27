@@ -16,15 +16,19 @@
   "Lum1104/Understand-Anything:2026-05-26T05:09:57Z": {
     "summary": {
       "oneLiner": "Turn any codebase, knowledge base, or docs into an interactive knowledge graph you can explore, search, and ask questions about.",
-      "problemSolved": "Developers struggle to understand large, unfamiliar codebases. This tool provides a multi-agent pipeline that analyzes code, builds a knowledge graph of files, functions, classes, and dependencies, and offers an interactive dashboard for visual exploration, search, and guided tours.",
+      "problemSolved": "Developers joining large codebases struggle to understand architecture and business logic. This tool provides an interactive knowledge graph with guided tours, semantic search, and diff impact analysis to accelerate onboarding and code comprehension.",
       "aiCategory": "Coding Agent / SWE Agent",
-      "whyTrending": "It addresses a universal pain point for developers onboarding to new codebases, has broad platform support (Claude Code, Codex, Cursor, Copilot, Gemini CLI, etc.), and offers a practical, visual approach to code comprehension that goes beyond static analysis.",
-      "developerTakeaway": "A powerful plugin that integrates with major AI coding tools to provide instant codebase understanding via knowledge graphs, semantic search, diff impact analysis, and guided tours. It can significantly reduce onboarding time and improve code navigation.",
-      "targetUsers": "Developers, especially those joining new teams or working with large codebases; technical leads; and anyone using AI coding assistants who wants deeper insight into their project structure.",
-      "riskNotes": "The README content is untrusted; claims about features and platform compatibility should be verified. The project is relatively new (pushed May 2026) and may have evolving stability. Relies on LLM for semantic analysis, which can introduce variability.",
+      "trendType": "sustained_hot",
+      "whyNow": "The repo has exploded in popularity with 38,517 stars, a 24h star delta of 6,337, a three-day average of 5,140, and an acceleration of 1.2 (medium). It has a recent release and a commit within the last 7 days, indicating active development and strong community interest.",
+      "whatChanged": "The trigger is unclear from the provided data, but the sustained high star velocity and recent commits suggest ongoing feature additions or viral adoption among AI coding tool users.",
+      "whyTrending": "It solves a universal pain point for developers using AI coding assistants (Claude Code, Codex, Cursor, Copilot, Gemini CLI) by providing a visual, searchable knowledge graph that makes large codebases understandable. The multi-platform support and easy installation lower the barrier to entry.",
+      "developerTakeaway": "This tool can dramatically reduce onboarding time for new team members and help existing developers quickly grasp complex codebases. It also supports knowledge base analysis, making it useful for documentation and wiki exploration.",
+      "developerInsight": "The trend signals a growing demand for AI-assisted code comprehension tools that go beyond simple chat. Developers want structured, visual representations of codebases that integrate seamlessly with their existing AI workflows. This could become a standard plugin for AI coding agents.",
+      "targetUsers": "Software developers, engineering managers, technical leads, and anyone working with large or unfamiliar codebases. Also useful for teams using AI coding assistants like Claude Code, Codex, Cursor, Copilot, and Gemini CLI.",
+      "riskNotes": "The project relies on LLM-based analysis which may produce inaccurate summaries for complex or poorly documented code. The knowledge graph is stored as JSON and may become large for huge monorepos, requiring git-lfs. The tool is still relatively new and may have undiscovered bugs or limitations.",
       "confidence": "high"
     },
-    "createdAt": "2026-05-26T05:36:51.472Z",
+    "createdAt": "2026-05-27T13:40:31.141Z",
     "model": "deepseek-v4-flash"
   },
   "esengine/DeepSeek-Reasonix:2026-05-26T05:16:55Z": {
@@ -43,30 +47,38 @@
   },
   "mukul975/Anthropic-Cybersecurity-Skills:2026-05-13T09:07:15Z": {
     "summary": {
-      "oneLiner": "A structured library of 754 cybersecurity skills for AI agents, mapped to five industry frameworks (MITRE ATT&CK, NIST CSF, etc.) and compatible with 20+ AI coding platforms.",
-      "problemSolved": "AI agents lack structured domain knowledge to perform cybersecurity tasks like a senior analyst. This repo provides step-by-step playbooks that agents can execute, bridging the gap between generic LLMs and expert-level security workflows.",
+      "oneLiner": "754 structured cybersecurity skills for AI agents, mapped to 5 frameworks (MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF) and compatible with 26+ AI platforms.",
+      "problemSolved": "AI agents lack structured domain knowledge to perform cybersecurity tasks like a senior analyst. This library provides step-by-step playbooks that agents can search and execute, bridging the gap between generic LLMs and expert-level security workflows.",
       "aiCategory": "Coding Agent / SWE Agent",
-      "whyTrending": "It addresses the cybersecurity workforce gap (4.8M unfilled roles) by enabling AI agents to handle security tasks, and it's the largest open-source skills library with cross-framework mappings, gaining rapid adoption (9.4k stars, 907 stars in 24h).",
-      "developerTakeaway": "Developers can integrate these skills into any agentskills.io-compatible platform (Claude Code, Copilot, Cursor, etc.) to give their AI agents expert cybersecurity capabilities without manual training or custom tooling.",
-      "targetUsers": "Security engineers, DevSecOps teams, AI agent developers, and cybersecurity professionals who want to automate or augment security analysis with AI.",
-      "riskNotes": "The README contains promotional links (surveys, playground) and is a community project not affiliated with Anthropic. Skills are static and may become outdated; users should verify against current threats.",
+      "trendType": "sustained_hot",
+      "whyNow": "The repo has 10,623 stars, 1,233 forks, and a 24-hour star delta of 1,176 (three-day average 974.5). Acceleration is 1.2 (medium). It is trending as a sustained hot project, indicating strong and growing interest from the developer and security community.",
+      "whatChanged": "The trigger is unclear. The last commit was on 2026-05-13, but there is no recent release and no commit within the last 7 days. The sustained star growth may be driven by organic discovery, word-of-mouth, or external mentions rather than a single event.",
+      "whyTrending": "It fills a clear gap: giving AI agents structured cybersecurity skills. With the cybersecurity workforce shortage and the rise of AI coding agents, developers and security teams are eager for tools that make agents more capable in security tasks. The cross-framework mapping and broad platform compatibility add to its appeal.",
+      "developerTakeaway": "This is a ready-to-use knowledge base for any AI agent that needs cybersecurity capabilities. Developers can clone it and integrate it with Claude Code, Copilot, Cursor, and others to instantly enhance their agent's security skills.",
+      "developerInsight": "The project signals a shift toward domain-specific skill libraries for AI agents. Developers building agentic workflows should consider adopting structured skill standards (like agentskills.io) to make their agents more useful in specialized domains. The progressive disclosure architecture (30 tokens to scan, 500-2000 to load) is a practical pattern for managing large skill sets within context windows.",
+      "targetUsers": "Security analysts, SOC teams, penetration testers, DevSecOps engineers, AI/ML developers building security agents, and anyone using AI coding assistants for cybersecurity tasks.",
+      "riskNotes": "The project is community-created and not affiliated with Anthropic. The README contains promotional links (e.g., survey, playground) that may be self-serving. The quality and accuracy of the skills depend on community contributions; users should validate skills before using in production.",
       "confidence": "high"
     },
-    "createdAt": "2026-05-26T05:36:55.623Z",
+    "createdAt": "2026-05-27T13:40:41.578Z",
     "model": "deepseek-v4-flash"
   },
   "affaan-m/ECC:2026-05-25T18:28:39Z": {
     "summary": {
-      "oneLiner": "ECC is a harness-native operator system that optimizes AI agent performance through skills, instincts, memory, security scanning, and research-first development for tools like Claude Code, Codex, and Cursor.",
-      "problemSolved": "It solves the lack of a unified, production-ready system for configuring, optimizing, and securing AI agent harnesses, reducing manual setup and improving agent reliability and efficiency.",
+      "oneLiner": "ECC is a harness-native operator system that optimizes performance, security, and continuous learning for AI coding agents like Claude Code, Codex, and Cursor.",
+      "problemSolved": "It solves the fragmentation and inefficiency of configuring AI agent harnesses by providing a unified system of skills, hooks, memory optimization, security scanning, and research-first development workflows.",
       "aiCategory": "MCP / Tool Calling",
-      "whyTrending": "With 182K+ stars and rapid daily growth (1,769 stars in 24h), it addresses the high demand for practical agent tooling, winning an Anthropic hackathon and offering a comprehensive, cross-harness solution.",
-      "developerTakeaway": "Developers get a complete, open-source system to enhance AI agent workflows with token optimization, memory persistence, continuous learning, and security scanning, saving months of custom configuration.",
-      "targetUsers": "Developers and teams using AI coding agents (Claude Code, Codex, Cursor, etc.) who need production-grade performance, security, and cross-harness compatibility.",
-      "riskNotes": "The README is promotional and may overstate capabilities; the project is complex with many components, and the Rust alpha (ECC 2.0) is experimental. Verify actual functionality before relying on it.",
-      "confidence": "high"
+      "trendType": "sustained_hot",
+      "whyNow": "With 195,517 stars, 30,086 forks, and a sustained 1,794.5 three-day average star delta, plus a 1.5x acceleration and a recent release (v2.0.0-rc.1) within 30 days, ECC is experiencing massive, sustained interest. The project has a recent commit within 7 days and is an Anthropic Hackathon winner, making it a top-tier tool for AI agent developers.",
+      "whatChanged": "The recent v2.0.0-rc.1 release added a dashboard GUI, operator workflows, prediction-market skills, optimization skill packs, an ECC 2.0 alpha Rust control-plane, and ecosystem hardening. This surface refresh and expansion likely drove the latest star surge.",
+      "whyTrending": "ECC is trending because it provides a comprehensive, production-ready system for AI agent harnesses, addressing a critical need for developers building with Claude Code, Codex, and similar tools. Its massive star count and sustained growth reflect its utility and community adoption.",
+      "developerTakeaway": "ECC is a must-evaluate tool for any developer using AI coding agents. It offers a complete, open-source system to optimize agent performance, security, and learning, with cross-harness support and a vibrant community.",
+      "developerInsight": "This signals a shift toward standardized, performance-optimized agent harnesses. Developers should adopt ECC to reduce configuration overhead, improve agent reliability, and leverage community-driven skills and security practices.",
+      "targetUsers": "AI agent developers, Claude Code/Codex/Cursor users, MCP tool builders, and teams building production-grade agentic workflows.",
+      "riskNotes": "The project is maintained by a single primary maintainer, which could pose bus-factor risk. The rapid pace of releases may introduce instability. The README's star count (195K) seems unusually high for a niche tool; verify authenticity.",
+      "confidence": "medium"
     },
-    "createdAt": "2026-05-26T05:36:58.435Z",
+    "createdAt": "2026-05-27T13:40:42.115Z",
     "model": "deepseek-v4-flash"
   },
   "manaflow-ai/cmux:2026-05-26T05:18:43Z": {
@@ -295,16 +307,20 @@
   },
   "tirth8205/code-review-graph:2026-05-25T22:03:58Z": {
     "summary": {
-      "oneLiner": "Local-first code intelligence graph for MCP and CLI that builds a persistent map of your codebase so AI coding tools read only what matters, reducing context by 38x to 528x.",
-      "problemSolved": "AI coding assistants waste tokens by re-reading large parts of the codebase during code review and other tasks. This tool provides a structural graph of the code, enabling precise context retrieval via MCP, drastically reducing token usage and improving review efficiency.",
+      "oneLiner": "Local-first code intelligence graph for MCP and CLI that builds a persistent map of your codebase so AI coding tools read only what matters, achieving 38x to 528x token reduction on reviews.",
+      "problemSolved": "AI coding tools waste tokens by re-reading large parts of the codebase on review tasks. code-review-graph builds a structural map using Tree-sitter, tracks changes incrementally, and provides precise context via MCP, reducing token consumption dramatically.",
       "aiCategory": "MCP / Tool Calling",
-      "whyTrending": "It addresses a critical pain point for developers using AI coding tools: token waste and context overload. With 17k+ stars and rapid growth, it offers a practical, benchmarked solution that integrates with multiple AI platforms (Claude Code, Cursor, Copilot, etc.) and shows dramatic token reductions.",
-      "developerTakeaway": "A powerful, local-first tool to optimize AI-assisted code review by providing a persistent code graph. It supports many languages, incremental updates, and blast-radius analysis, making it valuable for both small projects and large monorepos.",
-      "targetUsers": "Developers and teams using AI coding assistants (e.g., Claude Code, Cursor, GitHub Copilot) who want to reduce token costs and improve review accuracy, especially on large or monorepo codebases.",
-      "riskNotes": "README is the primary source; claims are based on benchmarks provided. Some limitations noted: small single-file changes may not benefit, search quality (MRR 0.35) and flow detection (33% recall) have room for improvement. The project is actively maintained with many open issues.",
+      "trendType": "sustained_hot",
+      "whyNow": "The repo has 17,511 stars, a 24h star delta of 107, a three-day average of 70, and an acceleration of 1.5 (medium). It has a recent release within 30 days and a commit within 7 days. These metrics indicate sustained high interest and active development, making it a hot project for AI-assisted coding workflows.",
+      "whatChanged": "The trigger is unclear from the provided data, but the sustained star growth and recent commits suggest ongoing improvements, possibly new platform integrations or performance enhancements.",
+      "whyTrending": "It solves a critical pain point for developers using AI coding assistants: token waste and context overload. The dramatic token reductions (38x to 528x) and support for many platforms (Claude Code, Cursor, Copilot, etc.) make it highly appealing.",
+      "developerTakeaway": "Integrating code-review-graph into your AI coding workflow can drastically reduce token usage and improve review accuracy. It is easy to install and supports incremental updates, making it practical for large monorepos.",
+      "developerInsight": "This signals a shift toward local-first, graph-based context management for AI coding tools. Developers should consider adopting such tools to reduce costs and improve AI response quality, and tool builders may want to integrate similar graph-based context retrieval.",
+      "targetUsers": "Developers using AI coding assistants (Claude Code, Cursor, Copilot, etc.) who work on large codebases or monorepos and want to reduce token consumption and improve review accuracy.",
+      "riskNotes": "The project is relatively new and may have limitations in search quality (MRR 0.35) and flow detection (33% recall). It requires Python 3.10+ and may not support all languages equally. The 100 open issues indicate active development but also potential bugs.",
       "confidence": "high"
     },
-    "createdAt": "2026-05-26T09:13:00.582Z",
+    "createdAt": "2026-05-27T13:41:03.525Z",
     "model": "deepseek-v4-flash"
   },
   "HKUDS/nanobot:2026-05-26T09:12:14Z": {
@@ -505,16 +521,20 @@
   },
   "thedotmack/claude-mem:2026-05-26T05:10:19Z": {
     "summary": {
-      "oneLiner": "A persistent memory compression system for Claude Code and other AI coding agents that captures, summarizes, and injects relevant context across sessions.",
-      "problemSolved": "AI coding agents lose context when sessions end, forcing users to re-explain project details. Claude-Mem automatically captures tool usage observations, generates semantic summaries, and injects relevant context into future sessions, enabling continuity without manual effort.",
-      "aiCategory": "AI Agent Memory / Context Management",
-      "whyTrending": "Extreme popularity (78k+ stars, 919 stars in 24h) due to solving a critical pain point for Claude Code users and other AI coding agents. The project is actively maintained, has extensive documentation, and supports multiple IDEs and agents (Claude Code, Gemini CLI, OpenClaw, etc.).",
-      "developerTakeaway": "Provides a plug-and-play memory layer for AI coding agents with minimal setup (single npx command). Uses a hybrid search (Chroma + SQLite FTS5) and progressive disclosure to keep token costs low. The architecture (lifecycle hooks, worker service, MCP tools) is well-documented and extensible.",
-      "targetUsers": "Developers using Claude Code, Gemini CLI, OpenClaw, Codex, or other AI coding agents who want persistent project context across sessions.",
-      "riskNotes": "README content is untrusted; claims may be exaggerated. The project is complex (multiple components: hooks, worker, DB, vector search) and may have stability issues. Open issues (227) suggest active development but also potential bugs. Privacy concerns: captures all tool usage unless explicitly excluded with <private> tags.",
+      "oneLiner": "Claude-Mem is a persistent memory compression system for AI agents that captures session activity, compresses it with AI, and injects relevant context into future sessions.",
+      "problemSolved": "AI agents lose context between sessions, forcing users to re-explain project state, decisions, and progress. Claude-Mem solves this by automatically capturing tool usage observations, generating semantic summaries, and making them available to future sessions, enabling continuity of knowledge.",
+      "aiCategory": "Vector Database / Embedding",
+      "trendType": "sudden_breakout",
+      "whyNow": "The repo has 79,041 stars, with a 24h star delta of 846 and a three-day average of 242, showing a sudden acceleration (3.5x). A recent release within 30 days and a commit within 7 days indicate active development. This breakout suggests strong community interest in persistent memory for AI agents.",
+      "whatChanged": "The trigger is unclear from the provided data, but the sudden breakout and recent release (version 6.5.0) likely introduced new features or integrations (e.g., OpenClaw gateway, Gemini CLI, MCP search tools) that drove adoption.",
+      "whyTrending": "As AI agents become more prevalent, the need for persistent context across sessions is critical. Claude-Mem offers a practical, easy-to-install solution that works with multiple agents (Claude Code, Gemini, Copilot, etc.), making it a go-to tool for developers building long-running agent workflows.",
+      "developerTakeaway": "Claude-Mem is a drop-in memory layer for AI agents that requires minimal setup (single command install). It uses SQLite, Chroma vector DB, and MCP tools for efficient memory retrieval, and is open-source under Apache 2.0.",
+      "developerInsight": "This signals a shift toward 'memory-as-a-service' for AI agents. Developers should consider integrating persistent memory to improve agent continuity and user experience. The hybrid search (semantic + keyword) and progressive disclosure pattern are key architectural patterns to adopt.",
+      "targetUsers": "Developers using Claude Code, Gemini CLI, OpenClaw, Copilot, or other AI coding agents who want to maintain project context across sessions without manual effort.",
+      "riskNotes": "The project is tied to specific agent ecosystems (Claude, Gemini) and may require ongoing maintenance to stay compatible. Privacy concerns with automatic capture of session data, though the project offers <private> tags. The sudden breakout could be hype-driven; evaluate stability and long-term maintenance.",
       "confidence": "high"
     },
-    "createdAt": "2026-05-27T05:24:34.895Z",
+    "createdAt": "2026-05-27T13:40:52.998Z",
     "model": "deepseek-v4-flash"
   },
   "esengine/DeepSeek-Reasonix:2026-05-27T06:18:52Z": {
@@ -707,6 +727,96 @@
       "confidence": "low"
     },
     "createdAt": "2026-05-27T13:23:47.066Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-05-27T12:22:59Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, engineered around prefix-cache stability to keep token costs low across long sessions.",
+      "problemSolved": "Reduces LLM API costs for long-running coding sessions by maximizing cache hits (99.82% reported) through a cache-first loop design, while providing a full-featured terminal UI for code generation, editing, and tool use.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "The repo has 11,249 stars with a 24-hour delta of 2,359 stars and a three-day average of 1,515.5 stars/day, indicating sustained high interest. It has recent commits within 7 days and a release within 30 days. The acceleration is 1.6 (medium), suggesting continued growth. It ranks top in multiple categories on oosmetrics (Agents, LLMs, CLI).",
+      "whatChanged": "The trigger is unclear from the provided data, but the sustained high star velocity and recent commits suggest ongoing feature development or community engagement. The README mentions a desktop client prerelease and QQ channel integration, which may have contributed to recent attention.",
+      "whyTrending": "It offers a unique value proposition: DeepSeek-only optimization for cache stability, resulting in dramatically lower costs (case study: $12 vs $61 for 435M tokens). The combination of a polished terminal UI, MCP support, skills, memory, and a desktop client appeals to developers seeking efficient AI-assisted coding.",
+      "developerTakeaway": "Reasonix demonstrates that deep integration with a specific LLM's caching mechanics can yield significant cost savings and performance improvements. Developers should consider cache-aware design when building AI agents, especially for long-running sessions.",
+      "developerInsight": "This signals a shift toward specialized, cache-optimized agents rather than generic multi-model frameworks. The focus on prefix-cache stability suggests that future AI tools will increasingly leverage model-specific features for efficiency, potentially fragmenting the agent ecosystem.",
+      "targetUsers": "Developers who use DeepSeek models for coding assistance and want a terminal-based agent with low token costs, support for long sessions, and features like MCP, skills, and memory.",
+      "riskNotes": "DeepSeek-only dependency ties users to a single provider. The project has 240 open issues, which may indicate active development but also potential instability. The desktop client is prerelease and not code-signed, posing security concerns on some platforms.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-27T13:40:32.077Z",
+    "model": "deepseek-v4-flash"
+  },
+  "HKUDS/nanobot:2026-05-27T13:29:14Z": {
+    "summary": {
+      "oneLiner": "An ultra-lightweight, open-source AI agent framework that integrates chat channels, memory, MCP, and multiple LLM providers for building personal agents with minimal overhead.",
+      "problemSolved": "It simplifies the creation of long-running, multi-channel AI agents by providing a small, readable core loop that supports chat platforms (Telegram, Discord, Slack, Feishu, etc.), memory, tool use (MCP), and multiple LLM backends, reducing the complexity of building and deploying personal agents.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sustained_hot",
+      "whyNow": "With 43,250 stars, 95 stars in the last 24 hours, a three-day average of 50.5 stars, and an acceleration of 1.9, the project is experiencing sustained high interest. Recent commits (within 7 days) and a release (v0.2.0 on 2026-05-15) indicate active development. The project is trending as a hot AI agent framework.",
+      "whatChanged": "The latest release v0.2.0 introduced a `/goal` command for sustained objectives, a WebUI shipped inside the wheel, image generation, 5 new providers with fallback models, and a core agent-loop refactor. The project has been rapidly iterating with daily updates and new features.",
+      "whyTrending": "It fills the niche of a lightweight, open-source alternative to proprietary AI agents like Claude Code and Codex, with broad multi-channel support and frequent feature releases. The combination of simplicity, extensibility, and active community engagement drives its popularity.",
+      "developerTakeaway": "nanobot offers a practical, low-overhead way to build and deploy personal AI agents that can operate across multiple chat platforms. Developers can quickly set up an agent with their preferred LLM provider and extend it with custom tools and memory.",
+      "developerInsight": "This signals a shift toward lightweight, modular AI agent frameworks that prioritize developer experience and multi-platform integration. The rapid iteration and community adoption suggest a growing demand for open-source alternatives to vendor-locked agent solutions.",
+      "targetUsers": "Developers and hobbyists who want to build personal AI assistants that work across chat platforms (Telegram, Discord, Slack, etc.) with minimal setup, and who prefer open-source, customizable solutions over proprietary ones.",
+      "riskNotes": "The project is very young (first release in March 2026) and may have stability issues. With 882 open issues, there could be bugs or incomplete features. The rapid pace of changes may lead to breaking changes. The README is promotional and may overstate capabilities.",
+      "confidence": "medium"
+    },
+    "createdAt": "2026-05-27T13:40:51.740Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-05-27T13:39:15Z": {
+    "summary": {
+      "oneLiner": "Open-source, local-first alternative to Claude Design that turns 16 coding-agent CLIs into a design engine with 132 skills and 150 design systems.",
+      "problemSolved": "Claude Design is closed-source, cloud-only, and locked to Anthropic's model. Open Design provides a fully open, BYOK, local-first design tool that works with any compatible AI agent and can be self-hosted or deployed to Vercel.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "53,495 stars, 1,203 stars in the last 24 hours, 806 three-day average, acceleration 1.5, and a recent release (0.8.0-preview) within 30 days. The project is iterating fast on main and has strong community momentum.",
+      "whatChanged": "The 0.8.0-preview release was announced, marking a new phase with expanded skills (132), design systems (150), and agent support (16 CLIs). The README explicitly calls for community contributions to push the project forward.",
+      "whyTrending": "It fills a clear gap as the open-source alternative to a popular but locked-down tool (Claude Design), offers local-first privacy and BYOK flexibility, and has a rapidly growing community (40k stars in two weeks).",
+      "developerTakeaway": "Developers can use Open Design to generate prototypes, slides, images, and videos locally using their preferred AI agent, with full control over models and data. It's a practical tool for vibe-coding and rapid design iteration.",
+      "developerInsight": "This signals a shift toward open, modular AI design tools that decouple the agent from the model and the UI. The BYOK architecture and support for multiple CLIs lower adoption barriers and reduce vendor lock-in.",
+      "targetUsers": "AI developers, designers, product builders, and teams who want a local-first, open-source design tool that works with their existing coding agents and avoids cloud-only dependencies.",
+      "riskNotes": "The project is in preview (0.8.0) and iterating rapidly, so stability and breaking changes are possible. It relies on external CLI tools that may have their own limitations or licensing. The large number of open issues (352) suggests active development but also potential rough edges.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-27T13:41:02.682Z",
+    "model": "deepseek-v4-flash"
+  },
+  "Leonxlnx/taste-skill:2026-05-26T19:31:39Z": {
+    "summary": {
+      "oneLiner": "A collection of portable agent skills that upgrade AI-generated frontends with strong layout, typography, motion, and spacing to avoid generic 'slop'.",
+      "problemSolved": "AI coding agents often produce bland, boilerplate UIs. Taste-Skill provides structured design rules and image-generation skills that enforce premium design patterns, making AI-built interfaces look polished and intentional.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sustained_hot",
+      "whyNow": "The repo has 23,382 stars and gained 3,336 stars in the last 24 hours, with a sustained hot trend and a recent commit within 7 days. It is actively maintained and rapidly adopted by the vibecoding community.",
+      "whatChanged": "The default skill was rewritten to v2 (experimental) with brief inference, design-system mapping, GSAP code skeletons, and a redesign-audit protocol. The changelog details the v1 to v2 diff.",
+      "whyTrending": "It addresses a universal pain point for developers using AI coding agents: poor visual output. The combination of easy installation via npx, multiple skill variants, and image-generation capabilities makes it a practical tool for improving AI-generated frontends.",
+      "developerTakeaway": "Developers can install these skills to instantly improve the design quality of AI-generated UIs without manual styling. It works with Codex, Cursor, Claude Code, and ChatGPT Images.",
+      "developerInsight": "This signals a shift toward 'design-aware' AI coding workflows. Developers no longer accept generic AI output; they want tools that enforce quality standards. Taste-Skill is a lightweight, framework-agnostic way to inject design taste into agentic coding.",
+      "targetUsers": "Frontend developers, designers, and AI enthusiasts who use coding agents (Codex, Cursor, Claude Code) and want to produce visually appealing interfaces without manual design effort.",
+      "riskNotes": "The v2 default is experimental and may break existing workflows. The project has no official token or crypto affiliation, but scammers may misuse the name. The skills rely on the agent's ability to follow instructions; results may vary.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-27T13:41:12.423Z",
+    "model": "deepseek-v4-flash"
+  },
+  "sickn33/antigravity-awesome-skills:2026-05-27T07:28:54Z": {
+    "summary": {
+      "oneLiner": "Installable library of 1,470+ reusable SKILL.md playbooks for Claude Code, Cursor, Codex CLI, Gemini CLI, and other AI coding assistants.",
+      "problemSolved": "Eliminates the need to collect one-off prompt snippets by providing a searchable, installable catalog of agentic skills, bundles, workflows, and plugin-safe distributions for recurring development tasks.",
+      "aiCategory": "MCP / Tool Calling",
+      "trendType": "sustained_hot",
+      "whyNow": "With 38,884 stars, 168 stars in the last 24 hours, a 3-day average of 113.5 stars, and a recent release (V11.7.0) within 30 days, this repo is experiencing sustained high growth. It has a medium acceleration of 1.5 and a recent commit within 7 days, indicating active maintenance and community interest.",
+      "whatChanged": "The latest release V11.7.0 expanded the skill count to 1,470+ and likely includes new bundles, workflows, or tool-specific install flags. The trigger is clearly the continuous addition of skills and support for more AI coding assistants.",
+      "whyTrending": "It provides a practical, installable solution for developers using multiple AI coding assistants, offering a unified skill library that works across Claude Code, Cursor, Codex CLI, Gemini CLI, and others. The npm installer and tool-specific flags lower the barrier to adoption.",
+      "developerTakeaway": "This repo is a must-bookmark for any developer using AI coding assistants. It saves time by providing ready-to-use skills for planning, coding, debugging, testing, security, and more, with easy installation and tool-specific configurations.",
+      "developerInsight": "The rapid adoption signals a shift toward structured, reusable agentic workflows rather than ad-hoc prompting. Developers are investing in skill libraries to standardize and accelerate AI-assisted development.",
+      "targetUsers": "Developers and teams using Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, Kiro, OpenCode, GitHub Copilot, or any AI coding assistant that benefits from structured skill playbooks.",
+      "riskNotes": "The README content is untrusted; the project's actual quality and security of skills should be verified. The large number of skills may include low-quality or outdated entries. Dependency on external tools may break if those tools change their skill interfaces.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-27T13:41:12.739Z",
     "model": "deepseek-v4-flash"
   }
 }
