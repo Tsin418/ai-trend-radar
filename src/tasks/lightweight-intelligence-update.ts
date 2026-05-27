@@ -1,79 +1,166 @@
-import { buildDailyIntelligenceBrief } from '../intelligence/intelligence-brief.js';
-import type { IntelligenceBrief } from '../intelligence/types.js';
-import { getRadarStorePath } from '../radar/config.js';
+import { createAIHotCollector } from '../collectors/aihot.js';
+import { createHackerNewsCollector } from '../collectors/hackernews.js';
+import { createHuggingFaceModelsCollector } from '../collectors/huggingface-models.js';
+import { createHuggingFaceSpacesCollector } from '../collectors/huggingface-spaces.js';
+import { createProductHuntCollector } from '../collectors/producthunt.js';
 import { getLocalDateLabel } from '../radar/date.js';
-import type { RadarRepository, RepoScore, ScoredRadarRepository } from '../radar/types.js';
-import { JsonRadarStore } from '../storage/json-store.js';
+import { buildIntelligenceHeadline } from '../intelligence/headline-builder.js';
+import { buildTopicBriefs } from '../intelligence/topic-brief-builder.js';
+import type { IntelligenceBrief } from '../intelligence/types.js';
+import { productHuntTrendingItemToTrendItem } from '../trends/adapters.js';
+import { loadMultiSourceConfig } from '../trends/config.js';
+import { buildTopicClusters } from '../trends/dedupe.js';
+import { sortTrendItems } from '../trends/scoring.js';
+import type { SourceConfig, SourceHealth, SourceHealthName, TrendItem } from '../trends/types.js';
 
 export interface LightweightIntelligenceOptions {
   date?: string;
   recommendationLimit?: number;
   topicLimit?: number;
   evidenceLimitPerTopic?: number;
-  storePath?: string;
 }
 
 export interface LightweightIntelligenceResult {
   runId: string;
   generatedAt: string;
   brief: IntelligenceBrief;
-  contextRepoCount: number;
-}
-
-function latestScores(scores: RepoScore[]): RepoScore[] {
-  const byRepo = new Map<string, RepoScore>();
-  for (const score of scores) {
-    const existing = byRepo.get(score.repoFullName);
-    if (!existing || score.scoreDate.localeCompare(existing.scoreDate) > 0) {
-      byRepo.set(score.repoFullName, score);
-    }
-  }
-  return Array.from(byRepo.values()).sort((a, b) => b.finalScore - a.finalScore);
-}
-
-function toScoredRepository(repository: RadarRepository, score: RepoScore): ScoredRadarRepository {
-  return {
-    repository,
-    score,
-    whyItMatters: `${repository.category} signal with ${repository.stars.toLocaleString()} stars and final score ${score.finalScore}.`,
-    developerInsight: `Track ${repository.repoFullName} as context for current multi-source AI trend signals.`
+  sections: {
+    productLaunches: TrendItem[];
+    modelDemoSignals: TrendItem[];
+    developerBuzz: TrendItem[];
+    aihotHighlights: TrendItem[];
   };
 }
 
-function loadRecentScoredRepositories(storePath: string, limit: number): ScoredRadarRepository[] {
-  const store = new JsonRadarStore(storePath);
-  const data = store.load();
-  return latestScores(data.scores)
-    .slice(0, Math.max(limit, 20))
-    .flatMap((score) => {
-      const repository = data.repositories[score.repoFullName];
-      return repository ? [toScoredRepository(repository, score)] : [];
-    });
+async function safeCollect(
+  source: SourceHealthName,
+  label: string,
+  enabled: boolean,
+  collect: () => Promise<TrendItem[]>
+): Promise<{ items: TrendItem[]; health: SourceHealth; warning?: string }> {
+  const startedAt = new Date().toISOString();
+  const start = Date.now();
+
+  if (!enabled) {
+    return {
+      items: [],
+      health: {
+        source,
+        enabled: false,
+        success: true,
+        itemCount: 0,
+        startedAt,
+        finishedAt: startedAt,
+        latencyMs: 0,
+        warning: `${label} collection disabled.`
+      }
+    };
+  }
+
+  try {
+    const items = await collect();
+    return {
+      items,
+      health: {
+        source,
+        enabled: true,
+        success: true,
+        itemCount: items.length,
+        startedAt,
+        finishedAt: new Date().toISOString(),
+        latencyMs: Date.now() - start
+      }
+    };
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    return {
+      items: [],
+      warning: `${label} collection failed: ${message}`,
+      health: {
+        source,
+        enabled: true,
+        success: false,
+        itemCount: 0,
+        startedAt,
+        finishedAt: new Date().toISOString(),
+        latencyMs: Date.now() - start,
+        error: message
+      }
+    };
+  }
 }
 
-export async function runLightweightIntelligenceUpdate(options: LightweightIntelligenceOptions = {}): Promise<LightweightIntelligenceResult> {
+function enabled(config: SourceConfig | undefined): boolean {
+  return config?.enabled ?? false;
+}
+
+function limit(config: SourceConfig | undefined, fallback: number): number {
+  return config?.limit ?? fallback;
+}
+
+function productHuntEnabled(config: SourceConfig): boolean {
+  return enabled(config) && Boolean(process.env.PRODUCT_HUNT_TOKEN?.trim());
+}
+
+export async function runLightweightIntelligenceUpdate(
+  options: LightweightIntelligenceOptions = {}
+): Promise<LightweightIntelligenceResult> {
   const generatedAt = new Date().toISOString();
   const date = options.date ?? getLocalDateLabel();
   const runId = `lightweight-${date}-${generatedAt.replace(/[:.]/g, '-')}`;
-  const recommendationLimit = options.recommendationLimit ?? 10;
-  const scored = loadRecentScoredRepositories(options.storePath ?? getRadarStorePath(), recommendationLimit);
-  const brief = await buildDailyIntelligenceBrief({
-    scored,
-    recommendationLimit,
-    date,
-    topicLimit: options.topicLimit,
-    evidenceLimitPerTopic: options.evidenceLimitPerTopic
+  const config = loadMultiSourceConfig();
+
+  const results = await Promise.all([
+    safeCollect('product-hunt', 'Product Hunt', productHuntEnabled(config.productHunt), async () => {
+      const collector = createProductHuntCollector({ limit: limit(config.productHunt, 30) });
+      const items = await collector.fetch(limit(config.productHunt, 30));
+      return items.map(productHuntTrendingItemToTrendItem);
+    }),
+    safeCollect('aihot', 'AIHot', enabled(config.aihot), async () => {
+      const collector = createAIHotCollector(config.aihot);
+      return collector.fetch(limit(config.aihot, 30));
+    }),
+    safeCollect('huggingface-models', 'Hugging Face Models', enabled(config.huggingfaceModels), async () => {
+      const collector = createHuggingFaceModelsCollector(config.huggingfaceModels);
+      return collector.fetch(limit(config.huggingfaceModels, 30));
+    }),
+    safeCollect('huggingface-spaces', 'Hugging Face Spaces', enabled(config.huggingfaceSpaces), async () => {
+      const collector = createHuggingFaceSpacesCollector(config.huggingfaceSpaces);
+      return collector.fetch(limit(config.huggingfaceSpaces, 30));
+    }),
+    safeCollect('hackernews', 'Hacker News', enabled(config.hackernews), async () => {
+      const collector = createHackerNewsCollector(config.hackernews);
+      return collector.fetch();
+    })
+  ]);
+
+  const [productHunt, aihot, hfModels, hfSpaces, hackernews] = results;
+  const items = results.flatMap((result) => result.items);
+  const topicBriefs = buildTopicBriefs(buildTopicClusters(items), {
+    limit: options.topicLimit ?? options.recommendationLimit ?? 5,
+    evidenceLimitPerTopic: options.evidenceLimitPerTopic ?? 6
   });
+  const { headline, keyTakeaways } = buildIntelligenceHeadline(topicBriefs);
+  const warnings = results.flatMap((result) => result.warning ? [result.warning] : []);
 
   return {
     runId,
     generatedAt,
-    contextRepoCount: scored.length,
+    sections: {
+      productLaunches: sortTrendItems(productHunt.items).slice(0, 5),
+      modelDemoSignals: sortTrendItems([...hfModels.items, ...hfSpaces.items]).slice(0, 8),
+      developerBuzz: sortTrendItems(hackernews.items).slice(0, 5),
+      aihotHighlights: sortTrendItems(aihot.items).slice(0, 8)
+    },
     brief: {
-      ...brief,
+      date,
+      headline,
+      keyTakeaways,
+      topicBriefs,
+      sourceHealth: results.map((result) => result.health),
       dataNotes: [
-        ...brief.dataNotes,
-        `Lightweight intelligence run ${runId}; GitHub collection skipped and ${scored.length} stored repo scores used as context.`
+        'Lightweight intelligence update: GitHub repository collection, GitHub scoring, and LLM enrichment were skipped.',
+        ...warnings.map((warning) => `Multi-source warning: ${warning}`)
       ]
     }
   };

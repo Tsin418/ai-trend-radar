@@ -18,15 +18,23 @@ jobs:
     timeout-minutes: 15
     env:
       PRODUCT_HUNT_TOKEN: ${{ secrets.PRODUCT_HUNT_TOKEN }}
-      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-      DEEPSEEK_BASE_URL: ${{ vars.DEEPSEEK_BASE_URL }}
-      DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
-      TREND_LLM_ENRICHMENT_ENABLED: ${{ vars.TREND_LLM_ENRICHMENT_ENABLED }}
+      PRODUCT_HUNT_ENABLED: ${{ vars.PRODUCT_HUNT_ENABLED }}
+      PRODUCT_HUNT_POST_LIMIT: ${{ vars.PRODUCT_HUNT_POST_LIMIT }}
+      PRODUCT_HUNT_DAYS_BACK: ${{ vars.PRODUCT_HUNT_DAYS_BACK }}
+      PRODUCT_HUNT_TOPICS: ${{ vars.PRODUCT_HUNT_TOPICS }}
+      PRODUCT_HUNT_KEYWORDS: ${{ vars.PRODUCT_HUNT_KEYWORDS }}
+      PRODUCT_HUNT_MIN_VOTES: ${{ vars.PRODUCT_HUNT_MIN_VOTES }}
+      PRODUCT_HUNT_MIN_COMMENTS: ${{ vars.PRODUCT_HUNT_MIN_COMMENTS }}
       HUGGINGFACE_MODELS_ENABLED: ${{ vars.HUGGINGFACE_MODELS_ENABLED }}
+      HUGGINGFACE_MODELS_LIMIT: ${{ vars.HUGGINGFACE_MODELS_LIMIT }}
       HUGGINGFACE_SPACES_ENABLED: ${{ vars.HUGGINGFACE_SPACES_ENABLED }}
+      HUGGINGFACE_SPACES_LIMIT: ${{ vars.HUGGINGFACE_SPACES_LIMIT }}
       AIHOT_ENABLED: ${{ vars.AIHOT_ENABLED }}
+      AIHOT_LIMIT: ${{ vars.AIHOT_LIMIT }}
+      AIHOT_CATEGORIES: ${{ vars.AIHOT_CATEGORIES }}
       HACKERNEWS_ENABLED: ${{ vars.HACKERNEWS_ENABLED }}
-      ARXIV_ENABLED: ${{ vars.ARXIV_ENABLED }}
+      HACKERNEWS_LISTS: ${{ vars.HACKERNEWS_LISTS }}
+      HACKERNEWS_LIMIT_PER_LIST: ${{ vars.HACKERNEWS_LIMIT_PER_LIST }}
       TZ: Asia/Shanghai
 
     steps:
@@ -61,6 +69,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           [ -f data/latest-intelligence-brief.json ] && git add data/latest-intelligence-brief.json
-          [ -f data/llm-trend-enrichment-cache.json ] && git add data/llm-trend-enrichment-cache.json
           git diff --cached --quiet || git commit -m "chore(radar): update lightweight intelligence brief"
           git push

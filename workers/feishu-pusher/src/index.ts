@@ -16,6 +16,7 @@ export interface Env {
   FEISHU_WEBHOOK_URL: string;
   FEISHU_SECRET?: string;
   DIGEST_URL?: string;
+  LIGHTWEIGHT_DIGEST_URL?: string;
   MAX_DIGEST_AGE_HOURS?: string;
   GITHUB_TOKEN?: string;
   MANUAL_SEND_TOKEN?: string;
@@ -40,6 +41,67 @@ interface LatestDigest {
   text: string;
 }
 
+interface LightweightEvidenceItem {
+  title: string;
+  source: string;
+  url: string;
+  summary?: string;
+  metrics?: {
+    upvotes?: number;
+    likes?: number;
+    downloads?: number;
+    commentsCount?: number;
+    rank?: number;
+  };
+}
+
+interface LightweightTopicBrief {
+  title: string;
+  sources: string[];
+  heatScore: number;
+  confidence: 'low' | 'medium' | 'high';
+  watchDecision: 'track' | 'deep_dive' | 'wait' | 'ignore';
+  whyNow: string;
+  developerRelevance: string;
+  evidenceItems: LightweightEvidenceItem[];
+}
+
+interface LightweightSectionItem {
+  title: string;
+  source: string;
+  url: string;
+  summary?: string;
+  description?: string;
+  metrics?: {
+    upvotes?: number;
+    likes?: number;
+    downloads?: number;
+    commentsCount?: number;
+    rank?: number;
+  };
+}
+
+interface LatestLightweightDigest {
+  schemaVersion: 1;
+  mode: 'lightweight';
+  runId: string;
+  targetDate: string;
+  generatedAt: string;
+  brief: {
+    date: string;
+    headline: string;
+    keyTakeaways: string[];
+    topicBriefs: LightweightTopicBrief[];
+    dataNotes: string[];
+  };
+  sections?: {
+    productLaunches?: LightweightSectionItem[];
+    modelDemoSignals?: LightweightSectionItem[];
+    developerBuzz?: LightweightSectionItem[];
+    aihotHighlights?: LightweightSectionItem[];
+  };
+}
+
 interface SendResult {
   ok: true;
   skipped: boolean;
@@ -51,6 +113,9 @@ interface SendResult {
 
 const DEFAULT_DIGEST_URL =
   'https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-daily-digest.json';
+const DEFAULT_LIGHTWEIGHT_DIGEST_URL =
+  'https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-intelligence-brief.json';
+const DAILY_MAIN_CRON = '0 1 * * *';
 const PRODUCT_HUNT_ENDPOINT = 'https://api.producthunt.com/v2/api/graphql';
 const DEFAULT_PRODUCT_HUNT_TOPICS = [
   'artificial-intelligence',
@@ -250,6 +315,116 @@ function validateDigest(value: unknown): LatestDigest {
   };
 }
 
+function optionalString(value: unknown): string | undefined {
+  return typeof value === 'string' && value.trim() ? value.trim() : undefined;
+}
+
+function asArray(value: unknown): unknown[] {
+  return Array.isArray(value) ? value : [];
+}
+
+function metricObject(value: unknown): LightweightEvidenceItem['metrics'] {
+  if (!value || typeof value !== 'object') return undefined;
+  const raw = value as Record<string, unknown>;
+  return {
+    upvotes: typeof raw.upvotes === 'number' ? raw.upvotes : undefined,
+    likes: typeof raw.likes === 'number' ? raw.likes : undefined,
+    downloads: typeof raw.downloads === 'number' ? raw.downloads : undefined,
+    commentsCount: typeof raw.commentsCount === 'number' ? raw.commentsCount : undefined,
+    rank: typeof raw.rank === 'number' ? raw.rank : undefined
+  };
+}
+
+function validateLightweightSectionItem(value: unknown): LightweightSectionItem | null {
+  if (!value || typeof value !== 'object') return null;
+  const item = value as Record<string, unknown>;
+  const title = optionalString(item.title);
+  const source = optionalString(item.source);
+  const url = optionalString(item.url);
+  if (!title || !source || !url) return null;
+  return {
+    title,
+    source,
+    url,
+    summary: optionalString(item.summary),
+    description: optionalString(item.description),
+    metrics: metricObject(item.metrics)
+  };
+}
+
+function validateLightweightDigest(value: unknown): LatestLightweightDigest {
+  if (!value || typeof value !== 'object') {
+    throw new Error('Lightweight digest response is not a JSON object');
+  }
+
+  const digest = value as Record<string, unknown>;
+  if (digest.schemaVersion !== 1) {
+    throw new Error('Invalid lightweight digest schemaVersion');
+  }
+  if (digest.mode !== 'lightweight') {
+    throw new Error(`Expected lightweight digest, got ${String(digest.mode)}`);
+  }
+
+  const brief = digest.brief as Record<string, unknown> | undefined;
+  if (!brief || typeof brief !== 'object') {
+    throw new Error('Lightweight digest missing brief');
+  }
+
+  const topicBriefs = asArray(brief.topicBriefs).flatMap((topic) => {
+    if (!topic || typeof topic !== 'object') return [];
+    const raw = topic as Record<string, unknown>;
+    const title = optionalString(raw.title);
+    if (!title) return [];
+    return [{
+      title,
+      sources: asArray(raw.sources).filter((source): source is string => typeof source === 'string'),
+      heatScore: typeof raw.heatScore === 'number' ? raw.heatScore : 0,
+      confidence: raw.confidence === 'high' || raw.confidence === 'medium' || raw.confidence === 'low' ? raw.confidence : 'low',
+      watchDecision: raw.watchDecision === 'deep_dive' || raw.watchDecision === 'track' || raw.watchDecision === 'wait' || raw.watchDecision === 'ignore' ? raw.watchDecision : 'wait',
+      whyNow: optionalString(raw.whyNow) ?? 'Signal captured in the latest lightweight update.',
+      developerRelevance: optionalString(raw.developerRelevance) ?? 'Review the linked evidence before acting on this signal.',
+      evidenceItems: asArray(raw.evidenceItems).flatMap((evidence) => {
+        const item = validateLightweightSectionItem(evidence);
+        return item ? [{ title: item.title, source: item.source, url: item.url, summary: item.summary ?? item.description, metrics: item.metrics }] : [];
+      })
+    } satisfies LightweightTopicBrief];
+  });
+
+  const sections = digest.sections as Record<string, unknown> | undefined;
+  return {
+    schemaVersion: 1,
+    mode: 'lightweight',
+    runId: requireString(digest.runId, 'runId'),
+    targetDate: requireString(digest.targetDate, 'targetDate'),
+    generatedAt: requireString(digest.generatedAt, 'generatedAt'),
+    brief: {
+      date: requireString(brief.date, 'brief.date'),
+      headline: requireString(brief.headline, 'brief.headline'),
+      keyTakeaways: asArray(brief.keyTakeaways).filter((item): item is string => typeof item === 'string'),
+      topicBriefs,
+      dataNotes: asArray(brief.dataNotes).filter((item): item is string => typeof item === 'string')
+    },
+    sections: sections ? {
+      productLaunches: asArray(sections.productLaunches).flatMap((item) => {
+        const parsed = validateLightweightSectionItem(item);
+        return parsed ? [parsed] : [];
+      }),
+      modelDemoSignals: asArray(sections.modelDemoSignals).flatMap((item) => {
+        const parsed = validateLightweightSectionItem(item);
+        return parsed ? [parsed] : [];
+      }),
+      developerBuzz: asArray(sections.developerBuzz).flatMap((item) => {
+        const parsed = validateLightweightSectionItem(item);
+        return parsed ? [parsed] : [];
+      }),
+      aihotHighlights: asArray(sections.aihotHighlights).flatMap((item) => {
+        const parsed = validateLightweightSectionItem(item);
+        return parsed ? [parsed] : [];
+      })
+    } : undefined
+  };
+}
+
 function parseMaxDigestAgeHours(value: string | undefined): number {
   const parsed = Number.parseInt(value ?? '36', 10);
   return Number.isFinite(parsed) && parsed > 0 ? parsed : 36;
@@ -291,6 +466,21 @@ function assertFreshDigest(digest: LatestDigest, maxAgeHours: number): void {
   if (ageMs > maxAgeMs) {
     throw new Error(
       `Digest is stale: generatedAt=${digest.generatedAt}, maxAgeHours=${maxAgeHours}`
+    );
+  }
+}
+
+function assertFreshLightweightDigest(digest: LatestLightweightDigest, maxAgeHours: number): void {
+  const generatedAt = Date.parse(digest.generatedAt);
+  if (!Number.isFinite(generatedAt)) {
+    throw new Error('Invalid lightweight generatedAt timestamp');
+  }
+
+  const ageMs = Date.now() - generatedAt;
+  const maxAgeMs = maxAgeHours * 60 * 60 * 1000;
+  if (ageMs > maxAgeMs) {
+    throw new Error(
+      `Lightweight digest is stale: generatedAt=${digest.generatedAt}, maxAgeHours=${maxAgeHours}`
     );
   }
 }
@@ -522,6 +712,94 @@ async function fetchLatestDigest(env: Env): Promise<LatestDigest> {
   return validateDigest(await response.json());
 }
 
+async function fetchLatestLightweightDigest(env: Env): Promise<LatestLightweightDigest> {
+  const headers = new Headers({
+    'cache-control': 'no-cache'
+  });
+
+  if (env.GITHUB_TOKEN?.trim()) {
+    headers.set('authorization', `Bearer ${env.GITHUB_TOKEN.trim()}`);
+  }
+
+  const response = await fetch(env.LIGHTWEIGHT_DIGEST_URL?.trim() || DEFAULT_LIGHTWEIGHT_DIGEST_URL, {
+    headers,
+    cf: {
+      cacheTtl: 0,
+      cacheEverything: false
+    }
+  } as RequestInit & { cf: { cacheTtl: number; cacheEverything: boolean } });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch lightweight digest: HTTP ${response.status}`);
+  }
+
+  return validateLightweightDigest(await response.json());
+}
+
+function metricText(metrics: LightweightEvidenceItem['metrics']): string {
+  if (!metrics) return '';
+  const parts = [
+    metrics.upvotes !== undefined ? `${metrics.upvotes} votes` : '',
+    metrics.likes !== undefined ? `${metrics.likes} likes` : '',
+    metrics.downloads !== undefined ? `${metrics.downloads.toLocaleString()} downloads` : '',
+    metrics.commentsCount !== undefined ? `${metrics.commentsCount} comments` : '',
+    metrics.rank !== undefined ? `rank ${metrics.rank}` : ''
+  ].filter(Boolean);
+  return parts.length > 0 ? ` (${parts.join(', ')})` : '';
+}
+
+function renderSection(title: string, items: LightweightSectionItem[] | undefined, limit: number): string[] {
+  if (!items?.length) return [];
+  return [
+    '',
+    title,
+    ...items.slice(0, limit).map((item, index) => {
+      const summary = item.summary ?? item.description;
+      return `${index + 1}. [${item.source}] ${item.title}${metricText(item.metrics)}${summary ? ` - ${summary.slice(0, 140)}` : ''}`;
+    })
+  ];
+}
+
+function renderLightweightDigestText(digest: LatestLightweightDigest): string {
+  const lines = [
+    `AI Intelligence Brief｜Lightweight｜${digest.targetDate}`,
+    `Generated: ${digest.generatedAt}`,
+    '',
+    digest.brief.headline
+  ];
+
+  if (digest.brief.keyTakeaways.length > 0) {
+    lines.push('', 'Key Takeaways:');
+    digest.brief.keyTakeaways.slice(0, 3).forEach((takeaway, index) => {
+      lines.push(`${index + 1}. ${takeaway}`);
+    });
+  }
+
+  if (digest.brief.topicBriefs.length > 0) {
+    lines.push('', 'Hot Topics:');
+    digest.brief.topicBriefs.slice(0, 3).forEach((topic, index) => {
+      lines.push(`${index + 1}. ${topic.title} | ${topic.watchDecision} | confidence: ${topic.confidence} | heat: ${topic.heatScore}`);
+      lines.push(`   Why now: ${topic.whyNow.slice(0, 180)}`);
+      lines.push(`   Dev relevance: ${topic.developerRelevance.slice(0, 180)}`);
+      topic.evidenceItems.slice(0, 2).forEach((item) => {
+        lines.push(`   - [${item.source}] ${item.title}${metricText(item.metrics)}`);
+      });
+    });
+  }
+
+  lines.push(...renderSection('Product Launches:', digest.sections?.productLaunches, 3));
+  lines.push(...renderSection('Model & Demo Signals:', digest.sections?.modelDemoSignals, 3));
+  lines.push(...renderSection('Developer Buzz:', digest.sections?.developerBuzz, 3));
+  lines.push(...renderSection('AIHot Highlights:', digest.sections?.aihotHighlights, 3));
+
+  if (digest.brief.dataNotes.length > 0) {
+    lines.push('', 'Data Notes:');
+    digest.brief.dataNotes.slice(0, 3).forEach((note) => lines.push(`- ${note}`));
+  }
+
+  return lines.join('\n').trim();
+}
+
 async function postToFeishu(env: Env, text: string): Promise<void> {
   const webhook = env.FEISHU_WEBHOOK_URL?.trim();
   if (!webhook) {
@@ -623,6 +901,57 @@ async function sendLatestDigest(env: Env, force = false): Promise<SendResult> {
   };
 }
 
+function lightweightSlotKey(scheduledTime: number): string {
+  return new Date(scheduledTime).toISOString().slice(0, 13).replace('T', '-');
+}
+
+async function sendLightweightDigest(env: Env, scheduledTime: number, force = false): Promise<SendResult> {
+  const digest = await fetchLatestLightweightDigest(env);
+  assertFreshLightweightDigest(digest, parseMaxDigestAgeHours(env.MAX_DIGEST_AGE_HOURS));
+
+  const slot = lightweightSlotKey(scheduledTime);
+  const sentKey = `sent:lightweight-${slot}`;
+  if (env.RADAR_STATE) {
+    const existing = await env.RADAR_STATE.get(sentKey);
+    if (existing && !force) {
+      return {
+        ok: true,
+        skipped: true,
+        reason: 'Lightweight digest already sent for this slot',
+        digestId: digest.runId,
+        targetDate: digest.targetDate,
+        generatedAt: digest.generatedAt
+      };
+    }
+  } else {
+    console.warn('RADAR_STATE KV binding is not configured; idempotency is disabled.');
+  }
+
+  await postToFeishu(env, renderLightweightDigestText(digest));
+
+  if (env.RADAR_STATE) {
+    await env.RADAR_STATE.put(
+      sentKey,
+      JSON.stringify({
+        digestId: digest.runId,
+        slot,
+        sentAt: new Date().toISOString()
+      }),
+      {
+        expirationTtl: 60 * 60 * 24 * 30
+      }
+    );
+  }
+
+  return {
+    ok: true,
+    skipped: false,
+    digestId: digest.runId,
+    targetDate: digest.targetDate,
+    generatedAt: digest.generatedAt
+  };
+}
+
 function isAuthorizedManualRequest(request: Request, env: Env): boolean {
   const token = env.MANUAL_SEND_TOKEN?.trim();
   if (!token) return false;
@@ -632,9 +961,13 @@ function isAuthorizedManualRequest(request: Request, env: Env): boolean {
 }
 
 export default {
-  async scheduled(_controller: ScheduledController, env: Env, ctx: ExecutionContext): Promise<void> {
+  async scheduled(controller: ScheduledController, env: Env, ctx: ExecutionContext): Promise<void> {
+    const task = controller.cron === DAILY_MAIN_CRON
+      ? sendLatestDigest(env)
+      : sendLightweightDigest(env, controller.scheduledTime);
+
     ctx.waitUntil(
-      sendLatestDigest(env).then(
+      task.then(
         (result) => console.log(JSON.stringify(result)),
         (error) => {
           console.error(errorMessage(error));
