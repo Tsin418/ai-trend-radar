@@ -49,7 +49,8 @@ export type SourceHealthName =
   | 'aihot'
   | 'huggingface-models'
   | 'huggingface-spaces'
-  | 'hackernews';
+  | 'hackernews'
+  | 'arxiv';
 
 export interface SourceHealth {
   source: SourceHealthName;
@@ -132,6 +133,8 @@ export interface SourceConfig {
   categories?: string[];
   lists?: string[];
   limitPerList?: number;
+  daysBack?: number;
+  keywords?: string[];
 }
 
 export interface MultiSourceConfig {
@@ -140,4 +143,5 @@ export interface MultiSourceConfig {
   huggingfaceModels: SourceConfig;
   huggingfaceSpaces: SourceConfig;
   hackernews: SourceConfig;
+  arxiv: SourceConfig;
 }

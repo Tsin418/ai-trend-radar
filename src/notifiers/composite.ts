@@ -4,6 +4,9 @@
  */
 
 import type { Notifier, NotifyOptions, NotifyResult } from './types.js';
+import { getEnv } from '../config/env.js';
+import { createFeishuNotifier } from './feishu.js';
+import { createTelegramNotifier } from './telegram.js';
 
 export class CompositeNotifier implements Notifier {
   readonly name = 'composite';
@@ -66,4 +69,25 @@ export class CompositeNotifier implements Notifier {
 
 export function createCompositeNotifier(notifiers: Notifier[]): Notifier {
   return new CompositeNotifier(notifiers);
+}
+
+export function createConfiguredRadarNotifier(): Notifier {
+  const env = getEnv();
+  const requested = new Set(
+    (env.NOTIFIER_CHANNELS ?? 'feishu')
+      .split(',')
+      .map((channel) => channel.trim().toLowerCase())
+      .filter(Boolean)
+  );
+  const notifiers: Notifier[] = [];
+
+  if (requested.has('feishu') || env.FEISHU_WEBHOOK_URL?.trim()) {
+    notifiers.push(createFeishuNotifier());
+  }
+
+  if (requested.has('telegram') || (env.TELEGRAM_BOT_TOKEN?.trim() && env.TELEGRAM_CHAT_ID?.trim())) {
+    notifiers.push(createTelegramNotifier());
+  }
+
+  return notifiers.length === 1 ? notifiers[0] : new CompositeNotifier(notifiers);
 }

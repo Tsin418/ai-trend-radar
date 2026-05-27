@@ -1,4 +1,5 @@
 import { createAIHotCollector } from '../collectors/aihot.js';
+import { createArxivCollector } from '../collectors/arxiv.js';
 import { createHackerNewsCollector } from '../collectors/hackernews.js';
 import { createHuggingFaceModelsCollector } from '../collectors/huggingface-models.js';
 import { createHuggingFaceSpacesCollector } from '../collectors/huggingface-spaces.js';
@@ -112,7 +113,8 @@ export async function collectMultiSourceSignals(
         skipped('aihot'),
         skipped('huggingface-models'),
         skipped('huggingface-spaces'),
-        skipped('hackernews')
+        skipped('hackernews'),
+        skipped('arxiv')
       ],
       trendEntities: [],
       topicClusters: []
@@ -143,10 +145,14 @@ export async function collectMultiSourceSignals(
     safeCollect('hackernews', 'Hacker News', enabled(config.hackernews), async () => {
       const collector = createHackerNewsCollector(config.hackernews);
       return collector.fetch();
+    }),
+    safeCollect('arxiv', 'arXiv', enabled(config.arxiv), async () => {
+      const collector = createArxivCollector(config.arxiv);
+      return collector.fetch(limit(config.arxiv, 20));
     })
   ]);
 
-  const [productHunt, aihot, hfModels, hfSpaces, hackernews] = results;
+  const [productHunt, aihot, hfModels, hfSpaces, hackernews, arxiv] = results;
   const aihotCategories = new Set((config.aihot.categories ?? []).map((category) => category.toLowerCase()));
   if (aihotCategories.size > 0 && aihot.items.some((item) => !aihotCategories.has((item.category ?? 'other').toLowerCase()))) {
     aihot.health.warning = 'AIHot category filter was sparse; high-quality fallback items were retained.';
@@ -157,7 +163,8 @@ export async function collectMultiSourceSignals(
     ...aihot.items,
     ...hfModels.items,
     ...hfSpaces.items,
-    ...hackernews.items
+    ...hackernews.items,
+    ...arxiv.items
   ];
   const warnings = results.flatMap((result) => result.warning ? [result.warning] : []);
   const sourceHealth = results.map((result) => result.health);
@@ -165,7 +172,7 @@ export async function collectMultiSourceSignals(
   const topicClusters = buildTopicClusters(items);
   const sections: MultiSourceDigestSections = {
     productLaunches: sortTrendItems(productHunt.items).slice(0, 3),
-    modelDemoSignals: sortTrendItems([...hfModels.items, ...hfSpaces.items]).slice(0, 5),
+    modelDemoSignals: sortTrendItems([...hfModels.items, ...hfSpaces.items, ...arxiv.items]).slice(0, 5),
     developerBuzz: sortTrendItems(hackernews.items).slice(0, 3),
     aihotHighlights: sortTrendItems(aihot.items).slice(0, 5),
     crossSourceHighlights: mergeTrendItems(items).slice(0, 3)

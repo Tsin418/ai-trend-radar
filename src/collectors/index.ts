@@ -15,6 +15,7 @@ export { AIHotCollector, createAIHotCollector } from './aihot.js';
 export { HuggingFaceModelsCollector, createHuggingFaceModelsCollector } from './huggingface-models.js';
 export { HuggingFaceSpacesCollector, createHuggingFaceSpacesCollector } from './huggingface-spaces.js';
 export { HackerNewsCollector, createHackerNewsCollector } from './hackernews.js';
+export { ArxivCollector, createArxivCollector } from './arxiv.js';
 export type {
   ProductHuntCollectorOptions,
   ProductHuntPost,

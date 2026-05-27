@@ -69,6 +69,8 @@ jobs:
           git add data/radar-store.json
           [ -f data/latest-daily-digest.json ] && git add data/latest-daily-digest.json
           [ -f data/latest-daily-dashboard.json ] && git add data/latest-daily-dashboard.json
+          [ -f data/rss.xml ] && git add data/rss.xml
+          [ -d data/archive ] && git add data/archive
           [ -f data/llm-enrichment-cache.json ] && git add data/llm-enrichment-cache.json
           git diff --cached --quiet || git commit -m "chore(radar): generate latest daily digest"
           git push

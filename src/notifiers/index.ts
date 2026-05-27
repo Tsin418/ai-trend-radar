@@ -14,5 +14,8 @@ export { WeChatNotifier, createWeChatNotifier } from './wechat.js';
 // Feishu Notifier
 export { FeishuNotifier, createFeishuNotifier } from './feishu.js';
 
+// Telegram Notifier
+export { TelegramNotifier, createTelegramNotifier } from './telegram.js';
+
 // Composite Notifier
-export { CompositeNotifier, createCompositeNotifier } from './composite.js';
+export { CompositeNotifier, createCompositeNotifier, createConfiguredRadarNotifier } from './composite.js';
