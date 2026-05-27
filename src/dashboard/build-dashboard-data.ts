@@ -47,6 +47,42 @@ export interface DashboardProject {
   isWatchlist: boolean;
 }
 
+export interface HomepageSectionItem {
+  id: string;
+  title: string;
+  url: string;
+  source: string;
+  sourceType: string;
+  description?: string;
+  summary?: string;
+  category?: string;
+  tags?: string[];
+  metrics?: Record<string, unknown>;
+  whyItMatters?: string;
+  updatedAt?: string;
+  publishedAt?: string;
+}
+
+export interface HomepageSection {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  items: HomepageSectionItem[];
+  cta?: {
+    label: string;
+    url: string;
+  };
+}
+
+export interface GrowthLinks {
+  githubRepoUrl: string;
+  githubProfileUrl: string;
+  personalHomepageUrl: string;
+  linkedinUrl: string;
+  xiaohongshuUrl: string;
+}
+
 export interface CategoryStat {
   category: string;
   repoCount: number;
@@ -64,6 +100,7 @@ export interface LatestDailyDashboardFile {
   targetDate: string;
   generatedAt: string;
   timezone: string;
+  lastUpdatedLabel: string;
   digestId: string;
   source: {
     repo: string;
@@ -91,6 +128,13 @@ export interface LatestDailyDashboardFile {
     aihotHighlights: TrendItem[];
     crossSourceHighlights: TrendEntity[];
   };
+  homepageSections: {
+    openSourceRadar: HomepageSection;
+    aiProductRadar: HomepageSection;
+    aiNewsRadar: HomepageSection;
+    selfHostPush: HomepageSection;
+  };
+  growthLinks: GrowthLinks;
   sourceHealth: SourceHealth[];
   categoryStats: CategoryStat[];
   historyHighlights: {
@@ -164,6 +208,212 @@ function toDashboardProject(item: ScoredRadarRepository): DashboardProject {
   };
 }
 
+function toHomepageItemFromProject(project: DashboardProject): HomepageSectionItem {
+  return {
+    id: project.repoFullName,
+    title: project.repoFullName,
+    url: project.repoUrl,
+    source: project.source,
+    sourceType: 'opensource',
+    description: project.description,
+    category: project.category,
+    tags: project.topics,
+    metrics: {
+      stars: project.stars,
+      forks: project.forks,
+      dailyStarDelta: project.dailyStarDelta,
+      weeklyStarDelta: project.weeklyStarDelta,
+      finalScore: project.score.finalScore,
+      trendType: project.trendType
+    },
+    whyItMatters: project.whyItMatters,
+    updatedAt: project.pushedAt ?? project.lastSeenAt
+  };
+}
+
+function trendReason(item: TrendItem): string | undefined {
+  return item.recommendedReason ?? item.summary ?? item.description;
+}
+
+function toHomepageItemFromTrendItem(item: TrendItem): HomepageSectionItem {
+  return {
+    id: item.id,
+    title: item.title,
+    url: item.url,
+    source: item.source,
+    sourceType: item.sourceType,
+    description: item.description,
+    summary: item.summary,
+    category: item.category,
+    tags: item.tags,
+    metrics: item.metrics,
+    whyItMatters: trendReason(item),
+    publishedAt: item.publishedAt,
+    updatedAt: item.updatedAt ?? item.collectedAt
+  };
+}
+
+function toHomepageItemFromTrendEntity(entity: TrendEntity): HomepageSectionItem {
+  return {
+    id: entity.id,
+    title: entity.title,
+    url: entity.canonicalUrl,
+    source: entity.sources.join(','),
+    sourceType: entity.entityType === 'topic' ? 'topic' : entity.entityType,
+    description: entity.summary ?? entity.whyItMatters,
+    summary: entity.summary,
+    category: entity.category,
+    tags: entity.normalizedKeys,
+    metrics: {
+      ...entity.metrics,
+      sourceCount: entity.sourceCount,
+      crossSourceBonus: entity.crossSourceBonus
+    },
+    whyItMatters: entity.whyItMatters ?? entity.llmSummary?.businessRelevance ?? entity.llmSummary?.developerRelevance,
+    updatedAt: entity.lastSeenAt
+  };
+}
+
+function dedupeHomepageItems(items: HomepageSectionItem[]): HomepageSectionItem[] {
+  const seen = new Set<string>();
+  return items.filter((item) => {
+    const key = (item.url || item.id).toLowerCase();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function buildSelfHostPushItems(repoUrl: string): HomepageSectionItem[] {
+  return [
+    {
+      id: 'feishu',
+      title: 'Feishu Webhook Push',
+      url: `${repoUrl}#feishu`,
+      source: 'docs',
+      sourceType: 'self_host',
+      description: 'Fork the repo and configure your own Feishu webhook for daily AI radar push.'
+    },
+    {
+      id: 'github-actions',
+      title: 'GitHub Actions Scheduled Run',
+      url: `${repoUrl}/actions`,
+      source: 'docs',
+      sourceType: 'self_host',
+      description: 'Run the radar daily with GitHub Actions and commit updated JSON snapshots.'
+    },
+    {
+      id: 'json-output',
+      title: 'Static JSON Output',
+      url: `${repoUrl}/tree/main/data`,
+      source: 'docs',
+      sourceType: 'self_host',
+      description: 'Use latest daily JSON files as your own data source.'
+    }
+  ];
+}
+
+function buildGrowthLinks(): GrowthLinks {
+  return {
+    githubRepoUrl: process.env.RADAR_GITHUB_REPO_URL || process.env.RADAR_PROJECT_GITHUB_URL || 'https://github.com/Tsin418/ai-trend-radar',
+    githubProfileUrl: process.env.RADAR_GITHUB_PROFILE_URL || process.env.RADAR_AUTHOR_GITHUB_URL || 'https://github.com/Tsin418',
+    personalHomepageUrl: process.env.RADAR_PERSONAL_HOMEPAGE_URL || '',
+    linkedinUrl: process.env.RADAR_LINKEDIN_URL || '',
+    xiaohongshuUrl: process.env.RADAR_XIAOHONGSHU_URL || ''
+  };
+}
+
+function buildHomepageSections(
+  sections: LatestDailyDashboardFile['sections'],
+  trendEntities: TrendEntity[],
+  topicClusters: TrendEntity[],
+  growthLinks: GrowthLinks
+): LatestDailyDashboardFile['homepageSections'] {
+  const openSourceItems = dedupeHomepageItems([
+    ...sections.hotProjects,
+    ...sections.acceleratingProjects,
+    ...sections.earlySignals,
+    ...sections.watchlistMovements
+  ]
+    .sort((left, right) => right.score.finalScore - left.score.finalScore)
+    .map(toHomepageItemFromProject))
+    .slice(0, 10);
+
+  const productEntityItems = sections.crossSourceHighlights
+    .filter((entity) => ['product', 'space', 'model'].includes(entity.entityType))
+    .map(toHomepageItemFromTrendEntity);
+  const aiProductItems = dedupeHomepageItems([
+    ...sections.productLaunches.map(toHomepageItemFromTrendItem),
+    ...sections.aihotHighlights.map(toHomepageItemFromTrendItem),
+    ...productEntityItems
+  ]).slice(0, 8);
+
+  const newsEntityItems = [
+    ...sections.crossSourceHighlights,
+    ...topicClusters,
+    ...trendEntities.filter((entity) => ['topic', 'news', 'unknown'].includes(entity.entityType))
+  ].map(toHomepageItemFromTrendEntity);
+  const aiNewsItems = dedupeHomepageItems([
+    ...sections.developerBuzz.map(toHomepageItemFromTrendItem),
+    ...sections.aihotHighlights.map(toHomepageItemFromTrendItem),
+    ...newsEntityItems
+  ]).slice(0, 8);
+
+  return {
+    openSourceRadar: {
+      id: 'open-source-radar',
+      title: 'Open-source Radar',
+      subtitle: 'Emerging AI open-source projects',
+      description: 'Hot projects, accelerating repositories, early signals, and watchlist movements ranked by potential score.',
+      items: openSourceItems,
+      cta: {
+        label: 'Star this project',
+        url: growthLinks.githubRepoUrl
+      }
+    },
+    aiProductRadar: {
+      id: 'ai-product-radar',
+      title: 'AI Product Radar',
+      subtitle: 'AI launches and product signals',
+      description: 'Product Hunt launches, AIHot highlights, Hugging Face demos, and cross-source product entities from existing collectors.',
+      items: aiProductItems
+    },
+    aiNewsRadar: {
+      id: 'ai-news-radar',
+      title: 'AI News Radar',
+      subtitle: 'AI news and developer community discussion',
+      description: 'Hacker News developer buzz, AIHot trend items, cross-source highlights, and topic clusters from existing sources.',
+      items: aiNewsItems
+    },
+    selfHostPush: {
+      id: 'self-host-push',
+      title: 'Self-host Push',
+      subtitle: 'Fork and run your own AI radar',
+      description: 'Use the open-source workflow and JSON outputs to plug the radar into your own push channel.',
+      items: buildSelfHostPushItems(growthLinks.githubRepoUrl),
+      cta: {
+        label: 'Fork on GitHub',
+        url: growthLinks.githubRepoUrl
+      }
+    }
+  };
+}
+
+function buildLastUpdatedLabel(generatedAt: string, timezone: string): string {
+  const date = new Date(generatedAt);
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: timezone,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  }).formatToParts(date);
+  const value = (type: string): string => parts.find((part) => part.type === type)?.value ?? '';
+  return `Last updated: ${value('year')}-${value('month')}-${value('day')} ${value('hour')}:${value('minute')} ${timezone}`;
+}
+
 function average(values: number[]): number | null {
   if (values.length === 0) return null;
   return Math.round(values.reduce((sum, value) => sum + value, 0) / values.length);
@@ -227,6 +477,24 @@ export function buildLatestDailyDashboardData(options: BuildDashboardDataOptions
   const categoryStats = buildCategoryStats(scored, options.digest.selectedProjects);
   const sections = options.digest.multiSourceSections;
   const topCategory = categoryStats.find((stat) => stat.selectedRepoCount > 0)?.category ?? projects[0]?.category ?? null;
+  const legacySections = {
+    hotProjects: options.digest.hotProjects.map(toDashboardProject),
+    acceleratingProjects: (options.digest.acceleratingProjects ?? []).map(toDashboardProject),
+    earlySignals: options.digest.earlySignals.map(toDashboardProject),
+    watchlistMovements: options.digest.watchlistMovements.map(toDashboardProject),
+    productLaunches: sections?.productLaunches ?? [],
+    modelDemoSignals: sections?.modelDemoSignals ?? [],
+    developerBuzz: sections?.developerBuzz ?? [],
+    aihotHighlights: sections?.aihotHighlights ?? [],
+    crossSourceHighlights: sections?.crossSourceHighlights ?? []
+  };
+  const growthLinks = buildGrowthLinks();
+  const homepageSections = buildHomepageSections(
+    legacySections,
+    options.digest.trendEntities ?? [],
+    options.digest.topicClusters ?? [],
+    growthLinks
+  );
 
   return {
     schemaVersion: 1,
@@ -234,6 +502,7 @@ export function buildLatestDailyDashboardData(options: BuildDashboardDataOptions
     targetDate: options.targetDate,
     generatedAt: options.generatedAt,
     timezone: options.timezone,
+    lastUpdatedLabel: buildLastUpdatedLabel(options.generatedAt, options.timezone),
     digestId: options.digestId,
     source: options.source,
     summary: {
@@ -245,17 +514,9 @@ export function buildLatestDailyDashboardData(options: BuildDashboardDataOptions
       baselineCreated: options.digest.baselineCreated
     },
     projects,
-    sections: {
-      hotProjects: options.digest.hotProjects.map(toDashboardProject),
-      acceleratingProjects: (options.digest.acceleratingProjects ?? []).map(toDashboardProject),
-      earlySignals: options.digest.earlySignals.map(toDashboardProject),
-      watchlistMovements: options.digest.watchlistMovements.map(toDashboardProject),
-      productLaunches: sections?.productLaunches ?? [],
-      modelDemoSignals: sections?.modelDemoSignals ?? [],
-      developerBuzz: sections?.developerBuzz ?? [],
-      aihotHighlights: sections?.aihotHighlights ?? [],
-      crossSourceHighlights: sections?.crossSourceHighlights ?? []
-    },
+    sections: legacySections,
+    homepageSections,
+    growthLinks,
     sourceHealth: options.digest.sourceHealth ?? [],
     categoryStats,
     historyHighlights: {
