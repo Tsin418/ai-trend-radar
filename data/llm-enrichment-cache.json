@@ -250,5 +250,201 @@
     },
     "createdAt": "2026-05-26T05:54:53.110Z",
     "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-05-26T08:59:13Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent CLI that optimizes for prefix-cache stability to keep token costs low across long sessions.",
+      "problemSolved": "High token costs and cache inefficiency in long-running AI coding sessions, especially with DeepSeek models, by engineering the entire loop around byte-stable prefix caching.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "whyTrending": "Exceptional cache hit rates (99.82% in a real user case study) leading to dramatic cost savings, combined with a polished terminal UI and active community.",
+      "developerTakeaway": "If you use DeepSeek models for coding, this agent can drastically reduce API costs while maintaining a persistent, interactive session with filesystem and shell tools.",
+      "targetUsers": "Developers who use DeepSeek models for coding and want a cost-effective, always-on terminal agent with caching optimizations.",
+      "riskNotes": "DeepSeek-only; no support for other LLMs. Requires Node ≥22. Desktop client is prerelease and not code-signed.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-26T09:12:50.938Z",
+    "model": "deepseek-v4-flash"
+  },
+  "manaflow-ai/cmux:2026-05-26T09:08:40Z": {
+    "summary": {
+      "oneLiner": "A native macOS terminal built on Ghostty with vertical tabs, notification rings, and an in-app browser, designed for developers running multiple AI coding agents simultaneously.",
+      "problemSolved": "When running many AI coding agent sessions (Claude Code, Codex, etc.) in parallel, it's hard to track which agent needs attention and lacks context from generic notifications. cmux provides a native terminal with a sidebar showing git branch, PR status, working directory, listening ports, and notification rings/panel so you can quickly see and jump to the agent that needs input.",
+      "aiCategory": "AI Agent Framework",
+      "whyTrending": "It solves a real pain point for developers using multiple AI coding agents, is built natively (Swift/AppKit, not Electron) for performance, and has gained rapid adoption (19.6k stars) likely due to its practical utility and active community.",
+      "developerTakeaway": "cmux is a composable, scriptable terminal+browser tool that integrates with AI agent hooks (Claude Code, Codex, etc.) to provide context-rich notifications and session resume. It's not an opinionated workflow but a set of primitives (CLI, socket API, browser automation) that developers can customize.",
+      "targetUsers": "Developers who run multiple AI coding agent sessions (Claude Code, Codex, OpenCode, etc.) on macOS and want a native, performant terminal with better visibility and notification management.",
+      "riskNotes": "Very new project (first release likely recent) with 2154 open issues, which may indicate rapid development but also instability. macOS-only. Relies on Ghostty config and may have compatibility issues. The README is promotional and may oversell features.",
+      "confidence": "medium"
+    },
+    "createdAt": "2026-05-26T09:12:53.094Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-05-26T09:05:51Z": {
+    "summary": {
+      "oneLiner": "Open Design is an open-source, local-first alternative to Claude Design that lets you use any coding-agent CLI (Claude Code, Codex, Gemini CLI, etc.) as a design engine to generate web, desktop, mobile prototypes, slides, images, and videos.",
+      "problemSolved": "It eliminates vendor lock-in and cloud dependency for AI-powered design by providing a self-hostable, BYOK (bring-your-own-key) platform that works with multiple AI models and coding agents, enabling local-first design generation with full control over data and infrastructure.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "whyTrending": "It gained 52k+ stars rapidly as a viral open-source alternative to Anthropic's Claude Design, addressing the demand for a free, local, and customizable AI design tool that works with multiple agents and models, not just one.",
+      "developerTakeaway": "Developers can integrate or extend Open Design's 132 composable skills and 150 design systems, use it as a design engine in their own workflows, or contribute to its agent-agnostic architecture that auto-detects 16+ CLI agents and supports custom API proxies.",
+      "targetUsers": "Developers, designers, and product builders who want an open-source, local-first AI design tool that works with their preferred coding agents and models, and who need to generate prototypes, slides, images, and videos without cloud lock-in.",
+      "riskNotes": "The project is in early preview (0.8.0-preview) with rapid iteration on main, so stability and backward compatibility are not guaranteed. It relies on external CLI agents and API keys, and the README content is untrusted.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-26T09:12:58.114Z",
+    "model": "deepseek-v4-flash"
+  },
+  "tirth8205/code-review-graph:2026-05-25T22:03:58Z": {
+    "summary": {
+      "oneLiner": "Local-first code intelligence graph for MCP and CLI that builds a persistent map of your codebase so AI coding tools read only what matters, reducing context by 38x to 528x.",
+      "problemSolved": "AI coding assistants waste tokens by re-reading large parts of the codebase during code review and other tasks. This tool provides a structural graph of the code, enabling precise context retrieval via MCP, drastically reducing token usage and improving review efficiency.",
+      "aiCategory": "MCP / Tool Calling",
+      "whyTrending": "It addresses a critical pain point for developers using AI coding tools: token waste and context overload. With 17k+ stars and rapid growth, it offers a practical, benchmarked solution that integrates with multiple AI platforms (Claude Code, Cursor, Copilot, etc.) and shows dramatic token reductions.",
+      "developerTakeaway": "A powerful, local-first tool to optimize AI-assisted code review by providing a persistent code graph. It supports many languages, incremental updates, and blast-radius analysis, making it valuable for both small projects and large monorepos.",
+      "targetUsers": "Developers and teams using AI coding assistants (e.g., Claude Code, Cursor, GitHub Copilot) who want to reduce token costs and improve review accuracy, especially on large or monorepo codebases.",
+      "riskNotes": "README is the primary source; claims are based on benchmarks provided. Some limitations noted: small single-file changes may not benefit, search quality (MRR 0.35) and flow detection (33% recall) have room for improvement. The project is actively maintained with many open issues.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-26T09:13:00.582Z",
+    "model": "deepseek-v4-flash"
+  },
+  "HKUDS/nanobot:2026-05-26T09:12:14Z": {
+    "summary": {
+      "oneLiner": "An ultra-lightweight, open-source AI agent that integrates with chat platforms, tools, and workflows.",
+      "problemSolved": "Provides a minimal, readable AI agent core that can be easily deployed as a personal assistant across multiple chat channels (Telegram, Discord, Feishu, etc.) with memory, MCP support, and tool integration.",
+      "aiCategory": "AI Agent Framework",
+      "whyTrending": "High activity (daily releases, many stars) and alignment with popular AI agent concepts (Claude Code, Codex) while being lightweight and open-source.",
+      "developerTakeaway": "A practical, extensible agent framework with multi-channel support, memory, and MCP; good for building custom AI assistants with minimal overhead.",
+      "targetUsers": "Developers and teams wanting to deploy a personal AI agent across chat platforms with tool use and memory.",
+      "riskNotes": "Very new (v0.2.0); rapid changes may break compatibility; 868 open issues indicate active development but also potential instability.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-26T09:13:03.214Z",
+    "model": "deepseek-v4-flash"
+  },
+  "sickn33/antigravity-awesome-skills:2026-05-26T07:14:43Z": {
+    "summary": {
+      "oneLiner": "An installable library of 1,470+ reusable SKILL.md playbooks for AI coding assistants like Claude Code, Cursor, and Gemini CLI.",
+      "problemSolved": "Eliminates the need to collect one-off prompt snippets by providing a searchable, installable catalog of structured agent skills for recurring development tasks.",
+      "aiCategory": "MCP / Tool Calling",
+      "whyTrending": "Massive skill count (1,470+), broad tool support (Claude Code, Cursor, Codex CLI, Gemini CLI, etc.), and easy npm-based installation drive rapid adoption (39k+ stars).",
+      "developerTakeaway": "Offers a practical way to onboard AI agents with curated, role-based bundles and workflows, reducing time from discovery to daily use.",
+      "targetUsers": "Developers using AI coding assistants who want structured, reusable skill playbooks for planning, coding, debugging, testing, security, and more.",
+      "riskNotes": "README content is untrusted; verify skills for security and correctness before use. Dependency on external tools and npm installer may introduce supply chain risks.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-26T09:13:05.926Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-05-26T09:12:52Z": {
+    "summary": {
+      "oneLiner": "Open Design is an open-source, local-first alternative to Claude Design that lets you use any coding-agent CLI (Claude Code, Codex, Gemini, etc.) as a design engine to generate web, desktop, mobile prototypes, slides, images, and videos.",
+      "problemSolved": "It removes vendor lock-in from Claude Design by providing a self-hostable, BYOK (bring your own key/agent) design tool that runs locally, supports multiple AI backends, and includes 132 composable skills and 150 design systems.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "whyTrending": "It gained 52k+ stars in two weeks as a viral open-source alternative to the popular but closed-source Claude Design, offering freedom from Anthropic's cloud-only, paid model and enabling local-first, multi-agent design workflows.",
+      "developerTakeaway": "Developers can integrate any supported coding agent CLI into a structured design pipeline with sandboxed preview, export to HTML/PDF/PPTX/MP4, and a rich set of pre-built skills and design systems, all while keeping data local and avoiding cloud dependencies.",
+      "targetUsers": "Developers, designers, and product builders who want an open-source, customizable design tool that leverages existing AI coding agents and avoids vendor lock-in, especially those prototyping UIs, slides, or media assets.",
+      "riskNotes": "The project is in early preview (0.8.0-preview) with 334 open issues and rapid iteration on main; stability and documentation may be incomplete. It relies on external CLI tools and API keys, which may introduce complexity and potential security concerns (e.g., SSRF blocking noted).",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-26T09:13:56.136Z",
+    "model": "deepseek-v4-flash"
+  },
+  "manaflow-ai/cmux:2026-05-26T09:13:06Z": {
+    "summary": {
+      "oneLiner": "A native macOS terminal built on Ghostty with vertical tabs, notification rings, and an in-app browser, designed for AI coding agents like Claude Code and Codex.",
+      "problemSolved": "Managing multiple AI coding agent sessions in parallel is chaotic: terminal tabs lack context (e.g., which agent needs input, what branch/PR is active), and notifications are generic. cmux adds a sidebar with git/PR/port info, visual notification rings, and a notification panel to quickly see and jump to unread agent requests.",
+      "aiCategory": "AI Agent Framework",
+      "whyTrending": "It directly addresses a pain point for developers using multiple AI coding agents (Claude Code, Codex, etc.) by providing a purpose-built terminal with agent-aware notifications and workspace management. The project is native Swift/AppKit (not Electron), has a polished feature set, and is actively developed with nightly builds.",
+      "developerTakeaway": "cmux is a composable, scriptable terminal+browser tool that integrates with existing agent workflows via CLI and hooks. It does not impose an opinionated agent framework; instead, it provides primitives (tabs, splits, notifications, browser API) that developers can wire into their own agent setups.",
+      "targetUsers": "Developers who run multiple AI coding agent sessions (Claude Code, Codex, OpenCode, etc.) on macOS and want a terminal that surfaces agent state, notifications, and workspace context without leaving the terminal.",
+      "riskNotes": "The project is macOS-only and depends on Ghostty (libghostty). It has a high number of open issues (2154) relative to stars, which may indicate active development but also potential instability or feature requests. The README is clear and well-structured, but as untrusted content, claims about performance and features should be verified.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-26T09:13:56.333Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-05-26T09:17:48Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, engineered for prefix-cache stability to keep token costs low across long sessions.",
+      "problemSolved": "Generic AI coding agents often suffer from high token costs and cache inefficiency when used for extended sessions. Reasonix solves this by being exclusively tuned to DeepSeek's prefix-cache mechanic, achieving >99% cache hit rates and drastically reducing costs.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "whyTrending": "It offers a practical, cost-effective solution for developers who want a persistent AI coding assistant in the terminal. The focus on cache stability and low cost, combined with a polished CLI and desktop client, has attracted significant attention (9k+ stars, 2.3k stars in 24h).",
+      "developerTakeaway": "If you use DeepSeek and want a coding agent that stays cheap and responsive over long sessions, Reasonix is a compelling choice. Its architecture is purpose-built for DeepSeek's caching, and it includes features like MCP support, skills, memory, and hooks.",
+      "targetUsers": "Developers who use DeepSeek models and want a terminal-based AI coding agent for long-running sessions, especially those concerned about token costs and cache efficiency.",
+      "riskNotes": "Tied exclusively to DeepSeek; no support for other LLMs. The desktop client is prerelease and not code-signed. High number of open issues (205) may indicate active development but also potential instability.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-26T09:21:36.426Z",
+    "model": "deepseek-v4-flash"
+  },
+  "rohitg00/ai-engineering-from-scratch:2026-05-26T09:15:08Z": {
+    "summary": {
+      "oneLiner": "A comprehensive, open-source curriculum (435 lessons, 20 phases) that teaches AI engineering from math foundations to production-ready agents, with every lesson producing a reusable artifact.",
+      "problemSolved": "Most AI learning resources are scattered, shallow, or API-focused, leaving learners unable to explain or build AI systems from the ground up. This curriculum provides a structured, end-to-end path that bridges theory and practice.",
+      "aiCategory": "AI Agent Framework",
+      "whyTrending": "It addresses the gap between AI tool usage and deep understanding, offers a free, MIT-licensed, hands-on curriculum with 435 lessons, and includes built-in agent skills for placement and assessment, appealing to developers who want to truly master AI engineering.",
+      "developerTakeaway": "Developers can clone the repo and follow a structured, project-based curriculum that covers math, ML, deep learning, NLP, vision, LLMs, agents, and production deployment, with each lesson producing a reusable prompt, skill, agent, or MCP server.",
+      "targetUsers": "Developers and engineers who already know how to code (any language) and want to understand AI deeply, not just call APIs. Suitable for self-learners, bootcamp graduates, and professionals transitioning into AI engineering.",
+      "riskNotes": "The curriculum is very large (~320 hours) and may be overwhelming for beginners. The README is promotional and may oversell completeness; actual lesson quality and depth need verification. The repository is new and rapidly growing, so stability and maintenance are unproven.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-26T09:21:37.567Z",
+    "model": "deepseek-v4-flash"
+  },
+  "manaflow-ai/cmux:2026-05-26T09:20:41Z": {
+    "summary": {
+      "oneLiner": "A native macOS terminal built on Ghostty with vertical tabs, notification rings, and an in-app browser, designed for AI coding agents like Claude Code and Codex.",
+      "problemSolved": "Managing multiple AI coding agent sessions in parallel without losing context—provides visual notifications, workspace organization, and a scriptable browser so agents can interact with dev servers directly.",
+      "aiCategory": "AI Agent Framework",
+      "whyTrending": "Addresses a real pain point for developers running multiple AI coding agents simultaneously, offering a native, performant alternative to Electron-based tools. The 19k+ stars and high daily star delta indicate strong community interest.",
+      "developerTakeaway": "If you use AI coding agents heavily, cmux gives you a terminal that surfaces agent notifications, organizes workspaces by git branch/PR, and includes a scriptable browser for agent-driven web interactions—all native and fast.",
+      "targetUsers": "Developers who run multiple AI coding agent sessions (Claude Code, Codex, Gemini, etc.) on macOS and want a terminal that integrates agent notifications and workspace management.",
+      "riskNotes": "Very new project with 2156 open issues, which may indicate rapid development but also instability. macOS-only. Relies on Ghostty config and may have compatibility issues with non-standard setups.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-26T09:21:43.380Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-05-26T09:20:59Z": {
+    "summary": {
+      "oneLiner": "Open Design is an open-source, local-first alternative to Claude Design that lets you use any coding agent CLI (Claude Code, Codex, Gemini, etc.) as a design engine to generate web, desktop, mobile prototypes, slides, images, and videos.",
+      "problemSolved": "It removes vendor lock-in from closed-source, cloud-only design AI tools like Claude Design, allowing developers to run design workflows locally with their own choice of AI agents and models (BYOK), while providing a rich library of design systems and skills.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "whyTrending": "It gained 52k+ stars in two weeks by offering a free, open-source, local-first alternative to the viral Claude Design tool, tapping into the huge demand for AI-powered design generation without proprietary restrictions.",
+      "developerTakeaway": "Developers can integrate any supported coding agent CLI into a structured design pipeline with 132 skills and 150 design systems, export to HTML/PDF/PPTX/MP4, and extend or customize the toolchain freely.",
+      "targetUsers": "Developers, designers, and product builders who want to use AI agents for design prototyping and asset generation, especially those who prefer open-source, local-first tools and want to avoid vendor lock-in.",
+      "riskNotes": "The project is in early preview (0.8.0-preview), has 334 open issues, and relies on external CLI tools that may have compatibility or stability issues. The README is marketing-heavy and may oversell capabilities.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-26T09:21:44.442Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-05-26T09:22:37Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, engineered around prefix-cache stability to keep token costs low across long sessions.",
+      "problemSolved": "Generic AI coding agents often suffer from high token costs and cache instability during long sessions. Reasonix solves this by being exclusively designed for DeepSeek's byte-stable prefix-cache mechanic, achieving >99% cache hit rates and drastically reducing costs.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "whyTrending": "It offers a practical, cost-efficient AI coding assistant with a strong focus on cache optimization, demonstrated by real-world benchmarks showing massive cost savings. The project is rapidly gaining stars (2307 in 24h) and has a high velocity ranking in multiple categories.",
+      "developerTakeaway": "Reasonix provides a terminal-based AI coding agent that integrates deeply with DeepSeek's API, offering features like SEARCH/REPLACE editing, shell tool access, MCP support, skills, memory, and a desktop client. Its architecture prioritizes cache stability, making it suitable for continuous use without breaking the bank.",
+      "targetUsers": "Developers who want a cost-effective, always-on AI coding assistant in their terminal, especially those using DeepSeek models and needing long-running sessions with high cache efficiency.",
+      "riskNotes": "The project is DeepSeek-only, so it's tied to that provider's API and cache mechanics. It has 204 open issues, indicating active development but also potential bugs or feature requests. The desktop client is prerelease and not code-signed, which may cause installation friction.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-26T09:23:06.752Z",
+    "model": "deepseek-v4-flash"
+  },
+  "manaflow-ai/cmux:2026-05-26T09:21:55Z": {
+    "summary": {
+      "oneLiner": "A native macOS terminal built on Ghostty with vertical tabs, notification rings, and an in-app browser, designed for developers running multiple AI coding agents.",
+      "problemSolved": "Managing many parallel AI coding agent sessions (Claude Code, Codex, etc.) in a terminal is chaotic—agents lack context in notifications, tabs become unreadable, and existing orchestrators are slow Electron apps. cmux provides a fast, native terminal with smart notifications, vertical tabs showing agent state, and a scriptable browser for agent interactions.",
+      "aiCategory": "AI Agent Framework",
+      "whyTrending": "It's a polished, native macOS terminal that directly addresses the pain of running multiple AI coding agents, with 19.6k stars and rapid growth (+546 stars in 24h). The project is actively developed, has a clear vision (\"The Zen of cmux\"), and offers practical features like notification rings, SSH, and Claude Code Teams integration.",
+      "developerTakeaway": "cmux is a powerful tool for developers who run multiple AI coding agents simultaneously. It provides a fast, native terminal with smart notifications and a scriptable browser, all while being non-prescriptive—you bring your own workflow. The project is open source and actively maintained, with nightly builds and a community on Discord.",
+      "targetUsers": "macOS developers who use AI coding agents (Claude Code, Codex, Gemini, etc.) in parallel and need a better terminal experience with smart notifications, vertical tabs, and agent-aware features.",
+      "riskNotes": "The project has 2155 open issues, which is high relative to its size, though many may be feature requests or minor bugs. It's macOS-only and depends on Ghostty, which may limit adoption. The README is promotional and may oversell features; actual stability and performance should be verified.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-26T09:23:08.171Z",
+    "model": "deepseek-v4-flash"
   }
 }
