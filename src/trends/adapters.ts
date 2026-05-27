@@ -67,12 +67,17 @@ export function trendItemFromRadarRepo(repo: RadarRepository): TrendItem {
 
 export function productHuntTrendingItemToTrendItem(item: TrendingItem): TrendItem {
   const metadata = item.metadata ?? {};
+  const productLinks = Array.isArray(metadata.productLinks) ? metadata.productLinks : [];
+  const githubLink = productLinks
+    .map((link) => stringValue((link as { url?: unknown })?.url))
+    .find((url) => url?.includes('github.com'));
   return {
     id: item.id,
     source: 'product_hunt',
     sourceType: 'product_launch',
     title: item.title,
     url: item.url,
+    originalUrl: githubLink ?? stringValue(metadata.website),
     description: item.description,
     tags: item.tags,
     category: item.primaryTag ?? undefined,

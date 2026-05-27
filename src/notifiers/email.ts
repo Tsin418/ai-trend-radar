@@ -5,6 +5,7 @@
 
 import nodemailer from 'nodemailer';
 import { getEnv } from '../config/env.js';
+import { renderRadarDigestText } from '../renderers/radar-text.js';
 import type { TrendingDigest, TrendingRecommendation } from '../trending/types.js';
 import type { Notifier, NotifyOptions, NotifyResult } from './types.js';
 import { withRetry, isNetworkError } from '../utils/retry.js';
@@ -121,6 +122,15 @@ function buildEmailText(digest: TrendingDigest): string {
   return lines.join('\n');
 }
 
+function buildRadarEmailHtml(text: string): string {
+  return `
+  <div style="font-family:Arial,Helvetica,sans-serif;background:#f8fafc;padding:24px 0;color:#111827;">
+    <div style="max-width:760px;margin:0 auto;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+      <pre style="white-space:pre-wrap;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.65;margin:0;padding:24px;">${escapeHtml(text)}</pre>
+    </div>
+  </div>`;
+}
+
 function parseBoolean(value?: string): boolean | undefined {
   if (!value) return undefined;
   const normalized = value.trim().toLowerCase();
@@ -216,9 +226,10 @@ export class EmailNotifier implements Notifier {
             }
           });
 
-          const subject = `GitHub Trending 中文推荐 - ${options.digest.date}`;
-          const html = buildEmailHtml(options.digest);
-          const text = buildEmailText(options.digest);
+          const radarText = options.radarDigest ? renderRadarDigestText(options.radarDigest, 'compact') : undefined;
+          const subject = options.radarDigest?.title ?? `GitHub Trending 中文推荐 - ${options.digest.date}`;
+          const text = radarText ?? buildEmailText(options.digest);
+          const html = radarText ? buildRadarEmailHtml(radarText) : buildEmailHtml(options.digest);
 
           return await transporter.sendMail({
             from: smtp.from,

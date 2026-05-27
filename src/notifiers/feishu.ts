@@ -95,7 +95,7 @@ export class FeishuNotifier implements Notifier {
     const payload: Record<string, unknown> = {
       msg_type: 'text',
       content: {
-        text: renderRadarDigestText(options.radarDigest)
+        text: renderRadarDigestText(options.radarDigest, 'compact')
       }
     };
 

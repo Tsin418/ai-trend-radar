@@ -1,6 +1,8 @@
 import type { SourceConfig, TrendItem } from '../trends/types.js';
+import { hasAiDeveloperKeyword } from './ai-dev-keywords.js';
 
 const HF_SPACES_ENDPOINT = 'https://huggingface.co/api/spaces';
+const DEFAULT_MIN_FILTERED_ITEMS = 5;
 
 interface HuggingFaceSpace {
   id?: string;
@@ -18,6 +20,7 @@ interface HuggingFaceSpace {
 
 interface HuggingFaceSpacesCollectorOptions extends SourceConfig {
   timeoutMs?: number;
+  minFilteredItems?: number;
 }
 
 function timeoutSignal(timeoutMs: number): AbortSignal {
@@ -35,10 +38,12 @@ export class HuggingFaceSpacesCollector {
   readonly name = 'huggingface_spaces';
   private readonly limit: number;
   private readonly timeoutMs: number;
+  private readonly minFilteredItems: number;
 
   constructor(options: HuggingFaceSpacesCollectorOptions = {}) {
     this.limit = options.limit ?? 30;
     this.timeoutMs = options.timeoutMs ?? 10_000;
+    this.minFilteredItems = options.minFilteredItems ?? DEFAULT_MIN_FILTERED_ITEMS;
   }
 
   async fetch(limit = this.limit): Promise<TrendItem[]> {
@@ -61,8 +66,15 @@ export class HuggingFaceSpacesCollector {
     }
 
     const spaces = await response.json() as HuggingFaceSpace[];
+    const filteredSpaces = spaces.filter((space) => hasAiDeveloperKeyword([
+      space.id,
+      space.sdk,
+      space.tags,
+      space.cardData?.title
+    ]));
+    const relevantSpaces = filteredSpaces.length >= this.minFilteredItems ? filteredSpaces : spaces;
     const collectedAt = new Date().toISOString();
-    return spaces
+    return relevantSpaces
       .filter((space) => space.id)
       .map((space) => ({
         id: `huggingface_spaces:${space.id}`,

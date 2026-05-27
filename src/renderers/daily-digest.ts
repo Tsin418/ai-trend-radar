@@ -1,4 +1,17 @@
-import type { RadarDigest, RadarProfile, ScoredRadarRepository } from '../radar/types.js';
+import fs from 'node:fs';
+import path from 'node:path';
+import type { DigestChanges, RadarDigest, RadarProfile, ScoredRadarRepository } from '../radar/types.js';
+
+interface PreviousDigestProject {
+  repoFullName: string;
+  category?: string;
+  acceleration?: number;
+}
+
+interface PreviousDigestSnapshot {
+  date?: string;
+  projects: PreviousDigestProject[];
+}
 
 function sortByScore(items: ScoredRadarRepository[]): ScoredRadarRepository[] {
   return [...items].sort((a, b) => b.score.finalScore - a.score.finalScore);
@@ -13,6 +26,128 @@ function unique(items: ScoredRadarRepository[]): ScoredRadarRepository[] {
     result.push(item);
   }
   return result;
+}
+
+function defaultPreviousDigestPaths(): string[] {
+  return [
+    process.env.RADAR_DAILY_DASHBOARD_PATH || path.join('data', 'latest-daily-dashboard.json'),
+    path.join('data', 'latest-daily-digest.json')
+  ];
+}
+
+function readJsonFile(filePath: string): unknown | null {
+  if (!fs.existsSync(filePath)) return null;
+  const text = fs.readFileSync(filePath, 'utf8');
+  if (!text.trim()) return null;
+  try {
+    return JSON.parse(text) as unknown;
+  } catch {
+    return null;
+  }
+}
+
+function asRecord(value: unknown): Record<string, unknown> | null {
+  return value && typeof value === 'object' ? value as Record<string, unknown> : null;
+}
+
+function projectFromDashboard(value: unknown): PreviousDigestProject | null {
+  const item = asRecord(value);
+  if (!item || typeof item.repoFullName !== 'string') return null;
+  return {
+    repoFullName: item.repoFullName,
+    category: typeof item.category === 'string' ? item.category : undefined,
+    acceleration: typeof item.acceleration === 'number' ? item.acceleration : undefined
+  };
+}
+
+function projectFromScored(value: unknown): PreviousDigestProject | null {
+  const item = asRecord(value);
+  const repository = asRecord(item?.repository);
+  const score = asRecord(item?.score);
+  if (!repository || typeof repository.repoFullName !== 'string') return null;
+  return {
+    repoFullName: repository.repoFullName,
+    category: typeof repository.category === 'string' ? repository.category : undefined,
+    acceleration: typeof score?.acceleration === 'number' ? score.acceleration : undefined
+  };
+}
+
+function parsePreviousDigest(value: unknown): PreviousDigestSnapshot | null {
+  const root = asRecord(value);
+  if (!root) return null;
+  const dashboardProjects = Array.isArray(root.projects)
+    ? root.projects.map(projectFromDashboard).filter((item): item is PreviousDigestProject => Boolean(item))
+    : [];
+  if (dashboardProjects.length > 0) {
+    return {
+      date: typeof root.targetDate === 'string' ? root.targetDate : undefined,
+      projects: dashboardProjects
+    };
+  }
+
+  const selectedProjects = Array.isArray(root.selectedProjects)
+    ? root.selectedProjects.map(projectFromScored).filter((item): item is PreviousDigestProject => Boolean(item))
+    : [];
+  if (selectedProjects.length > 0) {
+    return {
+      date: typeof root.date === 'string' ? root.date : undefined,
+      projects: selectedProjects
+    };
+  }
+
+  return null;
+}
+
+function loadPreviousDigest(date: string, paths = defaultPreviousDigestPaths()): PreviousDigestSnapshot | null {
+  for (const filePath of paths) {
+    const snapshot = parsePreviousDigest(readJsonFile(filePath));
+    if (snapshot?.projects.length && (!snapshot.date || snapshot.date < date)) return snapshot;
+  }
+  return null;
+}
+
+export function computeChangesFromPreviousDigest(
+  today: ScoredRadarRepository[],
+  date: string,
+  previousDigestPaths?: string[]
+): DigestChanges | null {
+  const previous = loadPreviousDigest(date, previousDigestPaths);
+  if (!previous) return null;
+
+  const todayTop10 = today.slice(0, 10);
+  const previousTop10 = previous.projects.slice(0, 10);
+  const todayNames = new Set(todayTop10.map((item) => item.repository.repoFullName));
+  const previousNames = new Set(previousTop10.map((item) => item.repoFullName));
+  const previousByName = new Map(previousTop10.map((item) => [item.repoFullName, item]));
+  const newInTop10 = todayTop10
+    .map((item) => item.repository.repoFullName)
+    .filter((name) => !previousNames.has(name));
+  const droppedFromTop10 = previousTop10
+    .map((item) => item.repoFullName)
+    .filter((name) => !todayNames.has(name));
+  const accelerationSurges = todayTop10.flatMap((item) => {
+    const previousAcceleration = previousByName.get(item.repository.repoFullName)?.acceleration;
+    if (previousAcceleration === undefined) return [];
+    const accelerationChange = Number((item.score.acceleration - previousAcceleration).toFixed(1));
+    if (item.score.acceleration < 2 || accelerationChange < 1) return [];
+    return [{ repoFullName: item.repository.repoFullName, accelerationChange }];
+  });
+  const todayTopCategory = todayTop10[0]?.llmSummary?.aiCategory ?? todayTop10[0]?.repository.category;
+  const previousTopCategory = previousTop10[0]?.category;
+  const categoryShift = todayTopCategory && previousTopCategory && todayTopCategory !== previousTopCategory
+    ? `${previousTopCategory} -> ${todayTopCategory}`
+    : null;
+
+  if (newInTop10.length === 0 && droppedFromTop10.length === 0 && accelerationSurges.length === 0 && !categoryShift) {
+    return null;
+  }
+
+  return {
+    newInTop10,
+    droppedFromTop10,
+    accelerationSurges,
+    categoryShift
+  };
 }
 
 export function buildDailyRadarDigest(
@@ -83,6 +218,7 @@ export function buildDailyRadarDigest(
     acceleratingProjects: acceleratingProjects.slice(0, 3),
     earlySignals: earlySignals.slice(0, limit),
     watchlistMovements: watchlistMovements.slice(0, limit),
-    selectedProjects
+    selectedProjects,
+    changesFromYesterday: computeChangesFromPreviousDigest(selectedProjects, date)
   };
 }

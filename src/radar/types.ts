@@ -119,11 +119,36 @@ export interface ScoredRadarRepository {
   llmSummary?: RepoLLMSummary;
 }
 
+export interface DigestChanges {
+  newInTop10: string[];
+  droppedFromTop10: string[];
+  accelerationSurges: Array<{
+    repoFullName: string;
+    accelerationChange: number;
+  }>;
+  categoryShift: string | null;
+}
+
+export interface WeeklyNarrative {
+  weeklyOverview: string;
+  hottestDirection: string;
+  notableProjects: string[];
+  earlySignals: string;
+  developerBuzz: string;
+  developerTakeaway: string;
+}
+
+export interface WeekOverWeekComparison {
+  topCategoriesThisWeek: Array<{ category: string; repoCount: number; avgDelta: number | null }>;
+  topCategoriesLastWeek: Array<{ category: string; repoCount: number; avgDelta: number | null }>;
+}
+
 export interface RadarDigest {
   mode: RadarRunMode;
   title: string;
   date: string;
   generatedAt: string;
+  headline?: string;
   summary: string;
   baselineCreated: boolean;
   scannedRepoCount?: number;
@@ -142,6 +167,10 @@ export interface RadarDigest {
   sourceHealth?: SourceHealth[];
   trendEntities?: TrendEntity[];
   topicClusters?: TrendEntity[];
+  changesFromYesterday?: DigestChanges | null;
+  weeklyNarrative?: WeeklyNarrative;
+  weekOverWeekComparison?: WeekOverWeekComparison;
+  recurringProjects?: string[];
 }
 
 export interface FeedbackEntry {
