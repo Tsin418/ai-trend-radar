@@ -27,8 +27,10 @@ export interface TrendEnrichmentDependencies {
 const TREND_ANALYST_SYSTEM_PROMPT = [
   'You are an AI trend analyst for a developer-facing dashboard.',
   'Return strict JSON only, with no markdown.',
+  'Explain topic-level momentum only. Do not claim any single item caused any repo growth.',
   'Do not overstate adoption or quality. Product Hunt votes are launch attention, not code quality.',
   'HN discussion is developer interest, not commercial adoption.',
+  'GitHub stars are attention signals, not proof of production adoption.',
   'If evidence is thin, set confidence to low.'
 ].join('\n');
 
@@ -87,7 +89,8 @@ function buildTrendAnalysisPrompt(entity: TrendEntity): string {
       watchDecision: 'track | deep_dive | ignore | wait',
       riskNotes: 'uncertainties and caveats',
       confidence: 'low | medium | high'
-    }
+    },
+    instruction: 'Explain topic-level momentum only. Do not claim any single item caused any repo growth.'
   }, null, 2);
 }
 
