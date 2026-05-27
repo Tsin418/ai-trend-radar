@@ -1,6 +1,7 @@
-import { getLLMEnrichmentConfig, loadRadarProfile } from '../radar/config.js';
+import { getLLMEnrichmentConfig, getTrendLLMEnrichmentConfig, loadRadarProfile } from '../radar/config.js';
 import { getLocalDateLabel } from '../radar/date.js';
 import { enrichRadarDigestWithLLM } from '../llm/repo-enricher.js';
+import { enrichTrendEntitiesWithLLM } from '../llm/trend-enricher.js';
 import { buildDailyRadarDigest } from '../renderers/daily-digest.js';
 import type { RadarRunOptions, RadarRunResult } from './ai-developer-radar-shared.js';
 import { appendErrorsToDigest, collectAndScoreRadarCandidates, getRadarLimits, maybeSendRadarDigest } from './ai-developer-radar-shared.js';
@@ -17,12 +18,27 @@ export async function runAiDeveloperRadarDaily(options: RadarRunOptions = {}): P
     const baselineCreated = options.baselineOnly || storePathContext.scored.length === 0 || storePathContext.scored.every((item) => item.score.dailyStarDelta === null);
     let digest = buildDailyRadarDigest(storePathContext.scored, profile, date, recommendationLimit, baselineCreated);
     const multiSource = await collectMultiSourceSignals(storePathContext.scored, recommendationLimit);
+    const trendEnriched = await enrichTrendEntitiesWithLLM(
+      [...multiSource.trendEntities, ...multiSource.topicClusters],
+      getTrendLLMEnrichmentConfig()
+    );
+    const enrichedTrendMap = new Map(trendEnriched.entities.map((entity) => [entity.id, entity]));
+    const trendEntities = multiSource.trendEntities.map((entity) => enrichedTrendMap.get(entity.id) ?? entity);
+    const topicClusters = multiSource.topicClusters.map((entity) => enrichedTrendMap.get(entity.id) ?? entity);
     digest = {
       ...digest,
-      multiSourceSections: multiSource.sections,
+      multiSourceSections: {
+        ...multiSource.sections,
+        crossSourceHighlights: multiSource.sections.crossSourceHighlights.map((entity) => enrichedTrendMap.get(entity.id) ?? entity)
+      },
+      multiSourceItems: multiSource.items,
+      sourceHealth: [...storePathContext.sourceHealth, ...multiSource.sourceHealth],
+      trendEntities,
+      topicClusters,
       dataNotes: [
         ...digest.dataNotes,
-        ...multiSource.warnings.map((warning) => `Multi-source warning: ${warning}`)
+        ...multiSource.warnings.map((warning) => `Multi-source warning: ${warning}`),
+        ...trendEnriched.warnings.map((warning) => `Trend enrichment warning: ${warning}`)
       ]
     };
     const enriched = await enrichRadarDigestWithLLM(digest, getLLMEnrichmentConfig());
@@ -44,6 +60,8 @@ export async function runAiDeveloperRadarDaily(options: RadarRunOptions = {}): P
     return {
       ok: true,
       digest,
+      scored: storePathContext.scored,
+      store: storePathContext.store,
       notify
     };
   } catch (error) {

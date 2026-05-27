@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { productHuntTrendingItemToTrendItem } from '../src/trends/adapters.js';
-import { mergeTrendItems, normalizeTrendUrl } from '../src/trends/dedupe.js';
+import { buildTopicClusters, buildTrendEntities, mergeTrendItems, normalizeTrendUrl } from '../src/trends/dedupe.js';
 import type { TrendItem } from '../src/trends/types.js';
 
 test('normalizes common tracking URLs for dedupe', () => {
@@ -40,6 +40,74 @@ test('merges cross-source trend items by canonical URL', () => {
   assert.equal(merged.length, 1);
   assert.deepEqual(merged[0].sources.sort(), ['github', 'hackernews']);
   assert.equal(merged[0].sourceCount, 2);
+  assert.equal(merged[0].entityType, 'repo');
+  assert.equal(merged[0].metrics.crossSourceBonus, 10);
+});
+
+test('normalizes Hugging Face model and space URLs', () => {
+  assert.equal(
+    normalizeTrendUrl('https://huggingface.co/openai/gpt-oss?utm_campaign=test'),
+    'https://huggingface.co/openai/gpt-oss'
+  );
+  assert.equal(
+    normalizeTrendUrl('https://huggingface.co/spaces/Org/Demo/tree/main?source=feed'),
+    'https://huggingface.co/spaces/org/demo'
+  );
+});
+
+test('builds topic clusters from related trend items', () => {
+  const collectedAt = '2026-05-27T00:00:00.000Z';
+  const items: TrendItem[] = [
+    {
+      id: 'ph:1',
+      source: 'product_hunt',
+      sourceType: 'product_launch',
+      title: 'Browser agent for QA automation',
+      url: 'https://producthunt.com/posts/browser-agent',
+      collectedAt
+    },
+    {
+      id: 'hn:2',
+      source: 'hackernews',
+      sourceType: 'developer_discussion',
+      title: 'Show HN: web agent with computer use',
+      url: 'https://news.ycombinator.com/item?id=2',
+      collectedAt
+    }
+  ];
+
+  const clusters = buildTopicClusters(items);
+  assert.equal(clusters.length, 1);
+  assert.equal(clusters[0].entityType, 'topic');
+  assert.equal(clusters[0].items.length, 2);
+});
+
+test('builds heat-scored trend entities', () => {
+  const collectedAt = '2026-05-27T00:00:00.000Z';
+  const entities = buildTrendEntities([
+    {
+      id: 'github:openai/codex',
+      source: 'github',
+      sourceType: 'opensource',
+      title: 'openai/codex',
+      url: 'https://github.com/openai/codex',
+      metrics: { stars: 1000, starDelta24h: 100 },
+      collectedAt
+    },
+    {
+      id: 'hn:1',
+      source: 'hackernews',
+      sourceType: 'developer_discussion',
+      title: 'OpenAI Codex',
+      url: 'https://github.com/openai/codex?gclid=tracking',
+      metrics: { upvotes: 50, commentsCount: 12 },
+      collectedAt
+    }
+  ]);
+
+  assert.equal(entities[0].sourceCount, 2);
+  assert.equal(entities[0].metrics.starDelta24h, 100);
+  assert.equal(entities[0].metrics.heatScore > 0, true);
 });
 
 test('maps Product Hunt trending items into TrendItem shape', () => {

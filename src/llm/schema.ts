@@ -12,3 +12,17 @@ export const RepoLLMSummarySchema = z.object({
 });
 
 export type RepoLLMSummaryInput = z.infer<typeof RepoLLMSummarySchema>;
+
+export const TrendLLMSummarySchema = z.object({
+  whatItIs: z.string().min(1),
+  whyNow: z.string().min(1),
+  whoShouldCare: z.string().min(1),
+  technicalKeywords: z.array(z.string()).max(12),
+  businessRelevance: z.string().min(1),
+  developerRelevance: z.string().min(1),
+  watchDecision: z.enum(['track', 'deep_dive', 'ignore', 'wait']),
+  riskNotes: z.string().min(1),
+  confidence: z.enum(['low', 'medium', 'high'])
+});
+
+export type TrendLLMSummaryInput = z.infer<typeof TrendLLMSummarySchema>;

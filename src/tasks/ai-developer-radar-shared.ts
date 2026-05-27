@@ -9,6 +9,7 @@ import { JsonRadarStore, createSnapshots } from '../storage/json-store.js';
 import { createPotentialScoreRanker } from '../rankers/potential-score.js';
 import { createFeishuNotifier } from '../notifiers/feishu.js';
 import type { NotifyResult } from '../notifiers/types.js';
+import type { SourceHealth, SourceHealthName } from '../trends/types.js';
 
 export interface RadarRunOptions {
   send?: boolean;
@@ -23,11 +24,14 @@ export interface RadarRunContext {
   scored: ScoredRadarRepository[];
   store: JsonRadarStore;
   errors: string[];
+  sourceHealth: SourceHealth[];
 }
 
 export interface RadarRunResult {
   ok: boolean;
   digest?: RadarDigest;
+  scored?: ScoredRadarRepository[];
+  store?: JsonRadarStore;
   notify?: NotifyResult;
   error?: string;
 }
@@ -53,6 +57,60 @@ function dedupeRepositories(repositories: RadarRepository[]): RadarRepository[] 
   return Array.from(map.values());
 }
 
+function createSkippedHealth(source: SourceHealthName, startedAt: string, warning: string): SourceHealth {
+  return {
+    source,
+    enabled: false,
+    success: true,
+    itemCount: 0,
+    startedAt,
+    finishedAt: startedAt,
+    latencyMs: 0,
+    warning
+  };
+}
+
+async function collectWithHealth(
+  source: SourceHealthName,
+  collect: () => Promise<RadarRepository[]>
+): Promise<{ repositories: RadarRepository[]; health: SourceHealth; error?: string }> {
+  const startedAt = new Date().toISOString();
+  const start = Date.now();
+  try {
+    const repositories = await collect();
+    const finishedAt = new Date().toISOString();
+    return {
+      repositories,
+      health: {
+        source,
+        enabled: true,
+        success: true,
+        itemCount: repositories.length,
+        startedAt,
+        finishedAt,
+        latencyMs: Date.now() - start
+      }
+    };
+  } catch (error) {
+    const finishedAt = new Date().toISOString();
+    const message = error instanceof Error ? error.message : String(error);
+    return {
+      repositories: [],
+      error: `${source} collection failed: ${message}`,
+      health: {
+        source,
+        enabled: true,
+        success: false,
+        itemCount: 0,
+        startedAt,
+        finishedAt,
+        latencyMs: Date.now() - start,
+        error: message
+      }
+    };
+  }
+}
+
 export async function collectAndScoreRadarCandidates(options: RadarRunOptions = {}): Promise<Omit<RadarRunContext, 'digest'>> {
   const collectedAt = new Date().toISOString();
   const profile = loadRadarProfile();
@@ -61,32 +119,41 @@ export async function collectAndScoreRadarCandidates(options: RadarRunOptions = 
   const searchCollector = createGitHubSearchCollector();
   const watchlist = loadWatchlist();
   const errors: string[] = [];
+  const sourceHealth: SourceHealth[] = [];
   let repositories: RadarRepository[] = [];
+  const useSampleData = options.useSampleData || process.env.RADAR_USE_SAMPLE_DATA === 'true';
 
-  if (options.useSampleData || process.env.RADAR_USE_SAMPLE_DATA === 'true') {
+  if (useSampleData) {
     repositories = createSampleRepositories(new Date(collectedAt));
+    const warning = 'Sample data mode; live collection skipped.';
+    sourceHealth.push(
+      createSkippedHealth('github-trending', collectedAt, warning),
+      {
+        ...createSkippedHealth('github-search', collectedAt, warning),
+        itemCount: repositories.length
+      },
+      createSkippedHealth('watchlist', collectedAt, warning)
+    );
   } else {
-    try {
+    const trending = await collectWithHealth('github-trending', async () => {
       const trending = await fetchGitHubTrending(Math.min(25, repoLimit));
       const trendingFullNames = trending.map((repo) => repo.fullName);
       const metadata = await searchCollector.fetchByFullNames(trendingFullNames, collectedAt);
-      repositories.push(...metadata.map((repo) => ({ ...repo, source: 'github-trending' })));
-    } catch (error) {
-      errors.push(`GitHub Trending collection failed: ${error instanceof Error ? error.message : String(error)}`);
-    }
+      return metadata.map((repo) => ({ ...repo, source: 'github-trending' }));
+    });
+    repositories.push(...trending.repositories);
+    sourceHealth.push(trending.health);
+    if (trending.error) errors.push(`GitHub Trending collection failed: ${trending.health.error}`);
 
-    try {
-      repositories.push(...await searchCollector.search(profile, repoLimit, collectedAt));
-    } catch (error) {
-      errors.push(`GitHub Search collection failed: ${error instanceof Error ? error.message : String(error)}`);
-    }
+    const search = await collectWithHealth('github-search', () => searchCollector.search(profile, repoLimit, collectedAt));
+    repositories.push(...search.repositories);
+    sourceHealth.push(search.health);
+    if (search.error) errors.push(`GitHub Search collection failed: ${search.health.error}`);
 
-    try {
-      const watchlistRepos = await searchCollector.fetchByFullNames(watchlist.map((item) => item.repoFullName), collectedAt, watchlist);
-      repositories.push(...watchlistRepos);
-    } catch (error) {
-      errors.push(`Watchlist collection failed: ${error instanceof Error ? error.message : String(error)}`);
-    }
+    const watchlistResult = await collectWithHealth('watchlist', () => searchCollector.fetchByFullNames(watchlist.map((item) => item.repoFullName), collectedAt, watchlist));
+    repositories.push(...watchlistResult.repositories);
+    sourceHealth.push(watchlistResult.health);
+    if (watchlistResult.error) errors.push(`Watchlist collection failed: ${watchlistResult.health.error}`);
   }
 
   const deduped = dedupeRepositories(repositories).slice(0, repoLimit);
@@ -101,7 +168,8 @@ export async function collectAndScoreRadarCandidates(options: RadarRunOptions = 
   return {
     scored,
     store,
-    errors
+    errors,
+    sourceHealth
   };
 }
 

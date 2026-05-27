@@ -1,4 +1,4 @@
-import type { MultiSourceDigestSections } from '../trends/types.js';
+import type { MultiSourceDigestSections, SourceHealth, TrendEntity, TrendItem } from '../trends/types.js';
 
 export type RadarRunMode = 'daily' | 'weekly';
 
@@ -108,6 +108,8 @@ export interface RadarDigest {
   generatedAt: string;
   summary: string;
   baselineCreated: boolean;
+  scannedRepoCount?: number;
+  aiCandidateCount?: number;
   dataNotes: string[];
   hotProjects: ScoredRadarRepository[];
   earlySignals: ScoredRadarRepository[];
@@ -116,6 +118,10 @@ export interface RadarDigest {
   categoryStats?: RadarCategoryStat[];
   researchPicks?: ScoredRadarRepository[];
   multiSourceSections?: MultiSourceDigestSections;
+  multiSourceItems?: TrendItem[];
+  sourceHealth?: SourceHealth[];
+  trendEntities?: TrendEntity[];
+  topicClusters?: TrendEntity[];
 }
 
 export interface RadarCategoryStat {
