@@ -56,30 +56,30 @@ export function ProjectCard({
 
       <div className="mt-3 grid grid-cols-4 gap-2 text-sm">
         <div>
-          <div className="text-xs text-muted-foreground flex items-center gap-1"><Star className="w-3 h-3" /> Stars</div>
+          <div className="text-xs text-muted-foreground flex items-center gap-1"><Star className="w-3 h-3" /> Dev attention</div>
           <div className="tabular-nums">{fmtNum(r.stars)}</div>
         </div>
         <div>
-          <div className="text-xs text-muted-foreground">24h Δ</div>
+          <div className="text-xs text-muted-foreground">Today new attention</div>
           <div className={`tabular-nums ${s.dailyStarDelta == null ? 'text-muted-foreground' : 'text-emerald-700'}`}>
             {fmtDelta(s.dailyStarDelta, 'Baseline')}
           </div>
         </div>
         <div>
-          <div className="text-xs text-muted-foreground">7d Δ</div>
+          <div className="text-xs text-muted-foreground">7-day change</div>
           <div className={`tabular-nums ${s.weeklyStarDelta == null ? 'text-muted-foreground' : ''}`}>
             {fmtDelta(s.weeklyStarDelta, 'Need 7d snapshots')}
           </div>
         </div>
         <div>
-          <div className="text-xs text-muted-foreground flex items-center gap-1"><Zap className="w-3 h-3" /> Accel</div>
+          <div className="text-xs text-muted-foreground flex items-center gap-1"><Zap className="w-3 h-3" /> Heat speed</div>
           <div className="tabular-nums">{s.acceleration.toFixed(2)}×</div>
         </div>
       </div>
 
       {showWhy && (
         <p className="mt-3 text-xs text-muted-foreground">
-          <span className="text-foreground">Why:</span> {project.whyItMatters}
+          <span className="text-foreground">Why it matters:</span> {project.whyItMatters}
         </p>
       )}
 

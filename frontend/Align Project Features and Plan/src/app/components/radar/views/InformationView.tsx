@@ -6,6 +6,7 @@ import { EmptyState } from '../EmptyState';
 import { fetchAihotItems } from '../../../services/aihotApi';
 import { Input } from '../../ui/input';
 import { Badge } from '../../ui/badge';
+import { ContributionCTA } from '../ContributionCTA';
 
 const AIHOT_CATEGORIES = [
   { label: '全部', value: undefined },
@@ -47,6 +48,14 @@ function formatDateGroup(dateStr: string) {
 function publishedAtMs(item: TrendItem): number {
   const timestamp = Date.parse(item.publishedAt || item.collectedAt);
   return Number.isFinite(timestamp) ? timestamp : 0;
+}
+
+function conciseSummary(item: TrendItem): string {
+  return item.summary || item.description || '该条目提供了一个值得关注的 AI 新动态。';
+}
+
+function worthWatching(item: TrendItem): string {
+  return item.recommendedReason || item.summary || item.description || '它在今天的信息流中具有代表性，适合作为快速跟踪入口。';
 }
 
 export function InformationView({ digest }: { digest: RadarDigest }) {
@@ -113,8 +122,56 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
     return acc;
   }, {});
 
+  const todayPicks = [
+    ...(digest.multiSourceSections?.aihotHighlights ?? []),
+    ...(digest.multiSourceSections?.productLaunches ?? []),
+    ...(digest.multiSourceSections?.modelDemoSignals ?? []),
+    ...(digest.multiSourceSections?.developerBuzz ?? []),
+  ]
+    .sort((a, b) => publishedAtMs(b) - publishedAtMs(a))
+    .filter((item, index, array) => array.findIndex((target) => target.id === item.id) === index)
+    .slice(0, 5);
+
   return (
     <div className="p-4 sm:p-6 space-y-6">
+      <section className="space-y-3">
+        <div>
+          <h2 className="text-xl font-bold">Today&apos;s Picks / 今日精选</h2>
+          <p className="text-sm text-muted-foreground mt-1">先看最值得读的 5 条，再决定要不要继续刷完整时间线。</p>
+        </div>
+        {todayPicks.length === 0 ? (
+          <EmptyState title="今天暂无精选条目" hint="下方仍可查看完整分类和时间线。" />
+        ) : (
+          <div className="grid grid-cols-1 gap-3">
+            {todayPicks.map((item) => (
+              <Card key={item.id} className="p-4">
+                <div className="flex items-center gap-2 flex-wrap text-xs text-muted-foreground">
+                  <span>{item.source}</span>
+                  {item.category && (
+                    <Badge variant="outline" className="text-[11px] font-normal">
+                      {AIHOT_CATEGORIES.find((c) => c.value === item.category)?.label || item.category}
+                    </Badge>
+                  )}
+                </div>
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-2 block text-base font-semibold hover:underline underline-offset-2"
+                >
+                  {item.title}
+                </a>
+                <p className="mt-2 text-sm text-foreground/85 leading-relaxed">{conciseSummary(item)}</p>
+                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                  <span className="text-foreground">为什么值得看：</span>
+                  {worthWatching(item)}
+                </p>
+              </Card>
+            ))}
+          </div>
+        )}
+      </section>
+
       <div className="flex flex-col gap-4">
         <div>
           <h2 className="text-xl font-bold flex items-center gap-2">
@@ -237,6 +294,11 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
           ))}
         </div>
       )}
+
+      <ContributionCTA
+        title="Submit a source or report a wrong classification"
+        description="如果你发现漏掉的重要 AI 动态，或分类有误，欢迎到 GitHub issues 提交。"
+      />
     </div>
   );
 }
