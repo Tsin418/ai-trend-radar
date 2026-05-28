@@ -55,6 +55,10 @@ function conciseSummary(item: TrendItem): string {
 }
 
 function worthWatching(item: TrendItem): string | undefined {
+  const isAihotSource = item.sourceType === 'curated_trend'
+    || item.source.toLowerCase().includes('aihot')
+    || item.originalSource?.toLowerCase().includes('aihot');
+  if (!isAihotSource) return undefined;
   return item.recommendedReason;
 }
 
