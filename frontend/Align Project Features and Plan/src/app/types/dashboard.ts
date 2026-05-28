@@ -1,4 +1,5 @@
 import type {
+  LlmDigest,
   RepoLLMSummary,
   SourceHealth,
   SourceType,
@@ -205,6 +206,7 @@ export interface LatestDailyDashboardFile {
   trendEntities: DashboardTrendEntity[];
   topicClusters: DashboardTrendEntity[];
   dataNotes: string[];
+  llmDigest?: LlmDigest;
 }
 
 export function isDashboardTrendType(value: string): value is TrendType {

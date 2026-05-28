@@ -3,10 +3,12 @@ import path from 'node:path';
 import dotenv from 'dotenv';
 import { buildLatestDailyDashboardData } from '../src/dashboard/build-dashboard-data.js';
 import { getLocalDateLabel, getRadarTimeZone } from '../src/radar/date.js';
+import { getRadarDigestLLMConfig } from '../src/radar/config.js';
 import { writeDigestArchive } from '../src/renderers/archive.js';
 import { renderRadarDigestText } from '../src/renderers/radar-text.js';
 import { renderRssXml } from '../src/renderers/rss-feed.js';
 import { runAiDeveloperRadarDaily } from '../src/tasks/ai-developer-radar-daily.js';
+import { generateRadarLlmDigest } from '../src/llm/radar-digest-generator.js';
 
 dotenv.config({ path: '.env.local' });
 dotenv.config();
@@ -103,7 +105,7 @@ async function main(): Promise<void> {
     'utf8'
   );
 
-  const dashboard = buildLatestDailyDashboardData({
+  const dashboardBase = buildLatestDailyDashboardData({
     digest: result.digest,
     scored: result.scored,
     store: result.store,
@@ -113,6 +115,11 @@ async function main(): Promise<void> {
     digestId,
     source
   });
+  const llmDigest = await generateRadarLlmDigest(dashboardBase, getRadarDigestLLMConfig());
+  const dashboard = {
+    ...dashboardBase,
+    llmDigest
+  };
   const dashboardOutputPath = getDashboardOutputPath();
   fs.mkdirSync(path.dirname(dashboardOutputPath), { recursive: true });
   fs.writeFileSync(

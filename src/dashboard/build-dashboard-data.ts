@@ -1,6 +1,7 @@
 import type { RadarDigest, ScoredRadarRepository, WatchlistSource, WatchlistState, WatchlistStatus } from '../radar/types.js';
 import type { JsonRadarStore } from '../storage/json-store.js';
 import type { SourceHealth, TrendEntity, TrendItem } from '../trends/types.js';
+import type { LlmDigest } from '../llm/radar-digest-types.js';
 
 export interface DashboardProject {
   repoFullName: string;
@@ -152,6 +153,7 @@ export interface LatestDailyDashboardFile {
   trendEntities: TrendEntity[];
   topicClusters: TrendEntity[];
   dataNotes: string[];
+  llmDigest?: LlmDigest;
 }
 
 interface BuildDashboardDataOptions {
