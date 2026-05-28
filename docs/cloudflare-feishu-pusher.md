@@ -20,6 +20,11 @@ It commits:
 
 - `data/radar-store.json`
 - `data/latest-daily-digest.json`
+- `data/latest-daily-dashboard.json`
+- `data/rss.xml`
+- `data/archive/`
+- `frontend/Align Project Features and Plan/public/data/latest-daily-dashboard.json`
+- `frontend/Align Project Features and Plan/dist/data/latest-daily-dashboard.json`
 - `data/llm-enrichment-cache.json`, when present
 
 GitHub Actions no longer needs `FEISHU_WEBHOOK_URL` or `FEISHU_SECRET`.
