@@ -65,6 +65,7 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
     let ignore = false;
     
     async function load() {
+      setItems([]);
       setLoading(true);
       setError(null);
       try {
@@ -173,10 +174,10 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
                     const time = formatTime(it.publishedAt || it.collectedAt);
                     return (
                       <div key={it.id} className="relative flex items-start gap-4 sm:gap-6 group">
-                        <div className="w-12 sm:w-16 flex-shrink-0 text-right pt-4 text-sm font-medium text-foreground z-10 bg-background">
+                        <div className="w-12 sm:w-16 flex-shrink-0 text-right pt-1 text-sm font-medium text-foreground z-10 bg-background">
                           {time}
                         </div>
-                        <div className="absolute left-[57px] sm:left-[73px] top-[21.5px] w-[10px] h-[10px] rounded-full bg-border group-hover:bg-primary transition-colors ring-4 ring-background z-10"></div>
+                        <div className="absolute left-[57px] sm:left-[73px] top-[5.5px] w-[10px] h-[10px] rounded-full bg-border group-hover:bg-primary transition-colors ring-4 ring-background z-10"></div>
                         
                         <Card className="flex-1 hover:bg-muted/30 transition-shadow hover:shadow-md min-w-0">
                           <div className="p-4 sm:p-5">
