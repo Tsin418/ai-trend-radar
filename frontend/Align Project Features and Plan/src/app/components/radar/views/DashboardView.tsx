@@ -40,7 +40,7 @@ export function DashboardView({
         </div>
       )}
 
-      <Card className="min-h-[calc(100vh-3.5rem)] justify-center rounded-none border-x-0 border-t-0 p-6 sm:p-8 lg:p-10">
+      <Card className="rounded-none border-x-0 border-t-0 p-4 sm:p-6 lg:p-8">
         <div className="flex items-start gap-4">
           <div className="flex-1">
             <div className="text-xs uppercase tracking-wide text-muted-foreground">Today's headline</div>
