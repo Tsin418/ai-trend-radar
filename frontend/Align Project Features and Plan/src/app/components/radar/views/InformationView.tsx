@@ -50,6 +50,10 @@ function publishedAtMs(item: TrendItem): number {
   return Number.isFinite(timestamp) ? timestamp : 0;
 }
 
+function conciseSummary(item: TrendItem): string {
+  return item.summary || item.description || '该条目提供了一个值得关注的 AI 新动态。';
+}
+
 export function InformationView({ digest }: { digest: RadarDigest }) {
   const [activeCategory, setActiveCategory] = useState<AihotCategory>(undefined);
   const [query, setQuery] = useState('');
@@ -154,6 +158,7 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
                   >
                     {item.title}
                   </a>
+                  <p className="mt-0.5 text-xs text-foreground/85 leading-5 line-clamp-1">{conciseSummary(item)}</p>
                 </Card>
               );
             })}
