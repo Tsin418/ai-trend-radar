@@ -1,15 +1,16 @@
 import { Card } from '../ui/card';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Sparkles } from 'lucide-react';
 import { CategoryBadge } from './Badges';
 import { fmtNum } from '../../utils/format';
 import type { TrendItem } from '../../types/radar';
 
 export function MultiSourceSignalCard({
-  title, items, accent,
+  title, items, accent, showLLMSummary,
 }: {
   title: string;
   items: TrendItem[];
   accent?: string;
+  showLLMSummary?: boolean;
 }) {
   return (
     <Card className="p-4">
@@ -40,7 +41,17 @@ export function MultiSourceSignalCard({
                   {it.category && <CategoryBadge category={it.category} />}
                 </div>
                 {(it.summary || it.description) && (
-                  <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{it.summary || it.description}</p>
+                  <div className="mt-1.5 space-y-1">
+                    {showLLMSummary && (
+                      <div className="flex items-center gap-1.5 text-xs font-medium text-emerald-600 dark:text-emerald-400">
+                        <Sparkles className="w-3 h-3" />
+                        AI Summary
+                      </div>
+                    )}
+                    <p className="text-xs text-muted-foreground line-clamp-3">
+                      {it.summary || it.description}
+                    </p>
+                  </div>
                 )}
                 {it.recommendedReason && (
                   <p className="text-xs text-foreground/80 mt-1">
