@@ -61,6 +61,9 @@ jobs:
       - name: Generate daily radar digest
         run: pnpm radar:daily:generate
 
+      - name: Sync dashboard data to frontend assets
+        run: pnpm frontend:sync-data
+
       - name: Commit radar snapshots and latest digest
         if: always()
         run: |
@@ -69,6 +72,8 @@ jobs:
           git add data/radar-store.json
           [ -f data/latest-daily-digest.json ] && git add data/latest-daily-digest.json
           [ -f data/latest-daily-dashboard.json ] && git add data/latest-daily-dashboard.json
+          [ -f "frontend/Align Project Features and Plan/public/data/latest-daily-dashboard.json" ] && git add "frontend/Align Project Features and Plan/public/data/latest-daily-dashboard.json"
+          [ -f "frontend/Align Project Features and Plan/dist/data/latest-daily-dashboard.json" ] && git add "frontend/Align Project Features and Plan/dist/data/latest-daily-dashboard.json"
           [ -f data/rss.xml ] && git add data/rss.xml
           [ -d data/archive ] && git add data/archive
           [ -f data/llm-enrichment-cache.json ] && git add data/llm-enrichment-cache.json
