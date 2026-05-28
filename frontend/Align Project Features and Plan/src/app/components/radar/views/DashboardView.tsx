@@ -65,7 +65,7 @@ export function DashboardView({
           ) : (
             <div className={projectGridClass}>
               {digest.hotProjects.map((p) => (
-                <ProjectCard key={p.repository.repoFullName} project={p} onOpenDetail={onOpenDetail} />
+                <ProjectCard key={p.repository.repoFullName} project={p} onOpenDetail={onOpenDetail} showWhy={false} />
               ))}
             </div>
           )}
@@ -81,7 +81,7 @@ export function DashboardView({
           ) : (
             <div className={projectGridClass}>
               {digest.earlySignals.map((p) => (
-                <ProjectCard key={p.repository.repoFullName} project={p} onOpenDetail={onOpenDetail} />
+                <ProjectCard key={p.repository.repoFullName} project={p} onOpenDetail={onOpenDetail} showWhy={false} />
               ))}
             </div>
           )}
@@ -97,7 +97,7 @@ export function DashboardView({
           ) : (
             <div className={projectGridClass}>
               {digest.watchlistMovements.map((p) => (
-                <ProjectCard key={p.repository.repoFullName} project={p} onOpenDetail={onOpenDetail} />
+                <ProjectCard key={p.repository.repoFullName} project={p} onOpenDetail={onOpenDetail} showWhy={false} />
               ))}
             </div>
           )}

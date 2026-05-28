@@ -1,12 +1,10 @@
 import { cn } from '../ui/utils';
 import {
   LayoutDashboard,
-  GitBranch,
   Boxes,
   Radio,
   Star,
   FileText,
-  Settings,
   Radar,
   Info,
 } from 'lucide-react';
@@ -23,13 +21,11 @@ export type ViewKey =
 
 const items: { key: ViewKey; label: string; icon: any; hint?: string }[] = [
   { key: 'dashboard', label: 'Dashboard', icon: LayoutDashboard, hint: 'Today radar' },
-  { key: 'projects', label: 'Projects', icon: GitBranch, hint: 'All AI repos' },
-  { key: 'information', label: 'News', icon: Info, hint: 'AI News' },
   { key: 'watchlist', label: 'Watchlist', icon: Star, hint: 'Tracked repos' },
+  { key: 'information', label: 'News', icon: Info, hint: 'AI News' },
   { key: 'categories', label: 'Categories', icon: Boxes, hint: 'Direction heat' },
   { key: 'signals', label: 'Multi-source Signals', icon: Radio, hint: 'PH · HF · HN' },
   { key: 'digests', label: 'Digests', icon: FileText, hint: 'Daily / Weekly' },
-  { key: 'settings', label: 'Settings', icon: Settings, hint: 'Profile · keywords' },
 ];
 
 export function SidebarNav({
