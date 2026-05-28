@@ -1,5 +1,4 @@
 import { Card } from '../../ui/card';
-import { ExternalLink, Sparkles } from 'lucide-react';
 import { CategoryBadge } from '../Badges';
 import type { RadarDigest } from '../../../types/radar';
 import { EmptyState } from '../EmptyState';
@@ -21,25 +20,28 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
   }
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="p-4 sm:p-6 space-y-6">
       <div>
         <h2 className="text-lg">Information</h2>
         <p className="text-sm text-muted-foreground">AI automatically curated high-value content</p>
       </div>
       
-      <div className="relative pl-6 sm:pl-16">
-        <div className="absolute left-[39px] sm:left-[79px] top-6 bottom-0 w-px bg-border"></div>
-        <div className="space-y-8">
+      <div className="relative">
+        <div className="absolute left-[55.5px] sm:left-[79.5px] top-6 bottom-[-32px] w-px bg-border/60"></div>
+        <div className="space-y-8 pb-8">
           {items.map((it) => {
             const time = formatTime(it.publishedAt || it.collectedAt);
             return (
-              <div key={it.id} className="relative group">
-                <div className="absolute -left-[54px] sm:-left-[94px] top-3 w-[40px] text-right text-sm font-medium text-foreground">
+              <div key={it.id} className="relative flex items-start gap-4 sm:gap-8 group">
+                {/* Timeline time block */}
+                <div className="w-12 sm:w-16 flex-shrink-0 text-right pt-4 text-sm font-medium text-foreground">
                   {time}
                 </div>
-                <div className="absolute -left-[20px] top-[14px] w-[9px] h-[9px] rounded-full bg-border group-hover:bg-primary transition-colors ring-4 ring-background"></div>
+                {/* Timeline dot */}
+                <div className="absolute left-[51px] sm:left-[75px] top-[21.5px] w-[10px] h-[10px] rounded-full bg-border group-hover:bg-primary transition-colors ring-4 ring-background z-10"></div>
                 
-                <Card className="hover:bg-muted/30 transition-colors">
+                {/* Card block */}
+                <Card className="flex-1 hover:bg-muted/30 transition-colors min-w-0">
                   <div className="p-4 sm:p-5">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-xs text-muted-foreground">{it.source}</span>

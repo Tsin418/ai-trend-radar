@@ -980,5 +980,41 @@
     },
     "createdAt": "2026-05-28T06:58:56.322Z",
     "model": "deepseek-v4-flash"
+  },
+  "rtk-ai/rtk:2026-05-28T07:06:33Z": {
+    "summary": {
+      "oneLiner": "A Rust-based CLI proxy that slashes LLM token consumption by 60-90% by filtering and compressing command outputs before they reach AI coding agents.",
+      "problemSolved": "AI coding agents like Claude Code burn through tokens on verbose command outputs (e.g., git status, test logs), driving up costs and context limits. rtk intercepts shell commands and returns only the essential information, reducing token usage dramatically with minimal overhead.",
+      "aiCategory": "MCP / Tool Calling",
+      "trendType": "sustained_hot",
+      "whyNow": "With 55,414 stars and a sustained 485 stars/day average over the past week, rtk is experiencing a prolonged surge in developer attention. The 24-hour delta of 683 stars and an acceleration ratio of 1.4 indicate strong, steady growth rather than a fleeting spike. This project is riding the wave of cost-conscious AI adoption, where every token saved translates directly to lower API bills.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The consistent star velocity and recent release (within 30 days) suggest ongoing improvements and word-of-mouth adoption among developers using AI coding tools.",
+      "whyTrending": "Developers using Claude Code, Copilot, Cursor, and similar tools are actively seeking ways to reduce token costs. rtk offers a zero-dependency, low-overhead solution that integrates seamlessly via shell hooks, making it an immediate productivity win. The 60-90% token savings are compelling enough to drive viral adoption within the AI coding community.",
+      "developerTakeaway": "If you use AI coding agents, rtk can cut your token consumption by up to 90% with a single binary install. It's especially valuable for teams running frequent test suites, git operations, or large file reads in their AI workflows.",
+      "developerInsight": "This signals a shift toward token-aware tooling in the AI development stack. As LLM costs remain a concern, developers will increasingly adopt middleware that optimizes context usage. rtk's approach — intercepting at the shell level — is a pattern we'll likely see replicated for other AI integrations.",
+      "targetUsers": "Developers using AI coding agents (Claude Code, Copilot, Cursor, Windsurf, Cline, etc.) who want to reduce API costs and improve context efficiency, especially those working on large codebases with frequent command execution.",
+      "riskNotes": "The project has 1,001 open issues, which may indicate growing pains or feature requests outpacing development. The hook-based approach only works with Bash tool calls, not built-in agent tools like Read or Grep, limiting its scope. Additionally, the name collision with 'Rust Type Kit' on crates.io could cause installation confusion.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-28T07:12:38.230Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-05-28T07:07:15Z": {
+    "summary": {
+      "oneLiner": "Open-source, local-first alternative to Claude Design that wires 16 coding-agent CLIs into a skill-driven design workflow with 132 skills and 150 design systems.",
+      "problemSolved": "Claude Design is closed-source, paid-only, cloud-only, and locked to Anthropic's model. Open Design provides a fully open, local-first, BYOK alternative that works with any coding agent CLI or OpenAI-compatible proxy, enabling artifact-first design without vendor lock-in.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 54,261 stars, a 24-hour star delta of 1,121, and a sustained 7-day average of 820 stars per day, this project is experiencing explosive organic growth. The acceleration ratio of 1.4 indicates steady, high-velocity momentum without sudden spikes, suggesting deep community resonance. The recent 0.8.0-preview release and active iteration on main signal a project that is rapidly maturing and capturing attention from both developers and designers.",
+      "whatChanged": "The project recently released version 0.8.0-preview, which is described as 'the next phase of Open Design.' The README explicitly calls for community contributions to push the project forward, and the commit activity remains high with a recent commit within 7 days. The sustained star growth and high fork count (6,149) indicate ongoing viral spread, likely amplified by social media and developer communities.",
+      "whyTrending": "It fills a massive gap: a high-quality, open-source alternative to a popular but locked-down AI design tool. The BYOK approach, support for 16 different coding agent CLIs, and local-first architecture appeal to developers who want control and flexibility. The project also benefits from being built on top of other open-source projects (huashu-design, guizang-ppt-skill, open-codesign, multica), creating a collaborative ecosystem.",
+      "developerTakeaway": "This project demonstrates that AI-assisted design can be fully open and agent-agnostic. Developers can integrate it into their workflows without being tied to a single vendor, and the modular skill/design-system architecture makes it extensible. It's a practical example of how to build a local-first AI tool that leverages existing CLI agents.",
+      "developerInsight": "The success of Open Design signals a strong market demand for open, composable AI tools that prioritize user ownership and flexibility. For AI developers, this indicates an opportunity to build similar 'agent orchestration' layers that decouple AI capabilities from specific models or providers. The local-first, BYOK model reduces friction and trust barriers, which could become a standard expectation for developer tools.",
+      "targetUsers": "Developers and designers who want an open-source, local-first alternative to Claude Design; teams that need to generate design prototypes, slides, images, or videos using AI without cloud dependency; builders who want to integrate AI design into their own workflows using existing coding agents.",
+      "riskNotes": "The project is still in preview (0.8.0-preview) and may have stability or compatibility issues. It relies on external CLI agents being installed and configured correctly, which could be a barrier for non-technical users. The rapid growth may strain maintainer capacity, and the project's long-term sustainability depends on community contributions and funding.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-28T07:12:40.885Z",
+    "model": "deepseek-v4-flash"
   }
 }
