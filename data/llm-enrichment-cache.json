@@ -926,5 +926,59 @@
     },
     "createdAt": "2026-05-28T05:16:13.780Z",
     "model": "deepseek-v4-flash"
+  },
+  "HKUDS/nanobot:2026-05-28T06:47:27Z": {
+    "summary": {
+      "oneLiner": "An ultra-lightweight, open-source AI agent that connects LLMs to tools, chats, and workflows with minimal overhead.",
+      "problemSolved": "Existing AI agents are often heavy, complex, or tied to specific platforms. nanobot provides a small, readable core loop that supports multiple chat channels, memory, MCP, and practical deployment paths, enabling developers to quickly build and run personal agents.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sustained_hot",
+      "whyNow": "With 43,292 stars, a 24-hour delta of +78, and a 7-day average delta of 53.3, the project shows strong, sustained growth. The acceleration ratio of 1.5 indicates steady momentum without sudden spikes, suggesting organic adoption. Recent releases (v0.2.0 on 2026-05-15) and daily commits keep it fresh and actively developed.",
+      "whatChanged": "The project released v0.2.0 on 2026-05-15, introducing /goal for sustained objectives, a WebUI shipped inside the wheel, image generation, and 5 new providers with fallback models. This feature-rich release likely drove the recent star acceleration.",
+      "whyTrending": "It combines the simplicity of OpenClaw with the power of Claude Code and Codex, offering a lightweight yet extensible agent that works with multiple LLM providers and chat platforms. The active development, frequent releases, and comprehensive documentation make it appealing to developers seeking a practical, open-source agent framework.",
+      "developerTakeaway": "nanobot demonstrates that a minimal, readable agent loop can be production-ready. Developers can use it as a base for custom agents, integrate it with their tools via MCP, or deploy it as a personal assistant across Telegram, Discord, Slack, and more.",
+      "developerInsight": "The trend toward lightweight, multi-provider, multi-channel agents is accelerating. nanobot's approach of keeping the core small while supporting plugins and MCP aligns with the industry shift toward modular, composable AI systems. Developers should watch for similar patterns in agent frameworks.",
+      "targetUsers": "Developers building personal AI assistants, teams integrating LLMs into workflows, and anyone wanting a lightweight, open-source alternative to proprietary agent tools.",
+      "riskNotes": "The project is still relatively new (v0.2.0) and may have breaking changes. With 891 open issues, some stability concerns exist. The rapid release pace could lead to feature bloat or documentation lag.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-28T06:58:45.264Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-05-28T06:56:13Z": {
+    "summary": {
+      "oneLiner": "Open-source, local-first alternative to Claude Design that turns 16 coding-agent CLIs into a design engine with 132 skills and 150 design systems.",
+      "problemSolved": "Claude Design is closed-source, cloud-only, and locked to Anthropic's model. Open Design provides a fully open, BYOK, local-first design workflow that works with any coding agent CLI, runs on your laptop, and exports to HTML/PDF/PPTX/MP4.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 54,247 stars, a 24-hour delta of +1,107, and a 7-day average of +820, this project is experiencing sustained explosive growth. The acceleration ratio of 1.4 indicates steady, high-velocity attention, not a sudden spike. It's one of the fastest-growing open-source projects in the AI design space.",
+      "whatChanged": "The recent 0.8.0-preview release and the README's explicit call to action ('40k stars in two weeks got us this far — we need you to push the rest') signal a deliberate community push. The project is iterating fast on main, and the release includes new skills, design systems, and media generation capabilities.",
+      "whyTrending": "It fills a massive gap: an open-source, local-first alternative to a viral but locked-down product (Claude Design). Developers and designers alike want control over their tools and data, and Open Design delivers that with a rich feature set and zero vendor lock-in.",
+      "developerTakeaway": "This project demonstrates that the market for open-source AI design tools is huge and underserved. Developers can contribute skills, design systems, or integrations, and benefit from a rapidly growing ecosystem.",
+      "developerInsight": "The BYOK (bring your own key) and BYO-agent architecture signals a shift toward modular, composable AI workflows. Developers should expect more tools that decouple the AI model from the application logic, allowing users to choose their preferred agent and provider.",
+      "targetUsers": "Designers, frontend developers, product builders, and anyone who wants to generate design prototypes, slides, videos, or images using AI without being locked into a proprietary platform.",
+      "riskNotes": "The project is in early preview (0.8.0) with 347 open issues. Rapid iteration may introduce breaking changes. The reliance on external CLI tools means compatibility depends on those tools' stability. Also, the project's viral growth may attract noise and low-quality contributions.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-28T06:58:45.570Z",
+    "model": "deepseek-v4-flash"
+  },
+  "rtk-ai/rtk:2026-05-27T21:37:16Z": {
+    "summary": {
+      "oneLiner": "A Rust-based CLI proxy that slashes LLM token consumption by 60-90% on common dev commands, acting as a transparent filter between the shell and AI coding agents.",
+      "problemSolved": "LLM-powered coding tools burn tokens on verbose command output (git status, test logs, directory listings), inflating costs and context windows. RTK intercepts these commands and returns only the essential information, reducing token usage by up to 90% with sub-10ms overhead.",
+      "aiCategory": "MCP / Tool Calling",
+      "trendType": "sustained_hot",
+      "whyNow": "With 55,408 stars and a sustained 24-hour delta of +677 (three-day average +485), RTK is experiencing consistent, high-velocity growth. The acceleration ratio of 1.4 indicates strong but not explosive momentum. This is a project that has already crossed into mainstream developer awareness and continues to gain traction daily.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The most recent release (within 30 days) and active commits within the last week suggest ongoing feature development and bug fixes, which likely contribute to word-of-mouth adoption.",
+      "whyTrending": "As AI coding agents become standard in developer workflows, the cost of token consumption is a practical pain point. RTK offers an immediate, measurable ROI: 80% token savings in a 30-minute Claude Code session. It's easy to install (Homebrew, single binary), supports 100+ commands, and integrates seamlessly via shell hooks.",
+      "developerTakeaway": "If you use Claude Code, Copilot, Cursor, or any LLM-powered coding tool, RTK can cut your token costs by 60-90% with zero code changes. Install it in minutes and watch your token usage drop.",
+      "developerInsight": "This signals a shift toward infrastructure that optimizes AI interaction costs at the system level, rather than relying on model-side improvements. Developers should expect more tools that sit between the user and the LLM, compressing context without losing signal.",
+      "targetUsers": "Developers using AI coding assistants (Claude Code, Copilot, Cursor, Windsurf, Cline) who want to reduce token spend and improve context efficiency, especially those working on large codebases with frequent git, test, and build commands.",
+      "riskNotes": "The project has 1,002 open issues, which may indicate growing pains or feature requests outpacing maintainer capacity. The hook-based approach only works for Bash tool calls, not built-in agent tools like Read/Grep/Glob, so users may need to adapt workflows. Name collision with 'Rust Type Kit' on crates.io could cause installation confusion.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-28T06:58:56.322Z",
+    "model": "deepseek-v4-flash"
   }
 }
