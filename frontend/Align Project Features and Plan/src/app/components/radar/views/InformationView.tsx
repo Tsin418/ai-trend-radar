@@ -1,7 +1,22 @@
+import { useState, useEffect } from 'react';
 import { Card } from '../../ui/card';
-import { CategoryBadge } from '../Badges';
-import type { RadarDigest } from '../../../types/radar';
+
+import type { RadarDigest, TrendItem } from '../../../types/radar';
 import { EmptyState } from '../EmptyState';
+import { fetchAihotItems } from '../../../services/aihotApi';
+import { Input } from '../../ui/input';
+import { Badge } from '../../ui/badge';
+
+const AIHOT_CATEGORIES = [
+  { label: '全部', value: undefined },
+  { label: '模型', value: 'ai-models' },
+  { label: '产品', value: 'ai-products' },
+  { label: '行业', value: 'industry' },
+  { label: '论文', value: 'paper' },
+  { label: '技巧', value: 'tip' },
+] as const;
+
+type AihotCategory = typeof AIHOT_CATEGORIES[number]['value'];
 
 function formatTime(dateStr: string) {
   try {
@@ -12,80 +27,198 @@ function formatTime(dateStr: string) {
   }
 }
 
-export function InformationView({ digest }: { digest: RadarDigest }) {
-  const items = digest.multiSourceSections?.aihotHighlights || [];
-
-  if (items.length === 0) {
-    return <div className="p-6"><EmptyState title="No AI News found" /></div>;
+function formatDateGroup(dateStr: string) {
+  try {
+    const d = new Date(dateStr);
+    return `${d.getMonth() + 1}月${d.getDate()}日`;
+  } catch {
+    return '未知日期';
   }
+}
+
+export function InformationView({ digest }: { digest: RadarDigest }) {
+  const [activeCategory, setActiveCategory] = useState<AihotCategory>(undefined);
+  const [query, setQuery] = useState('');
+  const [debouncedQuery, setDebouncedQuery] = useState('');
+  const [items, setItems] = useState<TrendItem[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const fallbackItems = digest.multiSourceSections?.aihotHighlights || [];
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedQuery(query);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [query]);
+
+  useEffect(() => {
+    let ignore = false;
+    
+    async function load() {
+      setLoading(true);
+      setError(null);
+      try {
+        const fetchedItems = await fetchAihotItems({
+          category: activeCategory,
+          q: debouncedQuery,
+          take: 50
+        });
+        if (!ignore) {
+          setItems(fetchedItems);
+        }
+      } catch (err: any) {
+        if (!ignore) {
+          console.error(err);
+          setError(err.message);
+        }
+      } finally {
+        if (!ignore) {
+          setLoading(false);
+        }
+      }
+    }
+    
+    load();
+    return () => { ignore = true; };
+  }, [activeCategory, debouncedQuery]);
+
+  const displayItems = error && items.length === 0 && !debouncedQuery && !activeCategory 
+    ? fallbackItems 
+    : items;
+
+  const groupedItems = displayItems.reduce<Record<string, TrendItem[]>>((acc, item) => {
+    const dateKey = formatDateGroup(item.publishedAt || item.collectedAt);
+    if (!acc[dateKey]) acc[dateKey] = [];
+    acc[dateKey].push(item);
+    return acc;
+  }, {});
 
   return (
     <div className="p-4 sm:p-6 space-y-6">
-      <div>
-        <h2 className="text-lg">Information</h2>
-        <p className="text-sm text-muted-foreground">AI automatically curated high-value content</p>
-      </div>
-      
-      <div className="relative">
-        <div className="absolute left-[55.5px] sm:left-[79.5px] top-6 bottom-[-32px] w-px bg-border/60"></div>
-        <div className="space-y-8 pb-8">
-          {items.map((it) => {
-            const time = formatTime(it.publishedAt || it.collectedAt);
-            return (
-              <div key={it.id} className="relative flex items-start gap-4 sm:gap-8 group">
-                {/* Timeline time block */}
-                <div className="w-12 sm:w-16 flex-shrink-0 text-right pt-4 text-sm font-medium text-foreground">
-                  {time}
-                </div>
-                {/* Timeline dot */}
-                <div className="absolute left-[51px] sm:left-[75px] top-[21.5px] w-[10px] h-[10px] rounded-full bg-border group-hover:bg-primary transition-colors ring-4 ring-background z-10"></div>
-                
-                {/* Card block */}
-                <Card className="flex-1 hover:bg-muted/30 transition-colors min-w-0">
-                  <div className="p-4 sm:p-5">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-xs text-muted-foreground">{it.source}</span>
-                    </div>
-                    <a
-                      href={it.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-base sm:text-lg font-medium hover:underline underline-offset-2 flex text-foreground"
-                    >
-                      {it.title}
-                    </a>
-                    {(it.summary || it.description) && (
-                      <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
-                        {it.summary || it.description}
-                      </p>
-                    )}
-                    
-                    {it.tags && it.tags.length > 0 && (
-                      <div className="flex flex-wrap gap-2 mt-4">
-                        {it.tags.map(t => (
-                          <span key={t} className="px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground text-xs">
-                            {t}
-                          </span>
-                        ))}
-                        {it.category && <CategoryBadge category={it.category} />}
-                      </div>
-                    )}
-
-                    {it.recommendedReason && (
-                      <div className="mt-4 p-3 bg-emerald-500/10 rounded-md">
-                         <div className="flex gap-2">
-                           <span className="text-emerald-700 dark:text-emerald-400 font-medium text-sm whitespace-nowrap">推荐理由:</span>
-                           <span className="text-emerald-700/90 dark:text-emerald-400/90 text-sm leading-relaxed">{it.recommendedReason}</span>
-                         </div>
-                      </div>
-                    )}
-                  </div>
-                </Card>
-              </div>
-            );
-          })}
+      <div className="flex flex-col gap-4">
+        <div>
+          <h2 className="text-xl font-bold flex items-center gap-2">
+            精选
+            <span className="text-sm font-normal text-muted-foreground ml-2">AI 自动挑选的高价值内容</span>
+          </h2>
+        </div>
+        
+        <div className="flex flex-col sm:flex-row gap-4 items-center justify-between border rounded-xl bg-card p-2 px-4 shadow-sm">
+          <div className="flex gap-1 overflow-x-auto w-full sm:w-auto scrollbar-none pb-2 sm:pb-0">
+            {AIHOT_CATEGORIES.map(category => (
+              <button
+                key={category.label}
+                onClick={() => setActiveCategory(category.value)}
+                className={`px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
+                  activeCategory === category.value 
+                    ? 'bg-primary text-primary-foreground shadow' 
+                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                }`}
+              >
+                {category.label}
+              </button>
+            ))}
+          </div>
+          
+          <div className="flex gap-2 w-full sm:w-auto">
+            <div className="relative w-full sm:w-[240px]">
+              <Input
+                type="text"
+                placeholder="搜索标题/摘要..."
+                className="bg-background rounded-full border-muted-foreground/20 h-9"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+              />
+            </div>
+            <button
+              onClick={() => setDebouncedQuery(query)}
+              className="px-4 py-1 h-9 rounded-full bg-secondary text-secondary-foreground text-sm font-medium hover:bg-secondary/80 transition-colors whitespace-nowrap"
+            >
+              搜索
+            </button>
+          </div>
         </div>
       </div>
+
+      {loading && displayItems.length === 0 ? (
+        <div className="p-8 text-center text-muted-foreground">加载中...</div>
+      ) : displayItems.length === 0 ? (
+        <div className="p-6"><EmptyState title="目前没有找到相关内容" /></div>
+      ) : (
+        <div className="space-y-10">
+          {Object.entries(groupedItems).map(([date, dateItems]) => (
+            <div key={date} className="relative mt-2">
+              <div className="sticky top-0 z-20 pb-4 mb-4 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+                <span className="text-sm font-semibold text-muted-foreground bg-muted px-3 py-1 rounded-full">{date}</span>
+              </div>
+              
+              <div className="relative">
+                <div className="absolute left-[23.5px] sm:left-[31.5px] top-6 bottom-[-32px] w-px bg-border/60"></div>
+                <div className="space-y-6 lg:space-y-8 pb-4">
+                  {dateItems.map((it) => {
+                    const time = formatTime(it.publishedAt || it.collectedAt);
+                    return (
+                      <div key={it.id} className="relative flex items-start gap-4 sm:gap-6 group">
+                        <div className="w-12 sm:w-16 flex-shrink-0 text-right pt-4 text-sm font-medium text-foreground z-10 bg-background/50">
+                          {time}
+                        </div>
+                        <div className="absolute left-[19px] sm:left-[27px] top-[21.5px] w-[10px] h-[10px] rounded-full bg-border group-hover:bg-primary transition-colors ring-4 ring-background z-10"></div>
+                        
+                        <Card className="flex-1 hover:bg-muted/30 transition-shadow hover:shadow-md min-w-0">
+                          <div className="p-4 sm:p-5">
+                            <div className="flex items-center gap-2 mb-2">
+                              <span className="text-xs text-muted-foreground font-medium">{it.source}</span>
+                            </div>
+                            <a
+                              href={it.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="text-base sm:text-lg font-bold hover:underline underline-offset-2 flex text-foreground"
+                            >
+                              {it.title}
+                            </a>
+                            {(it.summary || it.description) && (
+                              <p className="text-[13px] sm:text-sm text-foreground/80 mt-3 leading-relaxed">
+                                {it.summary || it.description}
+                              </p>
+                            )}
+                            
+                            {it.tags && it.tags.length > 0 && (
+                              <div className="flex flex-wrap gap-2 mt-4">
+                                {it.tags.slice(0, 5).map(t => (
+                                  <Badge variant="secondary" key={t} className="text-xs font-normal shadow-none bg-secondary/60">
+                                    #{t}
+                                  </Badge>
+                                ))}
+                                {it.category && (
+                                  <Badge variant="outline" className="text-xs font-normal border-primary/20 text-primary">
+                                    {AIHOT_CATEGORIES.find(c => c.value === it.category)?.label || it.category}
+                                  </Badge>
+                                )}
+                              </div>
+                            )}
+
+                            {it.recommendedReason && (
+                              <div className="mt-4 p-3 bg-emerald-500/10 rounded-md border border-emerald-500/20">
+                                 <div className="flex gap-2">
+                                   <span className="text-emerald-700 dark:text-emerald-400 font-medium text-[13px] sm:text-sm whitespace-nowrap">推荐理由:</span>
+                                   <span className="text-emerald-700/90 dark:text-emerald-400/90 text-[13px] sm:text-sm leading-relaxed">{it.recommendedReason}</span>
+                                 </div>
+                              </div>
+                            )}
+                          </div>
+                        </Card>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
