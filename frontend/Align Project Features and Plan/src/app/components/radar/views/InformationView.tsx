@@ -54,8 +54,8 @@ function conciseSummary(item: TrendItem): string {
   return item.summary || item.description || '该条目提供了一个值得关注的 AI 新动态。';
 }
 
-function worthWatching(item: TrendItem): string {
-  return item.recommendedReason || item.summary || item.description || '它在今天的信息流中具有代表性，适合作为快速跟踪入口。';
+function worthWatching(item: TrendItem): string | undefined {
+  return item.recommendedReason;
 }
 
 export function InformationView({ digest }: { digest: RadarDigest }) {
@@ -143,31 +143,36 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
           <EmptyState title="今天暂无精选条目" hint="下方仍可查看完整分类和时间线。" />
         ) : (
           <div className="grid grid-cols-1 gap-3">
-            {todayPicks.map((item) => (
-              <Card key={item.id} className="p-4">
-                <div className="flex items-center gap-2 flex-wrap text-xs text-muted-foreground">
-                  <span>{item.source}</span>
-                  {item.category && (
-                    <Badge variant="outline" className="text-[11px] font-normal">
-                      {AIHOT_CATEGORIES.find((c) => c.value === item.category)?.label || item.category}
-                    </Badge>
+            {todayPicks.map((item) => {
+              const reason = worthWatching(item);
+              return (
+                <Card key={item.id} className="p-4">
+                  <div className="flex items-center gap-2 flex-wrap text-xs text-muted-foreground">
+                    <span>{item.source}</span>
+                    {item.category && (
+                      <Badge variant="outline" className="text-[11px] font-normal">
+                        {AIHOT_CATEGORIES.find((c) => c.value === item.category)?.label || item.category}
+                      </Badge>
+                    )}
+                  </div>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-2 block text-base font-semibold hover:underline underline-offset-2"
+                  >
+                    {item.title}
+                  </a>
+                  <p className="mt-2 text-sm text-foreground/85 leading-relaxed">{conciseSummary(item)}</p>
+                  {reason && (
+                    <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                      <span className="text-foreground">为什么值得看：</span>
+                      {reason}
+                    </p>
                   )}
-                </div>
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-2 block text-base font-semibold hover:underline underline-offset-2"
-                >
-                  {item.title}
-                </a>
-                <p className="mt-2 text-sm text-foreground/85 leading-relaxed">{conciseSummary(item)}</p>
-                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                  <span className="text-foreground">为什么值得看：</span>
-                  {worthWatching(item)}
-                </p>
-              </Card>
-            ))}
+                </Card>
+              );
+            })}
           </div>
         )}
       </section>

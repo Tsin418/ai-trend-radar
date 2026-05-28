@@ -11,20 +11,6 @@ function statusSummary(label: string): string {
   return '由人工加入的长期关注项目，通常和你的长期方向相关。';
 }
 
-function suggestedAction(project: ScoredRadarRepository): string {
-  if (project.repository.newlyPromotedToWatchlist) return '建议动作：继续关注';
-  if (project.repository.watchlistStatus === 'cooling') return '建议动作：暂时观察';
-  if (project.repository.watchlistSource === 'manual') return '建议动作：持续跟踪';
-  return '建议动作：按日观察';
-}
-
-function movementLabel(value?: string): string {
-  if (!value) return '暂无最近移动时间';
-  const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return value;
-  return `${parsed.getMonth() + 1}/${parsed.getDate()} ${parsed.getHours().toString().padStart(2, '0')}:${parsed.getMinutes().toString().padStart(2, '0')}`;
-}
-
 export function WatchlistView({
   projects, onOpenDetail,
 }: {
@@ -62,17 +48,8 @@ export function WatchlistView({
             <p className="mb-3 text-xs text-muted-foreground">{statusSummary(cat)}</p>
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
               {items.map((p) => (
-                <div key={p.repository.repoFullName} className="space-y-2">
+                <div key={p.repository.repoFullName}>
                   <ProjectCard project={p} onOpenDetail={onOpenDetail} showWhy={false} />
-                  <div className="rounded-md border p-2.5 text-xs text-muted-foreground">
-                    <p>
-                      <span className="text-foreground">最近状态：</span>
-                      {movementLabel(p.repository.watchlistLastMovementAt)}
-                    </p>
-                    <p className="mt-1">
-                      <span className="text-foreground">{suggestedAction(p)}</span>
-                    </p>
-                  </div>
                 </div>
               ))}
             </div>
