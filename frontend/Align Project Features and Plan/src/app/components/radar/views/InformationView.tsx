@@ -50,10 +50,6 @@ function publishedAtMs(item: TrendItem): number {
   return Number.isFinite(timestamp) ? timestamp : 0;
 }
 
-function conciseSummary(item: TrendItem): string {
-  return item.summary || item.description || '该条目提供了一个值得关注的 AI 新动态。';
-}
-
 export function InformationView({ digest }: { digest: RadarDigest }) {
   const [activeCategory, setActiveCategory] = useState<AihotCategory>(undefined);
   const [query, setQuery] = useState('');
@@ -130,22 +126,22 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
 
   return (
     <div className="p-4 sm:p-5 space-y-4">
-      <section className="space-y-2">
+      <section className="space-y-1.5">
         <div>
-          <h2 className="text-xl font-bold">Today&apos;s Picks / 今日精选</h2>
-          <p className="text-sm text-muted-foreground mt-1">先看最值得读的 5 条，再决定要不要继续刷完整时间线。</p>
+          <h2 className="text-lg font-bold">Today&apos;s Picks / 今日精选</h2>
+          <p className="text-xs text-muted-foreground mt-0.5">先看 5 条推荐，再往下看完整时间线。</p>
         </div>
         {todayPicks.length === 0 ? (
           <EmptyState title="今天暂无精选条目" hint="下方仍可查看完整分类和时间线。" />
         ) : (
-          <div className="grid grid-cols-1 gap-2">
+          <div className="grid grid-cols-1 gap-1.5">
             {todayPicks.map((item) => {
               return (
-                <Card key={item.id} className="p-2.5">
-                  <div className="flex items-center gap-2 flex-wrap text-xs text-muted-foreground">
+                <Card key={item.id} className="p-2">
+                  <div className="flex items-center gap-1.5 flex-wrap text-[11px] text-muted-foreground leading-none">
                     <span>{item.source}</span>
                     {item.category && (
-                      <Badge variant="outline" className="text-[11px] font-normal">
+                      <Badge variant="outline" className="text-[10px] font-normal px-1.5 py-0">
                         {AIHOT_CATEGORIES.find((c) => c.value === item.category)?.label || item.category}
                       </Badge>
                     )}
@@ -154,11 +150,10 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
                     href={item.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1.5 block text-[15px] font-semibold hover:underline underline-offset-2 line-clamp-2"
+                    className="mt-1 block text-sm font-semibold hover:underline underline-offset-2 line-clamp-1 leading-5"
                   >
                     {item.title}
                   </a>
-                  <p className="mt-1 text-sm text-foreground/85 leading-relaxed line-clamp-2">{conciseSummary(item)}</p>
                 </Card>
               );
             })}
