@@ -818,5 +818,113 @@
     },
     "createdAt": "2026-05-27T13:41:12.739Z",
     "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-05-28T05:10:17Z": {
+    "summary": {
+      "oneLiner": "Open-source, local-first alternative to Claude Design that turns 16 coding-agent CLIs into a design engine with 132 skills and 150 design systems.",
+      "problemSolved": "Claude Design is closed-source, paid-only, cloud-only, and locked to Anthropic's model. Open Design provides the same artifact-first design workflow but runs locally, supports BYOK (bring your own key) at every layer, and works with any major coding agent CLI.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sudden_breakout",
+      "whyNow": "The repo has exploded from 0 to 54,155 stars in roughly two weeks, with a 24-hour delta of 1,863 stars and a three-day average of 806. The acceleration ratio of 2.3 indicates a sudden breakout. This is a rare, viral-level attention event in the AI design tools space.",
+      "whatChanged": "The release of v0.8.0-preview on 2026-05-28, announced as 'Design's old world ends here,' likely triggered the surge. The README explicitly calls out 40k stars in two weeks and asks the community to push further. No single external mention is identified, but the rapid iteration and community call-to-action are clear.",
+      "whyTrending": "It directly addresses the demand for an open, local, and agent-agnostic alternative to Claude Design, which went viral itself. The project's speed (40k stars in two weeks), breadth (16 agents, 132 skills, 150 design systems), and 'local-first' ethos resonate with developers who want control and flexibility.",
+      "developerTakeaway": "This project demonstrates that the market for open-source, local-first AI design tools is massive and underserved. Developers should watch how the community builds on this foundation, especially around skill composability and multi-agent support.",
+      "developerInsight": "The success of Open Design signals a shift from monolithic, cloud-locked AI tools to modular, local-first, agent-agnostic workflows. For AI developers, this means building interoperable components (skills, design systems, agent adapters) that can be composed by users, rather than closed ecosystems.",
+      "targetUsers": "Developers and designers who want to use AI for design without vendor lock-in, especially those already using coding agents like Claude Code, Cursor, or Gemini CLI. Also teams that need local-first, self-hostable design prototyping.",
+      "riskNotes": "The project is very early (v0.8.0-preview) with 340 open issues. Rapid growth may strain maintenance. The reliance on multiple external CLIs and BYOK proxies introduces complexity and potential compatibility issues. The 'sudden breakout' trend could fade if the novelty wears off or if Anthropic releases a more open version.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-28T05:13:40.622Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-05-28T02:14:39Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, engineered around prefix-cache stability to keep token costs low across long sessions.",
+      "problemSolved": "Generic AI coding agents waste tokens on repeated context re-processing. Reasonix locks the prefix cache so that long-running sessions maintain >99% cache hit rates, slashing API costs by ~80% compared to uncached usage.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sudden_breakout",
+      "whyNow": "The repo gained 3,097 stars in the last 24 hours and 1,922 stars yesterday, with a 7-day average delta of 1,515.5 and an acceleration ratio of 2 (medium). This is a sudden breakout — the project crossed 11,987 stars with 685 forks and 286 open issues, indicating explosive community interest. The velocity badges (Top 2 in Agents, Top 3 in LLMs, Top 3 in CLI) confirm it's one of the fastest-growing repos in its category.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. However, the recent release (within 30 days) and the detailed README with benchmarks showing 99.82% cache hit and cost savings likely drove a wave of adoption. The addition of a desktop client prerelease and QQ channel integration may have also expanded the user base.",
+      "whyTrending": "It offers a practical, cost-saving solution for developers who use DeepSeek models extensively. The focus on prefix-cache stability is a unique selling point that directly addresses a pain point (high API costs) without sacrificing functionality. The polished CLI, extensive configuration, and community features (Discord, QQ) lower the barrier to entry.",
+      "developerTakeaway": "If you use DeepSeek models for coding tasks, Reasonix can dramatically reduce your token spend while maintaining a full-featured agent loop. The architecture is worth studying for anyone building cache-aware LLM applications.",
+      "developerInsight": "This signals a shift toward model-specific optimizations in AI tooling. Rather than building generic agents that work with any LLM, Reasonix goes all-in on DeepSeek's prefix-cache mechanic, achieving cost efficiencies that generic frameworks cannot match. Developers should consider whether their workflows can benefit from similar cache-aware designs.",
+      "targetUsers": "Developers who use DeepSeek models for coding assistance, especially those running long interactive sessions or batch processing. Also relevant for teams looking to reduce API costs without switching away from DeepSeek.",
+      "riskNotes": "DeepSeek-only — if you switch models, Reasonix loses its core advantage. The project is relatively new (11.9k stars but 286 open issues), so stability and feature completeness may still be evolving. The desktop client is prerelease and not code-signed, which may deter some users.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-28T05:13:40.856Z",
+    "model": "deepseek-v4-flash"
+  },
+  "sickn33/antigravity-awesome-skills:2026-05-27T19:39:30Z": {
+    "summary": {
+      "oneLiner": "An installable library of 1,480+ reusable agentic skills (SKILL.md playbooks) for Claude Code, Cursor, Codex CLI, Gemini CLI, and other AI coding assistants, with an npm installer and tool-specific setup.",
+      "problemSolved": "Eliminates the need to collect and manage one-off prompt snippets by providing a searchable, installable catalog of structured skills that give AI coding assistants better context, constraints, and outputs for recurring tasks.",
+      "aiCategory": "MCP / Tool Calling",
+      "trendType": "sudden_breakout",
+      "whyNow": "With 38,951 stars, a 24-hour delta of +235, and an acceleration ratio of 2.1 (medium, above the 2.0 threshold for sudden breakout), this repo is experiencing a clear velocity spike. The three-day average star delta of 113.5 and the rule-based trend type of 'sudden_breakout' confirm a rapid increase in attention momentum, likely driven by the recent V11.8.0 release and growing adoption of AI coding assistants.",
+      "whatChanged": "The latest release V11.8.0 (within 30 days) expanded the skill count to 1,480+ and updated the README with tool-specific install flags and plugin marketplace flows. The high commit activity and recent push (May 27, 2026) indicate active maintenance. No single external trigger is identifiable, but the combination of a new release and the expanding ecosystem of AI coding tools (Claude Code, Gemini CLI, etc.) likely fueled the breakout.",
+      "whyTrending": "It addresses a universal pain point for developers using AI coding assistants: how to consistently get high-quality, task-specific behavior from agents. The npm installer and tool-specific setup make it immediately useful, and the 1,480+ skill catalog offers broad coverage across development, testing, security, and product tasks.",
+      "developerTakeaway": "This is a practical, ready-to-use skill library that can significantly improve the consistency and quality of AI coding assistant outputs. Developers should install it via npx and explore the bundles and workflows to quickly integrate it into their daily workflow.",
+      "developerInsight": "The rapid star growth signals a strong market demand for structured, reusable agentic skills. This trend suggests that the future of AI-assisted development will rely on curated skill libraries rather than ad-hoc prompting, and projects like this may become essential infrastructure for AI coding workflows.",
+      "targetUsers": "Developers using Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, Kiro, OpenCode, or GitHub Copilot who want to improve the reliability and effectiveness of their AI coding assistants with pre-built, installable skills.",
+      "riskNotes": "The library is community-driven and may contain low-quality or outdated skills. Users should review skills before use, especially for security-sensitive tasks. The rapid growth could lead to maintenance challenges or skill bloat.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-28T05:13:52.120Z",
+    "model": "deepseek-v4-flash"
+  },
+  "HKUDS/nanobot:2026-05-27T18:17:16Z": {
+    "summary": {
+      "oneLiner": "An ultra-lightweight, open-source AI agent that connects LLMs to tools, chats, and workflows with minimal overhead.",
+      "problemSolved": "Existing AI agents are often heavy, complex, or tied to specific platforms. nanobot provides a small, readable core loop that supports multiple chat channels, memory, MCP, and easy deployment, letting developers go from local setup to a long-running personal agent quickly.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sudden_breakout",
+      "whyNow": "With 43,284 stars, a 24-hour delta of +129, and an acceleration ratio of 2.6 (medium), nanobot is experiencing a sudden breakout. The three-day average star delta of 50.5 and sustained commit activity (recent commits within 7 days) indicate strong and growing attention. The project has a recent release (v0.2.0 on 2026-05-15) and a high rule-based score of 72, signaling it is a hot project in the AI agent space.",
+      "whatChanged": "The recent v0.2.0 release (2026-05-15) introduced major features like `/goal` for sustained objectives, WebUI bundled in the wheel, image generation, and 5 new providers with fallback models. This release, along with a flurry of daily updates (e.g., streaming reasoning, NVIDIA NIM support, locale-aware WebUI), likely triggered the breakout.",
+      "whyTrending": "nanobot fills a gap for developers who want a lightweight, extensible AI agent that works across multiple chat platforms (Telegram, Discord, Slack, Feishu, etc.) and LLM providers (OpenAI, Anthropic, DeepSeek, etc.). Its rapid iteration and community engagement (multiple language docs, active Discord/WeChat) fuel its popularity.",
+      "developerTakeaway": "If you need a personal AI agent that can run locally, connect to various tools and channels, and be customized with minimal code, nanobot is a strong candidate. Its architecture is designed for extensibility (plugins, MCP, custom skills) and it supports production features like memory, cron, and sandboxing.",
+      "developerInsight": "nanobot signals a shift toward lightweight, multi-provider, multi-channel AI agents that prioritize developer experience and ease of deployment. It competes with heavier frameworks by offering a smaller footprint and faster setup, which could accelerate adoption of agent-based workflows in personal and small-team settings.",
+      "targetUsers": "Developers and power users who want to build and run their own AI agent for personal productivity, team collaboration, or automation across chat platforms. Also suitable for those exploring agent frameworks without committing to a heavyweight solution.",
+      "riskNotes": "The project is very young (first release in 2026) and has a high number of open issues (886) relative to its size, which may indicate rapid but potentially unstable development. The sudden breakout could attract unsustainable expectations. Additionally, reliance on multiple third-party APIs (LLM providers, chat platforms) introduces dependency risks.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-28T05:13:52.485Z",
+    "model": "deepseek-v4-flash"
+  },
+  "ruvnet/ruflo:2026-05-28T03:33:07Z": {
+    "summary": {
+      "oneLiner": "Ruflo is a multi-agent orchestration platform for Claude Code that enables coordinated swarms, self-learning memory, and federated agent communication across machines.",
+      "problemSolved": "Claude Code agents operate in isolation with no shared memory, coordination, or ability to collaborate across sessions or machines. Ruflo solves this by providing a full orchestration layer — swarms, persistent memory, RAG, federation, and enterprise security — so agents work as a cohesive system.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sudden_breakout",
+      "whyNow": "Ruflo is experiencing a sudden breakout with 726 stars in 24 hours, a 2.2x acceleration ratio, and 55,883 total stars. The three-day average star delta of 325.5 and yesterday's 310 stars indicate sustained high velocity. This level of attention suggests a major release or community event driving rapid adoption.",
+      "whatChanged": "The project was recently renamed from 'Claude Flow' to 'Ruflo' and has a new release within 30 days. The README mentions a summit in Budapest (June 2–3, 2026) and a UI beta at flo.ruv.io. The combination of rebranding, new features (33 plugins, federation, self-learning), and active promotion likely triggered the breakout.",
+      "whyTrending": "Ruflo addresses a critical gap in the Claude Code ecosystem: multi-agent coordination. With 33 plugins covering orchestration, memory, security, testing, and domain-specific tasks, it offers a comprehensive solution. The low-friction install (npx ruflo init) and Claude Code plugin path lower the barrier to entry.",
+      "developerTakeaway": "Ruflo is the most ambitious agent orchestration platform for Claude Code. Developers should evaluate it if they need multi-agent workflows, persistent memory, or cross-machine federation. The plugin architecture allows incremental adoption.",
+      "developerInsight": "This signals that the market for agent orchestration is maturing — developers want more than single-agent tools. Ruflo's sudden breakout indicates strong demand for coordinated, memory-enabled agent systems. The focus on Claude Code suggests Anthropic's ecosystem is becoming a primary platform for agentic AI.",
+      "targetUsers": "Claude Code users building multi-agent systems, AI engineers needing swarm coordination, teams requiring federated agent communication, and developers seeking enterprise-grade agent memory and security.",
+      "riskNotes": "The project is very new (rebranded recently) with 607 open issues, suggesting rapid development but potential instability. The README contains marketing language and unverified claims (e.g., '22.2M+ ecosystem downloads'). The dependency on Claude Code limits portability. The sudden breakout may be partially driven by hype.",
+      "confidence": "medium"
+    },
+    "createdAt": "2026-05-28T05:14:01.663Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-05-28T05:14:57Z": {
+    "summary": {
+      "oneLiner": "Open-source, local-first alternative to Claude Design that turns 16 coding-agent CLIs into a design engine with 132 skills and 150 design systems.",
+      "problemSolved": "Claude Design is closed-source, paid-only, cloud-only, and locked to Anthropic's model. Open Design provides a self-hostable, BYOK (bring your own key) alternative that works with any major coding agent CLI, runs locally, and supports multiple export formats.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sudden_breakout",
+      "whyNow": "The repo has exploded from 0 to 54,155 stars in roughly two weeks, with a 24-hour star delta of 1,863 and a three-day average of 806. The acceleration ratio of 2.3 indicates a sudden breakout, likely driven by the 0.8.0-preview release and the announcement that 'Design's old world ends here.' This is a rare moment of massive community attention on an open-source design tool.",
+      "whatChanged": "The 0.8.0-preview release was announced on 2026-05-28, along with a call to action in the README. The project also gained significant external buzz on social media and developer forums, though specific sources are not listed. The rapid star growth suggests a viral moment, possibly from Hacker News, X/Twitter, or Reddit.",
+      "whyTrending": "It directly challenges a popular but locked-down product (Claude Design) with an open, local-first, multi-agent alternative. The combination of 'vibe coding' appeal, no-code prototyping, and support for 16 different agent CLIs makes it broadly relevant to AI developers, designers, and product builders.",
+      "developerTakeaway": "This project demonstrates that the market wants open, composable, and local-first alternatives to AI-powered design tools. Developers can learn from its architecture: a local daemon that orchestrates multiple agent CLIs, a skill system for composable workflows, and a BYOK proxy for model flexibility.",
+      "developerInsight": "The success of Open Design signals a shift toward agent-agnostic, local-first design tools. Developers should consider building tools that integrate with existing agent ecosystems rather than creating new ones. The BYOK pattern reduces vendor lock-in and increases adoption.",
+      "targetUsers": "AI developers, designers, product builders, and anyone who wants to generate design prototypes, slides, images, or videos using AI agents without being locked into a single vendor.",
+      "riskNotes": "The project is very early (0.8.0-preview) with 339 open issues. The rapid growth may lead to maintenance challenges. The README explicitly states they are 'iterating fast on main,' which could mean instability. Also, reliance on multiple third-party CLIs may introduce compatibility issues.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-28T05:16:13.780Z",
+    "model": "deepseek-v4-flash"
   }
 }

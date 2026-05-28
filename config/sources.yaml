@@ -8,6 +8,7 @@ sources:
 
   aihot:
     enabled: true
+    endpoint: https://aihot.virxact.com/api/public/items
     categories:
       - models
       - products
@@ -15,6 +16,9 @@ sources:
       - industry
       - tools
     limit: 30
+    timeout_ms: 20000
+    max_retries: 2
+    days_back: 3
 
   huggingface_models:
     enabled: true

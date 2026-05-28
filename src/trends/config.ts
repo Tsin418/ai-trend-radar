@@ -69,6 +69,11 @@ function readNumber(block: string, key: string): number | undefined {
   return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined;
 }
 
+function readString(block: string, key: string): string | undefined {
+  const match = block.match(new RegExp(`^\\s{4}${key}:\\s*(.+?)\\s*$`, 'm'));
+  return match ? match[1].replace(/^["']|["']$/g, '').trim() : undefined;
+}
+
 function readList(block: string, key: string): string[] | undefined {
   const lines = block.split(/\r?\n/);
   const start = lines.findIndex((line) => new RegExp(`^\\s{4}${key}:\\s*$`).test(line));
@@ -92,6 +97,9 @@ function mergeYamlSource(fileText: string, sourceKey: string, fallback: SourceCo
     ...fallback,
     enabled: readBool(block, 'enabled') ?? fallback.enabled,
     limit: readNumber(block, 'limit') ?? fallback.limit,
+    endpoint: readString(block, 'endpoint') ?? fallback.endpoint,
+    timeoutMs: readNumber(block, 'timeout_ms') ?? fallback.timeoutMs,
+    maxRetries: readNumber(block, 'max_retries') ?? fallback.maxRetries,
     categories: readList(block, 'categories') ?? fallback.categories,
     lists: readList(block, 'lists') ?? fallback.lists,
     limitPerList: readNumber(block, 'limit_per_list') ?? fallback.limitPerList,
@@ -122,12 +130,21 @@ export function loadMultiSourceConfig(configPath = 'config/sources.yaml'): Multi
       ...yamlConfig.aihot,
       enabled: parseBoolean(process.env.AIHOT_ENABLED, yamlConfig.aihot.enabled ?? true),
       limit: parsePositiveInteger(process.env.AIHOT_LIMIT, yamlConfig.aihot.limit ?? 30),
+      endpoint: process.env.AIHOT_ENDPOINT?.trim() || yamlConfig.aihot.endpoint,
+      timeoutMs: parsePositiveInteger(process.env.AIHOT_TIMEOUT_MS, yamlConfig.aihot.timeoutMs ?? 20_000),
+      maxRetries: parsePositiveInteger(process.env.AIHOT_MAX_RETRIES, yamlConfig.aihot.maxRetries ?? 2),
+      daysBack: parsePositiveInteger(process.env.AIHOT_DAYS_BACK, yamlConfig.aihot.daysBack ?? 3),
       categories: envCsv('AIHOT_CATEGORIES', yamlConfig.aihot.categories ?? [])
     },
     huggingfaceModels: {
       ...yamlConfig.huggingfaceModels,
       enabled: parseBoolean(process.env.HUGGINGFACE_MODELS_ENABLED, yamlConfig.huggingfaceModels.enabled ?? true),
-      limit: parsePositiveInteger(process.env.HUGGINGFACE_MODELS_LIMIT, yamlConfig.huggingfaceModels.limit ?? 30)
+      limit: parsePositiveInteger(process.env.HUGGINGFACE_MODELS_LIMIT, yamlConfig.huggingfaceModels.limit ?? 30),
+      endpoint: process.env.HUGGINGFACE_MODELS_ENDPOINT?.trim() || yamlConfig.huggingfaceModels.endpoint,
+      timeoutMs: parsePositiveInteger(
+        process.env.HUGGINGFACE_MODELS_TIMEOUT_MS,
+        yamlConfig.huggingfaceModels.timeoutMs ?? 10_000
+      )
     },
     huggingfaceSpaces: {
       ...yamlConfig.huggingfaceSpaces,
