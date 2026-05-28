@@ -26,7 +26,13 @@ export function ProjectCard({
             >
               {r.repoFullName}
             </button>
-            {r.isWatchlist && <WatchlistBadge />}
+            {r.isWatchlist && (
+              <WatchlistBadge
+                source={r.watchlistSource}
+                status={r.watchlistStatus}
+                newlyPromoted={r.newlyPromotedToWatchlist}
+              />
+            )}
           </div>
           <p className="mt-1 text-sm text-muted-foreground line-clamp-2">{r.description}</p>
         </div>

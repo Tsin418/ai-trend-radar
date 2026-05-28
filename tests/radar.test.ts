@@ -66,7 +66,8 @@ test('daily digest prioritizes hot projects and fills with early signals', () =>
   const profile = loadRadarProfile();
   const store = createTempStore();
   const now = new Date('2026-05-24T01:00:00.000Z');
-  const [hot, early, fallback] = createSampleRepositories(now);
+  const [hot, earlyBase, fallback] = createSampleRepositories(now);
+  const early = { ...earlyBase, isWatchlist: false };
   store.addSnapshots(createSnapshots([
     withStars(hot, hot.stars - 80),
     withStars(early, early.stars - 30),
@@ -85,6 +86,44 @@ test('daily digest prioritizes hot projects and fills with early signals', () =>
   assert.equal(digest.hotProjects[0].repository.repoFullName, hot.repoFullName);
   assert.ok(digest.earlySignals.some((item) => item.repository.repoFullName === early.repoFullName));
   assert.ok(digest.selectedProjects.length >= 2);
+});
+
+test('daily digest promotes recurring hot projects into auto watchlist', () => {
+  const profile = loadRadarProfile();
+  const store = createTempStore();
+  const now = new Date('2026-05-24T01:00:00.000Z');
+  const repo = createSampleRepositories(now)[0];
+  store.addSnapshots(createSnapshots([withStars(repo, repo.stars - 90)], new Date(now.getTime() - 24 * 60 * 60 * 1000).toISOString()));
+  store.addSnapshots(createSnapshots([repo], now.toISOString()));
+  store.recordHotAppearance(repo.repoFullName, '2026-05-20');
+
+  const scored = createPotentialScoreRanker().score([repo], profile, store, now.toISOString());
+  const digest = buildDailyRadarDigest(scored, profile, '2026-05-24', 10, false, store);
+  const state = store.getWatchlistState(repo.repoFullName);
+
+  assert.equal(state?.source, 'auto');
+  assert.equal(state?.status, 'auto_active');
+  assert.equal(state?.lastMovementAt, '2026-05-24');
+  assert.equal(digest.hotProjects.some((item) => item.repository.repoFullName === repo.repoFullName), false);
+  assert.equal(digest.watchlistMovements[0].repository.repoFullName, repo.repoFullName);
+  assert.equal(digest.watchlistMovements[0].repository.newlyPromotedToWatchlist, true);
+});
+
+test('manual watchlist projects are excluded from hot projects', () => {
+  const profile = loadRadarProfile();
+  const store = createTempStore();
+  const now = new Date('2026-05-24T01:00:00.000Z');
+  const repo = createSampleRepositories(now)[0];
+  store.syncManualWatchlist([{ repoFullName: repo.repoFullName, categoryKey: 'manual' }], '2026-05-24');
+  store.addSnapshots(createSnapshots([withStars(repo, repo.stars - 90)], new Date(now.getTime() - 24 * 60 * 60 * 1000).toISOString()));
+  store.addSnapshots(createSnapshots([repo], now.toISOString()));
+
+  const scored = createPotentialScoreRanker().score([repo], profile, store, now.toISOString());
+  const digest = buildDailyRadarDigest(scored, profile, '2026-05-24', 10, false, store);
+
+  assert.equal(digest.hotProjects.length, 0);
+  assert.equal(digest.watchlistMovements[0].repository.watchlistSource, 'manual');
+  assert.equal(digest.watchlistMovements[0].repository.watchlistStatus, 'manual_active');
 });
 
 test('daily digest exposes high-confidence accelerating projects', () => {

@@ -177,6 +177,22 @@ export function getRadarStorePath(): string {
   return process.env.RADAR_STORE_PATH || 'data/radar-store.json';
 }
 
+export interface WatchlistLifecycleConfig {
+  hotWindowDays: number;
+  hotPromotionCount: number;
+  inactiveDays: number;
+  coolingDays: number;
+}
+
+export function getWatchlistLifecycleConfig(): WatchlistLifecycleConfig {
+  return {
+    hotWindowDays: parseNumber(process.env.RADAR_WATCHLIST_HOT_WINDOW_DAYS, 14),
+    hotPromotionCount: parseNumber(process.env.RADAR_WATCHLIST_HOT_PROMOTION_COUNT, 2),
+    inactiveDays: parseNumber(process.env.RADAR_WATCHLIST_INACTIVE_DAYS, 14),
+    coolingDays: parseNumber(process.env.RADAR_WATCHLIST_COOLING_DAYS, 7)
+  };
+}
+
 export interface LLMEnrichmentConfig {
   enabled: boolean;
   apiKey?: string;

@@ -11,7 +11,14 @@ export function WatchlistView({
 }) {
   const watchlist = projects.filter((p) => p.repository.isWatchlist);
   const grouped = watchlist.reduce<Record<string, ScoredRadarRepository[]>>((acc, p) => {
-    (acc[p.repository.category] ??= []).push(p);
+    const status = p.repository.newlyPromotedToWatchlist
+      ? 'Newly Promoted'
+      : p.repository.watchlistStatus === 'cooling'
+        ? 'Cooling'
+        : p.repository.watchlistSource === 'auto'
+          ? 'Auto Watchlist'
+          : 'Manual Watchlist';
+    (acc[status] ??= []).push(p);
     return acc;
   }, {});
 
@@ -19,7 +26,7 @@ export function WatchlistView({
     <div className="p-6 space-y-5">
       <div>
         <h2 className="text-lg">Watchlist</h2>
-        <p className="text-sm text-muted-foreground">{watchlist.length} tracked repos · grouped by category</p>
+        <p className="text-sm text-muted-foreground">{watchlist.length} tracked repos with current movements · grouped by state</p>
       </div>
       {watchlist.length === 0 ? (
         <EmptyState title="No watchlist projects yet" hint="Add repos to your watchlist to track long-term." />

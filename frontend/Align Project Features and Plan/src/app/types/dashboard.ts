@@ -3,6 +3,8 @@ import type {
   SourceHealth,
   SourceType,
   TrendType,
+  WatchlistSource,
+  WatchlistStatus,
 } from './radar';
 
 export interface DashboardProject {
@@ -48,6 +50,12 @@ export interface DashboardProject {
   firstSeenAt: string;
   lastSeenAt: string;
   isWatchlist: boolean;
+  watchlistSource?: WatchlistSource;
+  watchlistStatus?: WatchlistStatus;
+  watchlistPromotedAt?: string;
+  watchlistLastMovementAt?: string;
+  watchlistPromotedReason?: string;
+  newlyPromotedToWatchlist?: boolean;
 }
 
 export interface DashboardTrendItem {

@@ -1,6 +1,8 @@
 export type RadarRunMode = 'daily' | 'weekly';
 export type TrendType = 'sustained_hot' | 'sudden_breakout' | 'early_signal';
 export type RiskLevel = 'Low' | 'Medium' | 'High' | 'Unknown';
+export type WatchlistSource = 'manual' | 'auto';
+export type WatchlistStatus = 'manual_active' | 'auto_active' | 'cooling' | 'archived';
 export type SourceType =
   | 'opensource'
   | 'product_launch'
@@ -30,6 +32,12 @@ export interface RadarRepository {
   isArchived: boolean;
   isFork: boolean;
   isWatchlist: boolean;
+  watchlistSource?: WatchlistSource;
+  watchlistStatus?: WatchlistStatus;
+  watchlistPromotedAt?: string;
+  watchlistLastMovementAt?: string;
+  watchlistPromotedReason?: string;
+  newlyPromotedToWatchlist?: boolean;
 }
 
 export interface RepoScore {

@@ -58,6 +58,12 @@ function toScoredRepository(project: DashboardProject): ScoredRadarRepository {
       isArchived: false,
       isFork: false,
       isWatchlist: project.isWatchlist,
+      watchlistSource: project.watchlistSource,
+      watchlistStatus: project.watchlistStatus,
+      watchlistPromotedAt: project.watchlistPromotedAt,
+      watchlistLastMovementAt: project.watchlistLastMovementAt,
+      watchlistPromotedReason: project.watchlistPromotedReason,
+      newlyPromotedToWatchlist: project.newlyPromotedToWatchlist,
     },
     score: {
       repoFullName: project.repoFullName,

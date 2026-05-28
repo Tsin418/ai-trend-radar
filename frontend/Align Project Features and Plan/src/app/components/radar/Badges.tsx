@@ -1,6 +1,6 @@
 import { Badge } from '../ui/badge';
 import { cn } from '../ui/utils';
-import type { RiskLevel, TrendType } from '../../types/radar';
+import type { RiskLevel, TrendType, WatchlistSource, WatchlistStatus } from '../../types/radar';
 
 export function TrendBadge({ type }: { type: TrendType }) {
   const map: Record<TrendType, { label: string; cls: string }> = {
@@ -48,10 +48,32 @@ export function SourceBadge({ source }: { source: string }) {
   );
 }
 
-export function WatchlistBadge() {
+export function WatchlistBadge({
+  source,
+  status,
+  newlyPromoted,
+}: {
+  source?: WatchlistSource;
+  status?: WatchlistStatus;
+  newlyPromoted?: boolean;
+}) {
+  const label = newlyPromoted
+    ? 'Newly Promoted'
+    : status === 'cooling'
+      ? 'Cooling'
+      : source === 'auto'
+        ? 'Auto Watchlist'
+        : 'Manual Watchlist';
+  const cls = newlyPromoted
+    ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+    : status === 'cooling'
+      ? 'bg-sky-50 text-sky-700 border-sky-200'
+      : source === 'auto'
+        ? 'bg-indigo-50 text-indigo-700 border-indigo-200'
+        : 'bg-amber-50 text-amber-700 border-amber-200';
   return (
-    <Badge variant="outline" className="rounded-md bg-amber-50 text-amber-700 border-amber-200">
-      ★ Watchlist
+    <Badge variant="outline" className={cn('rounded-md', cls)}>
+      ★ {label}
     </Badge>
   );
 }

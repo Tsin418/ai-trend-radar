@@ -38,7 +38,13 @@ export function ProjectTable({
                 <TableCell>
                   <div className="flex items-center gap-2">
                     <span className="truncate">{r.repoFullName}</span>
-                    {r.isWatchlist && <WatchlistBadge />}
+                    {r.isWatchlist && (
+                      <WatchlistBadge
+                        source={r.watchlistSource}
+                        status={r.watchlistStatus}
+                        newlyPromoted={r.newlyPromotedToWatchlist}
+                      />
+                    )}
                   </div>
                   <div className="text-xs text-muted-foreground line-clamp-1">{r.description}</div>
                 </TableCell>

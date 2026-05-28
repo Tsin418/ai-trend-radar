@@ -118,6 +118,14 @@ export async function collectAndScoreRadarCandidates(options: RadarRunOptions = 
   const store = new JsonRadarStore(getRadarStorePath());
   const searchCollector = createGitHubSearchCollector();
   const watchlist = loadWatchlist();
+  store.syncManualWatchlist(watchlist, collectedAt.slice(0, 10));
+  const autoWatchlist = store.getAutoWatchlistNamesToFetch().map((repoFullName) => ({
+    repoFullName,
+    categoryKey: 'auto_watchlist'
+  }));
+  const watchlistToFetch = [...watchlist, ...autoWatchlist].filter((item, index, items) =>
+    items.findIndex((candidate) => candidate.repoFullName.toLowerCase() === item.repoFullName.toLowerCase()) === index
+  );
   const errors: string[] = [];
   const sourceHealth: SourceHealth[] = [];
   let repositories: RadarRepository[] = [];
@@ -150,7 +158,7 @@ export async function collectAndScoreRadarCandidates(options: RadarRunOptions = 
     sourceHealth.push(search.health);
     if (search.error) errors.push(`GitHub Search collection failed: ${search.health.error}`);
 
-    const watchlistResult = await collectWithHealth('watchlist', () => searchCollector.fetchByFullNames(watchlist.map((item) => item.repoFullName), collectedAt, watchlist));
+    const watchlistResult = await collectWithHealth('watchlist', () => searchCollector.fetchByFullNames(watchlistToFetch.map((item) => item.repoFullName), collectedAt, watchlistToFetch));
     repositories.push(...watchlistResult.repositories);
     sourceHealth.push(watchlistResult.health);
     if (watchlistResult.error) errors.push(`Watchlist collection failed: ${watchlistResult.health.error}`);

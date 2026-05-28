@@ -23,7 +23,13 @@ export function ProjectDetailDrawer({
               <div className="flex items-start justify-between gap-3">
                 <SheetTitle className="text-base flex items-center gap-2 flex-wrap">
                   <span>{project.repository.repoFullName}</span>
-                  {project.repository.isWatchlist && <WatchlistBadge />}
+                  {project.repository.isWatchlist && (
+                    <WatchlistBadge
+                      source={project.repository.watchlistSource}
+                      status={project.repository.watchlistStatus}
+                      newlyPromoted={project.repository.newlyPromotedToWatchlist}
+                    />
+                  )}
                 </SheetTitle>
                 <Button variant="outline" size="sm" asChild>
                   <a href={project.repository.repoUrl} target="_blank" rel="noreferrer">
@@ -110,7 +116,16 @@ export function ProjectDetailDrawer({
                 <Meta k="Pushed" v={fmtRelative(project.repository.pushedAt)} />
                 <Meta k="First seen" v={fmtDate(project.repository.firstSeenAt)} />
                 <Meta k="Last seen" v={fmtDate(project.repository.lastSeenAt)} />
+                {project.repository.watchlistPromotedAt && (
+                  <Meta k="Promoted" v={fmtDate(project.repository.watchlistPromotedAt)} />
+                )}
+                {project.repository.watchlistLastMovementAt && (
+                  <Meta k="Last movement" v={fmtDate(project.repository.watchlistLastMovementAt)} />
+                )}
               </div>
+              {project.repository.watchlistPromotedReason && (
+                <p className="mt-2 text-xs text-muted-foreground">{project.repository.watchlistPromotedReason}</p>
+              )}
               {project.repository.topics?.length > 0 && (
                 <div className="mt-2 flex flex-wrap gap-1">
                   {project.repository.topics.map((t) => (
