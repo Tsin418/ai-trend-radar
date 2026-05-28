@@ -6,10 +6,11 @@ import { fmtDelta, fmtNum, fmtRelative } from '../../utils/format';
 import type { ScoredRadarRepository } from '../../types/radar';
 
 export function ProjectCard({
-  project, onOpenDetail,
+  project, onOpenDetail, showWhy = true,
 }: {
   project: ScoredRadarRepository;
   onOpenDetail: (repoFullName: string) => void;
+  showWhy?: boolean;
 }) {
   const r = project.repository;
   const s = project.score;
@@ -70,9 +71,11 @@ export function ProjectCard({
         </div>
       </div>
 
-      <p className="mt-3 text-xs text-muted-foreground">
-        <span className="text-foreground">Why:</span> {project.whyItMatters}
-      </p>
+      {showWhy && (
+        <p className="mt-3 text-xs text-muted-foreground">
+          <span className="text-foreground">Why:</span> {project.whyItMatters}
+        </p>
+      )}
 
       <div className="mt-3 flex items-center justify-between">
         <div className="flex items-center gap-3 text-xs text-muted-foreground">

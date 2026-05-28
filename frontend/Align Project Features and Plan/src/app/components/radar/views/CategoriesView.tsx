@@ -6,7 +6,6 @@ import type { RadarDigest } from '../../../types/radar';
 
 export function CategoriesView({ digest }: { digest: RadarDigest }) {
   const stats = digest.categoryStats ?? [];
-  const hasBackendSelectionCounts = stats.some((s) => s.selectedRepoCount != null);
 
   const topByCategory: Record<string, typeof digest.selectedProjects[number] | undefined> = {};
   for (const p of digest.selectedProjects) {
@@ -23,36 +22,7 @@ export function CategoriesView({ digest }: { digest: RadarDigest }) {
         <p className="text-sm text-muted-foreground">Direction-level heat across the AI radar profile</p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-        <div className="lg:col-span-2"><CategoryHeatCard stats={stats} /></div>
-        <Card className="p-4">
-          <div className="text-sm mb-3">At a glance</div>
-          <div className="grid grid-cols-2 gap-3 text-sm">
-            <div>
-              <div className="text-xs text-muted-foreground">Tracked categories</div>
-              <div className="text-2xl tabular-nums">{stats.length}</div>
-            </div>
-            <div>
-              <div className="text-xs text-muted-foreground">Total repos</div>
-              <div className="text-2xl tabular-nums">{stats.reduce((a, s) => a + s.repoCount, 0)}</div>
-            </div>
-            <div>
-              <div className="text-xs text-muted-foreground">
-                {hasBackendSelectionCounts ? 'Selected repos' : 'New this run'}
-              </div>
-              <div className="text-2xl tabular-nums">
-                {stats.reduce((a, s) => a + (hasBackendSelectionCounts ? s.selectedRepoCount ?? 0 : s.newRepoCount), 0)}
-              </div>
-            </div>
-            <div>
-              <div className="text-xs text-muted-foreground">Avg weekly Δ</div>
-              <div className="text-2xl tabular-nums">
-                {fmtNum(Math.round(stats.reduce((a, s) => a + (s.averageWeeklyStarDelta ?? 0), 0) / Math.max(1, stats.length)))}
-              </div>
-            </div>
-          </div>
-        </Card>
-      </div>
+      <CategoryHeatCard stats={stats} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
         {stats.map((s) => {
