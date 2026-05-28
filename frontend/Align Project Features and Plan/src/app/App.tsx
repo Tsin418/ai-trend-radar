@@ -25,7 +25,7 @@ const viewLabels: Record<ViewKey, string> = {
   signals: 'Multi-source Signals',
   watchlist: 'Watchlist',
   digests: 'Digests',
-  information: 'Information',
+  information: 'News',
   settings: 'Settings',
 };
 
