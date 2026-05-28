@@ -54,14 +54,6 @@ function conciseSummary(item: TrendItem): string {
   return item.summary || item.description || '该条目提供了一个值得关注的 AI 新动态。';
 }
 
-function worthWatching(item: TrendItem): string | undefined {
-  const isAihotSource = item.sourceType === 'curated_trend'
-    || item.source.toLowerCase().includes('aihot')
-    || item.originalSource?.toLowerCase().includes('aihot');
-  if (!isAihotSource) return undefined;
-  return item.recommendedReason;
-}
-
 export function InformationView({ digest }: { digest: RadarDigest }) {
   const [activeCategory, setActiveCategory] = useState<AihotCategory>(undefined);
   const [query, setQuery] = useState('');
@@ -148,9 +140,8 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
         ) : (
           <div className="grid grid-cols-1 gap-3">
             {todayPicks.map((item) => {
-              const reason = worthWatching(item);
               return (
-                <Card key={item.id} className="p-4">
+                <Card key={item.id} className="p-3">
                   <div className="flex items-center gap-2 flex-wrap text-xs text-muted-foreground">
                     <span>{item.source}</span>
                     {item.category && (
@@ -167,13 +158,7 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
                   >
                     {item.title}
                   </a>
-                  <p className="mt-2 text-sm text-foreground/85 leading-relaxed">{conciseSummary(item)}</p>
-                  {reason && (
-                    <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                      <span className="text-foreground">为什么值得看：</span>
-                      {reason}
-                    </p>
-                  )}
+                  <p className="mt-1.5 text-sm text-foreground/85 leading-relaxed">{conciseSummary(item)}</p>
                 </Card>
               );
             })}
@@ -240,7 +225,7 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
               
               <div className="relative">
                 <div className="absolute left-[61.5px] sm:left-[77.5px] top-6 bottom-[-32px] w-px bg-border/60"></div>
-                <div className="space-y-6 lg:space-y-8 pb-4">
+                <div className="space-y-4 lg:space-y-6 pb-4">
                   {dateItems.map((it) => {
                     const time = formatTime(it.publishedAt || it.collectedAt);
                     return (
@@ -251,8 +236,8 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
                         <div className="absolute left-[57px] sm:left-[73px] top-[5.5px] w-[10px] h-[10px] rounded-full bg-border group-hover:bg-primary transition-colors ring-4 ring-background z-10"></div>
                         
                         <Card className="flex-1 hover:bg-muted/30 transition-shadow hover:shadow-md min-w-0">
-                          <div className="p-4 sm:p-5">
-                            <div className="flex items-center gap-2 mb-2">
+                          <div className="p-3 sm:p-4">
+                            <div className="flex items-center gap-2 mb-1.5">
                               <span className="text-xs text-muted-foreground font-medium">{it.source}</span>
                             </div>
                             <a
@@ -264,13 +249,13 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
                               {it.title}
                             </a>
                             {(it.summary || it.description) && (
-                              <p className="text-[13px] sm:text-sm text-foreground/80 mt-3 leading-relaxed">
+                              <p className="text-[13px] sm:text-sm text-foreground/80 mt-2 leading-relaxed">
                                 {it.summary || it.description}
                               </p>
                             )}
                             
                             {it.tags && it.tags.length > 0 && (
-                              <div className="flex flex-wrap gap-2 mt-4">
+                              <div className="flex flex-wrap gap-2 mt-3">
                                 {it.tags.slice(0, 5).map(t => (
                                   <Badge variant="secondary" key={t} className="text-xs font-normal shadow-none bg-secondary/60">
                                     #{t}
@@ -285,7 +270,7 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
                             )}
 
                             {it.recommendedReason && (
-                              <div className="mt-4 p-3 bg-emerald-500/10 rounded-md border border-emerald-500/20">
+                              <div className="mt-3 p-2.5 bg-emerald-500/10 rounded-md border border-emerald-500/20">
                                  <div className="flex gap-2">
                                    <span className="text-emerald-700 dark:text-emerald-400 font-medium text-[13px] sm:text-sm whitespace-nowrap">推荐理由:</span>
                                    <span className="text-emerald-700/90 dark:text-emerald-400/90 text-[13px] sm:text-sm leading-relaxed">{it.recommendedReason}</span>
