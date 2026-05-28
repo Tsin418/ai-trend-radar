@@ -18,6 +18,14 @@ const AIHOT_CATEGORIES = [
 
 type AihotCategory = typeof AIHOT_CATEGORIES[number]['value'];
 
+const LOCAL_CATEGORY_ALIASES: Record<Exclude<AihotCategory, undefined>, string[]> = {
+  'ai-models': ['ai-models', 'models'],
+  'ai-products': ['ai-products', 'products'],
+  industry: ['industry'],
+  paper: ['paper', 'papers'],
+  tip: ['tip', 'tools'],
+};
+
 function formatTime(dateStr: string) {
   try {
     const d = new Date(dateStr);
@@ -84,8 +92,12 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
     return () => { ignore = true; };
   }, [activeCategory, debouncedQuery]);
 
-  const displayItems = error && items.length === 0 && !debouncedQuery && !activeCategory 
-    ? fallbackItems 
+  const fallbackDisplayItems = activeCategory
+    ? fallbackItems.filter((item) => LOCAL_CATEGORY_ALIASES[activeCategory].includes(item.category || ''))
+    : fallbackItems;
+
+  const displayItems = error && items.length === 0 && !debouncedQuery
+    ? fallbackDisplayItems
     : items;
 
   const groupedItems = displayItems.reduce<Record<string, TrendItem[]>>((acc, item) => {
@@ -155,16 +167,16 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
               </div>
               
               <div className="relative">
-                <div className="absolute left-[23.5px] sm:left-[31.5px] top-6 bottom-[-32px] w-px bg-border/60"></div>
+                <div className="absolute left-[61.5px] sm:left-[77.5px] top-6 bottom-[-32px] w-px bg-border/60"></div>
                 <div className="space-y-6 lg:space-y-8 pb-4">
                   {dateItems.map((it) => {
                     const time = formatTime(it.publishedAt || it.collectedAt);
                     return (
                       <div key={it.id} className="relative flex items-start gap-4 sm:gap-6 group">
-                        <div className="w-12 sm:w-16 flex-shrink-0 text-right pt-4 text-sm font-medium text-foreground z-10 bg-background/50">
+                        <div className="w-12 sm:w-16 flex-shrink-0 text-right pt-4 text-sm font-medium text-foreground z-10 bg-background">
                           {time}
                         </div>
-                        <div className="absolute left-[19px] sm:left-[27px] top-[21.5px] w-[10px] h-[10px] rounded-full bg-border group-hover:bg-primary transition-colors ring-4 ring-background z-10"></div>
+                        <div className="absolute left-[57px] sm:left-[73px] top-[21.5px] w-[10px] h-[10px] rounded-full bg-border group-hover:bg-primary transition-colors ring-4 ring-background z-10"></div>
                         
                         <Card className="flex-1 hover:bg-muted/30 transition-shadow hover:shadow-md min-w-0">
                           <div className="p-4 sm:p-5">
