@@ -2,7 +2,7 @@ import type { SourceConfig, TrendItem } from '../trends/types.js';
 import { hasAiDeveloperKeyword } from './ai-dev-keywords.js';
 
 const HF_MODELS_ENDPOINT = 'https://huggingface.co/api/models';
-const HF_MODEL_SORT = 'createdAt';
+const HF_MODEL_SORT = process.env.HUGGINGFACE_MODELS_SORT ?? 'lastModified';
 const DEFAULT_MIN_FILTERED_ITEMS = 5;
 
 interface HuggingFaceModel {
@@ -38,6 +38,15 @@ function timeoutSignal(timeoutMs: number): { signal: AbortSignal; cleanup: () =>
   };
 }
 
+function parsePositiveInteger(value: string | undefined, fallback: number): number {
+  const parsed = Number.parseInt(value ?? '', 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
+}
+
+function clampLimit(limit: number): number {
+  return Math.min(Math.max(limit, 1), 100);
+}
+
 function modelUrl(id: string): string {
   return `https://huggingface.co/${id}`;
 }
@@ -51,9 +60,9 @@ export class HuggingFaceModelsCollector {
   private readonly fetchImpl: typeof fetch;
 
   constructor(options: HuggingFaceModelsCollectorOptions = {}) {
-    this.endpoint = options.endpoint ?? HF_MODELS_ENDPOINT;
+    this.endpoint = options.endpoint ?? process.env.HUGGINGFACE_MODELS_ENDPOINT ?? HF_MODELS_ENDPOINT;
     this.limit = options.limit ?? 30;
-    this.timeoutMs = options.timeoutMs ?? 10_000;
+    this.timeoutMs = options.timeoutMs ?? parsePositiveInteger(process.env.HUGGINGFACE_MODELS_TIMEOUT_MS, 10_000);
     this.minFilteredItems = options.minFilteredItems ?? DEFAULT_MIN_FILTERED_ITEMS;
     this.fetchImpl = options.fetchImpl ?? fetch;
   }
@@ -62,7 +71,7 @@ export class HuggingFaceModelsCollector {
     const url = new URL(this.endpoint);
     url.searchParams.set('sort', HF_MODEL_SORT);
     url.searchParams.set('direction', '-1');
-    url.searchParams.set('limit', String(limit));
+    url.searchParams.set('limit', String(clampLimit(limit)));
 
     const timeout = timeoutSignal(this.timeoutMs);
     let response: Response;
@@ -84,7 +93,10 @@ export class HuggingFaceModelsCollector {
     }
 
     if (!response.ok) {
-      throw new Error(`Hugging Face models request failed: HTTP ${response.status}`);
+      const body = await response.text().catch(() => '');
+      throw new Error(
+        `Hugging Face models request failed: HTTP ${response.status}${body ? ` - ${body.slice(0, 300)}` : ''}`
+      );
     }
 
     const models = await response.json() as HuggingFaceModel[];

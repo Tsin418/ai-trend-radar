@@ -121,3 +121,44 @@ test('AIHot collector fetches the public API with a browser user-agent', async (
   assert.match(userAgent ?? '', /Mozilla\/5\.0/);
   assert.equal(items[0].category, 'products');
 });
+
+test('AIHot collector clamps API take parameter to safe bounds', async () => {
+  let requestedUrl = '';
+  const fetchImpl: typeof fetch = async (url) => {
+    requestedUrl = String(url);
+    return new Response(JSON.stringify({ items: [] }), {
+      status: 200,
+      headers: { 'content-type': 'application/json' }
+    });
+  };
+  const collector = new AIHotCollector({ fetchImpl });
+
+  await collector.fetch(250);
+
+  assert.equal(new URL(requestedUrl).searchParams.get('take'), '100');
+});
+
+test('AIHot collector normalizes abort-like errors', async () => {
+  const collector = new AIHotCollector({
+    timeoutMs: 12_345,
+    fetchImpl: async () => {
+      throw new Error('This operation was aborted');
+    }
+  });
+
+  await assert.rejects(
+    () => collector.fetch(5),
+    /AIHot request timed out or was aborted after 12345ms/
+  );
+});
+
+test('AIHot collector includes response body in HTTP errors', async () => {
+  const collector = new AIHotCollector({
+    fetchImpl: async () => new Response('Forbidden crawler user-agent', { status: 403 })
+  });
+
+  await assert.rejects(
+    () => collector.fetch(5),
+    /AIHot request failed: HTTP 403 - Forbidden crawler user-agent/
+  );
+});

@@ -73,6 +73,22 @@ function timeoutSignal(timeoutMs: number): { signal: AbortSignal; cleanup: () =>
   };
 }
 
+function parsePositiveInteger(value: string | undefined, fallback: number): number {
+  const parsed = Number.parseInt(value ?? '', 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
+}
+
+function clampLimit(limit: number): number {
+  return Math.min(Math.max(limit, 1), 100);
+}
+
+function isAbortLikeError(error: unknown): boolean {
+  const message = error instanceof Error ? error.message : String(error);
+  const name = error instanceof Error ? error.name : '';
+  const normalizedMessage = message.toLowerCase();
+  return name === 'AbortError' || normalizedMessage.includes('aborted') || normalizedMessage.includes('abort');
+}
+
 function compact(value: string): string {
   return value.replace(/\s+/g, ' ').trim();
 }
@@ -299,7 +315,7 @@ export class AIHotCollector {
   constructor(options: AIHotCollectorOptions = {}) {
     this.endpoint = options.endpoint ?? process.env.AIHOT_ENDPOINT ?? AIHOT_ITEMS_URL;
     this.limit = options.limit ?? 30;
-    this.timeoutMs = options.timeoutMs ?? 10_000;
+    this.timeoutMs = options.timeoutMs ?? parsePositiveInteger(process.env.AIHOT_TIMEOUT_MS, 20_000);
     this.categories = options.categories ?? [];
     this.fetchImpl = options.fetchImpl ?? fetch;
   }
@@ -309,7 +325,7 @@ export class AIHotCollector {
     const isApiEndpoint = url.pathname.startsWith('/api/public/items');
     if (isApiEndpoint) {
       url.searchParams.set('mode', url.searchParams.get('mode') ?? 'selected');
-      url.searchParams.set('take', String(Math.min(limit, 100)));
+      url.searchParams.set('take', String(clampLimit(limit)));
     }
 
     const timeout = timeoutSignal(this.timeoutMs);
@@ -323,8 +339,8 @@ export class AIHotCollector {
         signal: timeout.signal
       });
     } catch (error) {
-      if (error instanceof Error && error.name === 'AbortError') {
-        throw new Error(`AIHot request timed out after ${this.timeoutMs}ms`);
+      if (isAbortLikeError(error)) {
+        throw new Error(`AIHot request timed out or was aborted after ${this.timeoutMs}ms`);
       }
       throw error;
     } finally {
@@ -332,7 +348,10 @@ export class AIHotCollector {
     }
 
     if (!response.ok) {
-      throw new Error(`AIHot request failed: HTTP ${response.status}`);
+      const body = await response.text().catch(() => '');
+      throw new Error(
+        `AIHot request failed: HTTP ${response.status}${body ? ` - ${body.slice(0, 300)}` : ''}`
+      );
     }
 
     const contentType = response.headers.get('content-type') ?? '';

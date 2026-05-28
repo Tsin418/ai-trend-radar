@@ -28,11 +28,38 @@ test('Hugging Face models collector uses a supported sort parameter', async () =
   const items = await collector.fetch(10);
   const url = new URL(requestedUrl);
 
-  assert.equal(url.searchParams.get('sort'), 'createdAt');
+  assert.equal(url.searchParams.get('sort'), process.env.HUGGINGFACE_MODELS_SORT ?? 'lastModified');
   assert.equal(url.searchParams.get('direction'), '-1');
   assert.equal(url.searchParams.get('limit'), '10');
   assert.equal(url.searchParams.has('full'), false);
   assert.equal(items.length, 1);
   assert.equal(items[0].title, 'example/code-llm');
   assert.equal(items[0].metrics?.downloads, 42);
+});
+
+test('Hugging Face models collector clamps limit to API-safe bounds', async () => {
+  let requestedUrl = '';
+  const fetchImpl: typeof fetch = async (url) => {
+    requestedUrl = String(url);
+    return new Response(JSON.stringify([]), {
+      status: 200,
+      headers: { 'content-type': 'application/json' }
+    });
+  };
+  const collector = new HuggingFaceModelsCollector({ fetchImpl });
+
+  await collector.fetch(250);
+
+  assert.equal(new URL(requestedUrl).searchParams.get('limit'), '100');
+});
+
+test('Hugging Face models collector includes response body in HTTP errors', async () => {
+  const collector = new HuggingFaceModelsCollector({
+    fetchImpl: async () => new Response('{"error":"invalid sort"}', { status: 400 })
+  });
+
+  await assert.rejects(
+    () => collector.fetch(10),
+    /Hugging Face models request failed: HTTP 400 - \{"error":"invalid sort"\}/
+  );
 });
