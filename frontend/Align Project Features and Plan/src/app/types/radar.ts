@@ -183,6 +183,14 @@ export interface MultiSourceDigestSections {
   crossSourceHighlights: TrendEntity[];
 }
 
+export interface GrowthLinks {
+  githubRepoUrl: string;
+  githubProfileUrl: string;
+  personalHomepageUrl: string;
+  linkedinUrl: string;
+  xiaohongshuUrl: string;
+}
+
 export interface WeeklyNarrative {
   weeklyOverview: string;
   hottestDirection: string;
@@ -294,4 +302,5 @@ export interface RadarDigest {
   llmDigest?: LlmDigest;
   weeklyNarrative?: WeeklyNarrative;
   recurringProjects?: string[];
+  growthLinks?: GrowthLinks;
 }

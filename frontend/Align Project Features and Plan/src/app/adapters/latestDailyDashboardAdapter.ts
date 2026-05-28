@@ -163,5 +163,6 @@ export function latestDailyDashboardToRadarDigest(file: LatestDailyDashboardFile
     trendEntities: file.trendEntities.map(toTrendEntity),
     topicClusters: file.topicClusters.map(toTrendEntity),
     llmDigest: file.llmDigest,
+    growthLinks: file.growthLinks,
   };
 }
