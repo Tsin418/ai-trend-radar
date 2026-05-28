@@ -44,6 +44,11 @@ function formatDateGroup(dateStr: string) {
   }
 }
 
+function publishedAtMs(item: TrendItem): number {
+  const timestamp = Date.parse(item.publishedAt || item.collectedAt);
+  return Number.isFinite(timestamp) ? timestamp : 0;
+}
+
 export function InformationView({ digest }: { digest: RadarDigest }) {
   const [activeCategory, setActiveCategory] = useState<AihotCategory>(undefined);
   const [query, setQuery] = useState('');
@@ -72,7 +77,7 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
         const fetchedItems = await fetchAihotItems({
           category: activeCategory,
           q: debouncedQuery,
-          take: 50
+          take: 100
         });
         if (!ignore) {
           setItems(fetchedItems);
@@ -97,9 +102,9 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
     ? fallbackItems.filter((item) => LOCAL_CATEGORY_ALIASES[activeCategory].includes(item.category || ''))
     : fallbackItems;
 
-  const displayItems = error && items.length === 0 && !debouncedQuery
+  const displayItems = [...(error && items.length === 0 && !debouncedQuery
     ? fallbackDisplayItems
-    : items;
+    : items)].sort((a, b) => publishedAtMs(b) - publishedAtMs(a));
 
   const groupedItems = displayItems.reduce<Record<string, TrendItem[]>>((acc, item) => {
     const dateKey = formatDateGroup(item.publishedAt || item.collectedAt);
