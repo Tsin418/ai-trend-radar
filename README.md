@@ -8,7 +8,6 @@ English | [简体中文](./README_zh.md)
 
 ## AI Developer Radar Bot
 
-This fork adds an AI open-source trend radar on top of the original
 Collectors -> Rankers -> Notifiers architecture.
 
 ```bash
