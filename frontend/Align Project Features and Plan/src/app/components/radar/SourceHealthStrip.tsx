@@ -61,6 +61,11 @@ export function SourceHealthStrip({ sources }: { sources: SourceHealth[] }) {
               <div className="text-[10px] text-muted-foreground tabular-nums">
                 {Math.round(s.latencyMs / 100) / 10}s
               </div>
+              {st === 'failed' && s.error && (
+                <div className="text-[10px] text-red-700 truncate">
+                  {s.error}
+                </div>
+              )}
             </div>
           );
         })}
