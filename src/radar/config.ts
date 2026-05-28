@@ -170,7 +170,7 @@ export function getRadarRepoLimit(): number {
 }
 
 export function getRadarRecommendationLimit(): number {
-  return parseNumber(process.env.RADAR_RECOMMENDATION_LIMIT, 10);
+  return parseNumber(process.env.RADAR_RECOMMENDATION_LIMIT, 12);
 }
 
 export function getRadarStorePath(): string {

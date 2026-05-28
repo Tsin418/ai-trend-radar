@@ -10,7 +10,7 @@ import { CategoriesView } from './components/radar/views/CategoriesView';
 import { SignalsView } from './components/radar/views/SignalsView';
 import { WatchlistView } from './components/radar/views/WatchlistView';
 import { DigestView } from './components/radar/views/DigestView';
-import { SourceHealthView } from './components/radar/views/SourceHealthView';
+import { InformationView } from './components/radar/views/InformationView';
 import { SettingsView } from './components/radar/views/SettingsView';
 import { buildMarkdown } from './components/radar/DigestPreview';
 import { statusOf } from './components/radar/SourceHealthStrip';
@@ -25,7 +25,7 @@ const viewLabels: Record<ViewKey, string> = {
   signals: 'Multi-source Signals',
   watchlist: 'Watchlist',
   digests: 'Digests',
-  health: 'Source Health',
+  information: 'Information',
   settings: 'Settings',
 };
 
@@ -107,7 +107,7 @@ export default function App() {
           {view === 'signals' && <SignalsView digest={digest} />}
           {view === 'watchlist' && <WatchlistView projects={allProjects} onOpenDetail={setOpenRepo} />}
           {view === 'digests' && <DigestView digest={digest} />}
-          {view === 'health' && <SourceHealthView sources={digest.sourceHealth ?? []} />}
+          {view === 'information' && <InformationView digest={digest} />}
           {view === 'settings' && <SettingsView />}
         </main>
       </div>

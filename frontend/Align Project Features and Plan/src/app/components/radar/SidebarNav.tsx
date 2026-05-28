@@ -6,9 +6,9 @@ import {
   Radio,
   Star,
   FileText,
-  Activity,
   Settings,
   Radar,
+  Info,
 } from 'lucide-react';
 
 export type ViewKey =
@@ -18,7 +18,7 @@ export type ViewKey =
   | 'signals'
   | 'watchlist'
   | 'digests'
-  | 'health'
+  | 'information'
   | 'settings';
 
 const items: { key: ViewKey; label: string; icon: any; hint?: string }[] = [
@@ -28,7 +28,7 @@ const items: { key: ViewKey; label: string; icon: any; hint?: string }[] = [
   { key: 'signals', label: 'Multi-source Signals', icon: Radio, hint: 'PH · HF · HN' },
   { key: 'watchlist', label: 'Watchlist', icon: Star, hint: 'Tracked repos' },
   { key: 'digests', label: 'Digests', icon: FileText, hint: 'Daily / Weekly' },
-  { key: 'health', label: 'Source Health', icon: Activity, hint: 'Pipeline status' },
+  { key: 'information', label: 'Information', icon: Info, hint: 'AI News' },
   { key: 'settings', label: 'Settings', icon: Settings, hint: 'Profile · keywords' },
 ];
 
