@@ -3,9 +3,9 @@ import { fmtRelative } from '../../utils/format';
 
 const TOP_LINKS = [
   { label: 'GitHub Repo', url: 'https://github.com/Tsin418/ai-trend-radar' },
-  { label: 'Homepage', url: 'https://github.com/Tsin418' },
-  { label: 'LinkedIn', url: 'https://www.linkedin.com' },
-  { label: 'XHS', url: 'https://www.xiaohongshu.com' },
+  { label: 'Homepage', url: 'https://personalpage.chenandrew418.workers.dev/' },
+  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/haoyang-chen-14b018295/' },
+  { label: '小红书', url: 'https://xhslink.com/m/2Xg6z7vc9jD' },
 ];
 
 export function TopBar({
