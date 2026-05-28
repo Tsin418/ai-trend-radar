@@ -2,7 +2,7 @@ import { Card } from '../ui/card';
 import { Button } from '../ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../ui/tabs';
 import { Copy } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { RadarDigest } from '../../types/radar';
 
 export function buildMarkdown(d: RadarDigest): string {
@@ -40,19 +40,30 @@ function buildFeishu(d: RadarDigest): string {
     .join('\n')}`;
 }
 
-export function DigestPreview({ digest }: { digest: RadarDigest }) {
+export function DigestPreview({
+  digest,
+  markdownOverride,
+}: {
+  digest: RadarDigest;
+  markdownOverride?: string | null;
+}) {
   const [tab, setTab] = useState<'markdown' | 'feishu'>('markdown');
-  const md = buildMarkdown(digest);
+  const md = markdownOverride ?? buildMarkdown(digest);
   const feishu = buildFeishu(digest);
   const text = tab === 'markdown' ? md : feishu;
+  const isArchiveMarkdown = markdownOverride != null;
+
+  useEffect(() => {
+    if (isArchiveMarkdown) setTab('markdown');
+  }, [isArchiveMarkdown, markdownOverride]);
 
   const copy = async () => {
     try { await navigator.clipboard.writeText(text); } catch {}
   };
 
   return (
-    <Card className="p-4">
-      <div className="flex items-center justify-between mb-3">
+    <Card className="p-4 h-full min-h-0 flex flex-col">
+      <div className="flex items-center justify-between mb-3 shrink-0">
         <div>
           <div className="text-sm">Digest Preview</div>
           <div className="text-xs text-muted-foreground">Copy to Markdown / Feishu / Email</div>
@@ -61,7 +72,7 @@ export function DigestPreview({ digest }: { digest: RadarDigest }) {
           <Tabs value={tab} onValueChange={(v) => setTab(v as any)}>
             <TabsList className="h-8">
               <TabsTrigger value="markdown" className="text-xs px-3">Markdown</TabsTrigger>
-              <TabsTrigger value="feishu" className="text-xs px-3">Feishu</TabsTrigger>
+              {!isArchiveMarkdown && <TabsTrigger value="feishu" className="text-xs px-3">Feishu</TabsTrigger>}
             </TabsList>
           </Tabs>
           <Button variant="outline" size="sm" onClick={copy} className="h-8">
@@ -69,7 +80,7 @@ export function DigestPreview({ digest }: { digest: RadarDigest }) {
           </Button>
         </div>
       </div>
-      <pre className="text-xs bg-slate-50 border rounded-md p-3 max-h-80 overflow-y-auto whitespace-pre-wrap leading-relaxed">
+      <pre className="text-xs bg-slate-50 border rounded-md p-3 flex-1 min-h-0 overflow-y-auto whitespace-pre-wrap leading-relaxed">
         {text}
       </pre>
     </Card>
