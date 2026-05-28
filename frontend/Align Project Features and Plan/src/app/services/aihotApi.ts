@@ -1,5 +1,7 @@
 import type { TrendItem } from '../types/radar';
 
+const AIHOT_ITEMS_URL = '/api/aihot/items';
+
 export async function fetchAihotItems(params: {
   category?: string;
   q?: string;
@@ -11,7 +13,7 @@ export async function fetchAihotItems(params: {
   if (params.q) search.set('q', params.q);
   search.set('take', String(params.take ?? 50));
 
-  const response = await fetch(`https://aihot.virxact.com/api/public/items?${search.toString()}`, {
+  const response = await fetch(`${AIHOT_ITEMS_URL}?${search.toString()}`, {
     headers: { Accept: 'application/json' },
   });
 
