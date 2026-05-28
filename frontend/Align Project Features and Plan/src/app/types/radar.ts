@@ -192,6 +192,83 @@ export interface WeeklyNarrative {
   developerTakeaway: string;
 }
 
+export type LlmDigestStatus = 'success' | 'skipped' | 'failed' | 'fallback';
+export type LlmDigestLanguage = 'zh-CN' | 'en-US';
+export type SuggestedAction = '值得试用' | '值得了解' | '持续观察' | '暂时忽略';
+export type LlmConfidence = 'high' | 'medium' | 'low';
+export type TrendJudgment = '升温中' | '值得观察' | '可能是噪音';
+
+export interface LlmDigestInputStats {
+  hotProjects: number;
+  earlySignals: number;
+  watchlistMovements: number;
+  productLaunches: number;
+  aihotHighlights: number;
+  modelDemoSignals: number;
+  developerBuzz: number;
+  crossSourceHighlights: number;
+  trendEntities: number;
+  topicClusters: number;
+}
+
+export interface TodayPulseChange {
+  title: string;
+  summary: string;
+  perspective: 'developer' | 'product' | 'information' | 'cross_source';
+  whyItMatters: string;
+  suggestedAction: SuggestedAction;
+  confidence: LlmConfidence;
+  sourceRefs: string[];
+}
+
+export interface PerspectiveSummary {
+  headline: string;
+  summary: string;
+  keyItems: string[];
+  suggestedAction: SuggestedAction;
+  sourceRefs: string[];
+}
+
+export interface TodayPulse {
+  title: string;
+  date: string;
+  executiveSummary: string;
+  topChanges: TodayPulseChange[];
+  developerView: PerspectiveSummary;
+  productView: PerspectiveSummary;
+  informationView: PerspectiveSummary;
+  noiseWarning?: string;
+  suggestedReadingOrder?: string[];
+}
+
+export interface LlmTrendCluster {
+  name: string;
+  oneLiner: string;
+  whyNow: string;
+  audience: Array<'developer' | 'product' | 'general'>;
+  judgment: TrendJudgment;
+  confidence: LlmConfidence;
+  relatedSources: string[];
+  relatedItems: Array<{
+    title: string;
+    source: string;
+    url?: string;
+    itemType: 'repo' | 'product' | 'model' | 'paper' | 'news' | 'discussion' | 'unknown';
+  }>;
+}
+
+export interface LlmDigest {
+  status: LlmDigestStatus;
+  generatedAt: string;
+  model?: string;
+  language: LlmDigestLanguage;
+  inputStats: LlmDigestInputStats;
+  todayPulse?: TodayPulse;
+  trendClusters?: LlmTrendCluster[];
+  warnings?: string[];
+  errorMessage?: string;
+}
+
 export interface RadarDigest {
   mode: RadarRunMode;
   title: string;
@@ -214,6 +291,7 @@ export interface RadarDigest {
   sourceHealth?: SourceHealth[];
   trendEntities?: TrendEntity[];
   topicClusters?: TrendEntity[];
+  llmDigest?: LlmDigest;
   weeklyNarrative?: WeeklyNarrative;
   recurringProjects?: string[];
 }

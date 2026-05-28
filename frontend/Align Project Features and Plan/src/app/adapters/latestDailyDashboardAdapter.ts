@@ -162,5 +162,6 @@ export function latestDailyDashboardToRadarDigest(file: LatestDailyDashboardFile
     sourceHealth: file.sourceHealth ?? [],
     trendEntities: file.trendEntities.map(toTrendEntity),
     topicClusters: file.topicClusters.map(toTrendEntity),
+    llmDigest: file.llmDigest,
   };
 }

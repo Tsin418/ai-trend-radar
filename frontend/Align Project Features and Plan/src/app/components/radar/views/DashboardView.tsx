@@ -46,48 +46,59 @@ export function DashboardView({
   onOpenDetail: (repo: string) => void;
 }) {
   const multi = digest.multiSourceSections;
+  const llmPulse = (digest.llmDigest && (digest.llmDigest.status === 'success' || digest.llmDigest.status === 'fallback'))
+    ? digest.llmDigest.todayPulse
+    : undefined;
   const topCluster = digest.topicClusters?.[0] ?? digest.trendEntities?.[0] ?? multi?.crossSourceHighlights?.[0];
   const topHot = digest.hotProjects[0];
   const topEarly = digest.earlySignals[0];
   const topProduct = multi?.productLaunches?.[0];
   const topInfo = multi?.aihotHighlights?.[0] ?? multi?.developerBuzz?.[0];
 
-  const pulseChanges = [
-    topCluster
-      ? {
-          title: topCluster.title,
-          detail: `跨 ${topCluster.sourceCount} 个来源同时出现，说明这不是单点热度。`,
-        }
-      : null,
-    topHot
-      ? {
-          title: topHot.repository.repoFullName,
-          detail: `今天新增关注 ${fmtSigned(topHot.score.dailyStarDelta)}，开发者讨论度持续走高。`,
-        }
-      : null,
-    topProduct || topInfo
-      ? {
-          title: topProduct?.title ?? topInfo?.title ?? '资讯流出现新变化',
-          detail: topProduct
-            ? '产品侧出现新尝试，可帮助判断“技术热度”是否在走向真实应用。'
-            : '资讯侧有新信号，适合快速了解今天圈内在讨论什么。',
-        }
-      : null,
-  ].filter((item): item is { title: string; detail: string } => Boolean(item));
+  const pulseChanges = llmPulse
+    ? llmPulse.topChanges.slice(0, 3).map((item) => ({ title: item.title, detail: item.summary }))
+    : [
+        topCluster
+          ? {
+              title: topCluster.title,
+              detail: `跨 ${topCluster.sourceCount} 个来源同时出现，说明这不是单点热度。`,
+            }
+          : null,
+        topHot
+          ? {
+              title: topHot.repository.repoFullName,
+              detail: `今天新增关注 ${fmtSigned(topHot.score.dailyStarDelta)}，开发者讨论度持续走高。`,
+            }
+          : null,
+        topProduct || topInfo
+          ? {
+              title: topProduct?.title ?? topInfo?.title ?? '资讯流出现新变化',
+              detail: topProduct
+                ? '产品侧出现新尝试，可帮助判断“技术热度”是否在走向真实应用。'
+                : '资讯侧有新信号，适合快速了解今天圈内在讨论什么。',
+            }
+          : null,
+      ].filter((item): item is { title: string; detail: string } => Boolean(item));
 
-  const developerView = [
-    topHot ? `${topHot.repository.name}：适合看开发者正在集中解决什么问题。` : null,
-    topEarly ? `${topEarly.repository.name}：早期升温，适合先收藏观察。` : null,
-  ].filter((item): item is string => Boolean(item));
+  const developerView = llmPulse
+    ? [llmPulse.developerView.summary, ...llmPulse.developerView.keyItems.map((item) => `${item}：来自今日开发者信号`) ].slice(0, 3)
+    : [
+        topHot ? `${topHot.repository.name}：适合看开发者正在集中解决什么问题。` : null,
+        topEarly ? `${topEarly.repository.name}：早期升温，适合先收藏观察。` : null,
+      ].filter((item): item is string => Boolean(item));
 
-  const productView = multi?.productLaunches?.slice(0, 2).map((item) => (
-    `${item.title}：${item.recommendedReason ?? '可以帮助你判断这个方向是否正在产品化。'}`
-  )) ?? [];
+  const productView = llmPulse
+    ? [llmPulse.productView.summary, ...llmPulse.productView.keyItems.map((item) => `${item}：来自今日产品信号`) ].slice(0, 3)
+    : multi?.productLaunches?.slice(0, 2).map((item) => (
+      `${item.title}：${item.recommendedReason ?? '可以帮助你判断这个方向是否正在产品化。'}`
+    )) ?? [];
 
-  const informationView = [
-    ...(multi?.aihotHighlights?.slice(0, 1).map((item) => `${item.title}：${item.summary ?? '适合用来快速了解今天值得看的 AI 资讯。'}`) ?? []),
-    ...(multi?.modelDemoSignals?.slice(0, 1).map((item) => `${item.title}：${item.recommendedReason ?? '可作为技术信号的补充参考。'}`) ?? []),
-  ];
+  const informationView = llmPulse
+    ? [llmPulse.informationView.summary, ...llmPulse.informationView.keyItems.map((item) => `${item}：来自今日资讯信号`) ].slice(0, 3)
+    : [
+        ...(multi?.aihotHighlights?.slice(0, 1).map((item) => `${item.title}：${item.summary ?? '适合用来快速了解今天值得看的 AI 资讯。'}`) ?? []),
+        ...(multi?.modelDemoSignals?.slice(0, 1).map((item) => `${item.title}：${item.recommendedReason ?? '可作为技术信号的补充参考。'}`) ?? []),
+      ];
 
   return (
     <div>
@@ -107,7 +118,7 @@ export function DashboardView({
             <div className="text-xs uppercase tracking-wide text-muted-foreground">Today&apos;s AI Pulse</div>
             <h2 className="mt-2 text-2xl leading-tight sm:text-3xl">今日 AI 脉搏</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              今天最值得关注的变化，按开发者、产品、资讯三个视角做了简化说明。
+              {llmPulse?.executiveSummary ?? '今天最值得关注的变化，按开发者、产品、资讯三个视角做了简化说明。'}
             </p>
           </div>
 
@@ -171,7 +182,7 @@ export function DashboardView({
               </p>
               <p>
                 <span className="text-foreground">先别着急下结论：</span>
-                {watcherAction(digest)}
+                {llmPulse?.noiseWarning ?? watcherAction(digest)}
               </p>
             </div>
           </section>

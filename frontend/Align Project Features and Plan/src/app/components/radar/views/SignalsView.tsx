@@ -26,6 +26,9 @@ export function SignalsView({ digest }: { digest: RadarDigest }) {
   const m = digest.multiSourceSections;
   if (!m) return <div className="p-6"><EmptyState title="No multi-source signals" /></div>;
 
+  const llmTrendClusters = (digest.llmDigest && (digest.llmDigest.status === 'success' || digest.llmDigest.status === 'fallback'))
+    ? (digest.llmDigest.trendClusters ?? [])
+    : [];
   const trendClusters = (digest.topicClusters?.length
     ? digest.topicClusters
     : digest.trendEntities?.length
@@ -44,7 +47,30 @@ export function SignalsView({ digest }: { digest: RadarDigest }) {
 
       <section>
         <h3 className="text-base mb-3">Trend Clusters / 今日趋势主题</h3>
-        {trendClusters.length === 0 ? (
+        {llmTrendClusters.length > 0 ? (
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
+            {llmTrendClusters.map((cluster) => (
+              <Card key={cluster.name} className="p-4">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0 flex-1">
+                    <h4 className="text-sm">{cluster.name}</h4>
+                    <p className="mt-1 text-xs text-muted-foreground">{cluster.oneLiner}</p>
+                  </div>
+                  <div className="text-right text-xs text-muted-foreground">
+                    <div>{cluster.confidence} confidence</div>
+                    <div className="mt-1 text-foreground">{cluster.judgment}</div>
+                  </div>
+                </div>
+                <div className="mt-3 space-y-1 text-xs text-muted-foreground">
+                  <p><span className="text-foreground">为什么现在值得看：</span>{cluster.whyNow}</p>
+                  <p><span className="text-foreground">适合谁关注：</span>{cluster.audience.join(' / ')}</p>
+                  <p><span className="text-foreground">相关来源：</span>{cluster.relatedSources.join('、') || '暂无'}</p>
+                  <p><span className="text-foreground">相关条目：</span>{cluster.relatedItems.slice(0, 2).map((item) => item.title).join('、') || '暂无'}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        ) : trendClusters.length === 0 ? (
           <EmptyState title="No trend clusters today" hint="跨来源信号不足时，会回退展示基础信号卡片。" />
         ) : (
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">

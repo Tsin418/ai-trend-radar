@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import type { RadarDigestLLMConfig } from '../llm/radar-digest-types.js';
 import type { RadarProfile } from './types.js';
 
 const DEFAULT_PROFILE: RadarProfile = {
@@ -90,6 +91,13 @@ function parseNumber(value: string | undefined, fallback: number): number {
   if (!value) return fallback;
   const parsed = Number.parseInt(value, 10);
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
+}
+
+function parseFloatInRange(value: string | undefined, fallback: number, min: number, max: number): number {
+  if (!value) return fallback;
+  const parsed = Number.parseFloat(value);
+  if (!Number.isFinite(parsed)) return fallback;
+  return Math.min(max, Math.max(min, parsed));
 }
 
 function parseBoolean(value: string | undefined, fallback: boolean): boolean {
@@ -238,5 +246,19 @@ export function getDigestNarrativeLLMConfig(): LLMEnrichmentConfig {
     enabled: parseBoolean(process.env.DIGEST_NARRATIVE_LLM_ENABLED, base.enabled),
     maxOutputTokens: parseNumber(process.env.DIGEST_NARRATIVE_MAX_OUTPUT_TOKENS, 1000),
     cachePath: 'data/llm-digest-narrative-cache.json'
+  };
+}
+
+export function getRadarDigestLLMConfig(): RadarDigestLLMConfig {
+  return {
+    enabled: parseBoolean(process.env.AI_RADAR_LLM_ENABLED, false),
+    apiKey: process.env.AI_RADAR_LLM_API_KEY,
+    baseUrl: process.env.AI_RADAR_LLM_BASE_URL || process.env.DEEPSEEK_BASE_URL || 'https://api.openai.com/v1',
+    model: process.env.AI_RADAR_LLM_MODEL || 'gpt-4.1-mini',
+    language: process.env.AI_RADAR_LLM_LANGUAGE === 'en-US' ? 'en-US' : 'zh-CN',
+    timeoutMs: parseNumber(process.env.AI_RADAR_LLM_TIMEOUT_MS, 30_000),
+    maxInputItems: parseNumber(process.env.AI_RADAR_LLM_MAX_INPUT_ITEMS, 80),
+    temperature: parseFloatInRange(process.env.AI_RADAR_LLM_TEMPERATURE, 0.2, 0, 1),
+    maxOutputTokens: parseNumber(process.env.AI_RADAR_LLM_MAX_OUTPUT_TOKENS, 2200)
   };
 }
