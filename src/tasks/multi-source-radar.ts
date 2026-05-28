@@ -171,10 +171,10 @@ export async function collectMultiSourceSignals(
   const trendEntities = buildTrendEntities(items);
   const topicClusters = buildTopicClusters(items);
   const sections: MultiSourceDigestSections = {
-    productLaunches: sortTrendItems(productHunt.items).slice(0, 3),
+    productLaunches: sortTrendItems(productHunt.items).slice(0, 5),
     modelDemoSignals: sortTrendItems([...hfModels.items, ...hfSpaces.items, ...arxiv.items]).slice(0, 5),
-    developerBuzz: sortTrendItems(hackernews.items).slice(0, 3),
-    aihotHighlights: sortTrendItems(aihot.items).slice(0, 5),
+    developerBuzz: sortTrendItems(hackernews.items).slice(0, 5),
+    aihotHighlights: sortTrendItems(aihot.items).slice(0, 15),
     crossSourceHighlights: mergeTrendItems(items).slice(0, 3)
   };
 
