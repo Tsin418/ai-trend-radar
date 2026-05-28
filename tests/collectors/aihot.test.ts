@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { extractAIHotItemsFromHtml, inferAIHotCategory, isNavigationTitle } from '../../src/collectors/aihot.js';
+import { AIHotCollector, extractAIHotItemsFromApiResponse, extractAIHotItemsFromHtml, inferAIHotCategory, isNavigationTitle } from '../../src/collectors/aihot.js';
 
 const MOCK_HTML = `
   <main>
@@ -55,4 +55,69 @@ test('applies AIHot category filter with fallback when too sparse', () => {
 test('infers expanded AIHot categories', () => {
   assert.equal(inferAIHotCategory('browser coding agent for developers'), 'agents');
   assert.equal(inferAIHotCategory('AI policy regulation update'), 'policy');
+});
+
+test('extracts AIHot items from the public API response', () => {
+  const items = extractAIHotItemsFromApiResponse({
+    items: [
+      {
+        id: 'api-1',
+        title: 'Open model release',
+        url: 'https://example.com/model',
+        source: 'Example AI',
+        publishedAt: '2026-05-27T10:00:00.000Z',
+        summary: 'A model release for developer workflows.',
+        category: 'ai-models'
+      },
+      {
+        id: 'api-2',
+        title: 'Prompting tip',
+        url: 'https://example.com/tip',
+        source: 'Example Blog',
+        summary: 'Useful workflow advice.',
+        category: 'tip'
+      }
+    ]
+  }, 10, ['models']);
+
+  assert.equal(items.length, 2);
+  assert.equal(items[0].id, 'aihot:api-1');
+  assert.equal(items[0].category, 'models');
+  assert.equal(items[0].originalSource, 'Example AI');
+  assert.equal(items[0].publishedAt, '2026-05-27T10:00:00.000Z');
+  assert.equal(items[1].category, 'tools');
+});
+
+test('AIHot collector fetches the public API with a browser user-agent', async () => {
+  let requestedUrl = '';
+  let userAgent: string | null = null;
+  const fetchImpl: typeof fetch = async (url, init) => {
+    requestedUrl = String(url);
+    userAgent = new Headers(init?.headers).get('user-agent');
+    return new Response(JSON.stringify({
+      items: [
+        {
+          id: 'api-1',
+          title: 'AI product launch',
+          url: 'https://example.com/product',
+          source: 'Example AI',
+          summary: 'New AI product for teams.',
+          category: 'ai-products'
+        }
+      ]
+    }), {
+      status: 200,
+      headers: { 'content-type': 'application/json' }
+    });
+  };
+  const collector = new AIHotCollector({ fetchImpl });
+
+  const items = await collector.fetch(5);
+  const url = new URL(requestedUrl);
+
+  assert.equal(url.pathname, '/api/public/items');
+  assert.equal(url.searchParams.get('mode'), 'selected');
+  assert.equal(url.searchParams.get('take'), '5');
+  assert.match(userAgent ?? '', /Mozilla\/5\.0/);
+  assert.equal(items[0].category, 'products');
 });

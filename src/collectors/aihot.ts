@@ -2,6 +2,8 @@ import { load } from 'cheerio';
 import type { SourceConfig, TrendItem } from '../trends/types.js';
 
 const AIHOT_URL = 'https://aihot.virxact.com/';
+const AIHOT_ITEMS_URL = 'https://aihot.virxact.com/api/public/items';
+const AIHOT_USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 const NAVIGATION_TITLES = new Set([
   'home',
   'about',
@@ -32,6 +34,7 @@ const SOCIAL_HOSTS = new Set(['twitter.com', 'x.com', 't.me', 'discord.gg', 'dis
 interface AIHotCollectorOptions extends SourceConfig {
   endpoint?: string;
   timeoutMs?: number;
+  fetchImpl?: typeof fetch;
 }
 
 interface AIHotCandidate {
@@ -45,11 +48,29 @@ interface AIHotCandidate {
   raw?: Record<string, unknown>;
 }
 
-function timeoutSignal(timeoutMs: number): AbortSignal {
+interface AIHotApiItem {
+  id?: string;
+  title?: string;
+  title_en?: string | null;
+  url?: string;
+  source?: string;
+  publishedAt?: string | null;
+  summary?: string | null;
+  category?: string | null;
+}
+
+interface AIHotApiResponse {
+  items?: AIHotApiItem[];
+}
+
+function timeoutSignal(timeoutMs: number): { signal: AbortSignal; cleanup: () => void } {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   if (typeof timer === 'object' && 'unref' in timer) timer.unref();
-  return controller.signal;
+  return {
+    signal: controller.signal,
+    cleanup: () => clearTimeout(timer)
+  };
 }
 
 function compact(value: string): string {
@@ -162,6 +183,38 @@ function dedupeCandidates(candidates: AIHotCandidate[]): AIHotCandidate[] {
   return result;
 }
 
+function filterAIHotCandidates(candidates: AIHotCandidate[], limit: number, categories: string[] = []): AIHotCandidate[] {
+  const allowedCategories = new Set(categories.map((category) => category.toLowerCase()));
+  const filtered = allowedCategories.size > 0
+    ? candidates.filter((candidate) => allowedCategories.has((candidate.category ?? 'other').toLowerCase()))
+    : candidates;
+  return filtered.length >= Math.min(3, limit)
+    ? filtered
+    : [...filtered, ...candidates.filter((candidate) => !filtered.includes(candidate) && candidate.summary).slice(0, limit - filtered.length)];
+}
+
+function candidatesToTrendItems(candidates: AIHotCandidate[], limit: number, collectedAt: string): TrendItem[] {
+  return candidates.slice(0, limit).map((candidate) => {
+    const key = `${candidate.title}:${candidate.url}`;
+    return {
+      id: `aihot:${candidate.raw?.id ?? Buffer.from(key).toString('base64url').slice(0, 32)}`,
+      source: 'aihot',
+      sourceType: 'curated_trend',
+      title: candidate.title,
+      url: candidate.url,
+      summary: candidate.summary,
+      description: candidate.summary,
+      category: candidate.category,
+      originalSource: candidate.originalSource,
+      originalUrl: candidate.originalUrl,
+      recommendedReason: candidate.summary,
+      publishedAt: candidate.publishedAt,
+      collectedAt,
+      raw: candidate.raw
+    } satisfies TrendItem;
+  });
+}
+
 export function extractAIHotItemsFromHtml(html: string, baseUrl: string, limit: number, categories: string[] = []): TrendItem[] {
   const collectedAt = new Date().toISOString();
   const $: any = load(html);
@@ -193,33 +246,46 @@ export function extractAIHotItemsFromHtml(html: string, baseUrl: string, limit: 
     candidates = dedupeCandidates(candidates);
   }
 
-  const allowedCategories = new Set(categories.map((category) => category.toLowerCase()));
-  const filtered = allowedCategories.size > 0
-    ? candidates.filter((candidate) => allowedCategories.has((candidate.category ?? 'other').toLowerCase()))
-    : candidates;
-  const fallback = filtered.length >= Math.min(3, limit)
-    ? filtered
-    : [...filtered, ...candidates.filter((candidate) => !filtered.includes(candidate) && candidate.summary).slice(0, limit - filtered.length)];
+  return candidatesToTrendItems(filterAIHotCandidates(candidates, limit, categories), limit, collectedAt);
+}
 
-  return fallback.slice(0, limit).map((candidate) => {
-    const key = `${candidate.title}:${candidate.url}`;
-    return {
-      id: `aihot:${Buffer.from(key).toString('base64url').slice(0, 32)}`,
-      source: 'aihot',
-      sourceType: 'curated_trend',
-      title: candidate.title,
-      url: candidate.url,
-      summary: candidate.summary,
-      description: candidate.summary,
-      category: candidate.category,
-      originalSource: candidate.originalSource,
-      originalUrl: candidate.originalUrl,
-      recommendedReason: candidate.summary,
-      publishedAt: candidate.publishedAt,
-      collectedAt,
-      raw: candidate.raw
-    } satisfies TrendItem;
-  });
+function normalizeApiCategory(category: string | null | undefined): string {
+  switch (category) {
+    case 'ai-models':
+      return 'models';
+    case 'ai-products':
+      return 'products';
+    case 'paper':
+      return 'papers';
+    case 'tip':
+      return 'tools';
+    case 'industry':
+      return 'industry';
+    default:
+      return category || 'other';
+  }
+}
+
+export function extractAIHotItemsFromApiResponse(response: AIHotApiResponse, limit: number, categories: string[] = []): TrendItem[] {
+  const collectedAt = new Date().toISOString();
+  const candidates = dedupeCandidates((response.items ?? []).flatMap((item) => {
+    if (!item.title || !item.url) return [];
+    return [{
+      title: compact(item.title),
+      url: item.url,
+      summary: item.summary ? compact(item.summary) : undefined,
+      category: normalizeApiCategory(item.category),
+      originalSource: item.source,
+      originalUrl: item.url,
+      publishedAt: item.publishedAt ? absoluteDate(item.publishedAt) : undefined,
+      raw: {
+        id: item.id,
+        titleEn: item.title_en,
+        apiCategory: item.category
+      }
+    }];
+  }));
+  return candidatesToTrendItems(filterAIHotCandidates(candidates, limit, categories), limit, collectedAt);
 }
 
 export class AIHotCollector {
@@ -228,29 +294,55 @@ export class AIHotCollector {
   private readonly limit: number;
   private readonly timeoutMs: number;
   private readonly categories: string[];
+  private readonly fetchImpl: typeof fetch;
 
   constructor(options: AIHotCollectorOptions = {}) {
-    this.endpoint = options.endpoint ?? process.env.AIHOT_ENDPOINT ?? AIHOT_URL;
+    this.endpoint = options.endpoint ?? process.env.AIHOT_ENDPOINT ?? AIHOT_ITEMS_URL;
     this.limit = options.limit ?? 30;
     this.timeoutMs = options.timeoutMs ?? 10_000;
     this.categories = options.categories ?? [];
+    this.fetchImpl = options.fetchImpl ?? fetch;
   }
 
   async fetch(limit = this.limit): Promise<TrendItem[]> {
-    const response = await fetch(this.endpoint, {
-      headers: {
-        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'user-agent': 'ai-trend-radar/0.1 (+https://github.com/Tsin418/ai-trend-radar)'
-      },
-      signal: timeoutSignal(this.timeoutMs)
-    });
+    const url = new URL(this.endpoint);
+    const isApiEndpoint = url.pathname.startsWith('/api/public/items');
+    if (isApiEndpoint) {
+      url.searchParams.set('mode', url.searchParams.get('mode') ?? 'selected');
+      url.searchParams.set('take', String(Math.min(limit, 100)));
+    }
+
+    const timeout = timeoutSignal(this.timeoutMs);
+    let response: Response;
+    try {
+      response = await this.fetchImpl(url, {
+        headers: {
+          accept: isApiEndpoint ? 'application/json' : 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+          'user-agent': AIHOT_USER_AGENT
+        },
+        signal: timeout.signal
+      });
+    } catch (error) {
+      if (error instanceof Error && error.name === 'AbortError') {
+        throw new Error(`AIHot request timed out after ${this.timeoutMs}ms`);
+      }
+      throw error;
+    } finally {
+      timeout.cleanup();
+    }
 
     if (!response.ok) {
       throw new Error(`AIHot request failed: HTTP ${response.status}`);
     }
 
+    const contentType = response.headers.get('content-type') ?? '';
+    if (isApiEndpoint || contentType.includes('application/json')) {
+      const data = await response.json() as AIHotApiResponse;
+      return extractAIHotItemsFromApiResponse(data, limit, this.categories);
+    }
+
     const html = await response.text();
-    return extractAIHotItemsFromHtml(html, this.endpoint, limit, this.categories);
+    return extractAIHotItemsFromHtml(html, url.toString(), limit, this.categories);
   }
 }
 
