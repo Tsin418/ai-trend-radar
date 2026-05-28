@@ -12,7 +12,7 @@ export function SignalsView({ digest }: { digest: RadarDigest }) {
       <div>
         <h2 className="text-lg">Multi-source Signals</h2>
         <p className="text-sm text-muted-foreground">
-          Trend signals beyond GitHub: Product Hunt · Hugging Face · Hacker News · AIHot
+          Trend signals beyond GitHub: Product Hunt · Hugging Face · Hacker News
         </p>
       </div>
 
