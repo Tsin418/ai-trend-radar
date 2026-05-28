@@ -29,30 +29,32 @@ export function DashboardView({
   onOpenDetail: (repo: string) => void;
 }) {
   return (
-    <div className="p-6 space-y-5">
+    <div>
       {digest.baselineCreated && (
-        <WarningBanner
-          level="info"
-          title="Baseline snapshot created today"
-          message="Daily/weekly delta values will become reliable once 7 consecutive snapshots have been recorded."
-        />
+        <div className="p-6 pb-0">
+          <WarningBanner
+            level="info"
+            title="Baseline snapshot created today"
+            message="Daily/weekly delta values will become reliable once 7 consecutive snapshots have been recorded."
+          />
+        </div>
       )}
 
-      <Card className="min-h-[calc(100vh-6.5rem)] justify-center p-6 sm:p-8 lg:p-10">
+      <Card className="min-h-[calc(100vh-3.5rem)] justify-center rounded-none border-x-0 border-t-0 p-6 sm:p-8 lg:p-10">
         <div className="flex items-start gap-4">
-          <div className="flex-1 max-w-5xl">
+          <div className="flex-1">
             <div className="text-xs uppercase tracking-wide text-muted-foreground">Today's headline</div>
             <h2 className="mt-2 text-3xl leading-tight sm:text-4xl">
               {renderHeadlineText(digest.headline)}
             </h2>
-            <p className="mt-5 text-base text-muted-foreground leading-8 max-w-4xl">
+            <p className="mt-5 text-base text-muted-foreground leading-8">
               {renderHeadlineText(digest.summary)}
             </p>
           </div>
         </div>
       </Card>
 
-      <div className="space-y-5">
+      <div className="p-6 space-y-5">
         <section>
           <div className="flex items-center justify-between mb-3">
             <h3 className="text-base">Top Hot Projects</h3>
