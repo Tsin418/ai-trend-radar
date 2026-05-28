@@ -118,6 +118,8 @@ test('AIHot collector fetches the public API with a browser user-agent', async (
   assert.equal(url.pathname, '/api/public/items');
   assert.equal(url.searchParams.get('mode'), 'selected');
   assert.equal(url.searchParams.get('take'), '5');
+  assert.equal(Boolean(url.searchParams.get('since')), true);
+  assert.equal(Number.isFinite(Date.parse(url.searchParams.get('since') as string)), true);
   assert.match(userAgent ?? '', /Mozilla\/5\.0/);
   assert.equal(items[0].category, 'products');
 });
@@ -140,6 +142,7 @@ test('AIHot collector clamps API take parameter to safe bounds', async () => {
 
 test('AIHot collector normalizes abort-like errors', async () => {
   const collector = new AIHotCollector({
+    maxRetries: 0,
     timeoutMs: 12_345,
     fetchImpl: async () => {
       throw new Error('This operation was aborted');
@@ -150,6 +153,43 @@ test('AIHot collector normalizes abort-like errors', async () => {
     () => collector.fetch(5),
     /AIHot request timed out or was aborted after 12345ms/
   );
+});
+
+test('AIHot collector falls back to /api/public/daily when items API aborts', async () => {
+  const fetchImpl: typeof fetch = async (url) => {
+    const parsed = new URL(String(url));
+    if (parsed.pathname === '/api/public/items') {
+      throw new Error('This operation was aborted');
+    }
+
+    return new Response(JSON.stringify({
+      date: '2026-05-28',
+      windowEnd: '2026-05-28T12:00:00.000Z',
+      sections: [
+        {
+          label: '模型',
+          items: [
+            {
+              title: 'Daily fallback model pick',
+              sourceUrl: 'https://example.com/daily-model',
+              summary: 'Fallback summary',
+              sourceName: 'AIHot Daily'
+            }
+          ]
+        }
+      ]
+    }), {
+      status: 200,
+      headers: { 'content-type': 'application/json' }
+    });
+  };
+  const collector = new AIHotCollector({ fetchImpl, maxRetries: 0 });
+
+  const items = await collector.fetch(5);
+
+  assert.equal(items.length, 1);
+  assert.equal(items[0].title, 'Daily fallback model pick');
+  assert.equal(items[0].category, 'models');
 });
 
 test('AIHot collector includes response body in HTTP errors', async () => {

@@ -40,6 +40,7 @@ export function SourceHealthStrip({ sources }: { sources: SourceHealth[] }) {
       <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-2">
         {sources.map((s) => {
           const st = statusOf(s);
+          const shortError = s.error?.replace(/^AIHot request failed: /, '').slice(0, 80);
           const map = {
             success: { Icon: CheckCircle2, cls: 'border-emerald-200 bg-emerald-50/40 text-emerald-700' },
             warning: { Icon: AlertTriangle, cls: 'border-amber-200 bg-amber-50/40 text-amber-700' },
@@ -63,7 +64,7 @@ export function SourceHealthStrip({ sources }: { sources: SourceHealth[] }) {
               </div>
               {st === 'failed' && s.error && (
                 <div className="text-[10px] text-red-700 truncate">
-                  {s.error}
+                  {shortError}
                 </div>
               )}
             </div>

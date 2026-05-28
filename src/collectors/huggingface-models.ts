@@ -2,8 +2,19 @@ import type { SourceConfig, TrendItem } from '../trends/types.js';
 import { hasAiDeveloperKeyword } from './ai-dev-keywords.js';
 
 const HF_MODELS_ENDPOINT = 'https://huggingface.co/api/models';
-const HF_MODEL_SORT = process.env.HUGGINGFACE_MODELS_SORT ?? 'lastModified';
+const DEFAULT_HF_MODEL_SORT = 'lastModified';
 const DEFAULT_MIN_FILTERED_ITEMS = 5;
+const HF_MODEL_SORT_ALIASES: Record<string, string> = {
+  createdAt: 'createdAt',
+  created_at: 'createdAt',
+  lastModified: 'lastModified',
+  last_modified: 'lastModified',
+  trendingScore: 'trendingScore',
+  trending_score: 'trendingScore',
+  downloads: 'downloads',
+  likes: 'likes'
+};
+const HF_MODEL_SORT_VALUES = new Set(['createdAt', 'lastModified', 'trendingScore', 'downloads', 'likes']);
 
 interface HuggingFaceModel {
   id?: string;
@@ -14,7 +25,9 @@ interface HuggingFaceModel {
   pipeline_tag?: string;
   tags?: string[];
   lastModified?: string;
+  last_modified?: string;
   createdAt?: string;
+  created_at?: string;
   cardData?: {
     license?: string;
     language?: string | string[];
@@ -51,6 +64,15 @@ function modelUrl(id: string): string {
   return `https://huggingface.co/${id}`;
 }
 
+function normalizeHuggingFaceModelSort(value: string | undefined): string {
+  const raw = value?.trim();
+  if (!raw) return DEFAULT_HF_MODEL_SORT;
+
+  const mapped = HF_MODEL_SORT_ALIASES[raw] ?? raw;
+  if (HF_MODEL_SORT_VALUES.has(mapped)) return mapped;
+  return DEFAULT_HF_MODEL_SORT;
+}
+
 export class HuggingFaceModelsCollector {
   readonly name = 'huggingface_models';
   private readonly endpoint: string;
@@ -69,7 +91,7 @@ export class HuggingFaceModelsCollector {
 
   async fetch(limit = this.limit): Promise<TrendItem[]> {
     const url = new URL(this.endpoint);
-    url.searchParams.set('sort', HF_MODEL_SORT);
+    url.searchParams.set('sort', normalizeHuggingFaceModelSort(process.env.HUGGINGFACE_MODELS_SORT));
     url.searchParams.set('direction', '-1');
     url.searchParams.set('limit', String(clampLimit(limit)));
 
@@ -124,8 +146,8 @@ export class HuggingFaceModelsCollector {
             downloads: model.downloads,
             likes: model.likes
           },
-          publishedAt: model.createdAt,
-          updatedAt: model.lastModified,
+          publishedAt: model.createdAt ?? model.created_at,
+          updatedAt: model.lastModified ?? model.last_modified,
           collectedAt,
           raw: {
             pipelineTag: model.pipeline_tag,

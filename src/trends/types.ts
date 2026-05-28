@@ -130,6 +130,9 @@ export interface MultiSourceCollectionResult {
 export interface SourceConfig {
   enabled?: boolean;
   limit?: number;
+  endpoint?: string;
+  timeoutMs?: number;
+  maxRetries?: number;
   categories?: string[];
   lists?: string[];
   limitPerList?: number;

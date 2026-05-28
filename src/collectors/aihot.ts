@@ -3,7 +3,26 @@ import type { SourceConfig, TrendItem } from '../trends/types.js';
 
 const AIHOT_URL = 'https://aihot.virxact.com/';
 const AIHOT_ITEMS_URL = 'https://aihot.virxact.com/api/public/items';
+const AIHOT_DAILY_URL = 'https://aihot.virxact.com/api/public/daily';
 const AIHOT_USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
+const AIHOT_API_CATEGORY_MAP: Record<string, string> = {
+  models: 'ai-models',
+  products: 'ai-products',
+  papers: 'paper',
+  industry: 'industry',
+  tools: 'tip',
+  tip: 'tip',
+  'ai-models': 'ai-models',
+  'ai-products': 'ai-products',
+  paper: 'paper'
+};
+const AIHOT_INTERNAL_CATEGORY_MAP: Record<string, string> = {
+  'ai-models': 'models',
+  'ai-products': 'products',
+  paper: 'papers',
+  industry: 'industry',
+  tip: 'tools'
+};
 const NAVIGATION_TITLES = new Set([
   'home',
   'about',
@@ -34,6 +53,8 @@ const SOCIAL_HOSTS = new Set(['twitter.com', 'x.com', 't.me', 'discord.gg', 'dis
 interface AIHotCollectorOptions extends SourceConfig {
   endpoint?: string;
   timeoutMs?: number;
+  maxRetries?: number;
+  daysBack?: number;
   fetchImpl?: typeof fetch;
 }
 
@@ -63,6 +84,20 @@ interface AIHotApiResponse {
   items?: AIHotApiItem[];
 }
 
+interface AIHotDailyResponse {
+  date?: string;
+  windowEnd?: string;
+  sections?: Array<{
+    label?: string;
+    items?: Array<{
+      title?: string;
+      sourceUrl?: string;
+      summary?: string;
+      sourceName?: string;
+    }>;
+  }>;
+}
+
 function timeoutSignal(timeoutMs: number): { signal: AbortSignal; cleanup: () => void } {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
@@ -82,11 +117,168 @@ function clampLimit(limit: number): number {
   return Math.min(Math.max(limit, 1), 100);
 }
 
-function isAbortLikeError(error: unknown): boolean {
+function isoDaysAgo(days: number): string {
+  return new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
+}
+
+function toAIHotApiCategory(value: string): string | undefined {
+  return AIHOT_API_CATEGORY_MAP[value.trim().toLowerCase()];
+}
+
+function toInternalCategory(value: string | null | undefined): string {
+  if (!value) return 'other';
+  return AIHOT_INTERNAL_CATEGORY_MAP[value] ?? value;
+}
+
+function shouldRetryAIHot(errorOrResponse: unknown): boolean {
+  if (errorOrResponse instanceof Response) {
+    return (
+      errorOrResponse.status === 408 ||
+      errorOrResponse.status === 429 ||
+      errorOrResponse.status >= 500
+    );
+  }
+
+  const message = errorOrResponse instanceof Error
+    ? errorOrResponse.message.toLowerCase()
+    : String(errorOrResponse).toLowerCase();
+  const name = errorOrResponse instanceof Error ? errorOrResponse.name : '';
+  return (
+    name === 'AbortError' ||
+    message.includes('aborted') ||
+    message.includes('abort') ||
+    message.includes('timeout') ||
+    message.includes('econnreset') ||
+    message.includes('etimedout') ||
+    message.includes('fetch failed')
+  );
+}
+
+async function sleep(ms: number): Promise<void> {
+  await new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function fetchAIHotWithRetry(
+  fetchImpl: typeof fetch,
+  url: URL,
+  initFactory: () => { init: RequestInit; cleanup: () => void },
+  maxRetries: number
+): Promise<Response> {
+  let lastError: unknown;
+
+  for (let attempt = 0; attempt <= maxRetries; attempt += 1) {
+    const { init, cleanup } = initFactory();
+    try {
+      const response = await fetchImpl(url, init);
+      if (response.ok) return response;
+      if (!shouldRetryAIHot(response)) return response;
+      lastError = new Error(`HTTP ${response.status}`);
+    } catch (error) {
+      lastError = error;
+      if (!shouldRetryAIHot(error)) throw error;
+    } finally {
+      cleanup();
+    }
+
+    if (attempt < maxRetries) {
+      await sleep(500 * (attempt + 1));
+    }
+  }
+
+  throw lastError;
+}
+
+function normalizeAIHotError(error: unknown, timeoutMs: number, url?: URL): Error {
   const message = error instanceof Error ? error.message : String(error);
   const name = error instanceof Error ? error.name : '';
-  const normalizedMessage = message.toLowerCase();
-  return name === 'AbortError' || normalizedMessage.includes('aborted') || normalizedMessage.includes('abort');
+  const lower = message.toLowerCase();
+  if (name === 'AbortError' || lower.includes('aborted') || lower.includes('abort')) {
+    return new Error(
+      `AIHot request timed out or was aborted after ${timeoutMs}ms${url ? `: ${url.pathname}` : ''}`
+    );
+  }
+
+  return new Error(`AIHot request failed${url ? `: ${url.pathname}` : ''} - ${message}`);
+}
+
+function mapDailySectionLabel(label: string): string {
+  if (label.includes('模型')) return 'models';
+  if (label.includes('产品')) return 'products';
+  if (label.includes('行业')) return 'industry';
+  if (label.includes('论文')) return 'papers';
+  if (label.includes('技巧') || label.includes('观点')) return 'tools';
+  return 'other';
+}
+
+function filterTrendItemsByCategories(items: TrendItem[], limit: number, categories: string[] = []): TrendItem[] {
+  const allowedCategories = new Set(
+    categories
+      .map((category) => toAIHotApiCategory(category) ?? category.trim().toLowerCase())
+      .map((category) => toInternalCategory(category).toLowerCase())
+  );
+  if (allowedCategories.size === 0) return items.slice(0, limit);
+
+  const filtered = items.filter((item) => allowedCategories.has((item.category ?? 'other').toLowerCase()));
+  if (filtered.length >= Math.min(3, limit)) return filtered.slice(0, limit);
+  const fallback = items.filter((item) => !filtered.includes(item) && item.summary).slice(0, limit - filtered.length);
+  return [...filtered, ...fallback].slice(0, limit);
+}
+
+function dailyResponseToTrendItems(data: AIHotDailyResponse): TrendItem[] {
+  const collectedAt = new Date().toISOString();
+  const items: TrendItem[] = [];
+  const sections = Array.isArray(data?.sections) ? data.sections : [];
+  for (const section of sections) {
+    const sectionItems = Array.isArray(section?.items) ? section.items : [];
+    const category = mapDailySectionLabel(String(section?.label ?? ''));
+    sectionItems.forEach((item, index) => {
+      if (!item?.title || !item?.sourceUrl) return;
+      items.push({
+        id: `aihot:daily:${data?.date ?? 'unknown'}:${category}:${index}`,
+        source: 'aihot',
+        sourceType: 'curated_trend',
+        title: String(item.title),
+        url: String(item.sourceUrl),
+        summary: item.summary ? String(item.summary) : undefined,
+        description: item.summary ? String(item.summary) : undefined,
+        category,
+        originalSource: item.sourceName ? String(item.sourceName) : undefined,
+        originalUrl: String(item.sourceUrl),
+        recommendedReason: item.summary ? String(item.summary) : undefined,
+        publishedAt: data?.windowEnd ? String(data.windowEnd) : undefined,
+        collectedAt,
+        raw: {
+          source: 'aihot-daily-fallback',
+          sectionLabel: section?.label
+        }
+      } satisfies TrendItem);
+    });
+  }
+  return items;
+}
+
+async function fetchAIHotDailyFallback(fetchImpl: typeof fetch, timeoutMs: number): Promise<TrendItem[]> {
+  const url = new URL(AIHOT_DAILY_URL);
+  const timeout = timeoutSignal(timeoutMs);
+  try {
+    const response = await fetchImpl(url, {
+      headers: {
+        accept: 'application/json',
+        'user-agent': AIHOT_USER_AGENT
+      },
+      signal: timeout.signal
+    });
+
+    if (!response.ok) {
+      const body = await response.text().catch(() => '');
+      throw new Error(`AIHot daily fallback failed: HTTP ${response.status}${body ? ` - ${body.slice(0, 300)}` : ''}`);
+    }
+
+    const data = await response.json() as AIHotDailyResponse;
+    return dailyResponseToTrendItems(data);
+  } finally {
+    timeout.cleanup();
+  }
 }
 
 function compact(value: string): string {
@@ -266,20 +458,7 @@ export function extractAIHotItemsFromHtml(html: string, baseUrl: string, limit: 
 }
 
 function normalizeApiCategory(category: string | null | undefined): string {
-  switch (category) {
-    case 'ai-models':
-      return 'models';
-    case 'ai-products':
-      return 'products';
-    case 'paper':
-      return 'papers';
-    case 'tip':
-      return 'tools';
-    case 'industry':
-      return 'industry';
-    default:
-      return category || 'other';
-  }
+  return toInternalCategory(category);
 }
 
 export function extractAIHotItemsFromApiResponse(response: AIHotApiResponse, limit: number, categories: string[] = []): TrendItem[] {
@@ -309,6 +488,8 @@ export class AIHotCollector {
   private readonly endpoint: string;
   private readonly limit: number;
   private readonly timeoutMs: number;
+  private readonly maxRetries: number;
+  private readonly daysBack: number;
   private readonly categories: string[];
   private readonly fetchImpl: typeof fetch;
 
@@ -316,6 +497,8 @@ export class AIHotCollector {
     this.endpoint = options.endpoint ?? process.env.AIHOT_ENDPOINT ?? AIHOT_ITEMS_URL;
     this.limit = options.limit ?? 30;
     this.timeoutMs = options.timeoutMs ?? parsePositiveInteger(process.env.AIHOT_TIMEOUT_MS, 20_000);
+    this.maxRetries = options.maxRetries ?? parsePositiveInteger(process.env.AIHOT_MAX_RETRIES, 2);
+    this.daysBack = options.daysBack ?? parsePositiveInteger(process.env.AIHOT_DAYS_BACK, 3);
     this.categories = options.categories ?? [];
     this.fetchImpl = options.fetchImpl ?? fetch;
   }
@@ -326,42 +509,57 @@ export class AIHotCollector {
     if (isApiEndpoint) {
       url.searchParams.set('mode', url.searchParams.get('mode') ?? 'selected');
       url.searchParams.set('take', String(clampLimit(limit)));
-    }
-
-    const timeout = timeoutSignal(this.timeoutMs);
-    let response: Response;
-    try {
-      response = await this.fetchImpl(url, {
-        headers: {
-          accept: isApiEndpoint ? 'application/json' : 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-          'user-agent': AIHOT_USER_AGENT
-        },
-        signal: timeout.signal
-      });
-    } catch (error) {
-      if (isAbortLikeError(error)) {
-        throw new Error(`AIHot request timed out or was aborted after ${this.timeoutMs}ms`);
+      if (!url.searchParams.has('since')) {
+        url.searchParams.set('since', isoDaysAgo(Math.min(this.daysBack, 7)));
       }
-      throw error;
-    } finally {
-      timeout.cleanup();
     }
 
-    if (!response.ok) {
-      const body = await response.text().catch(() => '');
-      throw new Error(
-        `AIHot request failed: HTTP ${response.status}${body ? ` - ${body.slice(0, 300)}` : ''}`
+    try {
+      const response = await fetchAIHotWithRetry(
+        this.fetchImpl,
+        url,
+        () => {
+          const timeout = timeoutSignal(this.timeoutMs);
+          return {
+            init: {
+              headers: {
+                accept: isApiEndpoint ? 'application/json' : 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'user-agent': AIHOT_USER_AGENT
+              },
+              signal: timeout.signal
+            },
+            cleanup: timeout.cleanup
+          };
+        },
+        this.maxRetries
       );
-    }
 
-    const contentType = response.headers.get('content-type') ?? '';
-    if (isApiEndpoint || contentType.includes('application/json')) {
-      const data = await response.json() as AIHotApiResponse;
-      return extractAIHotItemsFromApiResponse(data, limit, this.categories);
-    }
+      if (!response.ok) {
+        const body = await response.text().catch(() => '');
+        throw new Error(
+          `AIHot request failed: HTTP ${response.status}${body ? ` - ${body.slice(0, 300)}` : ''}`
+        );
+      }
 
-    const html = await response.text();
-    return extractAIHotItemsFromHtml(html, url.toString(), limit, this.categories);
+      const contentType = response.headers.get('content-type') ?? '';
+      if (isApiEndpoint || contentType.includes('application/json')) {
+        const data = await response.json() as AIHotApiResponse;
+        return extractAIHotItemsFromApiResponse(data, limit, this.categories);
+      }
+
+      const html = await response.text();
+      return extractAIHotItemsFromHtml(html, url.toString(), limit, this.categories);
+    } catch (error) {
+      if (!isApiEndpoint) {
+        throw normalizeAIHotError(error, this.timeoutMs, url);
+      }
+      try {
+        const fallbackItems = await fetchAIHotDailyFallback(this.fetchImpl, this.timeoutMs);
+        return filterTrendItemsByCategories(fallbackItems, limit, this.categories);
+      } catch {
+        throw normalizeAIHotError(error, this.timeoutMs, url);
+      }
+    }
   }
 }
 
