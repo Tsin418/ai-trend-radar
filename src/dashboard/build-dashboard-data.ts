@@ -1,4 +1,4 @@
-import type { RadarDigest, ScoredRadarRepository } from '../radar/types.js';
+import type { RadarDigest, ScoredRadarRepository, WatchlistSource, WatchlistState, WatchlistStatus } from '../radar/types.js';
 import type { JsonRadarStore } from '../storage/json-store.js';
 import type { SourceHealth, TrendEntity, TrendItem } from '../trends/types.js';
 
@@ -45,6 +45,12 @@ export interface DashboardProject {
   firstSeenAt: string;
   lastSeenAt: string;
   isWatchlist: boolean;
+  watchlistSource?: WatchlistSource;
+  watchlistStatus?: WatchlistStatus;
+  watchlistPromotedAt?: string;
+  watchlistLastMovementAt?: string;
+  watchlistPromotedReason?: string;
+  newlyPromotedToWatchlist?: boolean;
 }
 
 export interface HomepageSectionItem {
@@ -159,9 +165,10 @@ interface BuildDashboardDataOptions {
   source: LatestDailyDashboardFile['source'];
 }
 
-function toDashboardProject(item: ScoredRadarRepository): DashboardProject {
+function toDashboardProject(item: ScoredRadarRepository, watchlistState?: WatchlistState): DashboardProject {
   const repo = item.repository;
   const score = item.score;
+  const isWatchlist = Boolean(watchlistState && watchlistState.status !== 'archived') || repo.isWatchlist;
   return {
     repoFullName: repo.repoFullName,
     repoUrl: repo.repoUrl,
@@ -204,7 +211,13 @@ function toDashboardProject(item: ScoredRadarRepository): DashboardProject {
     pushedAt: repo.pushedAt,
     firstSeenAt: repo.firstSeenAt,
     lastSeenAt: repo.lastSeenAt,
-    isWatchlist: repo.isWatchlist
+    isWatchlist,
+    watchlistSource: watchlistState?.source ?? repo.watchlistSource,
+    watchlistStatus: watchlistState?.status ?? repo.watchlistStatus,
+    watchlistPromotedAt: watchlistState?.promotedAt ?? repo.watchlistPromotedAt,
+    watchlistLastMovementAt: watchlistState?.lastMovementAt ?? repo.watchlistLastMovementAt,
+    watchlistPromotedReason: watchlistState?.promotedReason ?? repo.watchlistPromotedReason,
+    newlyPromotedToWatchlist: repo.newlyPromotedToWatchlist
   };
 }
 
@@ -468,20 +481,23 @@ function buildRecurringProjects(scored: ScoredRadarRepository[], store: JsonRada
     .filter((item) => (counts.get(item.repository.repoFullName)?.size ?? 0) >= 2)
     .sort((left, right) => right.score.finalScore - left.score.finalScore)
     .slice(0, 10)
-    .map(toDashboardProject);
+    .map((item) => toDashboardProject(item, data.watchlist[item.repository.repoFullName]));
 }
 
 export function buildLatestDailyDashboardData(options: BuildDashboardDataOptions): LatestDailyDashboardFile {
   const scored = options.scored ?? options.digest.selectedProjects;
-  const projects = options.digest.selectedProjects.map(toDashboardProject);
+  const watchlistStates = options.store?.load().watchlist ?? {};
+  const toProject = (item: ScoredRadarRepository): DashboardProject =>
+    toDashboardProject(item, watchlistStates[item.repository.repoFullName]);
+  const projects = options.digest.selectedProjects.map(toProject);
   const categoryStats = buildCategoryStats(scored, options.digest.selectedProjects);
   const sections = options.digest.multiSourceSections;
   const topCategory = categoryStats.find((stat) => stat.selectedRepoCount > 0)?.category ?? projects[0]?.category ?? null;
   const legacySections = {
-    hotProjects: options.digest.hotProjects.map(toDashboardProject),
-    acceleratingProjects: (options.digest.acceleratingProjects ?? []).map(toDashboardProject),
-    earlySignals: options.digest.earlySignals.map(toDashboardProject),
-    watchlistMovements: options.digest.watchlistMovements.map(toDashboardProject),
+    hotProjects: options.digest.hotProjects.map(toProject),
+    acceleratingProjects: (options.digest.acceleratingProjects ?? []).map(toProject),
+    earlySignals: options.digest.earlySignals.map(toProject),
+    watchlistMovements: options.digest.watchlistMovements.map(toProject),
     productLaunches: sections?.productLaunches ?? [],
     modelDemoSignals: sections?.modelDemoSignals ?? [],
     developerBuzz: sections?.developerBuzz ?? [],
@@ -524,12 +540,12 @@ export function buildLatestDailyDashboardData(options: BuildDashboardDataOptions
         .filter((item) => item.score.dailyStarDelta !== null)
         .sort((left, right) => (right.score.dailyStarDelta ?? 0) - (left.score.dailyStarDelta ?? 0))
         .slice(0, 10)
-        .map(toDashboardProject),
+        .map(toProject),
       topStarDelta7d: scored
         .filter((item) => item.score.weeklyStarDelta !== null)
         .sort((left, right) => (right.score.weeklyStarDelta ?? 0) - (left.score.weeklyStarDelta ?? 0))
         .slice(0, 10)
-        .map(toDashboardProject),
+        .map(toProject),
       recurringProjects: buildRecurringProjects(scored, options.store),
       risingCategories: categoryStats.slice(0, 10)
     },

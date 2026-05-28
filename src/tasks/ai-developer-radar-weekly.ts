@@ -56,7 +56,7 @@ export async function runAiDeveloperRadarWeekly(options: RadarRunOptions = {}): 
 
   try {
     const insufficientWeeklyData = context.scored.length === 0 || context.scored.every((item) => item.score.weeklyStarDelta === null);
-    let digest = buildWeeklyRadarDigest(context.scored, profile, getLocalIsoWeekLabel(), recommendationLimit, insufficientWeeklyData);
+    let digest = buildWeeklyRadarDigest(context.scored, profile, getLocalIsoWeekLabel(), recommendationLimit, insufficientWeeklyData, context.store);
     const storeData = context.store.load();
     const now = Date.now();
     digest = {

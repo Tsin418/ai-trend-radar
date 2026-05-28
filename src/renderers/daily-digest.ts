@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import type { DigestChanges, RadarDigest, RadarProfile, ScoredRadarRepository } from '../radar/types.js';
+import { getWatchlistLifecycleConfig } from '../radar/config.js';
+import type { JsonRadarStore } from '../storage/json-store.js';
 
 interface PreviousDigestProject {
   repoFullName: string;
@@ -26,6 +28,50 @@ function unique(items: ScoredRadarRepository[]): ScoredRadarRepository[] {
     result.push(item);
   }
   return result;
+}
+
+function activeWatchlistNames(scored: ScoredRadarRepository[], store?: JsonRadarStore): Set<string> {
+  if (store) return store.getActiveWatchlistNames();
+  return new Set(scored.filter((item) => item.repository.isWatchlist).map((item) => item.repository.repoFullName));
+}
+
+function hasWatchlistMovement(item: ScoredRadarRepository, profile: RadarProfile, newlyPromoted: Set<string>): boolean {
+  if (newlyPromoted.has(item.repository.repoFullName)) return true;
+  return (item.score.dailyStarDelta ?? 0) >= profile.thresholds.dailyStarEarly ||
+    (item.score.weeklyStarDelta ?? 0) >= profile.thresholds.weeklyStarEarly ||
+    (item.score.accelerationConfidence === 'high' && item.score.acceleration > 2.0) ||
+    item.score.developerActivityScore >= 70;
+}
+
+function withWatchlistMetadata(
+  item: ScoredRadarRepository,
+  store: JsonRadarStore | undefined,
+  activeNames: Set<string>,
+  newlyPromoted: Set<string>
+): ScoredRadarRepository {
+  const repoFullName = item.repository.repoFullName;
+  if (!activeNames.has(repoFullName)) return item;
+  const state = store?.getWatchlistState(repoFullName);
+  const signals = newlyPromoted.has(repoFullName) && !item.score.signals.includes('Newly promoted to watchlist')
+    ? [...item.score.signals, 'Newly promoted to watchlist']
+    : item.score.signals;
+  return {
+    ...item,
+    repository: {
+      ...item.repository,
+      isWatchlist: true,
+      watchlistSource: state?.source ?? item.repository.watchlistSource,
+      watchlistStatus: state?.status ?? item.repository.watchlistStatus,
+      watchlistPromotedAt: state?.promotedAt ?? item.repository.watchlistPromotedAt,
+      watchlistLastMovementAt: state?.lastMovementAt ?? item.repository.watchlistLastMovementAt,
+      watchlistPromotedReason: state?.promotedReason ?? item.repository.watchlistPromotedReason,
+      newlyPromotedToWatchlist: newlyPromoted.has(repoFullName)
+    },
+    score: {
+      ...item.score,
+      signals
+    }
+  };
 }
 
 function defaultPreviousDigestPaths(): string[] {
@@ -155,17 +201,41 @@ export function buildDailyRadarDigest(
   profile: RadarProfile,
   date: string,
   limit: number,
-  baselineCreated: boolean
+  baselineCreated: boolean,
+  store?: JsonRadarStore
 ): RadarDigest {
   const aiCandidates = scored.filter((item) => item.score.aiRelevanceScore >= profile.thresholds.aiRelevanceMin);
-  const hotProjects = sortByScore(aiCandidates.filter((item) => (item.score.dailyStarDelta ?? -1) >= profile.thresholds.dailyStarHot));
-  const acceleratingProjects = [...aiCandidates]
+  const rawHotCandidates = aiCandidates.filter((item) => (item.score.dailyStarDelta ?? -1) >= profile.thresholds.dailyStarHot);
+  const newlyPromoted = new Set<string>();
+
+  if (store) {
+    const config = getWatchlistLifecycleConfig();
+    for (const item of rawHotCandidates) {
+      const repoFullName = item.repository.repoFullName;
+      const before = store.getWatchlistState(repoFullName);
+      const beforeActive = before?.status === 'manual_active' || before?.status === 'auto_active' || before?.status === 'cooling';
+      const hotState = store.recordHotAppearance(repoFullName, date);
+      const current = store.getWatchlistState(repoFullName);
+      const currentActive = current?.status === 'manual_active' || current?.status === 'auto_active' || current?.status === 'cooling';
+      if (before?.source === 'manual' || beforeActive || currentActive) continue;
+      if (hotState.hotAppearanceDates.length >= config.hotPromotionCount) {
+        store.promoteToAutoWatchlist(repoFullName, date, `Entered Hot Projects ${config.hotPromotionCount} times within ${config.hotWindowDays} days.`);
+        newlyPromoted.add(repoFullName);
+      }
+    }
+  }
+
+  const activeNames = activeWatchlistNames(aiCandidates, store);
+  const nonWatchlistCandidates = aiCandidates.filter((item) => !activeNames.has(item.repository.repoFullName));
+  const activeWatchlistCandidates = aiCandidates.filter((item) => activeNames.has(item.repository.repoFullName));
+  const hotProjects = sortByScore(rawHotCandidates.filter((item) => !activeNames.has(item.repository.repoFullName)));
+  const acceleratingProjects = [...nonWatchlistCandidates]
     .filter((item) => item.score.accelerationConfidence === 'high' && item.score.acceleration > 2.0)
     .sort((a, b) => {
       if (b.score.acceleration !== a.score.acceleration) return b.score.acceleration - a.score.acceleration;
       return b.score.finalScore - a.score.finalScore;
     });
-  const earlySignals = sortByScore(aiCandidates.filter((item) => {
+  const earlySignals = sortByScore(nonWatchlistCandidates.filter((item) => {
     const daily = item.score.dailyStarDelta ?? -1;
     const weekly = item.score.weeklyStarDelta ?? -1;
     return daily >= profile.thresholds.dailyStarEarly &&
@@ -174,22 +244,31 @@ export function buildDailyRadarDigest(
       item.repository.stars >= profile.thresholds.earlyStageMinStars &&
       item.repository.stars <= profile.thresholds.earlyStageMaxStars;
   }));
-  const watchlistMovements = sortByScore(aiCandidates.filter((item) => {
-    if (!item.repository.isWatchlist) return false;
-    return (item.score.dailyStarDelta ?? 0) >= profile.thresholds.dailyStarEarly ||
-      (item.score.weeklyStarDelta ?? 0) >= profile.thresholds.weeklyStarEarly ||
-      item.score.developerActivityScore >= 70;
-  }));
+  const watchlistMovements = sortByScore(activeWatchlistCandidates.filter((item) =>
+    hasWatchlistMovement(item, profile, newlyPromoted)
+  ));
+
+  if (store) {
+    for (const item of watchlistMovements) {
+      store.recordWatchlistMovement(item.repository.repoFullName, date);
+    }
+    store.updateWatchlistLifecycle(date);
+  }
+
+  const finalActiveNames = activeWatchlistNames(aiCandidates, store);
+  const decorate = (items: ScoredRadarRepository[]): ScoredRadarRepository[] =>
+    items.map((item) => withWatchlistMetadata(item, store, finalActiveNames, newlyPromoted));
 
   const selectedProjects = unique([
     ...hotProjects,
     ...acceleratingProjects,
     ...earlySignals,
     ...watchlistMovements,
-    ...sortByScore(aiCandidates)
+    ...sortByScore(nonWatchlistCandidates)
   ]).slice(0, limit);
 
-  const topCategory = selectedProjects[0]?.repository.category ?? 'AI developer tooling';
+  const decoratedSelectedProjects = decorate(selectedProjects);
+  const topCategory = decoratedSelectedProjects[0]?.repository.category ?? 'AI developer tooling';
   const summaryParts = [
     `扫描到 ${scored.length} 个候选项目，AI 相关候选 ${aiCandidates.length} 个。`,
     hotProjects.length > 0
@@ -214,11 +293,11 @@ export function buildDailyRadarDigest(
       'Accelerating 只展示至少 3 天历史基线且今日 delta 超过前 3 日均值 2 倍的项目。',
       'Potential Score 为规则评分，用于排序，不代表项目质量结论。'
     ],
-    hotProjects: hotProjects.slice(0, limit),
-    acceleratingProjects: acceleratingProjects.slice(0, 3),
-    earlySignals: earlySignals.slice(0, limit),
-    watchlistMovements: watchlistMovements.slice(0, limit),
-    selectedProjects,
-    changesFromYesterday: computeChangesFromPreviousDigest(selectedProjects, date)
+    hotProjects: decorate(hotProjects.slice(0, limit)),
+    acceleratingProjects: decorate(acceleratingProjects.slice(0, 3)),
+    earlySignals: decorate(earlySignals.slice(0, limit)),
+    watchlistMovements: decorate(watchlistMovements.slice(0, limit)),
+    selectedProjects: decoratedSelectedProjects,
+    changesFromYesterday: computeChangesFromPreviousDigest(decoratedSelectedProjects, date)
   };
 }

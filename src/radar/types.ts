@@ -44,6 +44,31 @@ export interface RadarRepository {
   isArchived: boolean;
   isFork: boolean;
   isWatchlist: boolean;
+  watchlistSource?: WatchlistSource;
+  watchlistStatus?: WatchlistStatus;
+  watchlistPromotedAt?: string;
+  watchlistLastMovementAt?: string;
+  watchlistPromotedReason?: string;
+  newlyPromotedToWatchlist?: boolean;
+}
+
+export type WatchlistSource = 'manual' | 'auto';
+
+export type WatchlistStatus = 'manual_active' | 'auto_active' | 'cooling' | 'archived';
+
+export interface WatchlistState {
+  repoFullName: string;
+  source: WatchlistSource;
+  status: WatchlistStatus;
+  promotedAt?: string;
+  promotedReason?: string;
+  hotAppearanceDates: string[];
+  lastMovementAt?: string;
+  coolingStartedAt?: string;
+  archivedAt?: string;
+  archivedReason?: string;
+  reactivatedAt?: string;
+  reactivatedReason?: string;
 }
 
 export interface RepoSnapshot {
@@ -210,6 +235,7 @@ export interface RadarStoreData {
   repositories: Record<string, RadarRepository>;
   snapshots: RepoSnapshot[];
   scores: RepoScore[];
+  hotProjectAppearances: Record<string, string[]>;
   digestRuns: Array<{
     id: string;
     runType: RadarRunMode;
@@ -219,4 +245,5 @@ export interface RadarStoreData {
     selectedRepoCount: number;
     errorMessage?: string;
   }>;
+  watchlist: Record<string, WatchlistState>;
 }

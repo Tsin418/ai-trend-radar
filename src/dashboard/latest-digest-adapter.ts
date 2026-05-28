@@ -29,7 +29,13 @@ function toScoredRepository(project: LatestDailyDashboardFile['projects'][number
       openIssues: project.openIssues,
       isArchived: false,
       isFork: false,
-      isWatchlist: project.isWatchlist
+      isWatchlist: project.isWatchlist,
+      watchlistSource: project.watchlistSource,
+      watchlistStatus: project.watchlistStatus,
+      watchlistPromotedAt: project.watchlistPromotedAt,
+      watchlistLastMovementAt: project.watchlistLastMovementAt,
+      watchlistPromotedReason: project.watchlistPromotedReason,
+      newlyPromotedToWatchlist: project.newlyPromotedToWatchlist
     },
     score: {
       repoFullName: project.repoFullName,

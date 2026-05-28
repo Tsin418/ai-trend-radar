@@ -18,7 +18,7 @@ export async function runAiDeveloperRadarDaily(options: RadarRunOptions = {}): P
   try {
     const date = getLocalDateLabel();
     const baselineCreated = options.baselineOnly || storePathContext.scored.length === 0 || storePathContext.scored.every((item) => item.score.dailyStarDelta === null);
-    let digest = buildDailyRadarDigest(storePathContext.scored, profile, date, recommendationLimit, baselineCreated);
+    let digest = buildDailyRadarDigest(storePathContext.scored, profile, date, recommendationLimit, baselineCreated, storePathContext.store);
     const multiSource = await collectMultiSourceSignals(storePathContext.scored, recommendationLimit);
     const trendEnriched = await enrichTrendEntitiesWithLLM(
       [...multiSource.trendEntities, ...multiSource.topicClusters],
