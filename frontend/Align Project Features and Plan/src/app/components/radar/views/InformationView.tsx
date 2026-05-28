@@ -129,8 +129,8 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
     .slice(0, 5);
 
   return (
-    <div className="p-4 sm:p-6 space-y-6">
-      <section className="space-y-3">
+    <div className="p-4 sm:p-5 space-y-4">
+      <section className="space-y-2">
         <div>
           <h2 className="text-xl font-bold">Today&apos;s Picks / 今日精选</h2>
           <p className="text-sm text-muted-foreground mt-1">先看最值得读的 5 条，再决定要不要继续刷完整时间线。</p>
@@ -138,10 +138,10 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
         {todayPicks.length === 0 ? (
           <EmptyState title="今天暂无精选条目" hint="下方仍可查看完整分类和时间线。" />
         ) : (
-          <div className="grid grid-cols-1 gap-3">
+          <div className="grid grid-cols-1 gap-2">
             {todayPicks.map((item) => {
               return (
-                <Card key={item.id} className="p-3">
+                <Card key={item.id} className="p-2.5">
                   <div className="flex items-center gap-2 flex-wrap text-xs text-muted-foreground">
                     <span>{item.source}</span>
                     {item.category && (
@@ -154,11 +154,11 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
                     href={item.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-2 block text-base font-semibold hover:underline underline-offset-2"
+                    className="mt-1.5 block text-[15px] font-semibold hover:underline underline-offset-2 line-clamp-2"
                   >
                     {item.title}
                   </a>
-                  <p className="mt-1.5 text-sm text-foreground/85 leading-relaxed">{conciseSummary(item)}</p>
+                  <p className="mt-1 text-sm text-foreground/85 leading-relaxed line-clamp-2">{conciseSummary(item)}</p>
                 </Card>
               );
             })}
@@ -166,7 +166,7 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
         )}
       </section>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-3">
         <div>
           <h2 className="text-xl font-bold flex items-center gap-2">
             精选
@@ -174,7 +174,7 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
           </h2>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-4 items-center justify-between border rounded-xl bg-card p-2 px-4 shadow-sm">
+        <div className="flex flex-col sm:flex-row gap-3 items-center justify-between border rounded-xl bg-card p-2 px-3 shadow-sm">
           <div className="flex gap-1 overflow-x-auto w-full sm:w-auto scrollbar-none pb-2 sm:pb-0">
             {AIHOT_CATEGORIES.map(category => (
               <button
@@ -216,16 +216,16 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
       ) : displayItems.length === 0 ? (
         <div className="p-6"><EmptyState title="目前没有找到相关内容" /></div>
       ) : (
-        <div className="space-y-10">
+        <div className="space-y-7">
           {Object.entries(groupedItems).map(([date, dateItems]) => (
             <div key={date} className="relative mt-2">
-              <div className="sticky top-0 z-20 pb-4 mb-4 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+              <div className="sticky top-0 z-20 pb-3 mb-3 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
                 <span className="text-sm font-semibold text-muted-foreground bg-muted px-3 py-1 rounded-full">{date}</span>
               </div>
               
               <div className="relative">
                 <div className="absolute left-[61.5px] sm:left-[77.5px] top-6 bottom-[-32px] w-px bg-border/60"></div>
-                <div className="space-y-4 lg:space-y-6 pb-4">
+                <div className="space-y-3 lg:space-y-5 pb-3">
                   {dateItems.map((it) => {
                     const time = formatTime(it.publishedAt || it.collectedAt);
                     return (
@@ -236,27 +236,27 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
                         <div className="absolute left-[57px] sm:left-[73px] top-[5.5px] w-[10px] h-[10px] rounded-full bg-border group-hover:bg-primary transition-colors ring-4 ring-background z-10"></div>
                         
                         <Card className="flex-1 hover:bg-muted/30 transition-shadow hover:shadow-md min-w-0">
-                          <div className="p-3 sm:p-4">
-                            <div className="flex items-center gap-2 mb-1.5">
+                          <div className="p-2.5 sm:p-3.5">
+                            <div className="flex items-center gap-2 mb-1">
                               <span className="text-xs text-muted-foreground font-medium">{it.source}</span>
                             </div>
                             <a
                               href={it.url}
                               target="_blank"
                               rel="noreferrer"
-                              className="text-base sm:text-lg font-bold hover:underline underline-offset-2 flex text-foreground"
+                              className="text-[15px] sm:text-base font-bold hover:underline underline-offset-2 flex text-foreground line-clamp-2"
                             >
                               {it.title}
                             </a>
                             {(it.summary || it.description) && (
-                              <p className="text-[13px] sm:text-sm text-foreground/80 mt-2 leading-relaxed">
+                              <p className="text-[13px] sm:text-sm text-foreground/80 mt-1.5 leading-relaxed line-clamp-2">
                                 {it.summary || it.description}
                               </p>
                             )}
                             
                             {it.tags && it.tags.length > 0 && (
-                              <div className="flex flex-wrap gap-2 mt-3">
-                                {it.tags.slice(0, 5).map(t => (
+                              <div className="flex flex-wrap gap-1.5 mt-2.5">
+                                {it.tags.slice(0, 4).map(t => (
                                   <Badge variant="secondary" key={t} className="text-xs font-normal shadow-none bg-secondary/60">
                                     #{t}
                                   </Badge>
@@ -270,10 +270,10 @@ export function InformationView({ digest }: { digest: RadarDigest }) {
                             )}
 
                             {it.recommendedReason && (
-                              <div className="mt-3 p-2.5 bg-emerald-500/10 rounded-md border border-emerald-500/20">
+                              <div className="mt-2.5 p-2 bg-emerald-500/10 rounded-md border border-emerald-500/20">
                                  <div className="flex gap-2">
                                    <span className="text-emerald-700 dark:text-emerald-400 font-medium text-[13px] sm:text-sm whitespace-nowrap">推荐理由:</span>
-                                   <span className="text-emerald-700/90 dark:text-emerald-400/90 text-[13px] sm:text-sm leading-relaxed">{it.recommendedReason}</span>
+                                   <span className="text-emerald-700/90 dark:text-emerald-400/90 text-[13px] sm:text-sm leading-relaxed line-clamp-2">{it.recommendedReason}</span>
                                  </div>
                               </div>
                             )}
