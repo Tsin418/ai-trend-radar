@@ -8,11 +8,12 @@ import { fmtDate, fmtDelta, fmtNum, fmtRate, fmtRelative } from '../../utils/for
 import type { ScoredRadarRepository } from '../../types/radar';
 
 export function ProjectDetailDrawer({
-  project, open, onClose,
+  project, open, onClose, hideWhyItMatters = false,
 }: {
   project: ScoredRadarRepository | null;
   open: boolean;
   onClose: () => void;
+  hideWhyItMatters?: boolean;
 }) {
   return (
     <Sheet open={open} onOpenChange={(v) => { if (!v) onClose(); }}>
@@ -85,9 +86,11 @@ export function ProjectDetailDrawer({
               </Section>
             )}
 
+          {!hideWhyItMatters && (
             <Section title="Why it matters">
               <p className="text-sm">{project.whyItMatters}</p>
             </Section>
+          )}
 
             <Section title="Developer insight">
               <p className="text-sm">{project.developerInsight}</p>

@@ -14,7 +14,6 @@ import { SettingsView } from './components/radar/views/SettingsView';
 import { statusOf } from './components/radar/SourceHealthStrip';
 import { WarningBanner } from './components/radar/WarningBanner';
 import { useRadarDigest } from './hooks/useRadarDigest';
-import type { GrowthLinks } from './types/radar';
 
 const viewLabels: Record<ViewKey, string> = {
   dashboard: 'Today Radar',
@@ -25,14 +24,6 @@ const viewLabels: Record<ViewKey, string> = {
   digests: 'Digests',
   information: 'News',
   settings: 'Settings',
-};
-
-const emptyGrowthLinks: GrowthLinks = {
-  githubRepoUrl: '',
-  githubProfileUrl: '',
-  personalHomepageUrl: '',
-  linkedinUrl: '',
-  xiaohongshuUrl: '',
 };
 
 export default function App() {
@@ -74,7 +65,6 @@ export default function App() {
           date={digest.date}
           generatedAt={digest.generatedAt}
           viewLabel={viewLabels[view]}
-          growthLinks={digest.growthLinks ?? emptyGrowthLinks}
         />
         <main className="flex-1 overflow-y-auto">
           {(loading || usingFallback) && (
@@ -109,6 +99,7 @@ export default function App() {
         project={selectedProject}
         open={openRepo !== null}
         onClose={() => setOpenRepo(null)}
+        hideWhyItMatters={view === 'watchlist'}
       />
       <Toaster position="bottom-right" />
     </div>
