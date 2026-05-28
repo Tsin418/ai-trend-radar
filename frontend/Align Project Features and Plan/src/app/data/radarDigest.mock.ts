@@ -501,5 +501,12 @@ export const mockRadarDigest: RadarDigest = {
     { source: 'arxiv', enabled: true, success: true, itemCount: 20, startedAt: '2026-05-28T09:00:29+09:00', finishedAt: '2026-05-28T09:00:36+09:00', latencyMs: 7000 },
     { source: 'watchlist', enabled: true, success: true, itemCount: 12, startedAt: '2026-05-28T09:00:36+09:00', finishedAt: '2026-05-28T09:00:38+09:00', latencyMs: 2000 },
   ],
+  growthLinks: {
+    githubRepoUrl: 'https://github.com/Tsin418/ai-trend-radar',
+    githubProfileUrl: 'https://github.com/Tsin418',
+    personalHomepageUrl: 'https://github.com/Tsin418',
+    linkedinUrl: '',
+    xiaohongshuUrl: '',
+  },
   recurringProjects: ['ChromeDevTools/chrome-devtools-mcp'],
 };

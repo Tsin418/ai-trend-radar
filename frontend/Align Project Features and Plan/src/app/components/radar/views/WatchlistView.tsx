@@ -63,13 +63,9 @@ export function WatchlistView({
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
               {items.map((p) => (
                 <div key={p.repository.repoFullName} className="space-y-2">
-                  <ProjectCard project={p} onOpenDetail={onOpenDetail} />
+                  <ProjectCard project={p} onOpenDetail={onOpenDetail} showWhy={false} />
                   <div className="rounded-md border p-2.5 text-xs text-muted-foreground">
                     <p>
-                      <span className="text-foreground">进入 watchlist 的原因：</span>
-                      {p.repository.watchlistPromotedReason ?? p.whyItMatters}
-                    </p>
-                    <p className="mt-1">
                       <span className="text-foreground">最近状态：</span>
                       {movementLabel(p.repository.watchlistLastMovementAt)}
                     </p>
