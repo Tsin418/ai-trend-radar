@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-05-30-2026-05-29T21-46-47-754Z",
-  "generatedAt": "2026-05-29T21:46:47.754Z",
+  "runId": "lightweight-2026-05-30-2026-05-29T23-05-39-045Z",
+  "generatedAt": "2026-05-29T23:05:39.045Z",
   "targetDate": "2026-05-30",
   "brief": {
     "date": "2026-05-30",
@@ -11,10 +11,10 @@
       "Ai Model Release: This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 11 related signal(s). Treat it as correlation evidence ra.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
       "Ai Model Release: watch decision is deep_dive.",
-      "Coding Agent / Swe Agent: This topic appeared across 2 source(s): aihot, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Coding Agent / Swe Agent: This topic appeared across 2 source(s): aihot, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Coding Agent / Swe Agent: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
       "Coding Agent / Swe Agent: watch decision is deep_dive.",
-      "Mcp / Tool Calling: This topic appeared across 2 source(s): huggingface_models, huggingface_spaces, with 4 related signal(s). Treat it as correlation evidence rather than proven a.",
+      "Mcp / Tool Calling: This topic appeared across 2 source(s): huggingface_spaces, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
       "Mcp / Tool Calling: watch decision is deep_dive."
     ],
@@ -41,13 +41,13 @@
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
           "tools",
-          "peft",
-          "safetensors",
-          "base_model:adapter:Qwen/Qwen3-8B",
-          "grpo",
-          "lora",
-          "transformers",
-          "trl"
+          "pytorch",
+          "transformer",
+          "language-model",
+          "long-context",
+          "agillm",
+          "experimental",
+          "region:us"
         ],
         "evidenceItems": [
           {
@@ -59,7 +59,7 @@
             "summary": "Kog团队在标准数据中心GPU上实现了极高的单用户推理速度，在8× AMD MI300X GPUs上达到3，000 tokens/s，在8× NVIDIA H200上达到2，100 tokens/s。相比常规推理速度（约100-300 tokens/s），实现了10-30倍提升。其核心思路是将LLM解码视为内存流问题，通过协同设计monokernel、重建同步机制、针对性内存访问映射及采用延迟张量并行的Laneformer模型架构，消除了传统流程的阻塞点。",
             "category": "tools",
             "publishedAt": "2026-05-29T17:14:41.000Z",
-            "collectedAt": "2026-05-29T21:46:49.283Z"
+            "collectedAt": "2026-05-29T23:05:40.858Z"
           },
           {
             "id": "hackernews:48307887",
@@ -71,9 +71,9 @@
               "llm"
             ],
             "publishedAt": "2026-05-28T12:20:19.000Z",
-            "collectedAt": "2026-05-29T21:46:48.165Z",
+            "collectedAt": "2026-05-29T23:05:39.716Z",
             "metrics": {
-              "upvotes": 501,
+              "upvotes": 502,
               "commentsCount": 345
             }
           },
@@ -87,7 +87,7 @@
               "llm"
             ],
             "publishedAt": "2026-05-28T19:02:18.000Z",
-            "collectedAt": "2026-05-29T21:46:48.165Z",
+            "collectedAt": "2026-05-29T23:05:39.716Z",
             "metrics": {
               "upvotes": 351,
               "commentsCount": 276
@@ -105,10 +105,10 @@
               "agent"
             ],
             "publishedAt": "2026-05-28T13:02:00.000Z",
-            "collectedAt": "2026-05-29T21:46:48.165Z",
+            "collectedAt": "2026-05-29T23:05:39.716Z",
             "metrics": {
-              "upvotes": 367,
-              "commentsCount": 148
+              "upvotes": 370,
+              "commentsCount": 149
             }
           },
           {
@@ -121,10 +121,10 @@
               "llm"
             ],
             "publishedAt": "2026-05-29T00:09:35.000Z",
-            "collectedAt": "2026-05-29T21:46:48.165Z",
+            "collectedAt": "2026-05-29T23:05:39.716Z",
             "metrics": {
-              "upvotes": 90,
-              "commentsCount": 81
+              "upvotes": 95,
+              "commentsCount": 91
             }
           },
           {
@@ -138,17 +138,17 @@
               "inference"
             ],
             "publishedAt": "2026-05-29T19:38:27.000Z",
-            "collectedAt": "2026-05-29T21:46:48.165Z",
+            "collectedAt": "2026-05-29T23:05:39.716Z",
             "metrics": {
-              "upvotes": 36,
-              "commentsCount": 3
+              "upvotes": 57,
+              "commentsCount": 7
             }
           }
         ],
         "relatedEntities": [
           "亲测为实：难以置信的推理速度",
-          "Anish13/e10_qwen3_8b_lang_rl_stage2_lora_r64_a32_d0.05_lr9e-6_bsz2_ga4_g8_epochs10_seed42_ddp4_vllm",
           "OpenTransformer/AGILLM-4",
+          "CNX-PathLLM/Llama-slideQA",
           "Open LLM Leaderboard",
           "MusicGen",
           "Live Portrait",
@@ -156,7 +156,7 @@
           "The mysterious Hy3 LLM is topping OpenRouter Model Rankings by a large margin"
         ],
         "metrics": {
-          "votes": 501,
+          "votes": 502,
           "likes": 13992,
           "commentsCount": 345,
           "heatScore": 460,
@@ -176,7 +176,7 @@
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in tools represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Coding Agent / Swe Agent should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
@@ -197,18 +197,7 @@
             "summary": "该篇文章标题涉及\"Claude Code\"的可配置选项，但提供的正文内容仅包含一张图片和一个外部链接，未给出任何关于模型版本、参数、性能、价格或功能的具体信息。根据规则，无法在摘要中提及原文不存在的细节。",
             "category": "tools",
             "publishedAt": "2026-05-29T10:37:09.818Z",
-            "collectedAt": "2026-05-29T21:46:49.283Z"
-          },
-          {
-            "id": "aihot:cmpq988q102xdslnoe0k3fp1h",
-            "title": "Cursor 团队发布《开发者习惯报告》",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://x.com/shao__meng/status/2060167182777249886",
-            "summary": "报告显示，AI正深刻改变开发工作形态。开发者周均代码产出从约3.6K行增至8.6K行，更大规模的PR（千行以上）占比上升。AI智能体在单次会话中的工具调用数增加约30%，正在处理更复杂的任务。同时，被接受的AI代码在60分钟后的留存率从约76%提升至约81%，表明更多AI生成内容进入了实际代码库。这些趋势共同指向AI已从个人辅助工具，演进为推动开发向更大规模任务与自动化基础设施发展的核心力量。",
-            "category": "tools",
-            "publishedAt": "2026-05-29T01:11:47.000Z",
-            "collectedAt": "2026-05-29T21:46:49.283Z"
+            "collectedAt": "2026-05-29T23:05:40.858Z"
           },
           {
             "id": "hackernews:48318174",
@@ -220,7 +209,7 @@
               "claude"
             ],
             "publishedAt": "2026-05-29T02:13:20.000Z",
-            "collectedAt": "2026-05-29T21:46:48.165Z",
+            "collectedAt": "2026-05-29T23:05:39.716Z",
             "metrics": {
               "upvotes": 321,
               "commentsCount": 63
@@ -237,16 +226,15 @@
               "coding agent"
             ],
             "publishedAt": "2026-05-29T05:48:21.000Z",
-            "collectedAt": "2026-05-29T21:46:48.165Z",
+            "collectedAt": "2026-05-29T23:05:39.716Z",
             "metrics": {
-              "upvotes": 36,
-              "commentsCount": 49
+              "upvotes": 49,
+              "commentsCount": 55
             }
           }
         ],
         "relatedEntities": [
           "Claude Code--文档中未提及的所有可配置选项",
-          "Cursor 团队发布《开发者习惯报告》",
           "Show HN: Zot – Yet another coding agent harness",
           "Claude Code – Everything you can configure that the docs don't tell you"
         ],
@@ -260,29 +248,26 @@
       {
         "id": "topic:mcp / tool calling",
         "title": "Mcp / Tool Calling",
+        "category": "gradio",
         "sources": [
-          "huggingface_models",
-          "huggingface_spaces"
+          "huggingface_spaces",
+          "hackernews"
         ],
         "sourceCount": 2,
-        "heatScore": 140,
+        "heatScore": 144,
         "confidence": "medium",
         "watchDecision": "deep_dive",
-        "whatItIs": "Mcp / Tool Calling is an AI trend topic represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): huggingface_models, huggingface_spaces, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Mcp / Tool Calling is an AI trend topic in gradio represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_spaces, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Mcp / Tool Calling should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
-          "transformers",
-          "gguf",
-          "en",
-          "dataset:nvidia/When2Call",
-          "dataset:Salesforce/xlam-function-calling-60k",
-          "dataset:glaiveai/glaive-function-calling-v2",
-          "dataset:Team-ACE/ToolACE",
-          "dataset:allenai/Dolci-Instruct-SFT-Tool-Use-SA"
+          "gradio",
+          "mcp-server",
+          "region:us",
+          "mcp"
         ],
         "evidenceItems": [
           {
@@ -298,7 +283,7 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-05-29T21:46:47.915Z",
+            "collectedAt": "2026-05-29T23:05:39.512Z",
             "metrics": {
               "likes": 3255
             }
@@ -316,7 +301,7 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-05-29T21:46:47.915Z",
+            "collectedAt": "2026-05-29T23:05:39.512Z",
             "metrics": {
               "likes": 3150
             }
@@ -334,83 +319,67 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-05-29T21:46:47.915Z",
+            "collectedAt": "2026-05-29T23:05:39.512Z",
             "metrics": {
               "likes": 2848
             }
           },
           {
-            "id": "huggingface_models:mradermacher/ALIA-40b-fc-2605-i1-GGUF",
-            "title": "mradermacher/ALIA-40b-fc-2605-i1-GGUF",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/mradermacher/ALIA-40b-fc-2605-i1-GGUF",
+            "id": "hackernews:48330436",
+            "title": "MCP Is Dead",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://www.quandri.io/engineering-blog/mcp-is-dead",
             "tags": [
-              "transformers",
-              "gguf",
-              "en",
-              "dataset:nvidia/When2Call",
-              "dataset:Salesforce/xlam-function-calling-60k",
-              "dataset:glaiveai/glaive-function-calling-v2",
-              "dataset:Team-ACE/ToolACE",
-              "dataset:allenai/Dolci-Instruct-SFT-Tool-Use-SA",
-              "dataset:Agent-Ark/Toucan-1.5M",
-              "dataset:Nanbeige/ToolMind",
-              "base_model:BSC-LT/ALIA-40b-fc-2605",
-              "base_model:quantized:BSC-LT/ALIA-40b-fc-2605",
-              "license:apache-2.0",
-              "endpoints_compatible",
-              "region:us",
-              "imatrix",
-              "conversational"
+              "mcp"
             ],
-            "publishedAt": "2026-05-29T19:44:24.000Z",
-            "collectedAt": "2026-05-29T21:46:47.906Z",
+            "publishedAt": "2026-05-29T22:56:49.000Z",
+            "collectedAt": "2026-05-29T23:05:39.716Z",
             "metrics": {
-              "downloads": 0,
-              "likes": 0
+              "upvotes": 4,
+              "commentsCount": 0
             }
           }
         ],
         "relatedEntities": [
-          "mradermacher/ALIA-40b-fc-2605-i1-GGUF",
           "Z Image Turbo",
           "Wan2.2 14B Fast",
-          "Background Removal"
+          "Background Removal",
+          "MCP Is Dead"
         ],
         "metrics": {
+          "votes": 4,
           "likes": 3255,
-          "heatScore": 140,
+          "heatScore": 144,
           "crossSourceBonus": 10
         }
       },
       {
         "id": "topic:local llm / inference",
         "title": "Local Llm / Inference",
-        "category": "text-generation",
         "sources": [
           "huggingface_models",
           "hackernews"
         ],
         "sourceCount": 2,
-        "heatScore": 85,
-        "confidence": "low",
+        "heatScore": 118,
+        "confidence": "medium",
         "watchDecision": "deep_dive",
-        "whatItIs": "Local Llm / Inference is an AI trend topic in text-generation represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Local Llm / Inference is an AI trend topic represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
-          "peft",
-          "safetensors",
-          "base_model:adapter:Qwen/Qwen3-8B",
-          "grpo",
-          "lora",
-          "transformers",
-          "trl",
-          "text-generation"
+          "gguf",
+          "merge",
+          "mergekit",
+          "reasoning",
+          "non-reasoning",
+          "creative writing",
+          "roleplay",
+          "uncensored"
         ],
         "evidenceItems": [
           {
@@ -424,103 +393,44 @@
               "inference"
             ],
             "publishedAt": "2026-05-29T19:38:27.000Z",
-            "collectedAt": "2026-05-29T21:46:48.165Z",
+            "collectedAt": "2026-05-29T23:05:39.716Z",
             "metrics": {
-              "upvotes": 36,
-              "commentsCount": 3
+              "upvotes": 57,
+              "commentsCount": 7
             }
           },
           {
-            "id": "huggingface_models:Anish13/e10_qwen3_8b_lang_rl_stage2_lora_r64_a32_d0.05_lr9e-6_bsz2_ga4_g8_epochs10_seed42_ddp4_vllm",
-            "title": "Anish13/e10_qwen3_8b_lang_rl_stage2_lora_r64_a32_d0.05_lr9e-6_bsz2_ga4_g8_epochs10_seed42_ddp4_vllm",
+            "id": "huggingface_models:Pablo-Flores-Mollinedo/verilog-qwen2.5-coder-7b-v9-k5-v7b-repair-pipeline",
+            "title": "Pablo-Flores-Mollinedo/verilog-qwen2.5-coder-7b-v9-k5-v7b-repair-pipeline",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/Anish13/e10_qwen3_8b_lang_rl_stage2_lora_r64_a32_d0.05_lr9e-6_bsz2_ga4_g8_epochs10_seed42_ddp4_vllm",
-            "category": "text-generation",
+            "url": "https://huggingface.co/Pablo-Flores-Mollinedo/verilog-qwen2.5-coder-7b-v9-k5-v7b-repair-pipeline",
             "tags": [
               "peft",
-              "safetensors",
-              "base_model:adapter:Qwen/Qwen3-8B",
-              "grpo",
+              "verilog",
+              "rtl",
+              "qwen2.5-coder",
               "lora",
-              "transformers",
-              "trl",
-              "text-generation",
-              "conversational",
-              "arxiv:1910.09700",
-              "base_model:Qwen/Qwen3-8B",
-              "region:us"
-            ],
-            "publishedAt": "2026-05-29T21:46:06.000Z",
-            "collectedAt": "2026-05-29T21:46:47.906Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:gradients-io-tournaments/augmented-90e6c0c8500e1186",
-            "title": "gradients-io-tournaments/augmented-90e6c0c8500e1186",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/gradients-io-tournaments/augmented-90e6c0c8500e1186",
-            "category": "text-generation",
-            "tags": [
-              "transformers",
-              "safetensors",
-              "qwen2",
-              "text-generation",
-              "conversational",
-              "arxiv:1910.09700",
-              "text-generation-inference",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-05-29T21:44:35.000Z",
-            "collectedAt": "2026-05-29T21:46:47.906Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:mradermacher/ALIA-40b-fc-2605-i1-GGUF",
-            "title": "mradermacher/ALIA-40b-fc-2605-i1-GGUF",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/mradermacher/ALIA-40b-fc-2605-i1-GGUF",
-            "tags": [
-              "transformers",
-              "gguf",
-              "en",
-              "dataset:nvidia/When2Call",
-              "dataset:Salesforce/xlam-function-calling-60k",
-              "dataset:glaiveai/glaive-function-calling-v2",
-              "dataset:Team-ACE/ToolACE",
-              "dataset:allenai/Dolci-Instruct-SFT-Tool-Use-SA",
-              "dataset:Agent-Ark/Toucan-1.5M",
-              "dataset:Nanbeige/ToolMind",
-              "base_model:BSC-LT/ALIA-40b-fc-2605",
-              "base_model:quantized:BSC-LT/ALIA-40b-fc-2605",
+              "repair-loop",
+              "inference-pipeline",
+              "base_model:Qwen/Qwen2.5-Coder-7B-Instruct",
+              "base_model:adapter:Qwen/Qwen2.5-Coder-7B-Instruct",
               "license:apache-2.0",
-              "endpoints_compatible",
-              "region:us",
-              "imatrix",
-              "conversational"
+              "region:us"
             ],
-            "publishedAt": "2026-05-29T19:44:24.000Z",
-            "collectedAt": "2026-05-29T21:46:47.906Z",
+            "publishedAt": "2026-05-29T23:05:12.000Z",
+            "collectedAt": "2026-05-29T23:05:39.508Z",
             "metrics": {
               "downloads": 0,
               "likes": 0
             }
           },
           {
-            "id": "huggingface_models:MeghanaKap/malayalam_lora_english_base_47",
-            "title": "MeghanaKap/malayalam_lora_english_base_47",
+            "id": "huggingface_models:MeghanaKap/malayalam_lora_english_base_48",
+            "title": "MeghanaKap/malayalam_lora_english_base_48",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/MeghanaKap/malayalam_lora_english_base_47",
+            "url": "https://huggingface.co/MeghanaKap/malayalam_lora_english_base_48",
             "tags": [
               "transformers",
               "safetensors",
@@ -528,14 +438,101 @@
               "unsloth",
               "qwen2",
               "en",
-              "base_model:MeghanaKap/malayalam_lora_english_base_47",
-              "base_model:finetune:MeghanaKap/malayalam_lora_english_base_47",
+              "base_model:MeghanaKap/malayalam_lora_english_base_48",
+              "base_model:finetune:MeghanaKap/malayalam_lora_english_base_48",
               "license:apache-2.0",
               "endpoints_compatible",
               "region:us"
             ],
-            "publishedAt": "2026-05-29T21:44:05.000Z",
-            "collectedAt": "2026-05-29T21:46:47.906Z",
+            "publishedAt": "2026-05-29T23:04:28.000Z",
+            "collectedAt": "2026-05-29T23:05:39.508Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:mradermacher/granite-4.1-8b-abliterated-i1-GGUF",
+            "title": "mradermacher/granite-4.1-8b-abliterated-i1-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/mradermacher/granite-4.1-8b-abliterated-i1-GGUF",
+            "tags": [
+              "transformers",
+              "gguf",
+              "abliterated",
+              "uncensored",
+              "abliterix",
+              "granite",
+              "en",
+              "base_model:wangzhang/granite-4.1-8b-abliterated",
+              "base_model:quantized:wangzhang/granite-4.1-8b-abliterated",
+              "license:apache-2.0",
+              "endpoints_compatible",
+              "region:us",
+              "imatrix",
+              "conversational"
+            ],
+            "publishedAt": "2026-05-29T21:16:54.000Z",
+            "collectedAt": "2026-05-29T23:05:39.508Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:enacimie/Qwen3.6-27B-Q2_K-GGUF",
+            "title": "enacimie/Qwen3.6-27B-Q2_K-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/enacimie/Qwen3.6-27B-Q2_K-GGUF",
+            "category": "image-text-to-text",
+            "tags": [
+              "transformers",
+              "gguf",
+              "llama-cpp",
+              "gguf-my-repo",
+              "image-text-to-text",
+              "base_model:Qwen/Qwen3.6-27B",
+              "base_model:quantized:Qwen/Qwen3.6-27B",
+              "license:apache-2.0",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
+            ],
+            "publishedAt": "2026-05-29T23:03:22.000Z",
+            "collectedAt": "2026-05-29T23:05:39.508Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:L1nus/qwen3-4b-thinking-2507-pubmedqa-final-only-default-noassistmask",
+            "title": "L1nus/qwen3-4b-thinking-2507-pubmedqa-final-only-default-noassistmask",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/L1nus/qwen3-4b-thinking-2507-pubmedqa-final-only-default-noassistmask",
+            "category": "text-generation",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "qwen3",
+              "text-generation",
+              "text-generation-inference",
+              "unsloth",
+              "trl",
+              "sft",
+              "conversational",
+              "en",
+              "base_model:unsloth/Qwen3-4B-Thinking-2507",
+              "base_model:finetune:unsloth/Qwen3-4B-Thinking-2507",
+              "license:apache-2.0",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-05-29T23:02:12.000Z",
+            "collectedAt": "2026-05-29T23:05:39.508Z",
             "metrics": {
               "downloads": 0,
               "likes": 0
@@ -543,16 +540,18 @@
           }
         ],
         "relatedEntities": [
-          "Anish13/e10_qwen3_8b_lang_rl_stage2_lora_r64_a32_d0.05_lr9e-6_bsz2_ga4_g8_epochs10_seed42_ddp4_vllm",
-          "gradients-io-tournaments/augmented-90e6c0c8500e1186",
-          "mradermacher/ALIA-40b-fc-2605-i1-GGUF",
-          "MeghanaKap/malayalam_lora_english_base_47",
+          "Blazed-Forge/Gemma-4-Giftige-Blume-31B-v1-GGUF",
+          "Pablo-Flores-Mollinedo/verilog-qwen2.5-coder-7b-v9-k5-v7b-repair-pipeline",
+          "MeghanaKap/malayalam_lora_english_base_48",
+          "mradermacher/granite-4.1-8b-abliterated-i1-GGUF",
+          "enacimie/Qwen3.6-27B-Q2_K-GGUF",
+          "L1nus/qwen3-4b-thinking-2507-pubmedqa-final-only-default-noassistmask",
           "Show HN: Tiny-vLLM – high performance LLM inference engine in C++ and CUDA"
         ],
         "metrics": {
-          "votes": 36,
-          "commentsCount": 3,
-          "heatScore": 85,
+          "votes": 57,
+          "commentsCount": 7,
+          "heatScore": 118,
           "crossSourceBonus": 10
         }
       }
@@ -563,8 +562,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-05-29T21:46:47.788Z",
-        "finishedAt": "2026-05-29T21:46:47.788Z",
+        "startedAt": "2026-05-29T23:05:39.334Z",
+        "finishedAt": "2026-05-29T23:05:39.334Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -573,36 +572,36 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-05-29T21:46:47.788Z",
-        "finishedAt": "2026-05-29T21:46:49.284Z",
-        "latencyMs": 1496
+        "startedAt": "2026-05-29T23:05:39.334Z",
+        "finishedAt": "2026-05-29T23:05:40.859Z",
+        "latencyMs": 1525
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 21,
-        "startedAt": "2026-05-29T21:46:47.804Z",
-        "finishedAt": "2026-05-29T21:46:47.907Z",
-        "latencyMs": 103
+        "itemCount": 15,
+        "startedAt": "2026-05-29T23:05:39.366Z",
+        "finishedAt": "2026-05-29T23:05:39.508Z",
+        "latencyMs": 142
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-05-29T21:46:47.807Z",
-        "finishedAt": "2026-05-29T21:46:47.916Z",
-        "latencyMs": 109
+        "startedAt": "2026-05-29T23:05:39.368Z",
+        "finishedAt": "2026-05-29T23:05:39.512Z",
+        "latencyMs": 144
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 35,
-        "startedAt": "2026-05-29T21:46:47.808Z",
-        "finishedAt": "2026-05-29T21:46:48.166Z",
-        "latencyMs": 358
+        "itemCount": 29,
+        "startedAt": "2026-05-29T23:05:39.369Z",
+        "finishedAt": "2026-05-29T23:05:39.717Z",
+        "latencyMs": 348
       }
     ],
     "dataNotes": [
@@ -612,6 +611,26 @@
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
+      {
+        "id": "huggingface_models:R0mAI/reliquary-sn-v23",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "R0mAI/reliquary-sn-v23",
+        "url": "https://huggingface.co/R0mAI/reliquary-sn-v23",
+        "tags": [
+          "safetensors",
+          "qwen3",
+          "region:us"
+        ],
+        "metrics": {
+          "downloads": 66339,
+          "likes": 2
+        },
+        "publishedAt": "2026-05-15T16:39:33.000Z",
+        "updatedAt": "2026-05-29T23:04:46.000Z",
+        "collectedAt": "2026-05-29T23:05:39.508Z",
+        "raw": {}
+      },
       {
         "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
         "source": "huggingface_spaces",
@@ -636,7 +655,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-05-29T21:46:47.915Z",
+        "collectedAt": "2026-05-29T23:05:39.512Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -659,7 +678,7 @@
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-05-29T21:46:47.915Z",
+        "collectedAt": "2026-05-29T23:05:39.512Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -682,7 +701,7 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-05-29T21:46:47.915Z",
+        "collectedAt": "2026-05-29T23:05:39.512Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
@@ -702,11 +721,11 @@
         ],
         "category": "docker",
         "metrics": {
-          "likes": 7425
+          "likes": 7426
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
         "updatedAt": "2026-05-29T11:20:52.000Z",
-        "collectedAt": "2026-05-29T21:46:47.915Z",
+        "collectedAt": "2026-05-29T23:05:39.512Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🥇"
@@ -729,7 +748,7 @@
         },
         "publishedAt": "2025-09-18T07:05:32.000Z",
         "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-05-29T21:46:47.915Z",
+        "collectedAt": "2026-05-29T23:05:39.512Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👁"
@@ -755,7 +774,7 @@
         },
         "publishedAt": "2023-06-08T18:00:26.000Z",
         "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-05-29T21:46:47.915Z",
+        "collectedAt": "2026-05-29T23:05:39.512Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🎵"
@@ -779,39 +798,10 @@
         },
         "publishedAt": "2023-05-20T09:26:19.000Z",
         "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-05-29T21:46:47.915Z",
+        "collectedAt": "2026-05-29T23:05:39.512Z",
         "raw": {
           "sdk": "static",
           "emoji": "🏆🤖"
-        }
-      },
-      {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
-        "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3744
-        },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-05-29T21:46:47.915Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
         }
       }
     ],
@@ -828,11 +818,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 1717,
-          "commentsCount": 1337
+          "upvotes": 1718,
+          "commentsCount": 1341
         },
         "publishedAt": "2026-05-28T16:49:14.000Z",
-        "collectedAt": "2026-05-29T21:46:48.165Z",
+        "collectedAt": "2026-05-29T23:05:39.716Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48311647",
           "matchedKeywords": [
@@ -852,11 +842,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 694,
-          "commentsCount": 356
+          "upvotes": 704,
+          "commentsCount": 365
         },
         "publishedAt": "2026-05-29T13:50:25.000Z",
-        "collectedAt": "2026-05-29T21:46:48.165Z",
+        "collectedAt": "2026-05-29T23:05:39.716Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48323101",
           "matchedKeywords": [
@@ -875,11 +865,11 @@
           "llm"
         ],
         "metrics": {
-          "upvotes": 501,
+          "upvotes": 502,
           "commentsCount": 345
         },
         "publishedAt": "2026-05-28T12:20:19.000Z",
-        "collectedAt": "2026-05-29T21:46:48.165Z",
+        "collectedAt": "2026-05-29T23:05:39.716Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48307887",
           "matchedKeywords": [
@@ -898,11 +888,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 520,
+          "upvotes": 527,
           "commentsCount": 246
         },
         "publishedAt": "2026-05-28T21:45:54.000Z",
-        "collectedAt": "2026-05-29T21:46:48.165Z",
+        "collectedAt": "2026-05-29T23:05:39.716Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48315968",
           "matchedKeywords": [
@@ -923,10 +913,10 @@
         ],
         "metrics": {
           "upvotes": 358,
-          "commentsCount": 408
+          "commentsCount": 409
         },
         "publishedAt": "2026-05-28T18:09:44.000Z",
-        "collectedAt": "2026-05-29T21:46:48.165Z",
+        "collectedAt": "2026-05-29T23:05:39.716Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48313048",
           "matchedKeywords": [
@@ -937,6 +927,46 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmpribwbr01bnslljhk0pj682",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "这个 skill 看着不错，可将文字、URL 或文章直接生成公众号首图、小红书图文卡、教程步骤卡等视觉物料，支持 28 种布局和 10 种主题。",
+        "url": "https://x.com/hongming731/status/2060487110906527820",
+        "summary": "claude-design-card 是一款专为中文内容创作者设计的 Skill。它能将文字、URL 或文章直接转化为可发布的视觉卡片，如公众号首图、小红书图文卡、教程步骤卡等，支持 28 种布局与 10 种主题。其核心价值在于自动化了\"写完文章\"后最繁琐的流程：自动提炼重点、选择版式、生成 HTML 并截图成 PNG，替代了以往手动使用 Figma 或 Canva 等工具的步骤。该工具开源，适合经常撰写相关内容的创作者尝试。",
+        "description": "claude-design-card 是一款专为中文内容创作者设计的 Skill。它能将文字、URL 或文章直接转化为可发布的视觉卡片，如公众号首图、小红书图文卡、教程步骤卡等，支持 28 种布局与 10 种主题。其核心价值在于自动化了\"写完文章\"后最繁琐的流程：自动提炼重点、选择版式、生成 HTML 并截图成 PNG，替代了以往手动使用 Figma 或 Canva 等工具的步骤。该工具开源，适合经常撰写相关内容的创作者尝试。",
+        "category": "tools",
+        "originalSource": "X：洪明 (@hongming731)",
+        "originalUrl": "https://x.com/hongming731/status/2060487110906527820",
+        "recommendedReason": "claude-design-card 是一款专为中文内容创作者设计的 Skill。它能将文字、URL 或文章直接转化为可发布的视觉卡片，如公众号首图、小红书图文卡、教程步骤卡等，支持 28 种布局与 10 种主题。其核心价值在于自动化了\"写完文章\"后最繁琐的流程：自动提炼重点、选择版式、生成 HTML 并截图成 PNG，替代了以往手动使用 Figma 或 Canva 等工具的步骤。该工具开源，适合经常撰写相关内容的创作者尝试。",
+        "publishedAt": "2026-05-29T22:23:03.000Z",
+        "collectedAt": "2026-05-29T23:05:40.858Z",
+        "raw": {
+          "id": "cmpribwbr01bnslljhk0pj682",
+          "titleEn": null,
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmprilbss01egsllj3maz5i8a",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Codex可自主管理对话线程与并行任务",
+        "url": "https://x.com/gdb/status/2060486309886443787",
+        "summary": "Codex用于管理Codex界面： 【引用 @guinnesschen】：如果你厌倦了管理Codex对话线程，就让Codex自己管理自己吧！Codex现在可以创建对话线程、搜索它们、整理它们、固定重要的线程，并为并行任务启动工作树。",
+        "description": "Codex用于管理Codex界面： 【引用 @guinnesschen】：如果你厌倦了管理Codex对话线程，就让Codex自己管理自己吧！Codex现在可以创建对话线程、搜索它们、整理它们、固定重要的线程，并为并行任务启动工作树。",
+        "category": "products",
+        "originalSource": "X：Greg Brockman (@gdb)",
+        "originalUrl": "https://x.com/gdb/status/2060486309886443787",
+        "recommendedReason": "Codex用于管理Codex界面： 【引用 @guinnesschen】：如果你厌倦了管理Codex对话线程，就让Codex自己管理自己吧！Codex现在可以创建对话线程、搜索它们、整理它们、固定重要的线程，并为并行任务启动工作树。",
+        "publishedAt": "2026-05-29T22:19:52.000Z",
+        "collectedAt": "2026-05-29T23:05:40.858Z",
+        "raw": {
+          "id": "cmprilbss01egsllj3maz5i8a",
+          "titleEn": "codex for managing the codex UI：",
+          "apiCategory": "ai-products"
+        }
+      },
       {
         "id": "aihot:cmpreww0500fosllj22uja0ac",
         "source": "aihot",
@@ -950,7 +980,7 @@
         "originalUrl": "https://x.com/ChatGPTapp/status/2060467129066070182",
         "recommendedReason": "对于每个始于\"就问一件事\"却演变成完整长篇的ChatGPT对话：目录功能现已推出。 适用于包含5条以上回复的对话。",
         "publishedAt": "2026-05-29T21:03:39.000Z",
-        "collectedAt": "2026-05-29T21:46:49.283Z",
+        "collectedAt": "2026-05-29T23:05:40.858Z",
         "raw": {
           "id": "cmpreww0500fosllj22uja0ac",
           "titleEn": "For every ChatGPT conversation that started as \"one quick thing\" and became a full on saga： table of…",
@@ -970,7 +1000,7 @@
         "originalUrl": "https://x.com/LumaLabsAI/status/2060461313713909783",
         "recommendedReason": "博客文章完成了思考。现在让宣传来发挥作用。 输入内容。定义钩子。Luma Agents 从那里构建每一张宣传图。 投入使用 → http：//lumalabs.ai/app",
         "publishedAt": "2026-05-29T20:40:33.000Z",
-        "collectedAt": "2026-05-29T21:46:49.283Z",
+        "collectedAt": "2026-05-29T23:05:40.858Z",
         "raw": {
           "id": "cmpreiy8h00dwslljv0r8dmt7",
           "titleEn": "The blog post did the thinking. Now let the promo do the work. Drop in the content. Define the hoo…",
@@ -990,7 +1020,7 @@
         "originalUrl": "https://x.com/runwayml/status/2060453805519765548",
         "recommendedReason": "我们持续为 Runway API 添加新模型和端点，以便您能将最佳生成能力直接集成到应用、产品和平台中。通过 Runway API，您可以在一个地方获得所需的所有模型，包括 Seedance 2.0、GPT Image 2、HappyHorse 1.0、Nano Banana Pro、Magnific Precision Upscaler V2 等更多内容。请通过下方链接开始使用。",
         "publishedAt": "2026-05-29T20:10:43.000Z",
-        "collectedAt": "2026-05-29T21:46:49.283Z",
+        "collectedAt": "2026-05-29T23:05:40.858Z",
         "raw": {
           "id": "cmprcx2os0czfslno0g5c7er5",
           "titleEn": "We are continually adding new models and endpoints to the Runway API so you can build the best gener…",
@@ -1010,7 +1040,7 @@
         "originalUrl": "https://x.com/gdb/status/2060452095279415725",
         "recommendedReason": "OpenAI 实时翻译功能--使用70多种输入语言说话，翻译成13种输出语言： gpt-realtime-translate 接收任意语言的语音输入，并输出目标语言的语音。 大语言模型很棒，但特定用例需要专用模型。 我们正在智能眼镜上运行此功能。",
         "publishedAt": "2026-05-29T20:03:55.000Z",
-        "collectedAt": "2026-05-29T21:46:49.283Z",
+        "collectedAt": "2026-05-29T23:05:40.858Z",
         "raw": {
           "id": "cmprd8aty0d2jslnojk7ompp6",
           "titleEn": "OpenAI for realtime translation - speak in any of 70+ input languages and translate into 13 output o…",
@@ -1030,7 +1060,7 @@
         "originalUrl": "https://x.com/googleaidevs/status/2060439904929382700",
         "recommendedReason": "LlamaIndex 团队基于 Google 新发布的 Agents API 构建了一个模板，使智能体能够访问 LlamaParse 和 LiteParse，从而自动处理非结构化文档。其工作流程为：配置数据与输出的 Git 仓库，将仓库克隆至智能体沙箱，安装 LiteParse CLI 与 LlamaParse SDK 及相关技能，最后通过提示词驱动智能体自主执行任务。该模板最终形成一个可直接使用 LlamaParse 和 LiteParse 处理真实世界文档的智能体。",
         "publishedAt": "2026-05-29T19:15:29.000Z",
-        "collectedAt": "2026-05-29T21:46:49.283Z",
+        "collectedAt": "2026-05-29T23:05:40.858Z",
         "raw": {
           "id": "cmprc0e680csdslnofhw8c29o",
           "titleEn": "The team at @llama_index built an awesome template using LlamaParse and the new Managed Agents in th…",
@@ -1050,51 +1080,11 @@
         "originalUrl": "https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz",
         "recommendedReason": "Google 使用其开发工具 Google AI Studio，通过氛围编程（vibe coding）方式，创建了一个关于 Google I/O 2026 主要公告的在线测验。",
         "publishedAt": "2026-05-29T19:00:00.000Z",
-        "collectedAt": "2026-05-29T21:46:49.283Z",
+        "collectedAt": "2026-05-29T23:05:40.858Z",
         "raw": {
           "id": "cmprapdjj0cdoslnomir3c2q7",
           "titleEn": "Take our I/O 2026 quiz， vibe coded in Google AI Studio.",
           "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmpramk160cceslno2f8eouqr",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Gemini Omni可将草图变为现实",
-        "url": "https://x.com/GeminiApp/status/2060435981946503243",
-        "summary": "Gemini Omni甚至能将简单的草图变为新的现实。 在Gemini应用中亲自尝试。上传一段有人画圆的视频，然后输入这个提示词：当我画完这个圆时，它变成了___。",
-        "description": "Gemini Omni甚至能将简单的草图变为新的现实。 在Gemini应用中亲自尝试。上传一段有人画圆的视频，然后输入这个提示词：当我画完这个圆时，它变成了___。",
-        "category": "products",
-        "originalSource": "X：Gemini (@GeminiApp)",
-        "originalUrl": "https://x.com/GeminiApp/status/2060435981946503243",
-        "recommendedReason": "Gemini Omni甚至能将简单的草图变为新的现实。 在Gemini应用中亲自尝试。上传一段有人画圆的视频，然后输入这个提示词：当我画完这个圆时，它变成了___。",
-        "publishedAt": "2026-05-29T18:59:53.000Z",
-        "collectedAt": "2026-05-29T21:46:49.283Z",
-        "raw": {
-          "id": "cmpramk160cceslno2f8eouqr",
-          "titleEn": "Gemini Omni can transform even a basic sketch into a new reality. Try for yourself in the Gemini a…",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmpr9mxrd0c40slnoz5qvsa20",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Codex现已支持Windows端计算机使用功能",
-        "url": "https://x.com/OpenAI/status/2060428604727771421",
-        "summary": "Windows用户，这条消息是给你的。 计算机使用功能现已在Windows上可用，因此Codex可以在你的Windows电脑上执行操作。 通过ChatGPT移动应用中Codex的Windows支持，你可以在工作继续在Windows电脑上进行时，随时随地启动、审查和引导任务。 这是一项早期体验，但我们正在努力提供更多方式，让你的工作无论身在何处都能持续进行。",
-        "description": "Windows用户，这条消息是给你的。 计算机使用功能现已在Windows上可用，因此Codex可以在你的Windows电脑上执行操作。 通过ChatGPT移动应用中Codex的Windows支持，你可以在工作继续在Windows电脑上进行时，随时随地启动、审查和引导任务。 这是一项早期体验，但我们正在努力提供更多方式，让你的工作无论身在何处都能持续进行。",
-        "category": "products",
-        "originalSource": "X：OpenAI (@OpenAI)",
-        "originalUrl": "https://x.com/OpenAI/status/2060428604727771421",
-        "recommendedReason": "Windows用户，这条消息是给你的。 计算机使用功能现已在Windows上可用，因此Codex可以在你的Windows电脑上执行操作。 通过ChatGPT移动应用中Codex的Windows支持，你可以在工作继续在Windows电脑上进行时，随时随地启动、审查和引导任务。 这是一项早期体验，但我们正在努力提供更多方式，让你的工作无论身在何处都能持续进行。",
-        "publishedAt": "2026-05-29T18:30:34.000Z",
-        "collectedAt": "2026-05-29T21:46:49.283Z",
-        "raw": {
-          "id": "cmpr9mxrd0c40slnoz5qvsa20",
-          "titleEn": "Windows users， this one's for you. Computer use now works on Windows， so Codex can take action on y…",
-          "apiCategory": "ai-products"
         }
       }
     ]
