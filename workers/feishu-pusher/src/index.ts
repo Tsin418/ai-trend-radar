@@ -115,7 +115,7 @@ const DEFAULT_DIGEST_URL =
   'https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-daily-digest.json';
 const DEFAULT_LIGHTWEIGHT_DIGEST_URL =
   'https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-intelligence-brief.json';
-const DAILY_MAIN_CRON = '48 0 * * *';
+const DAILY_CRONS = ['30 1 * * *', '45 1 * * *'];
 const PRODUCT_HUNT_ENDPOINT = 'https://api.producthunt.com/v2/api/graphql';
 const DEFAULT_PRODUCT_HUNT_TOPICS = [
   'artificial-intelligence',
@@ -901,23 +901,18 @@ async function sendLatestDigest(env: Env, force = false): Promise<SendResult> {
   };
 }
 
-function lightweightSlotKey(scheduledTime: number): string {
-  return new Date(scheduledTime).toISOString().slice(0, 13).replace('T', '-');
-}
-
-async function sendLightweightDigest(env: Env, scheduledTime: number, force = false): Promise<SendResult> {
+async function sendLightweightDigest(env: Env, _scheduledTime: number, force = false): Promise<SendResult> {
   const digest = await fetchLatestLightweightDigest(env);
   assertFreshLightweightDigest(digest, parseMaxDigestAgeHours(env.MAX_DIGEST_AGE_HOURS));
 
-  const slot = lightweightSlotKey(scheduledTime);
-  const sentKey = `sent:lightweight-${slot}`;
+  const sentKey = `sent:lightweight-${digest.runId}`;
   if (env.RADAR_STATE) {
     const existing = await env.RADAR_STATE.get(sentKey);
     if (existing && !force) {
       return {
         ok: true,
         skipped: true,
-        reason: 'Lightweight digest already sent for this slot',
+        reason: 'Lightweight digest already sent',
         digestId: digest.runId,
         targetDate: digest.targetDate,
         generatedAt: digest.generatedAt
@@ -934,7 +929,6 @@ async function sendLightweightDigest(env: Env, scheduledTime: number, force = fa
       sentKey,
       JSON.stringify({
         digestId: digest.runId,
-        slot,
         sentAt: new Date().toISOString()
       }),
       {
@@ -962,7 +956,7 @@ function isAuthorizedManualRequest(request: Request, env: Env): boolean {
 
 export default {
   async scheduled(controller: ScheduledController, env: Env, ctx: ExecutionContext): Promise<void> {
-    const task = controller.cron === DAILY_MAIN_CRON
+    const task = DAILY_CRONS.includes(controller.cron)
       ? sendLatestDigest(env)
       : sendLightweightDigest(env, controller.scheduledTime);
 
