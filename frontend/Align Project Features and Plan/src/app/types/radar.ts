@@ -296,6 +296,7 @@ export interface RadarDigest {
   categoryStats?: RadarCategoryStat[];
   researchPicks?: ScoredRadarRepository[];
   multiSourceSections?: MultiSourceDigestSections;
+  multiSourceGeneratedAt?: string;
   sourceHealth?: SourceHealth[];
   trendEntities?: TrendEntity[];
   topicClusters?: TrendEntity[];

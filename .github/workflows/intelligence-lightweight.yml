@@ -2,7 +2,7 @@ name: AI Intelligence Lightweight Update
 
 on:
   schedule:
-    - cron: "0 6,12,18 * * *"
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 concurrency:
@@ -76,5 +76,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           [ -f data/latest-intelligence-brief.json ] && git add data/latest-intelligence-brief.json
+          [ -f data/latest-multisource-signals.json ] && git add data/latest-multisource-signals.json
           git diff --cached --quiet || git commit -m "chore(radar): update lightweight intelligence brief"
           git push

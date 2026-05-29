@@ -14,94 +14,116 @@ import { SettingsView } from './components/radar/views/SettingsView';
 import { statusOf } from './components/radar/SourceHealthStrip';
 import { WarningBanner } from './components/radar/WarningBanner';
 import { useRadarDigest } from './hooks/useRadarDigest';
+import { useMultisourceSignals } from './hooks/useMultisourceSignals';
 
 const viewLabels: Record<ViewKey, string> = {
-  dashboard: 'Today Radar',
-  projects: 'Projects',
-  categories: 'Categories',
-  signals: 'Multi-source Signals',
-  watchlist: 'Watchlist',
-  digests: 'Digests',
-  information: 'News',
-  settings: 'Settings',
+	dashboard: 'Today Radar',
+	projects: 'Projects',
+	categories: 'Categories',
+	signals: 'Multi-source Signals',
+	watchlist: 'Watchlist',
+	digests: 'Digests',
+	information: 'News',
+	settings: 'Settings',
 };
 
 export default function App() {
-  const [view, setView] = useState<ViewKey>('dashboard');
-  const [openRepo, setOpenRepo] = useState<string | null>(null);
+	const [view, setView] = useState<ViewKey>('dashboard');
+	const [openRepo, setOpenRepo] = useState<string | null>(null);
 
-  const { digest, loading, error, usingFallback } = useRadarDigest();
+	const { digest: baseDigest, loading, error, usingFallback } = useRadarDigest();
+	const multisource = useMultisourceSignals();
 
-  const allProjects = useMemo(() => {
-    const map = new Map<string, typeof digest.selectedProjects[number]>();
-    [
-      ...digest.selectedProjects,
-      ...digest.hotProjects,
-      ...digest.acceleratingProjects,
-      ...digest.earlySignals,
-      ...digest.watchlistMovements,
-    ].forEach((p) => map.set(p.repository.repoFullName, p));
-    return Array.from(map.values());
-  }, [digest]);
+	const digest = useMemo(() => {
+		if (!multisource.generatedAt) return baseDigest;
 
-  const selectedProject = useMemo(
-    () => allProjects.find((p) => p.repository.repoFullName === openRepo) ?? null,
-    [allProjects, openRepo],
-  );
+		const mergedSections = {
+			...baseDigest.multiSourceSections,
+			...(multisource.productLaunches.length > 0 ? { productLaunches: multisource.productLaunches } : {}),
+			...(multisource.modelDemoSignals.length > 0 ? { modelDemoSignals: multisource.modelDemoSignals } : {}),
+			...(multisource.developerBuzz.length > 0 ? { developerBuzz: multisource.developerBuzz } : {}),
+			...(multisource.aihotHighlights.length > 0 ? { aihotHighlights: multisource.aihotHighlights } : {}),
+			...(multisource.crossSourceHighlights.length > 0 ? { crossSourceHighlights: multisource.crossSourceHighlights } : {}),
+		};
 
-  const healthCount = useMemo(() => {
-    const sources = digest.sourceHealth ?? [];
-    return {
-      failing: sources.filter((s) => statusOf(s) === 'failed').length,
-      warning: sources.filter((s) => statusOf(s) === 'warning').length,
-    };
-  }, [digest.sourceHealth]);
+		return {
+			...baseDigest,
+			multiSourceSections: mergedSections,
+			multiSourceGeneratedAt: multisource.generatedAt,
+		};
+	}, [baseDigest, multisource]);
 
-  return (
-    <div className="flex h-screen w-full bg-background text-foreground overflow-hidden">
-      <SidebarNav view={view} onChange={setView} healthCount={healthCount} />
-      <div className="flex-1 flex flex-col min-w-0">
-        <TopBar
-          date={digest.date}
-          generatedAt={digest.generatedAt}
-          viewLabel={viewLabels[view]}
-        />
-        <main className="flex-1 overflow-y-auto">
-          {(loading || usingFallback) && (
-            <div className="px-6 pt-6">
-              {loading && (
-                <WarningBanner
-                  level="info"
-                  title="Loading latest dashboard data"
-                  message="The dashboard is reading the latest generated JSON snapshot."
-                />
-              )}
-              {usingFallback && (
-                <WarningBanner
-                  level="warning"
-                  title="Using mock data because backend dashboard JSON failed to load."
-                  message={error?.message}
-                />
-              )}
-            </div>
-          )}
-          {view === 'dashboard' && <DashboardView digest={digest} onOpenDetail={setOpenRepo} />}
-          {view === 'projects' && <ProjectsView projects={allProjects} onOpenDetail={setOpenRepo} />}
-          {view === 'categories' && <CategoriesView digest={digest} />}
-          {view === 'signals' && <SignalsView digest={digest} />}
-          {view === 'watchlist' && <WatchlistView projects={allProjects} onOpenDetail={setOpenRepo} />}
-          {view === 'digests' && <DigestView digest={digest} />}
-          {view === 'information' && <InformationView digest={digest} />}
-          {view === 'settings' && <SettingsView />}
-        </main>
-      </div>
-      <ProjectDetailDrawer
-        project={selectedProject}
-        open={openRepo !== null}
-        onClose={() => setOpenRepo(null)}
-        hideWhyItMatters={view === 'watchlist'}
-      />
-      <Toaster position="bottom-right" />
-    </div>
-  );
+	const allProjects = useMemo(() => {
+		const map = new Map<string, typeof digest.selectedProjects[number]>();
+		[
+			...digest.selectedProjects,
+			...digest.hotProjects,
+			...digest.acceleratingProjects,
+			...digest.earlySignals,
+			...digest.watchlistMovements,
+		].forEach((p) => map.set(p.repository.repoFullName, p));
+		return Array.from(map.values());
+	}, [digest]);
+
+	const selectedProject = useMemo(
+		() => allProjects.find((p) => p.repository.repoFullName === openRepo) ?? null,
+		[allProjects, openRepo],
+	);
+
+	const healthCount = useMemo(() => {
+		const sources = digest.sourceHealth ?? [];
+		return {
+			failing: sources.filter((s) => statusOf(s) === 'failed').length,
+			warning: sources.filter((s) => statusOf(s) === 'warning').length,
+		};
+	}, [digest.sourceHealth]);
+
+	return (
+		<div className="flex h-screen w-full bg-background text-foreground overflow-hidden">
+			<SidebarNav view={view} onChange={setView} healthCount={healthCount} />
+			<div className="flex-1 flex flex-col min-w-0">
+				<TopBar
+					date={digest.date}
+					generatedAt={digest.generatedAt}
+					multiSourceGeneratedAt={digest.multiSourceGeneratedAt}
+					viewLabel={viewLabels[view]}
+				/>
+				<main className="flex-1 overflow-y-auto">
+					{(loading || usingFallback) && (
+						<div className="px-6 pt-6">
+							{loading && (
+								<WarningBanner
+									level="info"
+									title="Loading latest dashboard data"
+									message="The dashboard is reading the latest generated JSON snapshot."
+								/>
+							)}
+							{usingFallback && (
+								<WarningBanner
+									level="warning"
+									title="Using mock data because backend dashboard JSON failed to load."
+									message={error?.message}
+								/>
+							)}
+						</div>
+					)}
+					{view === 'dashboard' && <DashboardView digest={digest} onOpenDetail={setOpenRepo} />}
+					{view === 'projects' && <ProjectsView projects={allProjects} onOpenDetail={setOpenRepo} />}
+					{view === 'categories' && <CategoriesView digest={digest} />}
+					{view === 'signals' && <SignalsView digest={digest} />}
+					{view === 'watchlist' && <WatchlistView projects={allProjects} onOpenDetail={setOpenRepo} />}
+					{view === 'digests' && <DigestView digest={digest} />}
+					{view === 'information' && <InformationView digest={digest} />}
+					{view === 'settings' && <SettingsView />}
+				</main>
+			</div>
+			<ProjectDetailDrawer
+				project={selectedProject}
+				open={openRepo !== null}
+				onClose={() => setOpenRepo(null)}
+				hideWhyItMatters={view === 'watchlist'}
+			/>
+			<Toaster position="bottom-right" />
+		</div>
+	);
 }
