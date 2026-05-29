@@ -64,6 +64,17 @@ function modelUrl(id: string): string {
   return `https://huggingface.co/${id}`;
 }
 
+function resolveModelsEndpoint(value: string | undefined): string {
+  const candidate = value?.trim();
+  if (!candidate) return HF_MODELS_ENDPOINT;
+  try {
+    new URL(candidate);
+    return candidate;
+  } catch {
+    return HF_MODELS_ENDPOINT;
+  }
+}
+
 function normalizeHuggingFaceModelSort(value: string | undefined): string {
   const raw = value?.trim();
   if (!raw) return DEFAULT_HF_MODEL_SORT;
@@ -82,7 +93,7 @@ export class HuggingFaceModelsCollector {
   private readonly fetchImpl: typeof fetch;
 
   constructor(options: HuggingFaceModelsCollectorOptions = {}) {
-    this.endpoint = options.endpoint ?? process.env.HUGGINGFACE_MODELS_ENDPOINT ?? HF_MODELS_ENDPOINT;
+    this.endpoint = resolveModelsEndpoint(options.endpoint ?? process.env.HUGGINGFACE_MODELS_ENDPOINT);
     this.limit = options.limit ?? 30;
     this.timeoutMs = options.timeoutMs ?? parsePositiveInteger(process.env.HUGGINGFACE_MODELS_TIMEOUT_MS, 10_000);
     this.minFilteredItems = options.minFilteredItems ?? DEFAULT_MIN_FILTERED_ITEMS;

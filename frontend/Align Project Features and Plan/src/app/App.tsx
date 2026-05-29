@@ -27,6 +27,14 @@ const viewLabels: Record<ViewKey, string> = {
 	settings: 'Settings',
 };
 
+function latestIso(...values: Array<string | undefined>): string | undefined {
+	const timestamps = values
+		.map((value) => (value ? Date.parse(value) : Number.NaN))
+		.filter((timestamp) => Number.isFinite(timestamp));
+	if (timestamps.length === 0) return undefined;
+	return new Date(Math.max(...timestamps)).toISOString();
+}
+
 export default function App() {
 	const [view, setView] = useState<ViewKey>('dashboard');
 	const [openRepo, setOpenRepo] = useState<string | null>(null);
@@ -38,12 +46,11 @@ export default function App() {
 		if (!multisource.generatedAt) return baseDigest;
 
 		const mergedSections = {
-			...baseDigest.multiSourceSections,
-			...(multisource.productLaunches.length > 0 ? { productLaunches: multisource.productLaunches } : {}),
-			...(multisource.modelDemoSignals.length > 0 ? { modelDemoSignals: multisource.modelDemoSignals } : {}),
-			...(multisource.developerBuzz.length > 0 ? { developerBuzz: multisource.developerBuzz } : {}),
-			...(multisource.aihotHighlights.length > 0 ? { aihotHighlights: multisource.aihotHighlights } : {}),
-			...(multisource.crossSourceHighlights.length > 0 ? { crossSourceHighlights: multisource.crossSourceHighlights } : {}),
+			productLaunches: multisource.productLaunches,
+			modelDemoSignals: multisource.modelDemoSignals,
+			developerBuzz: multisource.developerBuzz,
+			aihotHighlights: multisource.aihotHighlights,
+			crossSourceHighlights: multisource.crossSourceHighlights,
 		};
 
 		return {
@@ -52,6 +59,11 @@ export default function App() {
 			multiSourceGeneratedAt: multisource.generatedAt,
 		};
 	}, [baseDigest, multisource]);
+
+	const refreshAt = useMemo(
+		() => latestIso(digest.generatedAt, digest.multiSourceGeneratedAt) ?? digest.generatedAt,
+		[digest.generatedAt, digest.multiSourceGeneratedAt],
+	);
 
 	const allProjects = useMemo(() => {
 		const map = new Map<string, typeof digest.selectedProjects[number]>();
@@ -80,14 +92,13 @@ export default function App() {
 
 	return (
 		<div className="flex h-screen w-full bg-background text-foreground overflow-hidden">
-			<SidebarNav view={view} onChange={setView} healthCount={healthCount} />
-			<div className="flex-1 flex flex-col min-w-0">
-				<TopBar
-					date={digest.date}
-					generatedAt={digest.generatedAt}
-					multiSourceGeneratedAt={digest.multiSourceGeneratedAt}
-					viewLabel={viewLabels[view]}
-				/>
+				<SidebarNav view={view} onChange={setView} healthCount={healthCount} />
+				<div className="flex-1 flex flex-col min-w-0">
+					<TopBar
+						date={digest.date}
+						refreshAt={refreshAt}
+						viewLabel={viewLabels[view]}
+					/>
 				<main className="flex-1 overflow-y-auto">
 					{(loading || usingFallback) && (
 						<div className="px-6 pt-6">
