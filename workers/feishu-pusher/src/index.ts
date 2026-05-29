@@ -991,6 +991,7 @@ export default {
       // 添加 CORS Header
       const newResponse = new Response(response.body, response);
       newResponse.headers.set('Access-Control-Allow-Origin', '*');
+      newResponse.headers.set('Cache-Control', 'public, max-age=60'); // 避免浏览器死缓存
       return newResponse;
     }
 
@@ -1015,6 +1016,7 @@ export default {
       const response = await fetch(newRequest, fetchOpts as RequestInit);
       const newResponse = new Response(response.body, response);
       newResponse.headers.set('Access-Control-Allow-Origin', '*');
+      newResponse.headers.set('Cache-Control', 'public, max-age=60'); // 浏览器只缓存1分钟，边缘节点按 cf 缓存
       return newResponse;
     }
 
