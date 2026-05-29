@@ -980,6 +980,19 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
 
+    // 处理全局的 CORS 预检请求 (Preflight)
+    if (request.method === 'OPTIONS') {
+      return new Response(null, {
+        status: 204,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+          'Access-Control-Allow-Headers': '*',
+          'Access-Control-Max-Age': '86400',
+        },
+      });
+    }
+
     // 1. 代理 /data/ 资源到 GitHub Raw Content，从而实时获取每日刷新的数据
     if (url.pathname.startsWith('/data/')) {
       const githubUrl = `https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main${url.pathname}`;
