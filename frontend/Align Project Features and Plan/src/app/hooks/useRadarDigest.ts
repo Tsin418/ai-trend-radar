@@ -16,9 +16,10 @@ export function useRadarDigest(): {
 
   useEffect(() => {
     let cancelled = false;
+    let timer: ReturnType<typeof setInterval> | undefined;
 
-    async function load() {
-      setLoading(true);
+    async function load(showLoading: boolean) {
+      if (showLoading) setLoading(true);
       try {
         const latest = await fetchLatestRadarDigest();
         if (cancelled) return;
@@ -32,16 +33,20 @@ export function useRadarDigest(): {
         setError(nextError);
         setUsingFallback(true);
       } finally {
-        if (!cancelled) {
+        if (!cancelled && showLoading) {
           setLoading(false);
         }
       }
     }
 
-    void load();
+    void load(true);
+    timer = setInterval(() => {
+      void load(false);
+    }, 5 * 60 * 1000);
 
     return () => {
       cancelled = true;
+      if (timer) clearInterval(timer);
     };
   }, []);
 

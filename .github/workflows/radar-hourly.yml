@@ -1,0 +1,103 @@
+name: AI Developer Radar Hourly Refresh
+
+on:
+  schedule:
+    - cron: "20 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: ai-developer-radar-hourly
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  radar-hourly-refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PRODUCT_HUNT_TOKEN: ${{ secrets.PRODUCT_HUNT_TOKEN }}
+      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      DEEPSEEK_BASE_URL: ${{ vars.DEEPSEEK_BASE_URL }}
+      DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+      LLM_ENRICHMENT_ENABLED: ${{ vars.LLM_ENRICHMENT_ENABLED }}
+      LLM_ENRICHMENT_LIMIT: ${{ vars.LLM_ENRICHMENT_LIMIT }}
+      LLM_README_MAX_CHARS: ${{ vars.LLM_README_MAX_CHARS }}
+      LLM_TIMEOUT_MS: ${{ vars.LLM_TIMEOUT_MS }}
+      LLM_MAX_RETRIES: ${{ vars.LLM_MAX_RETRIES }}
+      LLM_MAX_OUTPUT_TOKENS: ${{ vars.LLM_MAX_OUTPUT_TOKENS }}
+      RADAR_REPO_LIMIT: ${{ vars.RADAR_REPO_LIMIT }}
+      RADAR_RECOMMENDATION_LIMIT: ${{ vars.RADAR_RECOMMENDATION_LIMIT }}
+      RADAR_DAILY_STAR_THRESHOLD: ${{ vars.RADAR_DAILY_STAR_THRESHOLD }}
+      RADAR_EARLY_SIGNAL_DAILY_THRESHOLD: ${{ vars.RADAR_EARLY_SIGNAL_DAILY_THRESHOLD }}
+      RADAR_EARLY_SIGNAL_WEEKLY_THRESHOLD: ${{ vars.RADAR_EARLY_SIGNAL_WEEKLY_THRESHOLD }}
+      RADAR_PROFILE_KEYWORDS: ${{ vars.RADAR_PROFILE_KEYWORDS }}
+      PRODUCT_HUNT_ENABLED: ${{ vars.PRODUCT_HUNT_ENABLED }}
+      PRODUCT_HUNT_POST_LIMIT: ${{ vars.PRODUCT_HUNT_POST_LIMIT }}
+      AIHOT_ENABLED: ${{ vars.AIHOT_ENABLED }}
+      AIHOT_ENDPOINT: ${{ vars.AIHOT_ENDPOINT }}
+      AIHOT_LIMIT: ${{ vars.AIHOT_LIMIT }}
+      AIHOT_TIMEOUT_MS: ${{ vars.AIHOT_TIMEOUT_MS }}
+      AIHOT_MAX_RETRIES: ${{ vars.AIHOT_MAX_RETRIES }}
+      AIHOT_DAYS_BACK: ${{ vars.AIHOT_DAYS_BACK }}
+      AIHOT_CATEGORIES: ${{ vars.AIHOT_CATEGORIES }}
+      HUGGINGFACE_MODELS_ENABLED: ${{ vars.HUGGINGFACE_MODELS_ENABLED }}
+      HUGGINGFACE_MODELS_LIMIT: ${{ vars.HUGGINGFACE_MODELS_LIMIT }}
+      HUGGINGFACE_MODELS_SORT: ${{ vars.HUGGINGFACE_MODELS_SORT }}
+      HUGGINGFACE_MODELS_TIMEOUT_MS: ${{ vars.HUGGINGFACE_MODELS_TIMEOUT_MS }}
+      HUGGINGFACE_MODELS_ENDPOINT: ${{ vars.HUGGINGFACE_MODELS_ENDPOINT }}
+      HUGGINGFACE_SPACES_ENABLED: ${{ vars.HUGGINGFACE_SPACES_ENABLED }}
+      HUGGINGFACE_SPACES_LIMIT: ${{ vars.HUGGINGFACE_SPACES_LIMIT }}
+      HACKERNEWS_ENABLED: ${{ vars.HACKERNEWS_ENABLED }}
+      HACKERNEWS_LISTS: ${{ vars.HACKERNEWS_LISTS }}
+      HACKERNEWS_LIMIT_PER_LIST: ${{ vars.HACKERNEWS_LIMIT_PER_LIST }}
+      ARXIV_ENABLED: ${{ vars.ARXIV_ENABLED }}
+      ARXIV_LIMIT: ${{ vars.ARXIV_LIMIT }}
+      ARXIV_DAYS_BACK: ${{ vars.ARXIV_DAYS_BACK }}
+      ARXIV_CATEGORIES: ${{ vars.ARXIV_CATEGORIES }}
+      ARXIV_KEYWORDS: ${{ vars.ARXIV_KEYWORDS }}
+      AI_RADAR_LLM_ENABLED: "false"
+      TZ: Asia/Shanghai
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: true
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Generate hourly dashboard snapshot
+        run: pnpm radar:daily:generate
+
+      - name: Commit hourly snapshots
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/radar-store.json
+          [ -f data/latest-daily-digest.json ] && git add data/latest-daily-digest.json
+          [ -f data/latest-daily-dashboard.json ] && git add data/latest-daily-dashboard.json
+          [ -f data/latest-multisource-signals.json ] && git add data/latest-multisource-signals.json
+          [ -f data/rss.xml ] && git add data/rss.xml
+          [ -d data/archive ] && git add data/archive
+          [ -f data/llm-enrichment-cache.json ] && git add data/llm-enrichment-cache.json
+          git diff --cached --quiet || git commit -m "chore(radar): hourly refresh dashboard and signals"
+          git push
