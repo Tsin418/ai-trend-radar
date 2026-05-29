@@ -1,64 +1,65 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-05-30-2026-05-29T16-38-11-953Z",
-  "generatedAt": "2026-05-29T16:38:11.953Z",
+  "runId": "lightweight-2026-05-30-2026-05-29T19-28-21-458Z",
+  "generatedAt": "2026-05-29T19:28:21.458Z",
   "targetDate": "2026-05-30",
   "brief": {
     "date": "2026-05-30",
-    "headline": "Today's strongest AI trend signals are Ai Model Release, Coding Agent / Swe Agent, and Rag / Knowledge Base.",
+    "headline": "Today's strongest AI trend signals are Ai Model Release, Local Llm / Inference, and Coding Agent / Swe Agent.",
     "keyTakeaways": [
-      "Ai Model Release: This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 11 related signal(s). Treat it as correlation evidence rather than proven ado.",
+      "Ai Model Release: This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 12 related signal(s). Treat it as correlation evidence ra.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
       "Ai Model Release: watch decision is deep_dive.",
-      "Coding Agent / Swe Agent: This topic appeared across 2 source(s): aihot, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Local Llm / Inference: This topic appeared across 2 source(s): huggingface_models, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adopti.",
+      "Local Llm / Inference: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
+      "Local Llm / Inference: watch decision is deep_dive.",
+      "Coding Agent / Swe Agent: This topic appeared across 2 source(s): aihot, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Coding Agent / Swe Agent: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
-      "Coding Agent / Swe Agent: watch decision is deep_dive.",
-      "Rag / Knowledge Base: This topic appeared across 2 source(s): aihot, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-      "Rag / Knowledge Base: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
-      "Rag / Knowledge Base: watch decision is deep_dive."
+      "Coding Agent / Swe Agent: watch decision is deep_dive."
     ],
     "topicBriefs": [
       {
         "id": "topic:ai model release",
         "title": "Ai Model Release",
-        "category": "products",
+        "category": "tools",
         "sources": [
           "aihot",
+          "huggingface_models",
           "huggingface_spaces",
           "hackernews"
         ],
-        "sourceCount": 3,
+        "sourceCount": 4,
         "heatScore": 460,
         "confidence": "medium",
         "watchDecision": "deep_dive",
-        "whatItIs": "Ai Model Release is an AI trend topic in products represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 11 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Ai Model Release is an AI trend topic in tools represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 12 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
-          "products",
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code"
+          "tools",
+          "pytorch",
+          "transformer",
+          "language-model",
+          "long-context",
+          "agillm",
+          "experimental",
+          "region:us"
         ],
         "evidenceItems": [
           {
-            "id": "aihot:cmpq757a802d8slnouzkrvkv1",
-            "title": "llm-anthropic 0.25.1",
+            "id": "aihot:cmpr6nk7c0bf4slnok93x9vov",
+            "title": "亲测为实：难以置信的推理速度",
             "source": "aihot",
             "sourceType": "curated_trend",
-            "url": "https://simonwillison.net/2026/May/28/llm-anthropic",
-            "summary": "llm-anthropic 发布 0.25.1 版本。主要更新包括：新增 Claude Opus 4.8 （`claude-opus-4.8`） 模型；为账户启用了该功能的组织新增了 `-o fast 1` 选项以使用快速模式；调整了各模型的默认 `max_tokens` 值，使其直接使用模型的最大输出长度，而非固定的 8，192。",
-            "category": "products",
-            "publishedAt": "2026-05-28T23:54:56.000Z",
-            "collectedAt": "2026-05-29T16:38:13.319Z"
+            "url": "https://x.com/rohanpaul_ai/status/2060409504693645440",
+            "summary": "Kog团队在标准数据中心GPU上实现了极高的单用户推理速度，在8× AMD MI300X GPUs上达到3，000 tokens/s，在8× NVIDIA H200上达到2，100 tokens/s。相比常规推理速度（约100-300 tokens/s），实现了10-30倍提升。其核心思路是将LLM解码视为内存流问题，通过协同设计monokernel、重建同步机制、针对性内存访问映射及采用延迟张量并行的Laneformer模型架构，消除了传统流程的阻塞点。",
+            "category": "tools",
+            "publishedAt": "2026-05-29T17:14:41.000Z",
+            "collectedAt": "2026-05-29T19:28:22.738Z"
           },
           {
             "id": "hackernews:48307887",
@@ -70,10 +71,10 @@
               "llm"
             ],
             "publishedAt": "2026-05-28T12:20:19.000Z",
-            "collectedAt": "2026-05-29T16:38:12.664Z",
+            "collectedAt": "2026-05-29T19:28:21.727Z",
             "metrics": {
-              "upvotes": 496,
-              "commentsCount": 342
+              "upvotes": 500,
+              "commentsCount": 344
             }
           },
           {
@@ -86,10 +87,10 @@
               "llm"
             ],
             "publishedAt": "2026-05-28T19:02:18.000Z",
-            "collectedAt": "2026-05-29T16:38:12.664Z",
+            "collectedAt": "2026-05-29T19:28:21.727Z",
             "metrics": {
-              "upvotes": 343,
-              "commentsCount": 266
+              "upvotes": 348,
+              "commentsCount": 269
             }
           },
           {
@@ -104,9 +105,9 @@
               "agent"
             ],
             "publishedAt": "2026-05-28T13:02:00.000Z",
-            "collectedAt": "2026-05-29T16:38:12.664Z",
+            "collectedAt": "2026-05-29T19:28:21.727Z",
             "metrics": {
-              "upvotes": 362,
+              "upvotes": 364,
               "commentsCount": 147
             }
           },
@@ -122,48 +123,248 @@
               "inference"
             ],
             "publishedAt": "2026-05-29T09:47:23.000Z",
-            "collectedAt": "2026-05-29T16:38:12.664Z",
+            "collectedAt": "2026-05-29T19:28:21.727Z",
             "metrics": {
-              "upvotes": 138,
-              "commentsCount": 66
+              "upvotes": 179,
+              "commentsCount": 79
             }
           },
           {
-            "id": "hackernews:48291016",
-            "title": "Even (very) noisy LLM evaluators are useful for improving AI agents",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://www.tensorzero.com/blog/even-very-noisy-llm-evaluators-are-useful-for-improving-ai-agents/",
+            "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+            "title": "Open LLM Leaderboard",
+            "source": "huggingface_spaces",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+            "category": "docker",
             "tags": [
-              "ai",
-              "llm",
-              "agent",
-              "agents"
+              "docker",
+              "leaderboard",
+              "modality:text",
+              "submission:automatic",
+              "test:public",
+              "language:english",
+              "eval:code",
+              "eval:math",
+              "region:us"
             ],
-            "publishedAt": "2026-05-27T07:49:56.000Z",
-            "collectedAt": "2026-05-29T16:38:12.664Z",
+            "publishedAt": "2023-04-17T11:40:06.000Z",
+            "collectedAt": "2026-05-29T19:28:21.584Z",
             "metrics": {
-              "upvotes": 17,
-              "commentsCount": 3
+              "likes": 13992
             }
           }
         ],
         "relatedEntities": [
-          "llm-anthropic 0.25.1",
+          "亲测为实：难以置信的推理速度",
+          "OpenTransformer/AGILLM-4",
+          "OpenTransformer/AGILLM-3-large-v2",
           "Open LLM Leaderboard",
           "MusicGen",
           "Live Portrait",
           "Real-time LLM Inference on Standard GPUs: 3k tokens/s per request",
-          "Even (very) noisy LLM evaluators are useful for improving AI agents",
-          "Which LLM is the best at finding real vulnerabilities?",
-          "Ask HN: Is anybody providing deterministic LLMs?"
+          "Teaching LLMs to one-shot complex back ends at scale, report #1"
         ],
         "metrics": {
-          "votes": 496,
+          "votes": 500,
           "likes": 13992,
-          "commentsCount": 342,
+          "commentsCount": 344,
           "heatScore": 460,
-          "crossSourceBonus": 20
+          "crossSourceBonus": 25
+        }
+      },
+      {
+        "id": "topic:local llm / inference",
+        "title": "Local Llm / Inference",
+        "category": "reinforcement-learning",
+        "sources": [
+          "huggingface_models",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "heatScore": 341,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Local Llm / Inference is an AI trend topic in reinforcement-learning represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "technicalKeywords": [
+          "transformers",
+          "gguf",
+          "Llama-3",
+          "RL",
+          "Atropos",
+          "Tool Calling",
+          "Nous Research",
+          "instruct"
+        ],
+        "evidenceItems": [
+          {
+            "id": "hackernews:48321076",
+            "title": "Real-time LLM Inference on Standard GPUs: 3k tokens/s per request",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://blog.kog.ai/real-time-llm-inference-on-standard-gpus-3-000-tokens-s-per-request/",
+            "tags": [
+              "ai",
+              "llm",
+              "inference"
+            ],
+            "publishedAt": "2026-05-29T09:47:23.000Z",
+            "collectedAt": "2026-05-29T19:28:21.727Z",
+            "metrics": {
+              "upvotes": 179,
+              "commentsCount": 79
+            }
+          },
+          {
+            "id": "hackernews:48327924",
+            "title": "Understanding Inference Scaling for LLMs: Bottlenecks, Trade-Offs, and Perf",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://arxiv.org/abs/2605.19775",
+            "tags": [
+              "llm",
+              "inference"
+            ],
+            "publishedAt": "2026-05-29T19:14:15.000Z",
+            "collectedAt": "2026-05-29T19:28:21.727Z",
+            "metrics": {
+              "upvotes": 2,
+              "commentsCount": 0
+            }
+          },
+          {
+            "id": "huggingface_models:mradermacher/DeepHermes-Egregore-v1-RLAIF-8b-Atropos-i1-GGUF",
+            "title": "mradermacher/DeepHermes-Egregore-v1-RLAIF-8b-Atropos-i1-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/mradermacher/DeepHermes-Egregore-v1-RLAIF-8b-Atropos-i1-GGUF",
+            "category": "reinforcement-learning",
+            "tags": [
+              "transformers",
+              "gguf",
+              "Llama-3",
+              "RL",
+              "Atropos",
+              "Tool Calling",
+              "Nous Research",
+              "instruct",
+              "finetune",
+              "reasoning",
+              "function calling",
+              "reinforcement-learning",
+              "json mode",
+              "chatml",
+              "en",
+              "base_model:erreursyntax/DeepHermes-Egregore-v1-RLAIF-8b-Atropos",
+              "base_model:quantized:erreursyntax/DeepHermes-Egregore-v1-RLAIF-8b-Atropos",
+              "license:llama3",
+              "endpoints_compatible",
+              "region:us",
+              "imatrix",
+              "conversational"
+            ],
+            "publishedAt": "2026-05-29T18:02:28.000Z",
+            "collectedAt": "2026-05-29T19:28:21.574Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:Arijebouraoui/nextyou-qwen-training-gguf",
+            "title": "Arijebouraoui/nextyou-qwen-training-gguf",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/Arijebouraoui/nextyou-qwen-training-gguf",
+            "tags": [
+              "gguf",
+              "qwen2",
+              "llama.cpp",
+              "unsloth",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
+            ],
+            "publishedAt": "2026-05-29T19:27:13.000Z",
+            "collectedAt": "2026-05-29T19:28:21.574Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:mradermacher/ALIA-40b-fc-2605-GGUF",
+            "title": "mradermacher/ALIA-40b-fc-2605-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/mradermacher/ALIA-40b-fc-2605-GGUF",
+            "tags": [
+              "transformers",
+              "gguf",
+              "en",
+              "dataset:nvidia/When2Call",
+              "dataset:Salesforce/xlam-function-calling-60k",
+              "dataset:glaiveai/glaive-function-calling-v2",
+              "dataset:Team-ACE/ToolACE",
+              "dataset:allenai/Dolci-Instruct-SFT-Tool-Use-SA",
+              "dataset:Agent-Ark/Toucan-1.5M",
+              "dataset:Nanbeige/ToolMind",
+              "base_model:BSC-LT/ALIA-40b-fc-2605",
+              "base_model:quantized:BSC-LT/ALIA-40b-fc-2605",
+              "license:apache-2.0",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
+            ],
+            "publishedAt": "2026-05-29T17:55:01.000Z",
+            "collectedAt": "2026-05-29T19:28:21.574Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:OpenTransformer/AGILLM-3-large-v2",
+            "title": "OpenTransformer/AGILLM-3-large-v2",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/OpenTransformer/AGILLM-3-large-v2",
+            "tags": [
+              "pytorch",
+              "gguf",
+              "language-model",
+              "pretraining",
+              "transformer",
+              "agillm",
+              "license:apache-2.0",
+              "region:us"
+            ],
+            "publishedAt": "2026-03-19T22:50:32.000Z",
+            "collectedAt": "2026-05-29T19:28:21.574Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 2
+            }
+          }
+        ],
+        "relatedEntities": [
+          "mradermacher/DeepHermes-Egregore-v1-RLAIF-8b-Atropos-i1-GGUF",
+          "Arijebouraoui/nextyou-qwen-training-gguf",
+          "mradermacher/ALIA-40b-fc-2605-GGUF",
+          "OpenTransformer/AGILLM-3-large-v2",
+          "Real-time LLM Inference on Standard GPUs: 3k tokens/s per request",
+          "Understanding Inference Scaling for LLMs: Bottlenecks, Trade-Offs, and Perf"
+        ],
+        "metrics": {
+          "votes": 179,
+          "likes": 2,
+          "commentsCount": 79,
+          "heatScore": 341,
+          "crossSourceBonus": 10
         }
       },
       {
@@ -179,7 +380,7 @@
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in tools represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Coding Agent / Swe Agent should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
@@ -187,10 +388,7 @@
         "technicalKeywords": [
           "tools",
           "models",
-          "claude",
-          "agent",
-          "agents",
-          "coding agent"
+          "claude"
         ],
         "evidenceItems": [
           {
@@ -202,7 +400,7 @@
             "summary": "该篇文章标题涉及\"Claude Code\"的可配置选项，但提供的正文内容仅包含一张图片和一个外部链接，未给出任何关于模型版本、参数、性能、价格或功能的具体信息。根据规则，无法在摘要中提及原文不存在的细节。",
             "category": "tools",
             "publishedAt": "2026-05-29T10:37:09.818Z",
-            "collectedAt": "2026-05-29T16:38:13.319Z"
+            "collectedAt": "2026-05-29T19:28:22.738Z"
           },
           {
             "id": "aihot:cmpq988q102xdslnoe0k3fp1h",
@@ -213,7 +411,7 @@
             "summary": "报告显示，AI正深刻改变开发工作形态。开发者周均代码产出从约3.6K行增至8.6K行，更大规模的PR（千行以上）占比上升。AI智能体在单次会话中的工具调用数增加约30%，正在处理更复杂的任务。同时，被接受的AI代码在60分钟后的留存率从约76%提升至约81%，表明更多AI生成内容进入了实际代码库。这些趋势共同指向AI已从个人辅助工具，演进为推动开发向更大规模任务与自动化基础设施发展的核心力量。",
             "category": "tools",
             "publishedAt": "2026-05-29T01:11:47.000Z",
-            "collectedAt": "2026-05-29T16:38:13.319Z"
+            "collectedAt": "2026-05-29T19:28:22.738Z"
           },
           {
             "id": "aihot:cmpq60e9m022kslnocucomhik",
@@ -224,11 +422,11 @@
             "summary": "阶跃星辰（Step）发布了开源大模型 Step 3.7 Flash，主打智能体（Agent）工作流的效率。该模型在 ClawEval-1.1（67.1分）和 SimpleVQA Search（79.2分）评测中排名第一。其架构为 198B 参数的 MoE，约 11B 为活跃参数，支持 256K 上下文。模型具备多模态理解能力，能处理图像、文档并生成代码或调用工具执行任务。在工具使用方面，它致力于高可靠性，τ2-bench 得分超过 98%。Step 3.7 Flash 兼容 Claude Code、MCP 协议等工具链，并支持在 Mac Studio M4 Max 等设备上本地运行。模型权重以 Apache 2.0 许可开源。",
             "category": "models",
             "publishedAt": "2026-05-29T00:00:01.000Z",
-            "collectedAt": "2026-05-29T16:38:13.319Z"
+            "collectedAt": "2026-05-29T19:28:22.738Z"
           },
           {
             "id": "hackernews:48318174",
-            "title": "Claude Code – Everything You Can Configure That the Docs Don't Tell You",
+            "title": "Claude Code – Everything you can configure that the docs don't tell you",
             "source": "hackernews",
             "sourceType": "developer_discussion",
             "url": "https://buildingbetter.tech/p/i-read-the-claude-code-source-code",
@@ -236,28 +434,10 @@
               "claude"
             ],
             "publishedAt": "2026-05-29T02:13:20.000Z",
-            "collectedAt": "2026-05-29T16:38:12.664Z",
+            "collectedAt": "2026-05-29T19:28:21.727Z",
             "metrics": {
-              "upvotes": 294,
-              "commentsCount": 59
-            }
-          },
-          {
-            "id": "hackernews:48325583",
-            "title": "Nesbitt: Protestware for Coding Agents",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://lwn.net/Articles/1075315/",
-            "tags": [
-              "agent",
-              "agents",
-              "coding agent"
-            ],
-            "publishedAt": "2026-05-29T16:36:21.000Z",
-            "collectedAt": "2026-05-29T16:38:12.664Z",
-            "metrics": {
-              "upvotes": 1,
-              "commentsCount": 0
+              "upvotes": 316,
+              "commentsCount": 62
             }
           }
         ],
@@ -265,12 +445,11 @@
           "Claude Code--文档中未提及的所有可配置选项",
           "Cursor 团队发布《开发者习惯报告》",
           "阶跃星辰 Step 3.7 Flash 发布，聚焦智能体效率",
-          "Claude Code – Everything You Can Configure That the Docs Don't Tell You",
-          "Nesbitt: Protestware for Coding Agents"
+          "Claude Code – Everything you can configure that the docs don't tell you"
         ],
         "metrics": {
-          "votes": 294,
-          "commentsCount": 59,
+          "votes": 316,
+          "commentsCount": 62,
           "heatScore": 340,
           "crossSourceBonus": 10
         }
@@ -288,14 +467,13 @@
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Rag / Knowledge Base is an AI trend topic in tools represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Rag / Knowledge Base should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
           "tools",
-          "ai",
           "rag"
         ],
         "evidenceItems": [
@@ -308,7 +486,7 @@
             "summary": "\"技能提炼\"是一种知识转移方法，由前沿大模型（如 Opus 4.7、GPT-5.1、Gemini 3 Pro）负责撰写并优化标准化的 SKILL.md 流程文件。然后，本地运行的小模型（如 Qwen 35B、Gemma 26B）直接执行这些文件。此过程不同于压缩模型权重的知识蒸馏、训练权重的指令微调或检索事实的 RAG，其核心是提取并转移操作流程，让小模型按步骤执行，从而形成前沿模型作教师、小模型作执行者的循环。",
             "category": "tools",
             "publishedAt": "2026-05-29T00:00:00.000Z",
-            "collectedAt": "2026-05-29T16:38:13.319Z"
+            "collectedAt": "2026-05-29T19:28:22.738Z"
           },
           {
             "id": "hackernews:48299638",
@@ -320,37 +498,19 @@
               "rag"
             ],
             "publishedAt": "2026-05-27T19:52:49.000Z",
-            "collectedAt": "2026-05-29T16:38:12.664Z",
+            "collectedAt": "2026-05-29T19:28:21.727Z",
             "metrics": {
-              "upvotes": 366,
+              "upvotes": 369,
               "commentsCount": 141
-            }
-          },
-          {
-            "id": "hackernews:48325240",
-            "title": "Slang.net added a new AI word: Braging",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://slang.net/meaning/braging",
-            "tags": [
-              "ai",
-              "rag"
-            ],
-            "publishedAt": "2026-05-29T16:16:12.000Z",
-            "collectedAt": "2026-05-29T16:38:12.664Z",
-            "metrics": {
-              "upvotes": 2,
-              "commentsCount": 1
             }
           }
         ],
         "relatedEntities": [
           "技能提炼",
-          "Slang.net added a new AI word: Braging",
           "I'm Getting into Mesh Networks (Meshtastic, MeshCore, and Reticulum)"
         ],
         "metrics": {
-          "votes": 366,
+          "votes": 369,
           "commentsCount": 141,
           "heatScore": 340,
           "crossSourceBonus": 10
@@ -362,24 +522,28 @@
         "category": "models",
         "sources": [
           "aihot",
+          "huggingface_models",
           "huggingface_spaces"
         ],
-        "sourceCount": 2,
-        "heatScore": 140,
+        "sourceCount": 3,
+        "heatScore": 160,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Mcp / Tool Calling is an AI trend topic in models represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, huggingface_spaces, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_models, huggingface_spaces, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Mcp / Tool Calling should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
           "models",
-          "products",
-          "gradio",
-          "mcp-server",
-          "region:us"
+          "transformers",
+          "gguf",
+          "Llama-3",
+          "RL",
+          "Atropos",
+          "Tool Calling",
+          "Nous Research"
         ],
         "evidenceItems": [
           {
@@ -391,18 +555,7 @@
             "summary": "阶跃星辰（Step）发布了开源大模型 Step 3.7 Flash，主打智能体（Agent）工作流的效率。该模型在 ClawEval-1.1（67.1分）和 SimpleVQA Search（79.2分）评测中排名第一。其架构为 198B 参数的 MoE，约 11B 为活跃参数，支持 256K 上下文。模型具备多模态理解能力，能处理图像、文档并生成代码或调用工具执行任务。在工具使用方面，它致力于高可靠性，τ2-bench 得分超过 98%。Step 3.7 Flash 兼容 Claude Code、MCP 协议等工具链，并支持在 Mac Studio M4 Max 等设备上本地运行。模型权重以 Apache 2.0 许可开源。",
             "category": "models",
             "publishedAt": "2026-05-29T00:00:01.000Z",
-            "collectedAt": "2026-05-29T16:38:13.319Z"
-          },
-          {
-            "id": "aihot:cmppua8gx0183slm67cnmtqp8",
-            "title": "使用 Google Pay & Wallet Developer MCP server 加速你的集成工作流",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://developers.googleblog.com/supercharge-your-integration-workflow-with-the-google-pay-wallet-developer-mcp-server",
-            "summary": "Google 推出 Google Pay & Wallet Developer MCP server，这是一款开放标准工具，旨在将 AI 开发助手和 IDE 安全连接到实时的 API 与账户上下文。开发者无需离开开发环境，即可搜索官方文档、验证 Wallet pass 定义、检查集成状态以及管理商户账户。该集成旨在通过减少上下文切换并提供实时、可靠的 AI 支持来减少开发摩擦，从而加速开发工作流。",
-            "category": "products",
-            "publishedAt": "2026-05-28T18:41:20.382Z",
-            "collectedAt": "2026-05-29T16:38:13.319Z"
+            "collectedAt": "2026-05-29T19:28:22.738Z"
           },
           {
             "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
@@ -417,7 +570,7 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-05-29T16:38:12.354Z",
+            "collectedAt": "2026-05-29T19:28:21.584Z",
             "metrics": {
               "likes": 3255
             }
@@ -435,9 +588,9 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-05-29T16:38:12.354Z",
+            "collectedAt": "2026-05-29T19:28:21.584Z",
             "metrics": {
-              "likes": 3148
+              "likes": 3149
             }
           },
           {
@@ -453,23 +606,93 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-05-29T16:38:12.354Z",
+            "collectedAt": "2026-05-29T19:28:21.584Z",
             "metrics": {
               "likes": 2848
+            }
+          },
+          {
+            "id": "huggingface_models:mradermacher/DeepHermes-Egregore-v1-RLAIF-8b-Atropos-i1-GGUF",
+            "title": "mradermacher/DeepHermes-Egregore-v1-RLAIF-8b-Atropos-i1-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/mradermacher/DeepHermes-Egregore-v1-RLAIF-8b-Atropos-i1-GGUF",
+            "category": "reinforcement-learning",
+            "tags": [
+              "transformers",
+              "gguf",
+              "Llama-3",
+              "RL",
+              "Atropos",
+              "Tool Calling",
+              "Nous Research",
+              "instruct",
+              "finetune",
+              "reasoning",
+              "function calling",
+              "reinforcement-learning",
+              "json mode",
+              "chatml",
+              "en",
+              "base_model:erreursyntax/DeepHermes-Egregore-v1-RLAIF-8b-Atropos",
+              "base_model:quantized:erreursyntax/DeepHermes-Egregore-v1-RLAIF-8b-Atropos",
+              "license:llama3",
+              "endpoints_compatible",
+              "region:us",
+              "imatrix",
+              "conversational"
+            ],
+            "publishedAt": "2026-05-29T18:02:28.000Z",
+            "collectedAt": "2026-05-29T19:28:21.574Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:mradermacher/ALIA-40b-fc-2605-GGUF",
+            "title": "mradermacher/ALIA-40b-fc-2605-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/mradermacher/ALIA-40b-fc-2605-GGUF",
+            "tags": [
+              "transformers",
+              "gguf",
+              "en",
+              "dataset:nvidia/When2Call",
+              "dataset:Salesforce/xlam-function-calling-60k",
+              "dataset:glaiveai/glaive-function-calling-v2",
+              "dataset:Team-ACE/ToolACE",
+              "dataset:allenai/Dolci-Instruct-SFT-Tool-Use-SA",
+              "dataset:Agent-Ark/Toucan-1.5M",
+              "dataset:Nanbeige/ToolMind",
+              "base_model:BSC-LT/ALIA-40b-fc-2605",
+              "base_model:quantized:BSC-LT/ALIA-40b-fc-2605",
+              "license:apache-2.0",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
+            ],
+            "publishedAt": "2026-05-29T17:55:01.000Z",
+            "collectedAt": "2026-05-29T19:28:21.574Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
             }
           }
         ],
         "relatedEntities": [
           "阶跃星辰 Step 3.7 Flash 发布，聚焦智能体效率",
-          "使用 Google Pay & Wallet Developer MCP server 加速你的集成工作流",
+          "mradermacher/DeepHermes-Egregore-v1-RLAIF-8b-Atropos-i1-GGUF",
+          "mradermacher/ALIA-40b-fc-2605-GGUF",
           "Z Image Turbo",
           "Wan2.2 14B Fast",
           "Background Removal"
         ],
         "metrics": {
           "likes": 3255,
-          "heatScore": 140,
-          "crossSourceBonus": 10
+          "heatScore": 160,
+          "crossSourceBonus": 20
         }
       }
     ],
@@ -479,8 +702,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-05-29T16:38:12.207Z",
-        "finishedAt": "2026-05-29T16:38:12.207Z",
+        "startedAt": "2026-05-29T19:28:21.471Z",
+        "finishedAt": "2026-05-29T19:28:21.471Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -489,47 +712,76 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-05-29T16:38:12.207Z",
-        "finishedAt": "2026-05-29T16:38:13.320Z",
-        "latencyMs": 1113
+        "startedAt": "2026-05-29T19:28:21.471Z",
+        "finishedAt": "2026-05-29T19:28:22.739Z",
+        "latencyMs": 1268
       },
       {
         "source": "huggingface-models",
         "enabled": true,
-        "success": false,
-        "itemCount": 0,
-        "startedAt": "2026-05-29T16:38:12.223Z",
-        "finishedAt": "2026-05-29T16:38:12.229Z",
-        "latencyMs": 6,
-        "error": "Invalid URL"
+        "success": true,
+        "itemCount": 11,
+        "startedAt": "2026-05-29T19:28:21.482Z",
+        "finishedAt": "2026-05-29T19:28:21.574Z",
+        "latencyMs": 92
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-05-29T16:38:12.223Z",
-        "finishedAt": "2026-05-29T16:38:12.354Z",
-        "latencyMs": 131
+        "startedAt": "2026-05-29T19:28:21.483Z",
+        "finishedAt": "2026-05-29T19:28:21.584Z",
+        "latencyMs": 101
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 36,
-        "startedAt": "2026-05-29T16:38:12.225Z",
-        "finishedAt": "2026-05-29T16:38:12.665Z",
-        "latencyMs": 440
+        "itemCount": 29,
+        "startedAt": "2026-05-29T19:28:21.484Z",
+        "finishedAt": "2026-05-29T19:28:21.728Z",
+        "latencyMs": 244
       }
     ],
     "dataNotes": [
-      "Lightweight intelligence update: GitHub repository collection, GitHub scoring, and LLM enrichment were skipped.",
-      "Multi-source warning: Hugging Face Models collection failed: Invalid URL"
+      "Lightweight intelligence update: GitHub repository collection, GitHub scoring, and LLM enrichment were skipped."
     ]
   },
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
+      {
+        "id": "huggingface_models:NastasiaM/mbert-loraxs-qa-LTr64-qkvd-ABohneLT-ABfr",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "NastasiaM/mbert-loraxs-qa-LTr64-qkvd-ABohneLT-ABfr",
+        "url": "https://huggingface.co/NastasiaM/mbert-loraxs-qa-LTr64-qkvd-ABohneLT-ABfr",
+        "tags": [
+          "peft",
+          "safetensors",
+          "bert",
+          "question-answering",
+          "base_model:adapter:bert-base-multilingual-cased",
+          "lora",
+          "transformers",
+          "base_model:google-bert/bert-base-multilingual-cased",
+          "base_model:adapter:google-bert/bert-base-multilingual-cased",
+          "license:apache-2.0",
+          "region:us"
+        ],
+        "category": "question-answering",
+        "metrics": {
+          "downloads": 1087,
+          "likes": 0
+        },
+        "publishedAt": "2026-05-23T14:24:24.000Z",
+        "updatedAt": "2026-05-29T19:26:31.000Z",
+        "collectedAt": "2026-05-29T19:28:21.574Z",
+        "raw": {
+          "pipelineTag": "question-answering"
+        }
+      },
       {
         "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
         "source": "huggingface_spaces",
@@ -554,7 +806,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-05-29T16:38:12.354Z",
+        "collectedAt": "2026-05-29T19:28:21.584Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -577,7 +829,7 @@
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-05-29T16:38:12.354Z",
+        "collectedAt": "2026-05-29T19:28:21.584Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -600,7 +852,7 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-05-29T16:38:12.354Z",
+        "collectedAt": "2026-05-29T19:28:21.584Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
@@ -620,15 +872,35 @@
         ],
         "category": "docker",
         "metrics": {
-          "likes": 7423
+          "likes": 7425
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
         "updatedAt": "2026-05-29T11:20:52.000Z",
-        "collectedAt": "2026-05-29T16:38:12.354Z",
+        "collectedAt": "2026-05-29T19:28:21.584Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🥇"
         }
+      },
+      {
+        "id": "huggingface_models:xonexa1/xonexa-ai-v01",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "xonexa1/xonexa-ai-v01",
+        "url": "https://huggingface.co/xonexa1/xonexa-ai-v01",
+        "tags": [
+          "safetensors",
+          "gpt2",
+          "region:us"
+        ],
+        "metrics": {
+          "downloads": 107,
+          "likes": 1
+        },
+        "publishedAt": "2026-05-27T06:56:11.000Z",
+        "updatedAt": "2026-05-29T19:26:22.000Z",
+        "collectedAt": "2026-05-29T19:28:21.574Z",
+        "raw": {}
       },
       {
         "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
@@ -647,7 +919,7 @@
         },
         "publishedAt": "2025-09-18T07:05:32.000Z",
         "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-05-29T16:38:12.354Z",
+        "collectedAt": "2026-05-29T19:28:21.584Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👁"
@@ -673,63 +945,10 @@
         },
         "publishedAt": "2023-06-08T18:00:26.000Z",
         "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-05-29T16:38:12.354Z",
+        "collectedAt": "2026-05-29T19:28:21.584Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4898
-        },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-05-29T16:38:12.354Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
-      },
-      {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
-        "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3744
-        },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-05-29T16:38:12.354Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
         }
       }
     ],
@@ -746,11 +965,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 1687,
-          "commentsCount": 1308
+          "upvotes": 1708,
+          "commentsCount": 1334
         },
         "publishedAt": "2026-05-28T16:49:14.000Z",
-        "collectedAt": "2026-05-29T16:38:12.664Z",
+        "collectedAt": "2026-05-29T19:28:21.727Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48311647",
           "matchedKeywords": [
@@ -770,63 +989,13 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1299,
-          "commentsCount": 806
+          "upvotes": 1303,
+          "commentsCount": 810
         },
         "publishedAt": "2026-05-27T20:00:51.000Z",
-        "collectedAt": "2026-05-29T16:38:12.664Z",
+        "collectedAt": "2026-05-29T19:28:21.727Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48299753",
-          "matchedKeywords": [
-            "ai"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48296794",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "I think Anthropic and OpenAI have found product-market fit",
-        "url": "https://simonwillison.net/2026/May/27/product-market-fit/",
-        "author": "simonw",
-        "tags": [
-          "ai",
-          "openai",
-          "anthropic"
-        ],
-        "metrics": {
-          "upvotes": 1080,
-          "commentsCount": 1228
-        },
-        "publishedAt": "2026-05-27T16:39:13.000Z",
-        "collectedAt": "2026-05-29T16:38:12.664Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48296794",
-          "matchedKeywords": [
-            "ai",
-            "openai",
-            "anthropic"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48296649",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "DuckDuckGo search saw 28% more visits after Google said people love AI mode",
-        "url": "https://www.pcgamer.com/hardware/duckduckgos-ai-free-search-saw-nearly-28-percent-more-visits-in-the-week-following-googles-insistence-that-people-love-ai-mode/",
-        "author": "HelloUsername",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 1062,
-          "commentsCount": 514
-        },
-        "publishedAt": "2026-05-27T16:28:41.000Z",
-        "collectedAt": "2026-05-29T16:38:12.664Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48296649",
           "matchedKeywords": [
             "ai"
           ]
@@ -843,20 +1012,186 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 627,
-          "commentsCount": 293
+          "upvotes": 670,
+          "commentsCount": 339
         },
         "publishedAt": "2026-05-29T13:50:25.000Z",
-        "collectedAt": "2026-05-29T16:38:12.664Z",
+        "collectedAt": "2026-05-29T19:28:21.727Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48323101",
           "matchedKeywords": [
             "ai"
           ]
         }
+      },
+      {
+        "id": "hackernews:48315968",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "GitHub bans security researcher who posted zero-day Windows exploits",
+        "url": "https://www.tomshardware.com/tech-industry/cyber-security/microsofts-github-bans-security-researcher-who-posted-zero-day-windows-exploits-because-company-ruined-their-life-expert-claims-action-is-vindictive-and-promises-further-retaliation",
+        "author": "possibilistic",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 506,
+          "commentsCount": 242
+        },
+        "publishedAt": "2026-05-28T21:45:54.000Z",
+        "collectedAt": "2026-05-29T19:28:21.727Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48315968",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48307887",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Disagreement among frontier LLMs on real-world fact-checks",
+        "url": "https://lenz.io/research/llm-disagreement",
+        "author": "kostaj",
+        "tags": [
+          "llm"
+        ],
+        "metrics": {
+          "upvotes": 500,
+          "commentsCount": 344
+        },
+        "publishedAt": "2026-05-28T12:20:19.000Z",
+        "collectedAt": "2026-05-29T19:28:21.727Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48307887",
+          "matchedKeywords": [
+            "llm"
+          ]
+        }
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmprapdjj0cdoslnomir3c2q7",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "参与我们的 I/O 2026 测验：该测验由 Google AI Studio 氛围编程生成",
+        "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz",
+        "summary": "Google 使用其开发工具 Google AI Studio，通过氛围编程（vibe coding）方式，创建了一个关于 Google I/O 2026 主要公告的在线测验。",
+        "description": "Google 使用其开发工具 Google AI Studio，通过氛围编程（vibe coding）方式，创建了一个关于 Google I/O 2026 主要公告的在线测验。",
+        "category": "tools",
+        "originalSource": "Google Blog：AI（RSS）",
+        "originalUrl": "https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz",
+        "recommendedReason": "Google 使用其开发工具 Google AI Studio，通过氛围编程（vibe coding）方式，创建了一个关于 Google I/O 2026 主要公告的在线测验。",
+        "publishedAt": "2026-05-29T19:00:00.000Z",
+        "collectedAt": "2026-05-29T19:28:22.738Z",
+        "raw": {
+          "id": "cmprapdjj0cdoslnomir3c2q7",
+          "titleEn": "Take our I/O 2026 quiz， vibe coded in Google AI Studio.",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmpramk160cceslno2f8eouqr",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Gemini Omni可将草图变为现实",
+        "url": "https://x.com/GeminiApp/status/2060435981946503243",
+        "summary": "Gemini Omni甚至能将简单的草图变为新的现实。 在Gemini应用中亲自尝试。上传一段有人画圆的视频，然后输入这个提示词：当我画完这个圆时，它变成了___。",
+        "description": "Gemini Omni甚至能将简单的草图变为新的现实。 在Gemini应用中亲自尝试。上传一段有人画圆的视频，然后输入这个提示词：当我画完这个圆时，它变成了___。",
+        "category": "products",
+        "originalSource": "X：Gemini (@GeminiApp)",
+        "originalUrl": "https://x.com/GeminiApp/status/2060435981946503243",
+        "recommendedReason": "Gemini Omni甚至能将简单的草图变为新的现实。 在Gemini应用中亲自尝试。上传一段有人画圆的视频，然后输入这个提示词：当我画完这个圆时，它变成了___。",
+        "publishedAt": "2026-05-29T18:59:53.000Z",
+        "collectedAt": "2026-05-29T19:28:22.738Z",
+        "raw": {
+          "id": "cmpramk160cceslno2f8eouqr",
+          "titleEn": "Gemini Omni can transform even a basic sketch into a new reality. Try for yourself in the Gemini a…",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmpr9mxrd0c40slnoz5qvsa20",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Codex现已支持Windows端计算机使用功能",
+        "url": "https://x.com/OpenAI/status/2060428604727771421",
+        "summary": "Windows用户，这条消息是给你的。 计算机使用功能现已在Windows上可用，因此Codex可以在你的Windows电脑上执行操作。 通过ChatGPT移动应用中Codex的Windows支持，你可以在工作继续在Windows电脑上进行时，随时随地启动、审查和引导任务。 这是一项早期体验，但我们正在努力提供更多方式，让你的工作无论身在何处都能持续进行。",
+        "description": "Windows用户，这条消息是给你的。 计算机使用功能现已在Windows上可用，因此Codex可以在你的Windows电脑上执行操作。 通过ChatGPT移动应用中Codex的Windows支持，你可以在工作继续在Windows电脑上进行时，随时随地启动、审查和引导任务。 这是一项早期体验，但我们正在努力提供更多方式，让你的工作无论身在何处都能持续进行。",
+        "category": "products",
+        "originalSource": "X：OpenAI (@OpenAI)",
+        "originalUrl": "https://x.com/OpenAI/status/2060428604727771421",
+        "recommendedReason": "Windows用户，这条消息是给你的。 计算机使用功能现已在Windows上可用，因此Codex可以在你的Windows电脑上执行操作。 通过ChatGPT移动应用中Codex的Windows支持，你可以在工作继续在Windows电脑上进行时，随时随地启动、审查和引导任务。 这是一项早期体验，但我们正在努力提供更多方式，让你的工作无论身在何处都能持续进行。",
+        "publishedAt": "2026-05-29T18:30:34.000Z",
+        "collectedAt": "2026-05-29T19:28:22.738Z",
+        "raw": {
+          "id": "cmpr9mxrd0c40slnoz5qvsa20",
+          "titleEn": "Windows users， this one's for you. Computer use now works on Windows， so Codex can take action on y…",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmpr8syeh0bxsslno0wmufg9r",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "当公司过于\"AI上瘾\"时会发生什么？",
+        "url": "https://techcrunch.com/video/what-happens-when-companies-become-too-ai-pilled",
+        "summary": "Box创始人Aaron Levie指出，决定用AI替代员工的人往往最不了解工作的实际内容，他将此称为\"AI psychosis\"。ClickUp近期为部署AI智能体裁员22%即是一例。2026年的科技行业裁员规模已接近2025年全年。",
+        "description": "Box创始人Aaron Levie指出，决定用AI替代员工的人往往最不了解工作的实际内容，他将此称为\"AI psychosis\"。ClickUp近期为部署AI智能体裁员22%即是一例。2026年的科技行业裁员规模已接近2025年全年。",
+        "category": "tools",
+        "originalSource": "TechCrunch：AI（RSS）",
+        "originalUrl": "https://techcrunch.com/video/what-happens-when-companies-become-too-ai-pilled",
+        "recommendedReason": "Box创始人Aaron Levie指出，决定用AI替代员工的人往往最不了解工作的实际内容，他将此称为\"AI psychosis\"。ClickUp近期为部署AI智能体裁员22%即是一例。2026年的科技行业裁员规模已接近2025年全年。",
+        "publishedAt": "2026-05-29T17:57:05.000Z",
+        "collectedAt": "2026-05-29T19:28:22.738Z",
+        "raw": {
+          "id": "cmpr8syeh0bxsslno0wmufg9r",
+          "titleEn": "What happens when companies become too AI-pilled？",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmpr6nk7c0bf4slnok93x9vov",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "亲测为实：难以置信的推理速度",
+        "url": "https://x.com/rohanpaul_ai/status/2060409504693645440",
+        "summary": "Kog团队在标准数据中心GPU上实现了极高的单用户推理速度，在8× AMD MI300X GPUs上达到3，000 tokens/s，在8× NVIDIA H200上达到2，100 tokens/s。相比常规推理速度（约100-300 tokens/s），实现了10-30倍提升。其核心思路是将LLM解码视为内存流问题，通过协同设计monokernel、重建同步机制、针对性内存访问映射及采用延迟张量并行的Laneformer模型架构，消除了传统流程的阻塞点。",
+        "description": "Kog团队在标准数据中心GPU上实现了极高的单用户推理速度，在8× AMD MI300X GPUs上达到3，000 tokens/s，在8× NVIDIA H200上达到2，100 tokens/s。相比常规推理速度（约100-300 tokens/s），实现了10-30倍提升。其核心思路是将LLM解码视为内存流问题，通过协同设计monokernel、重建同步机制、针对性内存访问映射及采用延迟张量并行的Laneformer模型架构，消除了传统流程的阻塞点。",
+        "category": "tools",
+        "originalSource": "X：Rohan Paul (@rohanpaul_ai)",
+        "originalUrl": "https://x.com/rohanpaul_ai/status/2060409504693645440",
+        "recommendedReason": "Kog团队在标准数据中心GPU上实现了极高的单用户推理速度，在8× AMD MI300X GPUs上达到3，000 tokens/s，在8× NVIDIA H200上达到2，100 tokens/s。相比常规推理速度（约100-300 tokens/s），实现了10-30倍提升。其核心思路是将LLM解码视为内存流问题，通过协同设计monokernel、重建同步机制、针对性内存访问映射及采用延迟张量并行的Laneformer模型架构，消除了传统流程的阻塞点。",
+        "publishedAt": "2026-05-29T17:14:41.000Z",
+        "collectedAt": "2026-05-29T19:28:22.738Z",
+        "raw": {
+          "id": "cmpr6nk7c0bf4slnok93x9vov",
+          "titleEn": "I had to test it myself to believe this unreal inference speed. 3，000 tokens/s for 1 user on standa…",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmpr6m8dg0be7slno4oc8myl7",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "GPIC：大规模视觉生成基准数据集发布",
+        "url": "https://x.com/drfeifei/status/2060404846734512205",
+        "summary": "我对这个适用于大规模生成模型新时代的视觉生成基准数据集感到非常兴奋！🤩",
+        "description": "我对这个适用于大规模生成模型新时代的视觉生成基准数据集感到非常兴奋！🤩",
+        "category": "papers",
+        "originalSource": "X：Fei-Fei Li (@drfeifei, World Labs)",
+        "originalUrl": "https://x.com/drfeifei/status/2060404846734512205",
+        "recommendedReason": "我对这个适用于大规模生成模型新时代的视觉生成基准数据集感到非常兴奋！🤩",
+        "publishedAt": "2026-05-29T16:56:10.000Z",
+        "collectedAt": "2026-05-29T19:28:22.738Z",
+        "raw": {
+          "id": "cmpr6m8dg0be7slno4oc8myl7",
+          "titleEn": "I'm very excited by this new benchmark dataset for visual generation that is suitable for the modern…",
+          "apiCategory": "paper"
+        }
+      },
       {
         "id": "aihot:cmpr59l910azmslnomxmi83ec",
         "source": "aihot",
@@ -870,7 +1205,7 @@
         "originalUrl": "https://x.com/OpenRouter/status/2060395056196936054",
         "recommendedReason": "OpenRouter 现已支持 \"apply_patch\"，这是一个服务器工具，允许任何模型通过 Responses API 使用 V4A diffs 提出文件编辑建议。 模型生成一个补丁（创建、更新或删除文件）。OpenRouter 在服务器端验证 diff 语法。",
         "publishedAt": "2026-05-29T16:17:16.000Z",
-        "collectedAt": "2026-05-29T16:38:13.319Z",
+        "collectedAt": "2026-05-29T19:28:22.738Z",
         "raw": {
           "id": "cmpr59l910azmslnomxmi83ec",
           "titleEn": "OpenRouter now supports \"apply_patch，\" a server tool that lets any model propose file edits using V4…",
@@ -890,130 +1225,10 @@
         "originalUrl": "https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans",
         "recommendedReason": "Cognition公司开发了Devvin，这是一个号称首个且最成功的AI编程智能体。其著名程序员创始人Scott Wu明确表示，该智能体并非旨在取代人类程序员。",
         "publishedAt": "2026-05-29T16:13:47.000Z",
-        "collectedAt": "2026-05-29T16:38:13.319Z",
+        "collectedAt": "2026-05-29T19:28:22.738Z",
         "raw": {
           "id": "cmpr4i9sf0auaslnom31aat3q",
           "titleEn": "Cognition's Scott Wu says AI coding agents shouldn't replace humans",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmpr48rt40apuslno1yaez5g0",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Gemini架构师分享AI前沿探索幕后故事",
-        "url": "https://x.com/GoogleAI/status/2060392191508488493",
-        "summary": "聆听Gemini的架构师们回顾他们持续推动AI前沿的旅程，本期Release Notes节目。 @JeffDean、@koraykv、@OriolVinyalsML和@NoamShazeer一同出镜，分享模型背后团队的幕后故事，以及他们如何见证愿景的实现。",
-        "description": "聆听Gemini的架构师们回顾他们持续推动AI前沿的旅程，本期Release Notes节目。 @JeffDean、@koraykv、@OriolVinyalsML和@NoamShazeer一同出镜，分享模型背后团队的幕后故事，以及他们如何见证愿景的实现。",
-        "category": "tools",
-        "originalSource": "X：Google AI (@GoogleAI)",
-        "originalUrl": "https://x.com/GoogleAI/status/2060392191508488493",
-        "recommendedReason": "聆听Gemini的架构师们回顾他们持续推动AI前沿的旅程，本期Release Notes节目。 @JeffDean、@koraykv、@OriolVinyalsML和@NoamShazeer一同出镜，分享模型背后团队的幕后故事，以及他们如何见证愿景的实现。",
-        "publishedAt": "2026-05-29T16:05:53.000Z",
-        "collectedAt": "2026-05-29T16:38:13.319Z",
-        "raw": {
-          "id": "cmpr48rt40apuslno1yaez5g0",
-          "titleEn": "Hear the architects of Gemini reflect on their journey to continue pushing the frontier of AI， on th…",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmpr4wr050axrslno7hhf6kbg",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Canvas新功能与Clerk自定义登录介绍",
-        "url": "https://x.com/Replit/status/2060390354910859401",
-        "summary": "Canvas 新功能 + 使用 Clerk 自定义登录 https：//x.com/i/broadcasts/1pJdRRzreMRKW",
-        "description": "Canvas 新功能 + 使用 Clerk 自定义登录 https：//x.com/i/broadcasts/1pJdRRzreMRKW",
-        "category": "products",
-        "originalSource": "X：Replit (@Replit)",
-        "originalUrl": "https://x.com/Replit/status/2060390354910859401",
-        "recommendedReason": "Canvas 新功能 + 使用 Clerk 自定义登录 https：//x.com/i/broadcasts/1pJdRRzreMRKW",
-        "publishedAt": "2026-05-29T15:58:35.000Z",
-        "collectedAt": "2026-05-29T16:38:13.319Z",
-        "raw": {
-          "id": "cmpr4wr050axrslno7hhf6kbg",
-          "titleEn": "What's New in Canvas + Customizable Sign-In with Clerk https：//x.com/i/broadcasts/1pJdRRzreMRKW",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmpr59n6i0azqslnoxcv1zsd8",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Gemini 本月更新：全新界面与智能体助手",
-        "url": "https://x.com/GeminiApp/status/2060389565052096911",
-        "summary": "从全新设计的 Gemini 界面，到 Gemini Spark 提供的全天候智能体辅助，以下是本月 Gemini 更新概览。🧵",
-        "description": "从全新设计的 Gemini 界面，到 Gemini Spark 提供的全天候智能体辅助，以下是本月 Gemini 更新概览。🧵",
-        "category": "products",
-        "originalSource": "X：Gemini (@GeminiApp)",
-        "originalUrl": "https://x.com/GeminiApp/status/2060389565052096911",
-        "recommendedReason": "从全新设计的 Gemini 界面，到 Gemini Spark 提供的全天候智能体辅助，以下是本月 Gemini 更新概览。🧵",
-        "publishedAt": "2026-05-29T15:55:27.000Z",
-        "collectedAt": "2026-05-29T16:38:13.319Z",
-        "raw": {
-          "id": "cmpr59n6i0azqslnoxcv1zsd8",
-          "titleEn": "From a newly redesigned Gemini experience to 24/7 agentic assistance with Gemini Spark， here's a loo…",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmpr2onlg0adislno0rn7snxt",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Kling AI助力电影RAPHAEL创作全流程揭秘",
-        "url": "https://x.com/Kling_ai/status/2060375625404432757",
-        "summary": "Kling AI戛纳展示--RAPHAEL：AI工作流幕后 深入了解RAPHAEL，一部使用Kling AI创作的AI驱动故事片。看看创作者如何在整个电影制作流程中运用Kling AI，从创意构思到最终电影画面，简化制作并释放新的创作可能性。",
-        "description": "Kling AI戛纳展示--RAPHAEL：AI工作流幕后 深入了解RAPHAEL，一部使用Kling AI创作的AI驱动故事片。看看创作者如何在整个电影制作流程中运用Kling AI，从创意构思到最终电影画面，简化制作并释放新的创作可能性。",
-        "category": "tools",
-        "originalSource": "X：可灵 Kling AI (@Kling_ai)",
-        "originalUrl": "https://x.com/Kling_ai/status/2060375625404432757",
-        "recommendedReason": "Kling AI戛纳展示--RAPHAEL：AI工作流幕后 深入了解RAPHAEL，一部使用Kling AI创作的AI驱动故事片。看看创作者如何在整个电影制作流程中运用Kling AI，从创意构思到最终电影画面，简化制作并释放新的创作可能性。",
-        "publishedAt": "2026-05-29T15:00:03.000Z",
-        "collectedAt": "2026-05-29T16:38:13.319Z",
-        "raw": {
-          "id": "cmpr2onlg0adislno0rn7snxt",
-          "titleEn": "Kling AI Cannes Showcase - RAPHAEL： Behind the AI Workflow Go behind the scenes of RAPHAEL， an AI-p…",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmpr47z7g0apislno5cuj0pne",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "波士顿儿童医院利用AI解锁新诊断",
-        "url": "https://openai.com/index/boston-childrens-hospital",
-        "summary": "波士顿儿童医院通过部署OpenAI技术，用于改善患者护理并减轻运营负担，成功帮助诊断了超过40种罕见病病例。",
-        "description": "波士顿儿童医院通过部署OpenAI技术，用于改善患者护理并减轻运营负担，成功帮助诊断了超过40种罕见病病例。",
-        "category": "industry",
-        "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
-        "originalUrl": "https://openai.com/index/boston-childrens-hospital",
-        "recommendedReason": "波士顿儿童医院通过部署OpenAI技术，用于改善患者护理并减轻运营负担，成功帮助诊断了超过40种罕见病病例。",
-        "publishedAt": "2026-05-29T12:00:00.000Z",
-        "collectedAt": "2026-05-29T16:38:13.319Z",
-        "raw": {
-          "id": "cmpr47z7g0apislno5cuj0pne",
-          "titleEn": "Boston Children's uses AI to unlock new diagnoses",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmpqtmdi90840slnods4jc1lj",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Claude Code--文档中未提及的所有可配置选项",
-        "url": "https://buildingbetter.tech/p/i-read-the-claude-code-source-code",
-        "summary": "该篇文章标题涉及\"Claude Code\"的可配置选项，但提供的正文内容仅包含一张图片和一个外部链接，未给出任何关于模型版本、参数、性能、价格或功能的具体信息。根据规则，无法在摘要中提及原文不存在的细节。",
-        "description": "该篇文章标题涉及\"Claude Code\"的可配置选项，但提供的正文内容仅包含一张图片和一个外部链接，未给出任何关于模型版本、参数、性能、价格或功能的具体信息。根据规则，无法在摘要中提及原文不存在的细节。",
-        "category": "tools",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://buildingbetter.tech/p/i-read-the-claude-code-source-code",
-        "recommendedReason": "该篇文章标题涉及\"Claude Code\"的可配置选项，但提供的正文内容仅包含一张图片和一个外部链接，未给出任何关于模型版本、参数、性能、价格或功能的具体信息。根据规则，无法在摘要中提及原文不存在的细节。",
-        "publishedAt": "2026-05-29T10:37:09.818Z",
-        "collectedAt": "2026-05-29T16:38:13.319Z",
-        "raw": {
-          "id": "cmpqtmdi90840slnods4jc1lj",
-          "titleEn": null,
           "apiCategory": "tip"
         }
       }
