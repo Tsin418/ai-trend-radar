@@ -983,10 +983,11 @@ export default {
     // 1. 代理 /data/ 资源到 GitHub Raw Content，从而实时获取每日刷新的数据
     if (url.pathname.startsWith('/data/')) {
       const githubUrl = `https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main${url.pathname}`;
+      const forceRefresh = url.searchParams.has('force_refresh');
+      const fetchOpts = forceRefresh ? {} : { cf: { cacheTtl: 300, cacheEverything: true } };
+
       const newRequest = new Request(githubUrl, request);
-      const response = await fetch(newRequest, {
-        cf: { cacheTtl: 300, cacheEverything: true } // 稍微缓存5分钟降低 GitHub Raw 的压力
-      });
+      const response = await fetch(newRequest, fetchOpts as RequestInit);
       // 添加 CORS Header
       const newResponse = new Response(response.body, response);
       newResponse.headers.set('Access-Control-Allow-Origin', '*');
@@ -996,15 +997,22 @@ export default {
     // 2. 代理 /api/aihot/ 资源到真实后端，替代 Vite 的 local proxy
     if (url.pathname.startsWith('/api/aihot/')) {
       const targetUrl = new URL(request.url);
+      targetUrl.protocol = 'https:';
       targetUrl.hostname = 'aihot.virxact.com';
       targetUrl.pathname = url.pathname.replace(/^\/api\/aihot/, '/api/public');
       
-      const newRequest = new Request(targetUrl.toString(), request);
-      newRequest.headers.set('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36');
-      
-      const response = await fetch(newRequest, {
-        cf: { cacheTtl: 3600, cacheEverything: true } // 每小时刷新缓存
+      const forceRefresh = url.searchParams.has('force_refresh');
+      const fetchOpts = forceRefresh ? {} : { cf: { cacheTtl: 3600, cacheEverything: true } };
+
+      const newRequest = new Request(targetUrl.toString(), {
+        method: request.method,
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          'Accept': 'application/json'
+        }
       });
+      
+      const response = await fetch(newRequest, fetchOpts as RequestInit);
       const newResponse = new Response(response.body, response);
       newResponse.headers.set('Access-Control-Allow-Origin', '*');
       return newResponse;

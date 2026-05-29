@@ -1,5 +1,5 @@
 import { Button } from '../ui/button';
-import { fmtRelative } from '../../utils/format';
+import { fmtDateTime } from '../../utils/format';
 
 const TOP_LINKS = [
   { label: 'GitHub Repo', url: 'https://github.com/Tsin418/ai-trend-radar' },
@@ -24,7 +24,7 @@ export function TopBar({
       </div>
       <div className="ml-auto flex items-center gap-3">
         <div className="text-xs text-muted-foreground">
-          Last generated <span className="text-foreground">{fmtRelative(generatedAt)}</span>
+          Updated: <span className="text-foreground">{fmtDateTime(generatedAt)}</span>
         </div>
         {TOP_LINKS.map((item) => (
           <Button key={item.label} variant="outline" size="sm" className="h-8" asChild>

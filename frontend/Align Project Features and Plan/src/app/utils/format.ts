@@ -26,6 +26,19 @@ export const fmtDate = (iso: string | null | undefined): string => {
   }
 };
 
+export const fmtDateTime = (iso: string | null | undefined): string => {
+  if (!iso) return '—';
+  try {
+    const d = new Date(iso);
+    return new Intl.DateTimeFormat('en-US', {
+      year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', hour12: false
+    }).format(d).replace(/(\d+)\/(\d+)\/(\d+),\s+(.*)/, '$3-$1-$2 $4');
+  } catch {
+    return '—';
+  }
+};
+
 export const fmtRelative = (iso: string | null | undefined): string => {
   if (!iso) return '—';
   const now = Date.now();
