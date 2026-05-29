@@ -26,7 +26,7 @@
     "radar:daily:generate-and-send": "tsx scripts/generate-ai-developer-radar-digest.ts --send",
     "frontend:sync-data": "mkdir -p \"frontend/Align Project Features and Plan/public/data\" \"frontend/Align Project Features and Plan/dist/data\" && cp data/latest-daily-dashboard.json \"frontend/Align Project Features and Plan/public/data/latest-daily-dashboard.json\" && cp data/latest-daily-dashboard.json \"frontend/Align Project Features and Plan/dist/data/latest-daily-dashboard.json\"",
     "frontend:build": "cd \"frontend/Align Project Features and Plan\" && npm install && npm run build",
-    "cloudflare:deploy": "pnpm frontend:sync-data && pnpm frontend:build && npx wrangler deploy",
+    "cloudflare:deploy": "pnpm frontend:sync-data && pnpm frontend:build && rm -rf \"frontend/Align Project Features and Plan/dist/data\" && npx wrangler deploy",
     "radar:weekly:dry-run": "tsx scripts/send-ai-developer-radar.ts --mode=weekly --dry-run",
     "radar:weekly:send": "tsx scripts/send-ai-developer-radar.ts --mode=weekly --send",
     "radar:daily:sample": "RADAR_USE_SAMPLE_DATA=true tsx scripts/send-ai-developer-radar.ts --mode=daily --dry-run",

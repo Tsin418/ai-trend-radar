@@ -115,7 +115,7 @@ const DEFAULT_DIGEST_URL =
   'https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-daily-digest.json';
 const DEFAULT_LIGHTWEIGHT_DIGEST_URL =
   'https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-intelligence-brief.json';
-const DAILY_MAIN_CRON = '0 1 * * *';
+const DAILY_MAIN_CRON = '48 0 * * *';
 const PRODUCT_HUNT_ENDPOINT = 'https://api.producthunt.com/v2/api/graphql';
 const DEFAULT_PRODUCT_HUNT_TOPICS = [
   'artificial-intelligence',
