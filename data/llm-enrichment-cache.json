@@ -1736,5 +1736,23 @@
     },
     "createdAt": "2026-05-30T14:11:54.652Z",
     "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-05-30T15:04:32Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, engineered around prefix-cache stability to keep token costs low across long sessions.",
+      "problemSolved": "Generic AI coding agents waste tokens on repeated context re-processing. Reasonix locks the prefix cache so that long-running sessions maintain >99% cache hit rates, slashing API costs by ~80% compared to uncached usage.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "The project is on a sustained hot streak with 14,480 stars, a 24-hour delta of 1,485, and a 7-day average delta of 1,427. The acceleration ratio of 1.1 indicates steady, organic growth rather than a sudden spike. It has been ranked top 2 in Agents and top 3 in CLI by velocity on OOSMetrics, signaling strong community adoption.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The recent release (within 30 days) and active commits (within 7 days) suggest ongoing improvements, but the consistent star velocity over the past week points to word-of-mouth and community momentum rather than a specific event.",
+      "whyTrending": "Reasonix offers a unique value proposition: it is purpose-built for DeepSeek's prefix-cache mechanic, delivering dramatic cost savings (99.82% cache hit, ~$12 vs ~$61 for a real workload). Developers frustrated with expensive AI coding agents are flocking to a tool that is both cheaper and optimized for a popular model family.",
+      "developerTakeaway": "If you use DeepSeek models for coding, Reasonix is a no-brainer: it slashes token costs and provides a polished terminal UI with MCP support, skills, and memory. The CLI-first design and global install make it easy to integrate into daily workflows.",
+      "developerInsight": "The success of Reasonix signals a shift toward model-specific tooling that exploits unique model features (like DeepSeek's prefix caching) rather than generic multi-model agents. Developers should watch for similar niche optimizations as model APIs differentiate.",
+      "targetUsers": "Developers who use DeepSeek models for AI-assisted coding and want a cost-effective, terminal-based agent with caching, MCP, and skill authoring.",
+      "riskNotes": "Tied exclusively to DeepSeek — if DeepSeek changes its caching behavior or pricing, the core advantage erodes. The project has 388 open issues, which may indicate growing pains or feature requests outpacing development. Desktop client is still prerelease and not code-signed.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-30T15:41:51.144Z",
+    "model": "deepseek-v4-flash"
   }
 }
