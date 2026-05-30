@@ -1754,5 +1754,59 @@
     },
     "createdAt": "2026-05-30T15:41:51.144Z",
     "model": "deepseek-v4-flash"
+  },
+  "deepspeedai/DeepSpeed:2026-05-30T17:12:24Z": {
+    "summary": {
+      "oneLiner": "DeepSpeed is a deep learning optimization library for efficient distributed training and inference of large models.",
+      "problemSolved": "It addresses the challenges of training and deploying large-scale deep learning models (billions to trillions of parameters) by providing memory and speed optimizations like ZeRO, pipeline parallelism, and mixed precision, making distributed training accessible and efficient.",
+      "aiCategory": "Local LLM / Inference",
+      "trendType": "sudden_breakout",
+      "whyNow": "With 42,409 stars and a high acceleration ratio of 6 (sudden breakout), the project is experiencing a sharp increase in attention. The 24-hour star delta of 10 and three-day average of 1.7 indicate sustained interest, while the recent release and active commits suggest ongoing innovation. This momentum makes it a key tool for anyone working with large-scale AI models.",
+      "whatChanged": "Recent updates include support for Muon Optimizer, System DMA for ZeRO-3 on AMD GPUs, and a best paper award at ASPLOS 2026 for SuperOffload. These advancements in optimizer efficiency and hardware offloading likely drove the sudden breakout.",
+      "whyTrending": "DeepSpeed is essential for training and inference of large language models, and its continuous improvements in performance, scalability, and hardware support keep it at the forefront of AI infrastructure.",
+      "developerTakeaway": "DeepSpeed is a must-have for PyTorch developers scaling models beyond single GPU, offering production-tested optimizations that reduce memory and accelerate training/inference.",
+      "developerInsight": "This signals a shift toward more efficient large-model training, with innovations like offloading and compiler optimizations becoming critical for cost-effective AI development.",
+      "targetUsers": "Machine learning engineers, researchers, and data scientists working with large-scale deep learning models (e.g., LLMs, MoE) who need to optimize training and inference on multi-GPU or heterogeneous hardware.",
+      "riskNotes": "DeepSpeed's complexity may require significant expertise to configure optimally. Dependency on specific CUDA/PyTorch versions and hardware (NVIDIA, AMD) could limit portability. The project is mature but still has many open issues (1,291), indicating potential bugs or feature requests.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-30T17:34:41.184Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-05-30T16:13:33Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, engineered around prefix-cache stability to minimize token costs across long sessions.",
+      "problemSolved": "Generic AI coding agents often suffer from high token costs and cache inefficiency when used over long sessions. Reasonix solves this by designing its entire loop around DeepSeek's byte-stable prefix-cache mechanic, achieving >99% cache hit rates and drastically reducing API costs.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "The project has been on a sustained hot streak with 14,526 stars, a 24-hour delta of 1,531 stars, and a 7-day average delta of 1,427.2. The acceleration ratio of 1.1 indicates steady, high-velocity growth without sudden spikes. This consistent attention suggests strong organic interest from developers seeking cost-effective AI coding tools.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The recent release (within 30 days) and continuous commits (within 7 days) indicate active development, but the growth pattern is steady rather than event-driven.",
+      "whyTrending": "Reasonix is trending because it offers a unique value proposition: a coding agent that is exclusively optimized for DeepSeek's API, leveraging prefix caching to deliver massive cost savings (e.g., $12 vs $61 for 435M tokens). This resonates with developers who want powerful AI assistance without high API bills.",
+      "developerTakeaway": "If you use DeepSeek for coding tasks, Reasonix can dramatically reduce your token costs while providing a full-featured terminal agent with filesystem access, MCP support, and a desktop GUI. It's worth trying for any developer working on long-running AI-assisted coding sessions.",
+      "developerInsight": "This signals a shift toward model-specific agent optimization. Rather than building generic agents that work with any LLM, Reasonix shows that deep integration with a single model's caching mechanics can yield significant performance and cost advantages. Developers building AI tools should consider whether model-specific optimizations could be a competitive differentiator.",
+      "targetUsers": "Developers who use DeepSeek's API for coding assistance, especially those working on large projects or long sessions where token costs accumulate. Also relevant for developers interested in terminal-based AI agents with MCP support and custom skills.",
+      "riskNotes": "The project is DeepSeek-only, so it's tied to DeepSeek's API availability, pricing, and cache mechanics. If DeepSeek changes its caching behavior or pricing, the core value proposition could be affected. Additionally, the desktop client is still in prerelease and not code-signed, which may limit adoption among security-conscious users.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-30T17:34:42.247Z",
+    "model": "deepseek-v4-flash"
+  },
+  "sickn33/antigravity-awesome-skills:2026-05-30T10:51:30Z": {
+    "summary": {
+      "oneLiner": "An installable library of 1,484+ agentic skills for AI coding assistants like Claude Code, Cursor, and Gemini CLI, packaged with an npm installer and curated bundles.",
+      "problemSolved": "Eliminates the need to collect one-off prompt snippets by providing a searchable, installable catalog of reusable SKILL.md playbooks that give AI agents better context, constraints, and outputs for recurring tasks.",
+      "aiCategory": "MCP / Tool Calling",
+      "trendType": "sustained_hot",
+      "whyNow": "With 39,190 stars, a 24-hour delta of +143, and a 7-day average of +111.6, this repo shows sustained high-velocity growth. The acceleration ratio of 1.3 indicates steady momentum without a sudden spike, suggesting broad, ongoing adoption rather than a viral event.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The latest release (V11.9.0) and continuous commits (pushed within 7 days) keep the library fresh, but no external buzz or specific event is identifiable.",
+      "whyTrending": "It addresses a clear pain point for developers using AI coding assistants: the need for structured, reusable skill definitions. The npm-based installer and support for multiple tools (Claude Code, Cursor, Codex CLI, Gemini CLI, etc.) lower the barrier to entry, while the large skill count (1,484+) and curated bundles provide immediate value.",
+      "developerTakeaway": "If you use AI coding assistants, this repo offers a practical way to enhance their capabilities with minimal setup. The skill library covers development, testing, security, infrastructure, and more, making it a one-stop shop for agentic workflows.",
+      "developerInsight": "The rise of structured skill libraries signals a shift from ad-hoc prompting to reusable, tool-agnostic skill definitions. Developers should expect AI coding assistants to increasingly rely on such libraries for consistent, high-quality outputs.",
+      "targetUsers": "Developers using Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, Kiro, OpenCode, or GitHub Copilot who want to improve their AI assistant's performance with pre-built, installable skills.",
+      "riskNotes": "The project is community-driven and may have varying skill quality. Users should review skills before trusting them in production. The rapid star growth could attract noise or low-quality contributions.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-30T17:34:48.633Z",
+    "model": "deepseek-v4-flash"
   }
 }
