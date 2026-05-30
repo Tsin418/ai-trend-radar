@@ -1610,5 +1610,23 @@
     },
     "createdAt": "2026-05-30T10:21:07.858Z",
     "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-05-30T11:47:18Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, engineered around prefix-cache stability to keep token costs low across long sessions.",
+      "problemSolved": "Generic AI coding agents waste tokens because they don't optimize for prefix caching. Reasonix is purpose-built for DeepSeek's byte-stable prefix-cache mechanic, achieving >99% cache hit rates and drastically reducing costs in long-running sessions.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 14,337 stars, a 24-hour delta of +1,342, and a 7-day average delta of 1,427, this project is experiencing sustained explosive growth. The acceleration ratio of 1 indicates steady, high-velocity momentum rather than a sudden spike. It's currently ranked top 2 in Agents, top 3 in LLMs, and top 3 in CLI by velocity on OOSMetrics. The combination of a recent release (within 30 days) and active commits within 7 days shows the project is actively maintained and improving.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The sustained high star velocity over the past week suggests ongoing word-of-mouth and community adoption, likely amplified by the release of a desktop client (prerelease) and the publication of a real-world cache case study showing 99.82% cache hit rate.",
+      "whyTrending": "It solves a real pain point for developers using DeepSeek: high token costs due to poor cache utilization. By guaranteeing prefix-cache stability, it makes DeepSeek economically viable for continuous use. The polished CLI, TUI, and desktop client, plus bilingual community support (English/Chinese/Japanese), lower the barrier to entry. The project also integrates with existing tools like MCP, Claude-format skills, and multiple search engines.",
+      "developerTakeaway": "If you use DeepSeek for coding, this is the most cost-effective agent available. The cache-first design can reduce your token bill by 5x or more. It's worth trying for any developer who wants a persistent, always-on coding assistant.",
+      "developerInsight": "This signals a shift toward model-specific optimization in AI agents. Rather than building generic frameworks that work with any LLM, developers are now creating purpose-built tools that exploit unique model features (like DeepSeek's prefix caching) for dramatic cost savings. This trend may accelerate as more models offer specialized capabilities.",
+      "targetUsers": "Developers who use DeepSeek API for coding assistance, especially those working on large projects or running long sessions. Also relevant for teams looking to reduce AI coding costs without sacrificing capability.",
+      "riskNotes": "DeepSeek-only dependency is a double-edged sword: if DeepSeek changes its caching behavior or pricing, the core value proposition weakens. The project is relatively new (first release likely within months) and has 383 open issues, indicating active development but also potential instability. The desktop client is prerelease and not code-signed, which may deter some users.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-30T11:51:17.959Z",
+    "model": "deepseek-v4-flash"
   }
 }
