@@ -1934,5 +1934,41 @@
     },
     "createdAt": "2026-05-31T01:33:55.416Z",
     "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-05-31T04:45:44Z": {
+    "summary": {
+      "oneLiner": "Open-source, local-first alternative to Claude Design that wires 16 coding-agent CLIs into a skill-driven design workflow for generating prototypes, slides, images, and videos.",
+      "problemSolved": "Claude Design is closed-source, cloud-only, and locked to Anthropic's model. Open Design provides a fully open, BYOK, local-first design tool that works with any agent CLI and exports to HTML/PDF/PPTX/MP4.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 56k stars, a 7-day average of 972 stars/day, and a 24-hour delta of 482, this project is experiencing sustained explosive growth. The acceleration ratio of 0.4 indicates steady momentum rather than a sudden spike, but the absolute numbers are massive. It's one of the fastest-growing open-source projects in the AI design space right now.",
+      "whatChanged": "The 0.8.0-preview release was announced, adding 16 CLI agents, 137 skills, 150 design systems, and media generation. The README explicitly calls out a 'new phase' and invites community contributions. This release likely triggered the sustained attention.",
+      "whyTrending": "It fills a clear gap: an open-source, local-first alternative to a popular but locked-down AI design tool. The combination of BYOK, multi-agent support, and rich skill library appeals to developers who want control and flexibility.",
+      "developerTakeaway": "This project demonstrates that the market wants open, composable AI tools that integrate with existing workflows. Developers should consider building modular, agent-agnostic tools rather than platform-specific ones.",
+      "developerInsight": "The success of Open Design signals a shift toward local-first, BYOK AI tools that empower developers to choose their own models and agents. It also shows that design generation is a killer app for coding agents, blurring the line between code and design tools.",
+      "targetUsers": "Developers, designers, and product builders who want an open-source alternative to Claude Design for rapid prototyping, slide decks, and media generation without cloud lock-in.",
+      "riskNotes": "The project is in preview (0.8.0) with 349 open issues, indicating active development but potential instability. It relies on external CLI agents and may have compatibility issues. The rapid growth could lead to maintenance challenges.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-31T04:51:15.868Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-05-31T04:28:28Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, engineered around prefix-cache stability to keep token costs low across long sessions.",
+      "problemSolved": "Generic AI coding agents waste tokens because they don't optimize for prefix-cache stability. Reasonix locks in high cache-hit rates (99.82% in a real-world case) by designing every layer around DeepSeek's byte-stable prefix-cache mechanic, dramatically reducing costs for long-running sessions.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 14,725 stars, a 24-hour delta of +739, and a 7-day average of +1,625 stars per day, this project is experiencing sustained explosive growth. The acceleration ratio of 0.4 (high) indicates the velocity is not just a spike but a consistent, accelerating trend. It's currently ranked top 2 in Agents by velocity on oosmetrics, signaling massive community adoption.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The sustained high star velocity over the past week, combined with recent releases (within 30 days) and active commits, suggests ongoing improvements and word-of-mouth momentum rather than a single viral event.",
+      "whyTrending": "It offers a uniquely cost-effective coding agent experience by leveraging DeepSeek's prefix-cache mechanic, which is a concrete differentiator in a crowded space. The combination of a polished CLI, desktop client, MCP support, and bilingual community (English/Chinese) broadens its appeal. The impressive cache-hit case study (99.82% hit rate, saving ~$49/day) provides compelling proof of value.",
+      "developerTakeaway": "If you use DeepSeek for coding assistance, Reasonix can drastically reduce your API costs while providing a full-featured agent with file editing, shell access, skills, memory, and MCP integration. It's worth trying for any developer who wants a persistent, cost-efficient AI coding partner in the terminal.",
+      "developerInsight": "This signals a shift toward model-specific optimizations in AI tooling. Rather than building generic agents that work with any LLM, Reasonix shows that deep integration with a single model's caching behavior can yield significant cost and performance advantages. Developers should consider whether their AI tools are leaving money on the table by not optimizing for the underlying model's mechanics.",
+      "targetUsers": "Developers who use DeepSeek for coding and want a terminal-based AI agent with low token costs, long-running sessions, and features like file editing, shell access, and MCP support. Also relevant for teams looking to reduce AI coding costs at scale.",
+      "riskNotes": "DeepSeek-only — if you switch models, this tool is useless. The project is still early (prerelease desktop client, 402 open issues). Cache stability depends on DeepSeek's API behavior, which could change. The high issue count may indicate rough edges or rapid feature development.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-31T04:51:16.708Z",
+    "model": "deepseek-v4-flash"
   }
 }
