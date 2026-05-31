@@ -1970,5 +1970,41 @@
     },
     "createdAt": "2026-05-31T04:51:16.708Z",
     "model": "deepseek-v4-flash"
+  },
+  "yuaotian/go-cursor-help:2026-05-14T16:56:26Z": {
+    "summary": {
+      "oneLiner": "A shell-based tool that resets Cursor IDE's free trial by modifying machine identifiers, bypassing usage limits.",
+      "problemSolved": "Cursor IDE enforces a free trial limit and blocks users with 'suspicious activity' or 'trial request limit' errors. This tool resets those limits by regenerating unique machine IDs in Cursor's config files, effectively granting a fresh trial.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sudden_breakout",
+      "whyNow": "With 26,347 stars and a sudden breakout acceleration of 3 (high), the repo is experiencing a sharp spike in attention. The 24h star delta is +2, but the 7-day delta is -3, indicating a recent burst that may be fading. The high acceleration suggests a recent event (e.g., a viral post or Cursor policy change) drove a surge, making it worth monitoring for developers affected by Cursor's limits.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The README was recently updated (pushed 2026-05-14) with a prominent Codex API package promotion, which may have attracted new users. No recent release or commit within 7 days, so the breakout likely stems from external buzz or social sharing.",
+      "whyTrending": "It directly addresses a widespread pain point: Cursor's aggressive trial blocking. The one-click scripts for Windows/Mac/Linux lower the barrier for non-technical users, and the large star count creates a social proof loop. The inclusion of a paid Codex API package also monetizes the audience.",
+      "developerTakeaway": "This tool is a quick fix for Cursor trial limits, but it modifies system registry keys (MachineGuid) and Cursor config files, which may violate Cursor's ToS. Developers should weigh the risk of account bans or system instability.",
+      "developerInsight": "The popularity of this tool signals strong demand for affordable AI coding assistants and frustration with restrictive free tiers. It also highlights a cat-and-mouse game between tool makers and AI platforms, where users seek workarounds for usage limits.",
+      "targetUsers": "Developers using Cursor IDE who have hit free trial limits and want to continue using it without paying, especially in regions where Cursor's pricing is prohibitive.",
+      "riskNotes": "Modifying MachineGuid can affect Windows licensing and other software activation. Cursor may detect and ban accounts using modified IDs. The tool's registry changes are irreversible without manual backup. The README also promotes a paid Codex API package, which may be a separate commercial venture.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-31T06:37:59.417Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-05-31T06:35:29Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, engineered around prefix-cache stability to keep token costs low across long sessions.",
+      "problemSolved": "Generic AI coding agents waste tokens on repeated context re-processing. Reasonix locks in prefix-cache stability by design, achieving 99.82% cache hit rates in real-world use, slashing costs by ~80% compared to uncached workflows.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 14,782 stars, a 24-hour delta of +796, and a 7-day average delta of 1,354.5, this project is experiencing sustained, high-velocity growth. The acceleration ratio of 0.7 indicates a steady climb rather than a sudden spike, suggesting deep, organic adoption among developers who need cost-efficient AI coding assistance.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The recent release (within 30 days) and continuous commits (within 7 days) maintain momentum, while the published case study of 99.82% cache hit on 435M tokens provides concrete proof that drives word-of-mouth.",
+      "whyTrending": "It delivers a tangible cost advantage (up to 5x cheaper per session) by exploiting DeepSeek's prefix-cache mechanic, a feature generic agent frameworks ignore. The combination of a polished TUI, desktop client prerelease, and bilingual community (English/Chinese) broadens its appeal.",
+      "developerTakeaway": "If you use DeepSeek models for coding, this is the most cache-optimized agent available. The CLI-first design and skill system make it easy to integrate into existing workflows, and the cost savings are immediately measurable.",
+      "developerInsight": "This signals a shift toward model-specific agent optimization: instead of building one-size-fits-all frameworks, the next wave of AI tools will tune every layer to a single model's quirks (like DeepSeek's byte-stable prefix cache) to deliver order-of-magnitude efficiency gains.",
+      "targetUsers": "Developers who use DeepSeek models for daily coding tasks, especially those running long agent sessions or working on large codebases where token costs add up. Also appeals to cost-conscious teams and solo devs in regions where DeepSeek is the primary LLM.",
+      "riskNotes": "DeepSeek-only — if you switch models, this agent is useless. The project is young (high open issues count at 401) and the desktop client is still prerelease. Cache stability depends on DeepSeek's API behavior, which could change.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-31T06:37:59.606Z",
+    "model": "deepseek-v4-flash"
   }
 }
