@@ -2078,5 +2078,41 @@
     },
     "createdAt": "2026-05-31T14:15:45.381Z",
     "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-05-31T15:41:47Z": {
+    "summary": {
+      "oneLiner": "Open-source, local-first alternative to Claude Design that wires 16 coding-agent CLIs into a skill-driven design workflow with 137 skills and 150 design systems.",
+      "problemSolved": "Claude Design is closed-source, paid-only, cloud-only, and locked to Anthropic's model. Open Design provides the same artifact-first design loop but runs locally, supports BYOK at every layer, and lets you use any coding agent CLI on your PATH.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 56,303 stars, a 24h delta of +763, and a 7-day average of +810 stars/day, this project is sustaining explosive growth. The acceleration ratio of 1 indicates steady high velocity rather than a sudden spike, but the absolute numbers are massive — it's one of the fastest-growing repos on GitHub right now.",
+      "whatChanged": "The 0.8.0-preview release was announced, iterating fast on main. The README explicitly calls out '40k stars in two weeks' and asks the community to push further. No single external trigger is identifiable beyond the release itself.",
+      "whyTrending": "It fills a clear gap: an open-source, local-first alternative to a popular but locked-down tool (Claude Design). The combination of massive star count, active development, and a strong community call-to-action creates a viral loop.",
+      "developerTakeaway": "If you build AI design tools or agent workflows, study how Open Design composes multiple CLIs, manages skills, and enforces design quality via prompt stacks. The architecture (web app + local daemon + CLI delegation) is a reference pattern for local-first AI tools.",
+      "developerInsight": "The market is demanding open, composable alternatives to proprietary AI design tools. Developers should consider building modular, BYOK-friendly systems that integrate with existing agent ecosystems rather than creating walled gardens.",
+      "targetUsers": "Designers, frontend developers, and product builders who want AI-assisted design without vendor lock-in; teams that need local-first, self-hostable design tools; developers building on top of coding agents.",
+      "riskNotes": "Project is in preview (0.8.0) with 330 open issues — stability and polish may be lacking. Relies on external CLI tools that may change or break. The rapid growth could attract unsustainable expectations or maintenance burden.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-31T15:44:16.008Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-05-31T15:34:29Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go with prefix-cache stability and plugin-driven extensibility.",
+      "problemSolved": "Provides a configurable, multi-model AI coding assistant that runs as a single static binary, optimized for DeepSeek's prefix caching to reduce token costs during long sessions, with permission gating and sandboxing for safe autonomous operation.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 15,101 stars, a 24-hour delta of +1,115, and a 7-day average delta of 1,354.5, this project is experiencing sustained high-velocity growth. The acceleration ratio of 1 indicates steady, organic interest rather than a sudden spike. It ranks in the top 3 for velocity in Agents, LLMs, and CLI categories on oosmetrics, signaling strong community adoption.",
+      "whatChanged": "The project recently underwent a ground-up rewrite from TypeScript to Go (version 1.0), with the main branch now delivering a single static binary. The README highlights this migration and the new architecture, likely driving renewed attention from developers seeking performance and simplicity.",
+      "whyTrending": "It combines the popularity of DeepSeek models with a polished terminal experience, zero-friction distribution (single Go binary), and a flexible plugin system (MCP-compatible). The permission and sandbox features address safety concerns for autonomous coding agents, a key differentiator.",
+      "developerTakeaway": "If you build or use AI coding tools, this project demonstrates how to optimize for a specific model family (DeepSeek) while maintaining provider-agnostic extensibility. The Go rewrite and prefix-cache focus are practical lessons in reducing operational costs.",
+      "developerInsight": "The shift to Go and emphasis on prefix-cache stability signal a trend toward performance-optimized, model-specific agents that minimize API costs. The plugin architecture (MCP) and sandboxing indicate growing maturity in agent safety and extensibility.",
+      "targetUsers": "Developers who want a terminal-based AI coding agent with DeepSeek models, especially those needing long-running sessions with low token costs, and teams that require configurable permissions and sandboxing for autonomous code generation.",
+      "riskNotes": "The project is in active development (431 open issues) and the 1.0 Go rewrite is not yet published on npm, requiring build from source. The heavy reliance on DeepSeek's API and prefix-caching may limit portability to other providers. The large number of open issues could indicate growing pains or feature churn.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-31T15:44:16.128Z",
+    "model": "deepseek-v4-flash"
   }
 }
