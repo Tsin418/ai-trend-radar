@@ -2006,5 +2006,77 @@
     },
     "createdAt": "2026-05-31T06:37:59.606Z",
     "model": "deepseek-v4-flash"
+  },
+  "FareedKhan-dev/train-llm-from-scratch:2026-05-22T04:17:43Z": {
+    "summary": {
+      "oneLiner": "A hands-on tutorial and codebase for training transformer-based LLMs from scratch using PyTorch, supporting models from 13M to 2B+ parameters on a single GPU.",
+      "problemSolved": "Democratizes LLM training by providing a complete, step-by-step pipeline from data download to text generation, with clear explanations and configurable model sizes.",
+      "aiCategory": "LLM Training / Transformer Implementation",
+      "trendType": "sustained_hot",
+      "whyNow": "The repo gained 633 stars in the last 24 hours, reaching 2,636 total stars with 408 forks. Its acceleration is low (1), indicating steady, sustained interest rather than a sudden spike. The project is consistently attracting attention from developers eager to learn LLM internals.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The README is comprehensive and recently updated (pushed May 22, 2026), but there is no new release or external buzz to pinpoint a catalyst.",
+      "whyTrending": "It fills a clear educational gap: a practical, from-scratch implementation of transformers that works on consumer GPUs, with detailed code walkthroughs and GPU compatibility tables. The combination of theory and hands-on training appeals to developers wanting to understand LLMs deeply.",
+      "developerTakeaway": "This is an excellent resource for learning transformer internals and experimenting with small-scale LLM training. It provides a modular codebase that can be extended for research or teaching.",
+      "developerInsight": "Signals a growing demand for accessible, educational LLM training resources that lower the barrier to entry. Developers can use this to prototype custom models or understand the mechanics behind larger systems.",
+      "targetUsers": "AI/ML students, researchers, and practitioners who want to learn how transformers work by building and training their own small LLM.",
+      "riskNotes": "The project is educational and not production-ready. Training large models (2B+) requires high-end GPUs. The code may lack optimizations for efficiency or scalability beyond the provided examples.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-31T14:15:37.763Z",
+    "model": "deepseek-v4-flash"
+  },
+  "OpenBMB/VoxCPM:2026-05-22T03:27:10Z": {
+    "summary": {
+      "oneLiner": "VoxCPM2 is a tokenizer-free, multilingual TTS model supporting 30 languages, voice design from text descriptions, controllable voice cloning, and 48kHz output, built on a 2B-parameter diffusion autoregressive architecture.",
+      "problemSolved": "Traditional TTS systems rely on discrete tokenization, which limits expressiveness and naturalness. VoxCPM2 bypasses tokenization entirely, enabling highly natural, expressive speech synthesis with voice design (no reference audio needed) and controllable cloning, all in a single model.",
+      "aiCategory": "Other AI",
+      "trendType": "sustained_hot",
+      "whyNow": "With 23,171 stars and a 24-hour delta of +634, VoxCPM2 is experiencing sustained, high-velocity attention. The acceleration ratio is 1 (low), indicating steady organic growth rather than a sudden spike. The recent release of VoxCPM2 (April 2026) with major new capabilities (30 languages, voice design, 48kHz) is the likely driver of continued interest.",
+      "whatChanged": "The release of VoxCPM2 in April 2026 introduced a 2B-parameter model with 30-language support, voice design from text descriptions, controllable voice cloning, and 48kHz output. This major version upgrade is the primary trigger for the sustained attention.",
+      "whyTrending": "VoxCPM2 offers a unique combination of tokenizer-free architecture, multilingual support, voice design without reference audio, and high-quality 48kHz output, all under a permissive Apache-2.0 license. Its real-time streaming capability and integration with vLLM-Omni for production deployment make it attractive for both developers and enterprises.",
+      "developerTakeaway": "VoxCPM2 provides a state-of-the-art, open-source TTS solution that can be easily integrated via pip, with Python API, CLI, and web demo. It supports voice design and cloning with minimal code, and offers production-grade serving via Nano-vLLM or vLLM-Omni.",
+      "developerInsight": "The tokenizer-free diffusion autoregressive approach signals a shift away from discrete tokenization in TTS, potentially setting a new standard for naturalness and expressiveness. Developers building multilingual, voice-enabled applications should evaluate VoxCPM2 as a drop-in replacement for older TTS models.",
+      "targetUsers": "AI developers building voice assistants, content creation tools, accessibility applications, multilingual speech systems, and voice cloning services. Also relevant for researchers in speech synthesis and multimodal AI.",
+      "riskNotes": "The model requires significant GPU resources (CUDA ≥ 12.0, PyTorch ≥ 2.5.0) and may not run on consumer hardware without acceleration. The README mentions risks and limitations but does not detail them. As a relatively new model, long-term maintenance and community support are unproven.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-31T14:15:38.476Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-05-31T14:11:48Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go for performance and prefix-cache stability.",
+      "problemSolved": "Provides a configurable, plugin-driven AI coding assistant that runs as a single static binary, optimized for DeepSeek's prefix caching to reduce token costs during long sessions.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 15,035 stars, a 24-hour delta of 1,049, and a 7-day average of 1,354.5 stars per day, the project shows sustained high velocity. The acceleration ratio of 0.9 indicates steady growth without sudden spikes, suggesting consistent organic interest.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The recent 1.0 rewrite in Go and active development (commits within 7 days, recent release) likely maintain momentum.",
+      "whyTrending": "The combination of DeepSeek-native optimization, config-driven architecture, plugin support via MCP, and a single-binary distribution appeals to developers seeking a lightweight, efficient AI coding agent.",
+      "developerTakeaway": "Reasonix demonstrates how to build a terminal-based AI agent that leverages model-specific features (prefix caching) for cost efficiency, with a plugin system and sandboxed permissions.",
+      "developerInsight": "This signals a shift toward specialized, model-native agents that optimize for specific API behaviors (e.g., caching) to reduce costs, and a preference for simple, static binaries over heavy runtimes.",
+      "targetUsers": "Developers using DeepSeek models who want a terminal-based AI coding assistant with configurable tools, plugins, and sandboxed execution.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix caching; changes to DeepSeek's pricing or caching behavior could impact value. The project is early (1.0 rewrite) with 441 open issues, indicating active but potentially unstable development.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-31T14:15:43.422Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-05-31T13:57:52Z": {
+    "summary": {
+      "oneLiner": "Open-source, local-first alternative to Claude Design that wires 16 coding-agent CLIs into a skill-driven design workflow for web, desktop, and mobile prototypes.",
+      "problemSolved": "Claude Design is closed-source, cloud-only, and locked to Anthropic's model. Open Design breaks that lock-in by letting you use any coding agent CLI (Claude Code, Codex, Cursor, etc.) or BYOK proxy, running locally with 137 composable skills and 150 design systems.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 56,266 stars, a 24h delta of +726, and a 7-day average of +810 stars/day, this project is experiencing sustained explosive growth. The acceleration ratio of 0.9 indicates high but stable velocity — not a sudden spike, but a consistent torrent of attention. It's one of the fastest-growing repos on GitHub right now.",
+      "whatChanged": "The 0.8.0-preview release and the accompanying announcement (linked in README) likely triggered the latest surge. The project hit 40k stars in two weeks and continues to accelerate, suggesting strong community momentum and viral word-of-mouth.",
+      "whyTrending": "It fills a massive gap: a free, open, local-first alternative to a popular but locked-down AI design tool. The ability to bring your own agent and run everything offline resonates with developers tired of vendor lock-in. The sheer breadth of supported CLIs and design systems makes it a one-stop shop for AI-assisted design.",
+      "developerTakeaway": "If you build AI tools, this shows that the market craves open, composable alternatives to closed SaaS products. The BYOK model — letting users bring their own models and agents — is a powerful pattern for adoption.",
+      "developerInsight": "The project signals a shift toward agent-agnostic workflows: instead of bundling a specific AI, the tool orchestrates whatever agent the user already has. This 'agent as a plugin' architecture could become the standard for AI-powered creative tools.",
+      "targetUsers": "Developers, designers, and product builders who want to generate UI prototypes, slides, images, and videos using AI agents locally, without cloud dependency or vendor lock-in.",
+      "riskNotes": "The project is in early preview (0.8.0) with 348 open issues. Rapid iteration on main may introduce instability. Dependence on external CLI tools means compatibility could break. The massive star count may attract unsustainable expectations.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-05-31T14:15:45.381Z",
+    "model": "deepseek-v4-flash"
   }
 }
