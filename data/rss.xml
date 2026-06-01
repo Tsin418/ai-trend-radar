@@ -6,58 +6,106 @@
     <description>Daily AI open-source trend intelligence</description>
     <language>en</language>
     <ttl>360</ttl>
-    <lastBuildDate>Mon, 01 Jun 2026 05:21:43 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 12:13:44 GMT</lastBuildDate>
     <item>
       <title>AI Developer Radar｜Daily｜2026-06-01 - Today&apos;s Summary</title>
       <link>https://github.com/Tsin418/ai-trend-radar</link>
       <guid isPermaLink="false">daily-2026-06-01-summary</guid>
-      <description><![CDATA[The MCP / Tool Calling category continues to command the highest aggregate attention, with 5 repos averaging 693 daily stars and 4,235 weekly stars. ECC remains the standout, crossing 200k stars with a 1.6x acceleration, suggesting sustained developer interest in agent orchestration and multi-assistant optimization. code-review-graph, though smaller, offers a compelling local-first code intelligence approach that reduces token usage dramatically, a pattern worth watching for efficiency-focused tooling. Coding Agent / SWE Agent attention is still high but decelerating: DeepSeek-Reasonix and open-design together average 732 daily stars, but their acceleration ratios are near 1.0, indicating a plateau. Meanwhile, AI DevTool / Observability is notably quiet, with only netdata/netdata appearing and minimal growth. The absence of LLM Inference / Serving projects in the top tier is also notable, as that category often generates spikes. The cross-source signal is weak today, with only one Chinese-language HN post about a datacenter GPU in a gaming PC, which does not directly correlate with any top GitHub project. Overall, the pattern suggests developers are consolidating around agent infrastructure and tool-calling layers rather than new model releases or inference optimizations.
-Top projects: netdata/netdata, esengine/DeepSeek-Reasonix, nexu-io/open-design, affaan-m/ECC, tirth8205/code-review-graph, sgl-project/sglang, HKUDS/nanobot, ruvnet/ruflo, farion1231/cc-switch, addyosmani/agent-skills, sickn33/antigravity-awesome-skills, rtk-ai/rtk
+      <description><![CDATA[The dominant pattern today is the explosive growth in the MCP/Tool Calling category, which now holds 4 repos with an average daily delta of 1,041 stars—far outpacing all other categories. This suggests a strong shift in developer attention toward tool-use and agentic interfaces. Meanwhile, Local LLM/Inference shows acceleration anomalies: faster-whisper (2.5x acceleration) and DeepSpeed (3.5x acceleration) are breaking out, indicating renewed interest in efficient inference. The cross-source signal is weak, with only one project appearing on both GitHub and Hacker News (a Chinese-language post about a datacenter GPU in a gaming PC). Notably, Coding Agent/SWE Agent repos remain hot but with lower average daily delta (991) than MCP, suggesting attention may be rotating. If MCP continues at this pace, it could become the dominant category this week.
+Top projects: p-e-w/heretic, netdata/netdata, deepspeedai/DeepSpeed, SYSTRAN/faster-whisper, Snailclimb/JavaGuide, google-ai-edge/mediapipe, esengine/DeepSeek-Reasonix, affaan-m/ECC, nexu-io/open-design, farion1231/cc-switch, tirth8205/code-review-graph, HKUDS/nanobot
 Note: GitHub API 只提供当前 stars，总量变化来自本项目保存的历史 snapshot。
 Note: daily delta 使用约 24h 前 snapshot，weekly delta 使用约 7 天前 snapshot。
 Note: Accelerating 只展示至少 3 天历史基线且今日 delta 超过前 3 日均值 2 倍的项目。
 Note: Potential Score 为规则评分，用于排序，不代表项目质量结论。]]></description>
-      <pubDate>Mon, 01 Jun 2026 05:21:43 GMT</pubDate>
+      <pubDate>Mon, 01 Jun 2026 12:13:44 GMT</pubDate>
       <category>Summary</category>
     </item>
     <item>
-      <title>[sudden_breakout] netdata/netdata (+28 stars/24h)</title>
+      <title>[sustained_hot] p-e-w/heretic (+776 stars/24h)</title>
+      <link>https://github.com/p-e-w/heretic</link>
+      <guid isPermaLink="true">https://github.com/p-e-w/heretic</guid>
+      <description><![CDATA[Category: Other AI
+Description: Fully automatic censorship removal for transformer-based language models using advanced abliteration and TPE-based optimization.
+Why it matters: With 22,880 stars and a 24-hour delta of +776, the project is experiencing sustained high attention. The acceleration ratio is 1 (low), indicating steady organic growth rather than a sudden spike. The community has published over 3,000 models on Hugging Face, showing strong adoption.
+Developer insight: Signals a growing demand for tools that bypass LLM safety filters, with potential implications for AI safety research and deployment of open models.
+Risk: Low]]></description>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Other AI</category>
+    </item>
+    <item>
+      <title>[sudden_breakout] netdata/netdata (+31 stars/24h)</title>
       <link>https://github.com/netdata/netdata</link>
       <guid isPermaLink="true">https://github.com/netdata/netdata</guid>
       <description><![CDATA[Category: AI DevTool / Observability
-Description: Netdata is an open-source, real-time infrastructure monitoring platform with per-second metrics, zero-configuration setup, and built-in ML-powered anomaly detection.
-Why it matters: Netdata is experiencing a sudden breakout with a 3.2x acceleration ratio (high, >2.0) and a 24-hour star delta of +28, contributing to a total of 79,005 stars. The velocity pattern shows a sharp uptick in attention, likely driven by its AI-powered observability features and recent community momentum.
-Developer insight: This signals a shift toward edge-based, AI-driven observability tools that prioritize simplicity and real-time data. Developers should consider Netdata for quick wins in monitoring and anomaly detection, especially in containerized environments.
+Description: Netdata is a real-time, AI-powered infrastructure monitoring platform that provides per-second metrics, anomaly detection, and zero-configuration setup for lean teams.
+Why it matters: Netdata has 79,008 stars and is experiencing a sudden breakout with a 3.6 acceleration ratio (high, >2.0). The 24-hour star delta is 31, and the 7-day delta is 76, indicating a sharp increase in attention. This momentum suggests growing interest in AI-enhanced observability tools.
+Developer insight: This signals a shift toward AI-native monitoring tools that require minimal configuration. For AI developers, Netdata's edge-based ML models (trained per metric) represent a practical application of unsupervised learning in production environments.
 Risk: Low]]></description>
       <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
       <category>AI DevTool / Observability</category>
     </item>
     <item>
-      <title>[sustained_hot] esengine/DeepSeek-Reasonix (+826 stars/24h)</title>
+      <title>[sudden_breakout] deepspeedai/DeepSpeed (+14 stars/24h)</title>
+      <link>https://github.com/deepspeedai/DeepSpeed</link>
+      <guid isPermaLink="true">https://github.com/deepspeedai/DeepSpeed</guid>
+      <description><![CDATA[Category: Local LLM / Inference
+Description: DeepSpeed is a deep learning optimization library for distributed training and inference, enabling efficient scaling to trillion-parameter models.
+Why it matters: With 42,425 stars and a sudden acceleration ratio of 3.5 (high), DeepSpeed is experiencing a breakout. The 24-hour star delta of 14 and 7-day delta of 32 indicate growing attention, likely driven by recent releases like Muon Optimizer support and SDMA for AMD GPUs, as well as the ASPLOS 2026 tutorial and SuperOffload paper.
+Developer insight: DeepSpeed's trajectory signals that efficient distributed training is a top priority for the AI community. Developers should integrate DeepSpeed to scale models without proportional hardware increases, and watch for new features like Muon optimizer and SDMA that push performance boundaries.
+Risk: Low]]></description>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Local LLM / Inference</category>
+    </item>
+    <item>
+      <title>[sudden_breakout] SYSTRAN/faster-whisper (+46 stars/24h)</title>
+      <link>https://github.com/SYSTRAN/faster-whisper</link>
+      <guid isPermaLink="true">https://github.com/SYSTRAN/faster-whisper</guid>
+      <description><![CDATA[Category: Local LLM / Inference
+Description: A reimplementation of OpenAI's Whisper using CTranslate2 for up to 4x faster transcription with lower memory usage.
+Why it matters: With 23,303 stars and a sudden acceleration ratio of 2.5 (high), the repo gained 46 stars in the last 24 hours and 176 in the last week. This breakout signals a surge of interest, likely driven by the growing demand for efficient on-device speech recognition and the project's proven speed improvements over alternatives.
+Developer insight: This signals a shift toward optimized inference engines for transformer models. Developers should consider CTranslate2-based solutions for production deployments where speed and resource constraints matter.
+Risk: Medium]]></description>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Local LLM / Inference</category>
+    </item>
+    <item>
+      <title>[sudden_breakout] Snailclimb/JavaGuide (+42 stars/24h)</title>
+      <link>https://github.com/Snailclimb/JavaGuide</link>
+      <guid isPermaLink="true">https://github.com/Snailclimb/JavaGuide</guid>
+      <description><![CDATA[Category: MCP / Tool Calling
+Description: The definitive Chinese-language Java & backend interview guide, now expanding into AI application development with Spring AI, MCP, and Agent content.
+Why it matters: With 156,005 stars and a sustained 7-day average of 20.7 stars/day, this project is a perennial favorite. The recent addition of an AI application development section (AIGuide) covering LLMs, Agents, RAG, and MCP signals a pivot to stay relevant in the AI era. The 24h delta of 25 stars and acceleration of 1.3 indicate steady, organic growth without a sudden spike.
+Developer insight: For AI developers, this signals that traditional backend interview prep is converging with AI engineering. The inclusion of MCP, Agent, and RAG topics in a mainstream Java guide indicates that AI skills are becoming a standard expectation for backend roles.
+Risk: Low]]></description>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <category>MCP / Tool Calling</category>
+    </item>
+    <item>
+      <title>[sudden_breakout] google-ai-edge/mediapipe (+19 stars/24h)</title>
+      <link>https://github.com/google-ai-edge/mediapipe</link>
+      <guid isPermaLink="true">https://github.com/google-ai-edge/mediapipe</guid>
+      <description><![CDATA[Category: Local LLM / Inference
+Description: Google's cross-platform framework for building on-device ML pipelines for live and streaming media.
+Why it matters: With 35,429 stars and a sudden acceleration ratio of 2.1 (high), the project is experiencing a breakout in attention. The 24h star delta of 19 and 7-day average of 13.3 indicate sustained interest, but the acceleration suggests a recent spike in visibility, possibly from community events or new integrations.
+Developer insight: This signals a shift toward on-device inference as a core requirement for latency-sensitive and privacy-aware applications. MediaPipe's graph-based framework enables modular, reusable pipelines that can be customized without deep ML expertise.
+Risk: Low]]></description>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Local LLM / Inference</category>
+    </item>
+    <item>
+      <title>[sustained_hot] esengine/DeepSeek-Reasonix (+1134 stars/24h)</title>
       <link>https://github.com/esengine/DeepSeek-Reasonix</link>
       <guid isPermaLink="true">https://github.com/esengine/DeepSeek-Reasonix</guid>
       <description><![CDATA[Category: Coding Agent / SWE Agent
-Description: A DeepSeek-native AI coding agent for the terminal, rewritten in Go with prefix-cache stability and plugin-driven extensibility.
-Why it matters: The repo has exploded in popularity with 15,444 stars, a 7-day delta of 8,476 stars, and a 24-hour delta of 821 stars. The acceleration ratio of 0.9 indicates sustained high growth, not a sudden spike. It ranks in the top 3 for velocity in Agents, LLMs, and CLI categories on oosmetrics, signaling strong community adoption.
-Developer insight: The success of Reasonix signals a shift toward model-specific tooling that leverages unique API features (like prefix caching) for competitive advantage. Developers should consider optimizing for specific model providers rather than generic interfaces.
+Description: A DeepSeek-native AI coding agent for the terminal, rewritten in Go for performance and prefix-cache stability.
+Why it matters: With 15,757 stars, a 24h delta of +1,134, and a 7-day average of +1,252 stars/day, this project is experiencing sustained high growth. The acceleration ratio of 1.3 indicates steady momentum without sudden spikes, suggesting broad organic interest in DeepSeek-native developer tools.
+Developer insight: This signals a shift toward model-native agents that optimize for API costs (prefix caching) and developer experience (single binary, TUI). The plugin system and multi-model support indicate a platform play, not just a single-use tool.
 Risk: Low]]></description>
       <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
       <category>Coding Agent / SWE Agent</category>
     </item>
     <item>
-      <title>[sustained_hot] nexu-io/open-design (+638 stars/24h)</title>
-      <link>https://github.com/nexu-io/open-design</link>
-      <guid isPermaLink="true">https://github.com/nexu-io/open-design</guid>
-      <description><![CDATA[Category: Coding Agent / SWE Agent
-Description: Open-source, local-first alternative to Claude Design that wires 16 coding-agent CLIs into a skill-driven design workflow with 137 skills and 150 design systems.
-Why it matters: The repo has 56,585 stars with a 24h delta of +638 and a 7-day delta of +5,142, indicating sustained high attention. The acceleration ratio is 1.1 (high), and the 7-day average star delta is 877.8, showing consistent viral growth. The project just released 0.8.0-preview, which likely drove the recent spike.
-Developer insight: This signals a shift toward composable, agent-agnostic design tools. The ability to swap agents and models while maintaining a consistent design workflow reduces dependency on any single vendor. For AI developers, this is a blueprint for building open, modular AI-powered creative tools.
-Risk: Low]]></description>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
-      <category>Coding Agent / SWE Agent</category>
-    </item>
-    <item>
-      <title>[sustained_hot] affaan-m/ECC (+1606 stars/24h)</title>
+      <title>[sudden_breakout] affaan-m/ECC (+2118 stars/24h)</title>
       <link>https://github.com/affaan-m/ECC</link>
       <guid isPermaLink="true">https://github.com/affaan-m/ECC</guid>
       <description><![CDATA[Category: MCP / Tool Calling
@@ -69,100 +117,52 @@ Risk: Low]]></description>
       <category>MCP / Tool Calling</category>
     </item>
     <item>
-      <title>[sustained_hot] tirth8205/code-review-graph (+56 stars/24h)</title>
-      <link>https://github.com/tirth8205/code-review-graph</link>
-      <guid isPermaLink="true">https://github.com/tirth8205/code-review-graph</guid>
-      <description><![CDATA[Category: MCP / Tool Calling
-Description: Local-first code intelligence graph for MCP and CLI that builds a persistent map of your codebase so AI coding tools read only what matters, achieving 38x to 528x token reduction on reviews.
-Why it matters: The repo has 17,511 stars, a 24h star delta of 107, a three-day average of 70, and an acceleration of 1.5 (medium). It has a recent release within 30 days and a commit within 7 days. These metrics indicate sustained high interest and active development, making it a hot project for AI-assisted coding workflows.
-Developer insight: This signals a shift toward local-first, graph-based context management for AI coding tools. Developers should consider adopting such tools to reduce costs and improve AI response quality, and tool builders may want to integrate similar graph-based context retrieval.
+      <title>[sustained_hot] nexu-io/open-design (+847 stars/24h)</title>
+      <link>https://github.com/nexu-io/open-design</link>
+      <guid isPermaLink="true">https://github.com/nexu-io/open-design</guid>
+      <description><![CDATA[Category: Coding Agent / SWE Agent
+Description: Open-source, local-first alternative to Claude Design that wires 16 coding-agent CLIs into a skill-driven design workflow for prototypes, slides, images, and videos.
+Why it matters: With 56,794 stars, a 24-hour delta of +847, and a 7-day average of +752 stars per day, this project is experiencing sustained explosive growth. The acceleration ratio of 1.4 indicates high but steady momentum, not a sudden spike. It has become the de facto open-source alternative to Claude Design in just weeks, and the recent 0.8.0-preview release signals active development and community engagement.
+Developer insight: The rapid adoption signals strong demand for open, modular AI design tools that are not tied to a single provider. Developers are willing to trade convenience for control and privacy. The project's success also validates the 'agent-as-teammate' pattern where the AI is not a monolithic app but a composable skill layer.
 Risk: Low]]></description>
       <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
-      <category>MCP / Tool Calling</category>
+      <category>Coding Agent / SWE Agent</category>
     </item>
     <item>
-      <title>[sudden_breakout] sgl-project/sglang (+327 stars/24h)</title>
-      <link>https://github.com/sgl-project/sglang</link>
-      <guid isPermaLink="true">https://github.com/sgl-project/sglang</guid>
-      <description><![CDATA[Category: LLM Inference / Serving
-Description: SGLang is a high-performance serving framework for LLMs and multimodal models, optimized for low-latency and high-throughput inference across diverse hardware.
-Why it matters: With 28,805 stars, a 24-hour delta of 327, and an acceleration ratio of 8.5, the project is experiencing a sudden breakout. This surge is likely driven by recent announcements (e.g., 25x inference performance on NVIDIA GB300, diffusion model support) and broad industry adoption (400,000+ GPUs).
-Developer insight: The rise of SGLang signals a shift toward specialized, high-performance serving frameworks that are model-agnostic and hardware-diverse. It's a critical infrastructure layer for AI applications.
-Risk: Low]]></description>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
-      <category>LLM Inference / Serving</category>
-    </item>
-    <item>
-      <title>[sustained_hot] HKUDS/nanobot (+47 stars/24h)</title>
-      <link>https://github.com/HKUDS/nanobot</link>
-      <guid isPermaLink="true">https://github.com/HKUDS/nanobot</guid>
-      <description><![CDATA[Category: AI Agent Framework
-Description: nanobot is an ultra-lightweight, open-source AI agent runtime that lets you own your entire agent stack with WebUI, multi-channel chat, tools, memory, MCP, and model routing.
-Why it matters: With 43,447 stars, a 7-day average star delta of 57.7, and a 24-hour delta of 47, nanobot is sustaining high attention. The acceleration ratio of 1.2 indicates steady, organic growth rather than a sudden spike. This consistent momentum suggests the project is becoming a go-to choice for developers who want a lightweight, self-hosted agent runtime.
-Developer insight: This signals a shift toward lightweight, modular agent frameworks that prioritize developer control and multi-platform deployment. The rapid iteration (daily releases) and community growth indicate high demand for self-hosted AI agents that are easy to extend.
-Risk: Low]]></description>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
-      <category>AI Agent Framework</category>
-    </item>
-    <item>
-      <title>[sustained_hot] ruvnet/ruflo (+340 stars/24h)</title>
-      <link>https://github.com/ruvnet/ruflo</link>
-      <guid isPermaLink="true">https://github.com/ruvnet/ruflo</guid>
-      <description><![CDATA[Category: AI Agent Framework
-Description: Ruflo is a multi-agent orchestration platform for Claude Code that enables coordinated swarms, self-learning memory, and federated agent communication across machines.
-Why it matters: With 56,914 stars, a 24h delta of +477, and a 7-day average of +321.8 stars/day, Ruflo is experiencing sustained high-velocity growth. The acceleration ratio of 1.6 indicates strong but not explosive momentum. The project has a recent release and commits within 7 days, signaling active maintenance and community engagement.
-Developer insight: This signals a shift toward agentic middleware — developers no longer need to build coordination, memory, and security from scratch. Ruflo's popularity indicates strong demand for production-ready agent orchestration layers.
-Risk: Low]]></description>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
-      <category>AI Agent Framework</category>
-    </item>
-    <item>
-      <title>[sustained_hot] farion1231/cc-switch (+1333 stars/24h)</title>
+      <title>[sudden_breakout] farion1231/cc-switch (+1922 stars/24h)</title>
       <link>https://github.com/farion1231/cc-switch</link>
       <guid isPermaLink="true">https://github.com/farion1231/cc-switch</guid>
       <description><![CDATA[Category: MCP / Tool Calling
-Description: A cross-platform desktop manager that unifies multiple AI coding assistants (Claude Code, Codex, Gemini CLI, OpenCode, OpenClaw, Hermes Agent) into a single interface with provider management, skills management, and MCP support.
-Why it matters: With 86,922 stars, a 24-hour delta of +1,330, and a 7-day average of +1,093 stars per day, this project is experiencing sustained explosive growth. The acceleration ratio of 1.5 indicates high but stable momentum — not a sudden spike but a consistent viral wave. The sheer volume of attention (5,652 forks, 1,225 open issues) signals a massive user base actively engaging.
-Developer insight: The rapid adoption signals a strong market demand for tool orchestration layers in the AI coding space. Developers are moving beyond single-assistant workflows toward multi-model strategies, and tools that simplify provider management and skill sharing will become essential infrastructure.
+Description: A cross-platform desktop app that unifies management of multiple AI coding agents (Claude Code, Codex, Gemini CLI, etc.) with provider switching, skill management, and MCP support.
+Why it matters: The repo is exploding with 87,514 stars, a 24-hour delta of 1,922, and a 7-day average of 937 stars/day. The acceleration ratio of 2.2 indicates a sudden breakout, likely driven by a recent release or viral social media mention. This is a rare velocity pattern for a tool that aggregates AI coding agents.
+Developer insight: The rapid adoption indicates that the AI coding tool ecosystem is fragmenting, and developers crave a unified control plane. This project could become a standard interface for agent management, similar to how IDEs integrated multiple compilers.
 Risk: Low]]></description>
       <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
       <category>MCP / Tool Calling</category>
     </item>
     <item>
-      <title>[sustained_hot] addyosmani/agent-skills (+270 stars/24h)</title>
-      <link>https://github.com/addyosmani/agent-skills</link>
-      <guid isPermaLink="true">https://github.com/addyosmani/agent-skills</guid>
+      <title>[sustained_hot] tirth8205/code-review-graph (+82 stars/24h)</title>
+      <link>https://github.com/tirth8205/code-review-graph</link>
+      <guid isPermaLink="true">https://github.com/tirth8205/code-review-graph</guid>
+      <description><![CDATA[Category: MCP / Tool Calling
+Description: Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.
+Why it matters: MCP / Tool Calling 方向保持持续热门，24h stars +82，总 stars 17,806，适合看近期 release、commit 或社区讨论是否解释了增长。
+Developer insight: 重点看协议适配、工具注册和真实示例，判断它是否能降低 agent 接工具的成本。
+Risk: Low]]></description>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <category>MCP / Tool Calling</category>
+    </item>
+    <item>
+      <title>[sustained_hot] HKUDS/nanobot (+66 stars/24h)</title>
+      <link>https://github.com/HKUDS/nanobot</link>
+      <guid isPermaLink="true">https://github.com/HKUDS/nanobot</guid>
       <description><![CDATA[Category: AI Agent Framework
-Description: A curated pack of 23 production-grade engineering skills packaged as Markdown workflows for AI coding agents.
-Why it matters: With 47,363 stars and a sustained 7-day average delta of 290.8 stars per day, this project is experiencing massive, consistent attention. The 24-hour delta of 440 stars and acceleration of 1.8 indicate strong, ongoing momentum without a sudden spike. It's clearly resonating with the developer community as a practical tool for improving AI agent output quality.
-Developer insight: The trend signals a shift toward 'agentic engineering' — developers want AI agents to follow structured, verifiable processes rather than generating code in a vacuum. This repo is a template for how to encode institutional knowledge into agent-consumable formats.
+Description: Lightweight, open-source AI agent for your tools, chats, and workflows.
+Why it matters: AI Agent Framework 方向保持持续热门，24h stars +66，总 stars 43,466，适合看近期 release、commit 或社区讨论是否解释了增长。
+Developer insight: 可以用一个最小样例验证 API、文档和集成成本，再决定是否纳入长期技术观察。
 Risk: Low]]></description>
       <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
       <category>AI Agent Framework</category>
-    </item>
-    <item>
-      <title>[sustained_hot] sickn33/antigravity-awesome-skills (+90 stars/24h)</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills</link>
-      <guid isPermaLink="true">https://github.com/sickn33/antigravity-awesome-skills</guid>
-      <description><![CDATA[Category: MCP / Tool Calling
-Description: Installable GitHub library of 1,400+ agentic skills for Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, and more. Includes installer CLI, bundles, workflows, and official/community skill collections.
-Why it matters: MCP / Tool Calling 方向保持持续热门，24h stars +90，总 stars 39,303，适合看近期 release、commit 或社区讨论是否解释了增长。
-Developer insight: 重点看协议适配、工具注册和真实示例，判断它是否能降低 agent 接工具的成本。
-Risk: Low]]></description>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
-      <category>MCP / Tool Calling</category>
-    </item>
-    <item>
-      <title>[sustained_hot] rtk-ai/rtk (+382 stars/24h)</title>
-      <link>https://github.com/rtk-ai/rtk</link>
-      <guid isPermaLink="true">https://github.com/rtk-ai/rtk</guid>
-      <description><![CDATA[Category: MCP / Tool Calling
-Description: CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies
-Why it matters: MCP / Tool Calling 方向保持持续热门，24h stars +382，总 stars 56,933，适合看近期 release、commit 或社区讨论是否解释了增长。
-Developer insight: 重点看协议适配、工具注册和真实示例，判断它是否能降低 agent 接工具的成本。
-Risk: Low]]></description>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
-      <category>MCP / Tool Calling</category>
     </item>
   </channel>
 </rss>
