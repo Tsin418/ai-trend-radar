@@ -2834,5 +2834,95 @@
     },
     "createdAt": "2026-06-01T21:48:00.368Z",
     "model": "deepseek-v4-flash"
+  },
+  "D4Vinci/Scrapling:2026-06-01T23:19:28Z": {
+    "summary": {
+      "oneLiner": "An adaptive web scraping framework that auto-relocates elements when sites change, bypasses anti-bot systems, and scales from single requests to full crawls.",
+      "problemSolved": "Web scrapers break when websites update their HTML structure, and anti-bot measures like Cloudflare Turnstile block traditional tools. Scrapling's parser learns from changes and automatically finds elements again, while its fetchers handle anti-bot bypass out of the box.",
+      "aiCategory": "MCP / Tool Calling",
+      "trendType": "sustained_hot",
+      "whyNow": "With 57,984 stars and a 24-hour delta of 1,809, the project is experiencing sustained, high-velocity growth. The acceleration ratio is low (1), indicating steady organic interest rather than a sudden spike. This consistent attention suggests the project has become a go-to tool in the web scraping community.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. Recent commits and a release within 30 days show active maintenance, but no external buzz or specific event is identifiable.",
+      "whyTrending": "It combines adaptive parsing (auto-relocation of elements), anti-bot bypass, and a full spider framework in one library, addressing pain points that existing tools handle separately. The MCP server integration also taps into the AI agent ecosystem.",
+      "developerTakeaway": "Scrapling reduces maintenance overhead for scrapers by automatically adapting to website changes, and its built-in anti-bot bypass simplifies data extraction from protected sites.",
+      "developerInsight": "For AI developers, Scrapling's MCP server and agent skill directory signal a shift toward making web scraping a first-class capability for AI agents, enabling autonomous data collection without constant manual selector updates.",
+      "targetUsers": "Python developers building web scrapers, data extraction pipelines, or AI agents that need to collect data from modern websites with anti-bot protections.",
+      "riskNotes": "The project is relatively new (first release likely in 2025) and may have undiscovered edge cases. Reliance on anti-bot bypass techniques could be fragile if target sites update their defenses. The README includes sponsored proxy services, which may introduce bias in recommendations.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-01T23:46:56.151Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nesquena/hermes-webui:2026-06-01T23:07:47Z": {
+    "summary": {
+      "oneLiner": "Hermes WebUI is a lightweight, dark-themed web interface for Hermes Agent, offering full CLI parity with a three-panel layout, persistent memory, and self-hosted scheduling.",
+      "problemSolved": "Most AI tools reset every session, requiring users to re-explain context. Hermes retains memory across sessions, runs scheduled jobs offline, and provides a web UI accessible from any device, eliminating the need for terminal-only interaction.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sustained_hot",
+      "whyNow": "The repo gained 1,599 stars in the last 24 hours, reaching 11,240 total stars with 1,447 forks. The sustained hot trend (acceleration 1) indicates consistent high interest, likely driven by the growing demand for self-hosted, memory-persistent AI agents that can be accessed via web and mobile.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The recent release and active commits (within 7 days) suggest ongoing improvements, and the detailed README with comparisons to competitors like OpenClaw may be attracting attention from the AI agent community.",
+      "whyTrending": "Hermes WebUI addresses a key pain point: AI agents that forget context. Its persistent memory, self-hosted scheduling, and multi-platform access (web, phone, messaging) make it a compelling alternative to reset-every-session tools. The web UI lowers the barrier for non-terminal users.",
+      "developerTakeaway": "For developers building AI agents, Hermes WebUI demonstrates the value of persistent memory and self-hosted infrastructure. It's a practical example of how to create a user-friendly web interface for a CLI-based agent, with features like session management, workspace browsing, and mobile access.",
+      "developerInsight": "This signals a shift toward always-on, context-aware AI agents that integrate deeply with developer workflows. The Python ecosystem and provider-agnostic design make it easy to extend. Developers should consider memory persistence and scheduling as core features for next-gen agent tools.",
+      "targetUsers": "Developers and power users who want a self-hosted AI agent with persistent memory, accessible from web and mobile, and capable of running scheduled tasks. Also suitable for teams needing a collaborative agent that remembers project context.",
+      "riskNotes": "The project has 222 open issues, which may indicate growing pains or feature requests outpacing fixes. Native Windows support is limited (WSL2 recommended). The comparison table may oversimplify competitor capabilities; users should verify claims.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-01T23:46:56.734Z",
+    "model": "deepseek-v4-flash"
+  },
+  "google-ai-edge/mediapipe:2026-06-01T22:06:18Z": {
+    "summary": {
+      "oneLiner": "Google's cross-platform framework for building on-device ML pipelines for live and streaming media.",
+      "problemSolved": "MediaPipe solves the complexity of building efficient, real-time machine learning pipelines that run on-device across mobile, web, desktop, and edge devices, enabling developers to integrate perception features like hand tracking, face detection, object detection, and audio classification without deep ML expertise.",
+      "aiCategory": "Local LLM / Inference",
+      "trendType": "sudden_breakout",
+      "whyNow": "With 35,434 stars and a sudden breakout acceleration of 2.7 (high), the project gained 24 stars in the last 24 hours and 98 in the last week. The acceleration ratio indicates a sudden spike in attention, likely driven by renewed interest in on-device AI solutions as privacy and latency concerns push inference to the edge.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The README redirects to Google's developer site, and recent commits within 7 days suggest active maintenance, but no major release or external buzz is evident.",
+      "whyTrending": "MediaPipe remains a go-to solution for on-device ML, especially as developers seek to deploy models without cloud dependencies. Its cross-platform support and pre-built solutions for vision, text, and audio make it a practical choice for mobile and edge AI applications.",
+      "developerTakeaway": "MediaPipe is a mature, production-ready framework for integrating ML into apps. Developers should evaluate its pre-built tasks and model customization tools to accelerate time-to-market for features like object detection, pose estimation, and audio classification.",
+      "developerInsight": "This signals a growing shift toward on-device inference for privacy, latency, and cost reasons. MediaPipe's ecosystem (Tasks, Model Maker, Studio) lowers the barrier for non-ML experts to add AI features, potentially reshaping how mobile and web apps incorporate intelligence.",
+      "targetUsers": "Mobile developers (Android/iOS), web developers, computer vision engineers, and ML practitioners building real-time perception features for consumer apps, AR/VR, healthcare, or IoT.",
+      "riskNotes": "Google has moved primary documentation to a separate site, and legacy solutions are deprecated. Developers should ensure they adopt the newer MediaPipe Solutions APIs to avoid relying on outdated components. The project's large codebase may have a steep learning curve for custom pipelines.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-01T23:47:01.562Z",
+    "model": "deepseek-v4-flash"
+  },
+  "zhayujie/CowAgent:2026-06-01T08:59:55Z": {
+    "summary": {
+      "oneLiner": "CowAgent is an open-source AI agent harness that plans tasks, controls tools, and grows via memory and knowledge, deployable in one line.",
+      "problemSolved": "It provides a lightweight, extensible framework for building autonomous AI agents that can plan, execute tools, manage long-term memory, and integrate with multiple messaging channels, all without complex infrastructure.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sudden_breakout",
+      "whyNow": "With 45,008 stars, a 24h delta of +42, and a 7d delta of +213, the project shows strong sustained growth. The acceleration ratio of 2.1 indicates a sudden breakout, likely driven by the recent v2.1.0 release (June 1, 2026) adding internationalization, new channels, and MCP support. The high star count and rapid fork activity (10,160 forks) signal broad developer interest.",
+      "whatChanged": "The v2.1.0 release on 2026-06-01 introduced internationalization, new channels (Telegram, Discord, Slack, WeChat Customer Service), CLI upgrades, streamlined install, MCP Streamable HTTP, and new models (claude-opus-4-8, MiMo). This feature expansion likely triggered the breakout.",
+      "whyTrending": "CowAgent combines a polished one-line install, multi-model support, a skill marketplace, and deep memory/knowledge features, making it a practical choice for developers wanting to deploy autonomous agents quickly. Its multi-channel support (WeChat, Telegram, etc.) appeals to a broad audience, especially in Asia.",
+      "developerTakeaway": "CowAgent offers a ready-to-use agent harness with minimal setup, ideal for prototyping or production use. Its skill hub and MCP integration make it extensible, while the memory and knowledge features enable persistent, learning agents.",
+      "developerInsight": "This signals a shift toward 'agent harnesses' that abstract away infrastructure, letting developers focus on agent behavior. The multi-channel, multi-model approach reduces vendor lock-in and deployment friction, which could accelerate adoption of AI agents in real-world applications.",
+      "targetUsers": "Developers building autonomous AI agents for personal or enterprise use, especially those needing multi-platform messaging integration (WeChat, Telegram, Slack) and long-term memory.",
+      "riskNotes": "The project is very new (v2.1.0) and may have undiscovered bugs or scalability issues. The rapid star growth could attract noise, and the reliance on third-party LLM APIs introduces cost and latency concerns. The README is extensive but may oversell capabilities.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-01T23:47:02.257Z",
+    "model": "deepseek-v4-flash"
+  },
+  "CopilotKit/CopilotKit:2026-06-01T22:56:22Z": {
+    "summary": {
+      "oneLiner": "CopilotKit is an open-source SDK for building full-stack agentic applications with generative UI, shared state, and human-in-the-loop workflows, supporting React and Angular.",
+      "problemSolved": "It simplifies integrating AI agents into web apps by providing a frontend stack that handles chat UI, dynamic UI rendering from agent tools, real-time shared state, and user approval workflows, reducing the complexity of building agent-native interfaces.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sudden_breakout",
+      "whyNow": "With 31,887 stars, a 24-hour delta of +33, and a 7-day average of +21.9 stars/day, the project shows strong sustained growth. The acceleration ratio of 2.1 indicates a sudden breakout, likely driven by recent releases and the AG-UI Protocol adoption by major players like Google, LangChain, and AWS.",
+      "whatChanged": "Recent commits and a release within 30 days suggest active development. The README highlights the AG-UI Protocol, which has gained partnerships with Google, LangChain, AWS, Microsoft, and others, likely driving new attention. The addition of Claude Code plugin support and new lifecycle skills also contribute.",
+      "whyTrending": "It addresses the growing need for agent-native UI frameworks, backed by a protocol (AG-UI) that is being adopted by industry leaders. The combination of generative UI, shared state, and human-in-the-loop makes it a practical choice for production agentic apps.",
+      "developerTakeaway": "CopilotKit provides a ready-to-use frontend stack that integrates with popular agent frameworks (LangGraph, CrewAI) and supports both React and Angular, enabling rapid development of agentic UIs with minimal boilerplate.",
+      "developerInsight": "This signals a shift toward standardized agent-user interaction protocols (AG-UI) and the importance of frontend frameworks that can dynamically render agent-driven UI. Developers should consider adopting such protocols to future-proof their agentic applications.",
+      "targetUsers": "Frontend and full-stack developers building AI-powered applications, especially those using React or Angular, who need to integrate conversational agents, generative UI, and human-in-the-loop workflows.",
+      "riskNotes": "The project is still evolving (528 open issues), and reliance on a specific protocol (AG-UI) may introduce dependency risks. The high star count and rapid growth could attract maintenance challenges.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-01T23:47:07.031Z",
+    "model": "deepseek-v4-flash"
   }
 }
