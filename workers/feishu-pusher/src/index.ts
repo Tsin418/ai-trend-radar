@@ -28,6 +28,7 @@ export interface Env {
   PRODUCT_HUNT_KEYWORDS?: string;
   PRODUCT_HUNT_MIN_VOTES?: string;
   PRODUCT_HUNT_MIN_COMMENTS?: string;
+  CORS_ALLOWED_ORIGINS?: string;
   RADAR_STATE?: KVNamespace;
 }
 
@@ -117,6 +118,15 @@ const DEFAULT_LIGHTWEIGHT_DIGEST_URL =
   'https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-intelligence-brief.json';
 const DAILY_CRONS = ['30 1 * * *', '45 1 * * *'];
 const PRODUCT_HUNT_ENDPOINT = 'https://api.producthunt.com/v2/api/graphql';
+const CORS_ALLOWED_METHODS = 'GET, POST, OPTIONS';
+const CORS_ALLOWED_HEADERS = 'Authorization, Accept, Content-Type';
+const runtimeRateLimitBuckets = new Map<string, { count: number; resetAt: number }>();
+const BLOCKED_DATA_PATHS = new Set([
+  '/data/radar-store.json',
+  '/data/llm-digest-narrative-cache.json',
+  '/data/llm-enrichment-cache.json',
+  '/data/llm-trend-enrichment-cache.json'
+]);
 const DEFAULT_PRODUCT_HUNT_TOPICS = [
   'artificial-intelligence',
   'developer-tools',
@@ -266,12 +276,144 @@ interface ProductHuntGraphQLResponse {
 }
 
 function jsonResponse(data: unknown, status = 200): Response {
-  return new Response(JSON.stringify(data, null, 2), {
+  return addSecurityHeaders(new Response(JSON.stringify(data, null, 2), {
     status,
     headers: {
       'content-type': 'application/json; charset=utf-8'
     }
-  });
+  }));
+}
+
+function noStoreJsonResponse(data: unknown, status = 200): Response {
+  const response = jsonResponse(data, status);
+  response.headers.set('Cache-Control', 'no-store');
+  return response;
+}
+
+function addSecurityHeaders(response: Response): Response {
+  response.headers.set('Content-Security-Policy', [
+    "default-src 'self'",
+    "script-src 'self'",
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: https:",
+    "font-src 'self' data:",
+    "connect-src 'self' https://aihot.virxact.com https://raw.githubusercontent.com",
+    "object-src 'none'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    "frame-ancestors 'none'"
+  ].join('; '));
+  response.headers.set('Cross-Origin-Opener-Policy', 'same-origin');
+  response.headers.set('Permissions-Policy', [
+    'camera=()',
+    'microphone=()',
+    'geolocation=()',
+    'payment=()',
+    'usb=()'
+  ].join(', '));
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('X-Frame-Options', 'DENY');
+  return response;
+}
+
+function appendHeaderValue(headers: Headers, name: string, value: string): void {
+  const existing = headers.get(name);
+  headers.set(name, existing ? `${existing}, ${value}` : value);
+}
+
+function allowedCorsOrigins(request: Request, env: Env): Set<string> {
+  return new Set([
+    new URL(request.url).origin,
+    ...parseCsv(env.CORS_ALLOWED_ORIGINS, [])
+  ]);
+}
+
+function isAllowedCorsOrigin(request: Request, env: Env): boolean {
+  const origin = request.headers.get('origin');
+  return !origin || allowedCorsOrigins(request, env).has(origin);
+}
+
+function addCorsHeaders(response: Response, request: Request, env: Env): Response {
+  const origin = request.headers.get('origin');
+  if (origin && allowedCorsOrigins(request, env).has(origin)) {
+    response.headers.set('Access-Control-Allow-Origin', origin);
+    response.headers.set('Access-Control-Allow-Methods', CORS_ALLOWED_METHODS);
+    response.headers.set('Access-Control-Allow-Headers', CORS_ALLOWED_HEADERS);
+    response.headers.set('Access-Control-Max-Age', '86400');
+    appendHeaderValue(response.headers, 'Vary', 'Origin');
+  }
+
+  return response;
+}
+
+function getClientIp(request: Request): string {
+  return request.headers.get('cf-connecting-ip')
+    ?? request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+    ?? 'unknown';
+}
+
+function safeUserAgent(request: Request): string {
+  return (request.headers.get('user-agent') ?? 'unknown').slice(0, 160);
+}
+
+async function rateLimit(request: Request, env: Env, scope: string, limit: number, windowSeconds: number): Promise<boolean> {
+  const ip = getClientIp(request);
+  const now = Date.now();
+  const windowMs = windowSeconds * 1000;
+  const bucket = Math.floor(now / windowMs);
+  const key = `rate:${scope}:${ip}:${bucket}`;
+
+  if (env.RADAR_STATE) {
+    const current = Number.parseInt(await env.RADAR_STATE.get(key) ?? '0', 10);
+    if (Number.isFinite(current) && current >= limit) return false;
+    await env.RADAR_STATE.put(key, String((Number.isFinite(current) ? current : 0) + 1), {
+      expirationTtl: windowSeconds + 5
+    });
+    return true;
+  }
+
+  const resetAt = (bucket + 1) * windowMs;
+  const existing = runtimeRateLimitBuckets.get(key);
+  if (existing && existing.resetAt > now) {
+    if (existing.count >= limit) return false;
+    existing.count += 1;
+    return true;
+  }
+
+  if (runtimeRateLimitBuckets.size > 500) {
+    for (const [bucketKey, value] of runtimeRateLimitBuckets.entries()) {
+      if (value.resetAt <= now) runtimeRateLimitBuckets.delete(bucketKey);
+    }
+  }
+
+  runtimeRateLimitBuckets.set(key, { count: 1, resetAt });
+  return true;
+}
+
+function rateLimitResponse(request: Request, env: Env): Response {
+  const response = noStoreJsonResponse({
+    ok: false,
+    error: 'Too many requests'
+  }, 429);
+  return addCorsHeaders(response, request, env);
+}
+
+function methodNotAllowedResponse(request: Request, env: Env, allow: string): Response {
+  const response = noStoreJsonResponse({
+    ok: false,
+    error: 'Method not allowed'
+  }, 405);
+  response.headers.set('Allow', allow);
+  return addCorsHeaders(response, request, env);
+}
+
+function forbiddenResponse(request: Request, env: Env): Response {
+  const response = noStoreJsonResponse({
+    ok: false,
+    error: 'Forbidden'
+  }, 403);
+  return addCorsHeaders(response, request, env);
 }
 
 function errorMessage(error: unknown): string {
@@ -946,12 +1088,30 @@ async function sendLightweightDigest(env: Env, _scheduledTime: number, force = f
   };
 }
 
-function isAuthorizedManualRequest(request: Request, env: Env): boolean {
+async function sha256Bytes(value: string): Promise<Uint8Array> {
+  return new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value)));
+}
+
+async function timingSafeEqualString(left: string, right: string): Promise<boolean> {
+  const [leftHash, rightHash] = await Promise.all([
+    sha256Bytes(left),
+    sha256Bytes(right)
+  ]);
+  let diff = 0;
+
+  for (let index = 0; index < leftHash.length; index += 1) {
+    diff |= leftHash[index] ^ rightHash[index];
+  }
+
+  return diff === 0;
+}
+
+async function isAuthorizedManualRequest(request: Request, env: Env): Promise<boolean> {
   const token = env.MANUAL_SEND_TOKEN?.trim();
   if (!token) return false;
 
   const header = request.headers.get('authorization') ?? '';
-  return header === `Bearer ${token}`;
+  return timingSafeEqualString(header, `Bearer ${token}`);
 }
 
 export default {
@@ -976,40 +1136,68 @@ export default {
 
     // 处理全局的 CORS 预检请求 (Preflight)
     if (request.method === 'OPTIONS') {
-      return new Response(null, {
+      if (!isAllowedCorsOrigin(request, env)) {
+        return noStoreJsonResponse({
+          ok: false,
+          error: 'CORS origin is not allowed'
+        }, 403);
+      }
+
+      return addCorsHeaders(addSecurityHeaders(new Response(null, {
         status: 204,
         headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-          'Access-Control-Allow-Headers': '*',
           'Access-Control-Max-Age': '86400',
         },
-      });
+      })), request, env);
     }
 
     // 1. 代理 /data/ 资源到 GitHub Raw Content，从而实时获取每日刷新的数据
     if (url.pathname.startsWith('/data/')) {
+      if (!['GET', 'HEAD'].includes(request.method)) {
+        return methodNotAllowedResponse(request, env, 'GET, HEAD, OPTIONS');
+      }
+      if (BLOCKED_DATA_PATHS.has(url.pathname)) {
+        return forbiddenResponse(request, env);
+      }
+
       const githubUrl = `https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main${url.pathname}`;
       const forceRefresh = url.searchParams.has('force_refresh');
+      if (forceRefresh && !(await rateLimit(request, env, 'force-refresh', 10, 60))) {
+        return rateLimitResponse(request, env);
+      }
+
       const fetchOpts = forceRefresh ? {} : { cf: { cacheTtl: 300, cacheEverything: true } };
 
       const newRequest = new Request(githubUrl, request);
       const response = await fetch(newRequest, fetchOpts as RequestInit);
       // 添加 CORS Header
       const newResponse = new Response(response.body, response);
-      newResponse.headers.set('Access-Control-Allow-Origin', '*');
       newResponse.headers.set('Cache-Control', 'public, max-age=60'); // 避免浏览器死缓存
-      return newResponse;
+      return addCorsHeaders(addSecurityHeaders(newResponse), request, env);
     }
 
     // 2. 代理 /api/aihot/ 资源到真实后端，替代 Vite 的 local proxy
     if (url.pathname.startsWith('/api/aihot/')) {
+      if (!isAllowedCorsOrigin(request, env)) {
+        return forbiddenResponse(request, env);
+      }
+      if (request.method !== 'GET') {
+        return methodNotAllowedResponse(request, env, 'GET, OPTIONS');
+      }
+      if (!(await rateLimit(request, env, 'api', 60, 60))) {
+        return rateLimitResponse(request, env);
+      }
+
       const targetUrl = new URL(request.url);
       targetUrl.protocol = 'https:';
       targetUrl.hostname = 'aihot.virxact.com';
       targetUrl.pathname = url.pathname.replace(/^\/api\/aihot/, '/api/public');
       
       const forceRefresh = url.searchParams.has('force_refresh');
+      if (forceRefresh && !(await rateLimit(request, env, 'force-refresh', 10, 60))) {
+        return rateLimitResponse(request, env);
+      }
+
       const fetchOpts = forceRefresh ? {} : { cf: { cacheTtl: 3600, cacheEverything: true } };
 
       const newRequest = new Request(targetUrl.toString(), {
@@ -1022,9 +1210,8 @@ export default {
       
       const response = await fetch(newRequest, fetchOpts as RequestInit);
       const newResponse = new Response(response.body, response);
-      newResponse.headers.set('Access-Control-Allow-Origin', '*');
-      newResponse.headers.set('Cache-Control', 'public, max-age=60'); // 浏览器只缓存1分钟，边缘节点按 cf 缓存
-      return newResponse;
+      newResponse.headers.set('Cache-Control', 'no-store');
+      return addCorsHeaders(addSecurityHeaders(newResponse), request, env);
     }
 
     if (url.pathname === '/health') {
@@ -1035,20 +1222,57 @@ export default {
     }
 
     if (url.pathname === '/send' && request.method === 'POST') {
-      if (!isAuthorizedManualRequest(request, env)) {
-        return jsonResponse({
+      if (!isAllowedCorsOrigin(request, env)) {
+        return forbiddenResponse(request, env);
+      }
+
+      if (!(await rateLimit(request, env, 'send', 1, 60))) {
+        console.warn(JSON.stringify({
+          event: 'manual-send-rate-limited',
+          path: url.pathname,
+          ip: getClientIp(request),
+          userAgent: safeUserAgent(request),
+          at: new Date().toISOString()
+        }));
+        return rateLimitResponse(request, env);
+      }
+
+      if (!(await isAuthorizedManualRequest(request, env))) {
+        console.warn(JSON.stringify({
+          event: 'manual-send-unauthorized',
+          path: url.pathname,
+          ip: getClientIp(request),
+          userAgent: safeUserAgent(request),
+          at: new Date().toISOString()
+        }));
+        return addCorsHeaders(noStoreJsonResponse({
           ok: false,
           error: 'Manual send is disabled or unauthorized'
-        }, 401);
+        }, 401), request, env);
       }
 
       try {
-        return jsonResponse(await sendLatestDigest(env, url.searchParams.get('force') === 'true'));
+        console.log(JSON.stringify({
+          event: 'manual-send-authorized',
+          path: url.pathname,
+          ip: getClientIp(request),
+          userAgent: safeUserAgent(request),
+          at: new Date().toISOString()
+        }));
+        return addCorsHeaders(noStoreJsonResponse(await sendLatestDigest(env, url.searchParams.get('force') === 'true')), request, env);
       } catch (error) {
-        return jsonResponse({
-          ok: false,
+        console.error(JSON.stringify({
+          event: 'manual-send-failed',
+          path: url.pathname,
+          ip: getClientIp(request),
+          userAgent: safeUserAgent(request),
+          at: new Date().toISOString(),
           error: errorMessage(error)
-        }, 500);
+        }));
+        return addCorsHeaders(noStoreJsonResponse({
+          ok: false,
+          error: 'Internal server error'
+        }, 500), request, env);
       }
     }
 
