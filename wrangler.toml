@@ -21,6 +21,10 @@ PRODUCT_HUNT_KEYWORDS = "ai,llm,agent,rag,mcp,coding,developer,devtool,automatio
 PRODUCT_HUNT_MIN_VOTES = "10"
 PRODUCT_HUNT_MIN_COMMENTS = "0"
 
+# Optional comma-separated extra origins for browser CORS.
+# The current Worker origin is always allowed automatically.
+# CORS_ALLOWED_ORIGINS = "https://your-domain.com,https://your-site.pages.dev"
+
 # Bind a KV namespace named RADAR_STATE in Cloudflare for idempotency.
 # Keep the binding out of this committed file unless you want to manage
 # environment-specific namespace IDs through wrangler.toml.
