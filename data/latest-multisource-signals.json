@@ -1,234 +1,219 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-06-02T10:07:46.040Z",
+  "generatedAt": "2026-06-02T14:36:40.735Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
+        "id": "http://arxiv.org/abs/2606.02578v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Mitigating Perceptual Judgment Bias in Multimodal LLM-as-a-Judge via Perceptual Perturbation and Reward Modeling",
+        "url": "https://arxiv.org/pdf/2606.02578v1",
+        "description": "Recent multimodal large language models have demonstrated strong reasoning ability, yet their reliability as automated evaluators remains limited by a critical weakness: when visual evidence conflicts with textual cues, MLLM judges tend to reward plausible narratives over perceptually correct answers. We identify and systematically analyze this phenomenon, which we term Perceptual Judgment Bias. Through controlled visual perturbations, existing multimodal judges frequently anchor on the response",
+        "summary": "Recent multimodal large language models have demonstrated strong reasoning ability, yet their reliability as automated evaluators remains limited by a critical weakness: when visual evidence conflicts with textual cues, MLLM judges tend to reward plausible narratives over perceptually correct answers. We identify and systematically analyze this phenomenon, which we term Perceptual Judgment Bias. Through controlled visual perturbations, existing multimodal judges frequently anchor on the response text instead of their own visual perception, leading to inconsistent and non-verifiable evaluations. To address this issue, we introduce the Perceptually Perturbed Judgment Dataset, which constructs minimally edited counterfactual responses that isolate perceptual errors and enable verifiable supervision. Building on this dataset, we develop a unified training framework that combines a structured GRPO-based reward with a batch-ranking objective, achieving coherent global ordering without explicit pairwise labels. Experiments across diverse MLLM-as-a-Judge benchmarks show that our approach substantially improves perceptual fidelity, ranking coherence, and alignment with human evaluation. Our results establish a scalable and generalizable pathway for training multimodal judges that are perceptually grounded, interpretable, and robust to visual-reasoning conflicts.",
+        "author": "Seojeong Park, Jiho Choi, Junyong Kang, Seonho Lee, Jaeyo Shin, Hyunjung Shim",
         "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
+          "cs.CV",
+          "cs.AI",
+          "large language model",
+          "llm",
+          "alignment",
+          "benchmark",
+          "evaluation"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 13996
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-06-02T10:07:46.155Z",
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-06-01T17:59:46Z",
+        "updatedAt": "2026-06-01T17:59:46Z",
+        "collectedAt": "2026-06-02T14:35:54.905Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.02578v1",
+          "authors": [
+            "Seojeong Park",
+            "Jiho Choi",
+            "Junyong Kang",
+            "Seonho Lee",
+            "Jaeyo Shin",
+            "Hyunjung Shim"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, alignment, benchmark, evaluation"
       },
       {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
+        "id": "http://arxiv.org/abs/2606.02576v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "ProtoAda: Prototype-Guided Adaptive Adapter Expansion and Geometric Consolidation for Multimodal Continual Instruction Tuning",
+        "url": "https://arxiv.org/pdf/2606.02576v1",
+        "description": "Multimodal Large Language Models (MLLMs) achieve strong performance through instruction tuning, but real-world deployment requires them to continually acquire new vision-language capabilities, making Multimodal Continual Instruction Tuning (MCIT) essential. To reduce inter-task interference and promote collaboration, recent methods often employ sparse architectures like Mixture of LoRA Experts with image-text similarity routing. However, tasks with distinct response structures could share highly",
+        "summary": "Multimodal Large Language Models (MLLMs) achieve strong performance through instruction tuning, but real-world deployment requires them to continually acquire new vision-language capabilities, making Multimodal Continual Instruction Tuning (MCIT) essential. To reduce inter-task interference and promote collaboration, recent methods often employ sparse architectures like Mixture of LoRA Experts with image-text similarity routing. However, tasks with distinct response structures could share highly similar visual-linguistic semantics and thus be wrongly routed to the same expert; image-text similarity alone is insufficient for reliable task assignment. For example, an expert in a grounding task requiring coordinate prediction may be biased toward producing short textual answers after learning semantically similar VQA tasks. This format-blind task assignment integrates heterogeneous response types into shared parameters, inducing gradient interference and ineffective expert collaboration. To address this problem, we propose ProtoAda, a prototype-guided adaptive tuning framework. ProtoAda introduces format-aware task prototypes to align task assignment and routing with both task semantics and output structure, and further consolidates format-compatible updates in a geometry-aware manner to effectively reuse and progressively refine existing parameters. Extensive experiments on multiple benchmarks demonstrate that ProtoAda achieves superior performance, especially on tasks whose answer structures are easily corrupted by sequential tuning.",
+        "author": "Yu-Cheng Shi, Zhen-Hao Xie, Jun-Tao Tang, Da-Wei Zhou",
         "tags": [
-          "docker",
-          "region:us"
+          "cs.CV",
+          "cs.LG",
+          "large language model",
+          "llm",
+          "benchmark"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11100
-        },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-06-02T10:07:46.155Z",
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-06-01T17:59:13Z",
+        "updatedAt": "2026-06-01T17:59:13Z",
+        "collectedAt": "2026-06-02T14:35:54.905Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.02576v1",
+          "authors": [
+            "Yu-Cheng Shi",
+            "Zhen-Hao Xie",
+            "Jun-Tao Tang",
+            "Da-Wei Zhou"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, benchmark"
       },
       {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
+        "id": "http://arxiv.org/abs/2606.02569v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "AdaCodec: A Predictive Visual Code for Video MLLMs",
+        "url": "https://arxiv.org/pdf/2606.02569v1",
+        "description": "Video is temporally redundant: adjacent frames usually share most objects, background, and layout. Yet existing video multimodal large language models (video MLLMs) usually encode each sampled frame as an independent RGB image, causing visual tokens to repeat content already present in earlier frames. This suggests a more direct video interface: send a full reference frame only when the scene cannot be predicted well from prior context, and otherwise transmit a compact description of inter-frame",
+        "summary": "Video is temporally redundant: adjacent frames usually share most objects, background, and layout. Yet existing video multimodal large language models (video MLLMs) usually encode each sampled frame as an independent RGB image, causing visual tokens to repeat content already present in earlier frames. This suggests a more direct video interface: send a full reference frame only when the scene cannot be predicted well from prior context, and otherwise transmit a compact description of inter-frame changes. We call this interface a \\emph{predictive visual code}, and instantiate it for video MLLMs as \\textbf{AdaCodec}. AdaCodec spends full visual tokens on a reference frame only when its conditional predictive cost is high; otherwise, it encodes inter-frame changes, including motion and prediction residuals, as compact P-tokens. Across all eleven benchmarks, AdaCodec improves over the Qwen3-VL-8B per-frame RGB baseline at a matched visual-token budget. Even at $1/7$ the budget, AdaCodec with 32k tokens surpasses the 224k baseline on all long-video benchmarks; on five general-video benchmarks, it raises the average score while substantially cutting time-to-first-token from 9.26s to 1.62s.",
+        "author": "Haowen Hou, Zhen Huang, Zheming Liang, Qingyi Si, Chenglin Li, Shuai Dong, Kele Shao, Ruilin Li, Dianyi Wang, Nan Duan, Jiaqi Wang",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.CV",
+          "cs.AI",
+          "cs.CL",
+          "large language model",
+          "llm",
+          "rag",
+          "benchmark"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10096
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-06-02T10:07:46.155Z",
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-06-01T17:56:35Z",
+        "updatedAt": "2026-06-01T17:56:35Z",
+        "collectedAt": "2026-06-02T14:35:54.905Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.02569v1",
+          "authors": [
+            "Haowen Hou",
+            "Zhen Huang",
+            "Zheming Liang",
+            "Qingyi Si",
+            "Chenglin Li",
+            "Shuai Dong",
+            "Kele Shao",
+            "Ruilin Li",
+            "Dianyi Wang",
+            "Nan Duan",
+            "Jiaqi Wang"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, rag, benchmark"
       },
       {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
+        "id": "http://arxiv.org/abs/2606.02568v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "ClinEnv: An Interactive Multi-Stage Long Horizon EHR Environment for Agents",
+        "url": "https://arxiv.org/pdf/2606.02568v1",
+        "description": "Clinical practice is not the selection of an answer from enumerated options: a physician gathers heterogeneous information incrementally and commits to sequential, irreversible decisions under uncertainty. Static benchmarks cannot probe and existing interactive medical benchmarks each compromise on at least one of them. We present ClinEnv, an interactive benchmark that evaluates LLMs as attending physicians over real inpatient admissions under a paradigm we term Longitudinal Inpatient Simulation",
+        "summary": "Clinical practice is not the selection of an answer from enumerated options: a physician gathers heterogeneous information incrementally and commits to sequential, irreversible decisions under uncertainty. Static benchmarks cannot probe and existing interactive medical benchmarks each compromise on at least one of them. We present ClinEnv, an interactive benchmark that evaluates LLMs as attending physicians over real inpatient admissions under a paradigm we term Longitudinal Inpatient Simulation. Each case is automatically constructed into an ordered sequence of decision stages; at every stage the model must actively query four specialized agents before committing to medications, procedures, and diagnoses. ClinEnv scores both what the model decides, through deterministic ontology-grounded matching, and how it gathers information. Across seven models, the strongest reaches only 0.31 decision F1, and outcome quality is sharply decoupled from process quality. Difficulty concentrates in management decisions and later stages, where models recover discharge diagnoses far more reliably than management actions (0.51 vs. 0.17 F1) and continue to issue redundant queries as cases progress. ClinEnv makes this information-acquisition gap, invisible to outcome-only evaluation, directly measurable.",
+        "author": "Yuxing Lu, Yushuhong Lin, Wenqi Shi, J. Ben Tamo, Xukai Zhao, Jinzhuo Wang, May Dongmei Wang",
         "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
+          "cs.AI",
+          "cs.CL",
+          "cs.ET",
+          "cs.MA",
+          "llm",
+          "agent",
+          "benchmark",
+          "evaluation"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7442
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-05-31T21:39:43.000Z",
-        "collectedAt": "2026-06-02T10:07:46.155Z",
+        "category": "cs.AI",
+        "language": "en",
+        "publishedAt": "2026-06-01T17:56:26Z",
+        "updatedAt": "2026-06-01T17:56:26Z",
+        "collectedAt": "2026-06-02T14:35:54.905Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🥇"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.02568v1",
+          "authors": [
+            "Yuxing Lu",
+            "Yushuhong Lin",
+            "Wenqi Shi",
+            "J. Ben Tamo",
+            "Xukai Zhao",
+            "Jinzhuo Wang",
+            "May Dongmei Wang"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, agent, benchmark, evaluation"
       },
       {
-        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Wan2.2 Animate",
-        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
-        "author": "Wan-AI",
+        "id": "http://arxiv.org/abs/2606.02562v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Permissive Safety Through Trusted Inference: Verifiable Belief-Space Neural Safety Filters for Assured Interactive Robotics",
+        "url": "https://arxiv.org/pdf/2606.02562v1",
+        "description": "Autonomous robots that interact with people must make safe and efficient decisions under human-induced uncertainty, such as their preferences, goals, competency, and willingness to cooperate. Safety filters are a popular approach for ensuring safety in interactive robotics, since their modular design separates safety from performance, allowing robots to operate safely around people with minimal impact on task efficiency. While traditional safety filters typically operate only in the physical spa",
+        "summary": "Autonomous robots that interact with people must make safe and efficient decisions under human-induced uncertainty, such as their preferences, goals, competency, and willingness to cooperate. Safety filters are a popular approach for ensuring safety in interactive robotics, since their modular design separates safety from performance, allowing robots to operate safely around people with minimal impact on task efficiency. While traditional safety filters typically operate only in the physical space, neglecting the robot's ability to learn and adapt online, the recently proposed belief-space safety filter (BeliefSF) reasons about robot safety in closed-loop with runtime inference that actively reduces the robot's uncertainty online, thereby reducing conservativeness in filtering. However, providing formal safety guarantees for robots deploying BeliefSF remains a significant challenge due to errors in runtime inference and neural approximation of safety filters required to handle the high dimensionality of belief spaces. In this paper, we propose an algorithmic approach to certify high-probability safety of BeliefSF using conformal prediction, while explicitly accounting for the reliability of the robot's runtime inference module. Our method leverages the structure of belief-space safety filtering by focusing verification on a region where inference is expected to be reliable. It preserves the simplicity and sample complexity of standard conformal prediction, yet can certify a substantially less conservative safety filter. Through a simulated human-vehicle interaction benchmark, we show that our approach verifies a significantly more permissive belief-space safety filter than a standard conformal prediction baseline.",
+        "author": "Haimin Hu",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.RO",
+          "cs.AI",
+          "cs.LG",
+          "eess.SY",
+          "rag",
+          "safety",
+          "benchmark"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5118
-        },
-        "publishedAt": "2025-09-18T07:05:32.000Z",
-        "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-06-02T10:07:46.155Z",
+        "category": "cs.RO",
+        "language": "en",
+        "publishedAt": "2026-06-01T17:54:00Z",
+        "updatedAt": "2026-06-01T17:54:00Z",
+        "collectedAt": "2026-06-02T14:35:54.905Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👁"
-        }
-      },
-      {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
-        "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5071
+          "abstractUrl": "http://arxiv.org/abs/2606.02562v1",
+          "authors": [
+            "Haimin Hu"
+          ]
         },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-06-02T10:07:46.155Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4902
-        },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-06-02T10:07:46.155Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
-      },
-      {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
-        "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3746
-        },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-06-02T10:07:46.155Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
-        }
+        "recommendedReason": "Matched AI developer keywords: rag, safety, benchmark"
       }
     ],
     "developerBuzz": [
       {
-        "id": "hackernews:48357154",
+        "id": "hackernews:48364055",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "The Pirate Bay Remains Resilient, 20 Years After the Raid",
-        "url": "https://torrentfreak.com/the-pirate-bay-remains-resilient-20-years-after-the-raid/",
-        "author": "speckx",
+        "title": "Can the stockmarket swallow Anthropic, SpaceX and OpenAI?",
+        "url": "https://www.economist.com/finance-and-economics/2026/06/01/can-the-stockmarket-swallow-anthropic-spacex-and-openai",
+        "author": "1vuio0pswjnm7",
         "tags": [
-          "ai"
+          "ai",
+          "openai",
+          "anthropic"
         ],
         "metrics": {
-          "upvotes": 579,
-          "commentsCount": 265
+          "upvotes": 521,
+          "commentsCount": 898
         },
-        "publishedAt": "2026-06-01T14:16:41.000Z",
-        "collectedAt": "2026-06-02T10:07:46.465Z",
+        "publishedAt": "2026-06-01T23:45:46.000Z",
+        "collectedAt": "2026-06-02T14:35:54.805Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48357154",
+          "hnUrl": "https://news.ycombinator.com/item?id=48364055",
           "matchedKeywords": [
-            "ai"
+            "ai",
+            "openai",
+            "anthropic"
           ]
         }
       },
@@ -243,11 +228,11 @@
           "anthropic"
         ],
         "metrics": {
-          "upvotes": 498,
-          "commentsCount": 405
+          "upvotes": 507,
+          "commentsCount": 423
         },
         "publishedAt": "2026-06-01T16:00:40.000Z",
-        "collectedAt": "2026-06-02T10:07:46.465Z",
+        "collectedAt": "2026-06-02T14:35:54.805Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48358646",
           "matchedKeywords": [
@@ -256,29 +241,25 @@
         }
       },
       {
-        "id": "hackernews:48364055",
+        "id": "hackernews:48357154",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "Can the stockmarket swallow Anthropic, SpaceX and OpenAI?",
-        "url": "https://www.economist.com/finance-and-economics/2026/06/01/can-the-stockmarket-swallow-anthropic-spacex-and-openai",
-        "author": "1vuio0pswjnm7",
+        "title": "The Pirate Bay Remains Resilient, 20 Years After the Raid",
+        "url": "https://torrentfreak.com/the-pirate-bay-remains-resilient-20-years-after-the-raid/",
+        "author": "speckx",
         "tags": [
-          "ai",
-          "openai",
-          "anthropic"
+          "ai"
         ],
         "metrics": {
-          "upvotes": 375,
-          "commentsCount": 650
+          "upvotes": 597,
+          "commentsCount": 297
         },
-        "publishedAt": "2026-06-01T23:45:46.000Z",
-        "collectedAt": "2026-06-02T10:07:46.465Z",
+        "publishedAt": "2026-06-01T14:16:41.000Z",
+        "collectedAt": "2026-06-02T14:35:54.805Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48364055",
+          "hnUrl": "https://news.ycombinator.com/item?id=48357154",
           "matchedKeywords": [
-            "ai",
-            "openai",
-            "anthropic"
+            "ai"
           ]
         }
       },
@@ -294,10 +275,10 @@
         ],
         "metrics": {
           "upvotes": 526,
-          "commentsCount": 363
+          "commentsCount": 367
         },
         "publishedAt": "2026-05-31T16:19:34.000Z",
-        "collectedAt": "2026-06-02T10:07:46.465Z",
+        "collectedAt": "2026-06-02T14:35:54.805Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48346947",
           "matchedKeywords": [
@@ -306,30 +287,114 @@
         }
       },
       {
-        "id": "hackernews:48345248",
+        "id": "hackernews:48359232",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "United Airlines 767 returns to Newark after Bluetooth name sparks alert",
-        "url": "https://simpleflying.com/united-airlines-767-returns-newark-bluetooth-name-alert/",
-        "author": "Eridanus2",
+        "title": "AI Agent Guidelines for CS336 at Stanford",
+        "url": "https://github.com/stanford-cs336/assignment1-basics/blob/main/CLAUDE.md",
+        "author": "prakashqwerty",
         "tags": [
-          "ai"
+          "ai",
+          "agent",
+          "claude"
         ],
         "metrics": {
-          "upvotes": 415,
-          "commentsCount": 893
+          "upvotes": 460,
+          "commentsCount": 143
         },
-        "publishedAt": "2026-05-31T12:41:19.000Z",
-        "collectedAt": "2026-06-02T10:07:46.465Z",
+        "publishedAt": "2026-06-01T16:41:49.000Z",
+        "collectedAt": "2026-06-02T14:35:54.805Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48345248",
+          "hnUrl": "https://news.ycombinator.com/item?id=48359232",
           "matchedKeywords": [
-            "ai"
+            "ai",
+            "agent",
+            "claude"
           ]
         }
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmpwqmim605awslsn13ybjfuw",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Nathan Lambert离开Ai2，结束2.5年OLMO等项目工作",
+        "url": "https://x.com/natolambert/status/2061813361848029631",
+        "summary": "Ai2（Allen Institute for AI）研究员Nathan Lambert宣布离职。他在Ai2工作超过2.5年，期间主导或参与了OLMO和Tulu等开源模型项目，称其为职业生涯的巅峰。他表示将暂时休息，未来仍会继续深耕开源模型与开放科学领域。",
+        "description": "Ai2（Allen Institute for AI）研究员Nathan Lambert宣布离职。他在Ai2工作超过2.5年，期间主导或参与了OLMO和Tulu等开源模型项目，称其为职业生涯的巅峰。他表示将暂时休息，未来仍会继续深耕开源模型与开放科学领域。",
+        "category": "industry",
+        "originalSource": "X：Nathan Lambert (@natolambert)",
+        "originalUrl": "https://x.com/natolambert/status/2061813361848029631",
+        "recommendedReason": "Ai2（Allen Institute for AI）研究员Nathan Lambert宣布离职。他在Ai2工作超过2.5年，期间主导或参与了OLMO和Tulu等开源模型项目，称其为职业生涯的巅峰。他表示将暂时休息，未来仍会继续深耕开源模型与开放科学领域。",
+        "publishedAt": "2026-06-02T14:13:06.000Z",
+        "collectedAt": "2026-06-02T14:35:55.357Z",
+        "raw": {
+          "id": "cmpwqmim605awslsn13ybjfuw",
+          "titleEn": "My time at Ai2 / @allen_ai has come to an end. Ai2 is a wonderful place. The last 2.5+ years build…",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmpwq7j6k0562slsn6jkahkn5",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "MiniCPM-V 4.6 现已支持 vLLM v0.22.0",
+        "url": "https://x.com/OpenBMB/status/2061810723169415205",
+        "summary": "MiniCPM-V 4.6 现已完全支持 vLLM v0.22.0！ 无需自定义分支，无需额外编译。 只需拉取预构建包即可运行。 非常感谢 @vllm_project 的顺畅集成！ 🤝 🤗 http：//huggingface.co/openbmb/MiniCPM-V-4.6",
+        "description": "MiniCPM-V 4.6 现已完全支持 vLLM v0.22.0！ 无需自定义分支，无需额外编译。 只需拉取预构建包即可运行。 非常感谢 @vllm_project 的顺畅集成！ 🤝 🤗 http：//huggingface.co/openbmb/MiniCPM-V-4.6",
+        "category": "products",
+        "originalSource": "X：面壁智能 OpenBMB (@OpenBMB)",
+        "originalUrl": "https://x.com/OpenBMB/status/2061810723169415205",
+        "recommendedReason": "MiniCPM-V 4.6 现已完全支持 vLLM v0.22.0！ 无需自定义分支，无需额外编译。 只需拉取预构建包即可运行。 非常感谢 @vllm_project 的顺畅集成！ 🤝 🤗 http：//huggingface.co/openbmb/MiniCPM-V-4.6",
+        "publishedAt": "2026-06-02T14:02:37.000Z",
+        "collectedAt": "2026-06-02T14:35:55.357Z",
+        "raw": {
+          "id": "cmpwq7j6k0562slsn6jkahkn5",
+          "titleEn": "MiniCPM-V 4.6 is now fully supported in vLLM v0.22.0！ No custom branch. No extra compile. Just pull …",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmpwoaoyd04pcslsnnqfm8490",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Anthropic扩展Project Glasswing计划",
+        "url": "https://www.anthropic.com/news/expanding-project-glasswing",
+        "summary": "Anthropic正将其Project Glasswing计划扩展至约150个新组织，此前首批约50个合作伙伴。新伙伴分布于十五个多国家，覆盖电力、水务、医疗、通信和硬件等关键基础设施行业。这些合作伙伴的共同点在于，其代码库若遭成功攻击，后果可能极其严重，影响或超1亿人。项目旨在利用Claude Mythos Preview等前沿模型扫描漏洞并协助修复，以应对AI驱动的网络安全挑战。同时，Anthropic推出了基于Claude Opus 4.8等公开模型的Claude Security产品，用于扫描代码并建议补丁。",
+        "description": "Anthropic正将其Project Glasswing计划扩展至约150个新组织，此前首批约50个合作伙伴。新伙伴分布于十五个多国家，覆盖电力、水务、医疗、通信和硬件等关键基础设施行业。这些合作伙伴的共同点在于，其代码库若遭成功攻击，后果可能极其严重，影响或超1亿人。项目旨在利用Claude Mythos Preview等前沿模型扫描漏洞并协助修复，以应对AI驱动的网络安全挑战。同时，Anthropic推出了基于Claude Opus 4.8等公开模型的Claude Security产品，用于扫描代码并建议补丁。",
+        "category": "industry",
+        "originalSource": "Anthropic：Newsroom（网页）",
+        "originalUrl": "https://www.anthropic.com/news/expanding-project-glasswing",
+        "recommendedReason": "Anthropic正将其Project Glasswing计划扩展至约150个新组织，此前首批约50个合作伙伴。新伙伴分布于十五个多国家，覆盖电力、水务、医疗、通信和硬件等关键基础设施行业。这些合作伙伴的共同点在于，其代码库若遭成功攻击，后果可能极其严重，影响或超1亿人。项目旨在利用Claude Mythos Preview等前沿模型扫描漏洞并协助修复，以应对AI驱动的网络安全挑战。同时，Anthropic推出了基于Claude Opus 4.8等公开模型的Claude Security产品，用于扫描代码并建议补丁。",
+        "publishedAt": "2026-06-02T13:28:13.607Z",
+        "collectedAt": "2026-06-02T14:35:55.357Z",
+        "raw": {
+          "id": "cmpwoaoyd04pcslsnnqfm8490",
+          "titleEn": "Expanding Project Glasswing",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmpwndkv504h2slsnenpm5ynd",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Gemini Spark：最令人印象深刻也最可怕的AI体验",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/941388/gemini-spark-ai-agent-trip-planning",
+        "summary": "Google DeepMind的AI模型Gemini Spark提供了一次极为深刻但同时令人感到不安的用户体验。该模型展现的强大能力令人印象深刻，但其带来的影响和潜力也引发了深刻的恐惧感。",
+        "description": "Google DeepMind的AI模型Gemini Spark提供了一次极为深刻但同时令人感到不安的用户体验。该模型展现的强大能力令人印象深刻，但其带来的影响和潜力也引发了深刻的恐惧感。",
+        "category": "tools",
+        "originalSource": "The Verge：订阅版科技（RSS）",
+        "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/941388/gemini-spark-ai-agent-trip-planning",
+        "recommendedReason": "Google DeepMind的AI模型Gemini Spark提供了一次极为深刻但同时令人感到不安的用户体验。该模型展现的强大能力令人印象深刻，但其带来的影响和潜力也引发了深刻的恐惧感。",
+        "publishedAt": "2026-06-02T12:38:08.000Z",
+        "collectedAt": "2026-06-02T14:35:55.357Z",
+        "raw": {
+          "id": "cmpwndkv504h2slsnenpm5ynd",
+          "titleEn": "Gemini Spark is the most impressive and terrifying AI experience I've had yet",
+          "apiCategory": "tip"
+        }
+      },
       {
         "id": "aihot:cmpwgl5go02q3slsnw6pl0fs5",
         "source": "aihot",
@@ -343,7 +408,7 @@
         "originalUrl": "https://transformer-circuits.pub/2026/may-update/index.html",
         "recommendedReason": "Anthropic可解释性团队介绍了其Circuits研究的新进展。为区分那些激活模式相似但因果效应不同的模型特征，团队提出一种新方法。该方法通过分析特征的下游连接来预测其实际影响，并使用基于共激活统计的TWERA（虚拟权重）对连接进行加权排序。实验表明，借助下游连接信息能更准确地判断哪个特征会引导特定输出。此方法为识别模型内部真正的因果组件提供了新途径。",
         "publishedAt": "2026-06-02T09:52:20.287Z",
-        "collectedAt": "2026-06-02T10:07:47.174Z",
+        "collectedAt": "2026-06-02T14:35:55.357Z",
         "raw": {
           "id": "cmpwgl5go02q3slsnw6pl0fs5",
           "titleEn": "Circuits Updates - May 2026",
@@ -363,7 +428,7 @@
         "originalUrl": "https://x.com/alibaba_cloud/status/2061745401393291554",
         "recommendedReason": "🚀 AgentScope Java 1.1：构建可自我进化的智能体 ✨ Claw：具备Shell访问权限的本地\"MinQwenPaw\" ✨ Builder：多租户、零代码企业平台 ✨ 工作区驱动的进化与分布式隔离 从笔记本电脑到集群无缝扩展。👇 https：//int.alibabacloud.com/m/1000413896/ #AgentScope #AIAgents #Java",
         "publishedAt": "2026-06-02T09:43:03.000Z",
-        "collectedAt": "2026-06-02T10:07:47.174Z",
+        "collectedAt": "2026-06-02T14:35:55.357Z",
         "raw": {
           "id": "cmpwh3lil02w7slsnbx42kvq2",
           "titleEn": "🚀 AgentScope Java 1.1： Build Self-Evolving Agents ✨ Claw： Local \"MinQwenPaw\" with shell access ✨ Bu…",
@@ -383,7 +448,7 @@
         "originalUrl": "https://www.ithome.com/0/958/810.htm",
         "recommendedReason": "SK海力士会长崔泰源宣布，计划在未来五年内将整体晶圆产能提高一倍，以应对AI普及带来的持续存储供应短缺。他预测AI数据中心和AI PC的普及将持续拉动存储需求，供需紧张局面可能延续至2030年。SK海力士将投入大规模资金用于设备、建设等扩张，尽管面临前置时间长（新建晶圆厂至少三年）和资源成本上涨等挑战。目前，SK海力士市值已首次突破1万亿美元。",
         "publishedAt": "2026-06-02T08:31:12.000Z",
-        "collectedAt": "2026-06-02T10:07:47.174Z",
+        "collectedAt": "2026-06-02T14:35:55.357Z",
         "raw": {
           "id": "cmpwf05rk02d5slsnyqog4n3x",
           "titleEn": "SK 会长崔泰源：计划未来五年内，SK 海力士晶圆产能实现翻倍",
@@ -403,7 +468,7 @@
         "originalUrl": "https://x.com/Khazix0918/status/2061669881725309048",
         "recommendedReason": "作者受一条推文启发，使用Codex对自己的MacBook进行了只读存储分析，发现了B站缓存视频等大量可清理空间（激进方案超140G）。为替代收费软件CleanMyMac，作者制作并开源了一个跨平台（支持Mac/Windows）的AI清理skill。该skill会扫描文件并生成可交互的HTML报告，通过三色分级（绿灯可放心清理、黄灯需人工判断、红灯禁止动）直观展示，并提供安全执行按钮。实测清理后释放了近120G空间，相比CleanMyMac仅扫描出的15.8G，其信息更透明、建议更详细。",
         "publishedAt": "2026-06-02T04:42:58.000Z",
-        "collectedAt": "2026-06-02T10:07:47.174Z",
+        "collectedAt": "2026-06-02T14:35:55.357Z",
         "raw": {
           "id": "cmpw5sd9k00agsl1un4z8njv7",
           "titleEn": "http：//x.com/i/article/2061667400723156992",
@@ -423,7 +488,7 @@
         "originalUrl": "https://x.com/StepFun_ai/status/2061655529731342402",
         "recommendedReason": "阶跃星辰发布其推理优化型模型Step 3.7 Flash。该模型为196B MoE架构，从设计之初就专注于推理效率。其采用多矩阵分解注意力机制，使KV-cache成本仅为DeepSeek模型的约22%；同时通过注意力与FFN解耦技术，实现了硬件优化的高效服务。该模型已通过Fireworks AI提供，采用Apache 2.0许可，并可用于构建智能体应用。",
         "publishedAt": "2026-06-02T03:45:56.000Z",
-        "collectedAt": "2026-06-02T10:07:47.174Z",
+        "collectedAt": "2026-06-02T14:35:55.357Z",
         "raw": {
           "id": "cmpw488y9049wslukkrk33tc9",
           "titleEn": "This is exactly the philosophy： don't bolt on efficiency， design for it from day one. MFA + AFD are…",
@@ -443,7 +508,7 @@
         "originalUrl": "https://openai.com/index/codex-for-knowledge-work",
         "recommendedReason": "The Next Era of Knowledge Work报告指出，Codex正通过AI增强的研究、数据分析、工作流自动化与内容创作，变革知识工作的生产力。",
         "publishedAt": "2026-06-02T02:00:00.000Z",
-        "collectedAt": "2026-06-02T10:07:47.174Z",
+        "collectedAt": "2026-06-02T14:35:55.357Z",
         "raw": {
           "id": "cmpwf5ekt02dvslsnxsj6m2rp",
           "titleEn": "Codex is becoming a productivity tool for everyone",
@@ -463,7 +528,7 @@
         "originalUrl": "https://developer.nvidia.com/blog/deploy-agentic-ready-ai-at-the-edge-with-memory-efficiency-in-nvidia-jetpack-7-2",
         "recommendedReason": "NVIDIA JetPack 7.2发布，支持一键部署开源NVIDIA NemoClaw堆栈，该堆栈为OpenClaw添加了隐私与安全控制。同时引入NVIDIA agent skills for Jetson，为Jetson设备提供智能体技能。该版本优化了内存效率，旨在加速AI代理从数字世界向物理环境的边缘部署。",
         "publishedAt": "2026-06-02T02:00:00.000Z",
-        "collectedAt": "2026-06-02T10:07:47.174Z",
+        "collectedAt": "2026-06-02T14:35:55.357Z",
         "raw": {
           "id": "cmpvzrkrk0347slukwn0rkg8r",
           "titleEn": "Deploy Agentic-Ready AI at the Edge with Memory Efficiency in NVIDIA JetPack 7.2",
@@ -483,12 +548,314 @@
         "originalUrl": "https://x.com/shao__meng/status/2061612512580346245",
         "recommendedReason": "Anthropic 核心开发者分享了一套用于 Claude Code 的「理解验证」工作流。该工作流将 AI 定位为\"高效且睿智的教师\"，成功标准不仅是完成任务，更是确保人类对问题、方案及影响有可复述、可辩护的掌握。它通过增量教学、用户复述、清单+测验等方式，围绕问题域、方案域和语境域三条轴线展开，具体包含8个可执行步骤，强调在进入下一阶段前需确认用户已真正理解。此工作流旨在对抗长会话中人类易沦为\"审批按钮\"的\"智能体黑箱\"问题，强制沉淀决策上下文，实现可审计的深度理解。",
         "publishedAt": "2026-06-02T00:55:00.000Z",
-        "collectedAt": "2026-06-02T10:07:47.174Z",
+        "collectedAt": "2026-06-02T14:35:55.357Z",
         "raw": {
           "id": "cmpvxrm1902luslukxau25aef",
           "titleEn": "Claude Code 核心开发者 @trq212 分享了一段高价值「人机结对编程中的 \"理解验证\" 工作流」 通过这份工作流 Skill，让 Coding Agent 结束工作时，人类对问题、方案…",
           "apiCategory": "tip"
         }
+      },
+      {
+        "id": "aihot:cmpvvux6a0246sluks34rofcg",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Karpathy 分享学习方法论",
+        "url": "https://x.com/rohanpaul_ai/status/2061601689841648120",
+        "summary": "🎯 Andrej Karpathy 谈如何学习。",
+        "description": "🎯 Andrej Karpathy 谈如何学习。",
+        "category": "tools",
+        "originalSource": "X：Rohan Paul (@rohanpaul_ai)",
+        "originalUrl": "https://x.com/rohanpaul_ai/status/2061601689841648120",
+        "recommendedReason": "🎯 Andrej Karpathy 谈如何学习。",
+        "publishedAt": "2026-06-02T00:12:00.000Z",
+        "collectedAt": "2026-06-02T14:35:55.357Z",
+        "raw": {
+          "id": "cmpvvux6a0246sluks34rofcg",
+          "titleEn": "🎯 Andrej Karpathy on how to learn.",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmpvto5n701kssluknz9cgg40",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Sam Altman强调AI发展应以人为本",
+        "url": "https://x.com/rohanpaul_ai/status/2061586179292831774",
+        "summary": "Sam Altman在采访中表示，AI不应被设计为追求脱离人类需求的目标，人类必须始终处于AI发展的中心。他批判了行业内\"AI将摧毁大量工作\"等言论，认为人们担忧的并非AI带来的好处，而是自身在未来的角色、经济前景与自主权。他指出，AI行业的失败在于未能清晰解释人类如何在每一步保持对未来的控制权，以及如何在AI时代继续拥有充实、有意义的生活。",
+        "description": "Sam Altman在采访中表示，AI不应被设计为追求脱离人类需求的目标，人类必须始终处于AI发展的中心。他批判了行业内\"AI将摧毁大量工作\"等言论，认为人们担忧的并非AI带来的好处，而是自身在未来的角色、经济前景与自主权。他指出，AI行业的失败在于未能清晰解释人类如何在每一步保持对未来的控制权，以及如何在AI时代继续拥有充实、有意义的生活。",
+        "category": "tools",
+        "originalSource": "X：Rohan Paul (@rohanpaul_ai)",
+        "originalUrl": "https://x.com/rohanpaul_ai/status/2061586179292831774",
+        "recommendedReason": "Sam Altman在采访中表示，AI不应被设计为追求脱离人类需求的目标，人类必须始终处于AI发展的中心。他批判了行业内\"AI将摧毁大量工作\"等言论，认为人们担忧的并非AI带来的好处，而是自身在未来的角色、经济前景与自主权。他指出，AI行业的失败在于未能清晰解释人类如何在每一步保持对未来的控制权，以及如何在AI时代继续拥有充实、有意义的生活。",
+        "publishedAt": "2026-06-01T23:10:22.000Z",
+        "collectedAt": "2026-06-02T14:35:55.357Z",
+        "raw": {
+          "id": "cmpvto5n701kssluknz9cgg40",
+          "titleEn": "Sam Altman's new interview： AI should not be designed to pursue goals that are disconnected from hum…",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmpvs3efm015wslukv1os8v5x",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "ChatGPT 新增长文编辑与保存功能",
+        "url": "https://x.com/ChatGPTapp/status/2061571468992126982",
+        "summary": "长文写作需要更多空间。 现在你可以在全屏模式下编辑更长的文章，并将其保存到你的资料库中，以便稍后继续。",
+        "description": "长文写作需要更多空间。 现在你可以在全屏模式下编辑更长的文章，并将其保存到你的资料库中，以便稍后继续。",
+        "category": "products",
+        "originalSource": "X：ChatGPT (@ChatGPTapp)",
+        "originalUrl": "https://x.com/ChatGPTapp/status/2061571468992126982",
+        "recommendedReason": "长文写作需要更多空间。 现在你可以在全屏模式下编辑更长的文章，并将其保存到你的资料库中，以便稍后继续。",
+        "publishedAt": "2026-06-01T22:11:55.000Z",
+        "collectedAt": "2026-06-02T14:35:55.357Z",
+        "raw": {
+          "id": "cmpvs3efm015wslukv1os8v5x",
+          "titleEn": "Long-form writing works better with a little more space. Now you can edit longer pieces in full-sc…",
+          "apiCategory": "ai-products"
+        }
+      }
+    ],
+    "crossSourceHighlights": [
+      {
+        "id": "url:https://anthropic.com/news/confidential-draft-s1-sec",
+        "canonicalId": "url:https://anthropic.com/news/confidential-draft-s1-sec",
+        "title": "Anthropic 保密向 SEC 提交 S-1 草案",
+        "canonicalUrl": "https://anthropic.com/news/confidential-draft-s1-sec",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://anthropic.com/news/confidential-draft-s1-sec",
+          "title:anthropic 保密向 sec 提交 s 1 草案",
+          "title:anthropic confidentially submits draft s 1 to the sec"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmpvf63k406b0sl0zv0ef9647",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Anthropic 保密向 SEC 提交 S-1 草案",
+            "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+            "summary": "Anthropic， PBC 今日保密向美国证券交易委员会提交了 S-1 表格草案，计划进行普通股的首次公开发行。这使其在 SEC 完成审核后拥有上市的选择权。IPO 的具体发行股数和价格尚未确定，将取决于市场条件等因素。公司近期刚完成由 Altimeter Capital 等领投的 650 亿美元 H 轮融资，估值达 9650 亿美元，并发布了 Claude Opus 4.8 模型。",
+            "description": "Anthropic， PBC 今日保密向美国证券交易委员会提交了 S-1 表格草案，计划进行普通股的首次公开发行。这使其在 SEC 完成审核后拥有上市的选择权。IPO 的具体发行股数和价格尚未确定，将取决于市场条件等因素。公司近期刚完成由 Altimeter Capital 等领投的 650 亿美元 H 轮融资，估值达 9650 亿美元，并发布了 Claude Opus 4.8 模型。",
+            "category": "industry",
+            "originalSource": "Anthropic：Newsroom（网页）",
+            "originalUrl": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+            "recommendedReason": "Anthropic， PBC 今日保密向美国证券交易委员会提交了 S-1 表格草案，计划进行普通股的首次公开发行。这使其在 SEC 完成审核后拥有上市的选择权。IPO 的具体发行股数和价格尚未确定，将取决于市场条件等因素。公司近期刚完成由 Altimeter Capital 等领投的 650 亿美元 H 轮融资，估值达 9650 亿美元，并发布了 Claude Opus 4.8 模型。",
+            "publishedAt": "2026-06-01T16:24:52.982Z",
+            "collectedAt": "2026-06-02T14:35:55.357Z",
+            "raw": {
+              "id": "cmpvf63k406b0sl0zv0ef9647",
+              "titleEn": "Anthropic confidentially submits draft S-1 to the SEC",
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48358646",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Anthropic confidentially submits draft S-1 to the SEC",
+            "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+            "author": "surprisetalk",
+            "tags": [
+              "anthropic"
+            ],
+            "metrics": {
+              "upvotes": 507,
+              "commentsCount": 423
+            },
+            "publishedAt": "2026-06-01T16:00:40.000Z",
+            "collectedAt": "2026-06-02T14:35:54.805Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48358646",
+              "matchedKeywords": [
+                "anthropic"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmpvf63k406b0sl0zv0ef9647",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Anthropic 保密向 SEC 提交 S-1 草案",
+            "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+            "summary": "Anthropic， PBC 今日保密向美国证券交易委员会提交了 S-1 表格草案，计划进行普通股的首次公开发行。这使其在 SEC 完成审核后拥有上市的选择权。IPO 的具体发行股数和价格尚未确定，将取决于市场条件等因素。公司近期刚完成由 Altimeter Capital 等领投的 650 亿美元 H 轮融资，估值达 9650 亿美元，并发布了 Claude Opus 4.8 模型。",
+            "description": "Anthropic， PBC 今日保密向美国证券交易委员会提交了 S-1 表格草案，计划进行普通股的首次公开发行。这使其在 SEC 完成审核后拥有上市的选择权。IPO 的具体发行股数和价格尚未确定，将取决于市场条件等因素。公司近期刚完成由 Altimeter Capital 等领投的 650 亿美元 H 轮融资，估值达 9650 亿美元，并发布了 Claude Opus 4.8 模型。",
+            "category": "industry",
+            "originalSource": "Anthropic：Newsroom（网页）",
+            "originalUrl": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+            "recommendedReason": "Anthropic， PBC 今日保密向美国证券交易委员会提交了 S-1 表格草案，计划进行普通股的首次公开发行。这使其在 SEC 完成审核后拥有上市的选择权。IPO 的具体发行股数和价格尚未确定，将取决于市场条件等因素。公司近期刚完成由 Altimeter Capital 等领投的 650 亿美元 H 轮融资，估值达 9650 亿美元，并发布了 Claude Opus 4.8 模型。",
+            "publishedAt": "2026-06-01T16:24:52.982Z",
+            "collectedAt": "2026-06-02T14:35:55.357Z",
+            "raw": {
+              "id": "cmpvf63k406b0sl0zv0ef9647",
+              "titleEn": "Anthropic confidentially submits draft S-1 to the SEC",
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48358646",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Anthropic confidentially submits draft S-1 to the SEC",
+            "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+            "author": "surprisetalk",
+            "tags": [
+              "anthropic"
+            ],
+            "metrics": {
+              "upvotes": 507,
+              "commentsCount": 423
+            },
+            "publishedAt": "2026-06-01T16:00:40.000Z",
+            "collectedAt": "2026-06-02T14:35:54.805Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48358646",
+              "matchedKeywords": [
+                "anthropic"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 507,
+          "commentsCount": 423,
+          "hnScore": 507,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "industry",
+        "summary": "Anthropic， PBC 今日保密向美国证券交易委员会提交了 S-1 表格草案，计划进行普通股的首次公开发行。这使其在 SEC 完成审核后拥有上市的选择权。IPO 的具体发行股数和价格尚未确定，将取决于市场条件等因素。公司近期刚完成由 Altimeter Capital 等领投的 650 亿美元 H 轮融资，估值达 9650 亿美元，并发布了 Claude Opus 4.8 模型。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-06-01T16:00:40.000Z",
+        "lastSeenAt": "2026-06-02T14:35:55.357Z"
+      },
+      {
+        "id": "url:https://anthropic.com/news/expanding-project-glasswing",
+        "canonicalId": "url:https://anthropic.com/news/expanding-project-glasswing",
+        "title": "Anthropic扩展Project Glasswing计划",
+        "canonicalUrl": "https://anthropic.com/news/expanding-project-glasswing",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://anthropic.com/news/expanding-project-glasswing",
+          "title:anthropic扩展project glasswing计划",
+          "title:expanding project glasswing"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmpwoaoyd04pcslsnnqfm8490",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Anthropic扩展Project Glasswing计划",
+            "url": "https://www.anthropic.com/news/expanding-project-glasswing",
+            "summary": "Anthropic正将其Project Glasswing计划扩展至约150个新组织，此前首批约50个合作伙伴。新伙伴分布于十五个多国家，覆盖电力、水务、医疗、通信和硬件等关键基础设施行业。这些合作伙伴的共同点在于，其代码库若遭成功攻击，后果可能极其严重，影响或超1亿人。项目旨在利用Claude Mythos Preview等前沿模型扫描漏洞并协助修复，以应对AI驱动的网络安全挑战。同时，Anthropic推出了基于Claude Opus 4.8等公开模型的Claude Security产品，用于扫描代码并建议补丁。",
+            "description": "Anthropic正将其Project Glasswing计划扩展至约150个新组织，此前首批约50个合作伙伴。新伙伴分布于十五个多国家，覆盖电力、水务、医疗、通信和硬件等关键基础设施行业。这些合作伙伴的共同点在于，其代码库若遭成功攻击，后果可能极其严重，影响或超1亿人。项目旨在利用Claude Mythos Preview等前沿模型扫描漏洞并协助修复，以应对AI驱动的网络安全挑战。同时，Anthropic推出了基于Claude Opus 4.8等公开模型的Claude Security产品，用于扫描代码并建议补丁。",
+            "category": "industry",
+            "originalSource": "Anthropic：Newsroom（网页）",
+            "originalUrl": "https://www.anthropic.com/news/expanding-project-glasswing",
+            "recommendedReason": "Anthropic正将其Project Glasswing计划扩展至约150个新组织，此前首批约50个合作伙伴。新伙伴分布于十五个多国家，覆盖电力、水务、医疗、通信和硬件等关键基础设施行业。这些合作伙伴的共同点在于，其代码库若遭成功攻击，后果可能极其严重，影响或超1亿人。项目旨在利用Claude Mythos Preview等前沿模型扫描漏洞并协助修复，以应对AI驱动的网络安全挑战。同时，Anthropic推出了基于Claude Opus 4.8等公开模型的Claude Security产品，用于扫描代码并建议补丁。",
+            "publishedAt": "2026-06-02T13:28:13.607Z",
+            "collectedAt": "2026-06-02T14:35:55.357Z",
+            "raw": {
+              "id": "cmpwoaoyd04pcslsnnqfm8490",
+              "titleEn": "Expanding Project Glasswing",
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48369863",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Expanding Project Glasswing",
+            "url": "https://www.anthropic.com/news/expanding-project-glasswing",
+            "author": "surprisetalk",
+            "tags": [
+              "anthropic"
+            ],
+            "metrics": {
+              "upvotes": 38,
+              "commentsCount": 25
+            },
+            "publishedAt": "2026-06-02T13:15:14.000Z",
+            "collectedAt": "2026-06-02T14:35:54.805Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48369863",
+              "matchedKeywords": [
+                "anthropic"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmpwoaoyd04pcslsnnqfm8490",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Anthropic扩展Project Glasswing计划",
+            "url": "https://www.anthropic.com/news/expanding-project-glasswing",
+            "summary": "Anthropic正将其Project Glasswing计划扩展至约150个新组织，此前首批约50个合作伙伴。新伙伴分布于十五个多国家，覆盖电力、水务、医疗、通信和硬件等关键基础设施行业。这些合作伙伴的共同点在于，其代码库若遭成功攻击，后果可能极其严重，影响或超1亿人。项目旨在利用Claude Mythos Preview等前沿模型扫描漏洞并协助修复，以应对AI驱动的网络安全挑战。同时，Anthropic推出了基于Claude Opus 4.8等公开模型的Claude Security产品，用于扫描代码并建议补丁。",
+            "description": "Anthropic正将其Project Glasswing计划扩展至约150个新组织，此前首批约50个合作伙伴。新伙伴分布于十五个多国家，覆盖电力、水务、医疗、通信和硬件等关键基础设施行业。这些合作伙伴的共同点在于，其代码库若遭成功攻击，后果可能极其严重，影响或超1亿人。项目旨在利用Claude Mythos Preview等前沿模型扫描漏洞并协助修复，以应对AI驱动的网络安全挑战。同时，Anthropic推出了基于Claude Opus 4.8等公开模型的Claude Security产品，用于扫描代码并建议补丁。",
+            "category": "industry",
+            "originalSource": "Anthropic：Newsroom（网页）",
+            "originalUrl": "https://www.anthropic.com/news/expanding-project-glasswing",
+            "recommendedReason": "Anthropic正将其Project Glasswing计划扩展至约150个新组织，此前首批约50个合作伙伴。新伙伴分布于十五个多国家，覆盖电力、水务、医疗、通信和硬件等关键基础设施行业。这些合作伙伴的共同点在于，其代码库若遭成功攻击，后果可能极其严重，影响或超1亿人。项目旨在利用Claude Mythos Preview等前沿模型扫描漏洞并协助修复，以应对AI驱动的网络安全挑战。同时，Anthropic推出了基于Claude Opus 4.8等公开模型的Claude Security产品，用于扫描代码并建议补丁。",
+            "publishedAt": "2026-06-02T13:28:13.607Z",
+            "collectedAt": "2026-06-02T14:35:55.357Z",
+            "raw": {
+              "id": "cmpwoaoyd04pcslsnnqfm8490",
+              "titleEn": "Expanding Project Glasswing",
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48369863",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Expanding Project Glasswing",
+            "url": "https://www.anthropic.com/news/expanding-project-glasswing",
+            "author": "surprisetalk",
+            "tags": [
+              "anthropic"
+            ],
+            "metrics": {
+              "upvotes": 38,
+              "commentsCount": 25
+            },
+            "publishedAt": "2026-06-02T13:15:14.000Z",
+            "collectedAt": "2026-06-02T14:35:54.805Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48369863",
+              "matchedKeywords": [
+                "anthropic"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 38,
+          "commentsCount": 25,
+          "hnScore": 38,
+          "crossSourceBonus": 10,
+          "heatScore": 153
+        },
+        "crossSourceBonus": 10,
+        "category": "industry",
+        "summary": "Anthropic正将其Project Glasswing计划扩展至约150个新组织，此前首批约50个合作伙伴。新伙伴分布于十五个多国家，覆盖电力、水务、医疗、通信和硬件等关键基础设施行业。这些合作伙伴的共同点在于，其代码库若遭成功攻击，后果可能极其严重，影响或超1亿人。项目旨在利用Claude Mythos Preview等前沿模型扫描漏洞并协助修复，以应对AI驱动的网络安全挑战。同时，Anthropic推出了基于Claude Opus 4.8等公开模型的Claude Security产品，用于扫描代码并建议补丁。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-06-02T13:15:14.000Z",
+        "lastSeenAt": "2026-06-02T14:35:55.357Z"
       }
     ]
   }
