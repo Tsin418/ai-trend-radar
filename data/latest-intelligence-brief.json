@@ -1,16 +1,22 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-06-02-2026-06-02T00-13-01-785Z",
-  "generatedAt": "2026-06-02T00:13:01.785Z",
+  "runId": "lightweight-2026-06-02-2026-06-02T05-25-10-109Z",
+  "generatedAt": "2026-06-02T05:25:10.109Z",
   "targetDate": "2026-06-02",
   "brief": {
     "date": "2026-06-02",
-    "headline": "Ai Model Release is today's strongest AI trend signal, supported by 2 source(s).",
+    "headline": "Today's strongest AI trend signals are Ai Model Release, Mcp / Tool Calling, and Coding Agent / Swe Agent.",
     "keyTakeaways": [
-      "Ai Model Release: This topic appeared across 2 source(s): aihot, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Ai Model Release: This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 8 related signal(s). Treat it as correlation evidence rat.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
-      "Ai Model Release: watch decision is deep_dive."
+      "Ai Model Release: watch decision is deep_dive.",
+      "Mcp / Tool Calling: This topic appeared across 1 source(s): huggingface_spaces, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
+      "Mcp / Tool Calling: watch decision is track.",
+      "Coding Agent / Swe Agent: This topic appeared across 2 source(s): aihot, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Coding Agent / Swe Agent: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
+      "Coding Agent / Swe Agent: watch decision is track."
     ],
     "topicBriefs": [
       {
@@ -19,21 +25,29 @@
         "category": "tools",
         "sources": [
           "aihot",
+          "huggingface_models",
+          "huggingface_spaces",
           "hackernews"
         ],
-        "sourceCount": 2,
-        "heatScore": 340,
+        "sourceCount": 4,
+        "heatScore": 460,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Ai Model Release is an AI trend topic in tools represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 8 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
           "tools",
-          "llm"
+          "safetensors",
+          "qwen3",
+          "llm-as-rnn",
+          "clinical",
+          "mimic-iv",
+          "grpo",
+          "lora-merged"
         ],
         "evidenceItems": [
           {
@@ -45,7 +59,7 @@
             "summary": "可扩展的企业AI采用需超越大语言模型，依靠智能体逻辑来引导模型执行动态、长周期且受约束的企业工作流，从而提升质量、降低成本并建立信任。文中以IBM watsonx Code Assistant for Z为例，展示了智能体逻辑如何通过程序分析等技术，在理解大型遗留代码库时，相比纯LLM基线方法，能以约30倍更低的token消耗达到更优性能。在加速测试生成任务中，该方法亦能使代码覆盖度提升20%-45%，同时token消耗降低最高达15倍。",
             "category": "tools",
             "publishedAt": "2026-06-01T13:51:18.000Z",
-            "collectedAt": "2026-06-02T00:13:02.934Z"
+            "collectedAt": "2026-06-02T05:25:11.384Z"
           },
           {
             "id": "hackernews:48345694",
@@ -57,39 +71,419 @@
               "llm"
             ],
             "publishedAt": "2026-05-31T13:53:16.000Z",
-            "collectedAt": "2026-06-02T00:13:02.295Z",
+            "collectedAt": "2026-06-02T05:25:10.626Z",
             "metrics": {
-              "upvotes": 321,
-              "commentsCount": 183
+              "upvotes": 324,
+              "commentsCount": 184
             }
           },
           {
-            "id": "hackernews:48363989",
-            "title": "Show HN: Figure – produce printable STL files via LLM and OpenSCAD",
+            "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+            "title": "Open LLM Leaderboard",
+            "source": "huggingface_spaces",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+            "category": "docker",
+            "tags": [
+              "docker",
+              "leaderboard",
+              "modality:text",
+              "submission:automatic",
+              "test:public",
+              "language:english",
+              "eval:code",
+              "eval:math",
+              "region:us"
+            ],
+            "publishedAt": "2023-04-17T11:40:06.000Z",
+            "collectedAt": "2026-06-02T05:25:10.360Z",
+            "metrics": {
+              "likes": 13995
+            }
+          },
+          {
+            "id": "huggingface_spaces:facebook/MusicGen",
+            "title": "MusicGen",
+            "source": "huggingface_spaces",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/spaces/facebook/MusicGen",
+            "category": "gradio",
+            "tags": [
+              "gradio",
+              "music generation",
+              "language models",
+              "LLMs",
+              "region:us"
+            ],
+            "publishedAt": "2023-06-08T18:00:26.000Z",
+            "collectedAt": "2026-06-02T05:25:10.360Z",
+            "metrics": {
+              "likes": 5070
+            }
+          },
+          {
+            "id": "huggingface_spaces:KlingTeam/LivePortrait",
+            "title": "Live Portrait",
+            "source": "huggingface_spaces",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
+            "category": "gradio",
+            "tags": [
+              "gradio",
+              "Multimodal",
+              "Motion control",
+              "Image-to-Video",
+              "Video-to-Video",
+              "language models",
+              "LLMs",
+              "region:us"
+            ],
+            "publishedAt": "2024-07-05T16:35:24.000Z",
+            "collectedAt": "2026-06-02T05:25:10.360Z",
+            "metrics": {
+              "likes": 3746
+            }
+          },
+          {
+            "id": "hackernews:48366110",
+            "title": "App to find best model by filtering AI models",
             "source": "hackernews",
             "sourceType": "developer_discussion",
-            "url": "https://figure.codes/",
+            "url": "https://which-llm-model.netlify.app/",
             "tags": [
+              "ai",
               "llm"
             ],
-            "publishedAt": "2026-06-01T23:36:17.000Z",
-            "collectedAt": "2026-06-02T00:13:02.295Z",
+            "publishedAt": "2026-06-02T04:35:26.000Z",
+            "collectedAt": "2026-06-02T05:25:10.626Z",
             "metrics": {
               "upvotes": 1,
-              "commentsCount": 1
+              "commentsCount": 0
             }
           }
         ],
         "relatedEntities": [
           "超越LLM：为何可扩展的企业AI采用取决于智能体逻辑",
-          "Show HN: Figure – produce printable STL files via LLM and OpenSCAD",
+          "gabriel-xiong/qwen3-8b-grpo-v2-epoch3",
+          "OpenTransformer/AGILLM-4",
+          "Open LLM Leaderboard",
+          "MusicGen",
+          "Live Portrait",
+          "App to find best model by filtering AI models",
           "I put a datacenter GPU in my gaming PC"
         ],
         "metrics": {
-          "votes": 321,
-          "commentsCount": 183,
-          "heatScore": 340,
+          "votes": 324,
+          "likes": 13995,
+          "commentsCount": 184,
+          "heatScore": 460,
+          "crossSourceBonus": 25
+        }
+      },
+      {
+        "id": "topic:mcp / tool calling",
+        "title": "Mcp / Tool Calling",
+        "category": "gradio",
+        "sources": [
+          "huggingface_spaces"
+        ],
+        "sourceCount": 1,
+        "heatScore": 120,
+        "confidence": "low",
+        "watchDecision": "track",
+        "whatItIs": "Mcp / Tool Calling is an AI trend topic in gradio represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 1 source(s): huggingface_spaces, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Mcp / Tool Calling should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
+        "technicalKeywords": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ],
+        "evidenceItems": [
+          {
+            "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
+            "title": "Z Image Turbo",
+            "source": "huggingface_spaces",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/spaces/mrfakename/Z-Image-Turbo",
+            "category": "gradio",
+            "tags": [
+              "gradio",
+              "mcp-server",
+              "region:us"
+            ],
+            "publishedAt": "2025-11-26T19:54:05.000Z",
+            "collectedAt": "2026-06-02T05:25:10.360Z",
+            "metrics": {
+              "likes": 3279
+            }
+          },
+          {
+            "id": "huggingface_spaces:zerogpu-aoti/wan2-2-fp8da-aoti-faster",
+            "title": "Wan2.2 14B Fast",
+            "source": "huggingface_spaces",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/spaces/zerogpu-aoti/wan2-2-fp8da-aoti-faster",
+            "category": "gradio",
+            "tags": [
+              "gradio",
+              "mcp-server",
+              "region:us"
+            ],
+            "publishedAt": "2025-07-30T19:03:28.000Z",
+            "collectedAt": "2026-06-02T05:25:10.360Z",
+            "metrics": {
+              "likes": 3157
+            }
+          },
+          {
+            "id": "huggingface_spaces:not-lain/background-removal",
+            "title": "Background Removal",
+            "source": "huggingface_spaces",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/spaces/not-lain/background-removal",
+            "category": "gradio",
+            "tags": [
+              "gradio",
+              "mcp-server",
+              "region:us"
+            ],
+            "publishedAt": "2024-08-08T19:37:33.000Z",
+            "collectedAt": "2026-06-02T05:25:10.360Z",
+            "metrics": {
+              "likes": 2849
+            }
+          }
+        ],
+        "relatedEntities": [
+          "Z Image Turbo",
+          "Wan2.2 14B Fast",
+          "Background Removal"
+        ],
+        "metrics": {
+          "likes": 3279,
+          "heatScore": 120,
+          "crossSourceBonus": 0
+        }
+      },
+      {
+        "id": "topic:coding agent / swe agent",
+        "title": "Coding Agent / Swe Agent",
+        "category": "tools",
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "heatScore": 42,
+        "confidence": "low",
+        "watchDecision": "track",
+        "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in tools represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Coding Agent / Swe Agent should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "technicalKeywords": [
+          "tools",
+          "agent",
+          "agents",
+          "coding agent"
+        ],
+        "evidenceItems": [
+          {
+            "id": "aihot:cmpvxrm1902luslukxau25aef",
+            "title": "Anthropic 开发者分享 Claude Code「理解验证」工作流",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://x.com/shao__meng/status/2061612512580346245",
+            "summary": "Anthropic 核心开发者分享了一套用于 Claude Code 的「理解验证」工作流。该工作流将 AI 定位为\"高效且睿智的教师\"，成功标准不仅是完成任务，更是确保人类对问题、方案及影响有可复述、可辩护的掌握。它通过增量教学、用户复述、清单+测验等方式，围绕问题域、方案域和语境域三条轴线展开，具体包含8个可执行步骤，强调在进入下一阶段前需确认用户已真正理解。此工作流旨在对抗长会话中人类易沦为\"审批按钮\"的\"智能体黑箱\"问题，强制沉淀决策上下文，实现可审计的深度理解。",
+            "category": "tools",
+            "publishedAt": "2026-06-02T00:55:00.000Z",
+            "collectedAt": "2026-06-02T05:25:11.384Z"
+          },
+          {
+            "id": "hackernews:48366108",
+            "title": "Coding agents are giving everyone decision fatigue",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://stackoverflow.blog/2026/05/21/coding-agents-are-giving-everyone-decision-fatigue/",
+            "tags": [
+              "agent",
+              "agents",
+              "coding agent"
+            ],
+            "publishedAt": "2026-06-02T04:35:14.000Z",
+            "collectedAt": "2026-06-02T05:25:10.626Z",
+            "metrics": {
+              "upvotes": 2,
+              "commentsCount": 0
+            }
+          }
+        ],
+        "relatedEntities": [
+          "Anthropic 开发者分享 Claude Code「理解验证」工作流",
+          "Coding agents are giving everyone decision fatigue"
+        ],
+        "metrics": {
+          "votes": 2,
+          "heatScore": 42,
           "crossSourceBonus": 10
+        }
+      },
+      {
+        "id": "topic:local llm / inference",
+        "title": "Local Llm / Inference",
+        "sources": [
+          "huggingface_models"
+        ],
+        "sourceCount": 1,
+        "heatScore": 21,
+        "confidence": "low",
+        "watchDecision": "wait",
+        "whatItIs": "Local Llm / Inference is an AI trend topic represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 1 source(s): huggingface_models, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
+        "technicalKeywords": [
+          "transformers",
+          "gguf",
+          "mistral-nemo",
+          "12b",
+          "creative-writing",
+          "science-fiction",
+          "literary",
+          "procedural-fiction"
+        ],
+        "evidenceItems": [
+          {
+            "id": "huggingface_models:mradermacher/Corridor-G-12B-i1-GGUF",
+            "title": "mradermacher/Corridor-G-12B-i1-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/mradermacher/Corridor-G-12B-i1-GGUF",
+            "tags": [
+              "transformers",
+              "gguf",
+              "mistral-nemo",
+              "12b",
+              "creative-writing",
+              "science-fiction",
+              "literary",
+              "procedural-fiction",
+              "infrastructure-fiction",
+              "speculative-fiction",
+              "dialogue",
+              "narrative",
+              "roleplay",
+              "atmospheric",
+              "synthetic-data",
+              "en",
+              "dataset:nbeerbower/gutenberg-moderne-dpo",
+              "base_model:ewald1976/Corridor-G-12B",
+              "base_model:quantized:ewald1976/Corridor-G-12B",
+              "license:apache-2.0",
+              "endpoints_compatible",
+              "region:us",
+              "imatrix",
+              "conversational"
+            ],
+            "publishedAt": "2026-06-02T04:35:00.000Z",
+            "collectedAt": "2026-06-02T05:25:10.347Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 1
+            }
+          },
+          {
+            "id": "huggingface_models:lmyzzz/BrainrotGPT-4B-Skibidi-Instruct-GGUF",
+            "title": "lmyzzz/BrainrotGPT-4B-Skibidi-Instruct-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/lmyzzz/BrainrotGPT-4B-Skibidi-Instruct-GGUF",
+            "category": "text-generation",
+            "tags": [
+              "gguf",
+              "qwen3",
+              "sft",
+              "brainrot",
+              "shitpost",
+              "meme",
+              "text-generation",
+              "en",
+              "base_model:Qwen/Qwen3-4B-Instruct-2507",
+              "base_model:quantized:Qwen/Qwen3-4B-Instruct-2507",
+              "license:apache-2.0",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
+            ],
+            "publishedAt": "2026-06-01T17:49:11.000Z",
+            "collectedAt": "2026-06-02T05:25:10.347Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 1
+            }
+          },
+          {
+            "id": "huggingface_models:cPilotGod/allenai-olmo-3-7b-gguf",
+            "title": "cPilotGod/allenai-olmo-3-7b-gguf",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/cPilotGod/allenai-olmo-3-7b-gguf",
+            "tags": [
+              "region:us"
+            ],
+            "publishedAt": "2026-06-02T05:23:59.000Z",
+            "collectedAt": "2026-06-02T05:25:10.347Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:LerrySamson/hf_food_not_food_text_classifier-distilbert-base_uncased",
+            "title": "LerrySamson/hf_food_not_food_text_classifier-distilbert-base_uncased",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/LerrySamson/hf_food_not_food_text_classifier-distilbert-base_uncased",
+            "category": "text-classification",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "distilbert",
+              "text-classification",
+              "generated_from_trainer",
+              "base_model:distilbert/distilbert-base-uncased",
+              "base_model:finetune:distilbert/distilbert-base-uncased",
+              "license:apache-2.0",
+              "text-embeddings-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-06-02T05:23:21.000Z",
+            "collectedAt": "2026-06-02T05:25:10.347Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          }
+        ],
+        "relatedEntities": [
+          "mradermacher/Corridor-G-12B-i1-GGUF",
+          "cPilotGod/allenai-olmo-3-7b-gguf",
+          "LerrySamson/hf_food_not_food_text_classifier-distilbert-base_uncased",
+          "lmyzzz/BrainrotGPT-4B-Skibidi-Instruct-GGUF"
+        ],
+        "metrics": {
+          "likes": 1,
+          "heatScore": 21,
+          "crossSourceBonus": 0
         }
       }
     ],
@@ -99,8 +493,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-06-02T00:13:01.817Z",
-        "finishedAt": "2026-06-02T00:13:01.817Z",
+        "startedAt": "2026-06-02T05:25:10.147Z",
+        "finishedAt": "2026-06-02T05:25:10.147Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -109,49 +503,248 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-06-02T00:13:01.817Z",
-        "finishedAt": "2026-06-02T00:13:02.934Z",
-        "latencyMs": 1117
+        "startedAt": "2026-06-02T05:25:10.147Z",
+        "finishedAt": "2026-06-02T05:25:11.385Z",
+        "latencyMs": 1238
       },
       {
         "source": "huggingface-models",
         "enabled": true,
-        "success": false,
-        "itemCount": 0,
-        "startedAt": "2026-06-02T00:13:01.832Z",
-        "finishedAt": "2026-06-02T00:13:01.894Z",
-        "latencyMs": 62,
-        "error": "Hugging Face models request failed: HTTP 429 - <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and dem"
+        "success": true,
+        "itemCount": 11,
+        "startedAt": "2026-06-02T05:25:10.162Z",
+        "finishedAt": "2026-06-02T05:25:10.347Z",
+        "latencyMs": 185
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
-        "success": false,
-        "itemCount": 0,
-        "startedAt": "2026-06-02T00:13:01.834Z",
-        "finishedAt": "2026-06-02T00:13:01.895Z",
-        "latencyMs": 61,
-        "error": "Hugging Face spaces request failed: HTTP 429"
+        "success": true,
+        "itemCount": 16,
+        "startedAt": "2026-06-02T05:25:10.164Z",
+        "finishedAt": "2026-06-02T05:25:10.361Z",
+        "latencyMs": 197
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 29,
-        "startedAt": "2026-06-02T00:13:01.835Z",
-        "finishedAt": "2026-06-02T00:13:02.295Z",
-        "latencyMs": 460
+        "itemCount": 33,
+        "startedAt": "2026-06-02T05:25:10.165Z",
+        "finishedAt": "2026-06-02T05:25:10.628Z",
+        "latencyMs": 463
       }
     ],
     "dataNotes": [
-      "Lightweight intelligence update: GitHub repository collection, GitHub scoring, and LLM enrichment were skipped.",
-      "Multi-source warning: Hugging Face Models collection failed: Hugging Face models request failed: HTTP 429 - <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and dem",
-      "Multi-source warning: Hugging Face Spaces collection failed: Hugging Face spaces request failed: HTTP 429"
+      "Lightweight intelligence update: GitHub repository collection, GitHub scoring, and LLM enrichment were skipped."
     ]
   },
   "sections": {
     "productLaunches": [],
-    "modelDemoSignals": [],
+    "modelDemoSignals": [
+      {
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
+        "tags": [
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
+        ],
+        "category": "docker",
+        "metrics": {
+          "likes": 13995
+        },
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-06-02T05:25:10.360Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
+      },
+      {
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
+        "tags": [
+          "docker",
+          "region:us"
+        ],
+        "category": "docker",
+        "metrics": {
+          "likes": 11098
+        },
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-06-02T05:25:10.360Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
+      },
+      {
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
+        "tags": [
+          "gradio",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 10095
+        },
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-06-02T05:25:10.360Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
+      },
+      {
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
+        "tags": [
+          "docker",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "docker",
+        "metrics": {
+          "likes": 7441
+        },
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-05-31T21:39:43.000Z",
+        "collectedAt": "2026-06-02T05:25:10.360Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🥇"
+        }
+      },
+      {
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
+        "tags": [
+          "gradio",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5118
+        },
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-06-02T05:25:10.360Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5070
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-06-02T05:25:10.360Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Arena Leaderboard",
+        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
+        "author": "lmarena-ai",
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "static",
+        "metrics": {
+          "likes": 4902
+        },
+        "publishedAt": "2023-05-20T09:26:19.000Z",
+        "updatedAt": "2026-02-21T23:20:43.000Z",
+        "collectedAt": "2026-06-02T05:25:10.360Z",
+        "raw": {
+          "sdk": "static",
+          "emoji": "🏆🤖"
+        }
+      },
+      {
+        "id": "huggingface_spaces:KlingTeam/LivePortrait",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Live Portrait",
+        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
+        "author": "KlingTeam",
+        "tags": [
+          "gradio",
+          "Multimodal",
+          "Motion control",
+          "Image-to-Video",
+          "Video-to-Video",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 3746
+        },
+        "publishedAt": "2024-07-05T16:35:24.000Z",
+        "updatedAt": "2024-08-30T11:20:51.000Z",
+        "collectedAt": "2026-06-02T05:25:10.360Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🤪"
+        }
+      }
+    ],
     "developerBuzz": [
       {
         "id": "hackernews:48358646",
@@ -164,11 +757,11 @@
           "anthropic"
         ],
         "metrics": {
-          "upvotes": 431,
-          "commentsCount": 343
+          "upvotes": 469,
+          "commentsCount": 385
         },
         "publishedAt": "2026-06-01T16:00:40.000Z",
-        "collectedAt": "2026-06-02T00:13:02.295Z",
+        "collectedAt": "2026-06-02T05:25:10.626Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48358646",
           "matchedKeywords": [
@@ -187,11 +780,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 485,
-          "commentsCount": 240
+          "upvotes": 535,
+          "commentsCount": 259
         },
         "publishedAt": "2026-06-01T14:16:41.000Z",
-        "collectedAt": "2026-06-02T00:13:02.295Z",
+        "collectedAt": "2026-06-02T05:25:10.626Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48357154",
           "matchedKeywords": [
@@ -210,11 +803,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 524,
+          "upvotes": 526,
           "commentsCount": 363
         },
         "publishedAt": "2026-05-31T16:19:34.000Z",
-        "collectedAt": "2026-06-02T00:13:02.295Z",
+        "collectedAt": "2026-06-02T05:25:10.626Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48346947",
           "matchedKeywords": [
@@ -233,11 +826,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 412,
-          "commentsCount": 875
+          "upvotes": 414,
+          "commentsCount": 898
         },
         "publishedAt": "2026-05-31T12:41:19.000Z",
-        "collectedAt": "2026-06-02T00:13:02.295Z",
+        "collectedAt": "2026-06-02T05:25:10.626Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48345248",
           "matchedKeywords": [
@@ -246,30 +839,134 @@
         }
       },
       {
-        "id": "hackernews:48347354",
+        "id": "hackernews:48364055",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "Meta launches Instagram, Facebook, and WhatsApp subscriptions",
-        "url": "https://techcrunch.com/2026/05/27/meta-officially-launches-instagram-facebook-and-whatsapp-subscriptions-with-more-to-come-including-ai-plans/",
-        "author": "tambourine_man",
+        "title": "Can the stockmarket swallow Anthropic, SpaceX and OpenAI?",
+        "url": "https://www.economist.com/finance-and-economics/2026/06/01/can-the-stockmarket-swallow-anthropic-spacex-and-openai",
+        "author": "1vuio0pswjnm7",
         "tags": [
-          "ai"
+          "ai",
+          "openai",
+          "anthropic"
         ],
         "metrics": {
-          "upvotes": 281,
-          "commentsCount": 495
+          "upvotes": 202,
+          "commentsCount": 406
         },
-        "publishedAt": "2026-05-31T17:02:23.000Z",
-        "collectedAt": "2026-06-02T00:13:02.295Z",
+        "publishedAt": "2026-06-01T23:45:46.000Z",
+        "collectedAt": "2026-06-02T05:25:10.626Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48347354",
+          "hnUrl": "https://news.ycombinator.com/item?id=48364055",
           "matchedKeywords": [
-            "ai"
+            "ai",
+            "openai",
+            "anthropic"
           ]
         }
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmpw5sd9k00agsl1un4z8njv7",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "为了不花那120刀，我把电脑清理软件做成了开源skill",
+        "url": "https://x.com/Khazix0918/status/2061669881725309048",
+        "summary": "作者受一条推文启发，使用Codex对自己的MacBook进行了只读存储分析，发现了B站缓存视频等大量可清理空间（激进方案超140G）。为替代收费软件CleanMyMac，作者制作并开源了一个跨平台（支持Mac/Windows）的AI清理skill。该skill会扫描文件并生成可交互的HTML报告，通过三色分级（绿灯可放心清理、黄灯需人工判断、红灯禁止动）直观展示，并提供安全执行按钮。实测清理后释放了近120G空间，相比CleanMyMac仅扫描出的15.8G，其信息更透明、建议更详细。",
+        "description": "作者受一条推文启发，使用Codex对自己的MacBook进行了只读存储分析，发现了B站缓存视频等大量可清理空间（激进方案超140G）。为替代收费软件CleanMyMac，作者制作并开源了一个跨平台（支持Mac/Windows）的AI清理skill。该skill会扫描文件并生成可交互的HTML报告，通过三色分级（绿灯可放心清理、黄灯需人工判断、红灯禁止动）直观展示，并提供安全执行按钮。实测清理后释放了近120G空间，相比CleanMyMac仅扫描出的15.8G，其信息更透明、建议更详细。",
+        "category": "tools",
+        "originalSource": "X：卡兹克 (@Khazix0918)",
+        "originalUrl": "https://x.com/Khazix0918/status/2061669881725309048",
+        "recommendedReason": "作者受一条推文启发，使用Codex对自己的MacBook进行了只读存储分析，发现了B站缓存视频等大量可清理空间（激进方案超140G）。为替代收费软件CleanMyMac，作者制作并开源了一个跨平台（支持Mac/Windows）的AI清理skill。该skill会扫描文件并生成可交互的HTML报告，通过三色分级（绿灯可放心清理、黄灯需人工判断、红灯禁止动）直观展示，并提供安全执行按钮。实测清理后释放了近120G空间，相比CleanMyMac仅扫描出的15.8G，其信息更透明、建议更详细。",
+        "publishedAt": "2026-06-02T04:42:58.000Z",
+        "collectedAt": "2026-06-02T05:25:11.384Z",
+        "raw": {
+          "id": "cmpw5sd9k00agsl1un4z8njv7",
+          "titleEn": "http：//x.com/i/article/2061667400723156992",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmpw488y9049wslukkrk33tc9",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "阶跃星辰Step 3.7 Flash发布，专为高效推理设计",
+        "url": "https://x.com/StepFun_ai/status/2061655529731342402",
+        "summary": "阶跃星辰发布其推理优化型模型Step 3.7 Flash。该模型为196B MoE架构，从设计之初就专注于推理效率。其采用多矩阵分解注意力机制，使KV-cache成本仅为DeepSeek模型的约22%；同时通过注意力与FFN解耦技术，实现了硬件优化的高效服务。该模型已通过Fireworks AI提供，采用Apache 2.0许可，并可用于构建智能体应用。",
+        "description": "阶跃星辰发布其推理优化型模型Step 3.7 Flash。该模型为196B MoE架构，从设计之初就专注于推理效率。其采用多矩阵分解注意力机制，使KV-cache成本仅为DeepSeek模型的约22%；同时通过注意力与FFN解耦技术，实现了硬件优化的高效服务。该模型已通过Fireworks AI提供，采用Apache 2.0许可，并可用于构建智能体应用。",
+        "category": "models",
+        "originalSource": "X：阶跃星辰 StepFun (@StepFun_ai)",
+        "originalUrl": "https://x.com/StepFun_ai/status/2061655529731342402",
+        "recommendedReason": "阶跃星辰发布其推理优化型模型Step 3.7 Flash。该模型为196B MoE架构，从设计之初就专注于推理效率。其采用多矩阵分解注意力机制，使KV-cache成本仅为DeepSeek模型的约22%；同时通过注意力与FFN解耦技术，实现了硬件优化的高效服务。该模型已通过Fireworks AI提供，采用Apache 2.0许可，并可用于构建智能体应用。",
+        "publishedAt": "2026-06-02T03:45:56.000Z",
+        "collectedAt": "2026-06-02T05:25:11.384Z",
+        "raw": {
+          "id": "cmpw488y9049wslukkrk33tc9",
+          "titleEn": "This is exactly the philosophy： don't bolt on efficiency， design for it from day one. MFA + AFD are…",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmpvzrkrk0347slukwn0rkg8r",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "NVIDIA JetPack 7.2支持内存优化的边缘智能体部署",
+        "url": "https://developer.nvidia.com/blog/deploy-agentic-ready-ai-at-the-edge-with-memory-efficiency-in-nvidia-jetpack-7-2",
+        "summary": "NVIDIA JetPack 7.2发布，支持一键部署开源NVIDIA NemoClaw堆栈，该堆栈为OpenClaw添加了隐私与安全控制。同时引入NVIDIA agent skills for Jetson，为Jetson设备提供智能体技能。该版本优化了内存效率，旨在加速AI代理从数字世界向物理环境的边缘部署。",
+        "description": "NVIDIA JetPack 7.2发布，支持一键部署开源NVIDIA NemoClaw堆栈，该堆栈为OpenClaw添加了隐私与安全控制。同时引入NVIDIA agent skills for Jetson，为Jetson设备提供智能体技能。该版本优化了内存效率，旨在加速AI代理从数字世界向物理环境的边缘部署。",
+        "category": "products",
+        "originalSource": "NVIDIA Technical Blog（开发者技术博客 · RSS）",
+        "originalUrl": "https://developer.nvidia.com/blog/deploy-agentic-ready-ai-at-the-edge-with-memory-efficiency-in-nvidia-jetpack-7-2",
+        "recommendedReason": "NVIDIA JetPack 7.2发布，支持一键部署开源NVIDIA NemoClaw堆栈，该堆栈为OpenClaw添加了隐私与安全控制。同时引入NVIDIA agent skills for Jetson，为Jetson设备提供智能体技能。该版本优化了内存效率，旨在加速AI代理从数字世界向物理环境的边缘部署。",
+        "publishedAt": "2026-06-02T02:00:00.000Z",
+        "collectedAt": "2026-06-02T05:25:11.384Z",
+        "raw": {
+          "id": "cmpvzrkrk0347slukwn0rkg8r",
+          "titleEn": "Deploy Agentic-Ready AI at the Edge with Memory Efficiency in NVIDIA JetPack 7.2",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmpvxrm1902luslukxau25aef",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Anthropic 开发者分享 Claude Code「理解验证」工作流",
+        "url": "https://x.com/shao__meng/status/2061612512580346245",
+        "summary": "Anthropic 核心开发者分享了一套用于 Claude Code 的「理解验证」工作流。该工作流将 AI 定位为\"高效且睿智的教师\"，成功标准不仅是完成任务，更是确保人类对问题、方案及影响有可复述、可辩护的掌握。它通过增量教学、用户复述、清单+测验等方式，围绕问题域、方案域和语境域三条轴线展开，具体包含8个可执行步骤，强调在进入下一阶段前需确认用户已真正理解。此工作流旨在对抗长会话中人类易沦为\"审批按钮\"的\"智能体黑箱\"问题，强制沉淀决策上下文，实现可审计的深度理解。",
+        "description": "Anthropic 核心开发者分享了一套用于 Claude Code 的「理解验证」工作流。该工作流将 AI 定位为\"高效且睿智的教师\"，成功标准不仅是完成任务，更是确保人类对问题、方案及影响有可复述、可辩护的掌握。它通过增量教学、用户复述、清单+测验等方式，围绕问题域、方案域和语境域三条轴线展开，具体包含8个可执行步骤，强调在进入下一阶段前需确认用户已真正理解。此工作流旨在对抗长会话中人类易沦为\"审批按钮\"的\"智能体黑箱\"问题，强制沉淀决策上下文，实现可审计的深度理解。",
+        "category": "tools",
+        "originalSource": "X：邵猛 (@shao__meng)",
+        "originalUrl": "https://x.com/shao__meng/status/2061612512580346245",
+        "recommendedReason": "Anthropic 核心开发者分享了一套用于 Claude Code 的「理解验证」工作流。该工作流将 AI 定位为\"高效且睿智的教师\"，成功标准不仅是完成任务，更是确保人类对问题、方案及影响有可复述、可辩护的掌握。它通过增量教学、用户复述、清单+测验等方式，围绕问题域、方案域和语境域三条轴线展开，具体包含8个可执行步骤，强调在进入下一阶段前需确认用户已真正理解。此工作流旨在对抗长会话中人类易沦为\"审批按钮\"的\"智能体黑箱\"问题，强制沉淀决策上下文，实现可审计的深度理解。",
+        "publishedAt": "2026-06-02T00:55:00.000Z",
+        "collectedAt": "2026-06-02T05:25:11.384Z",
+        "raw": {
+          "id": "cmpvxrm1902luslukxau25aef",
+          "titleEn": "Claude Code 核心开发者 @trq212 分享了一段高价值「人机结对编程中的 \"理解验证\" 工作流」 通过这份工作流 Skill，让 Coding Agent 结束工作时，人类对问题、方案…",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmpvvux6a0246sluks34rofcg",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Karpathy 分享学习方法论",
+        "url": "https://x.com/rohanpaul_ai/status/2061601689841648120",
+        "summary": "🎯 Andrej Karpathy 谈如何学习。",
+        "description": "🎯 Andrej Karpathy 谈如何学习。",
+        "category": "tools",
+        "originalSource": "X：Rohan Paul (@rohanpaul_ai)",
+        "originalUrl": "https://x.com/rohanpaul_ai/status/2061601689841648120",
+        "recommendedReason": "🎯 Andrej Karpathy 谈如何学习。",
+        "publishedAt": "2026-06-02T00:12:00.000Z",
+        "collectedAt": "2026-06-02T05:25:11.384Z",
+        "raw": {
+          "id": "cmpvvux6a0246sluks34rofcg",
+          "titleEn": "🎯 Andrej Karpathy on how to learn.",
+          "apiCategory": "tip"
+        }
+      },
       {
         "id": "aihot:cmpvto5n701kssluknz9cgg40",
         "source": "aihot",
@@ -283,7 +980,7 @@
         "originalUrl": "https://x.com/rohanpaul_ai/status/2061586179292831774",
         "recommendedReason": "Sam Altman在采访中表示，AI不应被设计为追求脱离人类需求的目标，人类必须始终处于AI发展的中心。他批判了行业内\"AI将摧毁大量工作\"等言论，认为人们担忧的并非AI带来的好处，而是自身在未来的角色、经济前景与自主权。他指出，AI行业的失败在于未能清晰解释人类如何在每一步保持对未来的控制权，以及如何在AI时代继续拥有充实、有意义的生活。",
         "publishedAt": "2026-06-01T23:10:22.000Z",
-        "collectedAt": "2026-06-02T00:13:02.934Z",
+        "collectedAt": "2026-06-02T05:25:11.384Z",
         "raw": {
           "id": "cmpvto5n701kssluknz9cgg40",
           "titleEn": "Sam Altman's new interview： AI should not be designed to pursue goals that are disconnected from hum…",
@@ -303,7 +1000,7 @@
         "originalUrl": "https://x.com/ChatGPTapp/status/2061571468992126982",
         "recommendedReason": "长文写作需要更多空间。 现在你可以在全屏模式下编辑更长的文章，并将其保存到你的资料库中，以便稍后继续。",
         "publishedAt": "2026-06-01T22:11:55.000Z",
-        "collectedAt": "2026-06-02T00:13:02.934Z",
+        "collectedAt": "2026-06-02T05:25:11.384Z",
         "raw": {
           "id": "cmpvs3efm015wslukv1os8v5x",
           "titleEn": "Long-form writing works better with a little more space. Now you can edit longer pieces in full-sc…",
@@ -323,111 +1020,11 @@
         "originalUrl": "https://x.com/krea_ai/status/2061554472925696128",
         "recommendedReason": "Krea 2 LoRAs 现已向所有人开放。 试试下面这个 👇",
         "publishedAt": "2026-06-01T21:04:22.000Z",
-        "collectedAt": "2026-06-02T00:13:02.934Z",
+        "collectedAt": "2026-06-02T05:25:11.384Z",
         "raw": {
           "id": "cmpvpam6b00h8sluknoirrj6e",
           "titleEn": "Krea 2 LoRAs are now available to everyone. try this one below 👇",
           "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmpvphtkh00j0slukzfwj1aez",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Alphabet将通过发行股票筹集800亿美元用于AI支出计划",
-        "url": "https://www.bloomberg.com/news/articles/2026-06-01/alphabet-to-raise-80-billion-in-equity-capital-for-ai-spending",
-        "summary": "Alphabet正在通过发行股票等方式筹集800亿美元资金，其中包括与Berkshire Hathaway的投资协议，以资助其雄心勃勃的AI支出计划。",
-        "description": "Alphabet正在通过发行股票等方式筹集800亿美元资金，其中包括与Berkshire Hathaway的投资协议，以资助其雄心勃勃的AI支出计划。",
-        "category": "industry",
-        "originalSource": "Bloomberg：Technology（RSS）",
-        "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-01/alphabet-to-raise-80-billion-in-equity-capital-for-ai-spending",
-        "recommendedReason": "Alphabet正在通过发行股票等方式筹集800亿美元资金，其中包括与Berkshire Hathaway的投资协议，以资助其雄心勃勃的AI支出计划。",
-        "publishedAt": "2026-06-01T20:50:33.000Z",
-        "collectedAt": "2026-06-02T00:13:02.934Z",
-        "raw": {
-          "id": "cmpvphtkh00j0slukzfwj1aez",
-          "titleEn": "Alphabet to Raise $80 Billion in Equity Capital for AI Spending",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmpvmm0ab00ndslfpbxb2m5kh",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Replit 用单个提示词构建完整业务",
-        "url": "https://x.com/Replit/status/2061534759520760112",
-        "summary": "你能用单个提示词免费构建一个真实的业务吗？ 从今天起，在 Replit 上，答案是肯定的。 从一个提示词开始，获得一个网站、移动应用、幻灯片和发布视频。 此外，还能解锁使用 @stripe @atlas， @QuickBooks， @mercury & @doolaHQ 运营业务的福利。",
-        "description": "你能用单个提示词免费构建一个真实的业务吗？ 从今天起，在 Replit 上，答案是肯定的。 从一个提示词开始，获得一个网站、移动应用、幻灯片和发布视频。 此外，还能解锁使用 @stripe @atlas， @QuickBooks， @mercury & @doolaHQ 运营业务的福利。",
-        "category": "products",
-        "originalSource": "X：Replit (@Replit)",
-        "originalUrl": "https://x.com/Replit/status/2061534759520760112",
-        "recommendedReason": "你能用单个提示词免费构建一个真实的业务吗？ 从今天起，在 Replit 上，答案是肯定的。 从一个提示词开始，获得一个网站、移动应用、幻灯片和发布视频。 此外，还能解锁使用 @stripe @atlas， @QuickBooks， @mercury & @doolaHQ 运营业务的福利。",
-        "publishedAt": "2026-06-01T19:46:02.000Z",
-        "collectedAt": "2026-06-02T00:13:02.934Z",
-        "raw": {
-          "id": "cmpvmm0ab00ndslfpbxb2m5kh",
-          "titleEn": "Can you build a real business for free with a single prompt？ Starting today on Replit， the answer …",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmpvmvuc000r2slfpabxe89ry",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Meta的AI被利用来劫持Instagram账号",
-        "url": "https://www.theverge.com/tech/941179/meta-instagram-ai-support-chatbot-exploit-hacked",
-        "summary": "Meta的AI聊天机器人被发现存在安全漏洞，黑客可以通过请求该AI关联一个新的电子邮件地址，从而接管目标用户的Instagram账号。该漏洞利用了AI智能体直接执行账户管理操作的能力。",
-        "description": "Meta的AI聊天机器人被发现存在安全漏洞，黑客可以通过请求该AI关联一个新的电子邮件地址，从而接管目标用户的Instagram账号。该漏洞利用了AI智能体直接执行账户管理操作的能力。",
-        "category": "industry",
-        "originalSource": "The Verge：订阅版科技（RSS）",
-        "originalUrl": "https://www.theverge.com/tech/941179/meta-instagram-ai-support-chatbot-exploit-hacked",
-        "recommendedReason": "Meta的AI聊天机器人被发现存在安全漏洞，黑客可以通过请求该AI关联一个新的电子邮件地址，从而接管目标用户的Instagram账号。该漏洞利用了AI智能体直接执行账户管理操作的能力。",
-        "publishedAt": "2026-06-01T19:20:47.000Z",
-        "collectedAt": "2026-06-02T00:13:02.934Z",
-        "raw": {
-          "id": "cmpvmvuc000r2slfpabxe89ry",
-          "titleEn": "Meta's own AI was exploited to hijack Instagram accounts",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmpvl6hcy00b3slfp8iajt5kg",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "佛罗里达州起诉OpenAI与Sam Altman：涉多起ChatGPT相关谋杀案",
-        "url": "https://arstechnica.com/tech-policy/2026/06/florida-sues-openai-sam-altman-after-multiple-chatgpt-linked-murders",
-        "summary": "佛罗里达州对OpenAI及其CEO Sam Altman提起诉讼。该州总检察长指控Altman对人命\"完全漠视\"，案件与多起涉及ChatGPT的谋杀事件相关。",
-        "description": "佛罗里达州对OpenAI及其CEO Sam Altman提起诉讼。该州总检察长指控Altman对人命\"完全漠视\"，案件与多起涉及ChatGPT的谋杀事件相关。",
-        "category": "industry",
-        "originalSource": "Ars Technica：AI（RSS）",
-        "originalUrl": "https://arstechnica.com/tech-policy/2026/06/florida-sues-openai-sam-altman-after-multiple-chatgpt-linked-murders",
-        "recommendedReason": "佛罗里达州对OpenAI及其CEO Sam Altman提起诉讼。该州总检察长指控Altman对人命\"完全漠视\"，案件与多起涉及ChatGPT的谋杀事件相关。",
-        "publishedAt": "2026-06-01T18:52:19.000Z",
-        "collectedAt": "2026-06-02T00:13:02.934Z",
-        "raw": {
-          "id": "cmpvl6hcy00b3slfp8iajt5kg",
-          "titleEn": "Florida sues OpenAI， Sam Altman after multiple ChatGPT-linked murders",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmpvk16me000kslfppbs3wx8f",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Google AI 展示并行子智能体自动整理文件",
-        "url": "https://x.com/googleaidevs/status/2061515177166844317",
-        "summary": "从杂乱到清晰。观看 @Antigravity 中的并行子智能体对数百个营销资产进行分类和重命名，消除手动文件管理。",
-        "description": "从杂乱到清晰。观看 @Antigravity 中的并行子智能体对数百个营销资产进行分类和重命名，消除手动文件管理。",
-        "category": "tools",
-        "originalSource": "X：Google AI for Developers (@googleaidevs)",
-        "originalUrl": "https://x.com/googleaidevs/status/2061515177166844317",
-        "recommendedReason": "从杂乱到清晰。观看 @Antigravity 中的并行子智能体对数百个营销资产进行分类和重命名，消除手动文件管理。",
-        "publishedAt": "2026-06-01T18:28:13.000Z",
-        "collectedAt": "2026-06-02T00:13:02.934Z",
-        "raw": {
-          "id": "cmpvk16me000kslfppbs3wx8f",
-          "titleEn": "From clutter to clarity. Watch parallel subagents in @Antigravity sort and rename hundreds of market…",
-          "apiCategory": "tip"
         }
       }
     ]
