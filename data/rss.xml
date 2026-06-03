@@ -6,19 +6,19 @@
     <description>Daily AI open-source trend intelligence</description>
     <language>en</language>
     <ttl>360</ttl>
-    <lastBuildDate>Tue, 02 Jun 2026 22:06:17 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 00:05:45 GMT</lastBuildDate>
     <item>
       <title>AI Developer Radar｜Daily｜2026-06-03 - Today&apos;s Summary</title>
       <link>https://github.com/Tsin418/ai-trend-radar</link>
       <guid isPermaLink="false">daily-2026-06-03-summary</guid>
-      <description><![CDATA[Today's attention is sharply polarized: MCP / Tool Calling and Coding Agent categories are experiencing explosive star growth, with average daily deltas of 1921 and 1204 respectively, far outpacing all other categories. This suggests a strong developer shift toward tool-use infrastructure and autonomous coding agents. In contrast, Local LLM / Inference and RAG / Knowledge Base categories show steady but modest acceleration, with average daily deltas of 17 and 22. DeepSpeed's sudden breakout (acceleration 4.3) indicates renewed interest in distributed training for large models, possibly tied to recent scaling discussions. The absence of any new Product Hunt launches or strong Hacker News AI stories today may mean the community is digesting existing projects rather than seeking new ones. If this trend continues, MCP and coding agent frameworks could become the dominant infrastructure layer for AI applications.
-Top projects: deepspeedai/DeepSpeed, topoteretes/cognee, NirDiamant/RAG_Techniques, google-ai-edge/mediapipe, Tencent/ncnn, stas00/ml-engineering, ChatGPTNextWeb/NextChat, milvus-io/milvus, netdata/netdata, esengine/DeepSeek-Reasonix, affaan-m/ECC, rtk-ai/rtk
+      <description><![CDATA[The dominant pattern today is a sharp acceleration in AI agent memory and RAG infrastructure projects. Cognee, an agent memory control plane, saw a 3.2x acceleration with 37 new stars in 24 hours, while the RAG_Techniques notebook collection accelerated 2.7x with 32 stars. These join ml-engineering and mediapipe in a broader breakout across RAG and local inference categories. Meanwhile, the MCP and coding agent categories show extreme delta values (e.g., 2970 daily stars for MCP), but these are likely driven by a single high-profile launch rather than organic developer attention. The absence of any new Product Hunt launches or Hacker News top stories related to these AI infrastructure projects suggests the GitHub attention is coming from developer word-of-mouth, not launch-day marketing. If this organic growth sustains, it may indicate a deepening interest in production-ready agent memory and retrieval systems.
+Top projects: deepspeedai/DeepSpeed, topoteretes/cognee, stas00/ml-engineering, NirDiamant/RAG_Techniques, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, Tencent/ncnn, netdata/netdata, ChatGPTNextWeb/NextChat, milvus-io/milvus, esengine/DeepSeek-Reasonix, affaan-m/ECC
 Note: GitHub API 只提供当前 stars，总量变化来自本项目保存的历史 snapshot。
 Note: daily delta 使用约 24h 前 snapshot，weekly delta 使用约 7 天前 snapshot。
 Note: Accelerating 只展示至少 3 天历史基线且今日 delta 超过前 3 日均值 2 倍的项目。
 Note: Potential Score 为规则评分，用于排序，不代表项目质量结论。
 Note: Multi-source warning: arXiv collection failed: arXiv request failed: HTTP 429]]></description>
-      <pubDate>Tue, 02 Jun 2026 22:06:17 GMT</pubDate>
+      <pubDate>Wed, 03 Jun 2026 00:05:45 GMT</pubDate>
       <category>Summary</category>
     </item>
     <item>
@@ -30,11 +30,11 @@ Description: DeepSpeed is a deep learning optimization library for distributed t
 Why it matters: With 42,440 stars, a 24-hour delta of 22, and a 7-day delta of 46, DeepSpeed shows consistent high engagement. The acceleration ratio of 3.5 (high) indicates a sudden breakout in attention, likely driven by recent releases (e.g., Muon Optimizer support, SDMA for ZeRO-3) and community events (ASPLOS 2026 tutorial, meetups). The project's sustained velocity and recent spikes make it a top-tier optimization library for AI practitioners.
 Developer insight: DeepSpeed's trajectory signals a shift toward more efficient, hardware-aware distributed training. Developers should adopt it to stay competitive in training large models, especially with new features like Muon optimizer and SDMA that push performance boundaries on diverse hardware (NVIDIA, AMD, Intel).
 Risk: Low]]></description>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <category>Distributed Training / Inference Optimization</category>
     </item>
     <item>
-      <title>[sudden_breakout] topoteretes/cognee (+33 stars/24h)</title>
+      <title>[sudden_breakout] topoteretes/cognee (+37 stars/24h)</title>
       <link>https://github.com/topoteretes/cognee</link>
       <guid isPermaLink="true">https://github.com/topoteretes/cognee</guid>
       <description><![CDATA[Category: AI Agent Framework
@@ -42,8 +42,20 @@ Description: Cognee is an open-source memory control plane that gives AI agents 
 Why it matters: Cognee is experiencing a sudden breakout with a 2.7x acceleration ratio and 31 stars in the last 24 hours, reaching 17,640 total stars. The 7-day average star delta of 16 and a 132-star weekly gain indicate strong, accelerating attention. This is not a slow build — the velocity spiked recently, likely driven by a new release or community event.
 Developer insight: This signals a shift toward memory-as-a-service for AI agents. Developers no longer need to build custom RAG pipelines or graph databases — Cognee abstracts that complexity. The trend suggests that agent memory will become a standard infrastructure layer, similar to how vector databases became essential for LLM apps.
 Risk: Low]]></description>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <category>AI Agent Framework</category>
+    </item>
+    <item>
+      <title>[sudden_breakout] stas00/ml-engineering (+12 stars/24h)</title>
+      <link>https://github.com/stas00/ml-engineering</link>
+      <guid isPermaLink="true">https://github.com/stas00/ml-engineering</guid>
+      <description><![CDATA[Category: RAG / Knowledge Base
+Description: A comprehensive open book of methodologies, tools, and commands for training and fine-tuning large language and multi-modal models.
+Why it matters: With 18,015 stars and a sudden acceleration ratio of 2.9 (high), the repo is experiencing a breakout. The 24-hour star delta of 20 and 7-day average of 6 indicate a sharp increase in attention, likely driven by the growing need for hands-on ML engineering guidance as LLM training becomes more accessible.
+Developer insight: Signals a shift toward open, community-driven knowledge sharing in ML engineering, reducing the barrier for smaller teams to adopt large-scale training practices.
+Risk: Low]]></description>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <category>RAG / Knowledge Base</category>
     </item>
     <item>
       <title>[sudden_breakout] NirDiamant/RAG_Techniques (+32 stars/24h)</title>
@@ -54,7 +66,7 @@ Description: A comprehensive, community-driven collection of 42+ Jupyter noteboo
 Why it matters: With 27,652 stars, a 7-day average delta of 15.7 stars/day, and an acceleration of 1.7 (high), this repo is experiencing sustained, above-average growth. The consistent daily star gain (10–19) over the past week indicates strong ongoing interest from the AI community, likely driven by the practical value of its tutorials and the author's active ecosystem (book, newsletter, Discord).
 Developer insight: The sustained popularity signals that developers are hungry for practical, well-documented RAG implementations beyond basic tutorials. The inclusion of evaluation and agentic patterns points to the next frontier in production RAG.
 Risk: Low]]></description>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <category>RAG / Knowledge Base</category>
     </item>
     <item>
@@ -66,8 +78,20 @@ Description: Google's cross-platform framework for building on-device ML pipelin
 Why it matters: With 35,447 stars and a sudden acceleration of 2.5x (high), the repo is experiencing a breakout in attention. The 24-hour star delta of 22 and 7-day delta of 98 indicate strong recent interest, likely driven by the growing demand for on-device AI and privacy-preserving ML solutions.
 Developer insight: This signals a shift toward on-device inference as a key workflow for AI developers, reducing reliance on cloud APIs and enabling low-latency, privacy-compliant applications.
 Risk: Low]]></description>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <category>Local LLM / Inference</category>
+    </item>
+    <item>
+      <title>[sudden_breakout] thedaviddias/Front-End-Checklist (+18 stars/24h)</title>
+      <link>https://github.com/thedaviddias/Front-End-Checklist</link>
+      <guid isPermaLink="true">https://github.com/thedaviddias/Front-End-Checklist</guid>
+      <description><![CDATA[Category: AI Agent Framework
+Description: A comprehensive, MCP-powered front-end quality checklist with 385 rules across 11 categories, designed for both human review and AI agent workflows.
+Why it matters: With 72,789 stars, a 24-hour star delta of 18, and a high acceleration of 2.5, the project is experiencing a sudden breakout in attention. The recent release and active commits (within 7 days) suggest ongoing development, while the MCP server integration positions it as a key tool for AI-assisted code review.
+Developer insight: This signals a shift toward structured, rule-based AI agents that can enforce best practices autonomously. Developers should consider building similar MCP servers for their own standards to enable agent-driven quality assurance.
+Risk: Low]]></description>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <category>AI Agent Framework</category>
     </item>
     <item>
       <title>[sudden_breakout] Tencent/ncnn (+5 stars/24h)</title>
@@ -78,20 +102,20 @@ Description: ncnn is a high-performance neural network inference framework optim
 Why it matters: The project shows a sudden breakout with a 2.3x acceleration ratio and a 7-star delta in the last 24 hours, despite a slight dip yesterday. With 23,318 stars and a recent release, it's gaining renewed attention as mobile and edge AI deployment becomes critical.
 Developer insight: For AI developers, ncnn signals a shift toward efficient on-device inference, reducing reliance on cloud APIs. It's particularly valuable for privacy-sensitive apps and real-time applications.
 Risk: Low]]></description>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <category>Local LLM / Inference</category>
     </item>
     <item>
-      <title>[sudden_breakout] stas00/ml-engineering (+11 stars/24h)</title>
-      <link>https://github.com/stas00/ml-engineering</link>
-      <guid isPermaLink="true">https://github.com/stas00/ml-engineering</guid>
-      <description><![CDATA[Category: RAG / Knowledge Base
-Description: A comprehensive open book of methodologies, tools, and commands for training and fine-tuning large language and multi-modal models.
-Why it matters: With 18,015 stars and a sudden acceleration ratio of 2.9 (high), the repo is experiencing a breakout. The 24-hour star delta of 20 and 7-day average of 6 indicate a sharp increase in attention, likely driven by the growing need for hands-on ML engineering guidance as LLM training becomes more accessible.
-Developer insight: Signals a shift toward open, community-driven knowledge sharing in ML engineering, reducing the barrier for smaller teams to adopt large-scale training practices.
+      <title>[sudden_breakout] netdata/netdata (+34 stars/24h)</title>
+      <link>https://github.com/netdata/netdata</link>
+      <guid isPermaLink="true">https://github.com/netdata/netdata</guid>
+      <description><![CDATA[Category: AI DevTool / Observability
+Description: Netdata is an open-source, real-time infrastructure monitoring platform with per-second metrics, zero-configuration setup, and built-in ML-powered anomaly detection.
+Why it matters: The repo is experiencing a sudden breakout with a 24h star delta of 33 and an acceleration ratio of 2.2 (high), indicating a sharp increase in attention. With 79k total stars and consistent daily gains, it's a mature project that is currently seeing renewed interest, possibly due to its AI-powered features and zero-config promise.
+Developer insight: This signals a shift toward edge-based, AI-augmented monitoring that reduces the need for centralized data lakes. Developers should consider integrating Netdata for instant, low-overhead observability, especially in containerized and Kubernetes environments.
 Risk: Low]]></description>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
-      <category>RAG / Knowledge Base</category>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <category>AI DevTool / Observability</category>
     </item>
     <item>
       <title>[sudden_breakout] ChatGPTNextWeb/NextChat (+23 stars/24h)</title>
@@ -102,7 +126,7 @@ Description: NextChat is a lightweight, cross-platform AI chat client that suppo
 Why it matters: With 88,131 stars and a 24h star delta of 22, the project shows sustained high interest. The acceleration ratio of 2.9 (high) indicates a sudden breakout in attention, likely driven by recent feature additions like MCP support, real-time chat, and the iOS app release. The 7-day average star delta of 7.8 confirms consistent growth, but the acceleration signals a recent spike.
 Developer insight: The rapid adoption of NextChat signals a shift toward unified, self-hosted AI interfaces that reduce dependency on single providers. The MCP support hints at a future where AI tools interoperate via standardized protocols, opening opportunities for plugin ecosystems.
 Risk: Low]]></description>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <category>Local LLM / Inference</category>
     </item>
     <item>
@@ -114,55 +138,31 @@ Description: Milvus is a high-performance, cloud-native vector database for scal
 Why it matters: With 44,597 stars and a sudden breakout acceleration of 2.1 (high), Milvus is experiencing a sharp spike in attention. The 24h star delta of 33 and 7-day average of 18.1 indicate strong, accelerating momentum, likely driven by the growing adoption of RAG and vector search in production AI systems.
 Developer insight: The vector database space is consolidating around Milvus as the open-source standard. Its sudden breakout signals that developers are prioritizing performance, scalability, and cloud-native deployment for AI workloads. This trend reinforces the shift from simple embedding stores to full-featured vector databases.
 Risk: Low]]></description>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <category>Vector Database / Embedding</category>
     </item>
     <item>
-      <title>[sudden_breakout] netdata/netdata (+33 stars/24h)</title>
-      <link>https://github.com/netdata/netdata</link>
-      <guid isPermaLink="true">https://github.com/netdata/netdata</guid>
-      <description><![CDATA[Category: AI DevTool / Observability
-Description: Netdata is an open-source, real-time infrastructure monitoring platform with per-second metrics, zero-configuration setup, and built-in ML-powered anomaly detection.
-Why it matters: The repo is experiencing a sudden breakout with a 24h star delta of 33 and an acceleration ratio of 2.2 (high), indicating a sharp increase in attention. With 79k total stars and consistent daily gains, it's a mature project that is currently seeing renewed interest, possibly due to its AI-powered features and zero-config promise.
-Developer insight: This signals a shift toward edge-based, AI-augmented monitoring that reduces the need for centralized data lakes. Developers should consider integrating Netdata for instant, low-overhead observability, especially in containerized and Kubernetes environments.
-Risk: Low]]></description>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
-      <category>AI DevTool / Observability</category>
-    </item>
-    <item>
-      <title>[sustained_hot] esengine/DeepSeek-Reasonix (+1204 stars/24h)</title>
+      <title>[sustained_hot] esengine/DeepSeek-Reasonix (+1221 stars/24h)</title>
       <link>https://github.com/esengine/DeepSeek-Reasonix</link>
       <guid isPermaLink="true">https://github.com/esengine/DeepSeek-Reasonix</guid>
       <description><![CDATA[Category: Coding Agent / SWE Agent
-Description: A DeepSeek-native AI coding agent for the terminal, rewritten in Go for performance and prefix-cache stability.
-Why it matters: With 16,636 stars, a 24-hour delta of +1,192, and a 7-day average delta of 1,210.9, the project is experiencing sustained high growth. The acceleration ratio of 1.5 indicates strong, steady momentum without a sudden spike, suggesting organic adoption and community trust.
-Developer insight: Signals a shift toward specialized, model-native coding agents that optimize for cost and performance. The plugin architecture and MCP compatibility suggest an emerging standard for extensible AI tools in the terminal.
+Description: DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.
+Why it matters: Coding Agent / SWE Agent 方向保持持续热门，24h stars +1221，总 stars 16,665，适合看近期 release、commit 或社区讨论是否解释了增长。
+Developer insight: 关注它如何拆解代码任务、接入工具和处理仓库上下文，可作为 coding agent 产品能力参考。
 Risk: Low]]></description>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <category>Coding Agent / SWE Agent</category>
     </item>
     <item>
-      <title>[sudden_breakout] affaan-m/ECC (+2844 stars/24h)</title>
+      <title>[sudden_breakout] affaan-m/ECC (+2970 stars/24h)</title>
       <link>https://github.com/affaan-m/ECC</link>
       <guid isPermaLink="true">https://github.com/affaan-m/ECC</guid>
       <description><![CDATA[Category: MCP / Tool Calling
 Description: The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.
-Why it matters: MCP / Tool Calling 方向出现突然加速：24h stars +2844，前 3 日均值 1151.3，加速度 2.5x，今天值得优先排查触发原因。
+Why it matters: MCP / Tool Calling 方向出现突然加速：24h stars +2970，前 3 日均值 1151.3，加速度 2.6x，今天值得优先排查触发原因。
 Developer insight: 重点看协议适配、工具注册和真实示例，判断它是否能降低 agent 接工具的成本。
 Risk: Low]]></description>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
-      <category>MCP / Tool Calling</category>
-    </item>
-    <item>
-      <title>[sudden_breakout] rtk-ai/rtk (+997 stars/24h)</title>
-      <link>https://github.com/rtk-ai/rtk</link>
-      <guid isPermaLink="true">https://github.com/rtk-ai/rtk</guid>
-      <description><![CDATA[Category: MCP / Tool Calling
-Description: CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies
-Why it matters: MCP / Tool Calling 方向出现突然加速：24h stars +997，前 3 日均值 359，加速度 2.8x，今天值得优先排查触发原因。
-Developer insight: 重点看协议适配、工具注册和真实示例，判断它是否能降低 agent 接工具的成本。
-Risk: Low]]></description>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <category>MCP / Tool Calling</category>
     </item>
   </channel>
