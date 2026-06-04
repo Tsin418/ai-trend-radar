@@ -1,320 +1,197 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-06-04T02:50:58.623Z",
+  "generatedAt": "2026-06-04T05:05:30.434Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_models:galuis116/evolai-future102",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "galuis116/evolai-future102",
-        "url": "https://huggingface.co/galuis116/evolai-future102",
+        "id": "http://arxiv.org/abs/2606.05165v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "STRIDE: Training Data Attribution via Sparse Recovery from Subset Perturbations",
+        "url": "https://arxiv.org/pdf/2606.05165v1",
+        "description": "Training Data Attribution (TDA) seeks to trace a model's predictions back to its training data. The gold standard for TDA relies on causal interventions, observing how a model changes when data is added or removed, but repeated retraining is computationally challenging for Large Language Models (LLMs). Consequently, most approaches approximate this effect in the parameter space using gradients. However, tracking gradients across billions of parameters is not only prohibitively expensive but reli",
+        "summary": "Training Data Attribution (TDA) seeks to trace a model's predictions back to its training data. The gold standard for TDA relies on causal interventions, observing how a model changes when data is added or removed, but repeated retraining is computationally challenging for Large Language Models (LLMs). Consequently, most approaches approximate this effect in the parameter space using gradients. However, tracking gradients across billions of parameters is not only prohibitively expensive but relies on local approximations. In this work, we propose a shift: rather than estimating parameter changes, we model the functional effect of training data in the activation space. We introduce STRIDE (Steering-based Training Data Influence Decomposition), a framework that formulates TDA as a sparse recovery problem in the spirit of compressive sensing. STRIDE learns lightweight \"steering operators\" that mimic the behavioral shift caused by training on data subsets. By measuring how these operators perturb test predictions, we recover individual training example influences via sparse linear decomposition. STRIDE achieves state-of-the-art for LLM pre-training attribution while being an order of magnitude ($13\\times$) faster than previous art. We further validate its practical utility through downstream applications including data selection, data contamination, and qualitative analysis.",
+        "author": "Rishit Dagli, Abir Harrasse, Luke Zhang, Florent Draye, Amirali Abdullah, Bernhard Schölkopf, Zhijing Jin",
         "tags": [
-          "safetensors",
-          "qwen3",
-          "region:us"
+          "cs.LG",
+          "cs.CL",
+          "large language model",
+          "llm"
         ],
-        "metrics": {
-          "downloads": 1167,
-          "likes": 0
-        },
-        "publishedAt": "2026-05-29T21:08:57.000Z",
-        "updatedAt": "2026-06-04T02:47:23.000Z",
-        "collectedAt": "2026-06-04T02:50:58.760Z",
-        "raw": {}
-      },
-      {
-        "id": "huggingface_models:Phoenix9781/evolai-tf-model-105",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "Phoenix9781/evolai-tf-model-105",
-        "url": "https://huggingface.co/Phoenix9781/evolai-tf-model-105",
-        "tags": [
-          "safetensors",
-          "qwen3",
-          "region:us"
-        ],
-        "metrics": {
-          "downloads": 598,
-          "likes": 1
-        },
-        "publishedAt": "2026-05-31T18:26:01.000Z",
-        "updatedAt": "2026-06-04T02:47:23.000Z",
-        "collectedAt": "2026-06-04T02:50:58.760Z",
-        "raw": {}
-      },
-      {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
-        "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
-        ],
-        "category": "docker",
-        "metrics": {
-          "likes": 13997
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-06-04T02:50:58.768Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-06-03T17:59:36Z",
+        "updatedAt": "2026-06-03T17:59:36Z",
+        "collectedAt": "2026-06-04T05:04:55.778Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.05165v1",
+          "authors": [
+            "Rishit Dagli",
+            "Abir Harrasse",
+            "Luke Zhang",
+            "Florent Draye",
+            "Amirali Abdullah",
+            "Bernhard Schölkopf",
+            "Zhijing Jin"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm"
       },
       {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
+        "id": "http://arxiv.org/abs/2606.05158v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Streaming Communication in Multi-Agent Reasoning",
+        "url": "https://arxiv.org/pdf/2606.05158v1",
+        "description": "Multi-agent reasoning systems adopt a \"generate-then-transfer\" paradigm that forces end-to-end latency to scale linearly with pipeline depth. We introduce StreamMA, a multi-agent reasoning system that streams each reasoning step to downstream agents as soon as it is generated, pipelining adjacent agents and thus reducing latency. Surprisingly, this pipelining also improves effectiveness: because multi-step reasoning quality is non-uniform and early steps are more reliable than later ones, workin",
+        "summary": "Multi-agent reasoning systems adopt a \"generate-then-transfer\" paradigm that forces end-to-end latency to scale linearly with pipeline depth. We introduce StreamMA, a multi-agent reasoning system that streams each reasoning step to downstream agents as soon as it is generated, pipelining adjacent agents and thus reducing latency. Surprisingly, this pipelining also improves effectiveness: because multi-step reasoning quality is non-uniform and early steps are more reliable than later ones, working with these reliable early steps instead of the full chain prevents error-prone late steps from misleading downstream agents. We formalize both advantages with the first closed-form joint analysis of stream, serial, and single protocols, deriving the effectiveness ordering, speedup upper bound, and cost ratio. Across eight reasoning benchmarks spanning mathematics, science, and code, two frontier LLMs (Claude Opus 4.6 and GPT-5.4), and three topologies (Chain, Tree, Graph), StreamMA outperforms both baselines (avg. +7.3 pp, max +22.4 pp on HMMT 2026; Claude Opus 4.6-high). Beyond these contributions, we discover a \"step-level scaling law\": increasing per-agent steps consistently improves both effectiveness and efficiency, a new scaling dimension orthogonal to and composable with agent-count scaling.",
+        "author": "Zhen Yang, Xiaogang Xu, Wen Wang, Cong Chen, Xander Xu, Ying-Cong Chen",
         "tags": [
-          "docker",
-          "region:us"
+          "cs.CL",
+          "cs.AI",
+          "cs.MA",
+          "llm",
+          "agent",
+          "multi-agent",
+          "benchmark"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11102
-        },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-06-04T02:50:58.768Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-06-03T17:57:04Z",
+        "updatedAt": "2026-06-03T17:57:04Z",
+        "collectedAt": "2026-06-04T05:04:55.778Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.05158v1",
+          "authors": [
+            "Zhen Yang",
+            "Xiaogang Xu",
+            "Wen Wang",
+            "Cong Chen",
+            "Xander Xu",
+            "Ying-Cong Chen"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, agent, multi-agent, benchmark"
       },
       {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
+        "id": "http://arxiv.org/abs/2606.05152v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Reinforcement Learning from Rich Feedback with Distributional DAgger",
+        "url": "https://arxiv.org/pdf/2606.05152v1",
+        "description": "Reasoning models have advanced rapidly, but the dominant reinforcement learning from verifiable rewards (RLVR) recipe remains surprisingly narrow: sample many responses and reward each with a single bit indicating whether the final answer is correct. Yet many settings provide rich feedback, including execution traces, tool outputs, expert corrections, and model self-evaluations. We study how to use such feedback through a distributional variant of the classic imitation learning algorithm DAgger,",
+        "summary": "Reasoning models have advanced rapidly, but the dominant reinforcement learning from verifiable rewards (RLVR) recipe remains surprisingly narrow: sample many responses and reward each with a single bit indicating whether the final answer is correct. Yet many settings provide rich feedback, including execution traces, tool outputs, expert corrections, and model self-evaluations. We study how to use such feedback through a distributional variant of the classic imitation learning algorithm DAgger, where the learner has local access to an expert distribution on states visited by the current policy. This yields a simple forward cross-entropy objective that admits a blackbox expert and whose sequence-level gradient {conduct rich credit assignment by propagating} future expert-student disagreement back to earlier decisions. We show that prior RL with self-distillation objectives based on reverse KL or Jensen-Shannon fail to guarantee monotonic policy improvement: even when the expert has higher reward, their updates may increase probability on worse actions. In contrast, we show that forward cross-entropy admits monotonic policy improvement and enjoys guarantees on regret. We further show that our objective optimizes a lower bound on teacher-weighted likelihood of success, leading to improved Pass@N. Empirically, our approach, DistIL, improves over RLVR and RL with self-distillation baselines across a variety of domains: scientific reasoning, coding, and solving hard mathematical problems.",
+        "author": "Rishabh Agrawal, Jacob Fein-Ashley, Paria Rashidinejad",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.LG",
+          "cs.AI",
+          "cs.CL",
+          "evaluation"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10097
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-06-04T02:50:58.768Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-06-03T17:54:04Z",
+        "updatedAt": "2026-06-03T17:54:04Z",
+        "collectedAt": "2026-06-04T05:04:55.778Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.05152v1",
+          "authors": [
+            "Rishabh Agrawal",
+            "Jacob Fein-Ashley",
+            "Paria Rashidinejad"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: evaluation"
       },
       {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
+        "id": "http://arxiv.org/abs/2606.05150v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Multi-Column RBF Neural Network Using Adaptive and Non-Adaptive Particle Swarm Optimization",
+        "url": "https://arxiv.org/pdf/2606.05150v1",
+        "description": "The radial basis function neural network (RBFN) trained with a gradient descending algorithm provides an effective fully connected structure in both shallow and deep networks. The error correction (ErrCor), a state-of-the-art gradient-based training method, selects optimal hidden units to improve accuracy. Alternatively, as a population-based algorithm, the particle swarm optimization algorithm (PSO) uses the swarm experience to optimize RBFN parameters, offering global search and robustness to ",
+        "summary": "The radial basis function neural network (RBFN) trained with a gradient descending algorithm provides an effective fully connected structure in both shallow and deep networks. The error correction (ErrCor), a state-of-the-art gradient-based training method, selects optimal hidden units to improve accuracy. Alternatively, as a population-based algorithm, the particle swarm optimization algorithm (PSO) uses the swarm experience to optimize RBFN parameters, offering global search and robustness to local minima. Adaptive PSO (APSO) has emerged as an improved variant of PSO. APSO algorithm improves convergence speed by dynamically adjusting swarm parameters during optimization. Both ErrCor and PSO demonstrate improved results and competitive convergence. However, with large datasets, these methods face scalability challenges such as excessive kernel computations and large hidden layer structures. A recent multi-column RBFN approach (MCRN) improves ErrCor performance by deploying small RBFNs in a parallel system. Inspired by MCRN's success, we propose two novel approaches to improve PSO performance: the multi-column RBFN with PSO (MC-PSO) and the multi-column RBFN with APSO (MC-APSO). These methods introduce parallel RBFN structures trained using evolutionary swarm methods. Each RBFN is independently trained on a specific spatial subset of the dataset using either PSO or APSO algorithms. These resulting specialist-trained RBFNs are tailored to their respective subsets. During testing, only selected RBFNs, where the test instance neighbors are located, contribute to the multi-column output. This specialization improves accuracy, while parallelism enhances speed. We evaluate the proposed methods on various benchmark datasets. The MC-PSO and MC-APSO outperform ErrCor, PSO, APSO, and MCRN in terms of accuracy and recall. They also demonstrate faster training and testing times in most experiments.",
+        "author": "Ammar Hoori, Yuichi Motai",
         "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
+          "cs.NE",
+          "cs.AI",
+          "benchmark"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7443
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-06-03T11:55:31.000Z",
-        "collectedAt": "2026-06-04T02:50:58.768Z",
+        "category": "cs.NE",
+        "language": "en",
+        "publishedAt": "2026-06-03T17:53:48Z",
+        "updatedAt": "2026-06-03T17:53:48Z",
+        "collectedAt": "2026-06-04T05:04:55.778Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🥇"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.05150v1",
+          "authors": [
+            "Ammar Hoori",
+            "Yuichi Motai"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: benchmark"
       },
       {
-        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Wan2.2 Animate",
-        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
-        "author": "Wan-AI",
+        "id": "http://arxiv.org/abs/2606.05149v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "An Open-Source Two-Stage Computer Vision Pipeline for Fine-Grained Vehicle Classification using Vision Transformers",
+        "url": "https://arxiv.org/pdf/2606.05149v1",
+        "description": "Vehicle body type is a significant determinant of cyclist injury severity in overtaking crashes, yet automated tools for classifying vehicles into injury-risk-relevant categories from naturalistic roadway video do not exist in the open literature. Standard object detection benchmarks provide only coarse vehicle labels (car, truck, bus, motorcycle), while existing fine-grained recognition systems are trained on controlled imagery and lack evaluation for deployment robustness across recording site",
+        "summary": "Vehicle body type is a significant determinant of cyclist injury severity in overtaking crashes, yet automated tools for classifying vehicles into injury-risk-relevant categories from naturalistic roadway video do not exist in the open literature. Standard object detection benchmarks provide only coarse vehicle labels (car, truck, bus, motorcycle), while existing fine-grained recognition systems are trained on controlled imagery and lack evaluation for deployment robustness across recording sites. This paper presents an open-source two-stage computer vision pipeline combining a pre-trained RT-DETR detector for coarse vehicle localization with a fine-tuned Vision Transformer (ViT-Base/16) for six-category body-type classification: passenger car, SUV, pickup truck, minivan, large van, and commercial truck. A confidence-based abstention mechanism withholds Stage 2 predictions when softmax output falls below 0.60, producing unknown labels rather than silent misclassifications. Evaluated on 3,805 annotated overtaking events from a bicycle-lane corridor in Ann Arbor, Michigan (in-distribution), the pipeline achieved 0.94 accuracy with per-class F1 scores from 0.91 (minivan) to 0.97 (SUV). On an independent out-of-distribution evaluation of 311 events from an open cycling dataset without retraining, accuracy was 0.89. Three of four well-represented categories maintained F1 at or above 0.90 under domain shift. The largest degradation was observed for minivan (F1 = 0.72), driven by abstention rate rising from 2.4% to 25.0% rather than active misclassification, consistent with the mechanism propagating genuine model uncertainty. The full pipeline, including inference scripts, training code, evaluation utilities, and model weights, is released as open-source software to support reproducibility and reuse across roadside video archives and cycling safety research.",
+        "author": "Gandhimathi Padmanaban, Fred Feng",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.CV",
+          "cs.LG",
+          "eess.IV",
+          "safety",
+          "benchmark",
+          "evaluation"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5118
-        },
-        "publishedAt": "2025-09-18T07:05:32.000Z",
-        "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-06-04T02:50:58.768Z",
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-06-03T17:53:33Z",
+        "updatedAt": "2026-06-03T17:53:33Z",
+        "collectedAt": "2026-06-04T05:04:55.778Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👁"
-        }
-      },
-      {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
-        "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5071
+          "abstractUrl": "http://arxiv.org/abs/2606.05149v1",
+          "authors": [
+            "Gandhimathi Padmanaban",
+            "Fred Feng"
+          ]
         },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-06-04T02:50:58.768Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
+        "recommendedReason": "Matched AI developer keywords: safety, benchmark, evaluation"
       }
     ],
-    "developerBuzz": [
-      {
-        "id": "hackernews:48375016",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Gmail thinks I'm stupid, so I left",
-        "url": "https://moddedbear.com/gmail-thinks-im-stupid-so-i-left",
-        "author": "speckx",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 1148,
-          "commentsCount": 794
-        },
-        "publishedAt": "2026-06-02T19:27:40.000Z",
-        "collectedAt": "2026-06-04T02:50:59.000Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48375016",
-          "matchedKeywords": [
-            "ai"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48385906",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Gemma 4 12B: A unified, encoder-free multimodal model",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/",
-        "author": "rvz",
-        "tags": [
-          "ai",
-          "multimodal"
-        ],
-        "metrics": {
-          "upvotes": 714,
-          "commentsCount": 293
-        },
-        "publishedAt": "2026-06-03T16:04:42.000Z",
-        "collectedAt": "2026-06-04T02:50:59.000Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48385906",
-          "matchedKeywords": [
-            "ai",
-            "multimodal"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48383056",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Uber's $1,500/month AI limit is a useful signal for AI tool pricing",
-        "url": "https://simonwillison.net/2026/Jun/3/uber-caps-usage/",
-        "author": "pdyc",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 377,
-          "commentsCount": 490
-        },
-        "publishedAt": "2026-06-03T12:25:14.000Z",
-        "collectedAt": "2026-06-04T02:50:59.000Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48383056",
-          "matchedKeywords": [
-            "ai"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48368121",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Adafruit receives demand letter from Fenwick legal counsel on behalf of Flux.ai",
-        "url": "https://blog.adafruit.com/",
-        "author": "semanser",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 670,
-          "commentsCount": 276
-        },
-        "publishedAt": "2026-06-02T10:00:56.000Z",
-        "collectedAt": "2026-06-04T02:50:59.000Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48368121",
-          "matchedKeywords": [
-            "ai"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48383241",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "32GB of DDR5 now costs $375 – AI shortage continues to squeeze PC building",
-        "url": "https://www.tomshardware.com/pc-components/ddr5/32gb-of-ddr5-now-costs-usd375-minimum-ai-shortage-continues-to-squeeze-pc-building",
-        "author": "papersail",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 377,
-          "commentsCount": 346
-        },
-        "publishedAt": "2026-06-03T12:43:43.000Z",
-        "collectedAt": "2026-06-04T02:50:59.000Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48383241",
-          "matchedKeywords": [
-            "ai"
-          ]
-        }
-      }
-    ],
+    "developerBuzz": [],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmpyx4llm047vsli313nmjw1m",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Cloudflare Radar：机器人流量首次超过人类占比57.5%",
+        "url": "https://x.com/xiaohu/status/2062367357868355622",
+        "summary": "Cloudflare Radar 实时统计显示，过去一周（5月28日至6月4日）全球所有 HTML 网页请求流量中，57.5% 来自机器人（爬虫、AI 抓取、自动化脚本），仅42.5%来自真人浏览器，机器人流量首次超过人类。按所有 HTTP 流量返回内容分类，JSON（API 机器通信）占33.1%居首，HTML 仅12%。互联网流量主体已从人类浏览网页转向机器间通信和机器人抓取。",
+        "description": "Cloudflare Radar 实时统计显示，过去一周（5月28日至6月4日）全球所有 HTML 网页请求流量中，57.5% 来自机器人（爬虫、AI 抓取、自动化脚本），仅42.5%来自真人浏览器，机器人流量首次超过人类。按所有 HTTP 流量返回内容分类，JSON（API 机器通信）占33.1%居首，HTML 仅12%。互联网流量主体已从人类浏览网页转向机器间通信和机器人抓取。",
+        "category": "industry",
+        "originalSource": "X：小互 (@xiaohu)",
+        "originalUrl": "https://x.com/xiaohu/status/2062367357868355622",
+        "recommendedReason": "Cloudflare Radar 实时统计显示，过去一周（5月28日至6月4日）全球所有 HTML 网页请求流量中，57.5% 来自机器人（爬虫、AI 抓取、自动化脚本），仅42.5%来自真人浏览器，机器人流量首次超过人类。按所有 HTTP 流量返回内容分类，JSON（API 机器通信）占33.1%居首，HTML 仅12%。互联网流量主体已从人类浏览网页转向机器间通信和机器人抓取。",
+        "publishedAt": "2026-06-04T02:54:29.000Z",
+        "collectedAt": "2026-06-04T05:04:56.677Z",
+        "raw": {
+          "id": "cmpyx4llm047vsli313nmjw1m",
+          "titleEn": "📢 里程碑 机器人流量🤖 首次在互联网历史上超过了人类在线流量👨🦰 根据Cloudflare Radar的实时统计 过去一周（5月28日到6月4日），全球所有请求 HTML 网页的流…",
+          "apiCategory": "industry"
+        }
+      },
       {
         "id": "aihot:cmpyvxja303t6sli3dok90v7m",
         "source": "aihot",
@@ -328,7 +205,7 @@
         "originalUrl": "https://x.com/NVIDIAAI/status/2062358080222876041",
         "recommendedReason": "辐射场的质量取决于其背后的图像。 PPISP 可帮助补偿不同拍摄之间的光度变化，使 3D 重建在光照和相机设置不完全一致时更加鲁棒。 🔗 项目：https：//nvda.ws/43JeJpk",
         "publishedAt": "2026-06-04T02:17:37.000Z",
-        "collectedAt": "2026-06-04T02:50:59.880Z",
+        "collectedAt": "2026-06-04T05:04:56.677Z",
         "raw": {
           "id": "cmpyvxja303t6sli3dok90v7m",
           "titleEn": "Radiance fields are only as good as the images behind them. PPISP helps compensate for photometric…",
@@ -348,7 +225,7 @@
         "originalUrl": "https://www.ithome.com/0/959/607.htm",
         "recommendedReason": "联合国大学水、环境与健康研究所报告指出，受AI需求驱动，去年全球数据中心耗电448太瓦时（AI占五分之一），耗水4.5万亿升，碳排放1.89亿吨。预计到2030年，年耗电量将翻倍至945太瓦时（AI占40%），耗水增至9.3万亿升，碳排放升至3.99亿吨，占地面积从6900平方公里扩展至14500平方公里。报告警告若忽视环境成本，AI落地还将加剧土地紧张与电子废弃物问题。",
         "publishedAt": "2026-06-04T00:50:46.000Z",
-        "collectedAt": "2026-06-04T02:50:59.880Z",
+        "collectedAt": "2026-06-04T05:04:56.677Z",
         "raw": {
           "id": "cmpysu6gj030usli3gqo1qtsd",
           "titleEn": "联合国报告警示：AI 驱动下，2030 年数据中心水电消耗将翻倍",
@@ -368,7 +245,7 @@
         "originalUrl": "https://x.com/xai/status/2062294202625696081",
         "recommendedReason": "在 @Cloudflare 的 AI Gateway 上尝试 Grok 模型！",
         "publishedAt": "2026-06-03T22:03:48.000Z",
-        "collectedAt": "2026-06-04T02:50:59.880Z",
+        "collectedAt": "2026-06-04T05:04:56.677Z",
         "raw": {
           "id": "cmpymcfaz01b5sli3o5nw1ytc",
           "titleEn": "Try Grok models on @Cloudflare's AI Gateway！",
@@ -388,7 +265,7 @@
         "originalUrl": "https://x.com/openclaw/status/2062288421406785710",
         "recommendedReason": "OpenClaw 2026.6.1 已上线 🦞 🪟 原生 Windows 节点主机 🛠️ 用于自主学习型智能体的技能工坊（Skill Workshop） 📋 工作板（Workboard）编排 🧠 支持 MiniMax M3 Windows 加入集群。无需企鹅服。 https：//github.com/openclaw/openclaw/releases/tag/v2026.6.1",
         "publishedAt": "2026-06-03T21:40:49.000Z",
-        "collectedAt": "2026-06-04T02:50:59.880Z",
+        "collectedAt": "2026-06-04T05:04:56.677Z",
         "raw": {
           "id": "cmpymda2v01bdsli35e5jhioh",
           "titleEn": "OpenClaw 2026.6.1 is live 🦞 🪟 native Windows node host 🛠️ Skill Workshop for self-learning agent…",
@@ -408,7 +285,7 @@
         "originalUrl": "https://simonwillison.net/2026/Jun/3/uber-caps-usage",
         "recommendedReason": "优步将 AI 工具每月使用上限定为 1500 美元，这一做法为行业 AI 工具定价提供了有价值的参考信号。",
         "publishedAt": "2026-06-03T19:00:08.294Z",
-        "collectedAt": "2026-06-04T02:50:59.880Z",
+        "collectedAt": "2026-06-04T05:04:56.677Z",
         "raw": {
           "id": "cmpyfwtdf04rzslaxxzkal9na",
           "titleEn": "优步每月1，500美元的AI使用上限为AI工具定价提供了有价值的参考",
@@ -428,7 +305,7 @@
         "originalUrl": "https://x.com/drfeifei/status/2062247238143996275",
         "recommendedReason": "World Labs团队与李飞飞发文，梳理\"世界模型\"这一被滥用的术语。对比语言模型学习文本统计，世界模型学习空间与时间统计（如光照、物理规律）。基于部分可观马尔可夫决策过程（POMDP）框架，智能体通过动作影响世界状态，观测是部分视图。当前被称为\"世界模型\"的不同系统本质上是同一循环的不同投影：第一类为渲染器，输出给人眼看的像素，以视觉保真度为核心。文章着重于概念分层，未给出具体模型名、参数或基准分数。",
         "publishedAt": "2026-06-03T18:57:10.000Z",
-        "collectedAt": "2026-06-04T02:50:59.880Z",
+        "collectedAt": "2026-06-04T05:04:56.677Z",
         "raw": {
           "id": "cmpygbyx004v6slax1d1lqpuz",
           "titleEn": "http：//x.com/i/article/2062244283940544512",
@@ -448,7 +325,7 @@
         "originalUrl": "https://research.google/blog/the-next-chapter-in-flood-resilience-open-sourcing-googles-hydrology-framework",
         "recommendedReason": "Google Research 在 GitHub 开源了其水文建模框架，这是一个基于 PyTorch 的 Python 包，采用与 Flood Hub 河段洪水预报相同的模型架构和训练数据。该框架允许研究者和预报员训练 AI 洪水预报模型、添加新模型与数据，并已与捷克水文气象研究所（CHMI）等合作测试。开放模型架构和训练管线旨在让各国气象水文部门在保留数据完全控制权的同时，整合基于 AI 的洪水预报。",
         "publishedAt": "2026-06-03T18:49:39.703Z",
-        "collectedAt": "2026-06-04T02:50:59.880Z",
+        "collectedAt": "2026-06-04T05:04:56.677Z",
         "raw": {
           "id": "cmpyf82jy04juslax1zjpx7gd",
           "titleEn": "The next chapter in flood resilience： Open sourcing Google's hydrology framework",
@@ -468,13 +345,134 @@
         "originalUrl": "https://x.com/nvidia/status/2062228974273716457",
         "recommendedReason": "智能体AI时代来了。 从台北，黄仁勋与@satyanadella共同出席#MSBuild，展示NVIDIA与@Microsoft如何携手构建，从Windows设备到规模化AI工厂。 ▶️ 观看对话：https：//nvda.ws/4uefQbs",
         "publishedAt": "2026-06-03T17:44:36.000Z",
-        "collectedAt": "2026-06-04T02:50:59.880Z",
+        "collectedAt": "2026-06-04T05:04:56.677Z",
         "raw": {
           "id": "cmpydnyp4045mslaxffsskvf4",
           "titleEn": "The agentic AI era is here. From Taipei， Jensen Huang joined @satyanadella at #MSBuild to show how …",
           "apiCategory": "ai-products"
         }
+      },
+      {
+        "id": "aihot:cmpyd2ph203z9slaxfwx9nd13",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Ideogram v4.0 发布：2K 分辨率和 JSON 提示支持",
+        "url": "https://x.com/krea_ai/status/2062227837130887567",
+        "summary": "介绍 Ideogram v4.0。 原生 2K 分辨率，出色的文字渲染，支持 JSON 提示词。 立即在 Krea 中体验。",
+        "description": "介绍 Ideogram v4.0。 原生 2K 分辨率，出色的文字渲染，支持 JSON 提示词。 立即在 Krea 中体验。",
+        "category": "models",
+        "originalSource": "X：Krea AI (@krea_ai)",
+        "originalUrl": "https://x.com/krea_ai/status/2062227837130887567",
+        "recommendedReason": "介绍 Ideogram v4.0。 原生 2K 分辨率，出色的文字渲染，支持 JSON 提示词。 立即在 Krea 中体验。",
+        "publishedAt": "2026-06-03T17:40:05.000Z",
+        "collectedAt": "2026-06-04T05:04:56.677Z",
+        "raw": {
+          "id": "cmpyd2ph203z9slaxfwx9nd13",
+          "titleEn": "introducing Ideogram v4.0. 2k native resolution， excellent text rendering， and support for JSON pr…",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmpyc4uab03qgslaxgjm4awp6",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Anthropic 用 Claude 赋能自助数据分析",
+        "url": "https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude",
+        "summary": "Anthropic 使用 Claude 自动化了 95% 的业务分析查询，整体准确率约 95%。其关键在于构建智能体分析栈（agentic analytics stack），通过数据基础层、维护验证流程和技能（skills）分别解决概念-实体歧义、数据过时和检索失败三大错误来源。相比编码场景，数据分析的难点在于将用户问题映射到正确的数据实体，而执行 SQL 反而是简单的。Anthropic 的数据科学团队因此得以专注于因果建模、预测和机器学习等战略工作。",
+        "description": "Anthropic 使用 Claude 自动化了 95% 的业务分析查询，整体准确率约 95%。其关键在于构建智能体分析栈（agentic analytics stack），通过数据基础层、维护验证流程和技能（skills）分别解决概念-实体歧义、数据过时和检索失败三大错误来源。相比编码场景，数据分析的难点在于将用户问题映射到正确的数据实体，而执行 SQL 反而是简单的。Anthropic 的数据科学团队因此得以专注于因果建模、预测和机器学习等战略工作。",
+        "category": "tools",
+        "originalSource": "Claude：Blog（网页）",
+        "originalUrl": "https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude",
+        "recommendedReason": "Anthropic 使用 Claude 自动化了 95% 的业务分析查询，整体准确率约 95%。其关键在于构建智能体分析栈（agentic analytics stack），通过数据基础层、维护验证流程和技能（skills）分别解决概念-实体歧义、数据过时和检索失败三大错误来源。相比编码场景，数据分析的难点在于将用户问题映射到正确的数据实体，而执行 SQL 反而是简单的。Anthropic 的数据科学团队因此得以专注于因果建模、预测和机器学习等战略工作。",
+        "publishedAt": "2026-06-03T17:23:16.528Z",
+        "collectedAt": "2026-06-04T05:04:56.677Z",
+        "raw": {
+          "id": "cmpyc4uab03qgslaxgjm4awp6",
+          "titleEn": "How Anthropic enables self-service data analytics with Claude",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmpyb991803i5slaxytpv888x",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Replit上线SEO Agent助应用被发现",
+        "url": "https://x.com/Replit/status/2062211976995188871",
+        "summary": "你发布了你的应用。然后呢？ 你的应用可能看起来很棒，但如果没人能找到它，它就依然不可见。 发布只是开始。 认识一下SEO Agent。它会为你运行一次扫描，并建议修复措施，帮助你的应用在网页搜索和AI搜索中被发现。",
+        "description": "你发布了你的应用。然后呢？ 你的应用可能看起来很棒，但如果没人能找到它，它就依然不可见。 发布只是开始。 认识一下SEO Agent。它会为你运行一次扫描，并建议修复措施，帮助你的应用在网页搜索和AI搜索中被发现。",
+        "category": "products",
+        "originalSource": "X：Replit (@Replit)",
+        "originalUrl": "https://x.com/Replit/status/2062211976995188871",
+        "recommendedReason": "你发布了你的应用。然后呢？ 你的应用可能看起来很棒，但如果没人能找到它，它就依然不可见。 发布只是开始。 认识一下SEO Agent。它会为你运行一次扫描，并建议修复措施，帮助你的应用在网页搜索和AI搜索中被发现。",
+        "publishedAt": "2026-06-03T16:37:04.000Z",
+        "collectedAt": "2026-06-04T05:04:56.677Z",
+        "raw": {
+          "id": "cmpyb991803i5slaxytpv888x",
+          "titleEn": "You shipped your app. Now what？ Your app may look great， but if no one can find it， it stays invisi…",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmpyayd9g03ebslaxqumvlu4w",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Miso One 开源语音模型：8B 参数、110ms 延迟、一次语音克隆",
+        "url": "https://x.com/kimmonismus/status/2062210845308780639",
+        "summary": "Miso One 正式发布，一个 8B 参数的开源权重语音模型（TTS），旨在模拟真实人类朗读的温暖与节奏。它支持一次语音克隆（只需短样本），推理延迟仅 110ms。模型权重已开源至 GitHub，无需 API 即可自托管，音频数据不离开本地。API 访问即将推出。演示已上线，可先试听再克隆仓库。",
+        "description": "Miso One 正式发布，一个 8B 参数的开源权重语音模型（TTS），旨在模拟真实人类朗读的温暖与节奏。它支持一次语音克隆（只需短样本），推理延迟仅 110ms。模型权重已开源至 GitHub，无需 API 即可自托管，音频数据不离开本地。API 访问即将推出。演示已上线，可先试听再克隆仓库。",
+        "category": "models",
+        "originalSource": "X：Kim (@kimmonismus)",
+        "originalUrl": "https://x.com/kimmonismus/status/2062210845308780639",
+        "recommendedReason": "Miso One 正式发布，一个 8B 参数的开源权重语音模型（TTS），旨在模拟真实人类朗读的温暖与节奏。它支持一次语音克隆（只需短样本），推理延迟仅 110ms。模型权重已开源至 GitHub，无需 API 即可自托管，音频数据不离开本地。API 访问即将推出。演示已上线，可先试听再克隆仓库。",
+        "publishedAt": "2026-06-03T16:32:34.000Z",
+        "collectedAt": "2026-06-04T05:04:56.677Z",
+        "raw": {
+          "id": "cmpyayd9g03ebslaxqumvlu4w",
+          "titleEn": "Miso One is live： an open-weights voice model built to sound like a real person reading， with actual…",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmpyaf8yv039jslaxi30g4ylg",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "OpenShell v0.0.55 发布：新增 Vertex AI 推理支持",
+        "url": "https://x.com/NVIDIAAI/status/2062210034109677665",
+        "summary": "OpenShell v0.0.55 🧩 Google Vertex AI 推理提供者 🔒 基于配置文件的策略可见性 🐳 网关中更好的 Podman 检测 🖥️ 恢复 GPU procfs 基准行为 🔧 CI 与文档修复 运行智能体对接 Vertex AI，同时拥有改进的策略可见性以及更可靠的 Podman 和 GPU 沙箱行为。 https：//github.com/NVIDIA/OpenShell/releases/tag/v0.0.55",
+        "description": "OpenShell v0.0.55 🧩 Google Vertex AI 推理提供者 🔒 基于配置文件的策略可见性 🐳 网关中更好的 Podman 检测 🖥️ 恢复 GPU procfs 基准行为 🔧 CI 与文档修复 运行智能体对接 Vertex AI，同时拥有改进的策略可见性以及更可靠的 Podman 和 GPU 沙箱行为。 https：//github.com/NVIDIA/OpenShell/releases/tag/v0.0.55",
+        "category": "products",
+        "originalSource": "X：NVIDIA AI (@NVIDIAAI)",
+        "originalUrl": "https://x.com/NVIDIAAI/status/2062210034109677665",
+        "recommendedReason": "OpenShell v0.0.55 🧩 Google Vertex AI 推理提供者 🔒 基于配置文件的策略可见性 🐳 网关中更好的 Podman 检测 🖥️ 恢复 GPU procfs 基准行为 🔧 CI 与文档修复 运行智能体对接 Vertex AI，同时拥有改进的策略可见性以及更可靠的 Podman 和 GPU 沙箱行为。 https：//github.com/NVIDIA/OpenShell/releases/tag/v0.0.55",
+        "publishedAt": "2026-06-03T16:29:20.000Z",
+        "collectedAt": "2026-06-04T05:04:56.677Z",
+        "raw": {
+          "id": "cmpyaf8yv039jslaxi30g4ylg",
+          "titleEn": "OpenShell v0.0.55 🧩 Google Vertex AI inference provider 🔒 Profile-backed policy visibility 🐳 B…",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmpyacsh5038rslaxlh6udycy",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "微软研究：装瓶厂AI从聊天到决策",
+        "url": "https://x.com/MSFTResearch/status/2062204914223169635",
+        "summary": "一份在中西部装瓶厂进行的三个月试点显示，当AI超越聊天进入决策领域时会发生什么--约束条件变化、风险真实、答案必须可靠。 https：//msft.it/6015vjYUN",
+        "description": "一份在中西部装瓶厂进行的三个月试点显示，当AI超越聊天进入决策领域时会发生什么--约束条件变化、风险真实、答案必须可靠。 https：//msft.it/6015vjYUN",
+        "category": "papers",
+        "originalSource": "X：Microsoft Research (@MSFTResearch)",
+        "originalUrl": "https://x.com/MSFTResearch/status/2062204914223169635",
+        "recommendedReason": "一份在中西部装瓶厂进行的三个月试点显示，当AI超越聊天进入决策领域时会发生什么--约束条件变化、风险真实、答案必须可靠。 https：//msft.it/6015vjYUN",
+        "publishedAt": "2026-06-03T16:09:00.000Z",
+        "collectedAt": "2026-06-04T05:04:56.677Z",
+        "raw": {
+          "id": "cmpyacsh5038rslaxlh6udycy",
+          "titleEn": "A three-month pilot in a Midwestern bottling plant shows what happens when AI moves beyond chat and …",
+          "apiCategory": "paper"
+        }
       }
-    ]
+    ],
+    "crossSourceHighlights": []
   }
 }
