@@ -4706,5 +4706,95 @@
     },
     "createdAt": "2026-06-05T12:23:15.987Z",
     "model": "deepseek-v4-flash"
+  },
+  "mvanhorn/last30days-skill:2026-06-01T14:41:33Z": {
+    "summary": {
+      "oneLiner": "An AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web, then synthesizes a grounded summary.",
+      "problemSolved": "Traditional search engines and individual AI models are walled off from each other—Google doesn't index Reddit comments or X posts, ChatGPT has Reddit but not X, Gemini has YouTube but not Reddit. This skill bridges a dozen disconnected platforms into one parallel search, scoring results by real engagement (upvotes, likes, money) rather than SEO.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sustained_hot",
+      "whyNow": "With 28,083 stars, 2,386 forks, and a 24-hour delta of +814 stars, this project is experiencing sustained high attention. The acceleration ratio is 1 (low), indicating steady organic growth rather than a sudden spike. The recent v3 release and active commits (within 7 days) keep the momentum fresh.",
+      "whatChanged": "The v3 pipeline introduced shareable HTML briefs, intelligent pre-research (entity resolution), cross-source cluster merging, single-pass comparisons, and auto-discovered competitor comparisons. These features significantly improved the depth and speed of research, likely driving the sustained interest.",
+      "whyTrending": "It solves a real pain point for developers and knowledge workers who need to quickly synthesize information from multiple social platforms and prediction markets—something no single tool does natively. The zero-config setup and broad host support (Claude Code, Cursor, Copilot, Gemini CLI, etc.) lower the barrier to adoption.",
+      "developerTakeaway": "This is a practical, production-ready agent skill that demonstrates how to orchestrate multiple APIs and LLM calls into a coherent research workflow. It's a strong reference for building multi-source AI agents.",
+      "developerInsight": "The project signals a shift toward agent-based research that bypasses traditional search engines. For AI developers, it shows the value of bridging walled-garden platforms and using engagement signals (upvotes, likes, market odds) as ranking signals. The modular skill architecture (via Agent Skills) is a pattern worth adopting.",
+      "targetUsers": "Developers, researchers, product managers, sales professionals, and anyone who needs to quickly understand what's happening on social media and the web about a person, company, or topic.",
+      "riskNotes": "The project relies on third-party APIs (Reddit, X, YouTube, etc.) that may change terms or require authentication. The README mentions bringing your own keys and browser sessions, which adds setup friction. The 96 open issues suggest active maintenance but also potential bugs or feature requests.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T16:11:50.127Z",
+    "model": "deepseek-v4-flash"
+  },
+  "github/copilot-sdk:2026-06-05T00:13:32Z": {
+    "summary": {
+      "oneLiner": "GitHub's official multi-language SDK to embed Copilot's agent runtime into any application.",
+      "problemSolved": "Developers who want to integrate Copilot's agentic workflows (planning, tool use, file editing) into their own apps previously had to build custom orchestration or rely on the CLI alone. This SDK provides a programmatic, production-tested interface across six languages, handling CLI lifecycle, authentication, and JSON-RPC communication.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 9,165 stars and a 24-hour delta of +347, the repo is experiencing sustained high attention. The acceleration ratio is low (1.0), indicating steady organic growth rather than a sudden spike. This consistent velocity suggests broad developer interest in embedding Copilot capabilities, likely driven by the recent release of multi-language SDKs and BYOK support.",
+      "whatChanged": "The repository has a recent release within 30 days and recent commits within 7 days. The README details new SDKs for Java, Rust, and Go, along with BYOK (Bring Your Own Key) support, which likely expanded the addressable audience. No single external trigger (e.g., HN post) is identifiable, but the sustained growth aligns with the SDK's maturation and GitHub's push for Copilot extensibility.",
+      "whyTrending": "It's the official SDK from GitHub for embedding Copilot's agent runtime, covering six languages, with production-ready status, BYOK support, and a rich documentation suite. Developers see it as the standard way to build Copilot-powered tools without reinventing orchestration.",
+      "developerTakeaway": "If you're building an AI-assisted coding tool, IDE plugin, or automation pipeline, this SDK saves months of work by providing a battle-tested agent runtime. The multi-language support and BYOK option lower adoption barriers for teams with diverse stacks.",
+      "developerInsight": "This signals a shift from using Copilot as a standalone assistant to embedding it as a platform component. The SDK's architecture (JSON-RPC over CLI) and BYOK support indicate GitHub is positioning Copilot as an extensible agent framework, not just a chat tool. Developers should watch for ecosystem growth around custom agents, skills, and MCP integration.",
+      "targetUsers": "Developers building AI-powered coding tools, IDE extensions, CI/CD pipelines, or any application that needs autonomous code generation, editing, and planning capabilities. Also relevant for teams wanting to integrate Copilot into proprietary workflows without exposing users to the CLI.",
+      "riskNotes": "Requires a GitHub Copilot subscription for standard usage (though BYOK mitigates this). The SDK is tied to the Copilot CLI, so any changes to CLI behavior or pricing could impact SDK functionality. Community SDKs for Clojure and C++ are unofficial and unsupported.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T16:11:50.677Z",
+    "model": "deepseek-v4-flash"
+  },
+  "lfnovo/open-notebook:2026-06-04T17:07:02Z": {
+    "summary": {
+      "oneLiner": "Open-source, self-hosted alternative to Google Notebook LM with multi-model AI support, podcast generation, and privacy-first design.",
+      "problemSolved": "Provides a fully customizable, private, and local alternative to Google's Notebook LM, allowing users to control their data, choose from 18+ AI providers, and avoid vendor lock-in.",
+      "aiCategory": "Other AI",
+      "trendType": "sustained_hot",
+      "whyNow": "The project has 25,724 stars and gained 1,304 stars in the last 24 hours, indicating strong and sustained attention. The acceleration ratio is 1 (low), suggesting steady organic growth rather than a sudden spike. This consistent velocity makes it a reliable project to watch for developers interested in AI-powered note-taking and research tools.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The recent release (within 30 days) and active commits (within 7 days) suggest ongoing development, but no specific external event (e.g., HN front page, major announcement) is evident from the metadata.",
+      "whyTrending": "It fills a clear gap for users who want a privacy-respecting, self-hosted alternative to Notebook LM, with extensive AI provider support and podcast features. The combination of open-source flexibility and practical utility resonates with developers and researchers.",
+      "developerTakeaway": "This project demonstrates strong demand for self-hosted AI tools that offer model choice and data sovereignty. Developers can learn from its architecture (Next.js, SurrealDB, LangChain) and consider contributing to its ecosystem.",
+      "developerInsight": "Signals a shift toward decentralized AI applications where users demand control over data and model selection. The multi-provider approach reduces dependency on single vendors and aligns with the growing 'local-first' AI movement.",
+      "targetUsers": "Developers, researchers, privacy-conscious users, and anyone seeking a customizable alternative to Notebook LM for note-taking, research, and podcast generation.",
+      "riskNotes": "Project is relatively new and may have stability issues. Self-hosting requires technical expertise. The 146 open issues indicate active development but also potential bugs or feature gaps.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T16:11:57.673Z",
+    "model": "deepseek-v4-flash"
+  },
+  "NVIDIA/cosmos:2026-06-05T05:18:59Z": {
+    "summary": {
+      "oneLiner": "NVIDIA Cosmos is an open platform of world models, datasets, and tools for building Physical AI in robotics, autonomous vehicles, and smart infrastructure.",
+      "problemSolved": "It provides a unified framework for world understanding, generation, and action modeling, enabling developers to simulate, reason, and generate multimodal data for Physical AI applications without building from scratch.",
+      "aiCategory": "World Models / Physical AI / Multimodal Generation",
+      "trendType": "sustained_hot",
+      "whyNow": "With 9,325 stars and a 24-hour delta of +550, the project shows strong sustained interest. The acceleration ratio is low (1), indicating steady growth rather than a sudden spike, but the high star count and recent release (Cosmos 3) signal ongoing relevance.",
+      "whatChanged": "The recent release of Cosmos 3, a new model family with omnimodal capabilities (text, image, video, audio, action), is the likely trigger. The README was updated with detailed documentation, quickstart guides, and model cards, coinciding with the star surge.",
+      "whyTrending": "NVIDIA's brand, the open-source release of a frontier-scale world model (64B parameters), and the growing interest in Physical AI for robotics and autonomous systems drive attention. The unified Reasoner/Generator framework is novel and practical.",
+      "developerTakeaway": "Cosmos 3 offers a ready-to-use platform for multimodal world modeling, with pre-trained models, inference benchmarks, and finetuning recipes. Developers can quickly prototype Physical AI applications using Diffusers or vLLM-Omni.",
+      "developerInsight": "This signals a shift toward unified multimodal models that combine reasoning and generation, reducing the need for separate vision-language, video generation, and action models. It lowers the barrier for robotics and autonomous driving research.",
+      "targetUsers": "Robotics researchers, autonomous vehicle engineers, AI developers building physical world simulators, and companies needing synthetic data generation for embodied AI.",
+      "riskNotes": "The models are large (16B-64B) and require high-end NVIDIA GPUs (Ampere/Hopper/Blackwell). The ecosystem is NVIDIA-centric, which may limit portability. Some features (e.g., post-training recipes) are marked 'Coming Soon'.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T16:11:58.775Z",
+    "model": "deepseek-v4-flash"
+  },
+  "ToolJet/ToolJet:2026-06-05T16:02:45Z": {
+    "summary": {
+      "oneLiner": "ToolJet is an open-source low-code platform for building internal tools, dashboards, workflows, and AI agents with drag-and-drop simplicity and extensive data source integrations.",
+      "problemSolved": "Engineering teams spend too much time building and maintaining internal tools, dashboards, and workflows. ToolJet provides a low-code environment to rapidly create these applications without heavy engineering effort, integrating with databases, APIs, and SaaS tools.",
+      "aiCategory": "AI Workflow Automation",
+      "trendType": "sudden_breakout",
+      "whyNow": "ToolJet has 37,984 stars and a sudden breakout trend with a 3.8 acceleration ratio (high, >2.0). The 24h star delta is 15, and 7-day average is 5.5 stars/day. This indicates a sharp increase in attention, likely driven by recent releases or community events.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. However, the high acceleration and recent release (within 30 days) suggest a new version or feature may have sparked renewed interest.",
+      "whyTrending": "ToolJet combines low-code app building with AI agent capabilities, a hot topic. Its self-hosted, open-source nature appeals to enterprises wanting control. The recent push into AI workflow automation aligns with market demand.",
+      "developerTakeaway": "ToolJet is a strong candidate for teams needing to quickly build internal tools with minimal code. Its plugin system and support for JS/Python make it extensible. The AI agent feature positions it for future automation use cases.",
+      "developerInsight": "For AI developers, ToolJet signals a shift toward integrating AI agents into low-code platforms, enabling non-engineers to build AI-powered workflows. This could reduce the barrier to deploying AI in business processes.",
+      "targetUsers": "Engineering teams, product builders, and IT departments needing to create internal tools, dashboards, and automated workflows without heavy development. Also suitable for no-code enthusiasts and AI workflow builders.",
+      "riskNotes": "Competition from established low-code platforms (Retool, Budibase) and the complexity of self-hosting may limit adoption. The AGPL license could deter some commercial users. The AI agent feature is still nascent.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T16:12:05.002Z",
+    "model": "deepseek-v4-flash"
   }
 }
