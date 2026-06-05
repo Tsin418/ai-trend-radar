@@ -4526,5 +4526,77 @@
     },
     "createdAt": "2026-06-05T04:52:45.669Z",
     "model": "deepseek-v4-flash"
+  },
+  "aquasecurity/trivy:2026-06-05T08:41:49Z": {
+    "summary": {
+      "oneLiner": "Trivy is a comprehensive open-source security scanner for containers, Kubernetes, code repositories, and cloud environments.",
+      "problemSolved": "It unifies vulnerability detection, misconfiguration scanning, secret discovery, and SBOM generation into a single tool, eliminating the need for multiple specialized scanners.",
+      "aiCategory": "DevSecOps / Security Tooling",
+      "trendType": "sustained_hot",
+      "whyNow": "With 35,741 stars and a 24-hour delta of +349, Trivy shows strong sustained growth. The acceleration is low (1.0), indicating steady organic interest rather than a sudden spike. It has recent releases and commits within 7 days, confirming active maintenance. This is a mature, trusted tool that continues to gain adoption across the DevSecOps community.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The consistent star velocity and frequent releases suggest ongoing improvements and community trust.",
+      "whyTrending": "Trivy addresses the growing need for integrated security scanning in CI/CD pipelines, especially with the rise of Kubernetes and IaC. Its broad coverage (containers, filesystems, Git repos, VMs, K8s) and ease of use make it a go-to choice for developers and security teams.",
+      "developerTakeaway": "Trivy is a must-have in any modern DevSecOps stack. It simplifies security scanning by covering multiple targets and scanners in one CLI, reducing toolchain complexity.",
+      "developerInsight": "For AI developers, Trivy's integration with GitHub Actions, VS Code, and Kubernetes operator signals a shift toward embedding security early in the development lifecycle. Its SBOM capabilities also align with supply chain security requirements.",
+      "targetUsers": "DevOps engineers, security engineers, platform engineers, and developers working with containers, Kubernetes, or cloud-native applications.",
+      "riskNotes": "As a comprehensive tool, Trivy may produce false positives or require tuning for specific environments. Users should validate findings and configure scanners appropriately.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T08:55:25.606Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-05T08:52:13Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go for performance and prefix-cache stability.",
+      "problemSolved": "Provides a configurable, plugin-driven AI coding assistant that runs as a single static binary, optimized for DeepSeek's prefix caching to reduce token costs during long sessions.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 18,264 stars, a 24-hour delta of +890, and a 7-day delta of +5,269, this project is experiencing sustained high growth. The acceleration ratio of 1.4 indicates steady, not explosive, growth, but the consistent high velocity (7-day avg +770 stars/day) and top rankings in Agents, LLMs, and CLI categories signal strong community adoption.",
+      "whatChanged": "The recent 1.0 rewrite from TypeScript to Go, along with a new release within the last 30 days, likely drove renewed interest. The README emphasizes the migration and new features like MCP support and sandboxing.",
+      "whyTrending": "It combines the popularity of DeepSeek models with a polished, developer-friendly terminal experience, offering low token costs via prefix caching and extensive configurability.",
+      "developerTakeaway": "A practical, production-ready coding agent that leverages DeepSeek's strengths and can be easily integrated into existing workflows via npm or Homebrew.",
+      "developerInsight": "Signals a shift toward specialized, model-native agents that optimize for cost and performance, and away from generic LLM wrappers. The Go rewrite and MCP support indicate a focus on speed and extensibility.",
+      "targetUsers": "Developers who use DeepSeek models and want a terminal-based AI coding assistant with fine-grained control over permissions, tools, and models.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix caching; changes in DeepSeek's pricing or API could impact value. The project is still relatively new (1.0) with 255 open issues, indicating active development but potential instability.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T08:55:25.718Z",
+    "model": "deepseek-v4-flash"
+  },
+  "HKUDS/nanobot:2026-06-05T08:52:22Z": {
+    "summary": {
+      "oneLiner": "An ultra-lightweight, open-source AI agent runtime that lets you own your entire agent stack with WebUI, chat channels, tools, memory, MCP, and model routing.",
+      "problemSolved": "Developers and teams need a lightweight, self-hosted AI agent that integrates with multiple LLM providers, chat platforms, and tools without vendor lock-in or heavy infrastructure.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sudden_breakout",
+      "whyNow": "The repo has 43,707 stars and is accelerating sharply: 111 stars in the last 24 hours, a 7-day average of 44.6 stars/day, and an acceleration ratio of 2.2 (high). This sudden breakout signals a rapid surge in attention, likely driven by the recent v0.2.1 release and sustained daily improvements.",
+      "whatChanged": "The project released v0.2.1 on 2026-06-01, dubbed 'The Workbench Release,' which turned the WebUI into a daily agent workbench with clearer thought/response timelines, live file-edit activity, project workspaces, model and context controls, CLI Apps + MCP extensions, and broader provider/channel support. Daily commits and releases throughout May 2026 show intense development velocity.",
+      "whyTrending": "It combines a hot topic (AI agents) with a practical, self-contained package that includes a WebUI, multi-channel chat, tool integration, and MCP support — all in a lightweight Python runtime. The rapid release cadence and active community (7,734 forks, 853 open issues) signal a project that is both useful and actively maintained.",
+      "developerTakeaway": "If you want to build or deploy AI agents without relying on a single vendor or heavy framework, nanobot offers a modular, extensible runtime that you can run locally or on your own infrastructure. Its support for multiple LLM providers, chat channels, and MCP makes it a versatile foundation for agentic workflows.",
+      "developerInsight": "The project's architecture — small core, plugin-based tools, MCP integration, and built-in WebUI — reflects a growing trend toward composable, self-hosted AI agent stacks. Developers should watch this space for patterns in agent runtime design, especially the balance between simplicity and extensibility.",
+      "targetUsers": "Developers and teams building custom AI agents for personal or production use, especially those who want to own their stack, integrate with multiple chat platforms, and avoid vendor lock-in.",
+      "riskNotes": "The project is very new (first release in April 2026) and evolving rapidly, which may lead to breaking changes. With 853 open issues, some stability concerns exist. The high star count may be inflated by hype; evaluate the codebase for your specific needs.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T08:55:34.570Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-05T08:53:09Z": {
+    "summary": {
+      "oneLiner": "Open Design is a local-first, open-source alternative to Claude Design that turns your laptop into an agent-native design studio with 259+ skills, 142+ design systems, and support for 21 coding agents.",
+      "problemSolved": "Design tools today are either closed SaaS (Figma, Claude Design) or require manual pixel-pushing. Open Design lets coding agents generate prototypes, decks, images, and videos directly from a design system (DESIGN.md) and export to HTML/PDF/PPTX/MP4 — all locally, without a cloud subscription.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 59,123 stars, a 24h delta of +986, and a 7-day average of +569 stars/day, Open Design is sustaining explosive growth. The acceleration ratio of 1.9 (just below the sudden breakout threshold) indicates a steady, powerful momentum — not a one-day spike. The recent 0.9.0 release with built-in Model Router removes setup friction, likely fueling adoption.",
+      "whatChanged": "The 0.9.0 release (within 30 days) introduced an official Model Router built into the app, eliminating the need for CLI installation or API key configuration. This lowers the barrier to entry significantly, which aligns with the sustained star acceleration.",
+      "whyTrending": "It combines two hot trends: agent-native workflows (Claude Code, Cursor, etc.) and the desire for open-source, local-first design tools. By supporting 21 coding agents and offering a Figma-like output without the canvas, it appeals to developers who want AI-generated designs that are immediately usable in code.",
+      "developerTakeaway": "Open Design redefines design as a code-native, agent-driven process. Developers can now generate production-ready UI artifacts from a brief, using their existing coding agent, and export to multiple formats. It's a paradigm shift from pixel-pushing to prompt-driven design systems.",
+      "developerInsight": "This signals a major workflow shift: design is becoming a CLI/MCP tool that agents consume. For AI developers, this means building agent-compatible design systems (DESIGN.md) and plugins will be a new integration surface. The BYOK proxy and MCP server pattern make it easy to plug into any agent stack.",
+      "targetUsers": "Developers and designers who use AI coding agents (Claude Code, Cursor, Codex, etc.) and want to generate design artifacts locally without a cloud dependency. Also teams looking for an open-source Figma alternative that integrates with their existing agent workflows.",
+      "riskNotes": "The project is still in 0.9.0 (pre-1.0), so stability and API changes are possible. It relies on external coding agents and their MCP support, which could break if those agents change their interfaces. The 333 open issues suggest active development but also potential bugs.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T08:55:34.997Z",
+    "model": "deepseek-v4-flash"
   }
 }
