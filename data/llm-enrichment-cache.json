@@ -4490,5 +4490,41 @@
     },
     "createdAt": "2026-06-05T04:48:09.620Z",
     "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-05T04:50:25Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go for performance and prefix-cache stability.",
+      "problemSolved": "Provides a configurable, plugin-driven AI coding assistant that leverages DeepSeek's prefix caching to reduce token costs during long sessions, with a single static binary for easy distribution.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "The repo is experiencing explosive growth with 18,141 stars, a 24-hour delta of +767, and a 7-day average delta of 1,141.8. The acceleration ratio of 0.8 indicates sustained high velocity, not a sudden spike. This is a top-3 project by velocity in Agents, LLMs, and CLI categories on OOSMetrics, signaling strong and consistent community interest.",
+      "whatChanged": "The recent 1.0 release (ground-up rewrite in Go) and the migration from TypeScript to Go binary likely drove attention. The README highlights this as a major shift, and the project has active commits within the last 7 days.",
+      "whyTrending": "Combines the popularity of DeepSeek models with a polished terminal UX, plugin system (MCP), and zero-friction install. The Go rewrite promises better performance and cache stability, appealing to developers who want a reliable, cost-effective coding agent.",
+      "developerTakeaway": "A strong example of how to build a developer tool around a specific LLM's strengths (prefix caching) while maintaining model-agnostic extensibility. The config-driven design and plugin architecture lower the barrier for customization.",
+      "developerInsight": "Signals a shift toward specialized, LLM-optimized agents that prioritize cost efficiency and long-running sessions. The Go rewrite shows that performance and distribution simplicity are key differentiators in the AI agent space.",
+      "targetUsers": "Developers using DeepSeek models who want a terminal-based AI coding assistant with configurable tools, permissions, and plugin support. Also relevant for teams seeking a self-hosted, cost-effective alternative to cloud-based coding agents.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix caching; if DeepSeek changes pricing or caching behavior, the value proposition may weaken. The project is still early (1.0), with 264 open issues, so stability and maturity are evolving.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T04:52:43.875Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-05T04:49:29Z": {
+    "summary": {
+      "oneLiner": "Local-first, open-source desktop app that turns coding agents into design engines, generating prototypes, slides, images, and videos from natural language briefs.",
+      "problemSolved": "Design tools are either closed (Figma, Claude Design) or require manual pixel-pushing. Open Design lets developers and designers use any coding agent (Claude Code, Codex, Cursor, etc.) to generate production-ready artifacts (HTML, PDF, PPTX, MP4) that respect a shared design system, all running locally without cloud lock-in.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 58,972 stars and a sustained 7-day average of 833 new stars per day (24h delta: 835, acceleration: 1.1), this project is in a steady high-growth phase. The recent 0.9.0 release (within 30 days) introduced a built-in Model Router, removing setup friction. The combination of agent-native design, local-first philosophy, and broad CLI support (21 agents) is capturing attention from both the AI and design communities.",
+      "whatChanged": "The 0.9.0 release added an official Model Router that works out of the box — no API key or CLI installation required. This lowers the barrier to entry significantly. The README also highlights a new 'Open Design Fellow' program, signaling community-building efforts.",
+      "whyTrending": "It bridges two hot trends: AI coding agents and design tooling. By making any agent a design engine, it appeals to developers who want to generate UI without leaving their terminal, and to designers who want version-controlled, code-native design systems. The local-first, open-source stance contrasts with Claude Design's closed model, creating a natural alternative.",
+      "developerTakeaway": "If you already use Claude Code, Codex, Cursor, or similar agents, Open Design adds a design layer that outputs real HTML/CSS artifacts. It's worth trying for rapid prototyping, especially if your team wants a shared DESIGN.md as a brand contract.",
+      "developerInsight": "This signals a shift toward agent-native design workflows where the CLI becomes the primary design interface. For AI developers, it means building tools that integrate with multiple agents (MCP server) and output standard formats (HTML, PDF, MP4) is a winning pattern. The local-first approach also addresses privacy and latency concerns that cloud-only tools can't.",
+      "targetUsers": "Developers and designers who use AI coding agents (Claude Code, Codex, Cursor, etc.) and want to generate UI prototypes, slides, or videos from natural language, while maintaining a shared design system. Also teams looking for an open-source alternative to Claude Design or Figma for agent-era workflows.",
+      "riskNotes": "The project is still in early release (0.9.0) with 326 open issues, so stability and polish may vary. It depends on third-party agents and APIs, which could change or break. The broad scope (multiple artifact types, many integrations) may lead to complexity and maintenance challenges.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T04:52:45.669Z",
+    "model": "deepseek-v4-flash"
   }
 }
