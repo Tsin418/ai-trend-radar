@@ -4364,5 +4364,131 @@
     },
     "createdAt": "2026-06-04T23:42:01.818Z",
     "model": "deepseek-v4-flash"
+  },
+  "ToolJet/ToolJet:2026-06-05T04:37:55Z": {
+    "summary": {
+      "oneLiner": "ToolJet is an open-source low-code platform for building internal tools, dashboards, workflows, and AI agents with drag-and-drop ease.",
+      "problemSolved": "It eliminates the need for custom frontend development for internal tools by providing a visual builder, 50+ data source integrations, and self-hosting options, enabling teams to ship apps faster.",
+      "aiCategory": "AI Workflow Automation",
+      "trendType": "sudden_breakout",
+      "whyNow": "With 37,979 stars and a sudden acceleration of 2.3 (high), ToolJet is experiencing a breakout moment. The 24h star delta of 10 and 7-day delta of 35 indicate growing momentum, likely fueled by its AI agent and workflow automation features.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth.",
+      "whyTrending": "ToolJet combines low-code simplicity with AI agent capabilities, self-hosting, and enterprise-grade features, appealing to teams seeking faster internal tool development without vendor lock-in.",
+      "developerTakeaway": "ToolJet is a strong alternative to Retool for teams that want open-source, self-hosted control with AI workflow integration.",
+      "developerInsight": "The rise of AI-powered low-code platforms signals a shift where developers can focus on logic and integrations while the platform handles UI and agent orchestration.",
+      "targetUsers": "Developers and teams building internal tools, dashboards, and business applications who want a self-hosted, low-code solution with AI capabilities.",
+      "riskNotes": "AGPL license may restrict commercial use; reliance on community plugins for some integrations; competition from Retool and other low-code platforms.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T04:47:47.602Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-05T04:19:09Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go for prefix-cache stability and low token costs.",
+      "problemSolved": "Developers need a persistent, config-driven AI coding assistant that leverages DeepSeek's prefix caching to minimize API costs during long sessions, while supporting multi-model orchestration, MCP plugins, and sandboxed tool execution.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 18,141 stars, a 24-hour delta of +767, and a 7-day average of +1,141.8 stars per day, this project is experiencing sustained, high-velocity growth. The acceleration of 0.8 indicates steady momentum rather than a sudden spike, making it a reliable signal of developer interest in DeepSeek-native tooling.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The recent 1.0 rewrite in Go and active community engagement (Discord, frequent releases) likely contribute to continued attention.",
+      "whyTrending": "DeepSeek's rising popularity, combined with the agent's focus on prefix-cache efficiency and a clean Go binary distribution, resonates with developers seeking cost-effective, terminal-based AI coding assistants.",
+      "developerTakeaway": "This project demonstrates how to build a high-performance AI coding agent around a specific LLM's caching strengths, offering a template for optimizing token usage in agentic workflows.",
+      "developerInsight": "The shift from TypeScript to Go for performance and the emphasis on prefix-cache stability signal a trend toward leaner, more cost-aware AI tooling. Developers should consider caching strategies and language choice when building similar agents.",
+      "targetUsers": "Developers using DeepSeek models who want a terminal-based AI coding agent with configurable tools, multi-model support, and sandboxed execution.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix-cache behavior; changes to DeepSeek's pricing or caching model could impact cost benefits. The project is still early (269 open issues), and the Go rewrite may introduce instability.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T04:47:48.562Z",
+    "model": "deepseek-v4-flash"
+  },
+  "affaan-m/ECC:2026-06-04T23:00:53Z": {
+    "summary": {
+      "oneLiner": "A harness-native operator system that optimizes AI agent performance across multiple coding assistants like Claude Code, Cursor, and Codex.",
+      "problemSolved": "It solves the fragmentation and inefficiency of using AI coding agents by providing a unified system of skills, memory, security, and workflow optimization that works across different agent harnesses.",
+      "aiCategory": "MCP / Tool Calling",
+      "trendType": "sustained_hot",
+      "whyNow": "With 207K stars, a 24h delta of 1771 stars, and a 7-day average of 1819.5 stars, this project is experiencing sustained high-velocity growth. The acceleration ratio of 0.8 indicates continued strong momentum without sudden spikes, suggesting deep organic adoption. The recent v2.0.0-rc.1 release with a dashboard GUI and operator workflows adds fresh fuel.",
+      "whatChanged": "The v2.0.0-rc.1 release (Apr 2026) introduced a Tkinter dashboard, new operator skills (brand-voice, social-graph-ranker, etc.), an ECC 2.0 Rust alpha, and expanded language support. This feature-rich update likely drove the recent star surge.",
+      "whyTrending": "It addresses a critical pain point for developers using multiple AI coding tools: inconsistent behavior, lack of shared context, and security risks. The cross-harness approach and comprehensive skill library make it a one-stop solution for agentic development.",
+      "developerTakeaway": "ECC provides a production-ready framework to standardize and supercharge AI agent workflows. Developers can adopt it to reduce token waste, persist memory across sessions, and enforce security policies across all major coding assistants.",
+      "developerInsight": "The rise of ECC signals a shift from single-harness tooling to cross-harness orchestration. Developers are seeking unified control planes for AI agents, and projects that bridge multiple ecosystems will capture significant mindshare.",
+      "targetUsers": "AI engineers, full-stack developers, and teams using Claude Code, Cursor, Codex, OpenCode, or other agent harnesses who want to optimize performance, security, and workflow consistency.",
+      "riskNotes": "The project is primarily maintained by a single developer (affaan-m), which could pose bus-factor risk. The rapid growth may also lead to maintenance scalability challenges. Some features are gated behind a paid Pro tier.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T04:47:55.246Z",
+    "model": "deepseek-v4-flash"
+  },
+  "chopratejas/headroom:2026-06-05T04:26:53Z": {
+    "summary": {
+      "oneLiner": "Headroom compresses prompts, tool outputs, logs, and RAG chunks by 60-95% before they reach an LLM, preserving answer quality while slashing token costs.",
+      "problemSolved": "LLM context windows fill up quickly with verbose tool outputs, logs, and RAG results, driving up costs and limiting agent effectiveness. Headroom solves this by compressing content locally before sending it to the LLM, using multiple algorithms (JSON, AST, ML) and a reversible compression scheme (CCR) so the LLM can retrieve originals on demand.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "Headroom is exploding in popularity with 12,941 stars and a sustained 3,316 stars/day over the last 3 days. The 24h delta of 3,299 stars and a 1.0 acceleration ratio indicate a steady, massive influx of attention rather than a sudden spike. This is a clear signal that the AI developer community is urgently seeking token optimization tools for agent workflows.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The recent release (within 30 days) and continuous commits suggest ongoing feature additions and polish, but the sustained high star velocity is likely driven by word-of-mouth and the growing need for cost-efficient AI agent deployments.",
+      "whyTrending": "Headroom addresses a critical pain point for anyone using AI coding agents: token costs and context limits. Its multi-mode support (library, proxy, MCP, agent wrap) makes it drop-in compatible with Claude Code, Cursor, Codex, Aider, and more. The promise of 60-95% token reduction with no accuracy loss is extremely compelling for both individual developers and enterprises.",
+      "developerTakeaway": "If you use AI coding agents daily, Headroom can dramatically reduce your token spend and allow you to fit more context into each prompt. The reversible compression (CCR) ensures you never lose data. It's worth trying the 60-second install and running `headroom perf` to see savings on your own workloads.",
+      "developerInsight": "This signals a shift toward local, agent-agnostic infrastructure layers that optimize LLM interactions. Headroom's cross-agent memory and shared context features point to a future where multiple agents collaborate efficiently without redundant token consumption. Developers should consider integrating such a compression layer early to future-proof their agent stacks.",
+      "targetUsers": "AI developers and teams using coding agents (Claude Code, Cursor, Codex, Aider, Copilot CLI), RAG pipelines, or any LLM-based application where token costs and context limits are a concern. Also relevant for enterprise teams deploying multi-agent systems.",
+      "riskNotes": "The project is relatively new (12k stars but still early stage) with 173 open issues, indicating active development but potential instability. The compression algorithms may not work equally well for all content types; users should benchmark on their own data. The proxy mode introduces a local dependency that may not suit all environments.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T04:47:55.582Z",
+    "model": "deepseek-v4-flash"
+  },
+  "PaddlePaddle/PaddleOCR:2026-06-04T18:21:43Z": {
+    "summary": {
+      "oneLiner": "PaddleOCR is a leading open-source OCR toolkit that converts PDFs and images into structured, LLM-ready data (JSON/Markdown) with state-of-the-art accuracy, supporting 100+ languages.",
+      "problemSolved": "It solves the challenge of extracting structured data from unstructured documents (PDFs, images) for AI applications, bridging the gap between visual content and LLMs/RAG systems.",
+      "aiCategory": "RAG / Knowledge Base",
+      "trendType": "sudden_breakout",
+      "whyNow": "With 80k+ stars, a 24h star delta of 566, and a high acceleration ratio of 4.4, PaddleOCR is experiencing a sudden breakout in attention. The 7-day average star delta of 142.7 and recent release (v3.6.0 on 2026-05-28) indicate strong momentum driven by new capabilities like the PaddleOCR-VL-1.6 model achieving 96.3% accuracy on OmniDocBench.",
+      "whatChanged": "The release of PaddleOCR 3.6.0 on 2026-05-28 introduced PaddleOCR-VL-1.6, a lightweight VLM with SOTA accuracy (96.3% on OmniDocBench), enhanced ancient document and rare character recognition, and seamless migration from previous versions. This likely triggered the sudden breakout.",
+      "whyTrending": "It is trending because it offers a production-ready, efficient solution for document parsing that integrates deeply with popular AI agent ecosystems (Dify, RAGFlow, Cherry Studio), making it essential for building RAG and agentic applications.",
+      "developerTakeaway": "PaddleOCR is a must-consider tool for any developer building document-intensive AI workflows, especially for RAG pipelines, due to its accuracy, multilingual support, and easy integration.",
+      "developerInsight": "This signals a shift towards specialized, lightweight VLMs for document parsing over general-purpose models, enabling cost-effective, high-accuracy data extraction for LLM applications.",
+      "targetUsers": "AI developers, data engineers, and product builders working on document processing, RAG systems, knowledge base creation, and LLM data pipelines.",
+      "riskNotes": "Dependency on PaddlePaddle framework may limit adoption in PyTorch-centric ecosystems; however, recent integration with Hugging Face Transformers mitigates this. Also, the project's rapid release cycle may introduce breaking changes.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T04:48:01.777Z",
+    "model": "deepseek-v4-flash"
+  },
+  "HKUDS/nanobot:2026-06-05T03:42:19Z": {
+    "summary": {
+      "oneLiner": "An ultra-lightweight, open-source AI agent runtime that lets you own your stack with WebUI, multi-channel chat, tools, memory, MCP, and model routing.",
+      "problemSolved": "Developers and teams want a simple, self-hosted AI agent that can integrate with multiple LLM providers, chat platforms, and tools without vendor lock-in or heavy infrastructure.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sustained_hot",
+      "whyNow": "With 43,694 stars, a sustained 7-day average delta of 63.7 stars/day, and a 24h delta of 98, nanobot shows strong, consistent growth. The acceleration of 1.5 (high) indicates increasing momentum, likely driven by the recent v0.2.1 'Workbench Release' on 2026-06-01, which added a packaged WebUI, project workspaces, and broader provider/channel support.",
+      "whatChanged": "The v0.2.1 release on 2026-06-01 turned the WebUI into a daily agent workbench with clearer thought/response timelines, live file-edit activity, project workspaces, model and context controls, sustained goals, CLI Apps + MCP extensions, and broader provider/channel support. This is a major feature update that likely attracted new users and contributors.",
+      "whyTrending": "It offers a practical, self-contained agent runtime that is easy to deploy and extend, with support for many LLM providers (OpenAI, Anthropic, Gemini, etc.) and chat channels (Telegram, Discord, Slack, WeChat, etc.), all in a single Python package. The active development pace (daily commits) and responsive community also contribute to its popularity.",
+      "developerTakeaway": "If you need a lightweight, customizable AI agent that you can run locally or on your own server, nanobot provides a well-documented, modular foundation with a growing ecosystem of integrations.",
+      "developerInsight": "This signals a shift toward developer-owned, multi-provider agent stacks that are easy to customize and deploy. The focus on 'ultra-lightweight' and 'readable core' suggests a reaction against heavy, opinionated frameworks. The rapid iteration (daily releases) indicates a fast-moving project that may become a standard for self-hosted agents.",
+      "targetUsers": "Developers and teams who want to build and deploy AI agents with full control over their stack, including LLM providers, chat channels, and tools, without relying on proprietary platforms.",
+      "riskNotes": "The project is very young (first release ~March 2026) and evolving rapidly, which may lead to breaking changes. The high number of open issues (855) could indicate growing pains or a backlog. The reliance on a single maintainer team (HKUDS) may pose bus-factor risk.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T04:48:02.721Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-05T04:46:09Z": {
+    "summary": {
+      "oneLiner": "Local-first, open-source alternative to Claude Design that turns your CLI into a design engine with 259+ skills, 142+ design systems, and MCP integration for 21 coding agents.",
+      "problemSolved": "Design tools are either closed-source (Figma, Claude Design) or require manual pixel-pushing. Open Design lets developers and designers generate prototypes, dashboards, slides, images, and videos directly from a coding agent using natural language, with brand-consistent design systems and sandboxed previews.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 58,969 stars, a 24-hour delta of +832, and a 7-day average of +832.8 stars/day, this project is experiencing sustained, high-velocity growth. The acceleration ratio of 1.1 indicates steady momentum rather than a sudden spike. The recent 0.9.0 release with built-in Model Router and the Open Design Fellow program signal active development and community building.",
+      "whatChanged": "The 0.9.0 release introduced the official Model Router, eliminating the need for manual API key setup. This lowers the barrier to entry significantly. Additionally, the Open Design Fellow program was announced to engage the community in shaping the product.",
+      "whyTrending": "It combines the hottest trends in AI: agent-native workflows, local-first design, and open-source alternatives to proprietary tools. The ability to use any coding agent (Claude Code, Codex, Cursor, etc.) as a design engine, plus the vast library of skills and design systems, makes it a versatile and powerful tool for developers and designers alike.",
+      "developerTakeaway": "Open Design redefines the design workflow by embedding it into the agent loop. Developers can now generate production-ready artifacts (HTML, PDF, PPTX, MP4) directly from their CLI or IDE, using their preferred coding agent. The MCP server integration makes it trivial to wire into existing tools.",
+      "developerInsight": "This signals a shift toward agent-native design tools where the CLI becomes the primary interface for creative work. For AI developers, it demonstrates the power of combining MCP protocols with local-first architecture to create extensible, composable design systems. The BYOK proxy and support for 21 agents lower adoption friction.",
+      "targetUsers": "Developers and designers who want to generate UI prototypes, dashboards, slides, and videos using AI agents without leaving their terminal or IDE. Also teams looking for a Figma alternative that integrates with their existing coding agent stack.",
+      "riskNotes": "The project is still in early stages (0.9.0) and may have stability or compatibility issues. The large number of open issues (326) suggests active development but also potential bugs. As an open-source alternative to a proprietary tool, long-term maintenance and community support are critical.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-05T04:48:09.620Z",
+    "model": "deepseek-v4-flash"
   }
 }

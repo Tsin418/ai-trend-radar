@@ -1,11 +1,11 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-04T23:42:06.483Z
+Updated: 2026-06-05T04:48:13.335Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-05 | daily | [AI Developer Radar｜Daily｜2026-06-05](2026/06/2026-06-05-daily.md) | aquasecurity/trivy, jwasham/coding-interview-university, Tencent/ncnn, ToolJet/ToolJet, eyaltoledano/claude-task-master |
+| 2026-06-05 | daily | [AI Developer Radar｜Daily｜2026-06-05](2026/06/2026-06-05-daily.md) | aquasecurity/trivy, jwasham/coding-interview-university, ToolJet/ToolJet, esengine/DeepSeek-Reasonix, chopratejas/headroom |
 | 2026-06-04 | daily | [AI Developer Radar｜Daily｜2026-06-04](2026/06/2026-06-04-daily.md) | rohitg00/ai-engineering-from-scratch, chopratejas/headroom, Open-LLM-VTuber/Open-LLM-VTuber, reconurge/flowsint, Tencent/ncnn |
 | 2026-06-03 | daily | [AI Developer Radar｜Daily｜2026-06-03](2026/06/2026-06-03-daily.md) | Tencent/ncnn, stas00/ml-engineering, PatrickJS/awesome-cursorrules, eyaltoledano/claude-task-master, automazeio/ccpm |
 | 2026-06-02 | daily | [AI Developer Radar｜Daily｜2026-06-02](2026/06/2026-06-02-daily.md) | nesquena/hermes-webui, activepieces/activepieces, D4Vinci/Scrapling, enescingoz/awesome-n8n-templates, supermemoryai/supermemory |
