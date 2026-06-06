@@ -5228,5 +5228,95 @@
     },
     "createdAt": "2026-06-06T10:27:23.037Z",
     "model": "deepseek-v4-flash"
+  },
+  "MemPalace/mempalace:2026-06-06T08:58:25Z": {
+    "summary": {
+      "oneLiner": "Local-first AI memory system with verbatim storage, pluggable backends, and 96.6% R@5 on LongMemEval — no API calls required.",
+      "problemSolved": "LLMs lack persistent, structured memory across sessions. MemPalace stores conversation history verbatim with semantic search, scoped by wings (people/projects) and rooms (topics), and retrieves it without summarization or cloud dependencies.",
+      "aiCategory": "MCP / Tool Calling",
+      "trendType": "sustained_hot",
+      "whyNow": "With 54,075 stars and a 24-hour delta of +443, this project is experiencing sustained high attention. The acceleration ratio is low (1.0), indicating steady organic growth rather than a sudden spike. It has a recent release and commits within 7 days, showing active maintenance. The rule-based score of 61 and 'sustained_hot' trend type confirm it's a consistently popular tool in the AI memory space.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The recent release and continuous commits suggest ongoing improvements, but no external buzz or sudden acceleration event is detected.",
+      "whyTrending": "MemPalace addresses a critical pain point for AI developers: persistent memory for LLMs. Its benchmark-leading performance (96.6% raw recall), local-first privacy, and MCP integration make it a practical choice for Claude Code, Gemini CLI, and other tools. The pluggable backend design and free MIT license lower adoption barriers.",
+      "developerTakeaway": "MemPalace offers a production-ready, benchmark-validated memory layer that can be integrated via CLI, MCP server, or Python API. It's ideal for developers building AI agents or chat applications that need long-term context without cloud costs.",
+      "developerInsight": "This signals a shift toward local-first, privacy-preserving AI infrastructure. Developers can now add persistent memory to their LLM workflows without vendor lock-in, using a system that outperforms cloud alternatives on retrieval recall.",
+      "targetUsers": "AI developers building agents, chatbots, or coding assistants (e.g., Claude Code users); teams needing structured memory for LLM sessions; researchers evaluating retrieval systems.",
+      "riskNotes": "The README warns about impostor sites distributing malware. The project relies on ChromaDB by default, which may have scaling limits. External backends (Qdrant, pgvector) require opt-in and expose data to network services. The 569 open issues suggest active community but also potential bugs or feature requests.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-06T12:49:03.112Z",
+    "model": "deepseek-v4-flash"
+  },
+  "Panniantong/Agent-Reach:2026-05-18T12:39:22Z": {
+    "summary": {
+      "oneLiner": "A zero-API-fee CLI that gives AI agents eyes to read and search Twitter, Reddit, YouTube, GitHub, Bilibili, Xiaohongshu, and more — install once, use everywhere.",
+      "problemSolved": "AI coding agents (Claude Code, Cursor, OpenClaw) can't natively access most web platforms due to paywalls, login requirements, or anti-bot measures. Agent Reach bundles free, open-source CLI tools for each platform, auto-configures them, and teaches the agent how to use them via a SKILL.md file — so the agent can search Twitter, read Reddit, extract YouTube transcripts, etc., without any API fees or manual setup.",
+      "aiCategory": "MCP / Tool Calling",
+      "trendType": "sustained_hot",
+      "whyNow": "With 21,962 stars and a 24-hour delta of +697, this project is sustaining explosive growth. The acceleration ratio is 1 (low), meaning the growth is steady rather than a sudden spike — but the absolute numbers are massive. It's clearly filling a real pain point for AI developers who want their agents to browse the web without paying for APIs or writing custom scrapers.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The README is comprehensive and frequently updated (last push 2026-05-18), and the project has been gaining stars steadily. The recent addition of platforms like Douyin, LinkedIn, and WeChat public accounts may have contributed to continued interest.",
+      "whyTrending": "It solves a universal pain point for AI agent users: giving agents internet access without API fees. The 'one CLI, zero API fees' pitch is extremely compelling, and the project is well-documented with clear installation instructions. The fact that it works with all major AI coding agents (Claude Code, Cursor, OpenClaw, Windsurf) makes it broadly applicable.",
+      "developerTakeaway": "If you use AI coding agents, install this. It will save you hours of configuring individual scrapers and API keys. The architecture is modular — each platform is a separate channel file, so you can swap out tools if you prefer alternatives.",
+      "developerInsight": "This signals a shift toward 'agent infrastructure' — tooling that makes AI agents self-sufficient on the web. The MCP (Model Context Protocol) integration is a key enabler, and the project's success shows that developers want their agents to be able to browse, search, and extract information from any platform without manual intervention.",
+      "targetUsers": "AI developers and power users who use coding agents (Claude Code, Cursor, OpenClaw, Windsurf) and want their agents to be able to read Twitter, Reddit, YouTube, GitHub, Bilibili, Xiaohongshu, and other platforms without paying for APIs or writing custom scrapers.",
+      "riskNotes": "Relies on third-party CLI tools that may break if platforms change their APIs or anti-bot measures. Cookie-based authentication (for Twitter, Xiaohongshu, etc.) carries account ban risk — the README recommends using throwaway accounts. Some tools (like rdt-cli for Reddit) are relatively new with few stars (304), so long-term maintenance is uncertain.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-06T12:49:05.049Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-06T12:43:03Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go with prefix-cache stability for low-cost long sessions.",
+      "problemSolved": "Provides a configurable, plugin-driven AI coding assistant that runs as a single static Go binary, optimized for DeepSeek's prefix caching to reduce token costs during extended use.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 18,698 stars, a 24-hour delta of +557, and a 7-day average of +735 stars per day, this project is experiencing sustained high growth. The acceleration ratio of 0.8 indicates steady, organic interest rather than a sudden spike. It ranks in the top 2-3 in velocity across Agents, LLMs, and CLI categories on oosmetrics, signaling strong community traction.",
+      "whatChanged": "The recent 1.0 release (ground-up rewrite in Go) and active development on the main branch, with commits within the last 7 days and a release within 30 days, likely drove renewed attention. The migration from TypeScript to Go and the emphasis on prefix-cache optimization are key differentiators.",
+      "whyTrending": "It combines a popular model (DeepSeek) with a practical, performant terminal tool that addresses real developer pain points: cost efficiency via prefix caching, ease of distribution as a single binary, and extensibility through plugins and MCP support.",
+      "developerTakeaway": "A well-engineered, config-driven AI agent that prioritizes cost control and session persistence, making it suitable for daily coding workflows.",
+      "developerInsight": "This signals a shift toward specialized, model-native agents that optimize for API economics (prefix caching) and developer experience (single binary, TOML config, MCP plugins). It may influence how AI coding tools are built and distributed.",
+      "targetUsers": "Developers using DeepSeek models who want a terminal-based AI coding assistant with low token costs, configurable permissions, and plugin support.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix-caching behavior; changes to DeepSeek's pricing or caching policy could impact cost benefits. The project is still relatively new (1.0 rewrite), and the number of open issues (210) suggests active but potentially rough edges.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-06T12:49:12.417Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-06T12:39:36Z": {
+    "summary": {
+      "oneLiner": "Open Design is an open-source, local-first alternative to Claude Design that turns your laptop into an agent-native design studio with 259+ skills, 142+ design systems, and support for 21 coding agents.",
+      "problemSolved": "Design tools today are either closed-source SaaS (Figma, Claude Design) or require manual pixel-pushing. Open Design lets developers and designers generate prototypes, dashboards, decks, images, and videos directly from a coding agent using natural language, with design systems as code and sandboxed previews.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 59,869 stars, a 24-hour delta of 900 stars, and a 7-day average of 575.7 stars per day, this project is experiencing sustained, high-velocity growth. The acceleration ratio of 1.5 indicates strong but not explosive momentum, suggesting a steady influx of users who see value in an open-source, agent-native design workflow.",
+      "whatChanged": "The recent release of version 0.9.0, which includes a built-in Model Router that eliminates setup friction, is the most likely trigger for the sustained attention. The README also highlights a new 'Open Design Fellow' program, which may be driving community engagement.",
+      "whyTrending": "Open Design taps into the growing demand for AI-powered design tools that are open-source, local-first, and compatible with multiple coding agents (Claude Code, Codex, Cursor, etc.). It offers a Figma alternative for the agent era, where design is generated rather than drawn, and assets are exported as real code.",
+      "developerTakeaway": "This project demonstrates that the future of design is agent-native and local-first. Developers can integrate Open Design into their existing agent workflows via MCP, enabling rapid prototyping and design system enforcement without leaving the terminal.",
+      "developerInsight": "The rise of agent-native design tools signals a shift from visual design to prompt-driven design. Developers should consider how their tools can become 'agent-compatible' — exposing MCP servers and CLI interfaces to stay relevant in the AI workflow ecosystem.",
+      "targetUsers": "Developers, designers, and product builders who want to generate UI prototypes, dashboards, decks, and videos using natural language and coding agents, without relying on closed-source design tools.",
+      "riskNotes": "The project is still in early stages (0.9.0) with 327 open issues. Quality of generated artifacts may vary depending on the agent and design system used. The reliance on external coding agents means the user experience is tied to the capabilities of those agents.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-06T12:49:15.570Z",
+    "model": "deepseek-v4-flash"
+  },
+  "santifer/career-ops:2026-06-03T06:17:55Z": {
+    "summary": {
+      "oneLiner": "An open-source AI-powered job search command center that uses Claude Code and other AI CLIs to evaluate, tailor, and track applications at scale.",
+      "problemSolved": "Job seekers waste months manually sifting through hundreds of listings, customizing resumes, and tracking applications. Career-Ops automates the entire pipeline: it scans job portals, evaluates offers against your profile using structured scoring, generates ATS-optimized PDFs, and maintains a single source of truth — all while keeping the human in the loop for final decisions.",
+      "aiCategory": "AI Workflow Automation",
+      "trendType": "sustained_hot",
+      "whyNow": "With 48,963 stars, a 24-hour delta of +223, and a 7-day delta of +1,116, this repo is experiencing sustained high-velocity growth. The acceleration ratio of 1.3 indicates steady, organic momentum rather than a sudden spike. The project has a recent release and active commits within the last 7 days, signaling ongoing maintenance and community engagement. It's trending because it directly addresses a universal pain point — job hunting — with a practical, AI-driven solution that resonates with a massive audience.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The consistent star velocity over the past week (three-day avg +167, seven-day avg +148) and the recent release suggest steady word-of-mouth and community adoption rather than a specific viral event.",
+      "whyTrending": "It combines the hottest trends — AI agents, automation, and career optimization — into a single, well-documented tool that delivers tangible results (the author claims 740+ evaluations, 100+ CVs, and a landed role). The multi-language README, Discord community, and support for multiple AI backends (Claude, Gemini, OpenCode) lower the barrier for global adoption.",
+      "developerTakeaway": "This is a blueprint for building agentic workflows that integrate multiple AI models, browser automation (Playwright), and a Go dashboard. Developers can learn how to structure a modular CLI tool with slash commands, batch processing, and human-in-the-loop safeguards.",
+      "developerInsight": "Career-Ops signals a shift toward AI-as-infrastructure for personal productivity. Developers should watch for similar 'AI command center' patterns emerging in other domains (e.g., personal finance, health, learning). The project's architecture — using AI to orchestrate sub-agents, parse unstructured data, and generate structured outputs — is a template for building reliable, user-facing AI tools.",
+      "targetUsers": "Job seekers in tech (especially AI/ML roles), career changers, and developers who want to automate their job search without sacrificing quality. Also relevant for recruiters and HR professionals looking to understand AI-driven candidate matching.",
+      "riskNotes": "The system relies on third-party AI APIs (Claude, Gemini) which may change pricing or availability. The 'spray-and-pray' warning is important — users must review AI-generated applications to avoid reputational damage. The project's rapid growth may attract low-quality forks or misuse.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-06T12:49:24.751Z",
+    "model": "deepseek-v4-flash"
   }
 }
