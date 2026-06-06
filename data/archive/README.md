@@ -1,11 +1,11 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-06T08:06:13.422Z
+Updated: 2026-06-06T10:27:29.239Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-06 | daily | [AI Developer Radar｜Daily｜2026-06-06](2026/06/2026-06-06-daily.md) | mvanhorn/last30days-skill, github/copilot-sdk, lfnovo/open-notebook, NVIDIA/cosmos, rohitg00/ai-engineering-from-scratch |
+| 2026-06-06 | daily | [AI Developer Radar｜Daily｜2026-06-06](2026/06/2026-06-06-daily.md) | mvanhorn/last30days-skill, safishamsi/graphify, github/copilot-sdk, lfnovo/open-notebook, NVIDIA/cosmos |
 | 2026-06-05 | daily | [AI Developer Radar｜Daily｜2026-06-05](2026/06/2026-06-05-daily.md) | HKUDS/Vibe-Trading, 666ghj/MiroFish, aquasecurity/trivy, jwasham/coding-interview-university, zhayujie/CowAgent |
 | 2026-06-04 | daily | [AI Developer Radar｜Daily｜2026-06-04](2026/06/2026-06-04-daily.md) | rohitg00/ai-engineering-from-scratch, chopratejas/headroom, Open-LLM-VTuber/Open-LLM-VTuber, reconurge/flowsint, Tencent/ncnn |
 | 2026-06-03 | daily | [AI Developer Radar｜Daily｜2026-06-03](2026/06/2026-06-03-daily.md) | Tencent/ncnn, stas00/ml-engineering, PatrickJS/awesome-cursorrules, eyaltoledano/claude-task-master, automazeio/ccpm |
