@@ -5318,5 +5318,59 @@
     },
     "createdAt": "2026-06-06T12:49:24.751Z",
     "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-06T14:35:28Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go with prefix-cache stability and MCP plugin support.",
+      "problemSolved": "Provides a config-driven, plugin-extensible AI coding agent that optimizes token costs via DeepSeek's prefix caching, enabling long-running sessions without prohibitive API expenses.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 18,748 stars, a 24-hour delta of +607, and a 7-day average delta of 735.1, this project is experiencing sustained high attention. The acceleration ratio of 0.9 indicates steady, organic growth rather than a sudden spike, making it a reliable signal of developer interest in DeepSeek-native tooling.",
+      "whatChanged": "The recent 1.0 rewrite in Go (from TypeScript) and the addition of MCP plugin support, along with a new release within 30 days, likely drove renewed interest. The README emphasizes prefix-cache stability and a single static binary, appealing to developers seeking efficient, long-running agents.",
+      "whyTrending": "It combines the buzz around DeepSeek models with a practical, well-engineered terminal agent that reduces token costs. The Go rewrite improves performance and distribution, while MCP compatibility broadens its plugin ecosystem.",
+      "developerTakeaway": "A production-ready, configurable AI coding agent optimized for DeepSeek, with a focus on cost efficiency and extensibility via plugins.",
+      "developerInsight": "This signals a shift toward model-specific agents that leverage unique model features (like prefix caching) for competitive advantage. Developers should consider building agents that are tightly integrated with a single model's strengths rather than generic multi-model tools.",
+      "targetUsers": "Developers using DeepSeek models who want a terminal-based AI coding assistant with long-running sessions, custom tooling, and low token costs.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix-caching behavior; changes to DeepSeek's pricing or caching policy could impact cost benefits. The project is still early in its Go rewrite (1.0), so stability and feature parity with the legacy TypeScript version may vary.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-06T14:56:03.981Z",
+    "model": "deepseek-v4-flash"
+  },
+  "CopilotKit/CopilotKit:2026-06-06T14:51:06Z": {
+    "summary": {
+      "oneLiner": "CopilotKit is a multi-platform SDK for building agent-native applications with Generative UI, shared state, and human-in-the-loop workflows across React, Angular, Vue, React Native, Slack, and Teams.",
+      "problemSolved": "It provides a unified frontend stack for integrating AI agents into any application, enabling dynamic UI rendering, real-time state synchronization, and user-in-the-loop interactions without building custom infrastructure.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sudden_breakout",
+      "whyNow": "The project is experiencing a sudden breakout with a 24h star delta of 751, a 7d delta of 1155, and a high acceleration of 6.3 (threshold >2.0). Total stars at 32,999 with 4,220 forks indicate massive community traction. The recent release and active commits (within 7 days) suggest sustained momentum.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. However, the recent release (within 30 days) and the addition of multi-platform support (Angular, Vue, React Native, Slack, Teams) likely contributed to the acceleration.",
+      "whyTrending": "It addresses the growing need for agentic UI frameworks that work across multiple platforms, backed by the AG-UI Protocol adopted by major players like Google, LangChain, and AWS. The combination of Generative UI, shared state, and human-in-the-loop is highly relevant for production AI apps.",
+      "developerTakeaway": "CopilotKit is a strong candidate for building cross-platform agentic applications with minimal boilerplate. Its support for multiple frameworks and platforms reduces fragmentation, and the AG-UI Protocol ensures interoperability.",
+      "developerInsight": "This signals a shift toward agent-native UI frameworks that abstract away the complexity of integrating LLMs with frontend state management. Developers should evaluate CopilotKit for projects requiring dynamic, stateful agent interactions across web and mobile.",
+      "targetUsers": "Full-stack developers building AI-powered applications with React, Angular, Vue, or React Native, especially those needing multi-platform support (web, mobile, Slack, Teams).",
+      "riskNotes": "The project is still evolving with early access features (self-learning, Slack/Teams). The high number of open issues (532) may indicate growing pains. Dependency on the AG-UI Protocol could introduce vendor lock-in if the protocol doesn't gain widespread adoption.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-06T14:56:04.187Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-06T14:49:44Z": {
+    "summary": {
+      "oneLiner": "Open Design is an open-source, local-first alternative to Claude Design that turns your coding agent into a design engine, generating prototypes, decks, images, and videos from a single design system.",
+      "problemSolved": "Design tools today are either closed (Figma, Claude Design) or require manual pixel-pushing. Open Design lets developers and designers use their existing coding agents (Claude Code, Codex, Cursor, etc.) to generate production-ready, brand-consistent artifacts directly from a DESIGN.md file, all running locally without cloud lock-in.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 59,975 stars and a 7-day average delta of 575.7 stars/day, Open Design is experiencing sustained, high-velocity growth. The 24h delta of 1,006 and acceleration of 1.7 indicate strong, ongoing interest. The recent 0.9.0 release with an integrated Model Router removes setup friction, making it instantly usable. This is not a flash-in-the-pan spike but a steady climb driven by real adoption.",
+      "whatChanged": "The release of version 0.9.0 introduced the official Model Router built into the app, eliminating the need for extra configuration or API keys. This lowered the barrier to entry significantly, likely driving the recent surge in stars and engagement.",
+      "whyTrending": "Open Design taps into the growing 'vibe coding' and agent-native design movement. It offers a practical, open-source alternative to Claude Design that works with 21+ coding agents, supports BYOK, and exports to multiple formats. The combination of local-first, agent-driven design with a rich plugin ecosystem resonates with developers who want to keep their workflow in the terminal.",
+      "developerTakeaway": "Open Design is a strong candidate for teams that want to automate design generation within their existing agent workflows. Its MCP server integration makes it trivial to wire into any supported CLI. The plugin and design system ecosystem means you can extend it without forking.",
+      "developerInsight": "This signals a shift toward agent-native design tools where the CLI becomes the primary interface for creating UI artifacts. Developers should watch how Open Design's approach to design-as-code (DESIGN.md) and MCP-based integration could become a standard pattern for generative design workflows.",
+      "targetUsers": "Developers and designers who use coding agents (Claude Code, Codex, Cursor, etc.) and want to generate prototypes, decks, images, and videos without leaving the terminal. Also teams looking for a local-first, open-source alternative to Claude Design or Figma for agent-driven design.",
+      "riskNotes": "The project is still in early stages (0.9.0) and may have stability or feature gaps. The heavy reliance on external coding agents means compatibility could break with agent updates. The large number of open issues (326) suggests active development but also potential growing pains.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-06T14:56:15.064Z",
+    "model": "deepseek-v4-flash"
   }
 }
