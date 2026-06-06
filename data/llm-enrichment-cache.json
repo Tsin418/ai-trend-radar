@@ -4904,5 +4904,131 @@
     },
     "createdAt": "2026-06-05T23:42:58.250Z",
     "model": "deepseek-v4-flash"
+  },
+  "NVIDIA/cosmos:2026-06-06T03:47:56Z": {
+    "summary": {
+      "oneLiner": "NVIDIA Cosmos is an open platform of world models, datasets, and tools for building Physical AI in robotics, autonomous vehicles, and smart infrastructure.",
+      "problemSolved": "It unifies language, vision, video, audio, and action modeling into a single Mixture-of-Transformers architecture, enabling developers to build world simulators, reasoners, and generators for Physical AI without stitching together multiple models.",
+      "aiCategory": "World Models / Physical AI / Multimodal Foundation Models",
+      "trendType": "sustained_hot",
+      "whyNow": "With 9,457 stars and a 24-hour delta of +682, Cosmos is experiencing sustained high attention. The acceleration ratio is low (1), indicating steady organic growth rather than a sudden spike. The recent release of Cosmos 3 (within 30 days) and active commits within 7 days keep the project top-of-mind for the AI community.",
+      "whatChanged": "The release of Cosmos 3, a new model family with omnimodal capabilities (text, image, video, audio, action), is the likely trigger. The README was updated with detailed documentation, quickstart guides, and model links, signaling a major version launch.",
+      "whyTrending": "NVIDIA's brand, the ambitious scope of unifying multiple modalities for Physical AI, and the availability of pretrained models (16B and 64B) on Hugging Face attract developers interested in robotics, autonomous driving, and simulation.",
+      "developerTakeaway": "Cosmos provides a ready-to-use framework for world understanding and generation, with both research (Diffusers/Transformers) and production (vLLM-Omni/NIM) paths. Developers can quickly prototype Physical AI applications using the provided models and cookbooks.",
+      "developerInsight": "This signals a shift toward unified multimodal models for Physical AI, reducing the need to combine separate vision, language, and action models. Developers should evaluate Cosmos for tasks like synthetic data generation, policy learning, and world simulation.",
+      "targetUsers": "Robotics researchers, autonomous vehicle engineers, AI simulation developers, and anyone building Physical AI systems that require understanding or generating video, audio, and action sequences.",
+      "riskNotes": "The models are large (16B-64B) and require NVIDIA GPUs (Ampere, Hopper, Blackwell). The ecosystem is still maturing; post-training recipes are marked 'Coming Soon.' Licensing terms should be reviewed for commercial use.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-06T04:20:55.152Z",
+    "model": "deepseek-v4-flash"
+  },
+  "github/copilot-sdk:2026-06-05T23:59:18Z": {
+    "summary": {
+      "oneLiner": "Multi-language SDK to embed GitHub Copilot's agent runtime into any application via JSON-RPC.",
+      "problemSolved": "Developers want to integrate Copilot's agentic capabilities (planning, tool use, file editing) into their own apps without building orchestration from scratch. This SDK provides a production-tested client for Python, TypeScript, Go, .NET, Java, and Rust.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "The repo has 9,280 stars and gained 462 stars in the last 24 hours, with a sustained_hot trend and low acceleration (1.0). This indicates steady, organic growth rather than a sudden spike. The recent release and active commits suggest ongoing improvements, making it a reliable choice for developers looking to embed Copilot agents today.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The recent release (within 30 days) and commits within 7 days indicate active maintenance, but no external buzz or sudden acceleration points to a specific event.",
+      "whyTrending": "GitHub's official SDK for Copilot agent integration across six languages, with BYOK support and production-ready status, attracts developers who want to leverage Copilot's agentic workflows in custom tools and services.",
+      "developerTakeaway": "If you need to embed Copilot's agent capabilities (planning, tool execution, file editing) into your app, this SDK is the canonical way to do it. It abstracts CLI management and provides a clean JSON-RPC interface.",
+      "developerInsight": "This signals a shift toward agent-as-a-service: instead of building your own agent orchestration, you can rely on Copilot's battle-tested runtime. The multi-language support and BYOK option lower adoption barriers for enterprises.",
+      "targetUsers": "Developers building AI-powered coding assistants, IDE plugins, CI/CD tools, or any application that needs autonomous code generation and editing capabilities.",
+      "riskNotes": "Requires a GitHub Copilot subscription for standard usage (though BYOK is available). The SDK is tied to Copilot CLI's server mode, so any changes to CLI behavior or pricing could impact functionality. Community SDKs for Clojure and C++ are unofficial and unsupported.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-06T04:20:55.237Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-05T17:58:47Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go for prefix-cache stability and low token costs.",
+      "problemSolved": "Provides a config-driven, plugin-extensible AI coding assistant that leverages DeepSeek's prefix caching to reduce API costs during long sessions, with a single static binary for zero-friction setup.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 18,553 stars and a 7-day average delta of 875.8 stars/day, this project is experiencing sustained high growth. The 24-hour delta of 1,179 stars and acceleration of 1.3 indicate continued strong momentum, likely driven by the recent 1.0 Go rewrite and active community engagement.",
+      "whatChanged": "The project recently underwent a ground-up rewrite in Go (version 1.0), moving from TypeScript to a single static binary. This major release, along with active development and community building on Discord, has likely fueled the recent surge in attention.",
+      "whyTrending": "It combines the popularity of DeepSeek models with a practical, well-engineered terminal tool that reduces costs via prefix caching. The Go rewrite improves performance and distribution, and the config/plugin system appeals to developers seeking customizable AI workflows.",
+      "developerTakeaway": "A compelling alternative to existing AI coding agents, especially for DeepSeek users. Its focus on prefix-cache optimization and MCP plugin support makes it a strong candidate for daily terminal-based development.",
+      "developerInsight": "Signals a shift toward specialized, model-native agents that optimize for cost and performance. The plugin architecture and sandboxed permissions model set a new standard for safe, extensible AI tooling.",
+      "targetUsers": "Developers using DeepSeek models who want a terminal-based AI coding assistant with low token costs, customizable tools, and plugin support.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix-cache behavior; changes to DeepSeek's pricing or caching could impact value. The project is still early in its Go rewrite, with 212 open issues indicating active but potentially rough edges.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-06T04:21:01.011Z",
+    "model": "deepseek-v4-flash"
+  },
+  "chopratejas/headroom:2026-06-05T23:49:46Z": {
+    "summary": {
+      "oneLiner": "Headroom compresses tool outputs, logs, files, and RAG chunks by 60–95% before they reach an LLM, preserving answer quality while drastically cutting token usage.",
+      "problemSolved": "AI agents and LLM applications waste tokens on verbose tool outputs, logs, and context, leading to high costs and context window overflow. Headroom solves this by compressing inputs locally before sending them to the LLM, with reversible compression so no information is lost.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "Headroom has exploded from 0 to 14,663 stars, with a 24-hour delta of 5,021 stars and a 3-day average of 3,316 stars per day. The acceleration ratio is 1 (low), indicating steady, sustained growth rather than a sudden spike. This is a project that has captured massive developer attention in a very short time, likely due to the pressing need for token optimization in the age of AI agents.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The repository has a recent release (within 30 days) and recent commits within 7 days, suggesting active development. The README is comprehensive and well-marketed, and the project offers multiple integration modes (library, proxy, MCP server) that lower the barrier to adoption.",
+      "whyTrending": "Headroom addresses a universal pain point for anyone using LLMs: token costs and context limits. It offers a practical, measurable solution (60–95% token reduction) with reversible compression, works across multiple agents and providers, and is easy to integrate. The combination of a clear value proposition, broad compatibility, and active development has driven rapid adoption.",
+      "developerTakeaway": "Headroom is a must-try for any developer building AI agents or LLM applications. It can significantly reduce costs and improve performance with minimal code changes. The proxy mode allows zero-code integration, making it easy to test and adopt.",
+      "developerInsight": "This signals a shift toward treating token compression as a standard layer in AI infrastructure, similar to how caching or load balancing became essential in web services. Developers should consider integrating compression early in their stack to optimize costs and context usage.",
+      "targetUsers": "Developers building AI agents (Claude Code, Cursor, Codex, etc.), RAG pipelines, LLM-powered applications, and anyone using LLMs at scale who wants to reduce token consumption without sacrificing quality.",
+      "riskNotes": "The project is very new (14k stars but likely less than a year old). The compression algorithms may not work equally well for all content types. Reversible compression adds complexity. The project's long-term maintenance and compatibility with rapidly evolving LLM APIs are unproven.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-06T04:21:02.005Z",
+    "model": "deepseek-v4-flash"
+  },
+  "CopilotKit/CopilotKit:2026-06-06T02:16:20Z": {
+    "summary": {
+      "oneLiner": "CopilotKit is a multi-platform SDK for building agent-native applications with Generative UI, shared state, and human-in-the-loop workflows across React, Angular, Vue, React Native, Slack, and Teams.",
+      "problemSolved": "It solves the fragmentation of building full-stack agentic applications by providing a unified frontend stack that connects agents to any UI surface, enabling dynamic UI rendering, real-time state sync, and human-in-the-loop interactions without custom infrastructure.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sudden_breakout",
+      "whyNow": "CopilotKit is experiencing a sudden breakout with 840 stars in the last 24 hours and a 7-day average of 20 stars/day, now accelerating to 33.2 (high acceleration ratio). With 32,770 total stars and 4,201 forks, it has crossed into mainstream attention. The project's recent release and active commits (within 7 days) suggest a product launch or major feature announcement is driving this spike.",
+      "whatChanged": "The README highlights new multi-platform support (Angular, Vue, React Native, Slack, Teams) and the AG-UI Protocol adoption by Google, LangChain, AWS, Microsoft, and others. A recent release within 30 days likely introduced these integrations, triggering the breakout.",
+      "whyTrending": "It fills a critical gap in the agentic AI stack by offering a production-ready frontend layer that works with any agent backend, backed by major industry partnerships and a rapidly growing community.",
+      "developerTakeaway": "If you're building agentic UIs, CopilotKit provides the most comprehensive open-source solution for React, Angular, Vue, and React Native, with built-in support for Generative UI and human-in-the-loop workflows.",
+      "developerInsight": "This signals a shift toward agent-native frontends as a standard architectural pattern, similar to how React became the default for web UIs. Developers should evaluate CopilotKit as the frontend layer for their agent stacks to avoid reinventing the wheel.",
+      "targetUsers": "Full-stack developers building AI-powered applications, especially those using React, Angular, Vue, or React Native, and teams deploying agents to Slack or Teams.",
+      "riskNotes": "The project is backed by a company (CopilotKit) with enterprise offerings, which may introduce licensing changes or feature gating. The rapid pace of development could lead to API instability. Dependency on the AG-UI Protocol may lock users into a specific ecosystem.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-06T04:21:07.596Z",
+    "model": "deepseek-v4-flash"
+  },
+  "affaan-m/ECC:2026-06-05T22:31:37Z": {
+    "summary": {
+      "oneLiner": "A harness-native operator system that optimizes AI agent performance across multiple coding assistants (Claude Code, Codex, Cursor, etc.) with skills, memory, security, and continuous learning.",
+      "problemSolved": "AI coding agents often lack structured memory, reusable skills, security scanning, and cross-harness portability, leading to repetitive setup, context loss, and inconsistent behavior. ECC provides a unified system to manage and optimize agent workflows across different harnesses.",
+      "aiCategory": "MCP / Tool Calling",
+      "trendType": "sustained_hot",
+      "whyNow": "With 208K+ stars, a 24-hour star delta of 2,762, and a 7-day average of 1,647, this project is experiencing sustained, high-velocity growth. The acceleration ratio of 1.3 indicates steady momentum rather than a sudden spike, suggesting deep community adoption. The recent v2.0.0-rc.1 release (Apr 2026) adds operator workflows, a dashboard GUI, and Rust control-plane alpha, signaling active development and expanding scope.",
+      "whatChanged": "The v2.0.0-rc.1 release introduced operator workflows, a Tkinter dashboard, optimization skill packs, and the ECC 2.0 alpha (Rust control-plane). These features broaden the system from a config pack to a full operator platform, likely driving renewed attention.",
+      "whyTrending": "ECC addresses a universal pain point for developers using AI coding agents: fragmented tooling and lack of cross-harness consistency. Its MIT license, multi-language support, and active community (170+ contributors) make it a go-to solution. The recent release adds tangible new capabilities, fueling word-of-mouth and star growth.",
+      "developerTakeaway": "ECC is a practical, production-tested system for anyone using AI coding assistants. It reduces friction by providing pre-built skills, memory persistence, and security scanning out of the box. Developers should evaluate it to standardize their agent workflows and avoid reinventing the wheel.",
+      "developerInsight": "The rise of ECC signals a shift toward platform-level tooling for AI agents. Developers are moving beyond single-harness configs to cross-harness systems that manage skills, memory, and security centrally. This trend suggests that the next wave of AI developer tools will focus on orchestration and optimization rather than just agent capabilities.",
+      "targetUsers": "Developers and teams using AI coding agents (Claude Code, Codex, Cursor, OpenCode, etc.) who want to improve agent performance, maintain context across sessions, enforce security policies, and reuse skills across projects.",
+      "riskNotes": "The project is primarily maintained by a single developer (affaan-m), which could pose bus-factor risk despite community contributions. The rapid growth may lead to maintenance challenges or feature bloat. Some features (e.g., ECC Pro, GitHub App) are monetized, which could cause friction for users expecting fully free OSS.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-06T04:21:09.231Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-06T04:17:56Z": {
+    "summary": {
+      "oneLiner": "Open Design is a local-first, open-source alternative to Claude Design that turns your coding agent into a design engine, generating prototypes, decks, images, and videos from a single design system.",
+      "problemSolved": "Design tools like Figma are pixel-pushing canvases that don't integrate with AI coding agents. Open Design bridges the gap by letting agents read a DESIGN.md, apply brand systems, and output real HTML/PDF/PPTX/MP4 artifacts — all locally, without a cloud subscription.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 59,513 stars and a 7-day average delta of 639.6 stars/day, Open Design is experiencing sustained high growth. The 24-hour delta of 1,376 and acceleration ratio of 1.9 (just below the sudden breakout threshold) indicate strong, consistent attention momentum. The project has a recent release (0.9.0) and active commits within 7 days, signaling ongoing development and community engagement.",
+      "whatChanged": "The release of version 0.9.0 introduced the official Model Router, eliminating the need for API key setup and CLI installation. This lowers the barrier to entry significantly, likely driving the recent surge in adoption.",
+      "whyTrending": "Open Design taps into the growing demand for agent-native design workflows. It offers a free, open-source alternative to Claude Design, supports 21+ coding agents (Claude Code, Codex, Cursor, etc.), and provides 259+ skills and 142+ design systems out of the box. The combination of local-first privacy, no-code ease, and deep agent integration makes it a compelling tool for developers and designers alike.",
+      "developerTakeaway": "Open Design demonstrates that the future of design is agent-native and local-first. Developers can integrate it into their existing agent workflows via MCP server installs, enabling rapid prototyping and brand-consistent output without leaving the terminal.",
+      "developerInsight": "This signals a shift from GUI-based design to code-driven, agent-orchestrated design. For AI developers, it means building tools that treat design systems as code (DESIGN.md) and output as artifacts (HTML/PDF/PPTX) — a pattern that could become standard for agent-generated content.",
+      "targetUsers": "Developers and designers who use AI coding agents (Claude Code, Codex, Cursor, etc.) and want to generate design artifacts quickly, maintain brand consistency, and avoid vendor lock-in. Also suitable for teams building prototypes, pitch decks, or marketing assets.",
+      "riskNotes": "The project is still in early stages (0.9.0) and may have stability issues. It relies on external coding agents and their APIs, which could change or break compatibility. The open-source license (Apache 2.0) is permissive, but the project's long-term maintenance and governance are not yet proven.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-06T04:21:14.882Z",
+    "model": "deepseek-v4-flash"
   }
 }
