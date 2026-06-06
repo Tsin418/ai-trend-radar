@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-06-06-2026-06-06T11-18-41-426Z",
-  "generatedAt": "2026-06-06T11:18:41.426Z",
+  "runId": "lightweight-2026-06-06-2026-06-06T13-11-40-520Z",
+  "generatedAt": "2026-06-06T13:11:40.520Z",
   "targetDate": "2026-06-06",
   "brief": {
     "date": "2026-06-06",
     "headline": "Today's strongest AI trend signals are Ai Model Release, Rag / Knowledge Base, and Mcp / Tool Calling.",
     "keyTakeaways": [
-      "Ai Model Release: This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adop.",
+      "Ai Model Release: This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 9 related signal(s). Treat it as correlation evidence rat.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
       "Ai Model Release: watch decision is deep_dive.",
       "Rag / Knowledge Base: This topic appeared across 3 source(s): aihot, huggingface_models, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven.",
       "Rag / Knowledge Base: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
       "Rag / Knowledge Base: watch decision is deep_dive.",
-      "Mcp / Tool Calling: This topic appeared across 2 source(s): huggingface_spaces, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Mcp / Tool Calling: This topic appeared across 2 source(s): huggingface_models, huggingface_spaces, with 5 related signal(s). Treat it as correlation evidence rather than proven a.",
       "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
       "Mcp / Tool Calling: watch decision is deep_dive."
     ],
@@ -25,15 +25,16 @@
         "category": "tools",
         "sources": [
           "aihot",
+          "huggingface_models",
           "huggingface_spaces",
           "hackernews"
         ],
-        "sourceCount": 3,
-        "heatScore": 460,
+        "sourceCount": 4,
+        "heatScore": 514,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Ai Model Release is an AI trend topic in tools represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 9 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
@@ -41,12 +42,12 @@
         "technicalKeywords": [
           "tools",
           "products",
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english"
+          "diffusers",
+          "custom_qwen_image",
+          "image-generation",
+          "multimodal",
+          "qwen",
+          "quantized"
         ],
         "evidenceItems": [
           {
@@ -58,7 +59,7 @@
             "summary": "开发者用Qwen2.5-3B构建了五人森林生物多智能体经济体，每个智能体独立运行，通过vLLM部署在Modal，以Gradio为交互窗口。3B模型在100%调用中输出有效JSON，但经济判断能力弱。通过设计稀缺性（食物品种限制、易腐坏、冬季燃料危机）和优化提示词（禁止买入自产物品、给出示例）提升决策质量。15轮模拟中，蜜价从10跌至3、柴价从4涨至7、财富基尼系数从0.14扩至0.38。项目展示了小模型可靠格式化与不可靠推理之间的工程填补。",
             "category": "tools",
             "publishedAt": "2026-06-05T22:18:46.000Z",
-            "collectedAt": "2026-06-06T11:18:42.645Z"
+            "collectedAt": "2026-06-06T13:11:47.052Z"
           },
           {
             "id": "aihot:cmq0yxent0avgsltr8x9ya6jn",
@@ -69,7 +70,7 @@
             "summary": "社区开发者使用面壁智能MiniCPM-V 4.6构建了AccountingLLM（quaesto.com），用于自动化财务文档分析。该工具可上传IPO招股书、年报或审计文件，自动从复杂PDF中提取财务表格、重建跨页表格、对照会计等式检查关键数据，并标记可疑条目供人工审核。开发者已将其商业化，成为实际可用的产品。",
             "category": "products",
             "publishedAt": "2026-06-05T13:30:05.000Z",
-            "collectedAt": "2026-06-06T11:18:42.645Z"
+            "collectedAt": "2026-06-06T13:11:47.052Z"
           },
           {
             "id": "hackernews:48389360",
@@ -81,10 +82,72 @@
               "llm"
             ],
             "publishedAt": "2026-06-03T20:15:13.000Z",
-            "collectedAt": "2026-06-06T11:18:45.872Z",
+            "collectedAt": "2026-06-06T13:11:40.819Z",
             "metrics": {
-              "upvotes": 398,
-              "commentsCount": 118
+              "upvotes": 465,
+              "commentsCount": 140
+            }
+          },
+          {
+            "id": "huggingface_models:QuantFunc/Nunchaku-Qwen-Image-EDIT-2511",
+            "title": "QuantFunc/Nunchaku-Qwen-Image-EDIT-2511",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/QuantFunc/Nunchaku-Qwen-Image-EDIT-2511",
+            "category": "image-to-image",
+            "tags": [
+              "diffusers",
+              "custom_qwen_image",
+              "image-generation",
+              "multimodal",
+              "qwen",
+              "quantized",
+              "nunchaku",
+              "comfyui",
+              "image-to-image",
+              "en",
+              "zh",
+              "base_model:Qwen/Qwen-Image-Edit-2511",
+              "base_model:quantized:Qwen/Qwen-Image-Edit-2511",
+              "license:apache-2.0",
+              "region:us"
+            ],
+            "publishedAt": "2026-01-22T00:04:58.000Z",
+            "collectedAt": "2026-06-06T13:11:40.672Z",
+            "metrics": {
+              "downloads": 4046,
+              "likes": 100
+            }
+          },
+          {
+            "id": "huggingface_models:QuantFunc/Nunchaku-Qwen-Image-2512",
+            "title": "QuantFunc/Nunchaku-Qwen-Image-2512",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/QuantFunc/Nunchaku-Qwen-Image-2512",
+            "category": "text-to-image",
+            "tags": [
+              "diffusers",
+              "custom_qwen_image",
+              "image-generation",
+              "multimodal",
+              "qwen",
+              "quantized",
+              "nunchaku",
+              "comfyui",
+              "text-to-image",
+              "en",
+              "zh",
+              "base_model:Qwen/Qwen-Image-2512",
+              "base_model:quantized:Qwen/Qwen-Image-2512",
+              "license:apache-2.0",
+              "region:us"
+            ],
+            "publishedAt": "2026-01-19T08:36:06.000Z",
+            "collectedAt": "2026-06-06T13:11:40.672Z",
+            "metrics": {
+              "downloads": 1485,
+              "likes": 91
             }
           },
           {
@@ -106,70 +169,29 @@
               "region:us"
             ],
             "publishedAt": "2023-04-17T11:40:06.000Z",
-            "collectedAt": "2026-06-06T11:18:45.683Z",
+            "collectedAt": "2026-06-06T13:11:40.677Z",
             "metrics": {
               "likes": 14005
-            }
-          },
-          {
-            "id": "huggingface_spaces:facebook/MusicGen",
-            "title": "MusicGen",
-            "source": "huggingface_spaces",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/spaces/facebook/MusicGen",
-            "category": "gradio",
-            "tags": [
-              "gradio",
-              "music generation",
-              "language models",
-              "LLMs",
-              "region:us"
-            ],
-            "publishedAt": "2023-06-08T18:00:26.000Z",
-            "collectedAt": "2026-06-06T11:18:45.683Z",
-            "metrics": {
-              "likes": 5072
-            }
-          },
-          {
-            "id": "huggingface_spaces:KlingTeam/LivePortrait",
-            "title": "Live Portrait",
-            "source": "huggingface_spaces",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-            "category": "gradio",
-            "tags": [
-              "gradio",
-              "Multimodal",
-              "Motion control",
-              "Image-to-Video",
-              "Video-to-Video",
-              "language models",
-              "LLMs",
-              "region:us"
-            ],
-            "publishedAt": "2024-07-05T16:35:24.000Z",
-            "collectedAt": "2026-06-06T11:18:45.683Z",
-            "metrics": {
-              "likes": 3747
             }
           }
         ],
         "relatedEntities": [
           "用Qwen2.5-3B构建多智能体经济体：工程报告",
           "社区基于MiniCPM-V 4.6打造财务分析工具AccountingLLM",
+          "QuantFunc/Nunchaku-Qwen-Image-EDIT-2511",
+          "QuantFunc/Nunchaku-Qwen-Image-2512",
           "Open LLM Leaderboard",
           "MusicGen",
           "Live Portrait",
-          "How LLMs work",
-          "Show HN: Sub-Agent MCP: LLM delegation and sub-agent orchestration via MCP"
+          "How LLMs work"
         ],
         "metrics": {
-          "votes": 398,
+          "votes": 465,
           "likes": 14005,
-          "commentsCount": 118,
-          "heatScore": 460,
-          "crossSourceBonus": 20
+          "downloads": 4046,
+          "commentsCount": 140,
+          "heatScore": 514,
+          "crossSourceBonus": 25
         }
       },
       {
@@ -182,7 +204,7 @@
           "hackernews"
         ],
         "sourceCount": 3,
-        "heatScore": 362,
+        "heatScore": 406,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Rag / Knowledge Base is an AI trend topic in products represented by related signals from today's collection.",
@@ -193,8 +215,13 @@
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
           "products",
-          "region:us",
-          "rag"
+          "transformers",
+          "safetensors",
+          "xlm-roberta",
+          "feature-extraction",
+          "generated_from_trainer",
+          "text-embeddings-inference",
+          "endpoints_compatible"
         ],
         "evidenceItems": [
           {
@@ -206,7 +233,7 @@
             "summary": "Google Research 与 Google Cloud 合作推出跨语料库检索（Cross-Corpus Retrieval）框架，作为 Gemini Enterprise Agent Platform 的 Agentic RAG。该多智能体工作流将复杂企业查询分解为子任务，通过规划、重写和路由，迭代搜索多个数据源直至获得充分上下文，再生成可靠回答。与标准 RAG 相比，在事实性数据集上准确率最高提升 34%；在多个领域特定内部数据集上也实现了更好的接地与推理准确性。",
             "category": "products",
             "publishedAt": "2026-06-05T20:30:02.046Z",
-            "collectedAt": "2026-06-06T11:18:42.645Z"
+            "collectedAt": "2026-06-06T13:11:47.052Z"
           },
           {
             "id": "hackernews:48414027",
@@ -218,67 +245,77 @@
               "rag"
             ],
             "publishedAt": "2026-06-05T15:39:38.000Z",
-            "collectedAt": "2026-06-06T11:18:45.872Z",
+            "collectedAt": "2026-06-06T13:11:40.819Z",
             "metrics": {
-              "upvotes": 318,
-              "commentsCount": 234
+              "upvotes": 330,
+              "commentsCount": 237
             }
           },
           {
-            "id": "huggingface_models:Duong-storage-test/Checking_something_new",
-            "title": "Duong-storage-test/Checking_something_new",
+            "id": "huggingface_models:Edue3r4t5y6/bge-m3-MUIA",
+            "title": "Edue3r4t5y6/bge-m3-MUIA",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/Duong-storage-test/Checking_something_new",
+            "url": "https://huggingface.co/Edue3r4t5y6/bge-m3-MUIA",
+            "category": "feature-extraction",
             "tags": [
+              "transformers",
+              "safetensors",
+              "xlm-roberta",
+              "feature-extraction",
+              "generated_from_trainer",
+              "text-embeddings-inference",
+              "endpoints_compatible",
               "region:us"
             ],
-            "publishedAt": "2026-05-30T08:39:09.000Z",
-            "collectedAt": "2026-06-06T11:18:45.656Z",
+            "publishedAt": "2026-04-02T12:46:49.000Z",
+            "collectedAt": "2026-06-06T13:11:40.672Z",
             "metrics": {
-              "downloads": 0,
-              "likes": 3
+              "downloads": 1143,
+              "likes": 0
             }
           }
         ],
         "relatedEntities": [
           "谷歌推出基于 Gemini Enterprise Agent Platform 的 Agentic RAG 框架",
-          "Duong-storage-test/Checking_something_new",
+          "Edue3r4t5y6/bge-m3-MUIA",
           "Conventional Commits encourages focus on the wrong things"
         ],
         "metrics": {
-          "votes": 318,
-          "likes": 3,
-          "commentsCount": 234,
-          "heatScore": 362,
+          "votes": 330,
+          "downloads": 1143,
+          "commentsCount": 237,
+          "heatScore": 406,
           "crossSourceBonus": 20
         }
       },
       {
         "id": "topic:mcp / tool calling",
         "title": "Mcp / Tool Calling",
-        "category": "gradio",
+        "category": "text-generation",
         "sources": [
-          "huggingface_spaces",
-          "hackernews"
+          "huggingface_models",
+          "huggingface_spaces"
         ],
         "sourceCount": 2,
-        "heatScore": 141,
+        "heatScore": 140,
         "confidence": "medium",
         "watchDecision": "deep_dive",
-        "whatItIs": "Mcp / Tool Calling is an AI trend topic in gradio represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): huggingface_spaces, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Mcp / Tool Calling is an AI trend topic in text-generation represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_models, huggingface_spaces, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Mcp / Tool Calling should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
-          "gradio",
-          "mcp-server",
-          "region:us",
-          "llm",
-          "agent",
-          "mcp"
+          "gguf",
+          "tacita",
+          "gemma-4",
+          "llama.cpp",
+          "on-device",
+          "function-calling",
+          "multilingual",
+          "text-generation"
         ],
         "evidenceItems": [
           {
@@ -294,9 +331,9 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-06-06T11:18:45.683Z",
+            "collectedAt": "2026-06-06T13:11:40.677Z",
             "metrics": {
-              "likes": 3325
+              "likes": 3326
             }
           },
           {
@@ -312,7 +349,7 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-06-06T11:18:45.683Z",
+            "collectedAt": "2026-06-06T13:11:40.677Z",
             "metrics": {
               "likes": 3171
             }
@@ -330,72 +367,121 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-06-06T11:18:45.683Z",
+            "collectedAt": "2026-06-06T13:11:40.677Z",
             "metrics": {
               "likes": 2849
             }
           },
           {
-            "id": "hackernews:48423744",
-            "title": "Show HN: Sub-Agent MCP: LLM delegation and sub-agent orchestration via MCP",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://github.com/stormaref/Sub-Agent-MCP",
+            "id": "huggingface_models:TacitaModels/Gemma-4-Tacita-E4B-GGUF",
+            "title": "TacitaModels/Gemma-4-Tacita-E4B-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/TacitaModels/Gemma-4-Tacita-E4B-GGUF",
+            "category": "text-generation",
             "tags": [
-              "llm",
-              "agent",
-              "mcp"
+              "gguf",
+              "tacita",
+              "gemma-4",
+              "llama.cpp",
+              "on-device",
+              "function-calling",
+              "multilingual",
+              "text-generation",
+              "base_model:unsloth/gemma-4-E4B-it",
+              "base_model:finetune:unsloth/gemma-4-E4B-it",
+              "license:apache-2.0",
+              "region:us"
             ],
-            "publishedAt": "2026-06-06T11:10:02.000Z",
-            "collectedAt": "2026-06-06T11:18:45.872Z",
+            "publishedAt": "2026-06-06T12:44:01.000Z",
+            "collectedAt": "2026-06-06T13:11:40.672Z",
             "metrics": {
-              "upvotes": 1,
-              "commentsCount": 0
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:TacitaModels/Gemma-4-Tacita-E4B-litert-lm",
+            "title": "TacitaModels/Gemma-4-Tacita-E4B-litert-lm",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/TacitaModels/Gemma-4-Tacita-E4B-litert-lm",
+            "category": "text-generation",
+            "tags": [
+              "litert-lm",
+              "tacita",
+              "gemma-4",
+              "on-device",
+              "function-calling",
+              "multilingual",
+              "text-generation",
+              "base_model:unsloth/gemma-4-E4B-it",
+              "base_model:finetune:unsloth/gemma-4-E4B-it",
+              "license:apache-2.0",
+              "region:us"
+            ],
+            "publishedAt": "2026-06-06T12:44:00.000Z",
+            "collectedAt": "2026-06-06T13:11:40.672Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
             }
           }
         ],
         "relatedEntities": [
+          "TacitaModels/Gemma-4-Tacita-E4B-GGUF",
+          "TacitaModels/Gemma-4-Tacita-E4B-litert-lm",
           "Z Image Turbo",
           "Wan2.2 14B Fast",
-          "Background Removal",
-          "Show HN: Sub-Agent MCP: LLM delegation and sub-agent orchestration via MCP"
+          "Background Removal"
         ],
         "metrics": {
-          "votes": 1,
-          "likes": 3325,
-          "heatScore": 141,
+          "likes": 3326,
+          "heatScore": 140,
           "crossSourceBonus": 10
         }
       },
       {
         "id": "topic:local llm / inference",
         "title": "Local Llm / Inference",
-        "category": "tools",
+        "category": "products",
         "sources": [
           "aihot",
-          "huggingface_models"
+          "huggingface_models",
+          "hackernews"
         ],
-        "sourceCount": 2,
-        "heatScore": 68,
-        "confidence": "low",
-        "watchDecision": "track",
-        "whatItIs": "Local Llm / Inference is an AI trend topic in tools represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, huggingface_models, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "sourceCount": 3,
+        "heatScore": 107,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Local Llm / Inference is an AI trend topic in products represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_models, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
+          "products",
           "tools",
-          "wan2.2",
           "gguf",
-          "comfyui",
-          "bernini-r",
-          "text-to-video",
-          "image-editing",
-          "base_model:ByteDance/Bernini-R"
+          "tacita",
+          "gemma-4",
+          "llama.cpp",
+          "on-device",
+          "function-calling"
         ],
         "evidenceItems": [
+          {
+            "id": "aihot:cmq2ahm4y00o9slopm7hxc8ld",
+            "title": "Persona Atlas：Hugging Face 上的开源人物思维映射工具",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://huggingface.co/blog/build-small-hackathon/persona-atlas",
+            "summary": "Persona Atlas 是一个运行在 Hugging Face Inference Providers 上的开源项目。它通过工具调用代理执行真实网络搜索，生成公众人物的资料、事实清单和风格假设，然后让该人物回答十个关于身份、伦理等开放式问题。每个回答被转化为嵌入向量，从而在向量空间中对不同人物进行距离比较，并基于十个特质锚点绘制热力图。前端采用 Gradio，提供研究、比较和检查代理完整追溯三个标签页，预设多个人物角色，无需 token 即可直接体验。",
+            "category": "products",
+            "publishedAt": "2026-06-06T11:42:01.000Z",
+            "collectedAt": "2026-06-06T13:11:47.052Z"
+          },
           {
             "id": "aihot:cmq1ikzj50g4jsltr7vm9qbst",
             "title": "用Qwen2.5-3B构建多智能体经济体：工程报告",
@@ -405,209 +491,109 @@
             "summary": "开发者用Qwen2.5-3B构建了五人森林生物多智能体经济体，每个智能体独立运行，通过vLLM部署在Modal，以Gradio为交互窗口。3B模型在100%调用中输出有效JSON，但经济判断能力弱。通过设计稀缺性（食物品种限制、易腐坏、冬季燃料危机）和优化提示词（禁止买入自产物品、给出示例）提升决策质量。15轮模拟中，蜜价从10跌至3、柴价从4涨至7、财富基尼系数从0.14扩至0.38。项目展示了小模型可靠格式化与不可靠推理之间的工程填补。",
             "category": "tools",
             "publishedAt": "2026-06-05T22:18:46.000Z",
-            "collectedAt": "2026-06-06T11:18:42.645Z"
+            "collectedAt": "2026-06-06T13:11:47.052Z"
           },
           {
-            "id": "huggingface_models:inferencerlabs/NVIDIA-Nemotron-3-Ultra-550B-A55B-MLX-6.2bit-INF",
-            "title": "inferencerlabs/NVIDIA-Nemotron-3-Ultra-550B-A55B-MLX-6.2bit-INF",
+            "id": "huggingface_models:Edue3r4t5y6/bge-m3-MUIA",
+            "title": "Edue3r4t5y6/bge-m3-MUIA",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/inferencerlabs/NVIDIA-Nemotron-3-Ultra-550B-A55B-MLX-6.2bit-INF",
-            "category": "text-generation",
-            "tags": [
-              "mlx",
-              "nemotron_h",
-              "quantized",
-              "text-generation",
-              "conversational",
-              "en",
-              "base_model:nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
-              "base_model:quantized:nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
-              "region:us"
-            ],
-            "publishedAt": "2026-06-06T00:25:50.000Z",
-            "collectedAt": "2026-06-06T11:18:45.656Z",
-            "metrics": {
-              "downloads": 78,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:neuregex/Bernini-R-GGUF",
-            "title": "neuregex/Bernini-R-GGUF",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/neuregex/Bernini-R-GGUF",
-            "category": "text-to-video",
-            "tags": [
-              "wan2.2",
-              "gguf",
-              "comfyui",
-              "bernini-r",
-              "text-to-video",
-              "image-editing",
-              "base_model:ByteDance/Bernini-R",
-              "base_model:quantized:ByteDance/Bernini-R",
-              "license:apache-2.0",
-              "region:us"
-            ],
-            "publishedAt": "2026-06-06T10:22:43.000Z",
-            "collectedAt": "2026-06-06T11:18:45.656Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:mradermacher/gemma-4-12b-heretic-abliterated-i1-GGUF",
-            "title": "mradermacher/gemma-4-12b-heretic-abliterated-i1-GGUF",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/mradermacher/gemma-4-12b-heretic-abliterated-i1-GGUF",
-            "tags": [
-              "gguf",
-              "region:us"
-            ],
-            "publishedAt": "2026-06-06T11:18:19.000Z",
-            "collectedAt": "2026-06-06T11:18:45.656Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:ineosnexus/Gm4-31B-ara-custom-heretic-it-i1",
-            "title": "ineosnexus/Gm4-31B-ara-custom-heretic-it-i1",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/ineosnexus/Gm4-31B-ara-custom-heretic-it-i1",
-            "tags": [
-              "gguf",
-              "license:apache-2.0",
-              "endpoints_compatible",
-              "region:us",
-              "imatrix",
-              "conversational"
-            ],
-            "publishedAt": "2026-06-05T14:23:58.000Z",
-            "collectedAt": "2026-06-06T11:18:45.656Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:mradermacher/Qwen3-VL-8B-Heretic-1.3.0-i1-GGUF",
-            "title": "mradermacher/Qwen3-VL-8B-Heretic-1.3.0-i1-GGUF",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/mradermacher/Qwen3-VL-8B-Heretic-1.3.0-i1-GGUF",
+            "url": "https://huggingface.co/Edue3r4t5y6/bge-m3-MUIA",
+            "category": "feature-extraction",
             "tags": [
               "transformers",
-              "gguf",
-              "abliteration",
-              "heretic",
-              "uncensored",
-              "qwen3",
-              "qwen",
-              "qwen3-vl",
-              "vision-language",
-              "comfyui",
-              "nvfp4",
-              "blackwell",
-              "conversational",
-              "text-generation-inference",
-              "en",
-              "zh",
-              "base_model:DreamFast/Qwen3-VL-8B-Heretic-1.3.0",
-              "base_model:quantized:DreamFast/Qwen3-VL-8B-Heretic-1.3.0",
-              "license:apache-2.0",
+              "safetensors",
+              "xlm-roberta",
+              "feature-extraction",
+              "generated_from_trainer",
+              "text-embeddings-inference",
               "endpoints_compatible",
-              "region:us",
-              "imatrix"
+              "region:us"
             ],
-            "publishedAt": "2026-06-06T10:57:17.000Z",
-            "collectedAt": "2026-06-06T11:18:45.656Z",
+            "publishedAt": "2026-04-02T12:46:49.000Z",
+            "collectedAt": "2026-06-06T13:11:40.672Z",
             "metrics": {
-              "downloads": 0,
+              "downloads": 1143,
               "likes": 0
             }
-          }
-        ],
-        "relatedEntities": [
-          "用Qwen2.5-3B构建多智能体经济体：工程报告",
-          "neuregex/Bernini-R-GGUF",
-          "mradermacher/gemma-4-12b-heretic-abliterated-i1-GGUF",
-          "ineosnexus/Gm4-31B-ara-custom-heretic-it-i1",
-          "mradermacher/Qwen3-VL-8B-Heretic-1.3.0-i1-GGUF",
-          "inferencerlabs/NVIDIA-Nemotron-3-Ultra-550B-A55B-MLX-6.2bit-INF",
-          "asdasd123333/qwen2-2b-pliusai-lora"
-        ],
-        "metrics": {
-          "downloads": 78,
-          "heatScore": 68,
-          "crossSourceBonus": 10
-        }
-      },
-      {
-        "id": "topic:coding agent / swe agent",
-        "title": "Coding Agent / Swe Agent",
-        "category": "products",
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "heatScore": 41,
-        "confidence": "low",
-        "watchDecision": "track",
-        "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in products represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Coding Agent / Swe Agent should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
-        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
-        "technicalKeywords": [
-          "products",
-          "claude"
-        ],
-        "evidenceItems": [
-          {
-            "id": "aihot:cmq16mdmy0d0hsltriwaiyzvh",
-            "title": "Google Colab CLI 发布",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://developers.googleblog.com/introducing-the-google-colab-cli",
-            "summary": "Google 推出 Colab 命令行界面（CLI），允许开发者和 AI 智能体将本地终端连接到远程 Colab 运行时，实现无摩擦执行。该轻量级 CLI 支持请求高性能 GPU、远程运行本地 Python 脚本，并检索工件日志或模型（如微调后的 Gemma 3 适配器）。工具可直接集成到标准终端环境，可被 Antigravity、Claude Code 等 AI 智能体调用以管理复杂机器学习流水线。",
-            "category": "products",
-            "publishedAt": "2026-06-05T17:12:11.075Z",
-            "collectedAt": "2026-06-06T11:18:42.645Z"
           },
           {
-            "id": "hackernews:48423810",
-            "title": "Claude Code, the conversational window, and what happens to the human \"I\"",
+            "id": "hackernews:48424467",
+            "title": "Free LLM inference handbook: 100 engineers cloned it in week 1",
             "source": "hackernews",
             "sourceType": "developer_discussion",
-            "url": "https://theconversationdaemon.com/p/what-you-made-as-real",
+            "url": "https://github.com/harshuljain13/llm-inference-at-scale",
             "tags": [
-              "claude"
+              "ai",
+              "llm",
+              "inference"
             ],
-            "publishedAt": "2026-06-06T11:18:12.000Z",
-            "collectedAt": "2026-06-06T11:18:45.872Z",
+            "publishedAt": "2026-06-06T12:37:09.000Z",
+            "collectedAt": "2026-06-06T13:11:40.819Z",
             "metrics": {
               "upvotes": 1,
               "commentsCount": 0
             }
+          },
+          {
+            "id": "huggingface_models:TacitaModels/Gemma-4-Tacita-E4B-GGUF",
+            "title": "TacitaModels/Gemma-4-Tacita-E4B-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/TacitaModels/Gemma-4-Tacita-E4B-GGUF",
+            "category": "text-generation",
+            "tags": [
+              "gguf",
+              "tacita",
+              "gemma-4",
+              "llama.cpp",
+              "on-device",
+              "function-calling",
+              "multilingual",
+              "text-generation",
+              "base_model:unsloth/gemma-4-E4B-it",
+              "base_model:finetune:unsloth/gemma-4-E4B-it",
+              "license:apache-2.0",
+              "region:us"
+            ],
+            "publishedAt": "2026-06-06T12:44:01.000Z",
+            "collectedAt": "2026-06-06T13:11:40.672Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:Engetsu77/wan22-enhanced-svi",
+            "title": "Engetsu77/wan22-enhanced-svi",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/Engetsu77/wan22-enhanced-svi",
+            "tags": [
+              "gguf",
+              "region:us"
+            ],
+            "publishedAt": "2026-06-05T23:06:02.000Z",
+            "collectedAt": "2026-06-06T13:11:40.672Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
           }
         ],
         "relatedEntities": [
-          "Google Colab CLI 发布",
-          "Claude Code, the conversational window, and what happens to the human \"I\""
+          "Persona Atlas：Hugging Face 上的开源人物思维映射工具",
+          "用Qwen2.5-3B构建多智能体经济体：工程报告",
+          "TacitaModels/Gemma-4-Tacita-E4B-GGUF",
+          "Engetsu77/wan22-enhanced-svi",
+          "Edue3r4t5y6/bge-m3-MUIA",
+          "Free LLM inference handbook: 100 engineers cloned it in week 1"
         ],
         "metrics": {
           "votes": 1,
-          "heatScore": 41,
-          "crossSourceBonus": 10
+          "downloads": 1143,
+          "heatScore": 107,
+          "crossSourceBonus": 20
         }
       }
     ],
@@ -617,8 +603,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-06-06T11:18:41.461Z",
-        "finishedAt": "2026-06-06T11:18:41.461Z",
+        "startedAt": "2026-06-06T13:11:40.550Z",
+        "finishedAt": "2026-06-06T13:11:40.550Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -627,36 +613,36 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-06-06T11:18:41.461Z",
-        "finishedAt": "2026-06-06T11:18:42.646Z",
-        "latencyMs": 1185
+        "startedAt": "2026-06-06T13:11:40.550Z",
+        "finishedAt": "2026-06-06T13:11:47.053Z",
+        "latencyMs": 6503
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 17,
-        "startedAt": "2026-06-06T11:18:41.475Z",
-        "finishedAt": "2026-06-06T11:18:45.657Z",
-        "latencyMs": 4182
+        "itemCount": 20,
+        "startedAt": "2026-06-06T13:11:40.563Z",
+        "finishedAt": "2026-06-06T13:11:40.672Z",
+        "latencyMs": 109
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-06-06T11:18:41.477Z",
-        "finishedAt": "2026-06-06T11:18:45.683Z",
-        "latencyMs": 4206
+        "startedAt": "2026-06-06T13:11:40.566Z",
+        "finishedAt": "2026-06-06T13:11:40.677Z",
+        "latencyMs": 111
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 28,
-        "startedAt": "2026-06-06T11:18:41.478Z",
-        "finishedAt": "2026-06-06T11:18:45.873Z",
-        "latencyMs": 4395
+        "itemCount": 26,
+        "startedAt": "2026-06-06T13:11:40.567Z",
+        "finishedAt": "2026-06-06T13:11:40.819Z",
+        "latencyMs": 252
       }
     ],
     "dataNotes": [
@@ -666,6 +652,76 @@
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
+      {
+        "id": "huggingface_models:QuantFunc/Nunchaku-Qwen-Image-EDIT-2511",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "QuantFunc/Nunchaku-Qwen-Image-EDIT-2511",
+        "url": "https://huggingface.co/QuantFunc/Nunchaku-Qwen-Image-EDIT-2511",
+        "tags": [
+          "diffusers",
+          "custom_qwen_image",
+          "image-generation",
+          "multimodal",
+          "qwen",
+          "quantized",
+          "nunchaku",
+          "comfyui",
+          "image-to-image",
+          "en",
+          "zh",
+          "base_model:Qwen/Qwen-Image-Edit-2511",
+          "base_model:quantized:Qwen/Qwen-Image-Edit-2511",
+          "license:apache-2.0",
+          "region:us"
+        ],
+        "category": "image-to-image",
+        "metrics": {
+          "downloads": 4046,
+          "likes": 100
+        },
+        "publishedAt": "2026-01-22T00:04:58.000Z",
+        "updatedAt": "2026-06-06T13:10:53.000Z",
+        "collectedAt": "2026-06-06T13:11:40.672Z",
+        "raw": {
+          "pipelineTag": "image-to-image"
+        }
+      },
+      {
+        "id": "huggingface_models:QuantFunc/Nunchaku-Qwen-Image-2512",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "QuantFunc/Nunchaku-Qwen-Image-2512",
+        "url": "https://huggingface.co/QuantFunc/Nunchaku-Qwen-Image-2512",
+        "tags": [
+          "diffusers",
+          "custom_qwen_image",
+          "image-generation",
+          "multimodal",
+          "qwen",
+          "quantized",
+          "nunchaku",
+          "comfyui",
+          "text-to-image",
+          "en",
+          "zh",
+          "base_model:Qwen/Qwen-Image-2512",
+          "base_model:quantized:Qwen/Qwen-Image-2512",
+          "license:apache-2.0",
+          "region:us"
+        ],
+        "category": "text-to-image",
+        "metrics": {
+          "downloads": 1485,
+          "likes": 91
+        },
+        "publishedAt": "2026-01-19T08:36:06.000Z",
+        "updatedAt": "2026-06-06T13:10:52.000Z",
+        "collectedAt": "2026-06-06T13:11:40.672Z",
+        "raw": {
+          "pipelineTag": "text-to-image"
+        }
+      },
       {
         "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
         "source": "huggingface_spaces",
@@ -690,7 +746,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-06-06T11:18:45.683Z",
+        "collectedAt": "2026-06-06T13:11:40.677Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -709,11 +765,11 @@
         ],
         "category": "docker",
         "metrics": {
-          "likes": 11108
+          "likes": 11109
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-06-06T11:18:45.683Z",
+        "collectedAt": "2026-06-06T13:11:40.677Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -732,11 +788,11 @@
         ],
         "category": "gradio",
         "metrics": {
-          "likes": 10099
+          "likes": 10100
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-06-06T11:18:45.683Z",
+        "collectedAt": "2026-06-06T13:11:40.677Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
@@ -760,39 +816,38 @@
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
         "updatedAt": "2026-06-04T13:54:10.000Z",
-        "collectedAt": "2026-06-06T11:18:45.683Z",
+        "collectedAt": "2026-06-06T13:11:40.677Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🥇"
         }
       },
       {
-        "id": "huggingface_models:inferencerlabs/NVIDIA-Nemotron-3-Ultra-550B-A55B-MLX-6.2bit-INF",
+        "id": "huggingface_models:Edue3r4t5y6/bge-m3-MUIA",
         "source": "huggingface_models",
         "sourceType": "model_hub",
-        "title": "inferencerlabs/NVIDIA-Nemotron-3-Ultra-550B-A55B-MLX-6.2bit-INF",
-        "url": "https://huggingface.co/inferencerlabs/NVIDIA-Nemotron-3-Ultra-550B-A55B-MLX-6.2bit-INF",
+        "title": "Edue3r4t5y6/bge-m3-MUIA",
+        "url": "https://huggingface.co/Edue3r4t5y6/bge-m3-MUIA",
         "tags": [
-          "mlx",
-          "nemotron_h",
-          "quantized",
-          "text-generation",
-          "conversational",
-          "en",
-          "base_model:nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
-          "base_model:quantized:nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+          "transformers",
+          "safetensors",
+          "xlm-roberta",
+          "feature-extraction",
+          "generated_from_trainer",
+          "text-embeddings-inference",
+          "endpoints_compatible",
           "region:us"
         ],
-        "category": "text-generation",
+        "category": "feature-extraction",
         "metrics": {
-          "downloads": 78,
+          "downloads": 1143,
           "likes": 0
         },
-        "publishedAt": "2026-06-06T00:25:50.000Z",
-        "updatedAt": "2026-06-06T11:17:00.000Z",
-        "collectedAt": "2026-06-06T11:18:45.656Z",
+        "publishedAt": "2026-04-02T12:46:49.000Z",
+        "updatedAt": "2026-06-06T13:10:37.000Z",
+        "collectedAt": "2026-06-06T13:11:40.672Z",
         "raw": {
-          "pipelineTag": "text-generation"
+          "pipelineTag": "feature-extraction"
         }
       },
       {
@@ -812,87 +867,14 @@
         },
         "publishedAt": "2025-09-18T07:05:32.000Z",
         "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-06-06T11:18:45.683Z",
+        "collectedAt": "2026-06-06T13:11:40.677Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👁"
         }
-      },
-      {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
-        "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5072
-        },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-06-06T11:18:45.683Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4905
-        },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-06-06T11:18:45.683Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
       }
     ],
     "developerBuzz": [
-      {
-        "id": "hackernews:48411635",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Did Claude increase bugs in rsync?",
-        "url": "https://alexispurslane.github.io/rsync-analysis/",
-        "author": "logicprog",
-        "tags": [
-          "claude"
-        ],
-        "metrics": {
-          "upvotes": 429,
-          "commentsCount": 442
-        },
-        "publishedAt": "2026-06-05T12:43:33.000Z",
-        "collectedAt": "2026-06-06T11:18:45.872Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48411635",
-          "matchedKeywords": [
-            "claude"
-          ]
-        }
-      },
       {
         "id": "hackernews:48421442",
         "source": "hackernews",
@@ -906,11 +888,11 @@
           "anthropic"
         ],
         "metrics": {
-          "upvotes": 553,
-          "commentsCount": 191
+          "upvotes": 720,
+          "commentsCount": 233
         },
         "publishedAt": "2026-06-06T04:38:36.000Z",
-        "collectedAt": "2026-06-06T11:18:45.872Z",
+        "collectedAt": "2026-06-06T13:11:40.819Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48421442",
           "matchedKeywords": [
@@ -932,11 +914,11 @@
           "anthropic"
         ],
         "metrics": {
-          "upvotes": 511,
-          "commentsCount": 687
+          "upvotes": 512,
+          "commentsCount": 688
         },
         "publishedAt": "2026-06-04T16:20:17.000Z",
-        "collectedAt": "2026-06-06T11:18:45.872Z",
+        "collectedAt": "2026-06-06T13:11:40.819Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48400842",
           "matchedKeywords": [
@@ -956,11 +938,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 402,
-          "commentsCount": 251
+          "upvotes": 408,
+          "commentsCount": 252
         },
         "publishedAt": "2026-06-05T15:00:31.000Z",
-        "collectedAt": "2026-06-06T11:18:45.872Z",
+        "collectedAt": "2026-06-06T13:11:40.819Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48413464",
           "matchedKeywords": [
@@ -979,20 +961,63 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 355,
-          "commentsCount": 668
+          "upvotes": 386,
+          "commentsCount": 713
         },
         "publishedAt": "2026-06-04T23:42:20.000Z",
-        "collectedAt": "2026-06-06T11:18:45.872Z",
+        "collectedAt": "2026-06-06T13:11:40.819Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48406174",
           "matchedKeywords": [
             "ai"
           ]
         }
+      },
+      {
+        "id": "hackernews:48411635",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Did Claude increase bugs in rsync?",
+        "url": "https://alexispurslane.github.io/rsync-analysis/",
+        "author": "logicprog",
+        "tags": [
+          "claude"
+        ],
+        "metrics": {
+          "upvotes": 449,
+          "commentsCount": 455
+        },
+        "publishedAt": "2026-06-05T12:43:33.000Z",
+        "collectedAt": "2026-06-06T13:11:40.819Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48411635",
+          "matchedKeywords": [
+            "claude"
+          ]
+        }
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmq2ahm4y00o9slopm7hxc8ld",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Persona Atlas：Hugging Face 上的开源人物思维映射工具",
+        "url": "https://huggingface.co/blog/build-small-hackathon/persona-atlas",
+        "summary": "Persona Atlas 是一个运行在 Hugging Face Inference Providers 上的开源项目。它通过工具调用代理执行真实网络搜索，生成公众人物的资料、事实清单和风格假设，然后让该人物回答十个关于身份、伦理等开放式问题。每个回答被转化为嵌入向量，从而在向量空间中对不同人物进行距离比较，并基于十个特质锚点绘制热力图。前端采用 Gradio，提供研究、比较和检查代理完整追溯三个标签页，预设多个人物角色，无需 token 即可直接体验。",
+        "description": "Persona Atlas 是一个运行在 Hugging Face Inference Providers 上的开源项目。它通过工具调用代理执行真实网络搜索，生成公众人物的资料、事实清单和风格假设，然后让该人物回答十个关于身份、伦理等开放式问题。每个回答被转化为嵌入向量，从而在向量空间中对不同人物进行距离比较，并基于十个特质锚点绘制热力图。前端采用 Gradio，提供研究、比较和检查代理完整追溯三个标签页，预设多个人物角色，无需 token 即可直接体验。",
+        "category": "products",
+        "originalSource": "Hugging Face：Blog（RSS）",
+        "originalUrl": "https://huggingface.co/blog/build-small-hackathon/persona-atlas",
+        "recommendedReason": "Persona Atlas 是一个运行在 Hugging Face Inference Providers 上的开源项目。它通过工具调用代理执行真实网络搜索，生成公众人物的资料、事实清单和风格假设，然后让该人物回答十个关于身份、伦理等开放式问题。每个回答被转化为嵌入向量，从而在向量空间中对不同人物进行距离比较，并基于十个特质锚点绘制热力图。前端采用 Gradio，提供研究、比较和检查代理完整追溯三个标签页，预设多个人物角色，无需 token 即可直接体验。",
+        "publishedAt": "2026-06-06T11:42:01.000Z",
+        "collectedAt": "2026-06-06T13:11:47.052Z",
+        "raw": {
+          "id": "cmq2ahm4y00o9slopm7hxc8ld",
+          "titleEn": "Persona Atlas： Mapping How Famous Minds Think",
+          "apiCategory": "ai-products"
+        }
+      },
       {
         "id": "aihot:cmq1jj4u00gejsltrelu93dbg",
         "source": "aihot",
@@ -1006,7 +1031,7 @@
         "originalUrl": "https://x.com/NVIDIAAI/status/2063034422698389625",
         "recommendedReason": "被选为 #CVPR2026 最佳论文决赛作品：来自 NVIDIA Research 的 PixelDiT 在大多数图像生成模型中，预训练的自编码器会在任何扩散发生前压缩图像，导致质量损失在整个流程中累积。 PixelDiT，即像素扩散变换器，完全去掉了这一步骤。它是一个单阶段模型，直接在像素空间中端到端地学习扩散过程。",
         "publishedAt": "2026-06-05T23:05:10.000Z",
-        "collectedAt": "2026-06-06T11:18:42.645Z",
+        "collectedAt": "2026-06-06T13:11:47.052Z",
         "raw": {
           "id": "cmq1jj4u00gejsltrelu93dbg",
           "titleEn": "Selected as a best paper finalist at #CVPR2026： PixelDiT from NVIDIA Research In most image generat…",
@@ -1026,7 +1051,7 @@
         "originalUrl": "https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim",
         "recommendedReason": "开发者用Qwen2.5-3B构建了五人森林生物多智能体经济体，每个智能体独立运行，通过vLLM部署在Modal，以Gradio为交互窗口。3B模型在100%调用中输出有效JSON，但经济判断能力弱。通过设计稀缺性（食物品种限制、易腐坏、冬季燃料危机）和优化提示词（禁止买入自产物品、给出示例）提升决策质量。15轮模拟中，蜜价从10跌至3、柴价从4涨至7、财富基尼系数从0.14扩至0.38。项目展示了小模型可靠格式化与不可靠推理之间的工程填补。",
         "publishedAt": "2026-06-05T22:18:46.000Z",
-        "collectedAt": "2026-06-06T11:18:42.645Z",
+        "collectedAt": "2026-06-06T13:11:47.052Z",
         "raw": {
           "id": "cmq1ikzj50g4jsltr7vm9qbst",
           "titleEn": "Thousand Token Wood： shipping a multi-agent economy on a 3B model",
@@ -1046,7 +1071,7 @@
         "originalUrl": "https://x.com/rohanpaul_ai/status/2063018358795300982",
         "recommendedReason": "Arena 推出基于真实用户任务的智能体排行榜，评估模型在代码编写、应用构建、文档分析等工作中的表现，而非孤立基准。排行榜基于30万+任务、200万+工具调用和4000万行代码，综合任务成功、纠正遵从性、错误恢复、用户表扬与抱怨、工具幻觉等信号。前三名：GPT-5.5 High（+10.7%）、Claude Opus 4.7 Thinking（+9.5%）、GPT-5.4 High（+8.9%）。",
         "publishedAt": "2026-06-05T22:01:20.000Z",
-        "collectedAt": "2026-06-06T11:18:42.645Z",
+        "collectedAt": "2026-06-06T13:11:47.052Z",
         "raw": {
           "id": "cmq1hy4wt0fyrsltrxx64boz8",
           "titleEn": "Arena just released a real-world agent leaderboard that ranks AI models by how well they complete ac…",
@@ -1066,7 +1091,7 @@
         "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-05/apollo-wraps-up-35-billion-debt-to-buy-ai-chips-for-anthropic",
         "recommendedReason": "Apollo Global Management 和 Blackstone 已为 Anthropic 敲定 350 亿美元融资方案，用于扩充其 AI 基础设施。这是人工智能竞赛中最新的一笔巨额交易。",
         "publishedAt": "2026-06-05T21:02:29.000Z",
-        "collectedAt": "2026-06-06T11:18:42.645Z",
+        "collectedAt": "2026-06-06T13:11:47.052Z",
         "raw": {
           "id": "cmq1fw2bb0ffssltrvl691wnx",
           "titleEn": "Apollo Wraps Up $35 Billion Debt to Buy AI Chips for Anthropic",
@@ -1086,7 +1111,7 @@
         "originalUrl": "https://x.com/rohanpaul_ai/status/2063000834045313314",
         "recommendedReason": "SpaceX 刚刚披露了一份与 Google 的新云服务协议。 Google 将每月向 SpaceX 支付 9.2 亿美元（约合每年 110 亿美元），用于 xAI 数据中心的计算能力。 这再次表明，AI 算力正成为一种战略性商品，就像发射能力或能源一样，而那些能够为庞大的 GPU 集群提供资金、电力、冷却和运营的公司，可能会在其原有业务之外获得巨大的杠杆优势。",
         "publishedAt": "2026-06-05T20:51:42.000Z",
-        "collectedAt": "2026-06-06T11:18:42.645Z",
+        "collectedAt": "2026-06-06T13:11:47.052Z",
         "raw": {
           "id": "cmq1eqdug0f4bsltr1nzlten4",
           "titleEn": "SpaceX just disclosed a new Cloud Service Agreement with Google. Google to pay SpaceX $920 million …",
@@ -1106,7 +1131,7 @@
         "originalUrl": "https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag",
         "recommendedReason": "Google Research 与 Google Cloud 合作推出跨语料库检索（Cross-Corpus Retrieval）框架，作为 Gemini Enterprise Agent Platform 的 Agentic RAG。该多智能体工作流将复杂企业查询分解为子任务，通过规划、重写和路由，迭代搜索多个数据源直至获得充分上下文，再生成可靠回答。与标准 RAG 相比，在事实性数据集上准确率最高提升 34%；在多个领域特定内部数据集上也实现了更好的接地与推理准确性。",
         "publishedAt": "2026-06-05T20:30:02.046Z",
-        "collectedAt": "2026-06-06T11:18:42.645Z",
+        "collectedAt": "2026-06-06T13:11:47.052Z",
         "raw": {
           "id": "cmq1dossi0ev7sltrrihfn7pb",
           "titleEn": "Unlocking dependable responses with Gemini Enterprise Agent Platform's Agentic RAG",
@@ -1126,30 +1151,10 @@
         "originalUrl": "https://x.com/MSFTResearch/status/2062983588606320714",
         "recommendedReason": "微软Azure CTO Mark Russinovich在Build 2026上介绍Project Mosaic，这是微软剑桥研究院的实验性光学互连技术，采用micro-LED实现低功耗、高速数据传输。高级研究员Kaoutar Benyahya现场演示单个LED调制形成字母，证明概念具备实时响应能力。",
         "publishedAt": "2026-06-05T19:43:10.000Z",
-        "collectedAt": "2026-06-06T11:18:42.645Z",
+        "collectedAt": "2026-06-06T13:11:47.052Z",
         "raw": {
           "id": "cmq1d2vyt0epssltrsz0gvbky",
           "titleEn": "During the Inside Azure Innovations breakout at Build 2026， Microsoft Azure CTO， deputy CISO and tec…",
-          "apiCategory": "paper"
-        }
-      },
-      {
-        "id": "aihot:cmq1bny1b0ebysltrc6b1fxmk",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Anthropic：让Claude成为化学家",
-        "url": "https://www.anthropic.com/research/making-claude-a-chemist",
-        "summary": "Anthropic与顶尖化学家合作，提升Claude在化学领域的实用性。首个白皮书测试Claude在NMR谱图分析上的表现：在20个化合物上，对比Claude Opus 4.7、Opus 4.6、Sonnet 4.6与ChemDraw、MestReNova的正向预测（从结构预测谱图）和反向结构解析（从实验谱图推断结构）能力。所有化合物选自模型训练截止日期后发布的ChemRxiv预印本，以避免选择偏差。",
-        "description": "Anthropic与顶尖化学家合作，提升Claude在化学领域的实用性。首个白皮书测试Claude在NMR谱图分析上的表现：在20个化合物上，对比Claude Opus 4.7、Opus 4.6、Sonnet 4.6与ChemDraw、MestReNova的正向预测（从结构预测谱图）和反向结构解析（从实验谱图推断结构）能力。所有化合物选自模型训练截止日期后发布的ChemRxiv预印本，以避免选择偏差。",
-        "category": "papers",
-        "originalSource": "Anthropic：Research（发表成果 · 网页）",
-        "originalUrl": "https://www.anthropic.com/research/making-claude-a-chemist",
-        "recommendedReason": "Anthropic与顶尖化学家合作，提升Claude在化学领域的实用性。首个白皮书测试Claude在NMR谱图分析上的表现：在20个化合物上，对比Claude Opus 4.7、Opus 4.6、Sonnet 4.6与ChemDraw、MestReNova的正向预测（从结构预测谱图）和反向结构解析（从实验谱图推断结构）能力。所有化合物选自模型训练截止日期后发布的ChemRxiv预印本，以避免选择偏差。",
-        "publishedAt": "2026-06-05T19:33:26.491Z",
-        "collectedAt": "2026-06-06T11:18:42.645Z",
-        "raw": {
-          "id": "cmq1bny1b0ebysltrc6b1fxmk",
-          "titleEn": "Making Claude a chemist",
           "apiCategory": "paper"
         }
       }
