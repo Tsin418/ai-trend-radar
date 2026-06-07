@@ -1,24 +1,495 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-06-08-2026-06-07T17-59-16-934Z",
-  "generatedAt": "2026-06-07T17:59:16.934Z",
+  "runId": "lightweight-2026-06-08-2026-06-07T19-26-18-344Z",
+  "generatedAt": "2026-06-07T19:26:18.344Z",
   "targetDate": "2026-06-08",
   "brief": {
     "date": "2026-06-08",
-    "headline": "Today's strongest AI trend signals are Coding Agent / Swe Agent, Local Llm / Inference, and Ai Model Release.",
+    "headline": "Today's strongest AI trend signals are Ai Model Release, Rag / Knowledge Base, and Mcp / Tool Calling.",
     "keyTakeaways": [
-      "Coding Agent / Swe Agent: This topic appeared across 1 source(s): aihot, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-      "Coding Agent / Swe Agent: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
-      "Coding Agent / Swe Agent: watch decision is wait.",
-      "Local Llm / Inference: This topic appeared across 1 source(s): aihot, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-      "Local Llm / Inference: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
-      "Local Llm / Inference: watch decision is wait.",
-      "Ai Model Release: This topic appeared across 1 source(s): aihot, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Ai Model Release: This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 12 related signal(s). Treat it as correlation evidence rather than proven ado.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
-      "Ai Model Release: watch decision is wait."
+      "Ai Model Release: watch decision is deep_dive.",
+      "Rag / Knowledge Base: This topic appeared across 2 source(s): huggingface_models, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoptio.",
+      "Rag / Knowledge Base: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
+      "Rag / Knowledge Base: watch decision is deep_dive.",
+      "Mcp / Tool Calling: This topic appeared across 2 source(s): aihot, huggingface_spaces, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
+      "Mcp / Tool Calling: watch decision is deep_dive."
     ],
     "topicBriefs": [
+      {
+        "id": "topic:ai model release",
+        "title": "Ai Model Release",
+        "category": "tools",
+        "sources": [
+          "aihot",
+          "huggingface_spaces",
+          "hackernews"
+        ],
+        "sourceCount": 3,
+        "heatScore": 460,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Ai Model Release is an AI trend topic in tools represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 12 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "technicalKeywords": [
+          "tools",
+          "products",
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english"
+        ],
+        "evidenceItems": [
+          {
+            "id": "hackernews:48434312",
+            "title": "LLMs are eroding my software engineering career and I don't know what to do",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://human-in-the-loop.bearblog.dev/llms-are-eroding-my-software-engineering-career-and-i-dont-know-what-to-do/",
+            "tags": [
+              "llm"
+            ],
+            "publishedAt": "2026-06-07T12:49:29.000Z",
+            "collectedAt": "2026-06-07T19:26:18.768Z",
+            "metrics": {
+              "upvotes": 670,
+              "commentsCount": 624
+            }
+          },
+          {
+            "id": "aihot:cmq2rp55c00hlsl97h98gkd14",
+            "title": "五个实验室，五个心智：用小模型构建多模型金融剧情游戏",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim-v2",
+            "summary": "Thousand Token Wood v2使用四个不同实验室的小模型（gpt-oss-20b、MiniCPM3-4B、Nemotron-Mini-4B及微调Qwen 0.5B）驱动金融模拟游戏的智能体。核心发现是异构服务层摩擦在于vLLM 0.22.1需CUDA工具包，而非模型本身。通过容忍性JSON解析层，添加模型只需一条配置。信息隔离确保内幕标志不在提示词中，扫描测试验证无泄露。记忆用情绪摘要截断避免淹没。微调0.5B模型实现0%自成交、100%有效报价，真相防火墙零泄露。小模型是可靠格式生成器但不可靠推理器，可通过结构化、提示词和微调弥补。",
+            "category": "tools",
+            "publishedAt": "2026-06-06T19:02:33.000Z",
+            "collectedAt": "2026-06-07T19:26:19.717Z"
+          },
+          {
+            "id": "aihot:cmq2doi6700hlsl78fk3tm0l4",
+            "title": "OpenCV 5 发布：升级全新 DNN 引擎、原生支持大模型",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://www.ithome.com/0/960/969.htm",
+            "summary": "OpenCV 5 正式发布，采用基于图的 DNN 引擎，ONNX 算子覆盖率从 4.x 的不到 23% 提升至超 80%，原生支持 Transformer、视觉语言模型（VLM）和大语言模型（LLM）。其他更新包括：更好的 Python 集成与命名参数、更紧凑核心代码、清晰硬件加速层、原生 FP16/BF16、规范化 0D/1D 张量、扩展 3D 视觉及现代化文档。该库 GitHub 拥有超 86，000 stars，每日安装量超一百万次。",
+            "category": "products",
+            "publishedAt": "2026-06-06T12:48:12.000Z",
+            "collectedAt": "2026-06-07T19:26:19.717Z"
+          },
+          {
+            "id": "aihot:cmq1ikzj50g4jsltr7vm9qbst",
+            "title": "用Qwen2.5-3B构建多智能体经济体：工程报告",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim",
+            "summary": "开发者用Qwen2.5-3B构建了五人森林生物多智能体经济体，每个智能体独立运行，通过vLLM部署在Modal，以Gradio为交互窗口。3B模型在100%调用中输出有效JSON，但经济判断能力弱。通过设计稀缺性（食物品种限制、易腐坏、冬季燃料危机）和优化提示词（禁止买入自产物品、给出示例）提升决策质量。15轮模拟中，蜜价从10跌至3、柴价从4涨至7、财富基尼系数从0.14扩至0.38。项目展示了小模型可靠格式化与不可靠推理之间的工程填补。",
+            "category": "tools",
+            "publishedAt": "2026-06-05T22:18:46.000Z",
+            "collectedAt": "2026-06-07T19:26:19.717Z"
+          },
+          {
+            "id": "hackernews:48433756",
+            "title": "Show HN: Lathe – Use LLMs to learn a new domain, not skip past it",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://github.com/devenjarvis/lathe",
+            "tags": [
+              "ai",
+              "llm"
+            ],
+            "publishedAt": "2026-06-07T11:16:46.000Z",
+            "collectedAt": "2026-06-07T19:26:18.768Z",
+            "metrics": {
+              "upvotes": 157,
+              "commentsCount": 33
+            }
+          },
+          {
+            "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+            "title": "Open LLM Leaderboard",
+            "source": "huggingface_spaces",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+            "category": "docker",
+            "tags": [
+              "docker",
+              "leaderboard",
+              "modality:text",
+              "submission:automatic",
+              "test:public",
+              "language:english",
+              "eval:code",
+              "eval:math",
+              "region:us"
+            ],
+            "publishedAt": "2023-04-17T11:40:06.000Z",
+            "collectedAt": "2026-06-07T19:26:18.498Z",
+            "metrics": {
+              "likes": 14005
+            }
+          }
+        ],
+        "relatedEntities": [
+          "五个实验室，五个心智：用小模型构建多模型金融剧情游戏",
+          "OpenCV 5 发布：升级全新 DNN 引擎、原生支持大模型",
+          "用Qwen2.5-3B构建多智能体经济体：工程报告",
+          "Open LLM Leaderboard",
+          "MusicGen",
+          "Live Portrait",
+          "Show HN: Lathe – Use LLMs to learn a new domain, not skip past it",
+          "LLMs are eroding my software engineering career and I don't know what to do"
+        ],
+        "metrics": {
+          "votes": 670,
+          "likes": 14005,
+          "commentsCount": 624,
+          "heatScore": 460,
+          "crossSourceBonus": 20
+        }
+      },
+      {
+        "id": "topic:rag / knowledge base",
+        "title": "Rag / Knowledge Base",
+        "category": "feature-extraction",
+        "sources": [
+          "huggingface_models",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "heatScore": 389,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Rag / Knowledge Base is an AI trend topic in feature-extraction represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Rag / Knowledge Base should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "technicalKeywords": [
+          "transformers",
+          "safetensors",
+          "xlm-roberta",
+          "feature-extraction",
+          "generated_from_trainer",
+          "text-embeddings-inference",
+          "endpoints_compatible",
+          "region:us"
+        ],
+        "evidenceItems": [
+          {
+            "id": "hackernews:48428763",
+            "title": "New U.S. college grads now have higher unemployment than the average worker",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://www.randalolson.com/2026/06/04/recent-grad-unemployment-flip/",
+            "tags": [
+              "rag"
+            ],
+            "publishedAt": "2026-06-06T20:35:40.000Z",
+            "collectedAt": "2026-06-07T19:26:18.768Z",
+            "metrics": {
+              "upvotes": 222,
+              "commentsCount": 279
+            }
+          },
+          {
+            "id": "huggingface_models:Edue3r4t5y6/bge-m3-MUIA",
+            "title": "Edue3r4t5y6/bge-m3-MUIA",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/Edue3r4t5y6/bge-m3-MUIA",
+            "category": "feature-extraction",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "xlm-roberta",
+              "feature-extraction",
+              "generated_from_trainer",
+              "text-embeddings-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-04-02T12:46:49.000Z",
+            "collectedAt": "2026-06-07T19:26:18.491Z",
+            "metrics": {
+              "downloads": 1778,
+              "likes": 0
+            }
+          }
+        ],
+        "relatedEntities": [
+          "Edue3r4t5y6/bge-m3-MUIA",
+          "New U.S. college grads now have higher unemployment than the average worker"
+        ],
+        "metrics": {
+          "votes": 222,
+          "downloads": 1778,
+          "commentsCount": 279,
+          "heatScore": 389,
+          "crossSourceBonus": 10
+        }
+      },
+      {
+        "id": "topic:mcp / tool calling",
+        "title": "Mcp / Tool Calling",
+        "category": "products",
+        "sources": [
+          "aihot",
+          "huggingface_spaces"
+        ],
+        "sourceCount": 2,
+        "heatScore": 140,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Mcp / Tool Calling is an AI trend topic in products represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, huggingface_spaces, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Mcp / Tool Calling should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "technicalKeywords": [
+          "products",
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ],
+        "evidenceItems": [
+          {
+            "id": "aihot:cmq3nuz12009bsla9rbw1qhyn",
+            "title": "Her · हेर - Claude Code 会话分析工具",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://huggingface.co/blog/build-small-hackathon/her-blog",
+            "summary": "Her（हेर）是专为 Claude Code 设计的会话分析工具。用户上传 `.jsonl` 文件后，Her 用自然语言重建每轮交互，标记部署、配置变更、秘密等高风险操作并定位到具体轮次。它展示 token 消耗、所用工具、子智能体、技能和 MCP 服务器，并结合 Anthropic 与社区最佳实践给出改进建议（仅在有明确可修复模式时）。内置\"Ask Her\"问答功能，支持单会话与跨会话项目分析。工具不调用第三方 AI API，使用 Nemotron-Mini-4B-Instruct 模型在 Hugging Face ZeroGPU 上运行，评估引擎完全确定，模型仅负责文本生成与建议。Her 内置 Homebrew、npm、PyPI 主流 CLI 工具数据库，自动识别会话中使用的工具，并对部署工具、数据库客户端等执行活动进行标记提醒。",
+            "category": "products",
+            "publishedAt": "2026-06-07T10:13:41.000Z",
+            "collectedAt": "2026-06-07T19:26:19.717Z"
+          },
+          {
+            "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
+            "title": "Z Image Turbo",
+            "source": "huggingface_spaces",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/spaces/mrfakename/Z-Image-Turbo",
+            "category": "gradio",
+            "tags": [
+              "gradio",
+              "mcp-server",
+              "region:us"
+            ],
+            "publishedAt": "2025-11-26T19:54:05.000Z",
+            "collectedAt": "2026-06-07T19:26:18.498Z",
+            "metrics": {
+              "likes": 3337
+            }
+          },
+          {
+            "id": "huggingface_spaces:zerogpu-aoti/wan2-2-fp8da-aoti-faster",
+            "title": "Wan2.2 14B Fast",
+            "source": "huggingface_spaces",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/spaces/zerogpu-aoti/wan2-2-fp8da-aoti-faster",
+            "category": "gradio",
+            "tags": [
+              "gradio",
+              "mcp-server",
+              "region:us"
+            ],
+            "publishedAt": "2025-07-30T19:03:28.000Z",
+            "collectedAt": "2026-06-07T19:26:18.498Z",
+            "metrics": {
+              "likes": 3179
+            }
+          },
+          {
+            "id": "huggingface_spaces:not-lain/background-removal",
+            "title": "Background Removal",
+            "source": "huggingface_spaces",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/spaces/not-lain/background-removal",
+            "category": "gradio",
+            "tags": [
+              "gradio",
+              "mcp-server",
+              "region:us"
+            ],
+            "publishedAt": "2024-08-08T19:37:33.000Z",
+            "collectedAt": "2026-06-07T19:26:18.498Z",
+            "metrics": {
+              "likes": 2849
+            }
+          }
+        ],
+        "relatedEntities": [
+          "Her · हेर - Claude Code 会话分析工具",
+          "Z Image Turbo",
+          "Wan2.2 14B Fast",
+          "Background Removal"
+        ],
+        "metrics": {
+          "likes": 3337,
+          "heatScore": 140,
+          "crossSourceBonus": 10
+        }
+      },
+      {
+        "id": "topic:local llm / inference",
+        "title": "Local Llm / Inference",
+        "category": "tools",
+        "sources": [
+          "aihot",
+          "huggingface_models",
+          "hackernews"
+        ],
+        "sourceCount": 3,
+        "heatScore": 138,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Local Llm / Inference is an AI trend topic in tools represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_models, hackernews, with 11 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "technicalKeywords": [
+          "tools",
+          "products",
+          "transformers",
+          "safetensors",
+          "xlm-roberta",
+          "feature-extraction",
+          "generated_from_trainer",
+          "text-embeddings-inference"
+        ],
+        "evidenceItems": [
+          {
+            "id": "aihot:cmq2rp55c00hlsl97h98gkd14",
+            "title": "五个实验室，五个心智：用小模型构建多模型金融剧情游戏",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim-v2",
+            "summary": "Thousand Token Wood v2使用四个不同实验室的小模型（gpt-oss-20b、MiniCPM3-4B、Nemotron-Mini-4B及微调Qwen 0.5B）驱动金融模拟游戏的智能体。核心发现是异构服务层摩擦在于vLLM 0.22.1需CUDA工具包，而非模型本身。通过容忍性JSON解析层，添加模型只需一条配置。信息隔离确保内幕标志不在提示词中，扫描测试验证无泄露。记忆用情绪摘要截断避免淹没。微调0.5B模型实现0%自成交、100%有效报价，真相防火墙零泄露。小模型是可靠格式生成器但不可靠推理器，可通过结构化、提示词和微调弥补。",
+            "category": "tools",
+            "publishedAt": "2026-06-06T19:02:33.000Z",
+            "collectedAt": "2026-06-07T19:26:19.717Z"
+          },
+          {
+            "id": "aihot:cmq2ahm4y00o9slopm7hxc8ld",
+            "title": "Persona Atlas：Hugging Face 上的开源人物思维映射工具",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://huggingface.co/blog/build-small-hackathon/persona-atlas",
+            "summary": "Persona Atlas 是一个运行在 Hugging Face Inference Providers 上的开源项目。它通过工具调用代理执行真实网络搜索，生成公众人物的资料、事实清单和风格假设，然后让该人物回答十个关于身份、伦理等开放式问题。每个回答被转化为嵌入向量，从而在向量空间中对不同人物进行距离比较，并基于十个特质锚点绘制热力图。前端采用 Gradio，提供研究、比较和检查代理完整追溯三个标签页，预设多个人物角色，无需 token 即可直接体验。",
+            "category": "products",
+            "publishedAt": "2026-06-06T11:42:01.000Z",
+            "collectedAt": "2026-06-07T19:26:19.717Z"
+          },
+          {
+            "id": "aihot:cmq1ikzj50g4jsltr7vm9qbst",
+            "title": "用Qwen2.5-3B构建多智能体经济体：工程报告",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim",
+            "summary": "开发者用Qwen2.5-3B构建了五人森林生物多智能体经济体，每个智能体独立运行，通过vLLM部署在Modal，以Gradio为交互窗口。3B模型在100%调用中输出有效JSON，但经济判断能力弱。通过设计稀缺性（食物品种限制、易腐坏、冬季燃料危机）和优化提示词（禁止买入自产物品、给出示例）提升决策质量。15轮模拟中，蜜价从10跌至3、柴价从4涨至7、财富基尼系数从0.14扩至0.38。项目展示了小模型可靠格式化与不可靠推理之间的工程填补。",
+            "category": "tools",
+            "publishedAt": "2026-06-05T22:18:46.000Z",
+            "collectedAt": "2026-06-07T19:26:19.717Z"
+          },
+          {
+            "id": "huggingface_models:programasweights/paw-programs",
+            "title": "programasweights/paw-programs",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/programasweights/paw-programs",
+            "tags": [
+              "safetensors",
+              "gguf",
+              "region:us"
+            ],
+            "publishedAt": "2026-03-26T23:05:35.000Z",
+            "collectedAt": "2026-06-07T19:26:18.491Z",
+            "metrics": {
+              "downloads": 97680,
+              "likes": 2
+            }
+          },
+          {
+            "id": "huggingface_models:Edue3r4t5y6/bge-m3-MUIA",
+            "title": "Edue3r4t5y6/bge-m3-MUIA",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/Edue3r4t5y6/bge-m3-MUIA",
+            "category": "feature-extraction",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "xlm-roberta",
+              "feature-extraction",
+              "generated_from_trainer",
+              "text-embeddings-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-04-02T12:46:49.000Z",
+            "collectedAt": "2026-06-07T19:26:18.491Z",
+            "metrics": {
+              "downloads": 1778,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:DevQuasar/CohereLabs.command-a-plus-05-2026-bf16-GGUF",
+            "title": "DevQuasar/CohereLabs.command-a-plus-05-2026-bf16-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/DevQuasar/CohereLabs.command-a-plus-05-2026-bf16-GGUF",
+            "category": "text-generation",
+            "tags": [
+              "gguf",
+              "text-generation",
+              "base_model:CohereLabs/command-a-plus-05-2026-bf16",
+              "base_model:quantized:CohereLabs/command-a-plus-05-2026-bf16",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
+            ],
+            "publishedAt": "2026-05-21T22:11:49.000Z",
+            "collectedAt": "2026-06-07T19:26:18.491Z",
+            "metrics": {
+              "downloads": 913,
+              "likes": 2
+            }
+          }
+        ],
+        "relatedEntities": [
+          "五个实验室，五个心智：用小模型构建多模型金融剧情游戏",
+          "Persona Atlas：Hugging Face 上的开源人物思维映射工具",
+          "用Qwen2.5-3B构建多智能体经济体：工程报告",
+          "Edue3r4t5y6/bge-m3-MUIA",
+          "DevQuasar/CohereLabs.command-a-plus-05-2026-bf16-GGUF",
+          "mradermacher/Helix-SCE-12B-abliterated-heretic-inverted-i1-GGUF",
+          "11-47/Continuum-0.1B-GGUF",
+          "Coercer/waiIllustriousSDXL_v170_GGUF"
+        ],
+        "metrics": {
+          "votes": 2,
+          "likes": 2,
+          "downloads": 97680,
+          "heatScore": 138,
+          "crossSourceBonus": 20
+        }
+      },
       {
         "id": "topic:coding agent / swe agent",
         "title": "Coding Agent / Swe Agent",
@@ -50,7 +521,7 @@
             "summary": "Her（हेर）是专为 Claude Code 设计的会话分析工具。用户上传 `.jsonl` 文件后，Her 用自然语言重建每轮交互，标记部署、配置变更、秘密等高风险操作并定位到具体轮次。它展示 token 消耗、所用工具、子智能体、技能和 MCP 服务器，并结合 Anthropic 与社区最佳实践给出改进建议（仅在有明确可修复模式时）。内置\"Ask Her\"问答功能，支持单会话与跨会话项目分析。工具不调用第三方 AI API，使用 Nemotron-Mini-4B-Instruct 模型在 Hugging Face ZeroGPU 上运行，评估引擎完全确定，模型仅负责文本生成与建议。Her 内置 Homebrew、npm、PyPI 主流 CLI 工具数据库，自动识别会话中使用的工具，并对部署工具、数据库客户端等执行活动进行标记提醒。",
             "category": "products",
             "publishedAt": "2026-06-07T10:13:41.000Z",
-            "collectedAt": "2026-06-07T17:59:18.685Z"
+            "collectedAt": "2026-06-07T19:26:19.717Z"
           },
           {
             "id": "aihot:cmq397jma052dsl97qxfp78o7",
@@ -61,7 +532,7 @@
             "summary": "宝玉对比了GPT-5.5与Opus 4.8的设计能力，认为Opus 4.8效果远优于GPT-5.5。他使用了基于Cursor浏览器和元素标注的baoyu-design Skill，该Skill通过npx skills add JimLiu/baoyu-design安装，可在本地运行：描述屏幕需求即可生成精良HTML，点击预览中任意元素即可发出修改指令。官方推荐搭配Opus 4.8以获得最佳效果。工具GitHub仓库：https：//github.com/JimLiu/baoyu-design。",
             "category": "tools",
             "publishedAt": "2026-06-07T03:32:23.000Z",
-            "collectedAt": "2026-06-07T17:59:18.685Z"
+            "collectedAt": "2026-06-07T19:26:19.717Z"
           },
           {
             "id": "aihot:cmq2e53d100lpsl783tyjx1iw",
@@ -72,145 +543,13 @@
             "summary": "GitHub 发布开源工具包 Spec Kit，旨在解决 \"vibe coding\" 的最大弱点--AI 常在规则未明确时就开始编码。它把流程从 \"让 AI 直接构建\" 改为 \"先写产品规范，再让 AI 根据规范实现\"。当前 AI 编码模式常因松散提示直接跳入代码，导致需求薄弱、边界遗漏和反复返工。Spec Kit 推动反向流程：先定义产品功能，再澄清差距、制订技术计划、分解任务，最后让 agent 执行。规范成为可执行的开发合约，支持 Copilot、Claude Code、Codex、Gemini、Cursor、Qwen 等 30+ agent 集成。项目已获 109K+ 星标。",
             "category": "products",
             "publishedAt": "2026-06-06T13:07:16.000Z",
-            "collectedAt": "2026-06-07T17:59:18.685Z"
+            "collectedAt": "2026-06-07T19:26:19.717Z"
           }
         ],
         "relatedEntities": [
           "Her · हेर - Claude Code 会话分析工具",
           "对比一下 GPT-5.5 的设计效果和 Opus 4.8 的设计效果",
           "GitHub 开源 Spec Kit 工具包，用产品规范引导 AI 编码"
-        ],
-        "metrics": {
-          "heatScore": 20,
-          "crossSourceBonus": 0
-        }
-      },
-      {
-        "id": "topic:local llm / inference",
-        "title": "Local Llm / Inference",
-        "category": "tools",
-        "sources": [
-          "aihot"
-        ],
-        "sourceCount": 1,
-        "heatScore": 20,
-        "confidence": "low",
-        "watchDecision": "wait",
-        "whatItIs": "Local Llm / Inference is an AI trend topic in tools represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 1 source(s): aihot, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
-        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
-        "technicalKeywords": [
-          "tools",
-          "products"
-        ],
-        "evidenceItems": [
-          {
-            "id": "aihot:cmq2rp55c00hlsl97h98gkd14",
-            "title": "五个实验室，五个心智：用小模型构建多模型金融剧情游戏",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim-v2",
-            "summary": "Thousand Token Wood v2使用四个不同实验室的小模型（gpt-oss-20b、MiniCPM3-4B、Nemotron-Mini-4B及微调Qwen 0.5B）驱动金融模拟游戏的智能体。核心发现是异构服务层摩擦在于vLLM 0.22.1需CUDA工具包，而非模型本身。通过容忍性JSON解析层，添加模型只需一条配置。信息隔离确保内幕标志不在提示词中，扫描测试验证无泄露。记忆用情绪摘要截断避免淹没。微调0.5B模型实现0%自成交、100%有效报价，真相防火墙零泄露。小模型是可靠格式生成器但不可靠推理器，可通过结构化、提示词和微调弥补。",
-            "category": "tools",
-            "publishedAt": "2026-06-06T19:02:33.000Z",
-            "collectedAt": "2026-06-07T17:59:18.685Z"
-          },
-          {
-            "id": "aihot:cmq2ahm4y00o9slopm7hxc8ld",
-            "title": "Persona Atlas：Hugging Face 上的开源人物思维映射工具",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://huggingface.co/blog/build-small-hackathon/persona-atlas",
-            "summary": "Persona Atlas 是一个运行在 Hugging Face Inference Providers 上的开源项目。它通过工具调用代理执行真实网络搜索，生成公众人物的资料、事实清单和风格假设，然后让该人物回答十个关于身份、伦理等开放式问题。每个回答被转化为嵌入向量，从而在向量空间中对不同人物进行距离比较，并基于十个特质锚点绘制热力图。前端采用 Gradio，提供研究、比较和检查代理完整追溯三个标签页，预设多个人物角色，无需 token 即可直接体验。",
-            "category": "products",
-            "publishedAt": "2026-06-06T11:42:01.000Z",
-            "collectedAt": "2026-06-07T17:59:18.685Z"
-          },
-          {
-            "id": "aihot:cmq1ikzj50g4jsltr7vm9qbst",
-            "title": "用Qwen2.5-3B构建多智能体经济体：工程报告",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim",
-            "summary": "开发者用Qwen2.5-3B构建了五人森林生物多智能体经济体，每个智能体独立运行，通过vLLM部署在Modal，以Gradio为交互窗口。3B模型在100%调用中输出有效JSON，但经济判断能力弱。通过设计稀缺性（食物品种限制、易腐坏、冬季燃料危机）和优化提示词（禁止买入自产物品、给出示例）提升决策质量。15轮模拟中，蜜价从10跌至3、柴价从4涨至7、财富基尼系数从0.14扩至0.38。项目展示了小模型可靠格式化与不可靠推理之间的工程填补。",
-            "category": "tools",
-            "publishedAt": "2026-06-05T22:18:46.000Z",
-            "collectedAt": "2026-06-07T17:59:18.685Z"
-          }
-        ],
-        "relatedEntities": [
-          "五个实验室，五个心智：用小模型构建多模型金融剧情游戏",
-          "Persona Atlas：Hugging Face 上的开源人物思维映射工具",
-          "用Qwen2.5-3B构建多智能体经济体：工程报告"
-        ],
-        "metrics": {
-          "heatScore": 20,
-          "crossSourceBonus": 0
-        }
-      },
-      {
-        "id": "topic:ai model release",
-        "title": "Ai Model Release",
-        "category": "tools",
-        "sources": [
-          "aihot"
-        ],
-        "sourceCount": 1,
-        "heatScore": 20,
-        "confidence": "low",
-        "watchDecision": "wait",
-        "whatItIs": "Ai Model Release is an AI trend topic in tools represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 1 source(s): aihot, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
-        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
-        "technicalKeywords": [
-          "tools",
-          "products"
-        ],
-        "evidenceItems": [
-          {
-            "id": "aihot:cmq2rp55c00hlsl97h98gkd14",
-            "title": "五个实验室，五个心智：用小模型构建多模型金融剧情游戏",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim-v2",
-            "summary": "Thousand Token Wood v2使用四个不同实验室的小模型（gpt-oss-20b、MiniCPM3-4B、Nemotron-Mini-4B及微调Qwen 0.5B）驱动金融模拟游戏的智能体。核心发现是异构服务层摩擦在于vLLM 0.22.1需CUDA工具包，而非模型本身。通过容忍性JSON解析层，添加模型只需一条配置。信息隔离确保内幕标志不在提示词中，扫描测试验证无泄露。记忆用情绪摘要截断避免淹没。微调0.5B模型实现0%自成交、100%有效报价，真相防火墙零泄露。小模型是可靠格式生成器但不可靠推理器，可通过结构化、提示词和微调弥补。",
-            "category": "tools",
-            "publishedAt": "2026-06-06T19:02:33.000Z",
-            "collectedAt": "2026-06-07T17:59:18.685Z"
-          },
-          {
-            "id": "aihot:cmq2doi6700hlsl78fk3tm0l4",
-            "title": "OpenCV 5 发布：升级全新 DNN 引擎、原生支持大模型",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://www.ithome.com/0/960/969.htm",
-            "summary": "OpenCV 5 正式发布，采用基于图的 DNN 引擎，ONNX 算子覆盖率从 4.x 的不到 23% 提升至超 80%，原生支持 Transformer、视觉语言模型（VLM）和大语言模型（LLM）。其他更新包括：更好的 Python 集成与命名参数、更紧凑核心代码、清晰硬件加速层、原生 FP16/BF16、规范化 0D/1D 张量、扩展 3D 视觉及现代化文档。该库 GitHub 拥有超 86，000 stars，每日安装量超一百万次。",
-            "category": "products",
-            "publishedAt": "2026-06-06T12:48:12.000Z",
-            "collectedAt": "2026-06-07T17:59:18.685Z"
-          },
-          {
-            "id": "aihot:cmq1ikzj50g4jsltr7vm9qbst",
-            "title": "用Qwen2.5-3B构建多智能体经济体：工程报告",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim",
-            "summary": "开发者用Qwen2.5-3B构建了五人森林生物多智能体经济体，每个智能体独立运行，通过vLLM部署在Modal，以Gradio为交互窗口。3B模型在100%调用中输出有效JSON，但经济判断能力弱。通过设计稀缺性（食物品种限制、易腐坏、冬季燃料危机）和优化提示词（禁止买入自产物品、给出示例）提升决策质量。15轮模拟中，蜜价从10跌至3、柴价从4涨至7、财富基尼系数从0.14扩至0.38。项目展示了小模型可靠格式化与不可靠推理之间的工程填补。",
-            "category": "tools",
-            "publishedAt": "2026-06-05T22:18:46.000Z",
-            "collectedAt": "2026-06-07T17:59:18.685Z"
-          }
-        ],
-        "relatedEntities": [
-          "五个实验室，五个心智：用小模型构建多模型金融剧情游戏",
-          "OpenCV 5 发布：升级全新 DNN 引擎、原生支持大模型",
-          "用Qwen2.5-3B构建多智能体经济体：工程报告"
         ],
         "metrics": {
           "heatScore": 20,
@@ -224,8 +563,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-06-07T17:59:17.286Z",
-        "finishedAt": "2026-06-07T17:59:17.286Z",
+        "startedAt": "2026-06-07T19:26:18.378Z",
+        "finishedAt": "2026-06-07T19:26:18.378Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -234,53 +573,392 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-06-07T17:59:17.286Z",
-        "finishedAt": "2026-06-07T17:59:18.686Z",
-        "latencyMs": 1400
+        "startedAt": "2026-06-07T19:26:18.378Z",
+        "finishedAt": "2026-06-07T19:26:19.718Z",
+        "latencyMs": 1340
       },
       {
         "source": "huggingface-models",
         "enabled": true,
-        "success": false,
-        "itemCount": 0,
-        "startedAt": "2026-06-07T17:59:17.328Z",
-        "finishedAt": "2026-06-07T17:59:17.449Z",
-        "latencyMs": 121,
-        "error": "Hugging Face models request failed: HTTP 429 - <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and dem"
+        "success": true,
+        "itemCount": 16,
+        "startedAt": "2026-06-07T19:26:18.393Z",
+        "finishedAt": "2026-06-07T19:26:18.491Z",
+        "latencyMs": 98
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
-        "success": false,
-        "itemCount": 0,
-        "startedAt": "2026-06-07T17:59:17.329Z",
-        "finishedAt": "2026-06-07T17:59:17.450Z",
-        "latencyMs": 121,
-        "error": "Hugging Face spaces request failed: HTTP 429"
+        "success": true,
+        "itemCount": 16,
+        "startedAt": "2026-06-07T19:26:18.395Z",
+        "finishedAt": "2026-06-07T19:26:18.498Z",
+        "latencyMs": 103
       },
       {
         "source": "hackernews",
         "enabled": true,
-        "success": false,
-        "itemCount": 0,
-        "startedAt": "2026-06-07T17:59:17.331Z",
-        "finishedAt": "2026-06-07T17:59:17.867Z",
-        "latencyMs": 536,
-        "error": "Cannot read properties of null (reading 'type')"
+        "success": true,
+        "itemCount": 28,
+        "startedAt": "2026-06-07T19:26:18.397Z",
+        "finishedAt": "2026-06-07T19:26:18.768Z",
+        "latencyMs": 371
       }
     ],
     "dataNotes": [
-      "Lightweight intelligence update: GitHub repository collection, GitHub scoring, and LLM enrichment were skipped.",
-      "Multi-source warning: Hugging Face Models collection failed: Hugging Face models request failed: HTTP 429 - <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and dem",
-      "Multi-source warning: Hugging Face Spaces collection failed: Hugging Face spaces request failed: HTTP 429",
-      "Multi-source warning: Hacker News collection failed: Cannot read properties of null (reading 'type')"
+      "Lightweight intelligence update: GitHub repository collection, GitHub scoring, and LLM enrichment were skipped."
     ]
   },
   "sections": {
     "productLaunches": [],
-    "modelDemoSignals": [],
-    "developerBuzz": [],
+    "modelDemoSignals": [
+      {
+        "id": "huggingface_models:nphSi/Z-Image-Lora",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "nphSi/Z-Image-Lora",
+        "url": "https://huggingface.co/nphSi/Z-Image-Lora",
+        "tags": [
+          "diffusers",
+          "text-to-image",
+          "lora",
+          "safetensors",
+          "z-image",
+          "base_model:Tongyi-MAI/Z-Image",
+          "base_model:adapter:Tongyi-MAI/Z-Image",
+          "license:apache-2.0",
+          "region:us"
+        ],
+        "category": "text-to-image",
+        "metrics": {
+          "downloads": 175948,
+          "likes": 105
+        },
+        "publishedAt": "2025-12-01T06:21:24.000Z",
+        "updatedAt": "2026-06-07T19:25:42.000Z",
+        "collectedAt": "2026-06-07T19:26:18.491Z",
+        "raw": {
+          "pipelineTag": "text-to-image"
+        }
+      },
+      {
+        "id": "huggingface_models:programasweights/paw-programs",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "programasweights/paw-programs",
+        "url": "https://huggingface.co/programasweights/paw-programs",
+        "tags": [
+          "safetensors",
+          "gguf",
+          "region:us"
+        ],
+        "metrics": {
+          "downloads": 97680,
+          "likes": 2
+        },
+        "publishedAt": "2026-03-26T23:05:35.000Z",
+        "updatedAt": "2026-06-07T19:24:28.000Z",
+        "collectedAt": "2026-06-07T19:26:18.491Z",
+        "raw": {}
+      },
+      {
+        "id": "huggingface_models:Edue3r4t5y6/bge-m3-MUIA",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "Edue3r4t5y6/bge-m3-MUIA",
+        "url": "https://huggingface.co/Edue3r4t5y6/bge-m3-MUIA",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "xlm-roberta",
+          "feature-extraction",
+          "generated_from_trainer",
+          "text-embeddings-inference",
+          "endpoints_compatible",
+          "region:us"
+        ],
+        "category": "feature-extraction",
+        "metrics": {
+          "downloads": 1778,
+          "likes": 0
+        },
+        "publishedAt": "2026-04-02T12:46:49.000Z",
+        "updatedAt": "2026-06-07T19:26:15.000Z",
+        "collectedAt": "2026-06-07T19:26:18.491Z",
+        "raw": {
+          "pipelineTag": "feature-extraction"
+        }
+      },
+      {
+        "id": "huggingface_models:DevQuasar/CohereLabs.command-a-plus-05-2026-bf16-GGUF",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "DevQuasar/CohereLabs.command-a-plus-05-2026-bf16-GGUF",
+        "url": "https://huggingface.co/DevQuasar/CohereLabs.command-a-plus-05-2026-bf16-GGUF",
+        "tags": [
+          "gguf",
+          "text-generation",
+          "base_model:CohereLabs/command-a-plus-05-2026-bf16",
+          "base_model:quantized:CohereLabs/command-a-plus-05-2026-bf16",
+          "endpoints_compatible",
+          "region:us",
+          "conversational"
+        ],
+        "category": "text-generation",
+        "metrics": {
+          "downloads": 913,
+          "likes": 2
+        },
+        "publishedAt": "2026-05-21T22:11:49.000Z",
+        "updatedAt": "2026-06-07T19:25:47.000Z",
+        "collectedAt": "2026-06-07T19:26:18.491Z",
+        "raw": {
+          "pipelineTag": "text-generation"
+        }
+      },
+      {
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
+        "tags": [
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
+        ],
+        "category": "docker",
+        "metrics": {
+          "likes": 14005
+        },
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-06-07T19:26:18.498Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
+      },
+      {
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
+        "tags": [
+          "docker",
+          "region:us"
+        ],
+        "category": "docker",
+        "metrics": {
+          "likes": 11109
+        },
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-06-07T19:26:18.498Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
+      },
+      {
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
+        "tags": [
+          "gradio",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 10101
+        },
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-06-07T19:26:18.498Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
+      },
+      {
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
+        "tags": [
+          "docker",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "docker",
+        "metrics": {
+          "likes": 7451
+        },
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-06-07T15:13:37.000Z",
+        "collectedAt": "2026-06-07T19:26:18.498Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
+      }
+    ],
+    "developerBuzz": [
+      {
+        "id": "hackernews:48434312",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "LLMs are eroding my software engineering career and I don't know what to do",
+        "url": "https://human-in-the-loop.bearblog.dev/llms-are-eroding-my-software-engineering-career-and-i-dont-know-what-to-do/",
+        "author": "poisonfountain",
+        "tags": [
+          "llm"
+        ],
+        "metrics": {
+          "upvotes": 670,
+          "commentsCount": 624
+        },
+        "publishedAt": "2026-06-07T12:49:29.000Z",
+        "collectedAt": "2026-06-07T19:26:18.768Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48434312",
+          "matchedKeywords": [
+            "llm"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48421442",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "S&P 500 rejects SpaceX, also blocking entry for OpenAI and Anthropic",
+        "url": "https://arstechnica.com/tech-policy/2026/06/sp-500-blocks-fast-spacex-entry-wont-waive-rule-for-unprofitable-ai-firms/",
+        "author": "maltalex",
+        "tags": [
+          "ai",
+          "openai",
+          "anthropic"
+        ],
+        "metrics": {
+          "upvotes": 1437,
+          "commentsCount": 493
+        },
+        "publishedAt": "2026-06-06T04:38:36.000Z",
+        "collectedAt": "2026-06-07T19:26:18.768Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48421442",
+          "matchedKeywords": [
+            "ai",
+            "openai",
+            "anthropic"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48427523",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Pentagon raised threat of Israeli spying on U.S. to highest level, sources say",
+        "url": "https://www.nbcnews.com/politics/national-security/pentagon-raised-threat-israeli-spying-us-highest-level-sources-say-rcna348565",
+        "author": "MilnerRoute",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 571,
+          "commentsCount": 475
+        },
+        "publishedAt": "2026-06-06T18:21:06.000Z",
+        "collectedAt": "2026-06-07T19:26:18.768Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48427523",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48427643",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Meta confirms 1000s of Instagram accounts were hacked by abusing its AI chatbot",
+        "url": "https://this.weekinsecurity.com/meta-confirms-thousands-of-instagram-accounts-were-hacked-by-abusing-its-ai-chatbot/",
+        "author": "speckx",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 675,
+          "commentsCount": 242
+        },
+        "publishedAt": "2026-06-06T18:35:27.000Z",
+        "collectedAt": "2026-06-07T19:26:18.768Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48427643",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48420827",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Ask HN: Why is the HN crowd so anti-AI?",
+        "url": "https://news.ycombinator.com/item?id=48420827",
+        "author": "Ekami",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 434,
+          "commentsCount": 721
+        },
+        "publishedAt": "2026-06-06T02:31:51.000Z",
+        "collectedAt": "2026-06-07T19:26:18.768Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48420827",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
+      }
+    ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmq44c1hy00d9slz5itsduqad",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "ChatGPT 要变 AgentGPT 了",
+        "url": "https://x.com/dotey/status/2063686036895478162",
+        "summary": "OpenAI 正筹备 ChatGPT 自 2022 年上线以来最大规模改版，从聊天机器人转向超级应用/Agent 平台，整合编程工具 Codex、图像生成及第三方应用（Canva、Booking）。高管称\"聊天已死\"，目标成为跨平台个人 AI 助手，未来甚至省去用户输入提示词。改版预计未来几周在网页和手机端上线。商业压力：ChatGPT 有 9 亿周活用户、5000 万付费用户、月收入 20 亿美元但未盈利；企业客户贡献约 40% 收入，目标年底达 50%；Codex 桌面版周活超 500 万。竞争对手 Anthropic 估值已达 9650 亿美元。OpenAI 刚完成 1220 亿美元融资，估值 8520 亿美元，IPO 目标估值可能超 1 万亿美元。",
+        "description": "OpenAI 正筹备 ChatGPT 自 2022 年上线以来最大规模改版，从聊天机器人转向超级应用/Agent 平台，整合编程工具 Codex、图像生成及第三方应用（Canva、Booking）。高管称\"聊天已死\"，目标成为跨平台个人 AI 助手，未来甚至省去用户输入提示词。改版预计未来几周在网页和手机端上线。商业压力：ChatGPT 有 9 亿周活用户、5000 万付费用户、月收入 20 亿美元但未盈利；企业客户贡献约 40% 收入，目标年底达 50%；Codex 桌面版周活超 500 万。竞争对手 Anthropic 估值已达 9650 亿美元。OpenAI 刚完成 1220 亿美元融资，估值 8520 亿美元，IPO 目标估值可能超 1 万亿美元。",
+        "category": "industry",
+        "originalSource": "X：宝玉 (@dotey)",
+        "originalUrl": "https://x.com/dotey/status/2063686036895478162",
+        "recommendedReason": "OpenAI 正筹备 ChatGPT 自 2022 年上线以来最大规模改版，从聊天机器人转向超级应用/Agent 平台，整合编程工具 Codex、图像生成及第三方应用（Canva、Booking）。高管称\"聊天已死\"，目标成为跨平台个人 AI 助手，未来甚至省去用户输入提示词。改版预计未来几周在网页和手机端上线。商业压力：ChatGPT 有 9 亿周活用户、5000 万付费用户、月收入 20 亿美元但未盈利；企业客户贡献约 40% 收入，目标年底达 50%；Codex 桌面版周活超 500 万。竞争对手 Anthropic 估值已达 9650 亿美元。OpenAI 刚完成 1220 亿美元融资，估值 8520 亿美元，IPO 目标估值可能超 1 万亿美元。",
+        "publishedAt": "2026-06-07T18:14:27.000Z",
+        "collectedAt": "2026-06-07T19:26:19.717Z",
+        "raw": {
+          "id": "cmq44c1hy00d9slz5itsduqad",
+          "titleEn": "ChatGPT 要变 AgentGPT 了 当然 ChatGPT 应该不会改名字，但 ChatGPT 应该不再是一个单纯的 Chat 工具了。 OpenAI 内部一位高管对《金融时报》说：\"Cha…",
+          "apiCategory": "industry"
+        }
+      },
       {
         "id": "aihot:cmq41cpfx00g9slr28fihcr5v",
         "source": "aihot",
@@ -294,7 +972,7 @@
         "originalUrl": "https://x.com/rohanpaul_ai/status/2063662672835703126",
         "recommendedReason": "据FT报道，特朗普政府正与OpenAI探讨通过公共财富基金机制让政府入股AI初创公司。方案是AI企业捐赠小部分股权至该基金，基金通过账户或分红将收益返还美国公民，而非政府直接运营公司。这不同于特朗普去年对Intel的90亿美元直接持股。OpenAI此前已提出公共财富基金概念，持有长期资产，让公民分享AI增长红利。政治背景方面，选民担忧失业、数据中心成本与企业控制，而AI公司需要华盛顿在基建、采购和监管上的支持。",
         "publishedAt": "2026-06-07T16:41:36.000Z",
-        "collectedAt": "2026-06-07T17:59:18.685Z",
+        "collectedAt": "2026-06-07T19:26:19.717Z",
         "raw": {
           "id": "cmq41cpfx00g9slr28fihcr5v",
           "titleEn": "FT： The proposal suddenly of a sovereign-wealth-style fund got more attention inside the White House…",
@@ -314,7 +992,7 @@
         "originalUrl": "https://techcrunch.com/2026/06/07/openai-is-still-working-on-that-super-app",
         "recommendedReason": "OpenAI 一位高级员工表示\"聊天已死\"，同时公司仍在继续推进超级应用计划。",
         "publishedAt": "2026-06-07T16:23:22.000Z",
-        "collectedAt": "2026-06-07T17:59:18.685Z",
+        "collectedAt": "2026-06-07T19:26:19.717Z",
         "raw": {
           "id": "cmq404ny5005mslr29n96iugc",
           "titleEn": "OpenAI is still working on that 'super app'",
@@ -334,7 +1012,7 @@
         "originalUrl": "https://garymarcus.substack.com/p/slop-productivity-and-why-the-ai",
         "recommendedReason": "Gary Marcus在金融时报上看到John Burn-Murdoch的一张图表，认为它精准提炼了自己一直试图表达的观点。",
         "publishedAt": "2026-06-07T15:31:43.000Z",
-        "collectedAt": "2026-06-07T17:59:18.685Z",
+        "collectedAt": "2026-06-07T19:26:19.717Z",
         "raw": {
           "id": "cmq3y2kf1004jslqvmbs4vuam",
           "titleEn": "Slop， productivity， and why the AI-fueled world is going nowhere mighty fast",
@@ -354,7 +1032,7 @@
         "originalUrl": "https://www.bloomberg.com/news/newsletters/2026-06-07/wwdc-2026-apple-s-secret-meeting-that-led-it-to-take-ai-seriously-ios-27",
         "recommendedReason": "苹果在一次内部秘密会议后，终于决定将AI作为核心战略。这场会议促使公司全面转向AI领域，相关进展预计将在WWDC 2026上公布。",
         "publishedAt": "2026-06-07T14:00:01.000Z",
-        "collectedAt": "2026-06-07T17:59:18.685Z",
+        "collectedAt": "2026-06-07T19:26:19.717Z",
         "raw": {
           "id": "cmq3uy43k022gsla9pazggsdm",
           "titleEn": "Inside Apple's Secret Meeting That Led It to Finally Take AI Seriously",
@@ -374,7 +1052,7 @@
         "originalUrl": "https://symbolica.io/posts/symbolica_2_0_release",
         "recommendedReason": "Symbolica 2.0 发布，这是一款可编程符号系统，支持 Python 和 Rust 语言。该版本在 Hacker News 上获得 100 点热度。",
         "publishedAt": "2026-06-07T12:59:12.136Z",
-        "collectedAt": "2026-06-07T17:59:18.685Z",
+        "collectedAt": "2026-06-07T19:26:19.717Z",
         "raw": {
           "id": "cmq3thx1f01pjsla9rsrrlqom",
           "titleEn": null,
@@ -394,7 +1072,7 @@
         "originalUrl": "https://x.com/AYi_AInotes/status/2063573709672104286",
         "recommendedReason": "日本北海道农民富安弘毅用 ChatGPT 和 Codex 解决农场实际问题，涵盖 8 个用法：拍照识别西兰花病害、卫星监测获取 NDVI 数据、用 ESP32 和 LINE 机器人远程控制温室卷帘、为农场群聊开发机器人管理温度与排期、从聊天记录追踪播种数量、学习 RTK-GPS 自动转向原理并评估自建成本、设计基于 Airtable 的农场管理数据库。他说 AI 让传统昂贵的自动化变得低成本可及，\"如同身边有一位超级工程师\"。",
         "publishedAt": "2026-06-07T10:48:06.000Z",
-        "collectedAt": "2026-06-07T17:59:18.685Z",
+        "collectedAt": "2026-06-07T19:26:19.717Z",
         "raw": {
           "id": "cmq3p62px00llsla9chtyvf4z",
           "titleEn": "http：//x.com/i/article/2063531614047444992",
@@ -414,30 +1092,10 @@
         "originalUrl": "https://huggingface.co/blog/build-small-hackathon/her-blog",
         "recommendedReason": "Her（हेर）是专为 Claude Code 设计的会话分析工具。用户上传 `.jsonl` 文件后，Her 用自然语言重建每轮交互，标记部署、配置变更、秘密等高风险操作并定位到具体轮次。它展示 token 消耗、所用工具、子智能体、技能和 MCP 服务器，并结合 Anthropic 与社区最佳实践给出改进建议（仅在有明确可修复模式时）。内置\"Ask Her\"问答功能，支持单会话与跨会话项目分析。工具不调用第三方 AI API，使用 Nemotron-Mini-4B-Instruct 模型在 Hugging Face ZeroGPU 上运行，评估引擎完全确定，模型仅负责文本生成与建议。Her 内置 Homebrew、npm、PyPI 主流 CLI 工具数据库，自动识别会话中使用的工具，并对部署工具、数据库客户端等执行活动进行标记提醒。",
         "publishedAt": "2026-06-07T10:13:41.000Z",
-        "collectedAt": "2026-06-07T17:59:18.685Z",
+        "collectedAt": "2026-06-07T19:26:19.717Z",
         "raw": {
           "id": "cmq3nuz12009bsla9rbw1qhyn",
           "titleEn": "Her · हेर - a detective for your Claude Code sessions",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmq3i394000ouslqlpcl2mnr6",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "NVIDIA 与 KRAFTON、NC、T1 在韩国 PC 房庆祝 RTX Spark 发布",
-        "url": "https://blogs.nvidia.com/blog/krafton-nc-t1-korea-gaming-pc-bang-rtx-spark",
-        "summary": "继上周 GTC Taipei 发布后，NVIDIA CEO Jensen Huang 前往韩国，向当地游戏社区正式介绍 RTX Spark 超芯片。该芯片集成 30 年 NVIDIA 技术，可在 Windows 笔记本上实现全天续航，并以 1440p 分辨率、超过 100fps 运行 AAA 游戏，支持包括 DLSS 4.5 Ray Reconstruction（基于第二代 Transformer 模型）在内的全套 RTX 技术。KRAFTON、NC 与 Riot Games 正合作将旗下游戏适配 RTX Spark。周五，Huang 在 T1 电竞场馆与 Faker 共同亮相，并突袭江南区网吧，演示《PUBG： BATTLEGROUNDS》及基于 NVIDIA ACE 的\"PUBG Ally\"AI 队友、《CINDER CITY》《AION 2》等作品。《CINDER CITY》首发支持 DLSS 4.5 动态多帧生成与超分辨率。已有超过 100 家 Windows 软件与游戏开发商采纳 RTX Spark。",
-        "description": "继上周 GTC Taipei 发布后，NVIDIA CEO Jensen Huang 前往韩国，向当地游戏社区正式介绍 RTX Spark 超芯片。该芯片集成 30 年 NVIDIA 技术，可在 Windows 笔记本上实现全天续航，并以 1440p 分辨率、超过 100fps 运行 AAA 游戏，支持包括 DLSS 4.5 Ray Reconstruction（基于第二代 Transformer 模型）在内的全套 RTX 技术。KRAFTON、NC 与 Riot Games 正合作将旗下游戏适配 RTX Spark。周五，Huang 在 T1 电竞场馆与 Faker 共同亮相，并突袭江南区网吧，演示《PUBG： BATTLEGROUNDS》及基于 NVIDIA ACE 的\"PUBG Ally\"AI 队友、《CINDER CITY》《AION 2》等作品。《CINDER CITY》首发支持 DLSS 4.5 动态多帧生成与超分辨率。已有超过 100 家 Windows 软件与游戏开发商采纳 RTX Spark。",
-        "category": "products",
-        "originalSource": "NVIDIA AI Blog",
-        "originalUrl": "https://blogs.nvidia.com/blog/krafton-nc-t1-korea-gaming-pc-bang-rtx-spark",
-        "recommendedReason": "继上周 GTC Taipei 发布后，NVIDIA CEO Jensen Huang 前往韩国，向当地游戏社区正式介绍 RTX Spark 超芯片。该芯片集成 30 年 NVIDIA 技术，可在 Windows 笔记本上实现全天续航，并以 1440p 分辨率、超过 100fps 运行 AAA 游戏，支持包括 DLSS 4.5 Ray Reconstruction（基于第二代 Transformer 模型）在内的全套 RTX 技术。KRAFTON、NC 与 Riot Games 正合作将旗下游戏适配 RTX Spark。周五，Huang 在 T1 电竞场馆与 Faker 共同亮相，并突袭江南区网吧，演示《PUBG： BATTLEGROUNDS》及基于 NVIDIA ACE 的\"PUBG Ally\"AI 队友、《CINDER CITY》《AION 2》等作品。《CINDER CITY》首发支持 DLSS 4.5 动态多帧生成与超分辨率。已有超过 100 家 Windows 软件与游戏开发商采纳 RTX Spark。",
-        "publishedAt": "2026-06-07T07:00:15.000Z",
-        "collectedAt": "2026-06-07T17:59:18.685Z",
-        "raw": {
-          "id": "cmq3i394000ouslqlpcl2mnr6",
-          "titleEn": "NVIDIA， KRAFTON， NC and Reigning 'League of Legends' Champions T1 Celebrate RTX Spark at Korea's PC Bangs",
           "apiCategory": "ai-products"
         }
       }
