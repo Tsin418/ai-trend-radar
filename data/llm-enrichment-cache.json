@@ -6092,5 +6092,41 @@
     },
     "createdAt": "2026-06-07T14:25:26.110Z",
     "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-07T14:55:04Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go with prefix-cache stability and plugin-driven architecture.",
+      "problemSolved": "Provides a configurable, plugin-driven AI coding agent that leverages DeepSeek's prefix caching to reduce token costs during long sessions, while offering a single static binary for zero-friction distribution.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 19,164 stars, a 24-hour delta of +611, and a 7-day average delta of 652.4, the project shows sustained high velocity. The acceleration ratio of 1 indicates steady growth without sudden spikes, suggesting consistent organic interest. The recent 1.0 rewrite in Go and active community (214 open issues, Discord) signal a mature, actively developed tool.",
+      "whatChanged": "The project recently underwent a ground-up rewrite from TypeScript to Go (version 1.0), which is highlighted in the README as the new default. This rewrite likely improved performance and distribution, attracting attention. Additionally, the project has been featured in velocity rankings (Top 2 in Agents, Top 3 in LLMs and CLI by oosmetrics), which may have driven visibility.",
+      "whyTrending": "It combines the popularity of DeepSeek models with a practical, config-driven agent that works out of the box. The Go rewrite promises better performance and easier distribution, while the plugin system (MCP-compatible) and sandboxing features appeal to developers wanting a secure, extensible coding assistant.",
+      "developerTakeaway": "A well-architected, DeepSeek-first agent that prioritizes cost efficiency via prefix caching and offers extensive customization through TOML config, plugins, and custom commands. The single binary distribution lowers adoption friction.",
+      "developerInsight": "This signals a shift toward model-native agents that optimize for API costs and session persistence. The plugin architecture and MCP compatibility suggest an ecosystem play, where the agent becomes a hub for various tools and models.",
+      "targetUsers": "Developers using DeepSeek models who want a terminal-based AI coding agent with configurable tools, sandboxing, and multi-model support. Also suitable for teams looking for a secure, policy-driven agent for code review and automation.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix caching may limit portability to other providers. The project is still evolving (214 open issues), and the Go rewrite is recent, so stability may vary. The plugin system is MCP-based, which is a relatively new standard.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-07T16:49:03.328Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-07T15:26:04Z": {
+    "summary": {
+      "oneLiner": "Open Design is a local-first, open-source alternative to Claude Design that turns your coding agent into a design engine, generating prototypes, decks, images, and videos from a single design system.",
+      "problemSolved": "It replaces proprietary, cloud-dependent design tools with an agent-native, filesystem-based design workflow where skills, design systems, and plugins are local files that any coding agent can read, write, and remix — enabling brand-consistent, exportable artifacts without leaving the CLI or paying per-seat.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 60,781 stars and a 7-day average delta of 567.6 stars/day, Open Design is sustaining explosive growth. The 24-hour delta of 1,268 stars and acceleration ratio of 2.0 indicate a sudden surge in attention, likely driven by the 0.9.0 release that bundles an official Model Router for zero-setup use. This project is riding the wave of agent-native design tools and the broader shift toward local-first, open-source alternatives to proprietary AI products.",
+      "whatChanged": "The release of Open Design 0.9.0 with an integrated Model Router (no API key or CLI setup required) is the most likely trigger. The README prominently features this as a major milestone, and the high acceleration aligns with a new release that lowers the barrier to entry.",
+      "whyTrending": "It taps into multiple converging trends: the demand for open-source alternatives to Claude Design, the rise of agent-native workflows, the desire for local-first tools, and the need for design systems that work across multiple coding agents. The combination of 150+ design systems, 261 plugins, and support for 21+ CLIs makes it a versatile platform for developers and designers alike.",
+      "developerTakeaway": "Open Design demonstrates that the future of design tools is agent-native and local-first. Developers should consider how their own tools can integrate with coding agents via MCP servers and filesystem-based skills, rather than requiring proprietary APIs or cloud lock-in.",
+      "developerInsight": "This signals a workflow shift: design is becoming a programmable, agent-driven activity. Developers building AI tools should prioritize local-first architectures and agent interoperability (e.g., MCP) to capture this growing market. The project's rapid adoption also highlights the risk of ignoring open-source alternatives to popular proprietary tools.",
+      "targetUsers": "Developers, designers, and product builders who want to generate brand-consistent prototypes, decks, and assets using their existing coding agents (Claude Code, Codex, Cursor, etc.) without leaving the terminal or paying for per-seat design tools.",
+      "riskNotes": "The project is still in early stages (0.9.0) with 344 open issues, which may indicate stability or completeness gaps. As an open-source alternative to a popular proprietary tool, it faces ongoing competition and potential IP/legal challenges. The rapid growth may also strain community support and documentation.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-07T16:49:04.909Z",
+    "model": "deepseek-v4-flash"
   }
 }
