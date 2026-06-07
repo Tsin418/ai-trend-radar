@@ -5768,5 +5768,59 @@
     },
     "createdAt": "2026-06-07T04:56:59.858Z",
     "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-07T06:37:17Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go with prefix-cache stability and MCP plugin support.",
+      "problemSolved": "Provides a config-driven, plugin-extensible AI coding assistant that leverages DeepSeek's prefix caching to reduce token costs during long sessions, while offering a single static binary for easy distribution.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 18,955 stars and a sustained 7-day average of 652 stars per day, this project is experiencing massive organic growth. The 24-hour delta of 402 stars and acceleration of 0.6 indicate a steady, high-velocity trend without sudden spikes, suggesting deep community adoption rather than a viral event.",
+      "whatChanged": "The project recently underwent a ground-up rewrite in Go (version 1.0), moving from TypeScript to a single static binary. This major release, along with active development (commits within 7 days) and a recent release within 30 days, likely drove renewed attention and migration from the legacy version.",
+      "whyTrending": "It combines the popularity of DeepSeek models with a polished terminal experience, plugin system (MCP), and strong performance optimizations. The Go rewrite promises better performance and easier distribution, appealing to developers seeking a lightweight, local AI coding agent.",
+      "developerTakeaway": "Reasonix demonstrates how to build a practical, configurable AI agent that prioritizes cost efficiency and extensibility. Its plugin architecture and permission system offer a blueprint for integrating LLMs into developer workflows safely.",
+      "developerInsight": "The project signals a shift toward specialized, model-native agents that optimize for specific LLM features (like prefix caching). For AI developers, it highlights the importance of tool-use safety (sandboxing, permissions) and the value of composable, multi-model setups.",
+      "targetUsers": "Developers who use DeepSeek models and want a terminal-based AI coding assistant with plugin support, especially those who prefer a configurable, privacy-respecting local tool over cloud IDEs.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix caching may limit portability to other providers. The project is still early (1.0 rewrite), and 209 open issues suggest active but potentially rough edges. MCP plugin ecosystem is nascent.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-07T06:45:37.192Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-07T06:40:07Z": {
+    "summary": {
+      "oneLiner": "Local-first, open-source Claude Design alternative that turns coding agents into design engines via MCP, with 150+ design systems and 260+ plugins.",
+      "problemSolved": "Design tools are closed, agent-native loops are proprietary, and teams lack a local-first, open-source way to generate brand-consistent prototypes, decks, images, and videos directly from their coding agents (Claude Code, Codex, Cursor, etc.) without pixel-pushing in Figma.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 60,395 stars, a 24-hour star delta of 882, and a 7-day average of 567.6, this project shows sustained, high-velocity growth. The acceleration ratio of 1.4 indicates strong but not explosive momentum. The recent 0.9.0 release with built-in Model Router and the Open Design Fellow program signal active development and community building, making it a top-tier open-source design tool for the agent era.",
+      "whatChanged": "The release of version 0.9.0 with an integrated Model Router (no setup required) and the launch of the Open Design Fellow program are the most recent triggers. The README also highlights expanded agent support (21 CLIs) and a growing plugin ecosystem.",
+      "whyTrending": "It fills a clear gap: an open-source, local-first alternative to Claude Design that works with any major coding agent, offering a vast library of design systems and plugins. The 'Figma alternative for the agent era' positioning resonates with developers who want agent-native design workflows without vendor lock-in.",
+      "developerTakeaway": "Open Design enables developers to generate production-ready UI artifacts directly from their coding agents, reducing context switching between design and code. It's a practical way to enforce brand consistency across agent-generated outputs.",
+      "developerInsight": "This signals a shift toward agent-native design tools where the CLI becomes the design engine. For AI developers, it means design systems can be codified as `DESIGN.md` files and consumed by any MCP-compatible agent, opening up new workflows for automated prototyping and brand governance.",
+      "targetUsers": "Developers and designers using coding agents (Claude Code, Codex, Cursor, etc.) who want to generate design artifacts locally without a cloud subscription; teams seeking an open-source Figma alternative for agent-era prototyping.",
+      "riskNotes": "The project is still in early stages (0.9.0) with 332 open issues. Reliance on MCP and agent compatibility may break as agents update. The large star count may attract maintenance pressure. The 'open-source Claude Design alternative' branding could invite legal scrutiny from Anthropic.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-07T06:45:38.043Z",
+    "model": "deepseek-v4-flash"
+  },
+  "affaan-m/ECC:2026-06-07T05:37:46Z": {
+    "summary": {
+      "oneLiner": "A harness-native operator system that optimizes AI agent performance across multiple coding assistants (Claude Code, Codex, Cursor, etc.) with skills, memory, security, and continuous learning.",
+      "problemSolved": "Developers using multiple AI coding agents face fragmented workflows, inconsistent behavior, and lack of optimization across harnesses. ECC provides a unified system of skills, hooks, memory persistence, and security scanning that works across Claude Code, Codex, Cursor, OpenCode, and others, reducing token waste and improving agent reliability.",
+      "aiCategory": "MCP / Tool Calling",
+      "trendType": "sustained_hot",
+      "whyNow": "With 209K+ stars, 854 stars in the last 24 hours, and a 7-day average of 1,400 stars/day, ECC is experiencing sustained explosive growth. The acceleration of 0.6 indicates steady momentum rather than a sudden spike. The project has a recent release (v2.0.0-rc.1) and active commits within 7 days, signaling ongoing development. This is a top-tier trending repository that has maintained high velocity for weeks.",
+      "whatChanged": "The v2.0.0-rc.1 release (Apr 2026) introduced a dashboard GUI, operator workflows, prediction-market skills, optimization packs, and an ECC 2.0 Rust alpha. These features expand the system's surface area and likely drove the recent star acceleration. The README also highlights new guides and community translations, which may have increased discoverability.",
+      "whyTrending": "ECC addresses a critical pain point for developers using AI coding agents: fragmentation and inconsistency across tools. By offering a cross-harness optimization system with a large skill library (251 skills, 63 agents), it provides immediate value. The MIT license, active community (170+ contributors), and regular releases build trust and virality.",
+      "developerTakeaway": "ECC is a must-try for any developer using multiple AI coding assistants. It offers a ready-made system to improve agent performance, reduce token costs, and enforce security. The selective install and cross-harness support lower the barrier to adoption.",
+      "developerInsight": "The rise of ECC signals a shift from single-agent workflows to multi-harness orchestration. Developers are seeking unified tooling that optimizes agent behavior across platforms. This trend suggests that the future of AI-assisted development will involve standardized 'agent operating systems' rather than isolated tools.",
+      "targetUsers": "Developers and teams using Claude Code, Codex, Cursor, OpenCode, or other AI coding agents who want to optimize performance, reduce costs, and enforce security across their agent workflows.",
+      "riskNotes": "The project is primarily maintained by a single developer (affaan-m), which could pose bus-factor risk. The rapid growth may lead to scalability challenges in support and documentation. Some features (e.g., ECC 2.0 Rust alpha) are experimental and may not be production-ready.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-07T06:45:44.775Z",
+    "model": "deepseek-v4-flash"
   }
 }
