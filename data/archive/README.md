@@ -1,11 +1,11 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-07T01:35:52.656Z
+Updated: 2026-06-07T04:57:04.168Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-07 | daily | [AI Developer Radar｜Daily｜2026-06-07](2026/06/2026-06-07-daily.md) | hpcaitech/ColossalAI, thedaviddias/Front-End-Checklist, rohitg00/ai-engineering-from-scratch, esengine/DeepSeek-Reasonix, santifer/career-ops |
+| 2026-06-07 | daily | [AI Developer Radar｜Daily｜2026-06-07](2026/06/2026-06-07-daily.md) | hpcaitech/ColossalAI, rohitg00/ai-engineering-from-scratch, santifer/career-ops, esengine/DeepSeek-Reasonix, nexu-io/open-design |
 | 2026-06-06 | daily | [AI Developer Radar｜Daily｜2026-06-06](2026/06/2026-06-06-daily.md) | Panniantong/Agent-Reach, mvanhorn/last30days-skill, MemPalace/mempalace, safishamsi/graphify, lfnovo/open-notebook |
 | 2026-06-05 | daily | [AI Developer Radar｜Daily｜2026-06-05](2026/06/2026-06-05-daily.md) | HKUDS/Vibe-Trading, 666ghj/MiroFish, aquasecurity/trivy, jwasham/coding-interview-university, zhayujie/CowAgent |
 | 2026-06-04 | daily | [AI Developer Radar｜Daily｜2026-06-04](2026/06/2026-06-04-daily.md) | rohitg00/ai-engineering-from-scratch, chopratejas/headroom, Open-LLM-VTuber/Open-LLM-VTuber, reconurge/flowsint, Tencent/ncnn |

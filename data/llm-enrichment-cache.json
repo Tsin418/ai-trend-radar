@@ -5696,5 +5696,77 @@
     },
     "createdAt": "2026-06-07T01:35:49.170Z",
     "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-07T04:52:53Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go with prefix-cache stability and MCP plugin support.",
+      "problemSolved": "Provides a configurable, plugin-driven AI coding assistant that minimizes token costs via DeepSeek's prefix caching, supports multi-model orchestration, and offers sandboxed tool execution.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 18,908 stars, a 24-hour delta of +355, and a 7-day average of +761 stars/day, this project is experiencing sustained high growth. The acceleration of 0.6 indicates steady, organic interest rather than a sudden spike, making it a reliable signal of developer adoption.",
+      "whatChanged": "The project underwent a ground-up rewrite in Go (v1.0), moving from TypeScript to a single static binary. This major release, combined with active maintenance (latest commit within 7 days) and a recent release within 30 days, likely drove renewed attention.",
+      "whyTrending": "It taps into the demand for efficient, DeepSeek-optimized coding agents that reduce API costs through prefix caching, offers a rich plugin ecosystem via MCP, and provides a polished terminal UI with sandbox security.",
+      "developerTakeaway": "If you use DeepSeek models and want a terminal-based coding agent with low token overhead, Reasonix is a strong candidate. Its config-driven design and MCP compatibility make it extensible.",
+      "developerInsight": "The shift to Go and focus on prefix-cache stability signals a trend toward performance-optimized, cost-aware AI tooling. Developers should watch for similar optimizations in other agents as API costs remain a concern.",
+      "targetUsers": "Developers using DeepSeek models who want a terminal-based AI coding assistant with plugin support, sandboxing, and multi-model orchestration.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix-cache behavior; changes to DeepSeek's pricing or API could impact value. The project is still relatively young (v1.0 rewrite) and has 212 open issues, indicating active development but potential instability.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-07T04:56:50.194Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-07T03:36:57Z": {
+    "summary": {
+      "oneLiner": "Open Design is a local-first, open-source alternative to Claude Design that turns your coding agent into a design engine, generating prototypes, slides, images, and videos from a single design system.",
+      "problemSolved": "Design tools today are either closed (Figma, Claude Design) or require manual pixel-pushing. Open Design lets developers and designers define a brand contract once in a DESIGN.md file, then have any coding agent (Claude Code, Codex, Cursor, etc.) produce consistent, exportable artifacts — HTML, PDF, PPTX, MP4 — without leaving the terminal or switching apps.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 60,343 stars, a 24-hour delta of +830, and a 7-day average of +662 stars/day, Open Design is experiencing sustained, high-velocity growth. The acceleration ratio of 1.3 indicates strong but not explosive momentum. The project just shipped v0.9.0 with a built-in Model Router, lowering the barrier to entry. This is a rare case of a design tool that integrates natively with the agent ecosystem — a space that is currently exploding in interest.",
+      "whatChanged": "The release of v0.9.0 introduced the official Model Router, eliminating the need for API key setup. Combined with the Open Design Fellow program announcement and a growing plugin ecosystem (261 plugins), the project has likely seen a surge in adoption from developers who want to try agent-driven design without friction.",
+      "whyTrending": "Open Design taps into two massive trends: the rise of coding agents (Claude Code, Codex, Cursor) and the desire for open-source alternatives to closed design tools. It offers a unique value proposition — your CLI becomes the design engine — and has built a rich ecosystem of 150+ design systems and 259+ skills, making it immediately useful. The local-first, BYOK approach also appeals to privacy-conscious teams.",
+      "developerTakeaway": "If you build with AI agents, Open Design lets you generate production-quality UI prototypes, decks, and videos directly from your agent's context. It's a force multiplier for rapid prototyping and design-system-driven output, and it works with 21 different agent CLIs out of the box.",
+      "developerInsight": "Open Design signals a shift toward agent-native design workflows where the design system is code (DESIGN.md) and the agent is the renderer. For AI developers, this means the boundary between 'design tool' and 'development environment' is dissolving. The project's MCP server integration makes it a pluggable component in any agent stack, which could become a standard pattern for tool-augmented agents.",
+      "targetUsers": "Developers and designers who use AI coding agents (Claude Code, Codex, Cursor, etc.) and want to generate consistent, branded UI artifacts without switching to a separate design tool. Also teams looking for a local-first, open-source alternative to Figma or Claude Design.",
+      "riskNotes": "The project is still in early release (v0.9.0) with 329 open issues, which may indicate rough edges. It relies on external coding agents and their APIs, so any changes in those ecosystems could affect functionality. The rapid star growth may attract maintenance pressure. Also, the 'design tool' space is crowded, and adoption beyond the developer community is unproven.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-07T04:56:53.119Z",
+    "model": "deepseek-v4-flash"
+  },
+  "affaan-m/ECC:2026-06-07T04:53:28Z": {
+    "summary": {
+      "oneLiner": "A harness-native operator system for AI agent workflows, providing skills, memory, security, and cross-harness compatibility for Claude Code, Codex, Cursor, and more.",
+      "problemSolved": "Developers using multiple AI coding agents face fragmented configurations, inconsistent behavior, and lack of shared memory or security. ECC provides a unified system of skills, hooks, rules, and MCP configs that work across harnesses, optimizing token usage, memory persistence, and agent orchestration.",
+      "aiCategory": "MCP / Tool Calling",
+      "trendType": "sustained_hot",
+      "whyNow": "With 209K stars and a 7-day average of 1,633 new stars per day, this project is experiencing sustained, massive attention. The 24-hour delta of 804 stars and acceleration of 0.5 indicate continued high interest without a sudden spike. The recent v2.0.0-rc.1 release adds operator workflows, a dashboard GUI, and Rust control-plane alpha, keeping momentum strong.",
+      "whatChanged": "The v2.0.0-rc.1 release (Apr 2026) introduced a dashboard GUI, operator workflows, prediction-market skills, optimization packs, and the ECC 2.0 Rust alpha. This major feature release likely drove the sustained star growth.",
+      "whyTrending": "ECC solves a real pain point for the growing number of developers using AI coding agents: it provides a production-ready, cross-harness system that improves agent performance, security, and memory. The project is well-documented, has a clear OSS+Pro model, and benefits from network effects as more users contribute skills and translations.",
+      "developerTakeaway": "ECC is a must-try for any developer using Claude Code, Codex, Cursor, or similar tools. It offers immediate productivity gains through optimized prompts, memory persistence, and reusable skills. The cross-harness compatibility reduces vendor lock-in and standardizes agent workflows.",
+      "developerInsight": "The rise of ECC signals a maturing ecosystem where agent workflows are becoming standardized and tooled. Developers should expect more 'agent operating systems' that abstract away harness-specific quirks, enabling portable, production-grade agentic development. The focus on security (AgentShield) and memory persistence addresses key adoption barriers.",
+      "targetUsers": "Developers and teams using AI coding agents (Claude Code, Codex, Cursor, OpenCode, Gemini, Zed, GitHub Copilot) who want to improve agent performance, security, and cross-harness consistency. Also relevant for builders of MCP servers and agentic workflows.",
+      "riskNotes": "The project is primarily maintained by a single person (affaan-m), which could pose bus-factor risk despite community contributions. The rapid growth may lead to scalability challenges in issue triage and feature requests. Some features (like ECC Pro) are paid, which may limit adoption for some users.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-07T04:56:57.961Z",
+    "model": "deepseek-v4-flash"
+  },
+  "addyosmani/agent-skills:2026-06-06T21:42:35Z": {
+    "summary": {
+      "oneLiner": "A curated pack of 23 production-grade engineering skills packaged as Markdown workflows for AI coding agents.",
+      "problemSolved": "AI coding agents often produce low-quality code because they lack the structured workflows, quality gates, and best practices that senior engineers follow. This repo encodes those practices into reusable skills that agents can execute consistently.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sustained_hot",
+      "whyNow": "With 48,767 stars and a sustained 7-day average of 259 new stars per day, this project has massive community momentum. The 24-hour delta of 289 stars and acceleration of 1.3 indicate continued strong interest, not a flash-in-the-pan spike. It's becoming a de facto standard for agent skill definitions.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The high star velocity and recent release within 30 days suggest ongoing community adoption and word-of-mouth spread.",
+      "whyTrending": "It directly addresses a critical pain point: AI agents need structured engineering discipline to be useful in production. The 7 slash commands and 23 skills map to the entire development lifecycle, making it immediately practical for developers using Claude Code, Cursor, Gemini CLI, and other agent platforms.",
+      "developerTakeaway": "This is a ready-to-use library of agent workflows that can be dropped into any compatible IDE or CLI. It saves months of trial-and-error in crafting effective agent prompts and rules.",
+      "developerInsight": "The rise of structured skill packs signals a shift from 'prompt engineering' to 'workflow engineering' for AI agents. Developers who adopt these patterns will get more consistent, higher-quality outputs from their coding agents.",
+      "targetUsers": "Developers and teams using AI coding agents (Claude Code, Cursor, Gemini CLI, Windsurf, GitHub Copilot) who want production-quality code generation without reinventing the wheel.",
+      "riskNotes": "Skills are tied to specific agent platforms and may not work identically across all of them. The project is opinionated — teams with different workflows may need to adapt. Long-term maintenance by a single author is a bus-factor risk.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-07T04:56:59.858Z",
+    "model": "deepseek-v4-flash"
   }
 }
