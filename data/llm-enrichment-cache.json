@@ -6308,5 +6308,59 @@
     },
     "createdAt": "2026-06-08T05:02:27.143Z",
     "model": "deepseek-v4-flash"
+  },
+  "topoteretes/cognee:2026-06-08T04:59:13Z": {
+    "summary": {
+      "oneLiner": "Cognee is an open-source AI memory platform that gives agents persistent long-term memory via a self-hosted knowledge graph.",
+      "problemSolved": "AI agents lack persistent memory across sessions, forcing them to re-learn context. Cognee provides a knowledge graph engine that stores, connects, and retrieves information over time.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sudden_breakout",
+      "whyNow": "Cognee is experiencing a sudden breakout with 17.7k stars, a 24h star delta of 29, and an acceleration ratio of 2.1 (high). The 7-day average star delta of 15.7 and recent release within 30 days indicate strong, accelerating attention. This is not just steady growth—the velocity has spiked, suggesting a viral moment or major update.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. However, the recent release (within 30 days) and active commits (within 7 days) suggest ongoing improvements that may be driving adoption.",
+      "whyTrending": "Cognee addresses a critical gap in AI agent development: long-term memory. With the rise of agentic workflows, developers need a reliable, open-source memory layer. Its integration with Claude Code and other agents, plus a self-hosted knowledge graph, makes it a practical choice.",
+      "developerTakeaway": "Cognee offers a ready-to-use memory backend for AI agents, reducing the need to build custom vector/graph storage. Its simple API (remember, recall, forget, improve) and CLI make it easy to integrate.",
+      "developerInsight": "This signals a shift toward persistent, context-aware agents. Developers should consider memory infrastructure as a core component, not an afterthought. Cognee's approach—combining vector embeddings with graph reasoning—may become a standard pattern.",
+      "targetUsers": "AI agent developers, LLM application builders, teams building conversational agents or copilots that need cross-session memory.",
+      "riskNotes": "Project is still relatively new (17.7k stars but early-stage). Dependency on specific LLM providers (OpenAI by default) may limit flexibility. Self-hosting requires infrastructure management.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-08T07:11:37.985Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-08T07:00:11Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go for prefix-cache stability and low token costs.",
+      "problemSolved": "Developers need a persistent, cost-efficient AI coding assistant that leverages DeepSeek's prefix caching to reduce token spend across long sessions, with a configurable, plugin-driven architecture that works as a single static binary.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 19,422 stars, a 24-hour delta of +569, and a 7-day average of +604 stars per day, this project is experiencing sustained high-velocity growth. The acceleration ratio of 1.2 indicates continued strong momentum without a sudden spike, suggesting organic, community-driven adoption. It ranks in the top 2-3 in multiple categories (Agents, LLMs, CLI) on OOSmetrics, signaling broad developer interest.",
+      "whatChanged": "The project recently underwent a ground-up rewrite from TypeScript to Go (version 1.0), which is highlighted in the README as a major shift. This rewrite likely improved performance, reduced binary size, and enhanced cache stability, attracting new users and contributors. The release of the Go binary and the migration guide may have spurred the recent star acceleration.",
+      "whyTrending": "It combines the popularity of DeepSeek models with a polished, config-driven terminal agent that emphasizes cost efficiency through prefix caching. The Go rewrite delivers a zero-dependency binary, making installation trivial. Its plugin system (MCP-compatible) and sandboxed permissions appeal to developers who want a secure, extensible coding assistant.",
+      "developerTakeaway": "Reasonix offers a practical, low-cost way to integrate DeepSeek into daily coding workflows. Its config-driven design and plugin architecture make it adaptable to various use cases, from code review to autonomous task execution. The Go rewrite ensures fast startup and low resource usage.",
+      "developerInsight": "This signals a shift toward purpose-built, model-native agents that optimize for specific API features (like prefix caching) rather than generic LLM wrappers. Developers should consider how to leverage model-specific capabilities (e.g., caching, context windows) to build more efficient tools.",
+      "targetUsers": "Developers who use DeepSeek models and want a terminal-based AI coding agent for code generation, review, and task automation. Also suitable for teams looking for a configurable, plugin-extensible agent that can run autonomously or interactively.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix caching — if DeepSeek changes pricing or caching behavior, the cost advantage may diminish. The project is still relatively new (v1.0 rewrite), so stability and long-term maintenance are unproven. 252 open issues suggest active development but also potential bugs or feature gaps.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-08T07:11:40.003Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-08T07:04:27Z": {
+    "summary": {
+      "oneLiner": "Open Design is a local-first, open-source alternative to Claude Design that turns your coding agent into a design engine, generating prototypes, decks, images, and videos from a single design system.",
+      "problemSolved": "Design tools today are either closed ecosystems (Figma, Claude Design) or require manual pixel-pushing. Open Design decouples design from proprietary platforms by letting any coding agent (Claude Code, Codex, Cursor, etc.) read a DESIGN.md, apply brand-grade design systems, and produce real CSS/HTML artifacts that export to PDF, PPTX, or MP4 — all locally, without a cloud dependency.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 61,185 stars and a 24-hour delta of +956 (7-day avg +612), this project is sustaining explosive growth. The acceleration ratio of 1.4 indicates steady, compounding interest rather than a one-day spike. The recent 0.9.0 release with built-in Model Router removes setup friction, making it instantly usable — a clear catalyst for the sustained attention.",
+      "whatChanged": "The 0.9.0 release introduced an official Model Router that eliminates the need for API key configuration or CLI installation — users can sign in and start designing immediately. This reduction in onboarding friction likely drove the recent acceleration.",
+      "whyTrending": "It combines two of the hottest trends in AI: agent-native workflows and open-source alternatives to proprietary tools. By supporting 21+ coding agents and offering a Figma-like experience without the canvas, it appeals to developers who want to keep their design pipeline inside their existing agent ecosystem.",
+      "developerTakeaway": "Open Design demonstrates that design can be a first-class output of coding agents, not a separate toolchain. Developers should evaluate whether their agent workflows can benefit from generating polished, brand-consistent artifacts directly from code prompts.",
+      "developerInsight": "This signals a shift toward agent-native design: the design system becomes a file (DESIGN.md) that agents read, rather than a proprietary cloud service. For AI developers, this means building agents that can produce production-ready visual outputs is now a viable product direction, and the barrier to entry is lowering rapidly.",
+      "targetUsers": "Developers and designers who use AI coding agents (Claude Code, Codex, Cursor, etc.) and want to generate prototypes, decks, images, and videos without leaving their agent environment. Also teams looking for a local-first, open-source alternative to Claude Design or Figma.",
+      "riskNotes": "The project is still in 0.9.0 (pre-1.0), so stability and API changes are possible. It relies on external coding agents and their respective APIs, which may introduce dependency risks. The 375 open issues suggest active development but also potential rough edges.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-08T07:11:47.395Z",
+    "model": "deepseek-v4-flash"
   }
 }

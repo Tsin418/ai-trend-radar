@@ -1,11 +1,11 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-08T05:02:31.490Z
+Updated: 2026-06-08T07:11:53.324Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-08 | daily | [AI Developer Radar｜Daily｜2026-06-08](2026/06/2026-06-08-daily.md) | hpcaitech/ColossalAI, zilliztech/claude-context, Tencent/ncnn, rohitg00/ai-engineering-from-scratch, esengine/DeepSeek-Reasonix |
+| 2026-06-08 | daily | [AI Developer Radar｜Daily｜2026-06-08](2026/06/2026-06-08-daily.md) | hpcaitech/ColossalAI, zilliztech/claude-context, automazeio/ccpm, Tencent/ncnn, zhayujie/CowAgent |
 | 2026-06-07 | daily | [AI Developer Radar｜Daily｜2026-06-07](2026/06/2026-06-07-daily.md) | hpcaitech/ColossalAI, zilliztech/claude-context, zhayujie/CowAgent, automazeio/ccpm, rohitg00/ai-engineering-from-scratch |
 | 2026-06-06 | daily | [AI Developer Radar｜Daily｜2026-06-06](2026/06/2026-06-06-daily.md) | Panniantong/Agent-Reach, mvanhorn/last30days-skill, MemPalace/mempalace, safishamsi/graphify, lfnovo/open-notebook |
 | 2026-06-05 | daily | [AI Developer Radar｜Daily｜2026-06-05](2026/06/2026-06-05-daily.md) | HKUDS/Vibe-Trading, 666ghj/MiroFish, aquasecurity/trivy, jwasham/coding-interview-university, zhayujie/CowAgent |
