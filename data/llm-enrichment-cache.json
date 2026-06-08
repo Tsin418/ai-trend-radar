@@ -6560,5 +6560,59 @@
     },
     "createdAt": "2026-06-08T16:33:27.317Z",
     "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-08T17:30:22Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go for performance and prefix-cache stability.",
+      "problemSolved": "Provides a configurable, plugin-driven AI coding assistant that leverages DeepSeek's prefix caching to reduce token costs during long sessions, with a single static binary for easy distribution.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 19,768 stars, a 24h delta of +915, and a 7-day average delta of 604.3, the project shows sustained high attention. The acceleration ratio of 1.9 indicates strong, steady growth without sudden spikes, suggesting organic adoption by developers seeking efficient AI coding tools.",
+      "whatChanged": "The recent 1.0 rewrite in Go (main-v2 branch) and the addition of MCP plugin support likely drove renewed interest. The project also has a recent release within 30 days and active commits within the last week.",
+      "whyTrending": "It combines the popularity of DeepSeek models with a practical, configurable terminal agent that emphasizes cost efficiency through prefix caching. The Go rewrite improves performance and distribution, while MCP compatibility broadens its plugin ecosystem.",
+      "developerTakeaway": "For developers building AI coding agents, this project demonstrates the value of optimizing for specific model features (prefix caching) and providing a plugin architecture for extensibility.",
+      "developerInsight": "The shift from TypeScript to Go signals a trend toward performance-critical AI tooling. The focus on prefix-cache stability highlights the importance of cost management in AI-assisted development workflows.",
+      "targetUsers": "Developers who use DeepSeek models and want a terminal-based AI coding agent with configurable tools, plugins, and cost-efficient long sessions.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix caching may limit portability to other providers. The project is still evolving (281 open issues), and the Go rewrite may introduce breaking changes for legacy users.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-08T19:38:35.529Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-08T19:10:13Z": {
+    "summary": {
+      "oneLiner": "Open Design is a local-first, open-source alternative to Claude Design that turns your coding agent into a design engine, generating prototypes, decks, images, and videos from a design system and a brief.",
+      "problemSolved": "Design tooling is still pixel-pushing; Open Design replaces the canvas with agent-native artifact generation, letting developers and designers produce production-ready UI, decks, and motion graphics directly from a CLI or MCP server, using any major coding agent.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sudden_breakout",
+      "whyNow": "The repo is exploding: 61,632 stars, +1,403 in the last 24 hours, +5,050 in the last week, with a 7-day average delta of 611.7 and an acceleration ratio of 2 (high). This is a sudden breakout — the project has crossed from steady growth into viral territory, likely driven by the 0.9.0 release and the built-in Model Router that removes all setup friction.",
+      "whatChanged": "The 0.9.0 release (within 30 days) introduced the official Model Router, eliminating the need for API keys or CLI configuration — just sign in and start designing. This dramatically lowers the barrier to entry, which is the most plausible trigger for the sudden star acceleration.",
+      "whyTrending": "It combines two massive trends: the shift to agent-native workflows (Claude Code, Codex, Cursor) and the hunger for open-source alternatives to closed design tools like Figma and Claude Design. The promise of a local-first, BYOK design engine that works with 21+ coding agents and exports to HTML/PDF/PPTX/MP4 is a compelling pitch for both developers and designers.",
+      "developerTakeaway": "If you build AI tools, note that Open Design's MCP-first architecture lets it plug into any agent with one command. This pattern — agent-as-platform — is becoming the standard for developer tooling. The project also shows that 'design systems as code' (DESIGN.md) can be a powerful abstraction for generative UI.",
+      "developerInsight": "Open Design signals that the next wave of design tools will be agent-native, not canvas-native. Developers should watch for opportunities to build plugins, skills, and design systems that integrate with this MCP ecosystem. The BYOK proxy and SSRF protection also indicate a focus on enterprise security, which could accelerate adoption in regulated environments.",
+      "targetUsers": "Developers and designers who want to generate UI prototypes, pitch decks, and visual assets using AI agents without leaving the terminal or IDE. Also teams looking for a local-first, open-source alternative to Claude Design or Figma that respects brand guidelines via DESIGN.md.",
+      "riskNotes": "The project is still in 0.9.0 — pre-1.0 stability and API changes are likely. The 383 open issues suggest active development but also a backlog. The sudden breakout could attract unsustainable expectations; long-term retention depends on delivering on the 'local-first, open-source' promise without vendor lock-in.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-08T19:38:38.939Z",
+    "model": "deepseek-v4-flash"
+  },
+  "sickn33/antigravity-awesome-skills:2026-06-08T08:37:35Z": {
+    "summary": {
+      "oneLiner": "A massive, installable library of 1,525+ reusable agentic skills (SKILL.md playbooks) for AI coding assistants like Claude Code, Cursor, Codex CLI, Gemini CLI, and Antigravity.",
+      "problemSolved": "Eliminates the need to craft one-off prompts for common coding tasks by providing a searchable, installable catalog of structured skills that agents can execute directly, improving consistency and reducing context-switching.",
+      "aiCategory": "MCP / Tool Calling",
+      "trendType": "sustained_hot",
+      "whyNow": "With 40,089 stars, a 7-day average delta of 100.1 stars/day, and an acceleration of 1.8 (high but not sudden breakout), this project is experiencing sustained, high-velocity organic growth. The 24h delta of 175 stars and 3-day average of 96.7 confirm strong ongoing interest. It's not a flash-in-the-pan spike but a steadily accelerating adoption curve, likely driven by the expanding ecosystem of AI coding tools and the need for reusable skill libraries.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The latest release (V12.2.1) and continuous commits (within 7 days) indicate active maintenance, but the growth pattern is consistent with steady word-of-mouth and ecosystem expansion rather than a specific event.",
+      "whyTrending": "As AI coding assistants proliferate, developers need a standardized way to share and reuse agent instructions. This library fills that gap with a large, well-organized catalog, a simple CLI installer, and support for multiple tools, making it a go-to resource for anyone using AI in development workflows.",
+      "developerTakeaway": "If you use Claude Code, Cursor, Codex CLI, Gemini CLI, or similar tools, this library can dramatically speed up your workflow by providing ready-to-use skills for planning, coding, debugging, testing, security, and more. The npx installer makes setup trivial.",
+      "developerInsight": "The rise of skill libraries signals a shift from ad-hoc prompting to structured, reusable agent instructions. This project is a leading indicator that the AI coding assistant ecosystem is maturing, with developers demanding composable, tool-agnostic skill packages rather than isolated prompt snippets.",
+      "targetUsers": "Developers and teams using AI coding assistants (Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, etc.) who want to accelerate common tasks with pre-built, installable skill playbooks.",
+      "riskNotes": "The library's quality depends on community contributions; some skills may be outdated or poorly written. Over-reliance on pre-built skills could reduce understanding of underlying tasks. The project's rapid growth may attract low-quality contributions if moderation doesn't scale.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-08T19:38:44.661Z",
+    "model": "deepseek-v4-flash"
   }
 }
