@@ -1,211 +1,189 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-06-09T13:39:02.881Z",
+  "generatedAt": "2026-06-09T15:33:38.711Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
+        "id": "http://arxiv.org/abs/2606.09826v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "OmniGameArena: A Unified UE5 Benchmark for VLM Game Agents with Improvement Dynamics",
+        "url": "https://arxiv.org/pdf/2606.09826v1",
+        "description": "Vision-language model (VLM) agents are increasingly deployed in interactive game environments. Yet game benchmarks for VLM agents typically report a single first-attempt score per (agent, game) pair, focus on single-agent Solo play, and lack unified protocols for evaluating heterogeneous agent classes (commercial VLMs, open-weight VLMs, and specialized game policies) on the same footing. We address these gaps with OmniGameArena, a real-time benchmark of twelve newly built Unreal Engine 5 games s",
+        "summary": "Vision-language model (VLM) agents are increasingly deployed in interactive game environments. Yet game benchmarks for VLM agents typically report a single first-attempt score per (agent, game) pair, focus on single-agent Solo play, and lack unified protocols for evaluating heterogeneous agent classes (commercial VLMs, open-weight VLMs, and specialized game policies) on the same footing. We address these gaps with OmniGameArena, a real-time benchmark of twelve newly built Unreal Engine 5 games spanning Solo (7), PvP (3), and Coop (2) with unified action interfaces, and the Improvement Dynamics Curve (IDC), an agentic-reflection harness in which a tool-using reflector LLM autonomously refines a bounded skill prompt across multiple rounds. Beyond cold-start leaderboard scores, IDC exposes two additional observables for each (agent, game) pair: how the score evolves across reflection rounds, and how the learned skill behaves on held-out task variants. We report these observables for twelve VLM agents on the cold-start leaderboard and four top agents under IDC.",
+        "author": "Mingxian Lin, Shengju Qian, Yuqi Liu, Yi-Hua Huang, Yiyu Wang, Wei Huang, Yitang Li, Fan Zhang, Zeyu Hu, Lingting Zhu, Xin Wang, Xiaojuan Qi",
         "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
+          "cs.CV",
+          "cs.AI",
+          "llm",
+          "agent",
+          "benchmark",
+          "agentic"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 14010
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-06-09T13:39:02.992Z",
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-06-08T17:59:43Z",
+        "updatedAt": "2026-06-08T17:59:43Z",
+        "collectedAt": "2026-06-09T15:33:05.331Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.09826v1",
+          "authors": [
+            "Mingxian Lin",
+            "Shengju Qian",
+            "Yuqi Liu",
+            "Yi-Hua Huang",
+            "Yiyu Wang",
+            "Wei Huang",
+            "Yitang Li",
+            "Fan Zhang",
+            "Zeyu Hu",
+            "Lingting Zhu",
+            "Xin Wang",
+            "Xiaojuan Qi"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, agent, benchmark, agentic"
       },
       {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
+        "id": "http://arxiv.org/abs/2606.09825v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "An Agency-Transferring Model-Free Policy Enhancement Technique",
+        "url": "https://arxiv.org/pdf/2606.09825v1",
+        "description": "Training reinforcement learning (RL) policies from scratch is costly: it requires careful reward and environment design, extensive tuning, and substantial computation. Yet many control problems already have a functional but suboptimal policy available as a baseline. This paper proposes a method for embedding such a baseline into the RL training process, simultaneously improving training efficiency relative to from-scratch methods and producing a learning policy that outperforms the baseline. At ",
+        "summary": "Training reinforcement learning (RL) policies from scratch is costly: it requires careful reward and environment design, extensive tuning, and substantial computation. Yet many control problems already have a functional but suboptimal policy available as a baseline. This paper proposes a method for embedding such a baseline into the RL training process, simultaneously improving training efficiency relative to from-scratch methods and producing a learning policy that outperforms the baseline. At each step, the method arbitrates between the baseline policy and a trainable learning policy, initially relying strongly on the baseline policy and then progressively transferring agency to the learning policy. By the end of training, the learning policy is a standalone neural network that operates without baseline policy support. The paper formalizes what it means for the baseline policy to be functional: under this policy, the agent reaches a goal set and remains there with high probability. The proposed arbitration mechanism is designed to exploit this property during training, yielding high goal-reaching rates right from the beginning of training. A theoretical analysis provides a formal interpretation of this behavior under stated assumptions and extends it to the final baseline-free regime, where explicit lower bounds are derived for the goal-reaching probability of the standalone learning policy. Empirical results on continuous-control benchmarks show that the proposed method achieves returns that match or exceed those of competitive approaches, while maintaining the highest goal-reaching rates throughout training among the compared methods -- including in the final stage, where the learning policy operates without any baseline support.",
+        "author": "Anton Bolychev, Georgiy Malaniya, Sinan Ibrahim, Pavel Osinenko",
         "tags": [
-          "docker",
-          "region:us"
+          "cs.LG",
+          "cs.AI",
+          "eess.SY",
+          "math.OC",
+          "agent",
+          "embedding",
+          "benchmark"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11111
-        },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-06-09T13:39:02.992Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-06-08T17:59:39Z",
+        "updatedAt": "2026-06-08T17:59:39Z",
+        "collectedAt": "2026-06-09T15:33:05.331Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.09825v1",
+          "authors": [
+            "Anton Bolychev",
+            "Georgiy Malaniya",
+            "Sinan Ibrahim",
+            "Pavel Osinenko"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: agent, embedding, benchmark"
       },
       {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
+        "id": "http://arxiv.org/abs/2606.09822v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Causally Evaluating the Learnability of Formal Language Tasks",
+        "url": "https://arxiv.org/pdf/2606.09822v1",
+        "description": "Language models, as multi-task learners, acquire a wide range of abilities during training. A fundamental question is how much task-specific data is needed to learn a given task. Answering this for natural language is difficult: tasks are hard to delineate and can confound one another. To rigorously investigate the relationship between data frequency and learnability, we turn to a controlled setting using formal languages induced from probabilistic finite automata. These serve as a methodologica",
+        "summary": "Language models, as multi-task learners, acquire a wide range of abilities during training. A fundamental question is how much task-specific data is needed to learn a given task. Answering this for natural language is difficult: tasks are hard to delineate and can confound one another. To rigorously investigate the relationship between data frequency and learnability, we turn to a controlled setting using formal languages induced from probabilistic finite automata. These serve as a methodological testbed to demonstrate that standard correlational evaluation practices are inherently flawed. To enable causal analysis, we introduce the binning semiring, an algebraic object that lets us control how often a targeted property occurs in a sampled corpus. We formulate the experimental pipeline as a causal graphical model and derive decomposed Kullback-Leibler divergence metrics to measure the learnability of specific sub-tasks. Our experiments show that evaluating learnability without causal intervention leads to incorrect conclusions due to confounders in correlational analysis, and serve as a warning about correlational pitfalls in natural-language settings.",
+        "author": "Vésteinn Snæbjarnarson, Anej Svete, Josef Valvoda, Reda Boumasmoud, Brian DuSell, Ryan Cotterell",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.CL",
+          "cs.FL",
+          "evaluation"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10102
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-06-09T13:39:02.992Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-06-08T17:58:36Z",
+        "updatedAt": "2026-06-08T17:58:36Z",
+        "collectedAt": "2026-06-09T15:33:05.331Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.09822v1",
+          "authors": [
+            "Vésteinn Snæbjarnarson",
+            "Anej Svete",
+            "Josef Valvoda",
+            "Reda Boumasmoud",
+            "Brian DuSell",
+            "Ryan Cotterell"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: evaluation"
       },
       {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
+        "id": "http://arxiv.org/abs/2606.09821v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Rethinking the Divergence Regularization in LLM RL",
+        "url": "https://arxiv.org/pdf/2606.09821v1",
+        "description": "Reinforcement learning (RL) has become a key component of post-training large language models (LLMs). In practice, LLM RL is often off-policy because of training-inference mismatch and policy staleness, making trust-region control essential for stable optimization. Mainstream methods such as PPO and GRPO approximate this control with a ratio-clipping mechanism, but the importance ratio can be a poor proxy for distributional shift in long-tailed vocabularies. Recent work such as DPPO addresses th",
+        "summary": "Reinforcement learning (RL) has become a key component of post-training large language models (LLMs). In practice, LLM RL is often off-policy because of training-inference mismatch and policy staleness, making trust-region control essential for stable optimization. Mainstream methods such as PPO and GRPO approximate this control with a ratio-clipping mechanism, but the importance ratio can be a poor proxy for distributional shift in long-tailed vocabularies. Recent work such as DPPO addresses this mismatch by replacing ratio-based clipping with a divergence-based mask, yielding a trust region defined by the sampled token's absolute probability shift. However, DPPO still relies on a hard mask: once a token crosses the trust-region boundary in a harmful direction, its gradient is discarded rather than corrected. To address this, we propose Divergence Regularized Policy Optimization (DRPO), which replaces the hard mask with a smooth advantage-weighted quadratic regularizer on policy shift. DRPO preserves the same trust-region geometry as DPPO while inducing bounded, continuous gradient weights that attenuate diverging updates and provide corrective signals beyond the boundary. Experiments across model scales, architectures, and precision settings show that DRPO improves the stability and efficiency of LLM RL training.",
+        "author": "Jiarui Yao, Xiangxin Zhou, Penghui Qi, Wee Sun Lee, Liefeng Bo, Tianyu Pang",
         "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
+          "cs.LG",
+          "large language model",
+          "llm"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7457
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-06-07T15:13:37.000Z",
-        "collectedAt": "2026-06-09T13:39:02.992Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-06-08T17:58:23Z",
+        "updatedAt": "2026-06-08T17:58:23Z",
+        "collectedAt": "2026-06-09T15:33:05.331Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "📊"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.09821v1",
+          "authors": [
+            "Jiarui Yao",
+            "Xiangxin Zhou",
+            "Penghui Qi",
+            "Wee Sun Lee",
+            "Liefeng Bo",
+            "Tianyu Pang"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm"
       },
       {
-        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Wan2.2 Animate",
-        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
-        "author": "Wan-AI",
+        "id": "http://arxiv.org/abs/2606.09816v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "PTL-Diffusion: Manifold-Aware Diffusion with Periodic Terminal Laws",
+        "url": "https://arxiv.org/pdf/2606.09816v1",
+        "description": "Standard diffusion models typically use a single time-homogeneous Gaussian terminal distribution as the reference law for generation. While this choice is analytically convenient and empirically powerful, it provides little explicit structure for data concentrated near low-dimensional manifolds, where different regions of the data distribution may correspond to distinct local geometric or semantic factors. As a result, the reverse model must recover manifold-level structure almost entirely from ",
+        "summary": "Standard diffusion models typically use a single time-homogeneous Gaussian terminal distribution as the reference law for generation. While this choice is analytically convenient and empirically powerful, it provides little explicit structure for data concentrated near low-dimensional manifolds, where different regions of the data distribution may correspond to distinct local geometric or semantic factors. As a result, the reverse model must recover manifold-level structure almost entirely from an unstructured terminal reference distribution. We propose PTL-Diffusion, a proof-of-concept diffusion framework whose forward noising process converges to a nonconstant periodic family of Gaussian terminal laws rather than to a single invariant law. Unlike a phase-conditioned DDPM, where phase information only enters the denoising network while the forward process remains unchanged, PTL-Diffusion embeds phase structure directly into the forward noising dynamics. The proposed construction remains close to standard denoising diffusion models: for a periodically forced Ornstein--Uhlenbeck-type forward process, we derive closed-form forward marginals, the limiting periodic Gaussian terminal family, and explicit Gaussian reverse posteriors, enabling standard noise-prediction training. We also introduce an invariant-average regularization term coupling the phase-conditioned reverse dynamics through the averaged periodic reference law. Experiments on torus and cylinder point-cloud benchmarks and the Olivetti face dataset show that PTL-Diffusion improves manifold-level distributional matching over matched DDPM baselines, reducing phase-conditioned errors, feature-space covariance errors, and nearest-neighbour manifold distances. These results suggest structured terminal reference laws as a promising direction, while motivating more expressive phase constructions and larger-scale evaluations.",
+        "author": "Danqi Zhuang, Jisui Huang, Xiaoyue Xi, Andrew Kiggins, Xiaojie Wang, Ke Chen, Yue Wu",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.CV",
+          "cs.AI",
+          "math.PR",
+          "rag",
+          "benchmark",
+          "evaluation"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5118
-        },
-        "publishedAt": "2025-09-18T07:05:32.000Z",
-        "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-06-09T13:39:02.992Z",
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-06-08T17:56:16Z",
+        "updatedAt": "2026-06-08T17:56:16Z",
+        "collectedAt": "2026-06-09T15:33:05.331Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👁"
-        }
-      },
-      {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
-        "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5072
+          "abstractUrl": "http://arxiv.org/abs/2606.09816v1",
+          "authors": [
+            "Danqi Zhuang",
+            "Jisui Huang",
+            "Xiaoyue Xi",
+            "Andrew Kiggins",
+            "Xiaojie Wang",
+            "Ke Chen",
+            "Yue Wu"
+          ]
         },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-06-09T13:39:02.992Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4909
-        },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-06-09T13:39:02.992Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
-      },
-      {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
-        "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3748
-        },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-06-09T13:39:02.992Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
-        }
+        "recommendedReason": "Matched AI developer keywords: rag, benchmark, evaluation"
       }
     ],
     "developerBuzz": [
@@ -221,11 +199,11 @@
           "gemini"
         ],
         "metrics": {
-          "upvotes": 652,
-          "commentsCount": 501
+          "upvotes": 673,
+          "commentsCount": 527
         },
         "publishedAt": "2026-06-08T19:14:47.000Z",
-        "collectedAt": "2026-06-09T13:39:03.226Z",
+        "collectedAt": "2026-06-09T15:33:05.151Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48450142",
           "matchedKeywords": [
@@ -245,13 +223,36 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 620,
-          "commentsCount": 605
+          "upvotes": 633,
+          "commentsCount": 639
         },
         "publishedAt": "2026-06-08T18:17:53.000Z",
-        "collectedAt": "2026-06-09T13:39:03.226Z",
+        "collectedAt": "2026-06-09T15:33:05.151Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48449084",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48446893",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "AI is slowing down",
+        "url": "https://www.wheresyoured.at/ai-is-slowing-down/",
+        "author": "crescit_eundo",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 623,
+          "commentsCount": 697
+        },
+        "publishedAt": "2026-06-08T15:46:37.000Z",
+        "collectedAt": "2026-06-09T15:33:05.151Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48446893",
           "matchedKeywords": [
             "ai"
           ]
@@ -268,11 +269,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 605,
-          "commentsCount": 473
+          "upvotes": 637,
+          "commentsCount": 495
         },
         "publishedAt": "2026-06-08T15:13:43.000Z",
-        "collectedAt": "2026-06-09T13:39:03.226Z",
+        "collectedAt": "2026-06-09T15:33:05.151Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48446428",
           "matchedKeywords": [
@@ -281,46 +282,23 @@
         }
       },
       {
-        "id": "hackernews:48434312",
+        "id": "hackernews:48449187",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "LLMs are eroding my software engineering career and I don't know what to do",
-        "url": "https://human-in-the-loop.bearblog.dev/llms-are-eroding-my-software-engineering-career-and-i-dont-know-what-to-do/",
-        "author": "poisonfountain",
-        "tags": [
-          "llm"
-        ],
-        "metrics": {
-          "upvotes": 1119,
-          "commentsCount": 1056
-        },
-        "publishedAt": "2026-06-07T12:49:29.000Z",
-        "collectedAt": "2026-06-09T13:39:03.226Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48434312",
-          "matchedKeywords": [
-            "llm"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48446893",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "AI is slowing down",
-        "url": "https://www.wheresyoured.at/ai-is-slowing-down/",
-        "author": "crescit_eundo",
+        "title": "Ask HN: What are tools you have made for yourself since the advent of AI?",
+        "url": "https://news.ycombinator.com/item?id=48449187",
+        "author": "aryamaan",
         "tags": [
           "ai"
         ],
         "metrics": {
-          "upvotes": 605,
-          "commentsCount": 657
+          "upvotes": 383,
+          "commentsCount": 631
         },
-        "publishedAt": "2026-06-08T15:46:37.000Z",
-        "collectedAt": "2026-06-09T13:39:03.226Z",
+        "publishedAt": "2026-06-08T18:22:39.000Z",
+        "collectedAt": "2026-06-09T15:33:05.151Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48446893",
+          "hnUrl": "https://news.ycombinator.com/item?id=48449187",
           "matchedKeywords": [
             "ai"
           ]
@@ -328,6 +306,126 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmq6rv40r0b8isl5iwmqtrlxl",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Claude Mythos 即将发布，Fable 精简版同日登场",
+        "url": "https://x.com/kimmonismus/status/2064362469632405807",
+        "summary": "确认，Claude Mythos 将在接下来几小时内揭晓。 【引用 @steph_palazzolo】： 独家：一个名为 Claude Fable 的精简版 Mythos 今天推出。它价格昂贵--是 Opus 的两倍--但或许不像人们从最初 Mythos 定价（Opus 的 5 倍）所想的那样昂贵。 更多内容及 Apple WWDC 见 AI Agenda： https：//www.theinformation.com/newsletters/ai-agenda/anthropics-mythos-coming-today-apple-pursues-modest-goals-siri-revamp",
+        "description": "确认，Claude Mythos 将在接下来几小时内揭晓。 【引用 @steph_palazzolo】： 独家：一个名为 Claude Fable 的精简版 Mythos 今天推出。它价格昂贵--是 Opus 的两倍--但或许不像人们从最初 Mythos 定价（Opus 的 5 倍）所想的那样昂贵。 更多内容及 Apple WWDC 见 AI Agenda： https：//www.theinformation.com/newsletters/ai-agenda/anthropics-mythos-coming-today-apple-pursues-modest-goals-siri-revamp",
+        "category": "models",
+        "originalSource": "X：Kim (@kimmonismus)",
+        "originalUrl": "https://x.com/kimmonismus/status/2064362469632405807",
+        "recommendedReason": "确认，Claude Mythos 将在接下来几小时内揭晓。 【引用 @steph_palazzolo】： 独家：一个名为 Claude Fable 的精简版 Mythos 今天推出。它价格昂贵--是 Opus 的两倍--但或许不像人们从最初 Mythos 定价（Opus 的 5 倍）所想的那样昂贵。 更多内容及 Apple WWDC 见 AI Agenda： https：//www.theinformation.com/newsletters/ai-agenda/anthropics-mythos-coming-today-apple-pursues-modest-goals-siri-revamp",
+        "publishedAt": "2026-06-09T15:02:21.000Z",
+        "collectedAt": "2026-06-09T15:33:06.205Z",
+        "raw": {
+          "id": "cmq6rv40r0b8isl5iwmqtrlxl",
+          "titleEn": "Confirmed， Claude Mythos will be unveiled in the next few hours",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmq6rn45v0b5csl5i8uplhmsj",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Luma AI Ray3.2：方向进，电影出",
+        "url": "https://x.com/LumaLabsAI/status/2064358414143143954",
+        "summary": "方向进入，电影出来。 Ray3.2 来了 → http：//lumalabs.ai/ray3-2",
+        "description": "方向进入，电影出来。 Ray3.2 来了 → http：//lumalabs.ai/ray3-2",
+        "category": "models",
+        "originalSource": "X：Luma AI (@LumaLabsAI)",
+        "originalUrl": "https://x.com/LumaLabsAI/status/2064358414143143954",
+        "recommendedReason": "方向进入，电影出来。 Ray3.2 来了 → http：//lumalabs.ai/ray3-2",
+        "publishedAt": "2026-06-09T14:46:14.000Z",
+        "collectedAt": "2026-06-09T15:33:06.205Z",
+        "raw": {
+          "id": "cmq6rn45v0b5csl5i8uplhmsj",
+          "titleEn": "Direction goes in. Cinema comes out. Ray3.2 is here → http：//lumalabs.ai/ray3-2",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmq6r17220b1gsl5in9n805vf",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Runway视频轻松转宽高比",
+        "url": "https://x.com/runwayml/status/2064350871048077756",
+        "summary": "轻松将视频重新格式化为不同宽高比，让你在每一个重要平台都能展示。 点击下方链接开始。",
+        "description": "轻松将视频重新格式化为不同宽高比，让你在每一个重要平台都能展示。 点击下方链接开始。",
+        "category": "products",
+        "originalSource": "X：Runway (@runwayml)",
+        "originalUrl": "https://x.com/runwayml/status/2064350871048077756",
+        "recommendedReason": "轻松将视频重新格式化为不同宽高比，让你在每一个重要平台都能展示。 点击下方链接开始。",
+        "publishedAt": "2026-06-09T14:16:16.000Z",
+        "collectedAt": "2026-06-09T15:33:06.205Z",
+        "raw": {
+          "id": "cmq6r17220b1gsl5in9n805vf",
+          "titleEn": "Easily reformat your videos to different aspect ratios， so you can show up everywhere that matters. …",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmq6qqqbp0axhsl5i2ow5j5co",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Google DeepMind 发布 Gemma 4 12B：统一的无编码器多模态模型",
+        "url": "https://deepmind.google/blog/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model",
+        "summary": "Gemma 4 12B 是 Google DeepMind 最新推出的中等规模多模态模型，采用无编码器统一架构，原生支持音频输入。其基准测试性能接近 26B MoE 模型，但内存占用不到一半，仅需 16GB 显存或统一内存即可在消费级笔记本上本地运行。模型内置多 token 预测（MTP）drafter 以降低延迟，基于 Apache 2.0 开源许可发布，已累计超过 1.5 亿次下载。",
+        "description": "Gemma 4 12B 是 Google DeepMind 最新推出的中等规模多模态模型，采用无编码器统一架构，原生支持音频输入。其基准测试性能接近 26B MoE 模型，但内存占用不到一半，仅需 16GB 显存或统一内存即可在消费级笔记本上本地运行。模型内置多 token 预测（MTP）drafter 以降低延迟，基于 Apache 2.0 开源许可发布，已累计超过 1.5 亿次下载。",
+        "category": "models",
+        "originalSource": "Google DeepMind：Blog（RSS）",
+        "originalUrl": "https://deepmind.google/blog/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model",
+        "recommendedReason": "Gemma 4 12B 是 Google DeepMind 最新推出的中等规模多模态模型，采用无编码器统一架构，原生支持音频输入。其基准测试性能接近 26B MoE 模型，但内存占用不到一半，仅需 16GB 显存或统一内存即可在消费级笔记本上本地运行。模型内置多 token 预测（MTP）drafter 以降低延迟，基于 Apache 2.0 开源许可发布，已累计超过 1.5 亿次下载。",
+        "publishedAt": "2026-06-09T14:10:19.000Z",
+        "collectedAt": "2026-06-09T15:33:06.205Z",
+        "raw": {
+          "id": "cmq6qqqbp0axhsl5i2ow5j5co",
+          "titleEn": "Introducing Gemma 4 12B： a unified， encoder-free multimodal model",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmq6pnxzb0am5sl5i5g6wjkvv",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Google DeepMind 欧洲机器人加速器启动，15家初创公司入选",
+        "url": "https://deepmind.google/blog/powering-the-future-of-robotics-in-europe",
+        "summary": "Google DeepMind 加速器从欧洲选出15家机器人初创公司，提供为期3个月的密集指导和AI技术整合支持，帮助公司将AI融入核心产品。",
+        "description": "Google DeepMind 加速器从欧洲选出15家机器人初创公司，提供为期3个月的密集指导和AI技术整合支持，帮助公司将AI融入核心产品。",
+        "category": "industry",
+        "originalSource": "Google DeepMind：Blog（RSS）",
+        "originalUrl": "https://deepmind.google/blog/powering-the-future-of-robotics-in-europe",
+        "recommendedReason": "Google DeepMind 加速器从欧洲选出15家机器人初创公司，提供为期3个月的密集指导和AI技术整合支持，帮助公司将AI融入核心产品。",
+        "publishedAt": "2026-06-09T14:02:33.000Z",
+        "collectedAt": "2026-06-09T15:33:06.205Z",
+        "raw": {
+          "id": "cmq6pnxzb0am5sl5i5g6wjkvv",
+          "titleEn": "Powering the future of robotics in Europe",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmq6qlc110aw0sl5iv6lmobov",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "GPT-5.5 替代 OCR，ChinaRxiv 论文免费开放",
+        "url": "https://x.com/OpenAIDevs/status/2064346891673059484",
+        "summary": "23，000+ 篇 ChinaRxiv 论文现已免费提供，并带有更完整的英文翻译，源于一位开发者用 GPT-5.5 替换了复杂的 OCR 管道。",
+        "description": "23，000+ 篇 ChinaRxiv 论文现已免费提供，并带有更完整的英文翻译，源于一位开发者用 GPT-5.5 替换了复杂的 OCR 管道。",
+        "category": "tools",
+        "originalSource": "X：OpenAI Developers (@OpenAIDevs)",
+        "originalUrl": "https://x.com/OpenAIDevs/status/2064346891673059484",
+        "recommendedReason": "23，000+ 篇 ChinaRxiv 论文现已免费提供，并带有更完整的英文翻译，源于一位开发者用 GPT-5.5 替换了复杂的 OCR 管道。",
+        "publishedAt": "2026-06-09T14:00:27.000Z",
+        "collectedAt": "2026-06-09T15:33:06.205Z",
+        "raw": {
+          "id": "cmq6qlc110aw0sl5iv6lmobov",
+          "titleEn": "23，000+ ChinaRxiv papers are now freely available with more complete English translations after one …",
+          "apiCategory": "tip"
+        }
+      },
       {
         "id": "aihot:cmq6neb920a0esl5ixu2rh53j",
         "source": "aihot",
@@ -341,7 +439,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/toK_uIB9ECFHVaoCgK-w9Q",
         "recommendedReason": "由赛力斯、宁德时代等多方产业资本组建的AI出行品牌AIVA正式发布。火山引擎提供豆包大模型、智能座舱等技术服务。概念车AIVA Origin Concept亮相，首款量产车AIVA ME7将于2026年内亮相，全系覆盖20万元以上市场。AIVA提出\"AI定义汽车\"路径，让汽车成为具身AI生命体。火山引擎副总裁表示，人与汽车的关系将实现交互、智能、感受三方面根本转变。未来双方将围绕AI交互、智能体验、情感陪伴深度共创。",
         "publishedAt": "2026-06-09T13:00:21.000Z",
-        "collectedAt": "2026-06-09T13:39:04.730Z",
+        "collectedAt": "2026-06-09T15:33:06.205Z",
         "raw": {
           "id": "cmq6neb920a0esl5ixu2rh53j",
           "titleEn": "全新汽车品牌AIVA发布！火山引擎助力打造AI汽车新体验",
@@ -361,7 +459,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/lv99XfrRtMMgiOflcT67VA",
         "recommendedReason": "2026年6月，百度智能云旗下百度搭子DuMate V3.4.0通过中国信通院「可信AI-企业级Claw能力评估」，获最高评级4+级，为国内首批。评估依据《智能助理智能体（Claw）技术和应用要求 第2部分 企业级Claw能力》（AIIA/T 0295-2026），覆盖智能体、工程化部署、服务、业务融合、运行管理五大能力域。百度搭子支持多智能体分工协作、容器化批量部署、多租户隔离与三级差异化授权、企业知识库接入、全链路日志审计等能力，企业级智能助手服务能力获国家级权威认可。",
         "publishedAt": "2026-06-09T12:03:00.000Z",
-        "collectedAt": "2026-06-09T13:39:04.730Z",
+        "collectedAt": "2026-06-09T15:33:06.205Z",
         "raw": {
           "id": "cmq6neaj80a09sl5if1zpnqpw",
           "titleEn": "最高评级4+级！百度搭子DuMate通过中国信通院企业级Claw能力评估",
@@ -381,7 +479,7 @@
         "originalUrl": "https://x.com/TencentHunyuan/status/2064312869827809702",
         "recommendedReason": "腾讯混元推出UniRL，一个支持统一多模态模型的强化学习基础设施，并发布两个新算法DRPO和Flow-DPPO。UniRL通过单个后训练循环（生成→评分→优势→更新→同步）覆盖扩散/流匹配模型、LLM/VLM及统一多模态模型（如Hunyuan-Image 3和Bagel）。模型与算法作为独立轴，可实现模型×算法的组合覆盖。框架支持可插拔rollout引擎（训练侧/SGLang/vLLM-Omni）、FSDP2分片和三种部署模式。FlowDPPO针对流/扩散模型引入基于精确散度的信任域策略优化；DRPO为LLM RL提供平滑的优势加权二次正则化方法。代码已开源。",
         "publishedAt": "2026-06-09T11:45:15.000Z",
-        "collectedAt": "2026-06-09T13:39:04.730Z",
+        "collectedAt": "2026-06-09T15:33:06.205Z",
         "raw": {
           "id": "cmq6kwvh809eesl5irgb0uzf2",
           "titleEn": "🚀Introducing UniRL， an RL infra for unified multimodal models. Together with two new RL algorithms：…",
@@ -401,7 +499,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/f7QzLzwHPHHv3tWT1Wrnkw",
         "recommendedReason": "火山引擎将TRAE Solo品牌升级为TRAE Work企业版，发布面向企业的AI办公平台。平台提供Work和Code两种模式：Work模式面向产品、运营、市场等非技术岗位，支持上传.pptx、.xlsx、图片等多种格式混合输入直接输出PPT或文档，支持语音讨论自动整理结构化纪要，支持按天或按周自动运行的数据整理和报告生成；Code模式面向开发者和业务同学，可用自然语言描述需求直接生成页面或小应用。桌面端、网页端和移动端多端同步。企业后台可统一配置模型、用量限额、上传内部文档，沙箱机制隔离执行，支持命令黑名单、MCP白名单、内容安全策略，关键操作可审计。同时发起TRAE Enterprise Fellow招募计划。",
         "publishedAt": "2026-06-09T11:45:02.000Z",
-        "collectedAt": "2026-06-09T13:39:04.730Z",
+        "collectedAt": "2026-06-09T15:33:06.205Z",
         "raw": {
           "id": "cmq6l8zwy09g0sl5ioa7ahxqv",
           "titleEn": "TRAE Work企业版正式上线：每个岗位都有AI搭档",
@@ -421,7 +519,7 @@
         "originalUrl": "https://x.com/Kimi_Moonshot/status/2064311212243120459",
         "recommendedReason": "Kimi 利用 Agent Swarm 系统并行协调300个子智能体，分析战术、球员状态、伤病、赛程、天气、赔率等因素，预测2026年美加墨世界杯全部104场比赛，并发布每轮赛前预测和赛后回顾。模型层融合了 Elo/FIFA 强度、Poisson 进球分布、xG/xT 指标、蒙特卡洛模拟等方法。预测结果显示西班牙和法国为头号热门，但德国夺冠概率可能被市场低估：模型基线估计约11.0%，校准估计约11.3%，而部分市场隐含概率仅约7.4%，正向偏差约+3.6个百分点。该判断基于多分析链交叉验证，可能源于对德国近两届小组出局的近因偏差以及纳格尔斯曼高位压迫体系与穆西亚拉/维尔茨新创造轴的复苏信号。",
         "publishedAt": "2026-06-09T11:38:40.000Z",
-        "collectedAt": "2026-06-09T13:39:04.730Z",
+        "collectedAt": "2026-06-09T15:33:06.205Z",
         "raw": {
           "id": "cmq6lhlqt09jhsl5ibl4egx3i",
           "titleEn": "http：//x.com/i/article/2063961516815327232",
@@ -441,7 +539,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/d0c13s2tpsSnpgk3bQk04Q",
         "recommendedReason": "可灵AI与候鸟300联合发起AIGC影像大赛。线下大赛6月16-26日在阿那亚海边举办，评审包括李少红、陈明昊、焦雄屏等影视与AI专家及美院教授，设10万奖金+超200万灵感值，结果6月27日晚揭晓。线上大赛6月22日前投稿可角逐\"最受关注大奖\"，获奖者受邀参加6月27日颁奖。参赛要求：视频≥50%由可灵AI生成，官网投稿填表并带话题分享。",
         "publishedAt": "2026-06-09T11:14:57.000Z",
-        "collectedAt": "2026-06-09T13:39:04.730Z",
+        "collectedAt": "2026-06-09T15:33:06.205Z",
         "raw": {
           "id": "cmq6k6ggm096asl5inpa8a1vs",
           "titleEn": "李少红、陈明昊邀你一起开启AI主义新浪潮！",
@@ -461,7 +559,7 @@
         "originalUrl": "https://huggingface.co/blog/mishig/spaces-agents-md",
         "recommendedReason": "一个编码Agent调用HuggingFace上的两个Space，从零构建了展示巴黎地标3D高斯散点图的交互式画廊。Agent先用ideogram-ai/ideogram4生成每个纪念碑的黑色背景图像，再通过VAST-AI/TripoSplat从单张图像重建3D高斯散点（.ply），自动完成坐标系校正、取景、压缩为.ksplat（体积缩小约3倍），并构建基于Three.js的滚动切换、拖拽旋转查看器，最终部署为静态Space。整个过程无需客户端库，每个Space通过`agents.md`暴露可调用API。",
         "publishedAt": "2026-06-09T10:46:19.000Z",
-        "collectedAt": "2026-06-09T13:39:04.730Z",
+        "collectedAt": "2026-06-09T15:33:06.205Z",
         "raw": {
           "id": "cmq6l2wms09elsl5ipt8ah0ij",
           "titleEn": "How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces",
@@ -481,11 +579,171 @@
         "originalUrl": "https://x.com/alibaba_cloud/status/2064288633188708411",
         "recommendedReason": "阿里云在马来西亚柔佛州推出了一个新的公有云区域，包含两个新数据中心，以满足今年下半年马来西亚对云和AI服务日益增长的需求，包括AgentRun、STAROps、ACS Agent Sandbox、Agent Security Center、AI Security Guardrails 2.0和Agentic SOC。https：//int.alibabacloud.com/m/1000414242/",
         "publishedAt": "2026-06-09T10:08:57.000Z",
-        "collectedAt": "2026-06-09T13:39:04.730Z",
+        "collectedAt": "2026-06-09T15:33:06.205Z",
         "raw": {
           "id": "cmq6hl0ya08ixsl5ik0w4p6zg",
           "titleEn": "Alibaba Cloud has launched a new public cloud region in Johor， Malaysia， with two new data centres t…",
           "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmq6il4p208t1sl5iriawuqnk",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "台湾考虑限制AI芯片对华出口以配合美国",
+        "url": "https://www.bloomberg.com/news/articles/2026-06-09/taiwan-mulls-curbs-on-ai-chip-exports-to-china-to-align-with-us",
+        "summary": "据知情人士透露，台湾当局正考虑对AI芯片出口中国大陆实施更严格的管制，以进一步与美国出口限制措施对齐。此举旨在遏制半导体走私，但可能招致北京方面的谴责。",
+        "description": "据知情人士透露，台湾当局正考虑对AI芯片出口中国大陆实施更严格的管制，以进一步与美国出口限制措施对齐。此举旨在遏制半导体走私，但可能招致北京方面的谴责。",
+        "category": "industry",
+        "originalSource": "Bloomberg：Technology（RSS）",
+        "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-09/taiwan-mulls-curbs-on-ai-chip-exports-to-china-to-align-with-us",
+        "recommendedReason": "据知情人士透露，台湾当局正考虑对AI芯片出口中国大陆实施更严格的管制，以进一步与美国出口限制措施对齐。此举旨在遏制半导体走私，但可能招致北京方面的谴责。",
+        "publishedAt": "2026-06-09T10:07:50.000Z",
+        "collectedAt": "2026-06-09T15:33:06.205Z",
+        "raw": {
+          "id": "cmq6il4p208t1sl5iriawuqnk",
+          "titleEn": "Taiwan Mulls Curbs on AI Chip Exports to China to Align With US",
+          "apiCategory": "industry"
+        }
+      }
+    ],
+    "crossSourceHighlights": [
+      {
+        "id": "url:https://developer.apple.com/documentation/coreai",
+        "canonicalId": "url:https://developer.apple.com/documentation/coreai",
+        "title": "Apple Core AI 框架",
+        "canonicalUrl": "https://developer.apple.com/documentation/coreai",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://developer.apple.com/documentation/coreai",
+          "title:apple core ai 框架",
+          "title:apple core ai framework"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmq5ujnt202iesl5ig6vg5i3r",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Apple Core AI 框架",
+            "url": "https://developer.apple.com/documentation/coreai",
+            "summary": "一篇关于 Apple Core AI 框架的 Hacker News 帖子获得 109 个点赞。帖子内容包含一张苹果开发者 OG 图片和一个指向 Apple Core AI Framework 官方文档的链接（developer.apple.com）。该帖子由 buzzing.cc 中文翻译，发布于 2026 年 6 月 8 日 02：47（UTC）。",
+            "description": "一篇关于 Apple Core AI 框架的 Hacker News 帖子获得 109 个点赞。帖子内容包含一张苹果开发者 OG 图片和一个指向 Apple Core AI Framework 官方文档的链接（developer.apple.com）。该帖子由 buzzing.cc 中文翻译，发布于 2026 年 6 月 8 日 02：47（UTC）。",
+            "category": "products",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://developer.apple.com/documentation/coreai",
+            "recommendedReason": "一篇关于 Apple Core AI 框架的 Hacker News 帖子获得 109 个点赞。帖子内容包含一张苹果开发者 OG 图片和一个指向 Apple Core AI Framework 官方文档的链接（developer.apple.com）。该帖子由 buzzing.cc 中文翻译，发布于 2026 年 6 月 8 日 02：47（UTC）。",
+            "publishedAt": "2026-06-08T23:05:07.159Z",
+            "collectedAt": "2026-06-09T15:33:06.205Z",
+            "raw": {
+              "id": "cmq5ujnt202iesl5ig6vg5i3r",
+              "titleEn": null,
+              "apiCategory": "ai-products"
+            }
+          },
+          {
+            "id": "hackernews:48449665",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Apple Core AI Framework",
+            "url": "https://developer.apple.com/documentation/coreai/",
+            "author": "hmokiguess",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 339,
+              "commentsCount": 98
+            },
+            "publishedAt": "2026-06-08T18:47:38.000Z",
+            "collectedAt": "2026-06-09T15:33:05.151Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48449665",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmq5ujnt202iesl5ig6vg5i3r",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Apple Core AI 框架",
+            "url": "https://developer.apple.com/documentation/coreai",
+            "summary": "一篇关于 Apple Core AI 框架的 Hacker News 帖子获得 109 个点赞。帖子内容包含一张苹果开发者 OG 图片和一个指向 Apple Core AI Framework 官方文档的链接（developer.apple.com）。该帖子由 buzzing.cc 中文翻译，发布于 2026 年 6 月 8 日 02：47（UTC）。",
+            "description": "一篇关于 Apple Core AI 框架的 Hacker News 帖子获得 109 个点赞。帖子内容包含一张苹果开发者 OG 图片和一个指向 Apple Core AI Framework 官方文档的链接（developer.apple.com）。该帖子由 buzzing.cc 中文翻译，发布于 2026 年 6 月 8 日 02：47（UTC）。",
+            "category": "products",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://developer.apple.com/documentation/coreai",
+            "recommendedReason": "一篇关于 Apple Core AI 框架的 Hacker News 帖子获得 109 个点赞。帖子内容包含一张苹果开发者 OG 图片和一个指向 Apple Core AI Framework 官方文档的链接（developer.apple.com）。该帖子由 buzzing.cc 中文翻译，发布于 2026 年 6 月 8 日 02：47（UTC）。",
+            "publishedAt": "2026-06-08T23:05:07.159Z",
+            "collectedAt": "2026-06-09T15:33:06.205Z",
+            "raw": {
+              "id": "cmq5ujnt202iesl5ig6vg5i3r",
+              "titleEn": null,
+              "apiCategory": "ai-products"
+            }
+          },
+          {
+            "id": "hackernews:48449665",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Apple Core AI Framework",
+            "url": "https://developer.apple.com/documentation/coreai/",
+            "author": "hmokiguess",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 339,
+              "commentsCount": 98
+            },
+            "publishedAt": "2026-06-08T18:47:38.000Z",
+            "collectedAt": "2026-06-09T15:33:05.151Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48449665",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 339,
+          "commentsCount": 98,
+          "hnScore": 339,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "products",
+        "summary": "一篇关于 Apple Core AI 框架的 Hacker News 帖子获得 109 个点赞。帖子内容包含一张苹果开发者 OG 图片和一个指向 Apple Core AI Framework 官方文档的链接（developer.apple.com）。该帖子由 buzzing.cc 中文翻译，发布于 2026 年 6 月 8 日 02：47（UTC）。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-06-08T18:47:38.000Z",
+        "lastSeenAt": "2026-06-09T15:33:06.205Z",
+        "llmSummary": {
+          "whatItIs": "Apple's Core AI framework is a new on-device AI/ML framework for iOS/macOS developers, announced at WWDC 2026.",
+          "whyNow": "The framework was just announced and is generating significant developer interest on Hacker News (339 upvotes, 98 comments) and AIHot, indicating strong curiosity about Apple's AI strategy.",
+          "whoShouldCare": "iOS/macOS developers, ML engineers building on-device AI features, product managers evaluating Apple ecosystem AI capabilities.",
+          "technicalKeywords": [
+            "Core AI",
+            "on-device ML",
+            "Apple Intelligence",
+            "WWDC 2026",
+            "iOS 20",
+            "macOS 17"
+          ],
+          "businessRelevance": "Apple's entry into on-device AI frameworks could shift mobile AI development, but adoption depends on documentation quality and performance vs. alternatives like Core ML.",
+          "developerRelevance": "Developers should evaluate Core AI for new projects requiring on-device inference, but wait for benchmarks and community feedback before committing.",
+          "watchDecision": "track",
+          "riskNotes": "New framework with unknown API stability, performance, and adoption. Hype from WWDC may not reflect real-world utility. No production apps yet.",
+          "confidence": "medium"
         }
       }
     ]
