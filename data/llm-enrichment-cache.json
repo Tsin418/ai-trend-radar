@@ -6632,5 +6632,95 @@
     },
     "createdAt": "2026-06-08T22:06:32.563Z",
     "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-09T04:14:57Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent rewritten in Go, optimized for prefix-cache stability and low token costs in long terminal sessions.",
+      "problemSolved": "Provides a configurable, plugin-driven AI coding assistant that runs as a single static binary, with built-in support for DeepSeek models, MCP plugins, sandboxed permissions, and slash commands — all tuned to minimize API costs via prefix caching.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 19,939 stars, a 24h star delta of 702, and a 7-day average of 769, the project shows sustained high attention. The acceleration ratio of 1.1 indicates steady growth without sudden spikes, suggesting organic adoption. The recent 1.0 rewrite in Go and active maintenance (commits within 7 days, recent release) keep it relevant.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The 1.0 rewrite in Go and the focus on DeepSeek prefix caching likely contributed to continued interest.",
+      "whyTrending": "Combines the popularity of DeepSeek models with a well-engineered, config-driven terminal agent that emphasizes cost efficiency and extensibility via MCP plugins.",
+      "developerTakeaway": "If you use DeepSeek models and want a lightweight, customizable coding agent that respects your terminal workflow and API budget, Reasonix is worth trying.",
+      "developerInsight": "Signals a shift toward model-specific optimizations (prefix caching) and Go-based tooling for AI agents, prioritizing performance and distribution simplicity over ecosystem lock-in.",
+      "targetUsers": "Developers who use DeepSeek models and want a terminal-native AI coding agent with plugin support and fine-grained permission controls.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix caching; if DeepSeek changes pricing or caching behavior, the value proposition may weaken. The project is still relatively new (1.0 rewrite), so ecosystem maturity is limited.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-09T04:35:06.090Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-09T04:30:52Z": {
+    "summary": {
+      "oneLiner": "Open-source, local-first desktop app that turns coding agents into design engines — a Claude Design alternative with 259+ skills, 142+ design systems, and MCP integration for 21+ CLIs.",
+      "problemSolved": "Design tools are either closed-source (Figma, Claude Design) or require manual pixel-pushing. Open Design lets developers and designers use existing coding agents (Claude Code, Codex, Cursor, etc.) to generate prototypes, decks, images, and videos from a brief, all locally, with brand design systems enforced via DESIGN.md.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 61,833 stars, a 24h delta of +884, a 7d delta of +5,251, and an acceleration of 0.9 (high), this project is sustaining explosive growth. The recent 0.9.0 release with a built-in Model Router (no setup) and the Open Design Fellow program signal a push to convert hype into community-driven adoption. The combination of local-first, agent-native design generation taps into the current 'vibe coding' and AI-assisted prototyping zeitgeist.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The 0.9.0 release (within 30 days) and the announcement of the Model Router and Fellow program likely contributed to the sustained velocity, but the trend has been hot for weeks.",
+      "whyTrending": "It merges two hot trends: local-first AI tools (privacy, no vendor lock-in) and agent-native workflows. Developers can now generate production-quality UI prototypes directly from their CLI agents, bypassing traditional design tools. The 142+ design systems and 259+ skills make it immediately useful, and the MCP integration with 21+ agents lowers the barrier to entry.",
+      "developerTakeaway": "If you build AI-powered dev tools, this shows that the market wants agent-native, local-first alternatives to closed SaaS products. The ability to plug into existing coding agents (Claude Code, Codex, Cursor) via MCP is a key differentiator. Developers should consider how their tools can be consumed as MCP servers rather than standalone apps.",
+      "developerInsight": "Open Design signals a shift from 'AI generates code' to 'AI generates design artifacts directly.' For AI developers, this means the next frontier is not just code completion but full artifact generation (UI, docs, presentations) using the same agent infrastructure. The BYOK proxy and MCP-first architecture are patterns worth adopting.",
+      "targetUsers": "Developers who want to generate UI prototypes, decks, and images using AI agents without leaving their terminal or IDE. Also designers who want to enforce brand systems via code (DESIGN.md) and automate repetitive design workflows.",
+      "riskNotes": "The project is still in early stages (0.9.0) with 386 open issues. Quality of generated artifacts may vary depending on the agent and design system. The reliance on external coding agents means the user experience is tied to the capabilities of those agents. Competition from Claude Design (closed) and Figma (AI features) could intensify.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-09T04:35:08.216Z",
+    "model": "deepseek-v4-flash"
+  },
+  "HKUDS/nanobot:2026-06-09T02:54:34Z": {
+    "summary": {
+      "oneLiner": "A lightweight, open-source personal AI agent that you can truly own, with WebUI, chat channels, tools, memory, MCP, and automation.",
+      "problemSolved": "Provides a single, self-hosted AI agent that integrates with multiple LLM providers, chat platforms, and tools, replacing the need for multiple disjointed AI services.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sustained_hot",
+      "whyNow": "With 43,906 stars, a 7-day average of 71.7 stars/day, and a 24-hour delta of 76, this project shows sustained high attention. The acceleration ratio of 1 indicates steady growth without sudden spikes, but the consistent daily star gain and recent v0.2.1 release (June 1) keep it in the spotlight.",
+      "whatChanged": "The v0.2.1 'Workbench Release' on June 1, 2026, introduced a packaged WebUI workbench, project workspaces, CLI Apps + MCP extensions, and broader provider/channel support. This major feature release likely drove the sustained interest.",
+      "whyTrending": "It offers a practical, all-in-one personal AI agent that is lightweight, open-source, and supports a wide range of providers and channels, appealing to developers who want to own their AI stack.",
+      "developerTakeaway": "A ready-to-deploy agent framework that can be customized with tools, memory, and MCP, reducing the effort to build a personal AI assistant from scratch.",
+      "developerInsight": "The trend toward self-hosted, multi-provider AI agents is accelerating. Nanobot's modular design and active development signal a shift away from vendor lock-in toward composable, open-source AI workflows.",
+      "targetUsers": "Developers and power users who want a self-hosted AI agent that works across chat platforms, supports multiple LLMs, and can be extended with custom tools and MCP servers.",
+      "riskNotes": "High number of open issues (865) may indicate growing pains or community demand outpacing development. The project is still relatively young (first release ~March 2026), so long-term stability is unproven.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-09T04:35:13.985Z",
+    "model": "deepseek-v4-flash"
+  },
+  "affaan-m/ECC:2026-06-09T02:38:04Z": {
+    "summary": {
+      "oneLiner": "A harness-native operator system that optimizes AI agent performance across multiple coding assistants (Claude Code, Codex, Cursor, etc.) with skills, memory, security scanning, and continuous learning.",
+      "problemSolved": "Developers using multiple AI coding agents (Claude Code, Codex, Cursor, etc.) face fragmented workflows, inconsistent performance, and lack of shared memory/security across harnesses. ECC provides a unified system of skills, hooks, rules, and MCP configurations that optimize token usage, persist memory, enforce security, and enable continuous learning across all major agent harnesses.",
+      "aiCategory": "MCP / Tool Calling",
+      "trendType": "sustained_hot",
+      "whyNow": "With 211K+ stars, 32K+ forks, and a sustained 7-day average of 1,757 stars/day (acceleration 0.8), this project is a massive, sustained phenomenon. The 24h delta of 1,174 stars and recent v2.0.0-rc.1 release (Apr 2026) with a Rust control-plane alpha, dashboard GUI, and 64 agents/261 skills show active development and community momentum. It's the #1 trending repo by star velocity in the AI agent tooling space.",
+      "whatChanged": "The v2.0.0-rc.1 release (Apr 2026) introduced a dashboard GUI, operator workflows, ECC 2.0 Rust alpha, and expanded skill packs (prediction markets, optimization). The README also highlights a 'surface refresh' and synced public metadata. This release likely drove the recent star acceleration.",
+      "whyTrending": "The project solves a real pain point for the exploding AI agent developer community: managing multiple agent harnesses efficiently. Its MIT license, active maintainer (single maintainer shipping weekly across 7 harnesses), and comprehensive feature set (skills, memory, security, MCP) make it a must-have tool. The massive star count and fork activity indicate strong network effects and community trust.",
+      "developerTakeaway": "ECC is a comprehensive, production-tested system for anyone building with AI coding agents. It's not just configs—it's a full operator system with skills, hooks, memory persistence, security scanning (AgentShield), and cross-harness support. The v2.0.0-rc.1 Rust alpha hints at a next-gen control plane. Developers should evaluate it to standardize and supercharge their multi-agent workflows.",
+      "developerInsight": "This signals a shift from single-agent configs to multi-harness operator systems. The community is voting with stars that a unified performance layer across Claude Code, Codex, Cursor, etc. is critical. The Rust alpha (ECC 2.0) suggests the project is evolving into a more robust, low-level control plane—worth watching for AI tooling infrastructure trends.",
+      "targetUsers": "AI agent developers, prompt engineers, and teams using multiple coding assistants (Claude Code, Codex, Cursor, OpenCode, Gemini, Zed, GitHub Copilot) who want to optimize token usage, persist memory, enforce security, and automate workflows across harnesses.",
+      "riskNotes": "Single maintainer risk—though the project has 170+ contributors, the README emphasizes a single maintainer ships weekly. The massive star count may include bot activity or hype, but the fork count (32K+) and npm downloads suggest real usage. The v2.0.0-rc.1 is a release candidate, not stable. The project's scope is broad, which may lead to complexity or maintenance challenges.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-09T04:35:15.233Z",
+    "model": "deepseek-v4-flash"
+  },
+  "addyosmani/agent-skills:2026-06-07T22:33:29Z": {
+    "summary": {
+      "oneLiner": "A curated pack of 23 production-grade engineering skills packaged as Markdown workflows for AI coding agents.",
+      "problemSolved": "AI coding agents often produce low-quality, inconsistent code because they lack the structured workflows, quality gates, and best practices that senior engineers follow. This repo encodes those practices into reusable skills that agents can execute on demand.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sustained_hot",
+      "whyNow": "With 49,354 stars and a sustained 7-day average of 292 stars/day, this project is experiencing consistent, high-velocity growth. The 24-hour delta of 402 stars and acceleration of 1.3 indicate strong, ongoing interest without a sudden spike. It's clearly resonating with the developer community as a practical tool for improving AI agent output quality.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The recent release within 30 days and active commits suggest ongoing refinement, but the steady star accumulation points to word-of-mouth and community adoption rather than a specific event.",
+      "whyTrending": "It directly addresses a pain point many developers face: AI agents that write code but lack engineering discipline. By packaging senior-level workflows into simple Markdown files that work across multiple IDEs (Claude Code, Cursor, Gemini CLI, Windsurf, etc.), it lowers the barrier to getting high-quality results from AI coding assistants.",
+      "developerTakeaway": "This is a practical, immediately usable resource for any developer using AI coding agents. The skills cover the full development lifecycle from spec to ship, and the multi-IDE support means you can adopt it regardless of your toolchain.",
+      "developerInsight": "The success of this repo signals a shift in how developers interact with AI coding tools: from treating them as autocomplete-on-steroids to delegating structured workflows. The demand for 'agent skills' suggests the next frontier is not better models but better orchestration of model capabilities.",
+      "targetUsers": "Developers using AI coding agents (Claude Code, Cursor, Gemini CLI, Windsurf, GitHub Copilot, etc.) who want to improve code quality, consistency, and engineering rigor in AI-assisted development.",
+      "riskNotes": "The skills are opinionated and may not fit every team's workflow. Over-reliance on prescribed patterns could stifle creativity. Also, the project is maintained by a single individual (Addy Osmani), so long-term sustainability depends on community contributions.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-09T04:35:20.745Z",
+    "model": "deepseek-v4-flash"
   }
 }
