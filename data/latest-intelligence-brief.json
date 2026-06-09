@@ -1,29 +1,30 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-06-09-2026-06-09T10-53-25-430Z",
-  "generatedAt": "2026-06-09T10:53:25.430Z",
+  "runId": "lightweight-2026-06-09-2026-06-09T13-39-02-881Z",
+  "generatedAt": "2026-06-09T13:39:02.881Z",
   "targetDate": "2026-06-09",
   "brief": {
     "date": "2026-06-09",
-    "headline": "Today's strongest AI trend signals are Ai Model Release, Mcp / Tool Calling, and Coding Agent / Swe Agent.",
+    "headline": "Today's strongest AI trend signals are Ai Model Release, Mcp / Tool Calling, and Rag / Knowledge Base.",
     "keyTakeaways": [
-      "Ai Model Release: This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 10 related signal(s). Treat it as correlation evidence rather th.",
+      "Ai Model Release: This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adop.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
       "Ai Model Release: watch decision is deep_dive.",
-      "Mcp / Tool Calling: This topic appeared across 2 source(s): aihot, huggingface_spaces, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Mcp / Tool Calling: This topic appeared across 2 source(s): aihot, huggingface_spaces, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
       "Mcp / Tool Calling: watch decision is deep_dive.",
-      "Coding Agent / Swe Agent: This topic appeared across 2 source(s): aihot, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-      "Coding Agent / Swe Agent: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
-      "Coding Agent / Swe Agent: watch decision is track."
+      "Rag / Knowledge Base: This topic appeared across 2 source(s): huggingface_models, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoptio.",
+      "Rag / Knowledge Base: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
+      "Rag / Knowledge Base: watch decision is track."
     ],
     "topicBriefs": [
       {
         "id": "topic:ai model release",
         "title": "Ai Model Release",
+        "category": "tools",
         "sources": [
-          "huggingface_models",
+          "aihot",
           "huggingface_spaces",
           "hackernews"
         ],
@@ -31,21 +32,21 @@
         "heatScore": 460,
         "confidence": "medium",
         "watchDecision": "deep_dive",
-        "whatItIs": "Ai Model Release is an AI trend topic represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 10 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Ai Model Release is an AI trend topic in tools represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
-          "pytorch",
-          "transformer",
-          "language-model",
-          "long-context",
-          "agillm",
-          "experimental",
-          "region:us",
-          "multimodal"
+          "tools",
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code"
         ],
         "evidenceItems": [
           {
@@ -58,28 +59,22 @@
               "llm"
             ],
             "publishedAt": "2026-06-07T12:49:29.000Z",
-            "collectedAt": "2026-06-09T10:53:25.783Z",
+            "collectedAt": "2026-06-09T13:39:03.226Z",
             "metrics": {
-              "upvotes": 1118,
-              "commentsCount": 1060
+              "upvotes": 1119,
+              "commentsCount": 1056
             }
           },
           {
-            "id": "hackernews:48433756",
-            "title": "Show HN: Lathe – Use LLMs to learn a new domain, not skip past it",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://github.com/devenjarvis/lathe",
-            "tags": [
-              "ai",
-              "llm"
-            ],
-            "publishedAt": "2026-06-07T11:16:46.000Z",
-            "collectedAt": "2026-06-09T10:53:25.783Z",
-            "metrics": {
-              "upvotes": 388,
-              "commentsCount": 71
-            }
+            "id": "aihot:cmq6kwvh809eesl5irgb0uzf2",
+            "title": "腾讯混元发布UniRL：统一多模态强化学习基础设施",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://x.com/TencentHunyuan/status/2064312869827809702",
+            "summary": "腾讯混元推出UniRL，一个支持统一多模态模型的强化学习基础设施，并发布两个新算法DRPO和Flow-DPPO。UniRL通过单个后训练循环（生成→评分→优势→更新→同步）覆盖扩散/流匹配模型、LLM/VLM及统一多模态模型（如Hunyuan-Image 3和Bagel）。模型与算法作为独立轴，可实现模型×算法的组合覆盖。框架支持可插拔rollout引擎（训练侧/SGLang/vLLM-Omni）、FSDP2分片和三种部署模式。FlowDPPO针对流/扩散模型引入基于精确散度的信任域策略优化；DRPO为LLM RL提供平滑的优势加权二次正则化方法。代码已开源。",
+            "category": "tools",
+            "publishedAt": "2026-06-09T11:45:15.000Z",
+            "collectedAt": "2026-06-09T13:39:04.730Z"
           },
           {
             "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
@@ -100,7 +95,7 @@
               "region:us"
             ],
             "publishedAt": "2023-04-17T11:40:06.000Z",
-            "collectedAt": "2026-06-09T10:53:25.716Z",
+            "collectedAt": "2026-06-09T13:39:02.992Z",
             "metrics": {
               "likes": 14010
             }
@@ -120,7 +115,7 @@
               "region:us"
             ],
             "publishedAt": "2023-06-08T18:00:26.000Z",
-            "collectedAt": "2026-06-09T10:53:25.716Z",
+            "collectedAt": "2026-06-09T13:39:02.992Z",
             "metrics": {
               "likes": 5072
             }
@@ -143,45 +138,41 @@
               "region:us"
             ],
             "publishedAt": "2024-07-05T16:35:24.000Z",
-            "collectedAt": "2026-06-09T10:53:25.716Z",
+            "collectedAt": "2026-06-09T13:39:02.992Z",
             "metrics": {
               "likes": 3748
             }
           },
           {
-            "id": "hackernews:48459126",
-            "title": "An experimental coding agent for small (<10B) and tiny (<1B) LLMs",
+            "id": "hackernews:48460776",
+            "title": "Show HN: JazzBench, an LLM reasoning benchmark using jazz improvisation",
             "source": "hackernews",
             "sourceType": "developer_discussion",
-            "url": "https://github.com/brainless/nocodo",
+            "url": "https://flatnine.co/blog/i-built-my-own-eval",
             "tags": [
-              "ai",
-              "llm",
-              "agent",
-              "coding agent"
+              "llm"
             ],
-            "publishedAt": "2026-06-09T10:25:15.000Z",
-            "collectedAt": "2026-06-09T10:53:25.783Z",
+            "publishedAt": "2026-06-09T13:19:09.000Z",
+            "collectedAt": "2026-06-09T13:39:03.226Z",
             "metrics": {
-              "upvotes": 1,
-              "commentsCount": 1
+              "upvotes": 2,
+              "commentsCount": 0
             }
           }
         ],
         "relatedEntities": [
-          "OpenTransformer/AGILLM-4",
-          "anggars/neural-mathrock",
-          "koyelog/MediMind-411M",
+          "腾讯混元发布UniRL：统一多模态强化学习基础设施",
           "Open LLM Leaderboard",
           "MusicGen",
           "Live Portrait",
-          "Show HN: Mothertoken – know the mother tongue of your LLMs",
-          "An experimental coding agent for small (<10B) and tiny (<1B) LLMs"
+          "Slangify: The Case for DSLs in LLM Workflows",
+          "Show HN: JazzBench, an LLM reasoning benchmark using jazz improvisation",
+          "LLMs are eroding my software engineering career and I don't know what to do"
         ],
         "metrics": {
-          "votes": 1118,
+          "votes": 1119,
           "likes": 14010,
-          "commentsCount": 1060,
+          "commentsCount": 1056,
           "heatScore": 460,
           "crossSourceBonus": 20
         }
@@ -199,7 +190,7 @@
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Mcp / Tool Calling is an AI trend topic in products represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, huggingface_spaces, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, huggingface_spaces, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Mcp / Tool Calling should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
@@ -212,6 +203,17 @@
         ],
         "evidenceItems": [
           {
+            "id": "aihot:cmq6l8zwy09g0sl5ioa7ahxqv",
+            "title": "火山引擎TRAE Work企业版正式上线，面向全员提供AI办公平台",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://mp.weixin.qq.com/s/f7QzLzwHPHHv3tWT1Wrnkw",
+            "summary": "火山引擎将TRAE Solo品牌升级为TRAE Work企业版，发布面向企业的AI办公平台。平台提供Work和Code两种模式：Work模式面向产品、运营、市场等非技术岗位，支持上传.pptx、.xlsx、图片等多种格式混合输入直接输出PPT或文档，支持语音讨论自动整理结构化纪要，支持按天或按周自动运行的数据整理和报告生成；Code模式面向开发者和业务同学，可用自然语言描述需求直接生成页面或小应用。桌面端、网页端和移动端多端同步。企业后台可统一配置模型、用量限额、上传内部文档，沙箱机制隔离执行，支持命令黑名单、MCP白名单、内容安全策略，关键操作可审计。同时发起TRAE Enterprise Fellow招募计划。",
+            "category": "products",
+            "publishedAt": "2026-06-09T11:45:02.000Z",
+            "collectedAt": "2026-06-09T13:39:04.730Z"
+          },
+          {
             "id": "aihot:cmq5kh0q200g7sl38uoitn0e3",
             "title": "Claude 为 Connector 开发者推出性能监控仪表盘",
             "source": "aihot",
@@ -220,7 +222,7 @@
             "summary": "Claude 为目录中已发布的 Connector 新增性能监控仪表盘（公开测试版）。所有者可追踪活跃用户、工具调用次数、目录排名、健康评分、错误率、延迟，并按工具细分错误归因；还能按 Claude、Claude Code、Cowork 等产品分解使用情况。访问需 Team 或 Enterprise 账号（Admin/Owner 权限或自定义角色）。基于 MCP 构建的 Connector 可直接在 Claude 应用内提交至目录，该目录已有超 300 个第三方 Connector，每日被数百万人使用。",
             "category": "products",
             "publishedAt": "2026-06-08T18:50:51.580Z",
-            "collectedAt": "2026-06-09T10:53:28.165Z"
+            "collectedAt": "2026-06-09T13:39:04.730Z"
           },
           {
             "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
@@ -235,9 +237,9 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-06-09T10:53:25.716Z",
+            "collectedAt": "2026-06-09T13:39:02.992Z",
             "metrics": {
-              "likes": 3348
+              "likes": 3350
             }
           },
           {
@@ -253,7 +255,7 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-06-09T10:53:25.716Z",
+            "collectedAt": "2026-06-09T13:39:02.992Z",
             "metrics": {
               "likes": 3187
             }
@@ -271,21 +273,360 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-06-09T10:53:25.716Z",
+            "collectedAt": "2026-06-09T13:39:02.992Z",
             "metrics": {
               "likes": 2849
             }
           }
         ],
         "relatedEntities": [
+          "火山引擎TRAE Work企业版正式上线，面向全员提供AI办公平台",
           "Claude 为 Connector 开发者推出性能监控仪表盘",
           "Z Image Turbo",
           "Wan2.2 14B Fast",
           "Background Removal"
         ],
         "metrics": {
-          "likes": 3348,
+          "likes": 3350,
           "heatScore": 140,
+          "crossSourceBonus": 10
+        }
+      },
+      {
+        "id": "topic:rag / knowledge base",
+        "title": "Rag / Knowledge Base",
+        "category": "text-generation",
+        "sources": [
+          "huggingface_models",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "heatScore": 72,
+        "confidence": "low",
+        "watchDecision": "track",
+        "whatItIs": "Rag / Knowledge Base is an AI trend topic in text-generation represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Rag / Knowledge Base should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "technicalKeywords": [
+          "transformers",
+          "safetensors",
+          "llama",
+          "text-generation",
+          "valencian",
+          "spanish",
+          "english",
+          "instruct"
+        ],
+        "evidenceItems": [
+          {
+            "id": "huggingface_models:gplsi/Aitana-2B-S-Instruct",
+            "title": "gplsi/Aitana-2B-S-Instruct",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/gplsi/Aitana-2B-S-Instruct",
+            "category": "text-generation",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "llama",
+              "text-generation",
+              "valencian",
+              "spanish",
+              "english",
+              "instruct",
+              "alia",
+              "gplsi",
+              "conversational",
+              "ca",
+              "es",
+              "en",
+              "dataset:OpenAssistant/oasst2",
+              "dataset:OpenAssistant/oasst1",
+              "dataset:BSC-LT/m-personas",
+              "dataset:projecte-aina/RAG_Multilingual",
+              "dataset:facebook/flores",
+              "dataset:CohereLabs/aya_dataset",
+              "dataset:Unbabel/TowerBlocks-v0.2",
+              "dataset:projecte-aina/MentorES",
+              "dataset:databricks/databricks-dolly-15k",
+              "dataset:tatsu-lab/alpaca",
+              "dataset:openai/gsm8k",
+              "dataset:Open-Orca/OpenOrca",
+              "dataset:HuggingFaceH4/no_robots",
+              "dataset:projecte-aina/CoQCat",
+              "dataset:gplsi/boua_parallel",
+              "dataset:allenai/scifact",
+              "dataset:somosnlp/LingComp_QA",
+              "dataset:somosnlp/instruct-legal-refugiados-es",
+              "base_model:gplsi/Aitana-2B-S-base",
+              "base_model:finetune:gplsi/Aitana-2B-S-base",
+              "license:apache-2.0",
+              "text-generation-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-05-08T11:42:25.000Z",
+            "collectedAt": "2026-06-09T13:39:02.988Z",
+            "metrics": {
+              "downloads": 112,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:gplsi/Aitana-2B-S-tourism-Instruct",
+            "title": "gplsi/Aitana-2B-S-tourism-Instruct",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/gplsi/Aitana-2B-S-tourism-Instruct",
+            "category": "text-generation",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "llama",
+              "text-generation",
+              "valencian",
+              "spanish",
+              "english",
+              "instruct",
+              "tourism",
+              "alia",
+              "gplsi",
+              "conversational",
+              "ca",
+              "es",
+              "en",
+              "dataset:projecte-aina/InstruCAT",
+              "dataset:projecte-aina/NLUCat",
+              "dataset:projecte-aina/escagleu-64k",
+              "dataset:OpenAssistant/oasst2",
+              "dataset:projecte-aina/oasst1_ca",
+              "dataset:BSC-LT/m-personas",
+              "dataset:projecte-aina/RAG_Multilingual",
+              "dataset:facebook/flores",
+              "dataset:CohereLabs/aya_dataset",
+              "dataset:Unbabel/TowerBlocks-v0.1",
+              "dataset:projecte-aina/MentorES",
+              "dataset:databricks/databricks-dolly-15k",
+              "dataset:yahma/alpaca-cleaned",
+              "dataset:openai/gsm8k",
+              "dataset:Open-Orca/OpenOrca",
+              "dataset:HuggingFaceH4/no_robots",
+              "dataset:LipengCS/Table-GPT",
+              "dataset:projecte-aina/CoQCat",
+              "dataset:allenai/scifact",
+              "dataset:somosnlp/LingComp_QA",
+              "dataset:somosnlp/instruct-legal-refugiados-es",
+              "dataset:somosnlp-hackathon-2025/gastronomia-hispana-dpo",
+              "dataset:gplsi/boua_parallel",
+              "base_model:gplsi/Aitana-2B-S-tourism-base",
+              "base_model:finetune:gplsi/Aitana-2B-S-tourism-base",
+              "license:apache-2.0",
+              "text-generation-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-05-20T08:17:41.000Z",
+            "collectedAt": "2026-06-09T13:39:02.988Z",
+            "metrics": {
+              "downloads": 104,
+              "likes": 0
+            }
+          },
+          {
+            "id": "hackernews:48460990",
+            "title": "Subarr – a queue and coverage GUI for the Subgen/Bazarr subtitle stack",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://github.com/coaxk/subarr",
+            "tags": [
+              "rag"
+            ],
+            "publishedAt": "2026-06-09T13:37:42.000Z",
+            "collectedAt": "2026-06-09T13:39:03.226Z",
+            "metrics": {
+              "upvotes": 1,
+              "commentsCount": 0
+            }
+          }
+        ],
+        "relatedEntities": [
+          "gplsi/Aitana-2B-S-tourism-Instruct",
+          "gplsi/Aitana-2B-S-Instruct",
+          "Subarr – a queue and coverage GUI for the Subgen/Bazarr subtitle stack"
+        ],
+        "metrics": {
+          "votes": 1,
+          "downloads": 112,
+          "heatScore": 72,
+          "crossSourceBonus": 10
+        }
+      },
+      {
+        "id": "topic:local llm / inference",
+        "title": "Local Llm / Inference",
+        "category": "tools",
+        "sources": [
+          "aihot",
+          "huggingface_models"
+        ],
+        "sourceCount": 2,
+        "heatScore": 71,
+        "confidence": "low",
+        "watchDecision": "track",
+        "whatItIs": "Local Llm / Inference is an AI trend topic in tools represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, huggingface_models, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "technicalKeywords": [
+          "tools",
+          "transformers",
+          "safetensors",
+          "llama",
+          "text-generation",
+          "valencian",
+          "spanish",
+          "english"
+        ],
+        "evidenceItems": [
+          {
+            "id": "aihot:cmq6kwvh809eesl5irgb0uzf2",
+            "title": "腾讯混元发布UniRL：统一多模态强化学习基础设施",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://x.com/TencentHunyuan/status/2064312869827809702",
+            "summary": "腾讯混元推出UniRL，一个支持统一多模态模型的强化学习基础设施，并发布两个新算法DRPO和Flow-DPPO。UniRL通过单个后训练循环（生成→评分→优势→更新→同步）覆盖扩散/流匹配模型、LLM/VLM及统一多模态模型（如Hunyuan-Image 3和Bagel）。模型与算法作为独立轴，可实现模型×算法的组合覆盖。框架支持可插拔rollout引擎（训练侧/SGLang/vLLM-Omni）、FSDP2分片和三种部署模式。FlowDPPO针对流/扩散模型引入基于精确散度的信任域策略优化；DRPO为LLM RL提供平滑的优势加权二次正则化方法。代码已开源。",
+            "category": "tools",
+            "publishedAt": "2026-06-09T11:45:15.000Z",
+            "collectedAt": "2026-06-09T13:39:04.730Z"
+          },
+          {
+            "id": "huggingface_models:gplsi/Aitana-2B-S-Instruct",
+            "title": "gplsi/Aitana-2B-S-Instruct",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/gplsi/Aitana-2B-S-Instruct",
+            "category": "text-generation",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "llama",
+              "text-generation",
+              "valencian",
+              "spanish",
+              "english",
+              "instruct",
+              "alia",
+              "gplsi",
+              "conversational",
+              "ca",
+              "es",
+              "en",
+              "dataset:OpenAssistant/oasst2",
+              "dataset:OpenAssistant/oasst1",
+              "dataset:BSC-LT/m-personas",
+              "dataset:projecte-aina/RAG_Multilingual",
+              "dataset:facebook/flores",
+              "dataset:CohereLabs/aya_dataset",
+              "dataset:Unbabel/TowerBlocks-v0.2",
+              "dataset:projecte-aina/MentorES",
+              "dataset:databricks/databricks-dolly-15k",
+              "dataset:tatsu-lab/alpaca",
+              "dataset:openai/gsm8k",
+              "dataset:Open-Orca/OpenOrca",
+              "dataset:HuggingFaceH4/no_robots",
+              "dataset:projecte-aina/CoQCat",
+              "dataset:gplsi/boua_parallel",
+              "dataset:allenai/scifact",
+              "dataset:somosnlp/LingComp_QA",
+              "dataset:somosnlp/instruct-legal-refugiados-es",
+              "base_model:gplsi/Aitana-2B-S-base",
+              "base_model:finetune:gplsi/Aitana-2B-S-base",
+              "license:apache-2.0",
+              "text-generation-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-05-08T11:42:25.000Z",
+            "collectedAt": "2026-06-09T13:39:02.988Z",
+            "metrics": {
+              "downloads": 112,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:gplsi/Aitana-2B-S-tourism-Instruct",
+            "title": "gplsi/Aitana-2B-S-tourism-Instruct",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/gplsi/Aitana-2B-S-tourism-Instruct",
+            "category": "text-generation",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "llama",
+              "text-generation",
+              "valencian",
+              "spanish",
+              "english",
+              "instruct",
+              "tourism",
+              "alia",
+              "gplsi",
+              "conversational",
+              "ca",
+              "es",
+              "en",
+              "dataset:projecte-aina/InstruCAT",
+              "dataset:projecte-aina/NLUCat",
+              "dataset:projecte-aina/escagleu-64k",
+              "dataset:OpenAssistant/oasst2",
+              "dataset:projecte-aina/oasst1_ca",
+              "dataset:BSC-LT/m-personas",
+              "dataset:projecte-aina/RAG_Multilingual",
+              "dataset:facebook/flores",
+              "dataset:CohereLabs/aya_dataset",
+              "dataset:Unbabel/TowerBlocks-v0.1",
+              "dataset:projecte-aina/MentorES",
+              "dataset:databricks/databricks-dolly-15k",
+              "dataset:yahma/alpaca-cleaned",
+              "dataset:openai/gsm8k",
+              "dataset:Open-Orca/OpenOrca",
+              "dataset:HuggingFaceH4/no_robots",
+              "dataset:LipengCS/Table-GPT",
+              "dataset:projecte-aina/CoQCat",
+              "dataset:allenai/scifact",
+              "dataset:somosnlp/LingComp_QA",
+              "dataset:somosnlp/instruct-legal-refugiados-es",
+              "dataset:somosnlp-hackathon-2025/gastronomia-hispana-dpo",
+              "dataset:gplsi/boua_parallel",
+              "base_model:gplsi/Aitana-2B-S-tourism-base",
+              "base_model:finetune:gplsi/Aitana-2B-S-tourism-base",
+              "license:apache-2.0",
+              "text-generation-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-05-20T08:17:41.000Z",
+            "collectedAt": "2026-06-09T13:39:02.988Z",
+            "metrics": {
+              "downloads": 104,
+              "likes": 0
+            }
+          }
+        ],
+        "relatedEntities": [
+          "腾讯混元发布UniRL：统一多模态强化学习基础设施",
+          "gplsi/Aitana-2B-S-tourism-Instruct",
+          "gplsi/Aitana-2B-S-Instruct"
+        ],
+        "metrics": {
+          "downloads": 112,
+          "heatScore": 71,
           "crossSourceBonus": 10
         }
       },
@@ -294,27 +635,22 @@
         "title": "Coding Agent / Swe Agent",
         "category": "industry",
         "sources": [
-          "aihot",
-          "hackernews"
+          "aihot"
         ],
-        "sourceCount": 2,
-        "heatScore": 44,
+        "sourceCount": 1,
+        "heatScore": 20,
         "confidence": "low",
-        "watchDecision": "track",
+        "watchDecision": "wait",
         "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in industry represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 1 source(s): aihot, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Coding Agent / Swe Agent should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
         "technicalKeywords": [
           "industry",
           "tools",
-          "products",
-          "ai",
-          "llm",
-          "agent",
-          "coding agent"
+          "products"
         ],
         "evidenceItems": [
           {
@@ -326,7 +662,7 @@
             "summary": "Cursor 将欧洲总部设在伦敦，计划招聘约 200 名员工，并在巴黎、慕尼黑等地开设小型办事处。SpaceX 拥有以 600 亿美元收购 Cursor 的选择权，或支付 100 亿美元开展全新合作。Cursor 目前 B2B 年化营收约 26 亿美元，客户包括英国航空、英国石油、诺基亚等。公司强调数据留存欧洲本地以满足监管合规，其平台支持用户用自然语言生成代码，主打模型中立，竞争对手包括 GitHub Copilot、OpenAI 和谷歌的同类产品。",
             "category": "industry",
             "publishedAt": "2026-06-09T05:53:06.000Z",
-            "collectedAt": "2026-06-09T10:53:28.165Z"
+            "collectedAt": "2026-06-09T13:39:04.730Z"
           },
           {
             "id": "aihot:cmq5zxlug03vusl5ioevfmvk2",
@@ -337,7 +673,7 @@
             "summary": "Berry Xia 推荐开源工具 Tokei，这是一个 macOS 菜单栏小工具，只读本地日志、零网络调用，30 秒自动刷新，实时监控 Claude Code、Grok CLI、Aider、OpenCode 等 8 个主流 AI coding agent 的 token 用量、实时成本与性能数据，并附每日图表、周热力图和年度 Wrapped。支持私人 Git 多设备同步、价格表本地覆盖，闲置过久会提醒休息。引用推文指出，token 消耗情况可作为深度使用 AI 的面试亮点，数据全程私有，零侵入，无需任何认证。",
             "category": "tools",
             "publishedAt": "2026-06-09T01:19:44.000Z",
-            "collectedAt": "2026-06-09T10:53:28.165Z"
+            "collectedAt": "2026-06-09T13:39:04.730Z"
           },
           {
             "id": "aihot:cmq5p0eag0118sl5iydnwrhui",
@@ -348,7 +684,7 @@
             "summary": "推出 Viggle API。 给任意角色添加任意动作，一次 API 调用--数秒内即可激活。 可接入 Claude、Codex 或你正在构建的任何智能体。起价 $0.01/秒。 注册即获 100 次免费额度。 转发 + 关注 + 评论，10 位中奖者再获 100 次！ 了解更多👇",
             "category": "products",
             "publishedAt": "2026-06-08T20:32:11.000Z",
-            "collectedAt": "2026-06-09T10:53:28.165Z"
+            "collectedAt": "2026-06-09T13:39:04.730Z"
           },
           {
             "id": "aihot:cmq5kh0q200g7sl38uoitn0e3",
@@ -359,290 +695,17 @@
             "summary": "Claude 为目录中已发布的 Connector 新增性能监控仪表盘（公开测试版）。所有者可追踪活跃用户、工具调用次数、目录排名、健康评分、错误率、延迟，并按工具细分错误归因；还能按 Claude、Claude Code、Cowork 等产品分解使用情况。访问需 Team 或 Enterprise 账号（Admin/Owner 权限或自定义角色）。基于 MCP 构建的 Connector 可直接在 Claude 应用内提交至目录，该目录已有超 300 个第三方 Connector，每日被数百万人使用。",
             "category": "products",
             "publishedAt": "2026-06-08T18:50:51.580Z",
-            "collectedAt": "2026-06-09T10:53:28.165Z"
-          },
-          {
-            "id": "aihot:cmq5h53nq07w6slt2j3mljqg7",
-            "title": "Claude Code GA一周年回顾：验证与自动模式",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://x.com/ClaudeDevs/status/2064032814392352816",
-            "summary": "Claude Code 的第一个演示收到了两个 Slack 反应。 GA 一周年之际，@bcherny 和 @_catwu 回顾：验证最佳实践、为何构建自动模式、例程和循环，以及下一步计划。 https：//www.youtube.com/watch？v=Hth_tLaC2j8",
-            "category": "tools",
-            "publishedAt": "2026-06-08T17:12:25.000Z",
-            "collectedAt": "2026-06-09T10:53:28.165Z"
-          },
-          {
-            "id": "hackernews:48459126",
-            "title": "An experimental coding agent for small (<10B) and tiny (<1B) LLMs",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://github.com/brainless/nocodo",
-            "tags": [
-              "ai",
-              "llm",
-              "agent",
-              "coding agent"
-            ],
-            "publishedAt": "2026-06-09T10:25:15.000Z",
-            "collectedAt": "2026-06-09T10:53:25.783Z",
-            "metrics": {
-              "upvotes": 1,
-              "commentsCount": 1
-            }
+            "collectedAt": "2026-06-09T13:39:04.730Z"
           }
         ],
         "relatedEntities": [
           "AI 编程独角兽 Cursor 欧洲总部落子伦敦，SpaceX 手握 600 亿美元收购选择权",
           "开源工具 Tokei：在菜单栏实时监控 AI coding agent 的 token 用量与成本",
           "Viggle API 上线：任意角色任意动作秒级生成",
-          "Claude 为 Connector 开发者推出性能监控仪表盘",
-          "Claude Code GA一周年回顾：验证与自动模式",
-          "An experimental coding agent for small (<10B) and tiny (<1B) LLMs"
+          "Claude 为 Connector 开发者推出性能监控仪表盘"
         ],
         "metrics": {
-          "votes": 1,
-          "commentsCount": 1,
-          "heatScore": 44,
-          "crossSourceBonus": 10
-        }
-      },
-      {
-        "id": "topic:voice / realtime ai",
-        "title": "Voice / Realtime Ai",
-        "category": "audio-classification",
-        "sources": [
-          "huggingface_models",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "heatScore": 43,
-        "confidence": "low",
-        "watchDecision": "track",
-        "whatItIs": "Voice / Realtime Ai is an AI trend topic in audio-classification represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Voice / Realtime Ai should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Voice / Realtime Ai.",
-        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
-        "technicalKeywords": [
-          "pytorch",
-          "multimodal",
-          "music-classification",
-          "math-rock",
-          "wavlm",
-          "transformer",
-          "audio-classification",
-          "en"
-        ],
-        "evidenceItems": [
-          {
-            "id": "hackernews:48459203",
-            "title": "Show HN: Open dataset for distilling GPU audio2face models to CPU students",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://huggingface.co/datasets/myned-ai/audio2face-emotion-arkit-teacher",
-            "tags": [
-              "ai"
-            ],
-            "publishedAt": "2026-06-09T10:34:10.000Z",
-            "collectedAt": "2026-06-09T10:53:25.783Z",
-            "metrics": {
-              "upvotes": 1,
-              "commentsCount": 0
-            }
-          },
-          {
-            "id": "huggingface_models:anggars/neural-mathrock",
-            "title": "anggars/neural-mathrock",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/anggars/neural-mathrock",
-            "category": "audio-classification",
-            "tags": [
-              "pytorch",
-              "multimodal",
-              "music-classification",
-              "math-rock",
-              "wavlm",
-              "transformer",
-              "audio-classification",
-              "en",
-              "dataset:anggars/neural-mathrock",
-              "region:us"
-            ],
-            "publishedAt": "2026-02-22T07:12:15.000Z",
-            "collectedAt": "2026-06-09T10:53:25.713Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 3
-            }
-          }
-        ],
-        "relatedEntities": [
-          "anggars/neural-mathrock",
-          "Show HN: Open dataset for distilling GPU audio2face models to CPU students"
-        ],
-        "metrics": {
-          "votes": 1,
-          "likes": 3,
-          "heatScore": 43,
-          "crossSourceBonus": 10
-        }
-      },
-      {
-        "id": "topic:local llm / inference",
-        "title": "Local Llm / Inference",
-        "category": "text-to-image",
-        "sources": [
-          "huggingface_models"
-        ],
-        "sourceCount": 1,
-        "heatScore": 38,
-        "confidence": "low",
-        "watchDecision": "wait",
-        "whatItIs": "Local Llm / Inference is an AI trend topic in text-to-image represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 1 source(s): huggingface_models, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
-        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
-        "technicalKeywords": [
-          "gguf",
-          "text-to-image",
-          "ja",
-          "base_model:circlestone-labs/Anima",
-          "base_model:quantized:circlestone-labs/Anima",
-          "license:unknown",
-          "region:us",
-          "transformers"
-        ],
-        "evidenceItems": [
-          {
-            "id": "huggingface_models:me-tantan/petiteGenAI",
-            "title": "me-tantan/petiteGenAI",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/me-tantan/petiteGenAI",
-            "category": "text-to-image",
-            "tags": [
-              "gguf",
-              "text-to-image",
-              "ja",
-              "base_model:circlestone-labs/Anima",
-              "base_model:quantized:circlestone-labs/Anima",
-              "license:unknown",
-              "region:us"
-            ],
-            "publishedAt": "2026-06-07T12:52:56.000Z",
-            "collectedAt": "2026-06-09T10:53:25.713Z",
-            "metrics": {
-              "downloads": 13,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:mario-rc/emotional-gpt2-medium",
-            "title": "mario-rc/emotional-gpt2-medium",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/mario-rc/emotional-gpt2-medium",
-            "category": "text-generation",
-            "tags": [
-              "transformers",
-              "safetensors",
-              "gpt2",
-              "text-generation",
-              "dialogue",
-              "emotion",
-              "causal-lm",
-              "en",
-              "dataset:DailyDialog",
-              "base_model:openai-community/gpt2-medium",
-              "base_model:finetune:openai-community/gpt2-medium",
-              "license:mit",
-              "text-generation-inference",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-06-04T17:55:56.000Z",
-            "collectedAt": "2026-06-09T10:53:25.713Z",
-            "metrics": {
-              "downloads": 15,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:mario-rc/emotional-gpt2-large",
-            "title": "mario-rc/emotional-gpt2-large",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/mario-rc/emotional-gpt2-large",
-            "category": "text-generation",
-            "tags": [
-              "transformers",
-              "safetensors",
-              "gpt2",
-              "text-generation",
-              "dialogue",
-              "emotion",
-              "causal-lm",
-              "en",
-              "dataset:DailyDialog",
-              "base_model:openai-community/gpt2-large",
-              "base_model:finetune:openai-community/gpt2-large",
-              "license:mit",
-              "text-generation-inference",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-06-09T08:15:27.000Z",
-            "collectedAt": "2026-06-09T10:53:25.713Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:mradermacher/SWE-Review-30B-A3B-i1-GGUF",
-            "title": "mradermacher/SWE-Review-30B-A3B-i1-GGUF",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/mradermacher/SWE-Review-30B-A3B-i1-GGUF",
-            "tags": [
-              "transformers",
-              "gguf",
-              "code-review",
-              "software-engineering",
-              "swe-bench",
-              "agentic",
-              "moe",
-              "en",
-              "base_model:SWE-Lego/SWE-Review-30B-A3B",
-              "base_model:quantized:SWE-Lego/SWE-Review-30B-A3B",
-              "license:apache-2.0",
-              "endpoints_compatible",
-              "region:us",
-              "imatrix",
-              "conversational"
-            ],
-            "publishedAt": "2026-06-09T07:20:19.000Z",
-            "collectedAt": "2026-06-09T10:53:25.713Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          }
-        ],
-        "relatedEntities": [
-          "me-tantan/petiteGenAI",
-          "mario-rc/emotional-gpt2-large",
-          "mario-rc/emotional-gpt2-medium",
-          "mradermacher/SWE-Review-30B-A3B-i1-GGUF"
-        ],
-        "metrics": {
-          "downloads": 15,
-          "heatScore": 38,
+          "heatScore": 20,
           "crossSourceBonus": 0
         }
       }
@@ -653,8 +716,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-06-09T10:53:25.466Z",
-        "finishedAt": "2026-06-09T10:53:25.466Z",
+        "startedAt": "2026-06-09T13:39:02.909Z",
+        "finishedAt": "2026-06-09T13:39:02.909Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -663,36 +726,36 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-06-09T10:53:25.466Z",
-        "finishedAt": "2026-06-09T10:53:28.166Z",
-        "latencyMs": 2700
+        "startedAt": "2026-06-09T13:39:02.909Z",
+        "finishedAt": "2026-06-09T13:39:04.731Z",
+        "latencyMs": 1822
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 19,
-        "startedAt": "2026-06-09T10:53:25.482Z",
-        "finishedAt": "2026-06-09T10:53:25.713Z",
-        "latencyMs": 231
+        "itemCount": 18,
+        "startedAt": "2026-06-09T13:39:02.924Z",
+        "finishedAt": "2026-06-09T13:39:02.988Z",
+        "latencyMs": 64
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 15,
-        "startedAt": "2026-06-09T10:53:25.483Z",
-        "finishedAt": "2026-06-09T10:53:25.716Z",
-        "latencyMs": 233
+        "startedAt": "2026-06-09T13:39:02.925Z",
+        "finishedAt": "2026-06-09T13:39:02.992Z",
+        "latencyMs": 67
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 27,
-        "startedAt": "2026-06-09T10:53:25.484Z",
-        "finishedAt": "2026-06-09T10:53:25.784Z",
-        "latencyMs": 300
+        "itemCount": 28,
+        "startedAt": "2026-06-09T13:39:02.926Z",
+        "finishedAt": "2026-06-09T13:39:03.227Z",
+        "latencyMs": 301
       }
     ],
     "dataNotes": [
@@ -726,7 +789,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-06-09T10:53:25.716Z",
+        "collectedAt": "2026-06-09T13:39:02.992Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -749,7 +812,7 @@
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-06-09T10:53:25.716Z",
+        "collectedAt": "2026-06-09T13:39:02.992Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -772,7 +835,7 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-06-09T10:53:25.716Z",
+        "collectedAt": "2026-06-09T13:39:02.992Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
@@ -792,11 +855,11 @@
         ],
         "category": "docker",
         "metrics": {
-          "likes": 7456
+          "likes": 7457
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
         "updatedAt": "2026-06-07T15:13:37.000Z",
-        "collectedAt": "2026-06-09T10:53:25.716Z",
+        "collectedAt": "2026-06-09T13:39:02.992Z",
         "raw": {
           "sdk": "docker",
           "emoji": "📊"
@@ -819,7 +882,7 @@
         },
         "publishedAt": "2025-09-18T07:05:32.000Z",
         "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-06-09T10:53:25.716Z",
+        "collectedAt": "2026-06-09T13:39:02.992Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👁"
@@ -845,7 +908,7 @@
         },
         "publishedAt": "2023-06-08T18:00:26.000Z",
         "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-06-09T10:53:25.716Z",
+        "collectedAt": "2026-06-09T13:39:02.992Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🎵"
@@ -869,7 +932,7 @@
         },
         "publishedAt": "2023-05-20T09:26:19.000Z",
         "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-06-09T10:53:25.716Z",
+        "collectedAt": "2026-06-09T13:39:02.992Z",
         "raw": {
           "sdk": "static",
           "emoji": "🏆🤖"
@@ -898,7 +961,7 @@
         },
         "publishedAt": "2024-07-05T16:35:24.000Z",
         "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-06-09T10:53:25.716Z",
+        "collectedAt": "2026-06-09T13:39:02.992Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🤪"
@@ -918,11 +981,11 @@
           "gemini"
         ],
         "metrics": {
-          "upvotes": 610,
-          "commentsCount": 462
+          "upvotes": 652,
+          "commentsCount": 501
         },
         "publishedAt": "2026-06-08T19:14:47.000Z",
-        "collectedAt": "2026-06-09T10:53:25.783Z",
+        "collectedAt": "2026-06-09T13:39:03.226Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48450142",
           "matchedKeywords": [
@@ -942,11 +1005,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 592,
-          "commentsCount": 547
+          "upvotes": 620,
+          "commentsCount": 605
         },
         "publishedAt": "2026-06-08T18:17:53.000Z",
-        "collectedAt": "2026-06-09T10:53:25.783Z",
+        "collectedAt": "2026-06-09T13:39:03.226Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48449084",
           "matchedKeywords": [
@@ -955,23 +1018,23 @@
         }
       },
       {
-        "id": "hackernews:48446893",
+        "id": "hackernews:48446428",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "AI is slowing down",
-        "url": "https://www.wheresyoured.at/ai-is-slowing-down/",
-        "author": "crescit_eundo",
+        "title": "xAI is looking more like a datacentre REIT than a frontier lab",
+        "url": "https://martinalderson.com/posts/xais-new-rental-business/",
+        "author": "martinald",
         "tags": [
           "ai"
         ],
         "metrics": {
-          "upvotes": 574,
-          "commentsCount": 604
+          "upvotes": 605,
+          "commentsCount": 473
         },
-        "publishedAt": "2026-06-08T15:46:37.000Z",
-        "collectedAt": "2026-06-09T10:53:25.783Z",
+        "publishedAt": "2026-06-08T15:13:43.000Z",
+        "collectedAt": "2026-06-09T13:39:03.226Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48446893",
+          "hnUrl": "https://news.ycombinator.com/item?id=48446428",
           "matchedKeywords": [
             "ai"
           ]
@@ -988,11 +1051,11 @@
           "llm"
         ],
         "metrics": {
-          "upvotes": 1118,
-          "commentsCount": 1060
+          "upvotes": 1119,
+          "commentsCount": 1056
         },
         "publishedAt": "2026-06-07T12:49:29.000Z",
-        "collectedAt": "2026-06-09T10:53:25.783Z",
+        "collectedAt": "2026-06-09T13:39:03.226Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48434312",
           "matchedKeywords": [
@@ -1001,23 +1064,23 @@
         }
       },
       {
-        "id": "hackernews:48446428",
+        "id": "hackernews:48446893",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "xAI is looking more like a datacentre REIT than a frontier lab",
-        "url": "https://martinalderson.com/posts/xais-new-rental-business/",
-        "author": "martinald",
+        "title": "AI is slowing down",
+        "url": "https://www.wheresyoured.at/ai-is-slowing-down/",
+        "author": "crescit_eundo",
         "tags": [
           "ai"
         ],
         "metrics": {
-          "upvotes": 576,
-          "commentsCount": 450
+          "upvotes": 605,
+          "commentsCount": 657
         },
-        "publishedAt": "2026-06-08T15:13:43.000Z",
-        "collectedAt": "2026-06-09T10:53:25.783Z",
+        "publishedAt": "2026-06-08T15:46:37.000Z",
+        "collectedAt": "2026-06-09T13:39:03.226Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48446428",
+          "hnUrl": "https://news.ycombinator.com/item?id=48446893",
           "matchedKeywords": [
             "ai"
           ]
@@ -1025,6 +1088,146 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmq6neb920a0esl5ixu2rh53j",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "全新汽车品牌AIVA发布，火山引擎助力打造AI汽车新体验",
+        "url": "https://mp.weixin.qq.com/s/toK_uIB9ECFHVaoCgK-w9Q",
+        "summary": "由赛力斯、宁德时代等多方产业资本组建的AI出行品牌AIVA正式发布。火山引擎提供豆包大模型、智能座舱等技术服务。概念车AIVA Origin Concept亮相，首款量产车AIVA ME7将于2026年内亮相，全系覆盖20万元以上市场。AIVA提出\"AI定义汽车\"路径，让汽车成为具身AI生命体。火山引擎副总裁表示，人与汽车的关系将实现交互、智能、感受三方面根本转变。未来双方将围绕AI交互、智能体验、情感陪伴深度共创。",
+        "description": "由赛力斯、宁德时代等多方产业资本组建的AI出行品牌AIVA正式发布。火山引擎提供豆包大模型、智能座舱等技术服务。概念车AIVA Origin Concept亮相，首款量产车AIVA ME7将于2026年内亮相，全系覆盖20万元以上市场。AIVA提出\"AI定义汽车\"路径，让汽车成为具身AI生命体。火山引擎副总裁表示，人与汽车的关系将实现交互、智能、感受三方面根本转变。未来双方将围绕AI交互、智能体验、情感陪伴深度共创。",
+        "category": "industry",
+        "originalSource": "公众号：火山引擎",
+        "originalUrl": "https://mp.weixin.qq.com/s/toK_uIB9ECFHVaoCgK-w9Q",
+        "recommendedReason": "由赛力斯、宁德时代等多方产业资本组建的AI出行品牌AIVA正式发布。火山引擎提供豆包大模型、智能座舱等技术服务。概念车AIVA Origin Concept亮相，首款量产车AIVA ME7将于2026年内亮相，全系覆盖20万元以上市场。AIVA提出\"AI定义汽车\"路径，让汽车成为具身AI生命体。火山引擎副总裁表示，人与汽车的关系将实现交互、智能、感受三方面根本转变。未来双方将围绕AI交互、智能体验、情感陪伴深度共创。",
+        "publishedAt": "2026-06-09T13:00:21.000Z",
+        "collectedAt": "2026-06-09T13:39:04.730Z",
+        "raw": {
+          "id": "cmq6neb920a0esl5ixu2rh53j",
+          "titleEn": "全新汽车品牌AIVA发布！火山引擎助力打造AI汽车新体验",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmq6neaj80a09sl5if1zpnqpw",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "百度搭子DuMate获中国信通院企业级Claw能力评估最高4+级",
+        "url": "https://mp.weixin.qq.com/s/lv99XfrRtMMgiOflcT67VA",
+        "summary": "2026年6月，百度智能云旗下百度搭子DuMate V3.4.0通过中国信通院「可信AI-企业级Claw能力评估」，获最高评级4+级，为国内首批。评估依据《智能助理智能体（Claw）技术和应用要求 第2部分 企业级Claw能力》（AIIA/T 0295-2026），覆盖智能体、工程化部署、服务、业务融合、运行管理五大能力域。百度搭子支持多智能体分工协作、容器化批量部署、多租户隔离与三级差异化授权、企业知识库接入、全链路日志审计等能力，企业级智能助手服务能力获国家级权威认可。",
+        "description": "2026年6月，百度智能云旗下百度搭子DuMate V3.4.0通过中国信通院「可信AI-企业级Claw能力评估」，获最高评级4+级，为国内首批。评估依据《智能助理智能体（Claw）技术和应用要求 第2部分 企业级Claw能力》（AIIA/T 0295-2026），覆盖智能体、工程化部署、服务、业务融合、运行管理五大能力域。百度搭子支持多智能体分工协作、容器化批量部署、多租户隔离与三级差异化授权、企业知识库接入、全链路日志审计等能力，企业级智能助手服务能力获国家级权威认可。",
+        "category": "industry",
+        "originalSource": "公众号：百度智能云（文心）",
+        "originalUrl": "https://mp.weixin.qq.com/s/lv99XfrRtMMgiOflcT67VA",
+        "recommendedReason": "2026年6月，百度智能云旗下百度搭子DuMate V3.4.0通过中国信通院「可信AI-企业级Claw能力评估」，获最高评级4+级，为国内首批。评估依据《智能助理智能体（Claw）技术和应用要求 第2部分 企业级Claw能力》（AIIA/T 0295-2026），覆盖智能体、工程化部署、服务、业务融合、运行管理五大能力域。百度搭子支持多智能体分工协作、容器化批量部署、多租户隔离与三级差异化授权、企业知识库接入、全链路日志审计等能力，企业级智能助手服务能力获国家级权威认可。",
+        "publishedAt": "2026-06-09T12:03:00.000Z",
+        "collectedAt": "2026-06-09T13:39:04.730Z",
+        "raw": {
+          "id": "cmq6neaj80a09sl5if1zpnqpw",
+          "titleEn": "最高评级4+级！百度搭子DuMate通过中国信通院企业级Claw能力评估",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmq6kwvh809eesl5irgb0uzf2",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "腾讯混元发布UniRL：统一多模态强化学习基础设施",
+        "url": "https://x.com/TencentHunyuan/status/2064312869827809702",
+        "summary": "腾讯混元推出UniRL，一个支持统一多模态模型的强化学习基础设施，并发布两个新算法DRPO和Flow-DPPO。UniRL通过单个后训练循环（生成→评分→优势→更新→同步）覆盖扩散/流匹配模型、LLM/VLM及统一多模态模型（如Hunyuan-Image 3和Bagel）。模型与算法作为独立轴，可实现模型×算法的组合覆盖。框架支持可插拔rollout引擎（训练侧/SGLang/vLLM-Omni）、FSDP2分片和三种部署模式。FlowDPPO针对流/扩散模型引入基于精确散度的信任域策略优化；DRPO为LLM RL提供平滑的优势加权二次正则化方法。代码已开源。",
+        "description": "腾讯混元推出UniRL，一个支持统一多模态模型的强化学习基础设施，并发布两个新算法DRPO和Flow-DPPO。UniRL通过单个后训练循环（生成→评分→优势→更新→同步）覆盖扩散/流匹配模型、LLM/VLM及统一多模态模型（如Hunyuan-Image 3和Bagel）。模型与算法作为独立轴，可实现模型×算法的组合覆盖。框架支持可插拔rollout引擎（训练侧/SGLang/vLLM-Omni）、FSDP2分片和三种部署模式。FlowDPPO针对流/扩散模型引入基于精确散度的信任域策略优化；DRPO为LLM RL提供平滑的优势加权二次正则化方法。代码已开源。",
+        "category": "tools",
+        "originalSource": "X：腾讯混元 (@TencentHunyuan)",
+        "originalUrl": "https://x.com/TencentHunyuan/status/2064312869827809702",
+        "recommendedReason": "腾讯混元推出UniRL，一个支持统一多模态模型的强化学习基础设施，并发布两个新算法DRPO和Flow-DPPO。UniRL通过单个后训练循环（生成→评分→优势→更新→同步）覆盖扩散/流匹配模型、LLM/VLM及统一多模态模型（如Hunyuan-Image 3和Bagel）。模型与算法作为独立轴，可实现模型×算法的组合覆盖。框架支持可插拔rollout引擎（训练侧/SGLang/vLLM-Omni）、FSDP2分片和三种部署模式。FlowDPPO针对流/扩散模型引入基于精确散度的信任域策略优化；DRPO为LLM RL提供平滑的优势加权二次正则化方法。代码已开源。",
+        "publishedAt": "2026-06-09T11:45:15.000Z",
+        "collectedAt": "2026-06-09T13:39:04.730Z",
+        "raw": {
+          "id": "cmq6kwvh809eesl5irgb0uzf2",
+          "titleEn": "🚀Introducing UniRL， an RL infra for unified multimodal models. Together with two new RL algorithms：…",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmq6l8zwy09g0sl5ioa7ahxqv",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "火山引擎TRAE Work企业版正式上线，面向全员提供AI办公平台",
+        "url": "https://mp.weixin.qq.com/s/f7QzLzwHPHHv3tWT1Wrnkw",
+        "summary": "火山引擎将TRAE Solo品牌升级为TRAE Work企业版，发布面向企业的AI办公平台。平台提供Work和Code两种模式：Work模式面向产品、运营、市场等非技术岗位，支持上传.pptx、.xlsx、图片等多种格式混合输入直接输出PPT或文档，支持语音讨论自动整理结构化纪要，支持按天或按周自动运行的数据整理和报告生成；Code模式面向开发者和业务同学，可用自然语言描述需求直接生成页面或小应用。桌面端、网页端和移动端多端同步。企业后台可统一配置模型、用量限额、上传内部文档，沙箱机制隔离执行，支持命令黑名单、MCP白名单、内容安全策略，关键操作可审计。同时发起TRAE Enterprise Fellow招募计划。",
+        "description": "火山引擎将TRAE Solo品牌升级为TRAE Work企业版，发布面向企业的AI办公平台。平台提供Work和Code两种模式：Work模式面向产品、运营、市场等非技术岗位，支持上传.pptx、.xlsx、图片等多种格式混合输入直接输出PPT或文档，支持语音讨论自动整理结构化纪要，支持按天或按周自动运行的数据整理和报告生成；Code模式面向开发者和业务同学，可用自然语言描述需求直接生成页面或小应用。桌面端、网页端和移动端多端同步。企业后台可统一配置模型、用量限额、上传内部文档，沙箱机制隔离执行，支持命令黑名单、MCP白名单、内容安全策略，关键操作可审计。同时发起TRAE Enterprise Fellow招募计划。",
+        "category": "products",
+        "originalSource": "公众号：火山引擎",
+        "originalUrl": "https://mp.weixin.qq.com/s/f7QzLzwHPHHv3tWT1Wrnkw",
+        "recommendedReason": "火山引擎将TRAE Solo品牌升级为TRAE Work企业版，发布面向企业的AI办公平台。平台提供Work和Code两种模式：Work模式面向产品、运营、市场等非技术岗位，支持上传.pptx、.xlsx、图片等多种格式混合输入直接输出PPT或文档，支持语音讨论自动整理结构化纪要，支持按天或按周自动运行的数据整理和报告生成；Code模式面向开发者和业务同学，可用自然语言描述需求直接生成页面或小应用。桌面端、网页端和移动端多端同步。企业后台可统一配置模型、用量限额、上传内部文档，沙箱机制隔离执行，支持命令黑名单、MCP白名单、内容安全策略，关键操作可审计。同时发起TRAE Enterprise Fellow招募计划。",
+        "publishedAt": "2026-06-09T11:45:02.000Z",
+        "collectedAt": "2026-06-09T13:39:04.730Z",
+        "raw": {
+          "id": "cmq6l8zwy09g0sl5ioa7ahxqv",
+          "titleEn": "TRAE Work企业版正式上线：每个岗位都有AI搭档",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmq6lhlqt09jhsl5ibl4egx3i",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Kimi 预测全部104场世界杯比赛：德国或被低估",
+        "url": "https://x.com/Kimi_Moonshot/status/2064311212243120459",
+        "summary": "Kimi 利用 Agent Swarm 系统并行协调300个子智能体，分析战术、球员状态、伤病、赛程、天气、赔率等因素，预测2026年美加墨世界杯全部104场比赛，并发布每轮赛前预测和赛后回顾。模型层融合了 Elo/FIFA 强度、Poisson 进球分布、xG/xT 指标、蒙特卡洛模拟等方法。预测结果显示西班牙和法国为头号热门，但德国夺冠概率可能被市场低估：模型基线估计约11.0%，校准估计约11.3%，而部分市场隐含概率仅约7.4%，正向偏差约+3.6个百分点。该判断基于多分析链交叉验证，可能源于对德国近两届小组出局的近因偏差以及纳格尔斯曼高位压迫体系与穆西亚拉/维尔茨新创造轴的复苏信号。",
+        "description": "Kimi 利用 Agent Swarm 系统并行协调300个子智能体，分析战术、球员状态、伤病、赛程、天气、赔率等因素，预测2026年美加墨世界杯全部104场比赛，并发布每轮赛前预测和赛后回顾。模型层融合了 Elo/FIFA 强度、Poisson 进球分布、xG/xT 指标、蒙特卡洛模拟等方法。预测结果显示西班牙和法国为头号热门，但德国夺冠概率可能被市场低估：模型基线估计约11.0%，校准估计约11.3%，而部分市场隐含概率仅约7.4%，正向偏差约+3.6个百分点。该判断基于多分析链交叉验证，可能源于对德国近两届小组出局的近因偏差以及纳格尔斯曼高位压迫体系与穆西亚拉/维尔茨新创造轴的复苏信号。",
+        "category": "products",
+        "originalSource": "X：Kimi.ai (@Kimi_Moonshot)",
+        "originalUrl": "https://x.com/Kimi_Moonshot/status/2064311212243120459",
+        "recommendedReason": "Kimi 利用 Agent Swarm 系统并行协调300个子智能体，分析战术、球员状态、伤病、赛程、天气、赔率等因素，预测2026年美加墨世界杯全部104场比赛，并发布每轮赛前预测和赛后回顾。模型层融合了 Elo/FIFA 强度、Poisson 进球分布、xG/xT 指标、蒙特卡洛模拟等方法。预测结果显示西班牙和法国为头号热门，但德国夺冠概率可能被市场低估：模型基线估计约11.0%，校准估计约11.3%，而部分市场隐含概率仅约7.4%，正向偏差约+3.6个百分点。该判断基于多分析链交叉验证，可能源于对德国近两届小组出局的近因偏差以及纳格尔斯曼高位压迫体系与穆西亚拉/维尔茨新创造轴的复苏信号。",
+        "publishedAt": "2026-06-09T11:38:40.000Z",
+        "collectedAt": "2026-06-09T13:39:04.730Z",
+        "raw": {
+          "id": "cmq6lhlqt09jhsl5ibl4egx3i",
+          "titleEn": "http：//x.com/i/article/2063961516815327232",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmq6k6ggm096asl5inpa8a1vs",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "可灵AI×候鸟300发起AI主义新浪潮AIGC影像大赛",
+        "url": "https://mp.weixin.qq.com/s/d0c13s2tpsSnpgk3bQk04Q",
+        "summary": "可灵AI与候鸟300联合发起AIGC影像大赛。线下大赛6月16-26日在阿那亚海边举办，评审包括李少红、陈明昊、焦雄屏等影视与AI专家及美院教授，设10万奖金+超200万灵感值，结果6月27日晚揭晓。线上大赛6月22日前投稿可角逐\"最受关注大奖\"，获奖者受邀参加6月27日颁奖。参赛要求：视频≥50%由可灵AI生成，官网投稿填表并带话题分享。",
+        "description": "可灵AI与候鸟300联合发起AIGC影像大赛。线下大赛6月16-26日在阿那亚海边举办，评审包括李少红、陈明昊、焦雄屏等影视与AI专家及美院教授，设10万奖金+超200万灵感值，结果6月27日晚揭晓。线上大赛6月22日前投稿可角逐\"最受关注大奖\"，获奖者受邀参加6月27日颁奖。参赛要求：视频≥50%由可灵AI生成，官网投稿填表并带话题分享。",
+        "category": "products",
+        "originalSource": "公众号：可灵AI（快手·视频）",
+        "originalUrl": "https://mp.weixin.qq.com/s/d0c13s2tpsSnpgk3bQk04Q",
+        "recommendedReason": "可灵AI与候鸟300联合发起AIGC影像大赛。线下大赛6月16-26日在阿那亚海边举办，评审包括李少红、陈明昊、焦雄屏等影视与AI专家及美院教授，设10万奖金+超200万灵感值，结果6月27日晚揭晓。线上大赛6月22日前投稿可角逐\"最受关注大奖\"，获奖者受邀参加6月27日颁奖。参赛要求：视频≥50%由可灵AI生成，官网投稿填表并带话题分享。",
+        "publishedAt": "2026-06-09T11:14:57.000Z",
+        "collectedAt": "2026-06-09T13:39:04.730Z",
+        "raw": {
+          "id": "cmq6k6ggm096asl5inpa8a1vs",
+          "titleEn": "李少红、陈明昊邀你一起开启AI主义新浪潮！",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmq6l2wms09elsl5ipt8ah0ij",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "一个Agent如何通过链式调用两个HuggingFace Space构建3D巴黎画廊",
+        "url": "https://huggingface.co/blog/mishig/spaces-agents-md",
+        "summary": "一个编码Agent调用HuggingFace上的两个Space，从零构建了展示巴黎地标3D高斯散点图的交互式画廊。Agent先用ideogram-ai/ideogram4生成每个纪念碑的黑色背景图像，再通过VAST-AI/TripoSplat从单张图像重建3D高斯散点（.ply），自动完成坐标系校正、取景、压缩为.ksplat（体积缩小约3倍），并构建基于Three.js的滚动切换、拖拽旋转查看器，最终部署为静态Space。整个过程无需客户端库，每个Space通过`agents.md`暴露可调用API。",
+        "description": "一个编码Agent调用HuggingFace上的两个Space，从零构建了展示巴黎地标3D高斯散点图的交互式画廊。Agent先用ideogram-ai/ideogram4生成每个纪念碑的黑色背景图像，再通过VAST-AI/TripoSplat从单张图像重建3D高斯散点（.ply），自动完成坐标系校正、取景、压缩为.ksplat（体积缩小约3倍），并构建基于Three.js的滚动切换、拖拽旋转查看器，最终部署为静态Space。整个过程无需客户端库，每个Space通过`agents.md`暴露可调用API。",
+        "category": "tools",
+        "originalSource": "Hugging Face：Blog（RSS）",
+        "originalUrl": "https://huggingface.co/blog/mishig/spaces-agents-md",
+        "recommendedReason": "一个编码Agent调用HuggingFace上的两个Space，从零构建了展示巴黎地标3D高斯散点图的交互式画廊。Agent先用ideogram-ai/ideogram4生成每个纪念碑的黑色背景图像，再通过VAST-AI/TripoSplat从单张图像重建3D高斯散点（.ply），自动完成坐标系校正、取景、压缩为.ksplat（体积缩小约3倍），并构建基于Three.js的滚动切换、拖拽旋转查看器，最终部署为静态Space。整个过程无需客户端库，每个Space通过`agents.md`暴露可调用API。",
+        "publishedAt": "2026-06-09T10:46:19.000Z",
+        "collectedAt": "2026-06-09T13:39:04.730Z",
+        "raw": {
+          "id": "cmq6l2wms09elsl5ipt8ah0ij",
+          "titleEn": "How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces",
+          "apiCategory": "tip"
+        }
+      },
       {
         "id": "aihot:cmq6hl0ya08ixsl5ik0w4p6zg",
         "source": "aihot",
@@ -1038,150 +1241,10 @@
         "originalUrl": "https://x.com/alibaba_cloud/status/2064288633188708411",
         "recommendedReason": "阿里云在马来西亚柔佛州推出了一个新的公有云区域，包含两个新数据中心，以满足今年下半年马来西亚对云和AI服务日益增长的需求，包括AgentRun、STAROps、ACS Agent Sandbox、Agent Security Center、AI Security Guardrails 2.0和Agentic SOC。https：//int.alibabacloud.com/m/1000414242/",
         "publishedAt": "2026-06-09T10:08:57.000Z",
-        "collectedAt": "2026-06-09T10:53:28.165Z",
+        "collectedAt": "2026-06-09T13:39:04.730Z",
         "raw": {
           "id": "cmq6hl0ya08ixsl5ik0w4p6zg",
           "titleEn": "Alibaba Cloud has launched a new public cloud region in Johor， Malaysia， with two new data centres t…",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmq6il4p208t1sl5iriawuqnk",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "台湾考虑限制AI芯片对华出口以配合美国",
-        "url": "https://www.bloomberg.com/news/articles/2026-06-09/taiwan-mulls-curbs-on-ai-chip-exports-to-china-to-align-with-us",
-        "summary": "据知情人士透露，台湾当局正考虑对AI芯片出口中国大陆实施更严格的管制，以进一步与美国出口限制措施对齐。此举旨在遏制半导体走私，但可能招致北京方面的谴责。",
-        "description": "据知情人士透露，台湾当局正考虑对AI芯片出口中国大陆实施更严格的管制，以进一步与美国出口限制措施对齐。此举旨在遏制半导体走私，但可能招致北京方面的谴责。",
-        "category": "industry",
-        "originalSource": "Bloomberg：Technology（RSS）",
-        "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-09/taiwan-mulls-curbs-on-ai-chip-exports-to-china-to-align-with-us",
-        "recommendedReason": "据知情人士透露，台湾当局正考虑对AI芯片出口中国大陆实施更严格的管制，以进一步与美国出口限制措施对齐。此举旨在遏制半导体走私，但可能招致北京方面的谴责。",
-        "publishedAt": "2026-06-09T10:07:50.000Z",
-        "collectedAt": "2026-06-09T10:53:28.165Z",
-        "raw": {
-          "id": "cmq6il4p208t1sl5iriawuqnk",
-          "titleEn": "Taiwan Mulls Curbs on AI Chip Exports to China to Align With US",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmq6g8zwp086isl5is6dkxq0k",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "仅凭一份文档，Qwen3.7-Max 从 0 交付双端应用",
-        "url": "https://mp.weixin.qq.com/s/bYEZL9LM3daNP9tZReqNwg",
-        "summary": "在无设计稿和后端代码的条件下，Qwen3.7-Max 仅凭一份约 15 万字的产品调研文档，于隔离环境中全自动完成移动端与 Web 端两套真实应用从 0 到 1 交付，单端耗时约 4 小时，中途无人工接管。模型不具备图像理解能力，通过像素坐标反推布局约束实现界面还原。实验采用\"分阶段注入约束→逐层验收→带错纠正\"的闭环控制系统：任务拆分为规划、架构、编码等阶段，验收覆盖静态检查、编译自检（0 error）、路由完整性（Web 端 34 条路由全部可达）、功能扫描及真机冷启动冒烟。失败时错误文本自动注入下一轮重试，使模型数小时内收敛。移动端产出可安装 APK，Web 端 typecheck 与构建均通过。",
-        "description": "在无设计稿和后端代码的条件下，Qwen3.7-Max 仅凭一份约 15 万字的产品调研文档，于隔离环境中全自动完成移动端与 Web 端两套真实应用从 0 到 1 交付，单端耗时约 4 小时，中途无人工接管。模型不具备图像理解能力，通过像素坐标反推布局约束实现界面还原。实验采用\"分阶段注入约束→逐层验收→带错纠正\"的闭环控制系统：任务拆分为规划、架构、编码等阶段，验收覆盖静态检查、编译自检（0 error）、路由完整性（Web 端 34 条路由全部可达）、功能扫描及真机冷启动冒烟。失败时错误文本自动注入下一轮重试，使模型数小时内收敛。移动端产出可安装 APK，Web 端 typecheck 与构建均通过。",
-        "category": "tools",
-        "originalSource": "公众号：通义实验室（千问）",
-        "originalUrl": "https://mp.weixin.qq.com/s/bYEZL9LM3daNP9tZReqNwg",
-        "recommendedReason": "在无设计稿和后端代码的条件下，Qwen3.7-Max 仅凭一份约 15 万字的产品调研文档，于隔离环境中全自动完成移动端与 Web 端两套真实应用从 0 到 1 交付，单端耗时约 4 小时，中途无人工接管。模型不具备图像理解能力，通过像素坐标反推布局约束实现界面还原。实验采用\"分阶段注入约束→逐层验收→带错纠正\"的闭环控制系统：任务拆分为规划、架构、编码等阶段，验收覆盖静态检查、编译自检（0 error）、路由完整性（Web 端 34 条路由全部可达）、功能扫描及真机冷启动冒烟。失败时错误文本自动注入下一轮重试，使模型数小时内收敛。移动端产出可安装 APK，Web 端 typecheck 与构建均通过。",
-        "publishedAt": "2026-06-09T09:27:47.000Z",
-        "collectedAt": "2026-06-09T10:53:28.165Z",
-        "raw": {
-          "id": "cmq6g8zwp086isl5is6dkxq0k",
-          "titleEn": "只给一份文档，Qwen3.7-Max 从 0 交付双端应用",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmq6gskkl08acsl5i3wx4hdde",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "NeuroBait：微调AI助手，为ADHD大脑点燃多巴胺火花",
-        "url": "https://huggingface.co/blog/build-small-hackathon/neurobait-adhd",
-        "summary": "NeuroBait是基于Google gemma-3-12b-it微调的AI对话助手，旨在帮助ADHD患者克服\"知道该做什么但无法开始\"的执行功能障碍。采用16-bit LoRA（r=16， alpha=16）在Unsloth上训练3个epoch，学习率2e-4，最大序列长度2048，使用单张H100 80GB GPU。数据集为基于真实ADHD场景手工合成的少量数据。部署于Hugging Face Space（ZeroGPU），使用Gradio和标准transformers+peft，运行时以4-bit NF4加载基础模型并应用LoRA适配器。NeuroBait不生成待办清单，而是根据用户上下文给出3-6句温暖流畅的回复，引导用户找到一件微小可立即执行的动作，从而激发多巴胺、降低启动阻力。",
-        "description": "NeuroBait是基于Google gemma-3-12b-it微调的AI对话助手，旨在帮助ADHD患者克服\"知道该做什么但无法开始\"的执行功能障碍。采用16-bit LoRA（r=16， alpha=16）在Unsloth上训练3个epoch，学习率2e-4，最大序列长度2048，使用单张H100 80GB GPU。数据集为基于真实ADHD场景手工合成的少量数据。部署于Hugging Face Space（ZeroGPU），使用Gradio和标准transformers+peft，运行时以4-bit NF4加载基础模型并应用LoRA适配器。NeuroBait不生成待办清单，而是根据用户上下文给出3-6句温暖流畅的回复，引导用户找到一件微小可立即执行的动作，从而激发多巴胺、降低启动阻力。",
-        "category": "tools",
-        "originalSource": "Hugging Face：Blog（RSS）",
-        "originalUrl": "https://huggingface.co/blog/build-small-hackathon/neurobait-adhd",
-        "recommendedReason": "NeuroBait是基于Google gemma-3-12b-it微调的AI对话助手，旨在帮助ADHD患者克服\"知道该做什么但无法开始\"的执行功能障碍。采用16-bit LoRA（r=16， alpha=16）在Unsloth上训练3个epoch，学习率2e-4，最大序列长度2048，使用单张H100 80GB GPU。数据集为基于真实ADHD场景手工合成的少量数据。部署于Hugging Face Space（ZeroGPU），使用Gradio和标准transformers+peft，运行时以4-bit NF4加载基础模型并应用LoRA适配器。NeuroBait不生成待办清单，而是根据用户上下文给出3-6句温暖流畅的回复，引导用户找到一件微小可立即执行的动作，从而激发多巴胺、降低启动阻力。",
-        "publishedAt": "2026-06-09T09:04:58.000Z",
-        "collectedAt": "2026-06-09T10:53:28.165Z",
-        "raw": {
-          "id": "cmq6gskkl08acsl5i3wx4hdde",
-          "titleEn": "NeuroBait： I fine-tuned a model to spark dopamine for ADHD brain",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmq6e6gmb07n9sl5i3gujrjpe",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "NVIDIA cuTile Python 教程：在 Colab 中构建用于向量加法、矩阵加法和矩阵乘法的 Tiled GPU 内核",
-        "url": "https://www.marktechpost.com/2026/06/09/nvidia-cutile-python-tutorial-building-tiled-gpu-kernels-for-vector-addition-matrix-addition-and-matrix-multiplication-in-colab",
-        "summary": "该教程基于 NVIDIA cuTile Python 实现了分块 GPU 内核编程工作流，在 Colab 环境中配置 GPU、驱动、CUDA 及 cuTile 可用性后，分别构建了 tiled 向量加法、矩阵加法和矩阵乘法核函数，并以 PyTorch 作为回退保持 notebook 可执行。每一步均通过 PyTorch 验证结果正确性，并基准测试了各阶段的中位运行时间。",
-        "description": "该教程基于 NVIDIA cuTile Python 实现了分块 GPU 内核编程工作流，在 Colab 环境中配置 GPU、驱动、CUDA 及 cuTile 可用性后，分别构建了 tiled 向量加法、矩阵加法和矩阵乘法核函数，并以 PyTorch 作为回退保持 notebook 可执行。每一步均通过 PyTorch 验证结果正确性，并基准测试了各阶段的中位运行时间。",
-        "category": "tools",
-        "originalSource": "MarkTechPost（RSS）",
-        "originalUrl": "https://www.marktechpost.com/2026/06/09/nvidia-cutile-python-tutorial-building-tiled-gpu-kernels-for-vector-addition-matrix-addition-and-matrix-multiplication-in-colab",
-        "recommendedReason": "该教程基于 NVIDIA cuTile Python 实现了分块 GPU 内核编程工作流，在 Colab 环境中配置 GPU、驱动、CUDA 及 cuTile 可用性后，分别构建了 tiled 向量加法、矩阵加法和矩阵乘法核函数，并以 PyTorch 作为回退保持 notebook 可执行。每一步均通过 PyTorch 验证结果正确性，并基准测试了各阶段的中位运行时间。",
-        "publishedAt": "2026-06-09T08:37:48.000Z",
-        "collectedAt": "2026-06-09T10:53:28.165Z",
-        "raw": {
-          "id": "cmq6e6gmb07n9sl5i3gujrjpe",
-          "titleEn": "NVIDIA cuTile Python Tutorial： Building Tiled GPU Kernels for Vector Addition， Matrix Addition， and Matrix Multiplication in Colab",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmq6e266t07lksl5ilaz45zbv",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "硅基流动联合CodeWhale推出DeepSeek V4终端最佳性价比组合",
-        "url": "https://x.com/SiliconFlowAI/status/2064261826083512554",
-        "summary": "硅基流动宣布，通过V4-Pro（质量）与V4-Flash（速度）两行配置，即可在终端获得DeepSeek V4的最佳性价比组合。专为DeepSeek V4构建的终端编码智能体CodeWhale现已内置SiliconFlow。CodeWhale具备流式推理（显示思考过程）、自动路由（根据任务复杂度切换模型与思考深度）、零漂移（通过书面宪法为每轮排序权威，保持V4定向）以及自我改进（V4协助编写框架，框架提升后每个会话更强大）等特性。",
-        "description": "硅基流动宣布，通过V4-Pro（质量）与V4-Flash（速度）两行配置，即可在终端获得DeepSeek V4的最佳性价比组合。专为DeepSeek V4构建的终端编码智能体CodeWhale现已内置SiliconFlow。CodeWhale具备流式推理（显示思考过程）、自动路由（根据任务复杂度切换模型与思考深度）、零漂移（通过书面宪法为每轮排序权威，保持V4定向）以及自我改进（V4协助编写框架，框架提升后每个会话更强大）等特性。",
-        "category": "products",
-        "originalSource": "X：硅基流动 SiliconFlow (@SiliconFlowAI)",
-        "originalUrl": "https://x.com/SiliconFlowAI/status/2064261826083512554",
-        "recommendedReason": "硅基流动宣布，通过V4-Pro（质量）与V4-Flash（速度）两行配置，即可在终端获得DeepSeek V4的最佳性价比组合。专为DeepSeek V4构建的终端编码智能体CodeWhale现已内置SiliconFlow。CodeWhale具备流式推理（显示思考过程）、自动路由（根据任务复杂度切换模型与思考深度）、零漂移（通过书面宪法为每轮排序权威，保持V4定向）以及自我改进（V4协助编写框架，框架提升后每个会话更强大）等特性。",
-        "publishedAt": "2026-06-09T08:22:26.000Z",
-        "collectedAt": "2026-06-09T10:53:28.165Z",
-        "raw": {
-          "id": "cmq6e266t07lksl5ilaz45zbv",
-          "titleEn": "V4-Pro （quality） + V4-Flash （speed） 2 lines of config to bring the Best price/perf DeepSeek combo in…",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmq6eaqf207o8sl5iy1dyf29k",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "中国准备2950亿美元计划资助全国AI基础设施建设",
-        "url": "https://www.bloomberg.com/news/articles/2026-06-09/china-prepares-295-billion-plan-to-fund-nationwide-ai-buildout",
-        "summary": "中国计划在未来五年投入约2万亿元人民币（约2950亿美元）建设全国数据中心，以推动国内AI产业发展并超越美国。该投资将覆盖数据中心基础设施的大规模建设，为北京在关键技术领域的雄心提供资金支持。",
-        "description": "中国计划在未来五年投入约2万亿元人民币（约2950亿美元）建设全国数据中心，以推动国内AI产业发展并超越美国。该投资将覆盖数据中心基础设施的大规模建设，为北京在关键技术领域的雄心提供资金支持。",
-        "category": "industry",
-        "originalSource": "Bloomberg：Technology（RSS）",
-        "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-09/china-prepares-295-billion-plan-to-fund-nationwide-ai-buildout",
-        "recommendedReason": "中国计划在未来五年投入约2万亿元人民币（约2950亿美元）建设全国数据中心，以推动国内AI产业发展并超越美国。该投资将覆盖数据中心基础设施的大规模建设，为北京在关键技术领域的雄心提供资金支持。",
-        "publishedAt": "2026-06-09T08:13:10.000Z",
-        "collectedAt": "2026-06-09T10:53:28.165Z",
-        "raw": {
-          "id": "cmq6eaqf207o8sl5iy1dyf29k",
-          "titleEn": "China Prepares $295 Billion Plan to Fund Nationwide AI Buildout",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmq69650406cmsl5iwf8zszhp",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "AI 编程独角兽 Cursor 欧洲总部落子伦敦，SpaceX 手握 600 亿美元收购选择权",
-        "url": "https://www.ithome.com/0/961/868.htm",
-        "summary": "Cursor 将欧洲总部设在伦敦，计划招聘约 200 名员工，并在巴黎、慕尼黑等地开设小型办事处。SpaceX 拥有以 600 亿美元收购 Cursor 的选择权，或支付 100 亿美元开展全新合作。Cursor 目前 B2B 年化营收约 26 亿美元，客户包括英国航空、英国石油、诺基亚等。公司强调数据留存欧洲本地以满足监管合规，其平台支持用户用自然语言生成代码，主打模型中立，竞争对手包括 GitHub Copilot、OpenAI 和谷歌的同类产品。",
-        "description": "Cursor 将欧洲总部设在伦敦，计划招聘约 200 名员工，并在巴黎、慕尼黑等地开设小型办事处。SpaceX 拥有以 600 亿美元收购 Cursor 的选择权，或支付 100 亿美元开展全新合作。Cursor 目前 B2B 年化营收约 26 亿美元，客户包括英国航空、英国石油、诺基亚等。公司强调数据留存欧洲本地以满足监管合规，其平台支持用户用自然语言生成代码，主打模型中立，竞争对手包括 GitHub Copilot、OpenAI 和谷歌的同类产品。",
-        "category": "industry",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/961/868.htm",
-        "recommendedReason": "Cursor 将欧洲总部设在伦敦，计划招聘约 200 名员工，并在巴黎、慕尼黑等地开设小型办事处。SpaceX 拥有以 600 亿美元收购 Cursor 的选择权，或支付 100 亿美元开展全新合作。Cursor 目前 B2B 年化营收约 26 亿美元，客户包括英国航空、英国石油、诺基亚等。公司强调数据留存欧洲本地以满足监管合规，其平台支持用户用自然语言生成代码，主打模型中立，竞争对手包括 GitHub Copilot、OpenAI 和谷歌的同类产品。",
-        "publishedAt": "2026-06-09T05:53:06.000Z",
-        "collectedAt": "2026-06-09T10:53:28.165Z",
-        "raw": {
-          "id": "cmq69650406cmsl5iwf8zszhp",
-          "titleEn": null,
           "apiCategory": "industry"
         }
       }
