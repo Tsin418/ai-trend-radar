@@ -1,11 +1,11 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-09T08:44:59.104Z
+Updated: 2026-06-09T12:20:33.996Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-09 | daily | [AI Developer Radar｜Daily｜2026-06-09](2026/06/2026-06-09-daily.md) | Tencent/ncnn, hpcaitech/ColossalAI, ChatGPTNextWeb/NextChat, google-ai-edge/mediapipe, NirDiamant/RAG_Techniques |
+| 2026-06-09 | daily | [AI Developer Radar｜Daily｜2026-06-09](2026/06/2026-06-09-daily.md) | Andyyyy64/whichllm, phuryn/pm-skills, roboflow/supervision, opencv/opencv, yikart/AiToEarn |
 | 2026-06-08 | daily | [AI Developer Radar｜Daily｜2026-06-08](2026/06/2026-06-08-daily.md) | zilliztech/claude-context, RyanCodrai/turbovec, aaif-goose/goose, refactoringhq/tolaria, danielmiessler/Personal_AI_Infrastructure |
 | 2026-06-07 | daily | [AI Developer Radar｜Daily｜2026-06-07](2026/06/2026-06-07-daily.md) | hpcaitech/ColossalAI, zilliztech/claude-context, zhayujie/CowAgent, automazeio/ccpm, rohitg00/ai-engineering-from-scratch |
 | 2026-06-06 | daily | [AI Developer Radar｜Daily｜2026-06-06](2026/06/2026-06-06-daily.md) | Panniantong/Agent-Reach, mvanhorn/last30days-skill, MemPalace/mempalace, safishamsi/graphify, lfnovo/open-notebook |
