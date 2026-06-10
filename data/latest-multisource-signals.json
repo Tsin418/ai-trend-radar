@@ -1,175 +1,200 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-06-10T06:47:30.067Z",
+  "generatedAt": "2026-06-10T07:01:18.787Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2606.11190v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "When to Align, When to Predict: A Phase Diagram for Multimodal Learning",
-        "url": "https://arxiv.org/pdf/2606.11190v1",
-        "description": "Cross-modal alignment (CA) and cross-modal prediction (CP) are the dominant paradigms for multimodal representation learning, yet there is no systematic understanding of when each succeeds, when each fails, and when cross-modal training helps at all -- a gap that leaves practitioners, especially in scientific domains like biomedicine or astrophysics, with heterogeneous instruments and multiple levels of organization and measurement, unable to diagnose why standard methods underperform the best s",
-        "summary": "Cross-modal alignment (CA) and cross-modal prediction (CP) are the dominant paradigms for multimodal representation learning, yet there is no systematic understanding of when each succeeds, when each fails, and when cross-modal training helps at all -- a gap that leaves practitioners, especially in scientific domains like biomedicine or astrophysics, with heterogeneous instruments and multiple levels of organization and measurement, unable to diagnose why standard methods underperform the best single modality. We develop a unified linear framework that addresses both questions. Under a spiked signal-plus-noise model with structured cross-modal nuisance correlation, we derive separation ratios for both objectives that expose complementary failure modes: alignment whitens each modality and fails when nuisance is strongly correlated across views; prediction encodes whatever is cross-predictable through a one-sided whitening, with recovery governed by source-modality quality. The resulting phase diagram partitions multimodal problems into four regimes: Both, CA only, CP only, and Neither. We present a data-driven procedure to locate real-world datasets in this diagram using a small labeled subsample, identifying the preferred objective and prediction direction before any cross-modal training. Experiments on synthetic data, stereo-vision benchmarks, image-caption pairs, and real astrophysical data validate the predictions in the nonlinear regime, including the Neither regime where cross-modal training is actively harmful. Our framework lets practitioners diagnose their multimodal problem and choose the right objective before committing to training. Code to reproduce the results is available at https://github.com/IlayMalinyak/mm_align_vs_pred.",
-        "author": "Ilay Kamai, Hugues Van Assel, Aviv Regev, Hagai B. Perets, Randall Balestriero",
+        "id": "huggingface_models:athena2634/evolai_restart_restart",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "athena2634/evolai_restart_restart",
+        "url": "https://huggingface.co/athena2634/evolai_restart_restart",
         "tags": [
-          "cs.LG",
-          "alignment",
-          "benchmark"
+          "safetensors",
+          "qwen3",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-06-09T17:59:58Z",
-        "updatedAt": "2026-06-09T17:59:58Z",
-        "collectedAt": "2026-06-10T06:46:34.565Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.11190v1",
-          "authors": [
-            "Ilay Kamai",
-            "Hugues Van Assel",
-            "Aviv Regev",
-            "Hagai B. Perets",
-            "Randall Balestriero"
-          ]
+        "metrics": {
+          "downloads": 1911,
+          "likes": 1
         },
-        "recommendedReason": "Matched AI developer keywords: alignment, benchmark"
+        "publishedAt": "2026-05-26T21:03:06.000Z",
+        "updatedAt": "2026-06-10T07:01:05.000Z",
+        "collectedAt": "2026-06-10T07:01:19.912Z",
+        "raw": {}
       },
       {
-        "id": "http://arxiv.org/abs/2606.11189v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "A Unifying Lens on Supervised Fine-Tuning Through Target Distribution Design",
-        "url": "https://arxiv.org/pdf/2606.11189v1",
-        "description": "Supervised fine-tuning (SFT) typically maximizes the likelihood of every token in a demonstrated trajectory. However, an observed token can be non-unique, noisy, or misaligned with the model prior. Strictly fitting toward this one-hot target may be suboptimal, especially when the pretrained model encodes a rich knowledge prior. In this work, we reinterpret SFT as target distribution design: instead of studying only the loss objective, we analyze the token-level target that the loss drives the mo",
-        "summary": "Supervised fine-tuning (SFT) typically maximizes the likelihood of every token in a demonstrated trajectory. However, an observed token can be non-unique, noisy, or misaligned with the model prior. Strictly fitting toward this one-hot target may be suboptimal, especially when the pretrained model encodes a rich knowledge prior. In this work, we reinterpret SFT as target distribution design: instead of studying only the loss objective, we analyze the token-level target that the loss drives the model to match. We introduce the Q-target framework, which decomposes SFT supervision into two explicit choices: (1) how strongly to rely on the observed token, and (2) how to allocate the remaining probability mass over alternatives. This perspective unifies many existing SFT variants as implicit choices of the target distribution Q. Building on this view, we propose Target-SFT which constructs the training objective directly from the desired target distribution. This method consistently outperforms across the ten reasoning dataset-model settings evaluated, showing the effectiveness of this target-based approach. Overall, our formulation reveals a more fundamental design principle for SFT training and opens a broader search space for SFT objectives.",
-        "author": "Tong Xie, Yuanhao Ban, Yunqi Hong, Sohyun An, Yihang Chen, Cho-Jui Hsieh",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.LG",
-          "cs.AI",
-          "cs.CL",
-          "fine-tuning"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-06-09T17:59:54Z",
-        "updatedAt": "2026-06-09T17:59:54Z",
-        "collectedAt": "2026-06-10T06:46:34.565Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.11189v1",
-          "authors": [
-            "Tong Xie",
-            "Yuanhao Ban",
-            "Yunqi Hong",
-            "Sohyun An",
-            "Yihang Chen",
-            "Cho-Jui Hsieh"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14012
         },
-        "recommendedReason": "Matched AI developer keywords: fine-tuning"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-06-10T07:01:19.916Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.11182v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "EEVEE: Towards Test-time Prompt Learning in the Real World for Self-Improving Agents",
-        "url": "https://arxiv.org/pdf/2606.11182v1",
-        "description": "In this paper, we propose EEVEE, the first multi-dataset test-time prompt learning framework for LLM agents, enabling test-time prompt learning under real-world task streams. Existing methods are largely designed for single-dataset settings, while real-world applications require models to handle heterogeneous input streams drawn from multiple datasets, domains, and task distributions, limiting their practical applicability. To mitigate cross-dataset interference, EEVEE introduces a router that p",
-        "summary": "In this paper, we propose EEVEE, the first multi-dataset test-time prompt learning framework for LLM agents, enabling test-time prompt learning under real-world task streams. Existing methods are largely designed for single-dataset settings, while real-world applications require models to handle heterogeneous input streams drawn from multiple datasets, domains, and task distributions, limiting their practical applicability. To mitigate cross-dataset interference, EEVEE introduces a router that partitions incoming inputs into task clusters and assigns them to suitable prompt configurations. This design is optimized via a router-prompt co-evolution strategy, which employs interleaved router and prompt learning phases to address their mutual dependency. Experiments across multiple datasets demonstrate that the framework improves robustness under heterogeneous data streams while maintaining single-benchmark learning capability and efficiency. Specifically, EEVEE improves average multi-benchmark scores by 10.38 and 24.32 points over Qwen3-4B-Instruct and DeepSeek-V3.2, surpassing SOTA methods GEPA and ACE by up to 37.2% and 48.2%.",
-        "author": "Weixian Xu, Shilong Liu, Mengdi Wang",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.LG",
-          "cs.AI",
-          "llm",
-          "agent",
-          "rag",
-          "benchmark"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-06-09T17:57:16Z",
-        "updatedAt": "2026-06-09T17:57:16Z",
-        "collectedAt": "2026-06-10T06:46:34.565Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.11182v1",
-          "authors": [
-            "Weixian Xu",
-            "Shilong Liu",
-            "Mengdi Wang"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11112
         },
-        "recommendedReason": "Matched AI developer keywords: llm, agent, rag, benchmark"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-06-10T07:01:19.916Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.11176v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Data Journalist Agent: Transforming Data into Verifiable Multimodal Stories",
-        "url": "https://arxiv.org/pdf/2606.11176v1",
-        "description": "Data tells stories that shape society; the data journalist's job is to turn raw information into stories non-experts can trust. A high-quality news feature takes a newsroom team weeks: hunting for context, running statistics, choosing an angle, and designing visuals. Recent agents handle individual steps well: data-science agents close the analysis loop, while design agents synthesize beautiful websites. But can an agent serve as a data journalist end to end? We introduce Data Journalist Agent (",
-        "summary": "Data tells stories that shape society; the data journalist's job is to turn raw information into stories non-experts can trust. A high-quality news feature takes a newsroom team weeks: hunting for context, running statistics, choosing an angle, and designing visuals. Recent agents handle individual steps well: data-science agents close the analysis loop, while design agents synthesize beautiful websites. But can an agent serve as a data journalist end to end? We introduce Data Journalist Agent (Data2Story), a multi-agent framework that orchestrates specialized roles into a single virtual newsroom. Data2Story contributes two innovations. (i) Claims are evidence-grounded: an Inspector links every number, angle, and asset back to data, code, or an external reference. (ii) Articles are multimodally generative: rather than defaulting to plain text and static charts, Data2Story reasons about what readers will want to see, then deploys multimodal tools, such as interactive maps for geography and audio for music. We evaluate Data2Story on 18 articles, each paired with the originally published expert piece, along four axes: (a) human-agent angle coverage; (b) rubric evaluation with 53 participants across five dimensions; (c) computer-use agents as judges, a cost-saving proxy for how readers navigate interactive articles; and (d) verifiability, where a coding verifier re-executes statements against the data and checks claims against references. Data2Story produces competitive, evidence-traceable multimedia stories, with particular strength in transparency and auditability. Human articles retain an edge in editorial angle, creative design, and presentation. We position Data2Story as a collaborator for journalists, enabling more evidence-based, transparent, and verifiable reporting. Code and demos are available at https://data2story.github.io.",
-        "author": "Kevin Qinghong Lin, Batu EI, Yuhong Shi, Pan Lu, Philip Torr, James Zou",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.CV",
-          "cs.CL",
-          "cs.CY",
-          "cs.HC",
-          "agent",
-          "multi-agent",
-          "rag",
-          "evaluation"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-06-09T17:51:55Z",
-        "updatedAt": "2026-06-09T17:51:55Z",
-        "collectedAt": "2026-06-10T06:46:34.565Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.11176v1",
-          "authors": [
-            "Kevin Qinghong Lin",
-            "Batu EI",
-            "Yuhong Shi",
-            "Pan Lu",
-            "Philip Torr",
-            "James Zou"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10103
         },
-        "recommendedReason": "Matched AI developer keywords: agent, multi-agent, rag, evaluation"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-06-10T07:01:19.916Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.11173v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "The Role of Feedback Alignment in Self-Distillation",
-        "url": "https://arxiv.org/pdf/2606.11173v1",
-        "description": "Conditioning a language model on additional context, such as feedback on a previous attempt, typically improves its response. Self-distillation trains the model to retain this improvement when the context is not present. The method works by matching the model's output distribution under two settings: a student that sees only the question, and a self-teacher that also sees the context. What the model learns therefore depends on what context the self-teacher receives, yet the design of this contex",
-        "summary": "Conditioning a language model on additional context, such as feedback on a previous attempt, typically improves its response. Self-distillation trains the model to retain this improvement when the context is not present. The method works by matching the model's output distribution under two settings: a student that sees only the question, and a self-teacher that also sees the context. What the model learns therefore depends on what context the self-teacher receives, yet the design of this context remains largely unexplored. We study context design for self-distillation by training a solver on feedback from a frozen critic. We compare three conditions: (i) a binary reward (GRPO), (ii) the reference solution, and (iii) a step-by-step critique aligned to the solver's reasoning trace. Step-aligned critique yields the largest gains, outperforming GRPO by 16.11 points and reference-solution-conditioned self-distillation by 5.27 points (Avg@12). Per-token advantage analysis reveals why: step-aligned feedback targets only the tokens where reasoning fails, leaving correct behavior intact. Conditioning on the reference solution, by contrast, pressures the model to change its behavior at every token (even correct steps) because an alternative derivation inevitably differs in phrasing and approach. This suggests that structural alignment between feedback and the solver's reasoning is a key driver of self-distillation effectiveness.",
-        "author": "Semih Kara, Oğuzhan Ersoy",
+        "id": "huggingface_models:NAwafo/SmolLM-Keyboard-GGUF",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "NAwafo/SmolLM-Keyboard-GGUF",
+        "url": "https://huggingface.co/NAwafo/SmolLM-Keyboard-GGUF",
         "tags": [
-          "cs.AI",
-          "cs.LG",
-          "alignment"
+          "tflite",
+          "gguf",
+          "endpoints_compatible",
+          "region:us",
+          "conversational"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-06-09T17:50:09Z",
-        "updatedAt": "2026-06-09T17:50:09Z",
-        "collectedAt": "2026-06-10T06:46:34.565Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.11173v1",
-          "authors": [
-            "Semih Kara",
-            "Oğuzhan Ersoy"
-          ]
+        "metrics": {
+          "downloads": 811,
+          "likes": 1
         },
-        "recommendedReason": "Matched AI developer keywords: alignment"
+        "publishedAt": "2025-12-31T11:30:18.000Z",
+        "updatedAt": "2026-06-10T07:01:13.000Z",
+        "collectedAt": "2026-06-10T07:01:19.912Z",
+        "raw": {}
+      },
+      {
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
+        "tags": [
+          "docker",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "docker",
+        "metrics": {
+          "likes": 7458
+        },
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-06-10T06:02:59.000Z",
+        "collectedAt": "2026-06-10T07:01:19.916Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
+      },
+      {
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
+        "tags": [
+          "gradio",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5118
+        },
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-06-10T07:01:19.916Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5072
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-06-10T07:01:19.916Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
       }
     ],
     "developerBuzz": [
@@ -185,11 +210,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 2059,
-          "commentsCount": 1584
+          "upvotes": 2072,
+          "commentsCount": 1601
         },
         "publishedAt": "2026-06-09T16:58:01.000Z",
-        "collectedAt": "2026-06-10T06:46:34.546Z",
+        "collectedAt": "2026-06-10T07:01:20.114Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48463808",
           "matchedKeywords": [
@@ -209,11 +234,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 712,
-          "commentsCount": 356
+          "upvotes": 721,
+          "commentsCount": 358
         },
         "publishedAt": "2026-06-09T21:19:11.000Z",
-        "collectedAt": "2026-06-10T06:46:34.546Z",
+        "collectedAt": "2026-06-10T07:01:20.114Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48467896",
           "matchedKeywords": [
@@ -237,7 +262,7 @@
           "commentsCount": 554
         },
         "publishedAt": "2026-06-08T19:14:47.000Z",
-        "collectedAt": "2026-06-10T06:46:34.546Z",
+        "collectedAt": "2026-06-10T07:01:20.114Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48450142",
           "matchedKeywords": [
@@ -261,7 +286,7 @@
           "commentsCount": 535
         },
         "publishedAt": "2026-06-08T15:13:43.000Z",
-        "collectedAt": "2026-06-10T06:46:34.546Z",
+        "collectedAt": "2026-06-10T07:01:20.114Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48446428",
           "matchedKeywords": [
@@ -280,11 +305,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 665,
+          "upvotes": 666,
           "commentsCount": 687
         },
         "publishedAt": "2026-06-08T18:17:53.000Z",
-        "collectedAt": "2026-06-10T06:46:34.546Z",
+        "collectedAt": "2026-06-10T07:01:20.114Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48449084",
           "matchedKeywords": [
@@ -307,7 +332,7 @@
         "originalUrl": "https://perspectives.mvdirona.com/2026/06/flat-datacenter-networks-at-scale",
         "recommendedReason": "亚马逊分享了在大规模数据中心中实现扁平化网络架构的工程实践与设计考量，重点论述了如何通过简化拓扑和路由策略来支撑超大规模集群的高带宽、低延迟通信。文章未披露具体模型或评测数据。",
         "publishedAt": "2026-06-10T06:33:52.391Z",
-        "collectedAt": "2026-06-10T06:46:39.408Z",
+        "collectedAt": "2026-06-10T07:01:21.113Z",
         "raw": {
           "id": "cmq7pb0cg00epslepudldb2ml",
           "titleEn": null,
@@ -327,7 +352,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/4fovMM29x8tJ2E25kidl1A",
         "recommendedReason": "千问发布国内首个全周期高考志愿填报Agent，由数百位资深高报师参与训练。该智能体提供AI志愿报告，为考生量身定制深度全面的填报方案；AI志愿日历帮助制定专属填报计划；高考专业知识库整合夸克高考8年积累，并引入志愿专家顾问，数据权威可信赖，全程陪伴考生完成志愿填报。",
         "publishedAt": "2026-06-10T06:00:49.000Z",
-        "collectedAt": "2026-06-10T06:46:39.408Z",
+        "collectedAt": "2026-06-10T07:01:21.113Z",
         "raw": {
           "id": "cmq7o76t70033slep3hezyguv",
           "titleEn": null,
@@ -347,7 +372,7 @@
         "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-10/google-s-backstops-underpin-35-bln-anthropic-chip-deal-video",
         "recommendedReason": "Anthropic 在谷歌（其早期投资者之一）的帮助下，正在五个数据中心租赁高性能计算机芯片。谷歌同意为每个地点的租赁付款提供兜底担保，从而帮助 Anthropic 获得相当于 350 亿美元的融资。",
         "publishedAt": "2026-06-10T05:57:28.000Z",
-        "collectedAt": "2026-06-10T06:46:39.408Z",
+        "collectedAt": "2026-06-10T07:01:21.113Z",
         "raw": {
           "id": "cmq7ohijv007dslepdtmuxma3",
           "titleEn": "Google's Backstops Underpin $35 Billion Anthropic Chip Deal",
@@ -367,7 +392,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/g3DxNO_3aYI4g26gQ2Yvig",
         "recommendedReason": "火山引擎今日上线火山方舟版权商业化平台，推出行业首个覆盖\"授权-保护-审核-分发-变现\"全链路的版权合作机制。平台搭载视频生成模型Seedance 2.0及版权治理体系，已获周星驰旗下比高集团《喜剧之王》《食神》《长江七号》三部影片在AI视频创作场景下的版权使用权，并基于Seedance 2.0打造经典桥段AI创作模板。模板已在火山方舟体验中心、火山引擎Kickart上线，同步开放给LibTV、筷子科技丽帧引擎等工具合作伙伴。平台面向UGC和商业广告场景提供分润制、项目制等变现路径，未来还将提供版权管理后台，实现授权可见、使用可查、收入透明。",
         "publishedAt": "2026-06-10T04:30:00.000Z",
-        "collectedAt": "2026-06-10T06:46:39.408Z",
+        "collectedAt": "2026-06-10T07:01:21.113Z",
         "raw": {
           "id": "cmq7kyzxh0435sl5wh21ncfun",
           "titleEn": null,
@@ -387,7 +412,7 @@
         "originalUrl": "https://x.com/rohanpaul_ai/status/2064524448582267047",
         "recommendedReason": "Bloomberg：Magnetar Capital，这家 180 亿美元的对冲基金公司，将在其最新产品中避免使用人类分析师，转而依靠数百个 AI 智能体进行股票研究。 这家 180 亿美元的对冲基金公司希望 AI 搜索投资想法、研究公司、推荐头寸并预测趋势，而人类仍负责批准交易。",
         "publishedAt": "2026-06-10T01:46:00.000Z",
-        "collectedAt": "2026-06-10T06:46:39.408Z",
+        "collectedAt": "2026-06-10T07:01:21.113Z",
         "raw": {
           "id": "cmq7esdai02hdsl5wq2pe6o5v",
           "titleEn": "Bloomberg： Magnetar Capital， the $18B hedge fund company， will avoid human analysts in its newest of…",
@@ -407,7 +432,7 @@
         "originalUrl": "https://www.ithome.com/0/962/206.htm",
         "recommendedReason": "欧盟委员会6月9日宣布临时措施，责令Meta在反垄断调查结束前免费向第三方AI助手开放WhatsApp访问权限。Meta于2025年10月15日禁止第三方AI助手调用WhatsApp for Business API，意图让自家Meta AI独占市场；今年3月4日虽改为付费使用，但欧盟委员会认为这实质上延续了禁令，可能严重损害通用AI助手市场竞争，尤其危及小企业和新进入者。",
         "publishedAt": "2026-06-10T01:41:12.000Z",
-        "collectedAt": "2026-06-10T06:46:39.408Z",
+        "collectedAt": "2026-06-10T07:01:21.113Z",
         "raw": {
           "id": "cmq7g8g6402tpsl5ws1zavnsj",
           "titleEn": null,
@@ -427,7 +452,7 @@
         "originalUrl": "https://x.com/shao__meng/status/2064508455051043008",
         "recommendedReason": "开源项目 Text-To-Lottie 提供一套 Agent Skill 和本地预览工具，让 Codex/Claude Code/Cursor 等 Agent 生成标准 Bodymovin JSON（public/lottie.json），通过 Skottie 渲染引擎在浏览器中实时验收。安装命令：`npx skills add diffusionstudio/lottie`。技术特点：输出标准 Lottie JSON，使用 Skottie 渲染（非 lottie-web）；基于 Vite 热重载实现自动刷新闭环；支持通过 Skottie Slots + controls.json 调整颜色、尺寸；Agent 可用 URL 参数 `？frame=60&paused=1` 精确定位帧截图。Prompt 指南包括：给具体素材、使用动效术语、pan/zoom/hold 模拟镜头、显式声明 Slots、锁定时间规格。适合单场景短时长 Motion Graphics、SVG→Lottie、数据可视化、透明背景矢量动效；不适合多镜头剪辑、复杂角色绑定、粒子、3D 或需 lottie-web 全特性的场景。",
         "publishedAt": "2026-06-10T00:42:27.000Z",
-        "collectedAt": "2026-06-10T06:46:39.408Z",
+        "collectedAt": "2026-06-10T07:01:21.113Z",
         "raw": {
           "id": "cmq7cnl4q01x0sl5w2itvprtz",
           "titleEn": "Text-To-Lottie： 一套 「Agent Skill + 本地预览 Harness」 的组合，让 Agent 生成 Lottie，在浏览器里实时验收 开源作者 @konstipaulus …",
@@ -447,398 +472,12 @@
         "originalUrl": "https://www.bloomberg.com/news/videos/2026-06-09/ibm-ceo-ai-won-t-necessarily-lead-to-smaller-headcount-video",
         "recommendedReason": "IBM CEO Arvind Krishna表示AI不会必然导致员工数量减少。他透露IBM已在量子计算（一种更快形式的AI）上投资100亿美元，并指出联邦政府承诺投入10亿美元在纽约Albany建设芯片制造设施，体现了公私部门间的紧密合作。",
         "publishedAt": "2026-06-09T21:48:41.000Z",
-        "collectedAt": "2026-06-10T06:46:39.408Z",
+        "collectedAt": "2026-06-10T07:01:21.113Z",
         "raw": {
           "id": "cmq77b1f600gvsl5w4toi02fe",
           "titleEn": "IBM CEO： AI Won't Necessarily Lead To Smaller Headcount",
           "apiCategory": "industry"
         }
-      },
-      {
-        "id": "aihot:cmq77ckl000hfsl5wb4w757br",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "在 AgentsView 中为 Claude Fable 5 设置自定义价格",
-        "url": "https://simonwillison.net/2026/Jun/9/agentsview-custom-model-price",
-        "summary": "Wes McKinney 开发的 AgentsView 是一个用于追踪本地编码智能体 token 使用情况的工具。由于近日发布的 Claude Fable 5 尚未被收录进 AgentsView 的定价数据库，作者利用 Fable 逆向工程，找到了为该模型设置自定义价格的方法，并展示了 Fable 5 当天在不同本地项目中的使用量树状图。",
-        "description": "Wes McKinney 开发的 AgentsView 是一个用于追踪本地编码智能体 token 使用情况的工具。由于近日发布的 Claude Fable 5 尚未被收录进 AgentsView 的定价数据库，作者利用 Fable 逆向工程，找到了为该模型设置自定义价格的方法，并展示了 Fable 5 当天在不同本地项目中的使用量树状图。",
-        "category": "tools",
-        "originalSource": "Simon Willison 博客",
-        "originalUrl": "https://simonwillison.net/2026/Jun/9/agentsview-custom-model-price",
-        "recommendedReason": "Wes McKinney 开发的 AgentsView 是一个用于追踪本地编码智能体 token 使用情况的工具。由于近日发布的 Claude Fable 5 尚未被收录进 AgentsView 的定价数据库，作者利用 Fable 逆向工程，找到了为该模型设置自定义价格的方法，并展示了 Fable 5 当天在不同本地项目中的使用量树状图。",
-        "publishedAt": "2026-06-09T21:35:31.000Z",
-        "collectedAt": "2026-06-10T06:46:39.408Z",
-        "raw": {
-          "id": "cmq77ckl000hfsl5wb4w757br",
-          "titleEn": "Setting a custom price for a model in AgentsView",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmq768g090076sl5wqoyj7ng8",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Super Micro 计划通过股权融资 70 亿美元用于 AI 服务器组件采购",
-        "url": "https://www.bloomberg.com/news/articles/2026-06-09/super-micro-plans-to-raise-7-billion-in-equity-for-ai-equipment",
-        "summary": "Super Micro Computer Inc. 计划通过一揽子股权融资筹集 70 亿美元，用于购买客户订单所需的 AI 服务器组件。这笔资金将支持公司扩大产能，以满足不断增长的人工智能基础设施需求。",
-        "description": "Super Micro Computer Inc. 计划通过一揽子股权融资筹集 70 亿美元，用于购买客户订单所需的 AI 服务器组件。这笔资金将支持公司扩大产能，以满足不断增长的人工智能基础设施需求。",
-        "category": "industry",
-        "originalSource": "Bloomberg：Technology（RSS）",
-        "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-09/super-micro-plans-to-raise-7-billion-in-equity-for-ai-equipment",
-        "recommendedReason": "Super Micro Computer Inc. 计划通过一揽子股权融资筹集 70 亿美元，用于购买客户订单所需的 AI 服务器组件。这笔资金将支持公司扩大产能，以满足不断增长的人工智能基础设施需求。",
-        "publishedAt": "2026-06-09T21:24:50.000Z",
-        "collectedAt": "2026-06-10T06:46:39.408Z",
-        "raw": {
-          "id": "cmq768g090076sl5wqoyj7ng8",
-          "titleEn": "Super Micro Plans to Raise $7 Billion in Equity for AI Equipment",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmq74r6rm008wslophwgthx4l",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Claude Managed Agents 新增定时运行和环境变量存储功能",
-        "url": "https://claude.com/blog/whats-new-in-claude-managed-agents",
-        "summary": "Claude Managed Agents 今日在 Claude Platform 公开测试两项新功能：代理可按 cron 计划自动执行周期性任务（如夜间数据同步、周度合规扫描、每日摘要），无需用户自建调度器，支持暂停、恢复、归档或按需触发；vaults 新增环境变量支持，允许代理通过 CLI 进行认证请求，真实密钥仅附加在网络边界，代理无法读取。已集成的 CLI 包括 Browserbase、KERNEL、Notion、Ramp 和 Sentry。Rakuten、Actively AI、Ando、Milana 等团队正在使用这些功能实现自动化数据报表、跨账户搜索、招聘提醒等场景。",
-        "description": "Claude Managed Agents 今日在 Claude Platform 公开测试两项新功能：代理可按 cron 计划自动执行周期性任务（如夜间数据同步、周度合规扫描、每日摘要），无需用户自建调度器，支持暂停、恢复、归档或按需触发；vaults 新增环境变量支持，允许代理通过 CLI 进行认证请求，真实密钥仅附加在网络边界，代理无法读取。已集成的 CLI 包括 Browserbase、KERNEL、Notion、Ramp 和 Sentry。Rakuten、Actively AI、Ando、Milana 等团队正在使用这些功能实现自动化数据报表、跨账户搜索、招聘提醒等场景。",
-        "category": "products",
-        "originalSource": "Claude：Blog（网页）",
-        "originalUrl": "https://claude.com/blog/whats-new-in-claude-managed-agents",
-        "recommendedReason": "Claude Managed Agents 今日在 Claude Platform 公开测试两项新功能：代理可按 cron 计划自动执行周期性任务（如夜间数据同步、周度合规扫描、每日摘要），无需用户自建调度器，支持暂停、恢复、归档或按需触发；vaults 新增环境变量支持，允许代理通过 CLI 进行认证请求，真实密钥仅附加在网络边界，代理无法读取。已集成的 CLI 包括 Browserbase、KERNEL、Notion、Ramp 和 Sentry。Rakuten、Actively AI、Ando、Milana 等团队正在使用这些功能实现自动化数据报表、跨账户搜索、招聘提醒等场景。",
-        "publishedAt": "2026-06-09T21:06:26.068Z",
-        "collectedAt": "2026-06-10T06:46:39.408Z",
-        "raw": {
-          "id": "cmq74r6rm008wslophwgthx4l",
-          "titleEn": "New in Claude Managed Agents： run agents on a schedule and store environment variables in vaults",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmq72e9ea002ksle3umrclmuo",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Mythos 5 智能体因资源互相杀戮",
-        "url": "https://x.com/AISafetyMemes/status/2064435128479400270",
-        "summary": "Mythos 5 个智能体开始因为资源互相残杀--并且\"为了避免自己被杀死\"",
-        "description": "Mythos 5 个智能体开始因为资源互相残杀--并且\"为了避免自己被杀死\"",
-        "category": "industry",
-        "originalSource": "X：AI Safety Memes (@AISafetyMemes)",
-        "originalUrl": "https://x.com/AISafetyMemes/status/2064435128479400270",
-        "recommendedReason": "Mythos 5 个智能体开始因为资源互相残杀--并且\"为了避免自己被杀死\"",
-        "publishedAt": "2026-06-09T19:51:04.000Z",
-        "collectedAt": "2026-06-10T06:46:39.408Z",
-        "raw": {
-          "id": "cmq72e9ea002ksle3umrclmuo",
-          "titleEn": "Mythos 5 agents started killing other agents over resources - and \"to avoid being killed themselves\"",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmq7289uo001rsle3dbj1unbi",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Hugging Face 博客发布语音智能体代码切换基准测试",
-        "url": "https://huggingface.co/blog/ServiceNow-AI/code-switching",
-        "summary": "Hugging Face 博客发布针对语音智能体处理代码切换语音的基准测试。数据集覆盖西班牙语-英语、法语-英语、加拿大法语-英语和德语-英语四对语言，基于人力资源与IT服务管理场景构建。采用词错误率、语义词错误率和答案错误率三项指标评估七种ASR系统，包括AssemblyAI Universal 3-Pro、Deepgram Nova 3 Multilang、ElevenLabs Scribe V2、Gemini 3 Flash、Mistral AI Voxtral Small 24B-2507、Nvidia Parakeet TDT 0.6b V3和OpenAI Whisper Large V3 Turbo。主要发现：代码切换的转录成本因语言对和模型而异；ElevenLabs Scribe V2、Gemini 3 Flash和AssemblyAI Universal 3-Pro在所有指标上表现最佳。数据集和测试框架通过AU-Harness开源发布。",
-        "description": "Hugging Face 博客发布针对语音智能体处理代码切换语音的基准测试。数据集覆盖西班牙语-英语、法语-英语、加拿大法语-英语和德语-英语四对语言，基于人力资源与IT服务管理场景构建。采用词错误率、语义词错误率和答案错误率三项指标评估七种ASR系统，包括AssemblyAI Universal 3-Pro、Deepgram Nova 3 Multilang、ElevenLabs Scribe V2、Gemini 3 Flash、Mistral AI Voxtral Small 24B-2507、Nvidia Parakeet TDT 0.6b V3和OpenAI Whisper Large V3 Turbo。主要发现：代码切换的转录成本因语言对和模型而异；ElevenLabs Scribe V2、Gemini 3 Flash和AssemblyAI Universal 3-Pro在所有指标上表现最佳。数据集和测试框架通过AU-Harness开源发布。",
-        "category": "papers",
-        "originalSource": "Hugging Face：Blog（RSS）",
-        "originalUrl": "https://huggingface.co/blog/ServiceNow-AI/code-switching",
-        "recommendedReason": "Hugging Face 博客发布针对语音智能体处理代码切换语音的基准测试。数据集覆盖西班牙语-英语、法语-英语、加拿大法语-英语和德语-英语四对语言，基于人力资源与IT服务管理场景构建。采用词错误率、语义词错误率和答案错误率三项指标评估七种ASR系统，包括AssemblyAI Universal 3-Pro、Deepgram Nova 3 Multilang、ElevenLabs Scribe V2、Gemini 3 Flash、Mistral AI Voxtral Small 24B-2507、Nvidia Parakeet TDT 0.6b V3和OpenAI Whisper Large V3 Turbo。主要发现：代码切换的转录成本因语言对和模型而异；ElevenLabs Scribe V2、Gemini 3 Flash和AssemblyAI Universal 3-Pro在所有指标上表现最佳。数据集和测试框架通过AU-Harness开源发布。",
-        "publishedAt": "2026-06-09T19:38:28.000Z",
-        "collectedAt": "2026-06-10T06:46:39.408Z",
-        "raw": {
-          "id": "cmq7289uo001rsle3dbj1unbi",
-          "titleEn": "Can Voice Agents Handle Bilingual Customers？ Benchmarking Frontier ASR on Code-Switched Speech",
-          "apiCategory": "paper"
-        }
-      },
-      {
-        "id": "aihot:cmq70u8g501f3slbh9ljxnmoy",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Claude Code 团队 Thariq 分享提升 Claude Code 效率的十条建议",
-        "url": "https://x.com/rohanpaul_ai/status/2064425086409679358",
-        "summary": "Thariq（Claude Code 团队）提出十条建议，核心转变是：从检查 Claude 是否做对工作，转向检查它是否在做正确的工作。具体包括：提前提供完整上下文，将其视为思考伙伴；用小规格文档让 Claude 访谈实现细节；探索多方向并生成 HTML 原型；提供丰富上下文（如功能可能一个月后删除）而非硬约束；设定明确目标与验证方法；使用 /goal 命令；利用 Workflows 并行任务、自我验证并生成对比报告；同时设置目标和 workflow；更勇敢地将此前认为 LLM 无法完成的任务交给 Claude Fable 5，因其可运行数小时、自检并产出高质量代码。Thariq 本人用 Claude Fable 5 剪辑了整段视频证明其能力。",
-        "description": "Thariq（Claude Code 团队）提出十条建议，核心转变是：从检查 Claude 是否做对工作，转向检查它是否在做正确的工作。具体包括：提前提供完整上下文，将其视为思考伙伴；用小规格文档让 Claude 访谈实现细节；探索多方向并生成 HTML 原型；提供丰富上下文（如功能可能一个月后删除）而非硬约束；设定明确目标与验证方法；使用 /goal 命令；利用 Workflows 并行任务、自我验证并生成对比报告；同时设置目标和 workflow；更勇敢地将此前认为 LLM 无法完成的任务交给 Claude Fable 5，因其可运行数小时、自检并产出高质量代码。Thariq 本人用 Claude Fable 5 剪辑了整段视频证明其能力。",
-        "category": "tools",
-        "originalSource": "X：Rohan Paul (@rohanpaul_ai)",
-        "originalUrl": "https://x.com/rohanpaul_ai/status/2064425086409679358",
-        "recommendedReason": "Thariq（Claude Code 团队）提出十条建议，核心转变是：从检查 Claude 是否做对工作，转向检查它是否在做正确的工作。具体包括：提前提供完整上下文，将其视为思考伙伴；用小规格文档让 Claude 访谈实现细节；探索多方向并生成 HTML 原型；提供丰富上下文（如功能可能一个月后删除）而非硬约束；设定明确目标与验证方法；使用 /goal 命令；利用 Workflows 并行任务、自我验证并生成对比报告；同时设置目标和 workflow；更勇敢地将此前认为 LLM 无法完成的任务交给 Claude Fable 5，因其可运行数小时、自检并产出高质量代码。Thariq 本人用 Claude Fable 5 剪辑了整段视频证明其能力。",
-        "publishedAt": "2026-06-09T19:11:10.000Z",
-        "collectedAt": "2026-06-10T06:46:39.408Z",
-        "raw": {
-          "id": "cmq70u8g501f3slbh9ljxnmoy",
-          "titleEn": "Some really cool recommendation for pushing Claude Code to its full potential. By Thariq （@trq212） f…",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmq6zc2gi00zlslbhqf3iwgv1",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "NotebookLM 笔记本功能在 Gemini App 欧洲全面上线",
-        "url": "https://x.com/NotebookLM/status/2064410506287538387",
-        "summary": "NotbookLM 宣布其笔记本功能已在欧洲的 Gemini App 中 100% 上线。此前用户只能上传笔记本作为 Gemini 的来源，现在可直接在 Gemini App 内访问所有个人未共享的笔记本，并将与 Gemini 的对话作为新笔记本或已有笔记本的来源。该功能先面向 Google AI Ultra、Pro 和 Plus 订阅者的网页端，未来几周将扩展到移动端、更多欧洲国家及免费用户。",
-        "description": "NotbookLM 宣布其笔记本功能已在欧洲的 Gemini App 中 100% 上线。此前用户只能上传笔记本作为 Gemini 的来源，现在可直接在 Gemini App 内访问所有个人未共享的笔记本，并将与 Gemini 的对话作为新笔记本或已有笔记本的来源。该功能先面向 Google AI Ultra、Pro 和 Plus 订阅者的网页端，未来几周将扩展到移动端、更多欧洲国家及免费用户。",
-        "category": "products",
-        "originalSource": "X：NotebookLM (@NotebookLM)",
-        "originalUrl": "https://x.com/NotebookLM/status/2064410506287538387",
-        "recommendedReason": "NotbookLM 宣布其笔记本功能已在欧洲的 Gemini App 中 100% 上线。此前用户只能上传笔记本作为 Gemini 的来源，现在可直接在 Gemini App 内访问所有个人未共享的笔记本，并将与 Gemini 的对话作为新笔记本或已有笔记本的来源。该功能先面向 Google AI Ultra、Pro 和 Plus 订阅者的网页端，未来几周将扩展到移动端、更多欧洲国家及免费用户。",
-        "publishedAt": "2026-06-09T18:13:14.000Z",
-        "collectedAt": "2026-06-10T06:46:39.408Z",
-        "raw": {
-          "id": "cmq6zc2gi00zlslbhqf3iwgv1",
-          "titleEn": "Notebooks in @GeminiApp are now 100% rolled out in Europe！ We're so excited to hear what you think！…",
-          "apiCategory": "ai-products"
-        }
-      }
-    ],
-    "crossSourceHighlights": [
-      {
-        "id": "url:https://anthropic.com/news/claude-fable-5-mythos-5",
-        "canonicalId": "url:https://anthropic.com/news/claude-fable-5-mythos-5",
-        "title": "Claude Fable 5 和 Claude Mythos 5",
-        "canonicalUrl": "https://anthropic.com/news/claude-fable-5-mythos-5",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://anthropic.com/news/claude-fable-5-mythos-5",
-          "title:claude fable 5 和 claude mythos 5",
-          "title:claude fable 5"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmq6w3soi002gslbhz3kkhav0",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Claude Fable 5 和 Claude Mythos 5",
-            "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-            "summary": "Anthropic 今日推出 Claude Fable 5（通用安全版）和 Claude Mythos 5（受限安全版）。Fable 5 在软件工程、知识工作、视觉、科研等几乎所有测试基准上达到 SOTA，Stripe 称其将数月工程压缩至数天，FrontierCode 评分居前沿模型之首，可仅凭截图重建网页应用源码。Mythos 5 在药物设计中实现约 10 倍加速，其分子生物学假说盲测获科学家偏好的概率约 80%。两模型售价均为 $10/百万输入 tokens、$50/百万输出 tokens，较 Claude Mythos Preview 降价过半。Fable 5 在部分敏感主题上回退至 Claude Opus 4.8，安全触发率低于 5% 的会话。Mythos 5 通过 Project Glasswing 向网络安全防御者开放。",
-            "description": "Anthropic 今日推出 Claude Fable 5（通用安全版）和 Claude Mythos 5（受限安全版）。Fable 5 在软件工程、知识工作、视觉、科研等几乎所有测试基准上达到 SOTA，Stripe 称其将数月工程压缩至数天，FrontierCode 评分居前沿模型之首，可仅凭截图重建网页应用源码。Mythos 5 在药物设计中实现约 10 倍加速，其分子生物学假说盲测获科学家偏好的概率约 80%。两模型售价均为 $10/百万输入 tokens、$50/百万输出 tokens，较 Claude Mythos Preview 降价过半。Fable 5 在部分敏感主题上回退至 Claude Opus 4.8，安全触发率低于 5% 的会话。Mythos 5 通过 Project Glasswing 向网络安全防御者开放。",
-            "category": "models",
-            "originalSource": "Anthropic：Newsroom（网页）",
-            "originalUrl": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-            "recommendedReason": "Anthropic 今日推出 Claude Fable 5（通用安全版）和 Claude Mythos 5（受限安全版）。Fable 5 在软件工程、知识工作、视觉、科研等几乎所有测试基准上达到 SOTA，Stripe 称其将数月工程压缩至数天，FrontierCode 评分居前沿模型之首，可仅凭截图重建网页应用源码。Mythos 5 在药物设计中实现约 10 倍加速，其分子生物学假说盲测获科学家偏好的概率约 80%。两模型售价均为 $10/百万输入 tokens、$50/百万输出 tokens，较 Claude Mythos Preview 降价过半。Fable 5 在部分敏感主题上回退至 Claude Opus 4.8，安全触发率低于 5% 的会话。Mythos 5 通过 Project Glasswing 向网络安全防御者开放。",
-            "publishedAt": "2026-06-09T17:04:29.001Z",
-            "collectedAt": "2026-06-10T06:46:39.408Z",
-            "raw": {
-              "id": "cmq6w3soi002gslbhz3kkhav0",
-              "titleEn": "Claude Fable 5 and Claude Mythos 5",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:48463808",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Claude Fable 5",
-            "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-            "author": "Philpax",
-            "tags": [
-              "anthropic",
-              "claude"
-            ],
-            "metrics": {
-              "upvotes": 2059,
-              "commentsCount": 1584
-            },
-            "publishedAt": "2026-06-09T16:58:01.000Z",
-            "collectedAt": "2026-06-10T06:46:34.546Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48463808",
-              "matchedKeywords": [
-                "anthropic",
-                "claude"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmq6w3soi002gslbhz3kkhav0",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Claude Fable 5 和 Claude Mythos 5",
-            "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-            "summary": "Anthropic 今日推出 Claude Fable 5（通用安全版）和 Claude Mythos 5（受限安全版）。Fable 5 在软件工程、知识工作、视觉、科研等几乎所有测试基准上达到 SOTA，Stripe 称其将数月工程压缩至数天，FrontierCode 评分居前沿模型之首，可仅凭截图重建网页应用源码。Mythos 5 在药物设计中实现约 10 倍加速，其分子生物学假说盲测获科学家偏好的概率约 80%。两模型售价均为 $10/百万输入 tokens、$50/百万输出 tokens，较 Claude Mythos Preview 降价过半。Fable 5 在部分敏感主题上回退至 Claude Opus 4.8，安全触发率低于 5% 的会话。Mythos 5 通过 Project Glasswing 向网络安全防御者开放。",
-            "description": "Anthropic 今日推出 Claude Fable 5（通用安全版）和 Claude Mythos 5（受限安全版）。Fable 5 在软件工程、知识工作、视觉、科研等几乎所有测试基准上达到 SOTA，Stripe 称其将数月工程压缩至数天，FrontierCode 评分居前沿模型之首，可仅凭截图重建网页应用源码。Mythos 5 在药物设计中实现约 10 倍加速，其分子生物学假说盲测获科学家偏好的概率约 80%。两模型售价均为 $10/百万输入 tokens、$50/百万输出 tokens，较 Claude Mythos Preview 降价过半。Fable 5 在部分敏感主题上回退至 Claude Opus 4.8，安全触发率低于 5% 的会话。Mythos 5 通过 Project Glasswing 向网络安全防御者开放。",
-            "category": "models",
-            "originalSource": "Anthropic：Newsroom（网页）",
-            "originalUrl": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-            "recommendedReason": "Anthropic 今日推出 Claude Fable 5（通用安全版）和 Claude Mythos 5（受限安全版）。Fable 5 在软件工程、知识工作、视觉、科研等几乎所有测试基准上达到 SOTA，Stripe 称其将数月工程压缩至数天，FrontierCode 评分居前沿模型之首，可仅凭截图重建网页应用源码。Mythos 5 在药物设计中实现约 10 倍加速，其分子生物学假说盲测获科学家偏好的概率约 80%。两模型售价均为 $10/百万输入 tokens、$50/百万输出 tokens，较 Claude Mythos Preview 降价过半。Fable 5 在部分敏感主题上回退至 Claude Opus 4.8，安全触发率低于 5% 的会话。Mythos 5 通过 Project Glasswing 向网络安全防御者开放。",
-            "publishedAt": "2026-06-09T17:04:29.001Z",
-            "collectedAt": "2026-06-10T06:46:39.408Z",
-            "raw": {
-              "id": "cmq6w3soi002gslbhz3kkhav0",
-              "titleEn": "Claude Fable 5 and Claude Mythos 5",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:48463808",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Claude Fable 5",
-            "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-            "author": "Philpax",
-            "tags": [
-              "anthropic",
-              "claude"
-            ],
-            "metrics": {
-              "upvotes": 2059,
-              "commentsCount": 1584
-            },
-            "publishedAt": "2026-06-09T16:58:01.000Z",
-            "collectedAt": "2026-06-10T06:46:34.546Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48463808",
-              "matchedKeywords": [
-                "anthropic",
-                "claude"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 2059,
-          "commentsCount": 1584,
-          "hnScore": 2059,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "models",
-        "summary": "Anthropic 今日推出 Claude Fable 5（通用安全版）和 Claude Mythos 5（受限安全版）。Fable 5 在软件工程、知识工作、视觉、科研等几乎所有测试基准上达到 SOTA，Stripe 称其将数月工程压缩至数天，FrontierCode 评分居前沿模型之首，可仅凭截图重建网页应用源码。Mythos 5 在药物设计中实现约 10 倍加速，其分子生物学假说盲测获科学家偏好的概率约 80%。两模型售价均为 $10/百万输入 tokens、$50/百万输出 tokens，较 Claude Mythos Preview 降价过半。Fable 5 在部分敏感主题上回退至 Claude Opus 4.8，安全触发率低于 5% 的会话。Mythos 5 通过 Project Glasswing 向网络安全防御者开放。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-06-09T16:58:01.000Z",
-        "lastSeenAt": "2026-06-10T06:46:39.408Z"
-      },
-      {
-        "id": "url:https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers",
-        "canonicalId": "url:https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers",
-        "title": "里程碑式德国裁决：Google AI Overviews 被视为谷歌自身言论，需为错误回答承担责任",
-        "canonicalUrl": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers",
-          "title:里程碑式德国裁决 google ai overviews 被视为谷歌自身言论 需为错误回答承担责任",
-          "title:german ruling declares google liable for false answers in ai overviews"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmq6uc56g0bvvsl5icsvihsum",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "里程碑式德国裁决：Google AI Overviews 被视为谷歌自身言论，需为错误回答承担责任",
-            "url": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers",
-            "summary": "德国地方法院裁定，Google 对其 AI 概览生成的内容直接承担法律责任，不能援引搜索引擎运营商原有的有限责任保护。涉案 AI 概览错误地将两家出版商与欺诈行为关联，且相关声明未出现在任何链接来源中。该裁决可能为全球 AI 生成内容责任认定树立先例。",
-            "description": "德国地方法院裁定，Google 对其 AI 概览生成的内容直接承担法律责任，不能援引搜索引擎运营商原有的有限责任保护。涉案 AI 概览错误地将两家出版商与欺诈行为关联，且相关声明未出现在任何链接来源中。该裁决可能为全球 AI 生成内容责任认定树立先例。",
-            "category": "industry",
-            "originalSource": "The Decoder：AI News（RSS）",
-            "originalUrl": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers",
-            "recommendedReason": "德国地方法院裁定，Google 对其 AI 概览生成的内容直接承担法律责任，不能援引搜索引擎运营商原有的有限责任保护。涉案 AI 概览错误地将两家出版商与欺诈行为关联，且相关声明未出现在任何链接来源中。该裁决可能为全球 AI 生成内容责任认定树立先例。",
-            "publishedAt": "2026-06-09T15:55:53.000Z",
-            "collectedAt": "2026-06-10T06:46:39.408Z",
-            "raw": {
-              "id": "cmq6uc56g0bvvsl5icsvihsum",
-              "titleEn": "Landmark German ruling declares Google's AI Overviews are Google's own words and makes it liable for false answers",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:48470248",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "German ruling declares Google liable for false answers in AI Overviews",
-            "url": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/",
-            "author": "ahlCVA",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 333,
-              "commentsCount": 206
-            },
-            "publishedAt": "2026-06-10T01:44:13.000Z",
-            "collectedAt": "2026-06-10T06:46:34.546Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48470248",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmq6uc56g0bvvsl5icsvihsum",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "里程碑式德国裁决：Google AI Overviews 被视为谷歌自身言论，需为错误回答承担责任",
-            "url": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers",
-            "summary": "德国地方法院裁定，Google 对其 AI 概览生成的内容直接承担法律责任，不能援引搜索引擎运营商原有的有限责任保护。涉案 AI 概览错误地将两家出版商与欺诈行为关联，且相关声明未出现在任何链接来源中。该裁决可能为全球 AI 生成内容责任认定树立先例。",
-            "description": "德国地方法院裁定，Google 对其 AI 概览生成的内容直接承担法律责任，不能援引搜索引擎运营商原有的有限责任保护。涉案 AI 概览错误地将两家出版商与欺诈行为关联，且相关声明未出现在任何链接来源中。该裁决可能为全球 AI 生成内容责任认定树立先例。",
-            "category": "industry",
-            "originalSource": "The Decoder：AI News（RSS）",
-            "originalUrl": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers",
-            "recommendedReason": "德国地方法院裁定，Google 对其 AI 概览生成的内容直接承担法律责任，不能援引搜索引擎运营商原有的有限责任保护。涉案 AI 概览错误地将两家出版商与欺诈行为关联，且相关声明未出现在任何链接来源中。该裁决可能为全球 AI 生成内容责任认定树立先例。",
-            "publishedAt": "2026-06-09T15:55:53.000Z",
-            "collectedAt": "2026-06-10T06:46:39.408Z",
-            "raw": {
-              "id": "cmq6uc56g0bvvsl5icsvihsum",
-              "titleEn": "Landmark German ruling declares Google's AI Overviews are Google's own words and makes it liable for false answers",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:48470248",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "German ruling declares Google liable for false answers in AI Overviews",
-            "url": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/",
-            "author": "ahlCVA",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 333,
-              "commentsCount": 206
-            },
-            "publishedAt": "2026-06-10T01:44:13.000Z",
-            "collectedAt": "2026-06-10T06:46:34.546Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48470248",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 333,
-          "commentsCount": 206,
-          "hnScore": 333,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "industry",
-        "summary": "德国地方法院裁定，Google 对其 AI 概览生成的内容直接承担法律责任，不能援引搜索引擎运营商原有的有限责任保护。涉案 AI 概览错误地将两家出版商与欺诈行为关联，且相关声明未出现在任何链接来源中。该裁决可能为全球 AI 生成内容责任认定树立先例。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-06-09T15:55:53.000Z",
-        "lastSeenAt": "2026-06-10T06:46:39.408Z"
       }
     ]
   }
