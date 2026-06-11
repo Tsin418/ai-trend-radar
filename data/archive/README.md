@@ -1,11 +1,11 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-11T16:33:56.550Z
+Updated: 2026-06-11T19:57:20.017Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-12 | daily | [AI Developer Radar｜Daily｜2026-06-12](2026/06/2026-06-12-daily.md) | thedaviddias/Front-End-Checklist, stas00/ml-engineering, netdata/netdata, deepspeedai/DeepSpeed, PatrickJS/awesome-cursorrules |
+| 2026-06-12 | daily | [AI Developer Radar｜Daily｜2026-06-12](2026/06/2026-06-12-daily.md) | thedaviddias/Front-End-Checklist, netdata/netdata, stas00/ml-engineering, automazeio/ccpm, deepspeedai/DeepSpeed |
 | 2026-06-11 | daily | [AI Developer Radar｜Daily｜2026-06-11](2026/06/2026-06-11-daily.md) | masterking32/MasterDnsVPN, soxoj/maigret, thedaviddias/Front-End-Checklist, netdata/netdata, stas00/ml-engineering |
 | 2026-06-10 | daily | [AI Developer Radar｜Daily｜2026-06-10](2026/06/2026-06-10-daily.md) | maziyarpanahi/openmed, google/skills, luongnv89/claude-howto, ChatGPTNextWeb/NextChat, deepspeedai/DeepSpeed |
 | 2026-06-09 | daily | [AI Developer Radar｜Daily｜2026-06-09](2026/06/2026-06-09-daily.md) | Andyyyy64/whichllm, phuryn/pm-skills, roboflow/supervision, opencv/opencv, yikart/AiToEarn |
