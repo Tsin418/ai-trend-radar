@@ -1,10 +1,184 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-06-11T14:31:56.251Z",
+  "generatedAt": "2026-06-11T16:33:56.504Z",
   "sections": {
     "productLaunches": [],
-    "modelDemoSignals": [],
+    "modelDemoSignals": [
+      {
+        "id": "http://arxiv.org/abs/2606.12412v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models",
+        "url": "https://arxiv.org/pdf/2606.12412v1",
+        "description": "Vision-language models (VLMs) project images into hundreds to thousands of visual tokens, making decoder inference expensive in both attention computation and KV-cache memory. Existing visual-token reduction methods largely follow a rank-and-remove paradigm: they score visual tokens, keep a compact subset, and permanently discard the rest. We show that this irreversible action is fragile because visual-token importance changes across decoder depth; tokens ranked low at one stage may become relev",
+        "summary": "Vision-language models (VLMs) project images into hundreds to thousands of visual tokens, making decoder inference expensive in both attention computation and KV-cache memory. Existing visual-token reduction methods largely follow a rank-and-remove paradigm: they score visual tokens, keep a compact subset, and permanently discard the rest. We show that this irreversible action is fragile because visual-token importance changes across decoder depth; tokens ranked low at one stage may become relevant in later layers, especially for grounding-sensitive queries. We propose Reroute, a training-free plug-in that replaces removal with recoverable routing. At each routing stage, selected vision tokens pass through decoder blocks, while deferred tokens bypass the stage and re-enter the candidate pool at the next routing decision. Reroute reuses existing attention-score ranking rules and stage-wise schedules, preserving the theoretical TFLOPs and KV-cache budget class of the pruning method it augments. Across FastV, PDrop, and Nüwa variants on LLaVA-1.5 and Qwen backbones, reroute improves grounding under aggressive token reduction while maintaining general VQA performance. These results suggest that VLM token reduction should not be viewed only as irreversible pruning, but also as recoverable routing. The code can be found here: https://github.com/elmma/mllm-reroute/",
+        "author": "Cheng-Yu Yang, Shao-Yuan Lo, Yu-Lun Liu",
+        "tags": [
+          "cs.CV",
+          "cs.AI",
+          "llm",
+          "rag"
+        ],
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-06-10T17:59:57Z",
+        "updatedAt": "2026-06-10T17:59:57Z",
+        "collectedAt": "2026-06-11T16:33:10.191Z",
+        "metrics": {},
+        "raw": {
+          "abstractUrl": "http://arxiv.org/abs/2606.12412v1",
+          "authors": [
+            "Cheng-Yu Yang",
+            "Shao-Yuan Lo",
+            "Yu-Lun Liu"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, rag"
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.12411v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Context-Driven Incremental Compression for Multi-Turn Dialogue Generation",
+        "url": "https://arxiv.org/pdf/2606.12411v1",
+        "description": "Modern conversational agents condition on an ever-growing dialogue history at each turn, incurring redundant attention and encoding costs that grow with conversation length. Naive truncation or summarization degrades fidelity, while existing context compressors lack cross-turn memory sharing or revision, causing information loss and compounding errors in long dialogues. We revisit the context compression under conversational dynamics and empirically present its fragility. To improve both efficie",
+        "summary": "Modern conversational agents condition on an ever-growing dialogue history at each turn, incurring redundant attention and encoding costs that grow with conversation length. Naive truncation or summarization degrades fidelity, while existing context compressors lack cross-turn memory sharing or revision, causing information loss and compounding errors in long dialogues. We revisit the context compression under conversational dynamics and empirically present its fragility. To improve both efficiency and robustness, we introduce Context-Driven Incremental Compression (C-DIC), which treats a conversation as interleaved contextual threads and stores revisable per-thread compression states in a single, compact dialogue memory. At each turn, a lightweight retrieve, revise, and write-back loop shares information across turns and updates stale memories, stabilizing long-horizon behavior. In addition, we adapt truncated backpropagation-through-time (TBPTT) to our multi-turn setting, learning cross-turn dependencies without full-history backpropagation. Extensive experiments on long-form dialogue benchmarks demonstrate superior performance and efficiency of C-DIC; notably, C-DIC shows stable inference latency and perplexity over hundreds of dialogue turns, supporting a scalable path to high-quality dialogue modeling.",
+        "author": "Yeongseo Jung, Jaehyeok Kim, Eunseo Jung, Jiachuan Wang, Yongqi Zhang, Ka Chun Cheung, Simon See, Lei Chen",
+        "tags": [
+          "cs.CL",
+          "cs.LG",
+          "agent",
+          "rag",
+          "benchmark"
+        ],
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-06-10T17:59:54Z",
+        "updatedAt": "2026-06-10T17:59:54Z",
+        "collectedAt": "2026-06-11T16:33:10.191Z",
+        "metrics": {},
+        "raw": {
+          "abstractUrl": "http://arxiv.org/abs/2606.12411v1",
+          "authors": [
+            "Yeongseo Jung",
+            "Jaehyeok Kim",
+            "Eunseo Jung",
+            "Jiachuan Wang",
+            "Yongqi Zhang",
+            "Ka Chun Cheung",
+            "Simon See",
+            "Lei Chen"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: agent, rag, benchmark"
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.12402v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?",
+        "url": "https://arxiv.org/pdf/2606.12402v1",
+        "description": "Vision-Language Models (VLMs) are increasingly deployed as high-level planners for embodied agents, with an emerging strategy of scaling test-time compute to improve capability. However, we observe that doing so increases latency, token usage, and FLOPs while yielding uneven, often diminishing gains in downstream success, limiting where embodied agents can be deployed. We argue that choosing when and where to spend test-time compute is central to bringing frontier performance to the real world. ",
+        "summary": "Vision-Language Models (VLMs) are increasingly deployed as high-level planners for embodied agents, with an emerging strategy of scaling test-time compute to improve capability. However, we observe that doing so increases latency, token usage, and FLOPs while yielding uneven, often diminishing gains in downstream success, limiting where embodied agents can be deployed. We argue that choosing when and where to spend test-time compute is central to bringing frontier performance to the real world. We introduce DIRECT, a routing framework that uses multimodal scene context to allocate compute per prompt, improving the success--cost Pareto frontier over fixed model selection. Across three dominant scaling axes, namely chain-of-thought depth, model size, and memory history, our experiments on VLABench and RoboMME show that test-time compute is not a uniform lever: different axes yield qualitatively distinct capability gains. We validate these insights on a physical Franka arm in a DROID setup spanning zero-shot manipulation and long-horizon chaining, where our router matches or exceeds a stronger model's success rate at up to 65% lower average latency. Ultimately, our results show that naively scaling test-time compute is wasteful, and that DIRECT can provide frontier-level embodied planning in robotic systems at a fraction of the cost. Project page can be found at jadee-dao.github.io/direct/.",
+        "author": "Jadelynn Dao, Milan Ganai, Yasmina Abukhadra, Ajay Sridhar, Mozhgan Nasr Azadani, Katie Luo, Clark Barrett, Jiajun Wu, Chelsea Finn, Marco Pavone",
+        "tags": [
+          "cs.RO",
+          "cs.AI",
+          "cs.CV",
+          "agent",
+          "rag"
+        ],
+        "category": "cs.RO",
+        "language": "en",
+        "publishedAt": "2026-06-10T17:58:49Z",
+        "updatedAt": "2026-06-10T17:58:49Z",
+        "collectedAt": "2026-06-11T16:33:10.191Z",
+        "metrics": {},
+        "raw": {
+          "abstractUrl": "http://arxiv.org/abs/2606.12402v1",
+          "authors": [
+            "Jadelynn Dao",
+            "Milan Ganai",
+            "Yasmina Abukhadra",
+            "Ajay Sridhar",
+            "Mozhgan Nasr Azadani",
+            "Katie Luo",
+            "Clark Barrett",
+            "Jiajun Wu",
+            "Chelsea Finn",
+            "Marco Pavone"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: agent, rag"
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.12400v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Doc-to-Atom: Learning to Compile and Compose Memory Atoms",
+        "url": "https://arxiv.org/pdf/2606.12400v1",
+        "description": "Long input sequences are central to document understanding and multi-step reasoning in Large Language Models, yet the quadratic cost of attention makes inference both memory-intensive and slow. Context distillation mitigates this by compressing contextual information into model parameters, and recent work such as Doc-to-LoRA amortizes context distillation into a single forward pass that generates one LoRA adapter per document. However, producing a single monolithic adapter for all queries leads ",
+        "summary": "Long input sequences are central to document understanding and multi-step reasoning in Large Language Models, yet the quadratic cost of attention makes inference both memory-intensive and slow. Context distillation mitigates this by compressing contextual information into model parameters, and recent work such as Doc-to-LoRA amortizes context distillation into a single forward pass that generates one LoRA adapter per document. However, producing a single monolithic adapter for all queries leads to irrelevant-query interference, limited compositional recall, and poor scalability to long-document reasoning. To address these challenges, we propose Doc-to-Atom (Doc2Atom), a compositional parametric memory framework that decomposes each document into semantically typed knowledge atoms. Each atom is compiled into an independent micro-LoRA adapter and a provenance retrieval key. At inference time, a lightweight query router selects and assembles only the relevant atoms into a query-specific adapter, which is then injected into a frozen base model. The entire system is trained end-to-end through a multi-objective distillation framework. Experiments on six diverse QA benchmarks demonstrate that Doc2Atom outperforms Doc-to-LoRA baselines while reducing the memory cost of document internalization.",
+        "author": "Xingjian Diao, Wenbo Li, Yashas Malur Saidutta, Avinash Amballa, Lazar Valkov, Srinivas Chappidi",
+        "tags": [
+          "cs.CL",
+          "cs.IR",
+          "large language model",
+          "benchmark"
+        ],
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-06-10T17:58:20Z",
+        "updatedAt": "2026-06-10T17:58:20Z",
+        "collectedAt": "2026-06-11T16:33:10.191Z",
+        "metrics": {},
+        "raw": {
+          "abstractUrl": "http://arxiv.org/abs/2606.12400v1",
+          "authors": [
+            "Xingjian Diao",
+            "Wenbo Li",
+            "Yashas Malur Saidutta",
+            "Avinash Amballa",
+            "Lazar Valkov",
+            "Srinivas Chappidi"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, benchmark"
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.12397v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
+        "url": "https://arxiv.org/pdf/2606.12397v1",
+        "description": "Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to ",
+        "summary": "Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to align each router row with the principal singular direction of the associated expert, as this direction provides the most expressive mathematical description of a matrix. Based on this principle, we propose a router redesign with Manifold Power Iteration (MPI). Specifically, it introduces a \"Power-then-Retract\" paradigm, where a power iteration step is performed on the router weights, followed by a retraction to impose a norm constraint to ensure both efficiency and stability. Theoretically, we show that MPI drives router rows to converge toward the principal singular directions of associated experts. Empirically, we pretrain MoE model across scales from 1B to 11B parameters to confirm that this alignment facilitates more effective MoE models.",
+        "author": "Songhao Wu, Ang Lv, Ruobing Xie, Yankai Lin",
+        "tags": [
+          "cs.LG",
+          "cs.AI",
+          "cs.CL",
+          "alignment"
+        ],
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-06-10T17:57:36Z",
+        "updatedAt": "2026-06-10T17:57:36Z",
+        "collectedAt": "2026-06-11T16:33:10.191Z",
+        "metrics": {},
+        "raw": {
+          "abstractUrl": "http://arxiv.org/abs/2606.12397v1",
+          "authors": [
+            "Songhao Wu",
+            "Ang Lv",
+            "Ruobing Xie",
+            "Yankai Lin"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: alignment"
+      }
+    ],
     "developerBuzz": [
       {
         "id": "hackernews:48463808",
@@ -18,11 +192,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 2578,
-          "commentsCount": 2117
+          "upvotes": 2581,
+          "commentsCount": 2118
         },
         "publishedAt": "2026-06-09T16:58:01.000Z",
-        "collectedAt": "2026-06-11T14:31:56.635Z",
+        "collectedAt": "2026-06-11T16:33:09.982Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48463808",
           "matchedKeywords": [
@@ -42,11 +216,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 1020,
+          "upvotes": 1021,
           "commentsCount": 495
         },
         "publishedAt": "2026-06-09T21:19:11.000Z",
-        "collectedAt": "2026-06-11T14:31:56.635Z",
+        "collectedAt": "2026-06-11T16:33:09.982Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48467896",
           "matchedKeywords": [
@@ -65,11 +239,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 987,
-          "commentsCount": 526
+          "upvotes": 994,
+          "commentsCount": 528
         },
         "publishedAt": "2026-06-10T01:44:13.000Z",
-        "collectedAt": "2026-06-11T14:31:56.635Z",
+        "collectedAt": "2026-06-11T16:33:09.982Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48470248",
           "matchedKeywords": [
@@ -89,11 +263,11 @@
           "anthropic"
         ],
         "metrics": {
-          "upvotes": 527,
-          "commentsCount": 464
+          "upvotes": 554,
+          "commentsCount": 487
         },
         "publishedAt": "2026-06-10T16:42:00.000Z",
-        "collectedAt": "2026-06-11T14:31:56.635Z",
+        "collectedAt": "2026-06-11T16:33:09.982Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48478969",
           "matchedKeywords": [
@@ -113,11 +287,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1228,
-          "commentsCount": 426
+          "upvotes": 1231,
+          "commentsCount": 427
         },
         "publishedAt": "2026-06-10T00:29:01.000Z",
-        "collectedAt": "2026-06-11T14:31:56.635Z",
+        "collectedAt": "2026-06-11T16:33:09.982Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48469658",
           "matchedKeywords": [
@@ -128,22 +302,122 @@
     ],
     "aihotHighlights": [
       {
-        "id": "aihot:cmq9l6vwe0cvkslld7oe8wsxa",
+        "id": "aihot:cmq9ob4g50dqhslldg9noqyw9",
         "source": "aihot",
         "sourceType": "curated_trend",
-        "title": "Runway深化与狮门影业合作创原IP",
-        "url": "https://x.com/runwayml/status/2065072377596088525",
-        "summary": "今天，我们正在深化与狮门影业的合作，推出一系列新举措，包括一个专注于共同打造原创IP的联合开发项目。详情请见下方链接。",
-        "description": "今天，我们正在深化与狮门影业的合作，推出一系列新举措，包括一个专注于共同打造原创IP的联合开发项目。详情请见下方链接。",
+        "title": "Prometheus 融资120亿美元，估值410亿美元，定位\"人工通用工程师\"",
+        "url": "https://x.com/kimmonismus/status/2065097988859744503",
+        "summary": "杰夫·贝佐斯旗下AI公司Prometheus在成立仅7个月、尚无任何产品交付的情况下，以410亿美元估值完成120亿美元融资（最初估值62亿美元）。该公司定位为\"人工通用工程师\"，目标是将设计到制造的循环压缩10倍以上。但物理经济无法像互联网数据那样抓取，缺乏制造业训练数据。为此，Prometheus计划斥资1000亿美元收购传统工业企业，通过获取工厂生成的数据构建护城河。",
+        "description": "杰夫·贝佐斯旗下AI公司Prometheus在成立仅7个月、尚无任何产品交付的情况下，以410亿美元估值完成120亿美元融资（最初估值62亿美元）。该公司定位为\"人工通用工程师\"，目标是将设计到制造的循环压缩10倍以上。但物理经济无法像互联网数据那样抓取，缺乏制造业训练数据。为此，Prometheus计划斥资1000亿美元收购传统工业企业，通过获取工厂生成的数据构建护城河。",
         "category": "industry",
-        "originalSource": "X：Runway (@runwayml)",
-        "originalUrl": "https://x.com/runwayml/status/2065072377596088525",
-        "recommendedReason": "今天，我们正在深化与狮门影业的合作，推出一系列新举措，包括一个专注于共同打造原创IP的联合开发项目。详情请见下方链接。",
-        "publishedAt": "2026-06-11T14:03:16.000Z",
-        "collectedAt": "2026-06-11T14:32:02.869Z",
+        "originalSource": "X：Kim (@kimmonismus)",
+        "originalUrl": "https://x.com/kimmonismus/status/2065097988859744503",
+        "recommendedReason": "杰夫·贝佐斯旗下AI公司Prometheus在成立仅7个月、尚无任何产品交付的情况下，以410亿美元估值完成120亿美元融资（最初估值62亿美元）。该公司定位为\"人工通用工程师\"，目标是将设计到制造的循环压缩10倍以上。但物理经济无法像互联网数据那样抓取，缺乏制造业训练数据。为此，Prometheus计划斥资1000亿美元收购传统工业企业，通过获取工厂生成的数据构建护城河。",
+        "publishedAt": "2026-06-11T15:45:02.000Z",
+        "collectedAt": "2026-06-11T16:33:15.007Z",
         "raw": {
-          "id": "cmq9l6vwe0cvkslld7oe8wsxa",
-          "titleEn": "Today， we're deepening our partnership with Lionsgate with a slate of new initiatives， including a j…",
+          "id": "cmq9ob4g50dqhslldg9noqyw9",
+          "titleEn": "Jeff Bezos raised $12B for Prometheus at a $41B valuation， seven months after launching it at $6.2B …",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmq9o747e0dq2slldfrnfjbak",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "OpenRouter 基准探索器：10项帕累托曲线",
+        "url": "https://x.com/OpenRouter/status/2065094780271329729",
+        "summary": "使用我们的基准探索器，为10个不同基准绘制帕累托曲线。 更多功能即将推出！https：//openrouter.ai/rankings#benchmarks",
+        "description": "使用我们的基准探索器，为10个不同基准绘制帕累托曲线。 更多功能即将推出！https：//openrouter.ai/rankings#benchmarks",
+        "category": "products",
+        "originalSource": "X：OpenRouter (@OpenRouter)",
+        "originalUrl": "https://x.com/OpenRouter/status/2065094780271329729",
+        "recommendedReason": "使用我们的基准探索器，为10个不同基准绘制帕累托曲线。 更多功能即将推出！https：//openrouter.ai/rankings#benchmarks",
+        "publishedAt": "2026-06-11T15:32:17.000Z",
+        "collectedAt": "2026-06-11T16:33:15.007Z",
+        "raw": {
+          "id": "cmq9o747e0dq2slldfrnfjbak",
+          "titleEn": "Use our Benchmarks explorer to plot Pareto curves for 10 different benchmarks More coming soon！ htt…",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmq9niqdy0dijslldlisb24yj",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Codex Goal指令生成Skill发布：一句话需求转目标",
+        "url": "https://x.com/vista8/status/2065090494972174821",
+        "summary": "针对如何给Codex写Goal指令的问题，作者发布了一个Skill，可将一句话需求自动转化为目标，实现\"睡前写指令、模型自动开发、第二天收菜\"。安装命令：`npx skills add joeseesun/qiaomu-goal-meta-skill`。源码免费开源（见评论区），旨在简化4w字文档的阅读负担。",
+        "description": "针对如何给Codex写Goal指令的问题，作者发布了一个Skill，可将一句话需求自动转化为目标，实现\"睡前写指令、模型自动开发、第二天收菜\"。安装命令：`npx skills add joeseesun/qiaomu-goal-meta-skill`。源码免费开源（见评论区），旨在简化4w字文档的阅读负担。",
+        "category": "tools",
+        "originalSource": "X：Vista (@vista8)",
+        "originalUrl": "https://x.com/vista8/status/2065090494972174821",
+        "recommendedReason": "针对如何给Codex写Goal指令的问题，作者发布了一个Skill，可将一句话需求自动转化为目标，实现\"睡前写指令、模型自动开发、第二天收菜\"。安装命令：`npx skills add joeseesun/qiaomu-goal-meta-skill`。源码免费开源（见评论区），旨在简化4w字文档的阅读负担。",
+        "publishedAt": "2026-06-11T15:15:16.000Z",
+        "collectedAt": "2026-06-11T16:33:15.007Z",
+        "raw": {
+          "id": "cmq9niqdy0dijslldlisb24yj",
+          "titleEn": "很多朋友问，如何给Codex写一个好的Goal指令？ 睡觉前执行，模型自动开发，第二天\"收菜\"。 发过4w字文档，但多数人懒的看，所以我写了个Skill。 把一句话需求变成目标，复制就能用。 …",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmq9mtk1y0dbpslldlq5ewsuc",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Krea 2 推出生成式滑块控制图像属性",
+        "url": "https://x.com/krea_ai/status/2065086662166901114",
+        "summary": "推出生成式滑块。 现在您可以控制使用 Krea 2 生成的任何图像的强度、复杂度和运动。 你希望看到哪些新控制？👇",
+        "description": "推出生成式滑块。 现在您可以控制使用 Krea 2 生成的任何图像的强度、复杂度和运动。 你希望看到哪些新控制？👇",
+        "category": "products",
+        "originalSource": "X：Krea AI (@krea_ai)",
+        "originalUrl": "https://x.com/krea_ai/status/2065086662166901114",
+        "recommendedReason": "推出生成式滑块。 现在您可以控制使用 Krea 2 生成的任何图像的强度、复杂度和运动。 你希望看到哪些新控制？👇",
+        "publishedAt": "2026-06-11T15:00:02.000Z",
+        "collectedAt": "2026-06-11T16:33:15.007Z",
+        "raw": {
+          "id": "cmq9mtk1y0dbpslldlq5ewsuc",
+          "titleEn": "introducing Generative Sliders. now you can control the intensity， complexity， and movement of any…",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmq9mg2690d8hslldbkfxzrz7",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Claude Fable 5 一句话生成桌面台球游戏",
+        "url": "https://x.com/vista8/status/2065079656324407345",
+        "summary": "Claude Fable 5 一句话生成的桌面台球！ 念念不忘的蝗虫群梗彻底终结。 提示词：设计一个完整的能玩的3D桌球游戏，一个网页就能运行",
+        "description": "Claude Fable 5 一句话生成的桌面台球！ 念念不忘的蝗虫群梗彻底终结。 提示词：设计一个完整的能玩的3D桌球游戏，一个网页就能运行",
+        "category": "tools",
+        "originalSource": "X：Vista (@vista8)",
+        "originalUrl": "https://x.com/vista8/status/2065079656324407345",
+        "recommendedReason": "Claude Fable 5 一句话生成的桌面台球！ 念念不忘的蝗虫群梗彻底终结。 提示词：设计一个完整的能玩的3D桌球游戏，一个网页就能运行",
+        "publishedAt": "2026-06-11T14:32:12.000Z",
+        "collectedAt": "2026-06-11T16:33:15.007Z",
+        "raw": {
+          "id": "cmq9mg2690d8hslldbkfxzrz7",
+          "titleEn": "Claude Fable 5 一句话生成的桌面台球！ 念念不忘的蝗虫群梗彻底终结。 提示词：设计一个完整的能玩的3D桌球游戏，一个网页就能运行",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmq9ljue40czuslldeag7dg21",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Runway与Lionsgate扩大战略合作",
+        "url": "https://runwayml.com/news/runway-and-lionsgate-expand-partnership",
+        "summary": "全球内容巨头Lionsgate与生成式AI研究公司Runway今日宣布扩大战略合作。Lionsgate已取得Runway股权，双方将启动联合开发项目，共同创作并制作新IP，首推一部基于Lionsgate现有IP和Runway生成模型的短剧系列。此外，Lionsgate将作为主持伙伴参与6月举行的Runway AI电影节。这是双方继2024年9月首次合作后的深化，Lionsgate此前已在预可视化、故事板及最终帧制作中应用Runway工具。",
+        "description": "全球内容巨头Lionsgate与生成式AI研究公司Runway今日宣布扩大战略合作。Lionsgate已取得Runway股权，双方将启动联合开发项目，共同创作并制作新IP，首推一部基于Lionsgate现有IP和Runway生成模型的短剧系列。此外，Lionsgate将作为主持伙伴参与6月举行的Runway AI电影节。这是双方继2024年9月首次合作后的深化，Lionsgate此前已在预可视化、故事板及最终帧制作中应用Runway工具。",
+        "category": "industry",
+        "originalSource": "Runway：News（网页）",
+        "originalUrl": "https://runwayml.com/news/runway-and-lionsgate-expand-partnership",
+        "recommendedReason": "全球内容巨头Lionsgate与生成式AI研究公司Runway今日宣布扩大战略合作。Lionsgate已取得Runway股权，双方将启动联合开发项目，共同创作并制作新IP，首推一部基于Lionsgate现有IP和Runway生成模型的短剧系列。此外，Lionsgate将作为主持伙伴参与6月举行的Runway AI电影节。这是双方继2024年9月首次合作后的深化，Lionsgate此前已在预可视化、故事板及最终帧制作中应用Runway工具。",
+        "publishedAt": "2026-06-11T14:31:51.811Z",
+        "collectedAt": "2026-06-11T16:33:15.007Z",
+        "raw": {
+          "id": "cmq9ljue40czuslldeag7dg21",
+          "titleEn": "Runway and Lionsgate Expand Partnership",
           "apiCategory": "industry"
         }
       },
@@ -160,7 +434,7 @@
         "originalUrl": "https://garymarcus.substack.com/p/breaking-openai-is-pondering-drastic",
         "recommendedReason": "OpenAI 正考虑大幅降价，Gary Marcus 认为这暴露了公司的疲软竞争力。",
         "publishedAt": "2026-06-11T13:34:49.000Z",
-        "collectedAt": "2026-06-11T14:32:02.869Z",
+        "collectedAt": "2026-06-11T16:33:15.007Z",
         "raw": {
           "id": "cmq9jvb4g0ckisllddfpo3q18",
           "titleEn": "Breaking： OpenAI is pondering \"drastic\" price cuts.",
@@ -180,7 +454,7 @@
         "originalUrl": "https://www.anthropic.com/news/claude-corps",
         "recommendedReason": "Anthropic 推出 Claude Corps 奖学金项目，面向早期职业生涯的年轻人，培训 1，000 名研究员使用 Claude，并匹配给美国非营利组织全职工作一年。研究员年薪 85，000 美元及福利，每周接受 5 小时持续培训。Anthropic 初始投入 1.5 亿美元，合作方为 CodePath 和 Social Finance。至少 400 家非营利组织将参与接待，包括 Braven、Code the Dream、Heartland Forward 等。",
         "publishedAt": "2026-06-11T13:12:25.934Z",
-        "collectedAt": "2026-06-11T14:32:02.869Z",
+        "collectedAt": "2026-06-11T16:33:15.007Z",
         "raw": {
           "id": "cmq9ip4u40c8eslldarnso34b",
           "titleEn": "Introducing Claude Corps",
@@ -200,7 +474,7 @@
         "originalUrl": "https://x.com/SiliconFlowAI/status/2065015632215912879",
         "recommendedReason": "@NousResearch 发布了 Hermes Agent Desktop--现在通过 @硅基流动 SiliconFlow 使用前沿开源模型更加便捷 🔥 → 一键随时切换模型--DeepSeek-V4、GLM-5.1、Kimi-K2.6、MiniMax-M3 等，均在硅基流动上 … … 通过硅基流动开启你的 Hermes 之旅的完整指南 👇🧵",
         "publishedAt": "2026-06-11T10:17:47.000Z",
-        "collectedAt": "2026-06-11T14:32:02.869Z",
+        "collectedAt": "2026-06-11T16:33:15.007Z",
         "raw": {
           "id": "cmq9ck1s90amsslldrz73effj",
           "titleEn": "@NousResearch has shipped Hermes Agent Desktop - and it's now even easier to use frontier open-sourc…",
@@ -220,7 +494,7 @@
         "originalUrl": "https://x.com/steipete/status/2064998499780084154",
         "recommendedReason": "一个简单的循环：告诉 Codex 维护你的仓库，每5分钟唤醒一次，将工作直接分配到线程。这样可以轻松按需并行化和导向工作。 我使用一个编排器技能，结合我的分类+自动审查+计算机使用技能，因此部分工作可以自主落地。",
         "publishedAt": "2026-06-11T09:09:42.000Z",
-        "collectedAt": "2026-06-11T14:32:02.869Z",
+        "collectedAt": "2026-06-11T16:33:15.007Z",
         "raw": {
           "id": "cmq9ax93k0a7lslldcqadlkhv",
           "titleEn": "Here's a simple loop： Tell codex to maintain your repos， wake up every 5 minutes and direct work to …",
@@ -240,7 +514,7 @@
         "originalUrl": "https://www.ithome.com/0/963/009.htm",
         "recommendedReason": "阿里云今日推出 Meoo（秒悟）开源命令行工具 Meoo CLI，面向开发者，支持 Claude Code、Codex、Cursor 等本地 AI 编程助手。通过调用阿里云云端能力，可自动完成数据库接入、用户登录、文件存储及项目发布，将本地项目一键部署上线并生成可分享的访问链接。该工具定位为本地 Agent 与秒悟云端能力的连接入口，已开放下载，支持主流 Linux、macOS 及 Windows 平台。",
         "publishedAt": "2026-06-11T08:50:49.000Z",
-        "collectedAt": "2026-06-11T14:32:02.869Z",
+        "collectedAt": "2026-06-11T16:33:15.007Z",
         "raw": {
           "id": "cmq9asgdq0a6mslld6xdabp77",
           "titleEn": "阿里云秒悟 Meoo CLI 发布：本地 AI 编程项目可一键部署上线，支持 Claude Code、Codex 等",
@@ -260,7 +534,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/G36ugI8tuSLUkDzL_sJNkQ",
         "recommendedReason": "千问上线首个足球预测AI助手，基于海量大数据（含历史比赛、球员数据、伤病、美加墨地貌及天气等）。以6月22日挪威对塞内加尔为例，预测\"1：1平局\"，理由为气候差异。活动：参与全部104场竞猜，预测超80场且准确率超千问可抽万元大奖（100个名额）；预测超32场可抽千问AI眼镜G1（1000副），该眼镜支持赛后分析、拍屏识球员及赛事结果订阅。累积积分将向乡村学校捐建足球场，目标至少50所。",
         "publishedAt": "2026-06-11T08:40:14.000Z",
-        "collectedAt": "2026-06-11T14:32:02.869Z",
+        "collectedAt": "2026-06-11T16:33:15.007Z",
         "raw": {
           "id": "cmq99p86d09wisllduyfqf5mn",
           "titleEn": "猜到了！这届美加墨冠军是--",
@@ -280,13 +554,54 @@
         "originalUrl": "https://mp.weixin.qq.com/s/y0vd1cpvWXLSssL1kXxguw",
         "recommendedReason": "腾讯混元 AI Infra 团队开源升级 HPC-Ops 推理算子库，推出五大核心算子。Attention 采用运行时动态负载调度，长文本最高加速 2.95x，端到端 QPM 提升 17%；Router GEMM 以双 BF16 组合实现 FP32 精度，对比 CuBLAS FP32 最高提速 3.22x；FusedMoE 相对 vLLM、SGLang 性能提升 1.2x~1.6x；Fused AllReduce+Norm 对比主流方案最高提速 1.68x；Sampler 将解码采样融合为 2 个 CUDA Kernel，相对 vLLM 提速 4.0x~7.5x。所有能力均来自生产实践并完全开源。",
         "publishedAt": "2026-06-11T08:34:59.000Z",
-        "collectedAt": "2026-06-11T14:32:02.869Z",
+        "collectedAt": "2026-06-11T16:33:15.007Z",
         "raw": {
           "id": "cmq99cd9g09skslldniw7u2ub",
           "titleEn": null,
           "apiCategory": "ai-products"
         }
+      },
+      {
+        "id": "aihot:cmq98bstr09i4slldkrky14cd",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Deezer 推出面向其他流媒体服务的 AI 音乐检测器",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/948153/deezer-ai-music-detector-spotify-apple",
+        "summary": "Deezer 将扫描用户在其它流媒体平台的播放列表，检测其中的 AI 生成音乐。Deezer 是最早标记 AI 生成音乐的大型流媒体服务之一，曾向其他平台提供该技术但少有采纳。Deezer CEO Alexis Lanternier 表示，由于没有其他公司跟进，他们决定让用户无论使用哪个平台，都能检查自己的播放列表中是否包含合成音乐。",
+        "description": "Deezer 将扫描用户在其它流媒体平台的播放列表，检测其中的 AI 生成音乐。Deezer 是最早标记 AI 生成音乐的大型流媒体服务之一，曾向其他平台提供该技术但少有采纳。Deezer CEO Alexis Lanternier 表示，由于没有其他公司跟进，他们决定让用户无论使用哪个平台，都能检查自己的播放列表中是否包含合成音乐。",
+        "category": "products",
+        "originalSource": "The Verge：AI（RSS）",
+        "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/948153/deezer-ai-music-detector-spotify-apple",
+        "recommendedReason": "Deezer 将扫描用户在其它流媒体平台的播放列表，检测其中的 AI 生成音乐。Deezer 是最早标记 AI 生成音乐的大型流媒体服务之一，曾向其他平台提供该技术但少有采纳。Deezer CEO Alexis Lanternier 表示，由于没有其他公司跟进，他们决定让用户无论使用哪个平台，都能检查自己的播放列表中是否包含合成音乐。",
+        "publishedAt": "2026-06-11T08:00:00.000Z",
+        "collectedAt": "2026-06-11T16:33:15.007Z",
+        "raw": {
+          "id": "cmq98bstr09i4slldkrky14cd",
+          "titleEn": "Deezer launches an AI music detector for other streaming services",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmq954qjy08p2slldtang9e2v",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "baoyu-design skill 更新：支持导入 Figma 本地文件重建设计系统",
+        "url": "https://x.com/dotey/status/2064959133535658144",
+        "summary": "baoyu-design skill 更新，现已支持导入 Figma 本地文件（.fig），可在本地重建设计系统，效果与 Claude Design 在线版一致。该功能依赖 Claude Fable 5 辅助（Token 不够用）。安装后提供 Figma 文件路径即可导入为 Design System，后续新建设计项目可复用。同时支持在新建项目时添加已导入的 Design System，保留了 Claude Design 原始的导入和编译方式，用户可通过提问选择设计系统。安装命令：`npx skills add JimLiu/baoyu-design`。项目地址：https：//github.com/jimliu/baoyu-design。",
+        "description": "baoyu-design skill 更新，现已支持导入 Figma 本地文件（.fig），可在本地重建设计系统，效果与 Claude Design 在线版一致。该功能依赖 Claude Fable 5 辅助（Token 不够用）。安装后提供 Figma 文件路径即可导入为 Design System，后续新建设计项目可复用。同时支持在新建项目时添加已导入的 Design System，保留了 Claude Design 原始的导入和编译方式，用户可通过提问选择设计系统。安装命令：`npx skills add JimLiu/baoyu-design`。项目地址：https：//github.com/jimliu/baoyu-design。",
+        "category": "tools",
+        "originalSource": "X：宝玉 (@dotey)",
+        "originalUrl": "https://x.com/dotey/status/2064959133535658144",
+        "recommendedReason": "baoyu-design skill 更新，现已支持导入 Figma 本地文件（.fig），可在本地重建设计系统，效果与 Claude Design 在线版一致。该功能依赖 Claude Fable 5 辅助（Token 不够用）。安装后提供 Figma 文件路径即可导入为 Design System，后续新建设计项目可复用。同时支持在新建项目时添加已导入的 Design System，保留了 Claude Design 原始的导入和编译方式，用户可通过提问选择设计系统。安装命令：`npx skills add JimLiu/baoyu-design`。项目地址：https：//github.com/jimliu/baoyu-design。",
+        "publishedAt": "2026-06-11T06:33:17.000Z",
+        "collectedAt": "2026-06-11T16:33:15.007Z",
+        "raw": {
+          "id": "cmq954qjy08p2slldtang9e2v",
+          "titleEn": "baoyu-design skill （让你本地运行 Claude Design 的 Skill）更新，现在支持导入 figma 本地文件（Figma可以保存成 xxx.fig 文件）。比如你有一个设…",
+          "apiCategory": "tip"
+        }
       }
-    ]
+    ],
+    "crossSourceHighlights": []
   }
 }
