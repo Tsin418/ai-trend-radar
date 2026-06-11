@@ -1,184 +1,10 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-06-11T11:53:02.451Z",
+  "generatedAt": "2026-06-11T14:31:56.251Z",
   "sections": {
     "productLaunches": [],
-    "modelDemoSignals": [
-      {
-        "id": "http://arxiv.org/abs/2606.12412v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models",
-        "url": "https://arxiv.org/pdf/2606.12412v1",
-        "description": "Vision-language models (VLMs) project images into hundreds to thousands of visual tokens, making decoder inference expensive in both attention computation and KV-cache memory. Existing visual-token reduction methods largely follow a rank-and-remove paradigm: they score visual tokens, keep a compact subset, and permanently discard the rest. We show that this irreversible action is fragile because visual-token importance changes across decoder depth; tokens ranked low at one stage may become relev",
-        "summary": "Vision-language models (VLMs) project images into hundreds to thousands of visual tokens, making decoder inference expensive in both attention computation and KV-cache memory. Existing visual-token reduction methods largely follow a rank-and-remove paradigm: they score visual tokens, keep a compact subset, and permanently discard the rest. We show that this irreversible action is fragile because visual-token importance changes across decoder depth; tokens ranked low at one stage may become relevant in later layers, especially for grounding-sensitive queries. We propose Reroute, a training-free plug-in that replaces removal with recoverable routing. At each routing stage, selected vision tokens pass through decoder blocks, while deferred tokens bypass the stage and re-enter the candidate pool at the next routing decision. Reroute reuses existing attention-score ranking rules and stage-wise schedules, preserving the theoretical TFLOPs and KV-cache budget class of the pruning method it augments. Across FastV, PDrop, and Nüwa variants on LLaVA-1.5 and Qwen backbones, reroute improves grounding under aggressive token reduction while maintaining general VQA performance. These results suggest that VLM token reduction should not be viewed only as irreversible pruning, but also as recoverable routing. The code can be found here: https://github.com/elmma/mllm-reroute/",
-        "author": "Cheng-Yu Yang, Shao-Yuan Lo, Yu-Lun Liu",
-        "tags": [
-          "cs.CV",
-          "cs.AI",
-          "llm",
-          "rag"
-        ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-06-10T17:59:57Z",
-        "updatedAt": "2026-06-10T17:59:57Z",
-        "collectedAt": "2026-06-11T11:52:13.387Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.12412v1",
-          "authors": [
-            "Cheng-Yu Yang",
-            "Shao-Yuan Lo",
-            "Yu-Lun Liu"
-          ]
-        },
-        "recommendedReason": "Matched AI developer keywords: llm, rag"
-      },
-      {
-        "id": "http://arxiv.org/abs/2606.12411v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Context-Driven Incremental Compression for Multi-Turn Dialogue Generation",
-        "url": "https://arxiv.org/pdf/2606.12411v1",
-        "description": "Modern conversational agents condition on an ever-growing dialogue history at each turn, incurring redundant attention and encoding costs that grow with conversation length. Naive truncation or summarization degrades fidelity, while existing context compressors lack cross-turn memory sharing or revision, causing information loss and compounding errors in long dialogues. We revisit the context compression under conversational dynamics and empirically present its fragility. To improve both efficie",
-        "summary": "Modern conversational agents condition on an ever-growing dialogue history at each turn, incurring redundant attention and encoding costs that grow with conversation length. Naive truncation or summarization degrades fidelity, while existing context compressors lack cross-turn memory sharing or revision, causing information loss and compounding errors in long dialogues. We revisit the context compression under conversational dynamics and empirically present its fragility. To improve both efficiency and robustness, we introduce Context-Driven Incremental Compression (C-DIC), which treats a conversation as interleaved contextual threads and stores revisable per-thread compression states in a single, compact dialogue memory. At each turn, a lightweight retrieve, revise, and write-back loop shares information across turns and updates stale memories, stabilizing long-horizon behavior. In addition, we adapt truncated backpropagation-through-time (TBPTT) to our multi-turn setting, learning cross-turn dependencies without full-history backpropagation. Extensive experiments on long-form dialogue benchmarks demonstrate superior performance and efficiency of C-DIC; notably, C-DIC shows stable inference latency and perplexity over hundreds of dialogue turns, supporting a scalable path to high-quality dialogue modeling.",
-        "author": "Yeongseo Jung, Jaehyeok Kim, Eunseo Jung, Jiachuan Wang, Yongqi Zhang, Ka Chun Cheung, Simon See, Lei Chen",
-        "tags": [
-          "cs.CL",
-          "cs.LG",
-          "agent",
-          "rag",
-          "benchmark"
-        ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-06-10T17:59:54Z",
-        "updatedAt": "2026-06-10T17:59:54Z",
-        "collectedAt": "2026-06-11T11:52:13.387Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.12411v1",
-          "authors": [
-            "Yeongseo Jung",
-            "Jaehyeok Kim",
-            "Eunseo Jung",
-            "Jiachuan Wang",
-            "Yongqi Zhang",
-            "Ka Chun Cheung",
-            "Simon See",
-            "Lei Chen"
-          ]
-        },
-        "recommendedReason": "Matched AI developer keywords: agent, rag, benchmark"
-      },
-      {
-        "id": "http://arxiv.org/abs/2606.12402v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?",
-        "url": "https://arxiv.org/pdf/2606.12402v1",
-        "description": "Vision-Language Models (VLMs) are increasingly deployed as high-level planners for embodied agents, with an emerging strategy of scaling test-time compute to improve capability. However, we observe that doing so increases latency, token usage, and FLOPs while yielding uneven, often diminishing gains in downstream success, limiting where embodied agents can be deployed. We argue that choosing when and where to spend test-time compute is central to bringing frontier performance to the real world. ",
-        "summary": "Vision-Language Models (VLMs) are increasingly deployed as high-level planners for embodied agents, with an emerging strategy of scaling test-time compute to improve capability. However, we observe that doing so increases latency, token usage, and FLOPs while yielding uneven, often diminishing gains in downstream success, limiting where embodied agents can be deployed. We argue that choosing when and where to spend test-time compute is central to bringing frontier performance to the real world. We introduce DIRECT, a routing framework that uses multimodal scene context to allocate compute per prompt, improving the success--cost Pareto frontier over fixed model selection. Across three dominant scaling axes, namely chain-of-thought depth, model size, and memory history, our experiments on VLABench and RoboMME show that test-time compute is not a uniform lever: different axes yield qualitatively distinct capability gains. We validate these insights on a physical Franka arm in a DROID setup spanning zero-shot manipulation and long-horizon chaining, where our router matches or exceeds a stronger model's success rate at up to 65% lower average latency. Ultimately, our results show that naively scaling test-time compute is wasteful, and that DIRECT can provide frontier-level embodied planning in robotic systems at a fraction of the cost. Project page can be found at jadee-dao.github.io/direct/.",
-        "author": "Jadelynn Dao, Milan Ganai, Yasmina Abukhadra, Ajay Sridhar, Mozhgan Nasr Azadani, Katie Luo, Clark Barrett, Jiajun Wu, Chelsea Finn, Marco Pavone",
-        "tags": [
-          "cs.RO",
-          "cs.AI",
-          "cs.CV",
-          "agent",
-          "rag"
-        ],
-        "category": "cs.RO",
-        "language": "en",
-        "publishedAt": "2026-06-10T17:58:49Z",
-        "updatedAt": "2026-06-10T17:58:49Z",
-        "collectedAt": "2026-06-11T11:52:13.387Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.12402v1",
-          "authors": [
-            "Jadelynn Dao",
-            "Milan Ganai",
-            "Yasmina Abukhadra",
-            "Ajay Sridhar",
-            "Mozhgan Nasr Azadani",
-            "Katie Luo",
-            "Clark Barrett",
-            "Jiajun Wu",
-            "Chelsea Finn",
-            "Marco Pavone"
-          ]
-        },
-        "recommendedReason": "Matched AI developer keywords: agent, rag"
-      },
-      {
-        "id": "http://arxiv.org/abs/2606.12400v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Doc-to-Atom: Learning to Compile and Compose Memory Atoms",
-        "url": "https://arxiv.org/pdf/2606.12400v1",
-        "description": "Long input sequences are central to document understanding and multi-step reasoning in Large Language Models, yet the quadratic cost of attention makes inference both memory-intensive and slow. Context distillation mitigates this by compressing contextual information into model parameters, and recent work such as Doc-to-LoRA amortizes context distillation into a single forward pass that generates one LoRA adapter per document. However, producing a single monolithic adapter for all queries leads ",
-        "summary": "Long input sequences are central to document understanding and multi-step reasoning in Large Language Models, yet the quadratic cost of attention makes inference both memory-intensive and slow. Context distillation mitigates this by compressing contextual information into model parameters, and recent work such as Doc-to-LoRA amortizes context distillation into a single forward pass that generates one LoRA adapter per document. However, producing a single monolithic adapter for all queries leads to irrelevant-query interference, limited compositional recall, and poor scalability to long-document reasoning. To address these challenges, we propose Doc-to-Atom (Doc2Atom), a compositional parametric memory framework that decomposes each document into semantically typed knowledge atoms. Each atom is compiled into an independent micro-LoRA adapter and a provenance retrieval key. At inference time, a lightweight query router selects and assembles only the relevant atoms into a query-specific adapter, which is then injected into a frozen base model. The entire system is trained end-to-end through a multi-objective distillation framework. Experiments on six diverse QA benchmarks demonstrate that Doc2Atom outperforms Doc-to-LoRA baselines while reducing the memory cost of document internalization.",
-        "author": "Xingjian Diao, Wenbo Li, Yashas Malur Saidutta, Avinash Amballa, Lazar Valkov, Srinivas Chappidi",
-        "tags": [
-          "cs.CL",
-          "cs.IR",
-          "large language model",
-          "benchmark"
-        ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-06-10T17:58:20Z",
-        "updatedAt": "2026-06-10T17:58:20Z",
-        "collectedAt": "2026-06-11T11:52:13.387Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.12400v1",
-          "authors": [
-            "Xingjian Diao",
-            "Wenbo Li",
-            "Yashas Malur Saidutta",
-            "Avinash Amballa",
-            "Lazar Valkov",
-            "Srinivas Chappidi"
-          ]
-        },
-        "recommendedReason": "Matched AI developer keywords: large language model, benchmark"
-      },
-      {
-        "id": "http://arxiv.org/abs/2606.12397v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
-        "url": "https://arxiv.org/pdf/2606.12397v1",
-        "description": "Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to ",
-        "summary": "Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to align each router row with the principal singular direction of the associated expert, as this direction provides the most expressive mathematical description of a matrix. Based on this principle, we propose a router redesign with Manifold Power Iteration (MPI). Specifically, it introduces a \"Power-then-Retract\" paradigm, where a power iteration step is performed on the router weights, followed by a retraction to impose a norm constraint to ensure both efficiency and stability. Theoretically, we show that MPI drives router rows to converge toward the principal singular directions of associated experts. Empirically, we pretrain MoE model across scales from 1B to 11B parameters to confirm that this alignment facilitates more effective MoE models.",
-        "author": "Songhao Wu, Ang Lv, Ruobing Xie, Yankai Lin",
-        "tags": [
-          "cs.LG",
-          "cs.AI",
-          "cs.CL",
-          "alignment"
-        ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-06-10T17:57:36Z",
-        "updatedAt": "2026-06-10T17:57:36Z",
-        "collectedAt": "2026-06-11T11:52:13.387Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.12397v1",
-          "authors": [
-            "Songhao Wu",
-            "Ang Lv",
-            "Ruobing Xie",
-            "Yankai Lin"
-          ]
-        },
-        "recommendedReason": "Matched AI developer keywords: alignment"
-      }
-    ],
+    "modelDemoSignals": [],
     "developerBuzz": [
       {
         "id": "hackernews:48463808",
@@ -192,11 +18,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 2571,
-          "commentsCount": 2110
+          "upvotes": 2578,
+          "commentsCount": 2117
         },
         "publishedAt": "2026-06-09T16:58:01.000Z",
-        "collectedAt": "2026-06-11T11:52:13.230Z",
+        "collectedAt": "2026-06-11T14:31:56.635Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48463808",
           "matchedKeywords": [
@@ -216,11 +42,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 1018,
+          "upvotes": 1020,
           "commentsCount": 495
         },
         "publishedAt": "2026-06-09T21:19:11.000Z",
-        "collectedAt": "2026-06-11T11:52:13.230Z",
+        "collectedAt": "2026-06-11T14:31:56.635Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48467896",
           "matchedKeywords": [
@@ -239,36 +65,13 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 982,
-          "commentsCount": 523
+          "upvotes": 987,
+          "commentsCount": 526
         },
         "publishedAt": "2026-06-10T01:44:13.000Z",
-        "collectedAt": "2026-06-11T11:52:13.230Z",
+        "collectedAt": "2026-06-11T14:31:56.635Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48470248",
-          "matchedKeywords": [
-            "ai"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48469658",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "macOS Container Machines",
-        "url": "https://github.com/apple/container/blob/main/docs/container-machine.md",
-        "author": "timsneath",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 1225,
-          "commentsCount": 426
-        },
-        "publishedAt": "2026-06-10T00:29:01.000Z",
-        "collectedAt": "2026-06-11T11:52:13.230Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48469658",
           "matchedKeywords": [
             "ai"
           ]
@@ -286,11 +89,11 @@
           "anthropic"
         ],
         "metrics": {
-          "upvotes": 476,
-          "commentsCount": 411
+          "upvotes": 527,
+          "commentsCount": 464
         },
         "publishedAt": "2026-06-10T16:42:00.000Z",
-        "collectedAt": "2026-06-11T11:52:13.230Z",
+        "collectedAt": "2026-06-11T14:31:56.635Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48478969",
           "matchedKeywords": [
@@ -298,9 +101,92 @@
             "anthropic"
           ]
         }
+      },
+      {
+        "id": "hackernews:48469658",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "macOS Container Machines",
+        "url": "https://github.com/apple/container/blob/main/docs/container-machine.md",
+        "author": "timsneath",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 1228,
+          "commentsCount": 426
+        },
+        "publishedAt": "2026-06-10T00:29:01.000Z",
+        "collectedAt": "2026-06-11T14:31:56.635Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48469658",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmq9l6vwe0cvkslld7oe8wsxa",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Runway深化与狮门影业合作创原IP",
+        "url": "https://x.com/runwayml/status/2065072377596088525",
+        "summary": "今天，我们正在深化与狮门影业的合作，推出一系列新举措，包括一个专注于共同打造原创IP的联合开发项目。详情请见下方链接。",
+        "description": "今天，我们正在深化与狮门影业的合作，推出一系列新举措，包括一个专注于共同打造原创IP的联合开发项目。详情请见下方链接。",
+        "category": "industry",
+        "originalSource": "X：Runway (@runwayml)",
+        "originalUrl": "https://x.com/runwayml/status/2065072377596088525",
+        "recommendedReason": "今天，我们正在深化与狮门影业的合作，推出一系列新举措，包括一个专注于共同打造原创IP的联合开发项目。详情请见下方链接。",
+        "publishedAt": "2026-06-11T14:03:16.000Z",
+        "collectedAt": "2026-06-11T14:32:02.869Z",
+        "raw": {
+          "id": "cmq9l6vwe0cvkslld7oe8wsxa",
+          "titleEn": "Today， we're deepening our partnership with Lionsgate with a slate of new initiatives， including a j…",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmq9jvb4g0ckisllddfpo3q18",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "OpenAI 正酝酿\"大幅\"降价，Gary Marcus 视其为示弱信号",
+        "url": "https://garymarcus.substack.com/p/breaking-openai-is-pondering-drastic",
+        "summary": "OpenAI 正考虑大幅降价，Gary Marcus 认为这暴露了公司的疲软竞争力。",
+        "description": "OpenAI 正考虑大幅降价，Gary Marcus 认为这暴露了公司的疲软竞争力。",
+        "category": "tools",
+        "originalSource": "Gary Marcus：The Road to AI We Can Trust（RSS）",
+        "originalUrl": "https://garymarcus.substack.com/p/breaking-openai-is-pondering-drastic",
+        "recommendedReason": "OpenAI 正考虑大幅降价，Gary Marcus 认为这暴露了公司的疲软竞争力。",
+        "publishedAt": "2026-06-11T13:34:49.000Z",
+        "collectedAt": "2026-06-11T14:32:02.869Z",
+        "raw": {
+          "id": "cmq9jvb4g0ckisllddfpo3q18",
+          "titleEn": "Breaking： OpenAI is pondering \"drastic\" price cuts.",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmq9ip4u40c8eslldarnso34b",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Anthropic 启动 Claude Corps 全国奖学金项目",
+        "url": "https://www.anthropic.com/news/claude-corps",
+        "summary": "Anthropic 推出 Claude Corps 奖学金项目，面向早期职业生涯的年轻人，培训 1，000 名研究员使用 Claude，并匹配给美国非营利组织全职工作一年。研究员年薪 85，000 美元及福利，每周接受 5 小时持续培训。Anthropic 初始投入 1.5 亿美元，合作方为 CodePath 和 Social Finance。至少 400 家非营利组织将参与接待，包括 Braven、Code the Dream、Heartland Forward 等。",
+        "description": "Anthropic 推出 Claude Corps 奖学金项目，面向早期职业生涯的年轻人，培训 1，000 名研究员使用 Claude，并匹配给美国非营利组织全职工作一年。研究员年薪 85，000 美元及福利，每周接受 5 小时持续培训。Anthropic 初始投入 1.5 亿美元，合作方为 CodePath 和 Social Finance。至少 400 家非营利组织将参与接待，包括 Braven、Code the Dream、Heartland Forward 等。",
+        "category": "industry",
+        "originalSource": "Anthropic：Newsroom（网页）",
+        "originalUrl": "https://www.anthropic.com/news/claude-corps",
+        "recommendedReason": "Anthropic 推出 Claude Corps 奖学金项目，面向早期职业生涯的年轻人，培训 1，000 名研究员使用 Claude，并匹配给美国非营利组织全职工作一年。研究员年薪 85，000 美元及福利，每周接受 5 小时持续培训。Anthropic 初始投入 1.5 亿美元，合作方为 CodePath 和 Social Finance。至少 400 家非营利组织将参与接待，包括 Braven、Code the Dream、Heartland Forward 等。",
+        "publishedAt": "2026-06-11T13:12:25.934Z",
+        "collectedAt": "2026-06-11T14:32:02.869Z",
+        "raw": {
+          "id": "cmq9ip4u40c8eslldarnso34b",
+          "titleEn": "Introducing Claude Corps",
+          "apiCategory": "industry"
+        }
+      },
       {
         "id": "aihot:cmq9ck1s90amsslldrz73effj",
         "source": "aihot",
@@ -314,7 +200,7 @@
         "originalUrl": "https://x.com/SiliconFlowAI/status/2065015632215912879",
         "recommendedReason": "@NousResearch 发布了 Hermes Agent Desktop--现在通过 @硅基流动 SiliconFlow 使用前沿开源模型更加便捷 🔥 → 一键随时切换模型--DeepSeek-V4、GLM-5.1、Kimi-K2.6、MiniMax-M3 等，均在硅基流动上 … … 通过硅基流动开启你的 Hermes 之旅的完整指南 👇🧵",
         "publishedAt": "2026-06-11T10:17:47.000Z",
-        "collectedAt": "2026-06-11T11:52:14.192Z",
+        "collectedAt": "2026-06-11T14:32:02.869Z",
         "raw": {
           "id": "cmq9ck1s90amsslldrz73effj",
           "titleEn": "@NousResearch has shipped Hermes Agent Desktop - and it's now even easier to use frontier open-sourc…",
@@ -334,7 +220,7 @@
         "originalUrl": "https://x.com/steipete/status/2064998499780084154",
         "recommendedReason": "一个简单的循环：告诉 Codex 维护你的仓库，每5分钟唤醒一次，将工作直接分配到线程。这样可以轻松按需并行化和导向工作。 我使用一个编排器技能，结合我的分类+自动审查+计算机使用技能，因此部分工作可以自主落地。",
         "publishedAt": "2026-06-11T09:09:42.000Z",
-        "collectedAt": "2026-06-11T11:52:14.192Z",
+        "collectedAt": "2026-06-11T14:32:02.869Z",
         "raw": {
           "id": "cmq9ax93k0a7lslldcqadlkhv",
           "titleEn": "Here's a simple loop： Tell codex to maintain your repos， wake up every 5 minutes and direct work to …",
@@ -354,7 +240,7 @@
         "originalUrl": "https://www.ithome.com/0/963/009.htm",
         "recommendedReason": "阿里云今日推出 Meoo（秒悟）开源命令行工具 Meoo CLI，面向开发者，支持 Claude Code、Codex、Cursor 等本地 AI 编程助手。通过调用阿里云云端能力，可自动完成数据库接入、用户登录、文件存储及项目发布，将本地项目一键部署上线并生成可分享的访问链接。该工具定位为本地 Agent 与秒悟云端能力的连接入口，已开放下载，支持主流 Linux、macOS 及 Windows 平台。",
         "publishedAt": "2026-06-11T08:50:49.000Z",
-        "collectedAt": "2026-06-11T11:52:14.192Z",
+        "collectedAt": "2026-06-11T14:32:02.869Z",
         "raw": {
           "id": "cmq9asgdq0a6mslld6xdabp77",
           "titleEn": "阿里云秒悟 Meoo CLI 发布：本地 AI 编程项目可一键部署上线，支持 Claude Code、Codex 等",
@@ -374,7 +260,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/G36ugI8tuSLUkDzL_sJNkQ",
         "recommendedReason": "千问上线首个足球预测AI助手，基于海量大数据（含历史比赛、球员数据、伤病、美加墨地貌及天气等）。以6月22日挪威对塞内加尔为例，预测\"1：1平局\"，理由为气候差异。活动：参与全部104场竞猜，预测超80场且准确率超千问可抽万元大奖（100个名额）；预测超32场可抽千问AI眼镜G1（1000副），该眼镜支持赛后分析、拍屏识球员及赛事结果订阅。累积积分将向乡村学校捐建足球场，目标至少50所。",
         "publishedAt": "2026-06-11T08:40:14.000Z",
-        "collectedAt": "2026-06-11T11:52:14.192Z",
+        "collectedAt": "2026-06-11T14:32:02.869Z",
         "raw": {
           "id": "cmq99p86d09wisllduyfqf5mn",
           "titleEn": "猜到了！这届美加墨冠军是--",
@@ -394,342 +280,12 @@
         "originalUrl": "https://mp.weixin.qq.com/s/y0vd1cpvWXLSssL1kXxguw",
         "recommendedReason": "腾讯混元 AI Infra 团队开源升级 HPC-Ops 推理算子库，推出五大核心算子。Attention 采用运行时动态负载调度，长文本最高加速 2.95x，端到端 QPM 提升 17%；Router GEMM 以双 BF16 组合实现 FP32 精度，对比 CuBLAS FP32 最高提速 3.22x；FusedMoE 相对 vLLM、SGLang 性能提升 1.2x~1.6x；Fused AllReduce+Norm 对比主流方案最高提速 1.68x；Sampler 将解码采样融合为 2 个 CUDA Kernel，相对 vLLM 提速 4.0x~7.5x。所有能力均来自生产实践并完全开源。",
         "publishedAt": "2026-06-11T08:34:59.000Z",
-        "collectedAt": "2026-06-11T11:52:14.192Z",
+        "collectedAt": "2026-06-11T14:32:02.869Z",
         "raw": {
           "id": "cmq99cd9g09skslldniw7u2ub",
           "titleEn": null,
           "apiCategory": "ai-products"
         }
-      },
-      {
-        "id": "aihot:cmq98bstr09i4slldkrky14cd",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Deezer 推出面向其他流媒体服务的 AI 音乐检测器",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/948153/deezer-ai-music-detector-spotify-apple",
-        "summary": "Deezer 将扫描用户在其它流媒体平台的播放列表，检测其中的 AI 生成音乐。Deezer 是最早标记 AI 生成音乐的大型流媒体服务之一，曾向其他平台提供该技术但少有采纳。Deezer CEO Alexis Lanternier 表示，由于没有其他公司跟进，他们决定让用户无论使用哪个平台，都能检查自己的播放列表中是否包含合成音乐。",
-        "description": "Deezer 将扫描用户在其它流媒体平台的播放列表，检测其中的 AI 生成音乐。Deezer 是最早标记 AI 生成音乐的大型流媒体服务之一，曾向其他平台提供该技术但少有采纳。Deezer CEO Alexis Lanternier 表示，由于没有其他公司跟进，他们决定让用户无论使用哪个平台，都能检查自己的播放列表中是否包含合成音乐。",
-        "category": "products",
-        "originalSource": "The Verge：AI（RSS）",
-        "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/948153/deezer-ai-music-detector-spotify-apple",
-        "recommendedReason": "Deezer 将扫描用户在其它流媒体平台的播放列表，检测其中的 AI 生成音乐。Deezer 是最早标记 AI 生成音乐的大型流媒体服务之一，曾向其他平台提供该技术但少有采纳。Deezer CEO Alexis Lanternier 表示，由于没有其他公司跟进，他们决定让用户无论使用哪个平台，都能检查自己的播放列表中是否包含合成音乐。",
-        "publishedAt": "2026-06-11T08:00:00.000Z",
-        "collectedAt": "2026-06-11T11:52:14.192Z",
-        "raw": {
-          "id": "cmq98bstr09i4slldkrky14cd",
-          "titleEn": "Deezer launches an AI music detector for other streaming services",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmq954qjy08p2slldtang9e2v",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "baoyu-design skill 更新：支持导入 Figma 本地文件重建设计系统",
-        "url": "https://x.com/dotey/status/2064959133535658144",
-        "summary": "baoyu-design skill 更新，现已支持导入 Figma 本地文件（.fig），可在本地重建设计系统，效果与 Claude Design 在线版一致。该功能依赖 Claude Fable 5 辅助（Token 不够用）。安装后提供 Figma 文件路径即可导入为 Design System，后续新建设计项目可复用。同时支持在新建项目时添加已导入的 Design System，保留了 Claude Design 原始的导入和编译方式，用户可通过提问选择设计系统。安装命令：`npx skills add JimLiu/baoyu-design`。项目地址：https：//github.com/jimliu/baoyu-design。",
-        "description": "baoyu-design skill 更新，现已支持导入 Figma 本地文件（.fig），可在本地重建设计系统，效果与 Claude Design 在线版一致。该功能依赖 Claude Fable 5 辅助（Token 不够用）。安装后提供 Figma 文件路径即可导入为 Design System，后续新建设计项目可复用。同时支持在新建项目时添加已导入的 Design System，保留了 Claude Design 原始的导入和编译方式，用户可通过提问选择设计系统。安装命令：`npx skills add JimLiu/baoyu-design`。项目地址：https：//github.com/jimliu/baoyu-design。",
-        "category": "tools",
-        "originalSource": "X：宝玉 (@dotey)",
-        "originalUrl": "https://x.com/dotey/status/2064959133535658144",
-        "recommendedReason": "baoyu-design skill 更新，现已支持导入 Figma 本地文件（.fig），可在本地重建设计系统，效果与 Claude Design 在线版一致。该功能依赖 Claude Fable 5 辅助（Token 不够用）。安装后提供 Figma 文件路径即可导入为 Design System，后续新建设计项目可复用。同时支持在新建项目时添加已导入的 Design System，保留了 Claude Design 原始的导入和编译方式，用户可通过提问选择设计系统。安装命令：`npx skills add JimLiu/baoyu-design`。项目地址：https：//github.com/jimliu/baoyu-design。",
-        "publishedAt": "2026-06-11T06:33:17.000Z",
-        "collectedAt": "2026-06-11T11:52:14.192Z",
-        "raw": {
-          "id": "cmq954qjy08p2slldtang9e2v",
-          "titleEn": "baoyu-design skill （让你本地运行 Claude Design 的 Skill）更新，现在支持导入 figma 本地文件（Figma可以保存成 xxx.fig 文件）。比如你有一个设…",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmq958epc08qasllddc5u86n8",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "AI浪潮引发中国担忧：官媒呼吁保护劳动者权益",
-        "url": "https://www.bloomberg.com/news/articles/2026-06-11/ai-wave-sparks-alarm-in-china-with-call-to-protect-worker-rights",
-        "summary": "中国工作场所快速采用人工智能，引发官媒异常直白地呼吁保护劳工权利。北京正在考虑如何控制这项新技术带来的风险。",
-        "description": "中国工作场所快速采用人工智能，引发官媒异常直白地呼吁保护劳工权利。北京正在考虑如何控制这项新技术带来的风险。",
-        "category": "industry",
-        "originalSource": "Bloomberg：Technology（RSS）",
-        "originalUrl": "https://www.bloomberg.com/news/articles/2026-06-11/ai-wave-sparks-alarm-in-china-with-call-to-protect-worker-rights",
-        "recommendedReason": "中国工作场所快速采用人工智能，引发官媒异常直白地呼吁保护劳工权利。北京正在考虑如何控制这项新技术带来的风险。",
-        "publishedAt": "2026-06-11T06:19:13.000Z",
-        "collectedAt": "2026-06-11T11:52:14.192Z",
-        "raw": {
-          "id": "cmq958epc08qasllddc5u86n8",
-          "titleEn": "AI Wave Sparks Alarm in China With Call to Protect Worker Rights",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmq94c8iu08i6slld2kpggdra",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Anthropic CEO 阿莫迪：AI 可能会造成大规模、长期性的岗位流失",
-        "url": "https://www.ithome.com/0/962/854.htm",
-        "summary": "Anthropic CEO 达里奥・阿莫迪警告，AI造成的大规模岗位流失是技术固有属性--AI系统旨在复刻人类认知，失业将成为结构性必然结果。他提出应对思路：完善劳动力市场监测、推行薪资保障与留岗税收优惠、发放培训补贴；若人力需求永久下降，则需通过征税推行全民基本收入等长期收入保障。Anthropic目标非削减人力成本，而是帮企业开拓新营收、盘活现有员工产能。",
-        "description": "Anthropic CEO 达里奥・阿莫迪警告，AI造成的大规模岗位流失是技术固有属性--AI系统旨在复刻人类认知，失业将成为结构性必然结果。他提出应对思路：完善劳动力市场监测、推行薪资保障与留岗税收优惠、发放培训补贴；若人力需求永久下降，则需通过征税推行全民基本收入等长期收入保障。Anthropic目标非削减人力成本，而是帮企业开拓新营收、盘活现有员工产能。",
-        "category": "tools",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/962/854.htm",
-        "recommendedReason": "Anthropic CEO 达里奥・阿莫迪警告，AI造成的大规模岗位流失是技术固有属性--AI系统旨在复刻人类认知，失业将成为结构性必然结果。他提出应对思路：完善劳动力市场监测、推行薪资保障与留岗税收优惠、发放培训补贴；若人力需求永久下降，则需通过征税推行全民基本收入等长期收入保障。Anthropic目标非削减人力成本，而是帮企业开拓新营收、盘活现有员工产能。",
-        "publishedAt": "2026-06-11T05:53:41.000Z",
-        "collectedAt": "2026-06-11T11:52:14.192Z",
-        "raw": {
-          "id": "cmq94c8iu08i6slld2kpggdra",
-          "titleEn": null,
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmq8zcaxy076fslldrds65pvu",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Midjourney V8.1 已成为默认模型",
-        "url": "https://updates.midjourney.com/v8-1-is-now-the-default-model",
-        "summary": "Midjourney 已将默认模型从 V7 升级为 V8.1。V8.1 在智能性、连贯性、对详细提示的遵循度以及文本渲染效果上均有提升，HD 模式也已支持。",
-        "description": "Midjourney 已将默认模型从 V7 升级为 V8.1。V8.1 在智能性、连贯性、对详细提示的遵循度以及文本渲染效果上均有提升，HD 模式也已支持。",
-        "category": "models",
-        "originalSource": "Midjourney：Updates（RSS）",
-        "originalUrl": "https://updates.midjourney.com/v8-1-is-now-the-default-model",
-        "recommendedReason": "Midjourney 已将默认模型从 V7 升级为 V8.1。V8.1 在智能性、连贯性、对详细提示的遵循度以及文本渲染效果上均有提升，HD 模式也已支持。",
-        "publishedAt": "2026-06-11T04:08:51.000Z",
-        "collectedAt": "2026-06-11T11:52:14.192Z",
-        "raw": {
-          "id": "cmq8zcaxy076fslldrds65pvu",
-          "titleEn": "V8.1 is now the default model on Midjourney！",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmq8whekl06eyslldxzkd9dzi",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "从0到1速通WorkBuddy：国内通用Agent产品教程",
-        "url": "https://mp.weixin.qq.com/s/nFSSzluc57xPv50Zbh4owg",
-        "summary": "WorkBuddy是面向国内用户的通用Agent产品，支持Windows和Mac，提供免费版和58元/月个人专业版，企业版已推出。内置代码开发、日常办公、设计创意三种场景模式及100多个行业领域AI专家。模型集成腾讯混元、DeepSeek（推荐V4 Pro）、GLM、Kimi等国产大模型，也支持接入兼容OpenAI协议的外部API。拥有Skills市场和MCP连接器生态，可打通QQ邮箱、腾讯会议、腾讯文档等服务。教程通过公众号周报生成和功能网页开发两个案例演示实际用法。",
-        "description": "WorkBuddy是面向国内用户的通用Agent产品，支持Windows和Mac，提供免费版和58元/月个人专业版，企业版已推出。内置代码开发、日常办公、设计创意三种场景模式及100多个行业领域AI专家。模型集成腾讯混元、DeepSeek（推荐V4 Pro）、GLM、Kimi等国产大模型，也支持接入兼容OpenAI协议的外部API。拥有Skills市场和MCP连接器生态，可打通QQ邮箱、腾讯会议、腾讯文档等服务。教程通过公众号周报生成和功能网页开发两个案例演示实际用法。",
-        "category": "tools",
-        "originalSource": "公众号：数字生命卡兹克",
-        "originalUrl": "https://mp.weixin.qq.com/s/nFSSzluc57xPv50Zbh4owg",
-        "recommendedReason": "WorkBuddy是面向国内用户的通用Agent产品，支持Windows和Mac，提供免费版和58元/月个人专业版，企业版已推出。内置代码开发、日常办公、设计创意三种场景模式及100多个行业领域AI专家。模型集成腾讯混元、DeepSeek（推荐V4 Pro）、GLM、Kimi等国产大模型，也支持接入兼容OpenAI协议的外部API。拥有Skills市场和MCP连接器生态，可打通QQ邮箱、腾讯会议、腾讯文档等服务。教程通过公众号周报生成和功能网页开发两个案例演示实际用法。",
-        "publishedAt": "2026-06-11T01:58:00.000Z",
-        "collectedAt": "2026-06-11T11:52:14.192Z",
-        "raw": {
-          "id": "cmq8whekl06eyslldxzkd9dzi",
-          "titleEn": "从0到1带你速通WorkBuddy，这可能是最适合国内的Agent产品。",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmq8svjva05grslldediy0tpk",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "mlx-vlm v0.6.3 发布，Day-0 支持 Google DeepMind DiffusionGemma 和 Cohere North Mini Code 1.0",
-        "url": "https://x.com/berryxia/status/2064875107278098769",
-        "summary": "mlx-vlm v0.6.3 上线，首发支持 DiffusionGemma 和 North Mini Code 1.0。DiffusionGemma 采用全新架构：以 256 token 块为单位并行生成、双向注意力、迭代自纠错；26B MoE 仅激活 3.8B，量化后 18GB 即可运行。North Mini Code 1.0 为 30B MoE，仅激活 3B，BF16 下约 66 tok/s。两款模型均通过深度合作实现 Day-0 MLX 支持，可在 Mac 本地运行。可通过 `uv pip install -U mlx-vlm` 安装体验。",
-        "description": "mlx-vlm v0.6.3 上线，首发支持 DiffusionGemma 和 North Mini Code 1.0。DiffusionGemma 采用全新架构：以 256 token 块为单位并行生成、双向注意力、迭代自纠错；26B MoE 仅激活 3.8B，量化后 18GB 即可运行。North Mini Code 1.0 为 30B MoE，仅激活 3B，BF16 下约 66 tok/s。两款模型均通过深度合作实现 Day-0 MLX 支持，可在 Mac 本地运行。可通过 `uv pip install -U mlx-vlm` 安装体验。",
-        "category": "products",
-        "originalSource": "X：Berry Xia (@berryxia)",
-        "originalUrl": "https://x.com/berryxia/status/2064875107278098769",
-        "recommendedReason": "mlx-vlm v0.6.3 上线，首发支持 DiffusionGemma 和 North Mini Code 1.0。DiffusionGemma 采用全新架构：以 256 token 块为单位并行生成、双向注意力、迭代自纠错；26B MoE 仅激活 3.8B，量化后 18GB 即可运行。North Mini Code 1.0 为 30B MoE，仅激活 3B，BF16 下约 66 tok/s。两款模型均通过深度合作实现 Day-0 MLX 支持，可在 Mac 本地运行。可通过 `uv pip install -U mlx-vlm` 安装体验。",
-        "publishedAt": "2026-06-11T00:59:23.000Z",
-        "collectedAt": "2026-06-11T11:52:14.192Z",
-        "raw": {
-          "id": "cmq8svjva05grslldediy0tpk",
-          "titleEn": "Prince Canuma直接把Google刚发布的DiffusionGemma和Cohere North Mini Code当天塞进Mac本地MLX，零等待直接把玩咯！ mlx-vlm v0.6….",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmq8qsjfr04wqslld2epey16c",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "在写完这篇文章后 我把配图过程蒸馏成了一个「橙线插画」Skill 免费开源 安装地址： https：//github.com/orange2ai/orange-line-illustration",
-        "url": "https://x.com/oran_ge/status/2064861625883222114",
-        "summary": "在写完这篇文章后 我把配图过程蒸馏成了一个「橙线插画」Skill 免费开源 安装地址： https：//github.com/orange2ai/orange-line-illustration 【引用 @oran_ge】：http：//x.com/i/article/2064857003743391744",
-        "description": "在写完这篇文章后 我把配图过程蒸馏成了一个「橙线插画」Skill 免费开源 安装地址： https：//github.com/orange2ai/orange-line-illustration 【引用 @oran_ge】：http：//x.com/i/article/2064857003743391744",
-        "category": "tools",
-        "originalSource": "X：Oran Ge (@oran_ge)",
-        "originalUrl": "https://x.com/oran_ge/status/2064861625883222114",
-        "recommendedReason": "在写完这篇文章后 我把配图过程蒸馏成了一个「橙线插画」Skill 免费开源 安装地址： https：//github.com/orange2ai/orange-line-illustration 【引用 @oran_ge】：http：//x.com/i/article/2064857003743391744",
-        "publishedAt": "2026-06-11T00:05:49.000Z",
-        "collectedAt": "2026-06-11T11:52:14.192Z",
-        "raw": {
-          "id": "cmq8qsjfr04wqslld2epey16c",
-          "titleEn": null,
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmq95mssa08tgslldrinkc8s3",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenAI 支持欧洲构建可信 AI 生态系统",
-        "url": "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem",
-        "summary": "OpenAI 支持欧盟《AI 内容透明度行为准则》，推进内容溯源标准与工具，帮助用户识别 AI 生成内容。",
-        "description": "OpenAI 支持欧盟《AI 内容透明度行为准则》，推进内容溯源标准与工具，帮助用户识别 AI 生成内容。",
-        "category": "industry",
-        "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
-        "originalUrl": "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem",
-        "recommendedReason": "OpenAI 支持欧盟《AI 内容透明度行为准则》，推进内容溯源标准与工具，帮助用户识别 AI 生成内容。",
-        "publishedAt": "2026-06-11T00:00:00.000Z",
-        "collectedAt": "2026-06-11T11:52:14.192Z",
-        "raw": {
-          "id": "cmq95mssa08tgslldrinkc8s3",
-          "titleEn": "Supporting Europe's work in ensuring a trustworthy AI ecosystem",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmq8nblte041islldguc1eqww",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "通过 Oracle 云承诺访问 OpenAI 模型和 Codex",
-        "url": "https://openai.com/index/openai-on-oracle-cloud",
-        "summary": "OpenAI 与 Oracle 合作，用户可利用现有 Oracle 云服务承诺（commitment）额度，在 Oracle 云上访问 OpenAI 模型和 Codex，用于构建和部署 AI 应用，同时获得企业级安全与治理能力。",
-        "description": "OpenAI 与 Oracle 合作，用户可利用现有 Oracle 云服务承诺（commitment）额度，在 Oracle 云上访问 OpenAI 模型和 Codex，用于构建和部署 AI 应用，同时获得企业级安全与治理能力。",
-        "category": "industry",
-        "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
-        "originalUrl": "https://openai.com/index/openai-on-oracle-cloud",
-        "recommendedReason": "OpenAI 与 Oracle 合作，用户可利用现有 Oracle 云服务承诺（commitment）额度，在 Oracle 云上访问 OpenAI 模型和 Codex，用于构建和部署 AI 应用，同时获得企业级安全与治理能力。",
-        "publishedAt": "2026-06-10T20:00:00.000Z",
-        "collectedAt": "2026-06-11T11:52:14.192Z",
-        "raw": {
-          "id": "cmq8nblte041islldguc1eqww",
-          "titleEn": "Access OpenAI models and Codex through your Oracle cloud commitment",
-          "apiCategory": "industry"
-        }
-      }
-    ],
-    "crossSourceHighlights": [
-      {
-        "id": "url:https://burr.apache.org",
-        "canonicalId": "url:https://burr.apache.org",
-        "title": "Apache Burr：构建可靠的人工智能代理和应用程序",
-        "canonicalUrl": "https://burr.apache.org",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://burr.apache.org",
-          "title:apache burr 构建可靠的人工智能代理和应用程序",
-          "title:apache burr build reliable ai agents and applications"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmq8f7imu01wnslld8czaif69",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Apache Burr：构建可靠的人工智能代理和应用程序",
-            "url": "https://burr.apache.org/",
-            "summary": "Apache Burr 是一个用于构建可靠 AI 智能体和应用程序的框架，已在 Apache 基金会下发布。该项目提供工具和抽象，帮助开发者设计、开发和部署可信任的智能体应用，强调可靠性、可观测性和生产级部署能力。",
-            "description": "Apache Burr 是一个用于构建可靠 AI 智能体和应用程序的框架，已在 Apache 基金会下发布。该项目提供工具和抽象，帮助开发者设计、开发和部署可信任的智能体应用，强调可靠性、可观测性和生产级部署能力。",
-            "category": "products",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://burr.apache.org/",
-            "recommendedReason": "Apache Burr 是一个用于构建可靠 AI 智能体和应用程序的框架，已在 Apache 基金会下发布。该项目提供工具和抽象，帮助开发者设计、开发和部署可信任的智能体应用，强调可靠性、可观测性和生产级部署能力。",
-            "publishedAt": "2026-06-10T18:33:56.920Z",
-            "collectedAt": "2026-06-11T11:52:14.192Z",
-            "raw": {
-              "id": "cmq8f7imu01wnslld8czaif69",
-              "titleEn": null,
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "hackernews:48477400",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Apache Burr: Build reliable AI agents and applications",
-            "url": "https://burr.apache.org/",
-            "author": "anhldbk",
-            "tags": [
-              "ai",
-              "agent",
-              "agents"
-            ],
-            "metrics": {
-              "upvotes": 229,
-              "commentsCount": 110
-            },
-            "publishedAt": "2026-06-10T15:01:06.000Z",
-            "collectedAt": "2026-06-11T11:52:13.230Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48477400",
-              "matchedKeywords": [
-                "ai",
-                "agent",
-                "agents"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmq8f7imu01wnslld8czaif69",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Apache Burr：构建可靠的人工智能代理和应用程序",
-            "url": "https://burr.apache.org/",
-            "summary": "Apache Burr 是一个用于构建可靠 AI 智能体和应用程序的框架，已在 Apache 基金会下发布。该项目提供工具和抽象，帮助开发者设计、开发和部署可信任的智能体应用，强调可靠性、可观测性和生产级部署能力。",
-            "description": "Apache Burr 是一个用于构建可靠 AI 智能体和应用程序的框架，已在 Apache 基金会下发布。该项目提供工具和抽象，帮助开发者设计、开发和部署可信任的智能体应用，强调可靠性、可观测性和生产级部署能力。",
-            "category": "products",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://burr.apache.org/",
-            "recommendedReason": "Apache Burr 是一个用于构建可靠 AI 智能体和应用程序的框架，已在 Apache 基金会下发布。该项目提供工具和抽象，帮助开发者设计、开发和部署可信任的智能体应用，强调可靠性、可观测性和生产级部署能力。",
-            "publishedAt": "2026-06-10T18:33:56.920Z",
-            "collectedAt": "2026-06-11T11:52:14.192Z",
-            "raw": {
-              "id": "cmq8f7imu01wnslld8czaif69",
-              "titleEn": null,
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "hackernews:48477400",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Apache Burr: Build reliable AI agents and applications",
-            "url": "https://burr.apache.org/",
-            "author": "anhldbk",
-            "tags": [
-              "ai",
-              "agent",
-              "agents"
-            ],
-            "metrics": {
-              "upvotes": 229,
-              "commentsCount": 110
-            },
-            "publishedAt": "2026-06-10T15:01:06.000Z",
-            "collectedAt": "2026-06-11T11:52:13.230Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48477400",
-              "matchedKeywords": [
-                "ai",
-                "agent",
-                "agents"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 229,
-          "commentsCount": 110,
-          "hnScore": 229,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "products",
-        "summary": "Apache Burr 是一个用于构建可靠 AI 智能体和应用程序的框架，已在 Apache 基金会下发布。该项目提供工具和抽象，帮助开发者设计、开发和部署可信任的智能体应用，强调可靠性、可观测性和生产级部署能力。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-06-10T15:01:06.000Z",
-        "lastSeenAt": "2026-06-11T11:52:14.192Z"
       }
     ]
   }
