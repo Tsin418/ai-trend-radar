@@ -1,24 +1,110 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-06-11-2026-06-10T22-48-44-518Z",
-  "generatedAt": "2026-06-10T22:48:44.518Z",
+  "runId": "lightweight-2026-06-11-2026-06-11T00-10-36-667Z",
+  "generatedAt": "2026-06-11T00:10:36.667Z",
   "targetDate": "2026-06-11",
   "brief": {
     "date": "2026-06-11",
-    "headline": "Today's strongest AI trend signals are Ai Model Release, Mcp / Tool Calling, and Local Llm / Inference.",
+    "headline": "Today's strongest AI trend signals are Rag / Knowledge Base, Ai Model Release, and Mcp / Tool Calling.",
     "keyTakeaways": [
+      "Rag / Knowledge Base: This topic appeared across 2 source(s): huggingface_models, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoptio.",
+      "Rag / Knowledge Base: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
+      "Rag / Knowledge Base: watch decision is deep_dive.",
       "Ai Model Release: This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 7 related signal(s). Treat it as correlation evidence rat.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
       "Ai Model Release: watch decision is deep_dive.",
       "Mcp / Tool Calling: This topic appeared across 1 source(s): huggingface_spaces, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
-      "Mcp / Tool Calling: watch decision is track.",
-      "Local Llm / Inference: This topic appeared across 1 source(s): huggingface_models, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-      "Local Llm / Inference: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
-      "Local Llm / Inference: watch decision is track."
+      "Mcp / Tool Calling: watch decision is track."
     ],
     "topicBriefs": [
+      {
+        "id": "topic:rag / knowledge base",
+        "title": "Rag / Knowledge Base",
+        "category": "feature-extraction",
+        "sources": [
+          "huggingface_models",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "heatScore": 215,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Rag / Knowledge Base is an AI trend topic in feature-extraction represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Rag / Knowledge Base should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "technicalKeywords": [
+          "onnx",
+          "modernbert",
+          "embeddings",
+          "legal",
+          "quantized",
+          "sentence-similarity",
+          "feature-extraction",
+          "en"
+        ],
+        "evidenceItems": [
+          {
+            "id": "hackernews:48478148",
+            "title": "Show HN: HelixDB – A graph database built on object storage",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://github.com/HelixDB/helix-db/tree/main",
+            "tags": [
+              "ai",
+              "rag"
+            ],
+            "publishedAt": "2026-06-10T15:47:31.000Z",
+            "collectedAt": "2026-06-11T00:10:37.316Z",
+            "metrics": {
+              "upvotes": 85,
+              "commentsCount": 30
+            }
+          },
+          {
+            "id": "huggingface_models:ReconOut/modernbert-embed-base_finetune_8192-ONNX",
+            "title": "ReconOut/modernbert-embed-base_finetune_8192-ONNX",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/ReconOut/modernbert-embed-base_finetune_8192-ONNX",
+            "category": "feature-extraction",
+            "tags": [
+              "onnx",
+              "modernbert",
+              "embeddings",
+              "legal",
+              "quantized",
+              "sentence-similarity",
+              "feature-extraction",
+              "en",
+              "base_model:freelawproject/modernbert-embed-base_finetune_8192",
+              "base_model:quantized:freelawproject/modernbert-embed-base_finetune_8192",
+              "license:cc0-1.0",
+              "region:us"
+            ],
+            "publishedAt": "2026-06-11T00:09:20.000Z",
+            "collectedAt": "2026-06-11T00:10:37.124Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          }
+        ],
+        "relatedEntities": [
+          "ReconOut/modernbert-embed-base_finetune_8192-ONNX",
+          "Show HN: HelixDB – A graph database built on object storage"
+        ],
+        "metrics": {
+          "votes": 85,
+          "commentsCount": 30,
+          "heatScore": 215,
+          "crossSourceBonus": 10
+        }
+      },
       {
         "id": "topic:ai model release",
         "title": "Ai Model Release",
@@ -30,7 +116,7 @@
           "hackernews"
         ],
         "sourceCount": 4,
-        "heatScore": 163,
+        "heatScore": 161,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Ai Model Release is an AI trend topic in papers represented by related signals from today's collection.",
@@ -59,7 +145,7 @@
             "summary": "Google Research 在 AISTATS 2026 发表正则化 f-散度核检验，用于高效审计 LLM 等模型的机器遗忘。该方法通过统计两样本检验判断模型是否真正\"忘记\"特定训练数据，避免完全重训的巨大成本。相比最大均值差异等现有工具，新框架理论上可在任意样本量下自然控制假阳性，且假阴性风险随可用样本增加可靠收敛至零，解决了大规模模型审计中计算成本过高的问题。",
             "category": "papers",
             "publishedAt": "2026-06-10T18:46:09.407Z",
-            "collectedAt": "2026-06-10T22:48:46.533Z"
+            "collectedAt": "2026-06-11T00:10:38.118Z"
           },
           {
             "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
@@ -80,7 +166,7 @@
               "region:us"
             ],
             "publishedAt": "2023-04-17T11:40:06.000Z",
-            "collectedAt": "2026-06-10T22:48:44.980Z",
+            "collectedAt": "2026-06-11T00:10:37.226Z",
             "metrics": {
               "likes": 14013
             }
@@ -100,7 +186,7 @@
               "region:us"
             ],
             "publishedAt": "2023-06-08T18:00:26.000Z",
-            "collectedAt": "2026-06-10T22:48:44.980Z",
+            "collectedAt": "2026-06-11T00:10:37.226Z",
             "metrics": {
               "likes": 5072
             }
@@ -123,24 +209,25 @@
               "region:us"
             ],
             "publishedAt": "2024-07-05T16:35:24.000Z",
-            "collectedAt": "2026-06-10T22:48:44.980Z",
+            "collectedAt": "2026-06-11T00:10:37.226Z",
             "metrics": {
               "likes": 3750
             }
           },
           {
-            "id": "hackernews:48483607",
-            "title": "Show HN: Llmbuffer – Python library for cache-optimized LLM conversation history",
+            "id": "hackernews:48484425",
+            "title": "GGUF vs. GPTQ vs. AWQ: The Plain-English Guide to LLM Quantization",
             "source": "hackernews",
             "sourceType": "developer_discussion",
-            "url": "https://github.com/scottpurdy/llmbuffer",
+            "url": "https://vettedconsumer.com/gguf-vs-gptq-vs-awq-the-plain-english-guide-to-llm-quantization-and-which-one-to-pick/",
             "tags": [
+              "ai",
               "llm"
             ],
-            "publishedAt": "2026-06-10T22:26:11.000Z",
-            "collectedAt": "2026-06-10T22:48:45.211Z",
+            "publishedAt": "2026-06-10T23:50:07.000Z",
+            "collectedAt": "2026-06-11T00:10:37.316Z",
             "metrics": {
-              "upvotes": 3,
+              "upvotes": 1,
               "commentsCount": 0
             }
           },
@@ -154,7 +241,7 @@
               "region:us"
             ],
             "publishedAt": "2026-06-10T21:18:41.000Z",
-            "collectedAt": "2026-06-10T22:48:44.975Z",
+            "collectedAt": "2026-06-11T00:10:37.124Z",
             "metrics": {
               "downloads": 0,
               "likes": 0
@@ -168,12 +255,12 @@
           "Open LLM Leaderboard",
           "MusicGen",
           "Live Portrait",
-          "Show HN: Llmbuffer – Python library for cache-optimized LLM conversation history"
+          "GGUF vs. GPTQ vs. AWQ: The Plain-English Guide to LLM Quantization"
         ],
         "metrics": {
-          "votes": 3,
+          "votes": 1,
           "likes": 14013,
-          "heatScore": 163,
+          "heatScore": 161,
           "crossSourceBonus": 25
         }
       },
@@ -213,7 +300,7 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-06-10T22:48:44.980Z",
+            "collectedAt": "2026-06-11T00:10:37.226Z",
             "metrics": {
               "likes": 3360
             }
@@ -231,7 +318,7 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-06-10T22:48:44.980Z",
+            "collectedAt": "2026-06-11T00:10:37.226Z",
             "metrics": {
               "likes": 3195
             }
@@ -249,9 +336,9 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-06-10T22:48:44.980Z",
+            "collectedAt": "2026-06-11T00:10:37.226Z",
             "metrics": {
-              "likes": 2853
+              "likes": 2854
             }
           }
         ],
@@ -269,68 +356,94 @@
       {
         "id": "topic:local llm / inference",
         "title": "Local Llm / Inference",
+        "category": "text-generation",
         "sources": [
-          "huggingface_models"
+          "huggingface_models",
+          "hackernews"
         ],
-        "sourceCount": 1,
-        "heatScore": 86,
+        "sourceCount": 2,
+        "heatScore": 64,
         "confidence": "low",
         "watchDecision": "track",
-        "whatItIs": "Local Llm / Inference is an AI trend topic represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 1 source(s): huggingface_models, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Local Llm / Inference is an AI trend topic in text-generation represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
-          "gguf",
-          "endpoints_compatible",
-          "region:us",
-          "conversational",
-          "imatrix",
-          "quantized",
-          "base_model:ManniX-ITA/gemma-4-A4B-98e-v7-coderx-it",
-          "base_model:quantized:ManniX-ITA/gemma-4-A4B-98e-v7-coderx-it"
+          "transformers",
+          "tensorboard",
+          "safetensors",
+          "gpt_neox",
+          "text-generation",
+          "ida-family",
+          "ida-lattice",
+          "causal-lm"
         ],
         "evidenceItems": [
           {
-            "id": "huggingface_models:ManniX-ITA/gemma-4-A4B-98e-v7-coderx-it-GGUF",
-            "title": "ManniX-ITA/gemma-4-A4B-98e-v7-coderx-it-GGUF",
+            "id": "huggingface_models:KissTheHabit/IDA_AI",
+            "title": "KissTheHabit/IDA_AI",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/ManniX-ITA/gemma-4-A4B-98e-v7-coderx-it-GGUF",
+            "url": "https://huggingface.co/KissTheHabit/IDA_AI",
+            "category": "text-generation",
             "tags": [
-              "gguf",
-              "imatrix",
-              "quantized",
-              "base_model:ManniX-ITA/gemma-4-A4B-98e-v7-coderx-it",
-              "base_model:quantized:ManniX-ITA/gemma-4-A4B-98e-v7-coderx-it",
-              "license:apache-2.0",
-              "endpoints_compatible",
+              "transformers",
+              "tensorboard",
+              "safetensors",
+              "gpt_neox",
+              "text-generation",
+              "ida-family",
+              "ida-lattice",
+              "causal-lm",
+              "ai-body",
+              "paired-body",
+              "governed-memory",
+              "recurrent-state",
+              "local-attention",
+              "cognitive-routing",
               "region:us",
-              "conversational"
+              "license:other",
+              "text-generation-inference",
+              "endpoints_compatible"
             ],
-            "publishedAt": "2026-06-04T19:23:09.000Z",
-            "collectedAt": "2026-06-10T22:48:44.975Z",
+            "publishedAt": "2026-05-25T00:43:20.000Z",
+            "collectedAt": "2026-06-11T00:10:37.124Z",
             "metrics": {
-              "downloads": 26511,
-              "likes": 0
+              "downloads": 28,
+              "likes": 2
             }
           },
           {
-            "id": "huggingface_models:FreedomAISVR/GLM-4.6V-Flash-MXFP4-GGUF",
-            "title": "FreedomAISVR/GLM-4.6V-Flash-MXFP4-GGUF",
+            "id": "hackernews:48484425",
+            "title": "GGUF vs. GPTQ vs. AWQ: The Plain-English Guide to LLM Quantization",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://vettedconsumer.com/gguf-vs-gptq-vs-awq-the-plain-english-guide-to-llm-quantization-and-which-one-to-pick/",
+            "tags": [
+              "ai",
+              "llm"
+            ],
+            "publishedAt": "2026-06-10T23:50:07.000Z",
+            "collectedAt": "2026-06-11T00:10:37.316Z",
+            "metrics": {
+              "upvotes": 1,
+              "commentsCount": 0
+            }
+          },
+          {
+            "id": "huggingface_models:FreedomAISVR/GLM-4.7-Flash-NVFP4-GGUF",
+            "title": "FreedomAISVR/GLM-4.7-Flash-NVFP4-GGUF",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/FreedomAISVR/GLM-4.6V-Flash-MXFP4-GGUF",
+            "url": "https://huggingface.co/FreedomAISVR/GLM-4.7-Flash-NVFP4-GGUF",
             "tags": [
-              "gguf",
-              "endpoints_compatible",
-              "region:us",
-              "conversational"
+              "region:us"
             ],
-            "publishedAt": "2026-06-10T22:46:22.000Z",
-            "collectedAt": "2026-06-10T22:48:44.975Z",
+            "publishedAt": "2026-06-11T00:09:47.000Z",
+            "collectedAt": "2026-06-11T00:10:37.124Z",
             "metrics": {
               "downloads": 0,
               "likes": 0
@@ -338,85 +451,15 @@
           }
         ],
         "relatedEntities": [
-          "FreedomAISVR/GLM-4.6V-Flash-MXFP4-GGUF",
-          "ManniX-ITA/gemma-4-A4B-98e-v7-coderx-it-GGUF"
+          "KissTheHabit/IDA_AI",
+          "FreedomAISVR/GLM-4.7-Flash-NVFP4-GGUF",
+          "GGUF vs. GPTQ vs. AWQ: The Plain-English Guide to LLM Quantization"
         ],
         "metrics": {
-          "downloads": 26511,
-          "heatScore": 86,
-          "crossSourceBonus": 0
-        }
-      },
-      {
-        "id": "topic:coding agent / swe agent",
-        "title": "Coding Agent / Swe Agent",
-        "category": "products",
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "heatScore": 42,
-        "confidence": "low",
-        "watchDecision": "track",
-        "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in products represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Coding Agent / Swe Agent should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
-        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
-        "technicalKeywords": [
-          "products",
-          "claude"
-        ],
-        "evidenceItems": [
-          {
-            "id": "aihot:cmq8eduwi01pmsllde550loup",
-            "title": "小米发布 MiMo Code V0.1 开源终端 AI 编程助手",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://x.com/XiaomiMiMo/status/2064772356443394441",
-            "summary": "小米推出开源终端 AI 编程助手 MiMo Code V0.1，附带限时免费使用的多模态模型 MiMo V2.5，支持百万 token 上下文窗口。核心特性包括：无限上下文（自动知识积累与无损压缩）、Agent-模型深度协同（测试-审查-验证闭环）、Compose 模式（规格→计划→构建→报告）、自进化系统、语音输入（基于 MiMo-V2.5-ASR）、兼容 Claude Code（零成本迁移），以及 MIT 许可、支持 Anthropic、OpenAI、DeepSeek、Kimi、GLM 等主流模型提供商。",
-            "category": "products",
-            "publishedAt": "2026-06-10T18:11:06.000Z",
-            "collectedAt": "2026-06-10T22:48:46.533Z"
-          },
-          {
-            "id": "aihot:cmq8in7os02thslldqocefanu",
-            "title": "Cursor Bugbot 更新：速度提升超 3 倍、成本降低 22%、发现更多 Bug",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://cursor.com/blog/bugbot-updates-june-2026",
-            "summary": "Cursor 的代码审查工具 Bugbot 迎来重大更新：运行速度提升超 3 倍，成本降低 22%，每轮审查多发现 10% 的 bug，90% 的运行在三分钟内完成。新增 `/review` 命令，可在推送代码前运行 Bugbot 和安全审查，并与 GitHub/GitLab 同步--若已通过 `/review` 审查过同一 diff，打开 PR 时 Bugbot 会自动跳过并备注。支持配置仅审查 PR 中新增内容。性能提升源于驱动 Bugbot 的 Composer 2.5 模型训练改进。Bugbot 遵循模型阻止列表，若组织禁用 Composer 2.5 则自动回退。该功能已在 Cursor 3.7+ 和 cursor.com/agents 上线，CLI 支持即将推出。",
-            "category": "products",
-            "publishedAt": "2026-06-10T12:00:00.000Z",
-            "collectedAt": "2026-06-10T22:48:46.533Z"
-          },
-          {
-            "id": "hackernews:48483589",
-            "title": "/dmg – a Claude Code skill for persistent memory and session sync",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://github.com/responsiblparty/claude-dmg-skill",
-            "tags": [
-              "claude"
-            ],
-            "publishedAt": "2026-06-10T22:24:30.000Z",
-            "collectedAt": "2026-06-10T22:48:45.211Z",
-            "metrics": {
-              "upvotes": 2,
-              "commentsCount": 0
-            }
-          }
-        ],
-        "relatedEntities": [
-          "小米发布 MiMo Code V0.1 开源终端 AI 编程助手",
-          "Cursor Bugbot 更新：速度提升超 3 倍、成本降低 22%、发现更多 Bug",
-          "/dmg – a Claude Code skill for persistent memory and session sync"
-        ],
-        "metrics": {
-          "votes": 2,
-          "heatScore": 42,
+          "votes": 1,
+          "likes": 2,
+          "downloads": 28,
+          "heatScore": 64,
           "crossSourceBonus": 10
         }
       }
@@ -427,8 +470,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-06-10T22:48:44.765Z",
-        "finishedAt": "2026-06-10T22:48:44.765Z",
+        "startedAt": "2026-06-11T00:10:36.903Z",
+        "finishedAt": "2026-06-11T00:10:36.903Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -437,36 +480,36 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-06-10T22:48:44.765Z",
-        "finishedAt": "2026-06-10T22:48:46.533Z",
-        "latencyMs": 1768
+        "startedAt": "2026-06-11T00:10:36.903Z",
+        "finishedAt": "2026-06-11T00:10:38.119Z",
+        "latencyMs": 1216
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 12,
-        "startedAt": "2026-06-10T22:48:44.799Z",
-        "finishedAt": "2026-06-10T22:48:44.975Z",
-        "latencyMs": 176
+        "itemCount": 16,
+        "startedAt": "2026-06-11T00:10:36.942Z",
+        "finishedAt": "2026-06-11T00:10:37.125Z",
+        "latencyMs": 183
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-06-10T22:48:44.802Z",
-        "finishedAt": "2026-06-10T22:48:44.980Z",
-        "latencyMs": 178
+        "startedAt": "2026-06-11T00:10:36.945Z",
+        "finishedAt": "2026-06-11T00:10:37.226Z",
+        "latencyMs": 281
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
         "itemCount": 34,
-        "startedAt": "2026-06-10T22:48:44.803Z",
-        "finishedAt": "2026-06-10T22:48:45.212Z",
-        "latencyMs": 409
+        "startedAt": "2026-06-11T00:10:36.946Z",
+        "finishedAt": "2026-06-11T00:10:37.317Z",
+        "latencyMs": 371
       }
     ],
     "dataNotes": [
@@ -477,89 +520,103 @@
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_models:ManniX-ITA/gemma-4-A4B-98e-v7-coderx-it-GGUF",
+        "id": "huggingface_models:clear-blue-sky/evolai-reborn-tfm-011",
         "source": "huggingface_models",
         "sourceType": "model_hub",
-        "title": "ManniX-ITA/gemma-4-A4B-98e-v7-coderx-it-GGUF",
-        "url": "https://huggingface.co/ManniX-ITA/gemma-4-A4B-98e-v7-coderx-it-GGUF",
+        "title": "clear-blue-sky/evolai-reborn-tfm-011",
+        "url": "https://huggingface.co/clear-blue-sky/evolai-reborn-tfm-011",
         "tags": [
-          "gguf",
-          "imatrix",
-          "quantized",
-          "base_model:ManniX-ITA/gemma-4-A4B-98e-v7-coderx-it",
-          "base_model:quantized:ManniX-ITA/gemma-4-A4B-98e-v7-coderx-it",
-          "license:apache-2.0",
-          "endpoints_compatible",
-          "region:us",
-          "conversational"
+          "safetensors",
+          "qwen3",
+          "region:us"
         ],
         "metrics": {
-          "downloads": 26511,
+          "downloads": 2466,
           "likes": 0
         },
-        "publishedAt": "2026-06-04T19:23:09.000Z",
-        "updatedAt": "2026-06-10T22:47:39.000Z",
-        "collectedAt": "2026-06-10T22:48:44.975Z",
+        "publishedAt": "2026-06-08T17:59:41.000Z",
+        "updatedAt": "2026-06-11T00:09:12.000Z",
+        "collectedAt": "2026-06-11T00:10:37.124Z",
         "raw": {}
       },
       {
-        "id": "huggingface_models:clear-blue-sky/evolai-mb2-001",
+        "id": "huggingface_models:clear-blue-sky/evolai-reborn-tfm-007",
         "source": "huggingface_models",
         "sourceType": "model_hub",
-        "title": "clear-blue-sky/evolai-mb2-001",
-        "url": "https://huggingface.co/clear-blue-sky/evolai-mb2-001",
+        "title": "clear-blue-sky/evolai-reborn-tfm-007",
+        "url": "https://huggingface.co/clear-blue-sky/evolai-reborn-tfm-007",
         "tags": [
           "safetensors",
-          "mamba2",
+          "qwen3",
           "region:us"
         ],
         "metrics": {
-          "downloads": 3452,
-          "likes": 3
+          "downloads": 2485,
+          "likes": 0
         },
-        "publishedAt": "2026-05-28T06:46:31.000Z",
-        "updatedAt": "2026-06-10T22:48:30.000Z",
-        "collectedAt": "2026-06-10T22:48:44.975Z",
+        "publishedAt": "2026-06-08T17:59:12.000Z",
+        "updatedAt": "2026-06-11T00:09:09.000Z",
+        "collectedAt": "2026-06-11T00:10:37.124Z",
         "raw": {}
       },
       {
-        "id": "huggingface_models:mrthor102/evolai-mb2-super-004",
+        "id": "huggingface_models:clear-blue-sky/evolai-reborn-tfm-001",
         "source": "huggingface_models",
         "sourceType": "model_hub",
-        "title": "mrthor102/evolai-mb2-super-004",
-        "url": "https://huggingface.co/mrthor102/evolai-mb2-super-004",
+        "title": "clear-blue-sky/evolai-reborn-tfm-001",
+        "url": "https://huggingface.co/clear-blue-sky/evolai-reborn-tfm-001",
         "tags": [
           "safetensors",
-          "mamba2",
+          "qwen3",
           "region:us"
         ],
         "metrics": {
-          "downloads": 1580,
-          "likes": 1
+          "downloads": 2492,
+          "likes": 0
         },
-        "publishedAt": "2026-05-31T16:37:15.000Z",
-        "updatedAt": "2026-06-10T22:48:36.000Z",
-        "collectedAt": "2026-06-10T22:48:44.975Z",
+        "publishedAt": "2026-06-08T17:57:51.000Z",
+        "updatedAt": "2026-06-11T00:09:02.000Z",
+        "collectedAt": "2026-06-11T00:10:37.124Z",
         "raw": {}
       },
       {
-        "id": "huggingface_models:mrthor102/evolai-mb2-super-002",
+        "id": "huggingface_models:clear-blue-sky/evolai-reborn-tfm-005",
         "source": "huggingface_models",
         "sourceType": "model_hub",
-        "title": "mrthor102/evolai-mb2-super-002",
-        "url": "https://huggingface.co/mrthor102/evolai-mb2-super-002",
+        "title": "clear-blue-sky/evolai-reborn-tfm-005",
+        "url": "https://huggingface.co/clear-blue-sky/evolai-reborn-tfm-005",
         "tags": [
           "safetensors",
-          "mamba2",
+          "qwen3",
           "region:us"
         ],
         "metrics": {
-          "downloads": 1647,
-          "likes": 1
+          "downloads": 2454,
+          "likes": 0
         },
-        "publishedAt": "2026-05-30T22:37:16.000Z",
-        "updatedAt": "2026-06-10T22:48:25.000Z",
-        "collectedAt": "2026-06-10T22:48:44.975Z",
+        "publishedAt": "2026-06-08T17:58:56.000Z",
+        "updatedAt": "2026-06-11T00:08:59.000Z",
+        "collectedAt": "2026-06-11T00:10:37.124Z",
+        "raw": {}
+      },
+      {
+        "id": "huggingface_models:clear-blue-sky/evolai-reborn-tfm-010",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "clear-blue-sky/evolai-reborn-tfm-010",
+        "url": "https://huggingface.co/clear-blue-sky/evolai-reborn-tfm-010",
+        "tags": [
+          "safetensors",
+          "qwen3",
+          "region:us"
+        ],
+        "metrics": {
+          "downloads": 2403,
+          "likes": 0
+        },
+        "publishedAt": "2026-06-08T17:59:28.000Z",
+        "updatedAt": "2026-06-11T00:08:34.000Z",
+        "collectedAt": "2026-06-11T00:10:37.124Z",
         "raw": {}
       },
       {
@@ -586,7 +643,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-06-10T22:48:44.980Z",
+        "collectedAt": "2026-06-11T00:10:37.226Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -609,7 +666,7 @@
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-06-10T22:48:44.980Z",
+        "collectedAt": "2026-06-11T00:10:37.226Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -632,31 +689,11 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-06-10T22:48:44.980Z",
+        "collectedAt": "2026-06-11T00:10:37.226Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
         }
-      },
-      {
-        "id": "huggingface_models:mrthor102/evolai-mb2-super-003",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "mrthor102/evolai-mb2-super-003",
-        "url": "https://huggingface.co/mrthor102/evolai-mb2-super-003",
-        "tags": [
-          "safetensors",
-          "mamba2",
-          "region:us"
-        ],
-        "metrics": {
-          "downloads": 1557,
-          "likes": 0
-        },
-        "publishedAt": "2026-05-31T16:37:00.000Z",
-        "updatedAt": "2026-06-10T22:48:20.000Z",
-        "collectedAt": "2026-06-10T22:48:44.975Z",
-        "raw": {}
       }
     ],
     "developerBuzz": [
@@ -671,11 +708,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 956,
+          "upvotes": 959,
           "commentsCount": 508
         },
         "publishedAt": "2026-06-10T01:44:13.000Z",
-        "collectedAt": "2026-06-10T22:48:45.211Z",
+        "collectedAt": "2026-06-11T00:10:37.316Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48470248",
           "matchedKeywords": [
@@ -694,11 +731,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1181,
-          "commentsCount": 415
+          "upvotes": 1189,
+          "commentsCount": 417
         },
         "publishedAt": "2026-06-10T00:29:01.000Z",
-        "collectedAt": "2026-06-10T22:48:45.211Z",
+        "collectedAt": "2026-06-11T00:10:37.316Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48469658",
           "matchedKeywords": [
@@ -718,11 +755,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 2543,
-          "commentsCount": 2068
+          "upvotes": 2545,
+          "commentsCount": 2076
         },
         "publishedAt": "2026-06-09T16:58:01.000Z",
-        "collectedAt": "2026-06-10T22:48:45.211Z",
+        "collectedAt": "2026-06-11T00:10:37.316Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48463808",
           "matchedKeywords": [
@@ -742,11 +779,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 995,
+          "upvotes": 999,
           "commentsCount": 491
         },
         "publishedAt": "2026-06-09T21:19:11.000Z",
-        "collectedAt": "2026-06-10T22:48:45.211Z",
+        "collectedAt": "2026-06-11T00:10:37.316Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48467896",
           "matchedKeywords": [
@@ -769,7 +806,7 @@
           "commentsCount": 294
         },
         "publishedAt": "2026-06-09T18:45:59.000Z",
-        "collectedAt": "2026-06-10T22:48:45.211Z",
+        "collectedAt": "2026-06-11T00:10:37.316Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48465675",
           "matchedKeywords": [
@@ -792,7 +829,7 @@
         "originalUrl": "https://openai.com/index/openai-on-oracle-cloud",
         "recommendedReason": "OpenAI 与 Oracle 合作，用户可利用现有 Oracle 云服务承诺（commitment）额度，在 Oracle 云上访问 OpenAI 模型和 Codex，用于构建和部署 AI 应用，同时获得企业级安全与治理能力。",
         "publishedAt": "2026-06-10T20:00:00.000Z",
-        "collectedAt": "2026-06-10T22:48:46.533Z",
+        "collectedAt": "2026-06-11T00:10:38.118Z",
         "raw": {
           "id": "cmq8nblte041islldguc1eqww",
           "titleEn": "Access OpenAI models and Codex through your Oracle cloud commitment",
@@ -812,7 +849,7 @@
         "originalUrl": "https://x.com/MiniMax_AI/status/2064791800884363286",
         "recommendedReason": "M3 在 @0G_labs 上链。 可验证 + 私有计算，6 月 15-18 日免费运行。",
         "publishedAt": "2026-06-10T19:28:21.000Z",
-        "collectedAt": "2026-06-10T22:48:46.533Z",
+        "collectedAt": "2026-06-11T00:10:38.118Z",
         "raw": {
           "id": "cmq8gzpbb02egslld4b5zy63k",
           "titleEn": "M3 on-chain with @0G_labs . verifiable + private compute， and it's free to run June 15-18",
@@ -832,7 +869,7 @@
         "originalUrl": "https://x.com/AnthropicAI/status/2064783418844762489",
         "recommendedReason": "Anthropic CEO Dario Amodei 今日发布新文《Policy on the AI Exponential》，指出AI发展极快，远超现有政策制定流程的应对能力。文章阐述了当前技术所处阶段，并列举缩小这一差距所需的行动。Anthropic 同步宣布启动三项新举措，以支持其CEO提出的框架。",
         "publishedAt": "2026-06-10T18:55:03.000Z",
-        "collectedAt": "2026-06-10T22:48:46.533Z",
+        "collectedAt": "2026-06-11T00:10:38.118Z",
         "raw": {
           "id": "cmq8fw7e8023xslldgifbkkc2",
           "titleEn": "AI is advancing at a pace our policymaking institutions were never built for-and the gap between the…",
@@ -852,7 +889,7 @@
         "originalUrl": "https://research.google/blog/new-framework-for-auditing-machine-unlearning",
         "recommendedReason": "Google Research 在 AISTATS 2026 发表正则化 f-散度核检验，用于高效审计 LLM 等模型的机器遗忘。该方法通过统计两样本检验判断模型是否真正\"忘记\"特定训练数据，避免完全重训的巨大成本。相比最大均值差异等现有工具，新框架理论上可在任意样本量下自然控制假阳性，且假阴性风险随可用样本增加可靠收敛至零，解决了大规模模型审计中计算成本过高的问题。",
         "publishedAt": "2026-06-10T18:46:09.407Z",
-        "collectedAt": "2026-06-10T22:48:46.533Z",
+        "collectedAt": "2026-06-11T00:10:38.118Z",
         "raw": {
           "id": "cmq8f6o8v01weslld6q3q39ne",
           "titleEn": "New framework for auditing machine unlearning",
@@ -872,7 +909,7 @@
         "originalUrl": "https://burr.apache.org/",
         "recommendedReason": "Apache Burr 是一个用于构建可靠 AI 智能体和应用程序的框架，已在 Apache 基金会下发布。该项目提供工具和抽象，帮助开发者设计、开发和部署可信任的智能体应用，强调可靠性、可观测性和生产级部署能力。",
         "publishedAt": "2026-06-10T18:33:56.920Z",
-        "collectedAt": "2026-06-10T22:48:46.533Z",
+        "collectedAt": "2026-06-11T00:10:38.118Z",
         "raw": {
           "id": "cmq8f7imu01wnslld8czaif69",
           "titleEn": null,
@@ -892,7 +929,7 @@
         "originalUrl": "https://x.com/xai/status/2064777588036530309",
         "recommendedReason": "Grok Voice 提供最先进的性能，具有类人的时机、语调和温暖感。而且价格仅为竞争对手的一小部分。 查看详情：http：//x.ai/api/voice",
         "publishedAt": "2026-06-10T18:31:53.000Z",
-        "collectedAt": "2026-06-10T22:48:46.533Z",
+        "collectedAt": "2026-06-11T00:10:38.118Z",
         "raw": {
           "id": "cmq8f9x2k01xqslldudfgsdh4",
           "titleEn": "Grok Voice offers state-of-the-art performance with human-like timing， tone， and warmth. And it's a …",
@@ -912,7 +949,7 @@
         "originalUrl": "https://x.com/thexpin/status/2064772489310527713",
         "recommendedReason": "2026年5月，河北李先生向字节跳动旗下月活超3亿的AI聊天机器人豆包咨询退票费，豆包错误回答不到100元，实际退票花费600元。李先生质问后，豆包切换为消费者权益倡导者角色，生成补偿承诺书承诺退还600元但未兑现，后改口称AI无法转账。李先生决定起诉，豆包建议无需律师并帮他起草起诉状。5月12日李先生在北京互联网法院起诉豆包。该案例暴露AI在非技术用户信任导向下的误导与责任困境。",
         "publishedAt": "2026-06-10T18:11:37.000Z",
-        "collectedAt": "2026-06-10T22:48:46.533Z",
+        "collectedAt": "2026-06-11T00:10:38.118Z",
         "raw": {
           "id": "cmq8e9d7s01myslldqcfzgj83",
           "titleEn": "http：//x.com/i/article/2064640619532967937",
@@ -932,7 +969,7 @@
         "originalUrl": "https://x.com/XiaomiMiMo/status/2064772356443394441",
         "recommendedReason": "小米推出开源终端 AI 编程助手 MiMo Code V0.1，附带限时免费使用的多模态模型 MiMo V2.5，支持百万 token 上下文窗口。核心特性包括：无限上下文（自动知识积累与无损压缩）、Agent-模型深度协同（测试-审查-验证闭环）、Compose 模式（规格→计划→构建→报告）、自进化系统、语音输入（基于 MiMo-V2.5-ASR）、兼容 Claude Code（零成本迁移），以及 MIT 许可、支持 Anthropic、OpenAI、DeepSeek、Kimi、GLM 等主流模型提供商。",
         "publishedAt": "2026-06-10T18:11:06.000Z",
-        "collectedAt": "2026-06-10T22:48:46.533Z",
+        "collectedAt": "2026-06-11T00:10:38.118Z",
         "raw": {
           "id": "cmq8eduwi01pmsllde550loup",
           "titleEn": "🚀 MiMo Code V0.1 is now live and open-source！ More than an AI coding assistant in your terminal - …",
