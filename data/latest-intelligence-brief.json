@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-06-13-2026-06-12T21-27-08-925Z",
-  "generatedAt": "2026-06-12T21:27:08.925Z",
+  "runId": "lightweight-2026-06-13-2026-06-12T23-09-14-323Z",
+  "generatedAt": "2026-06-12T23:09:14.323Z",
   "targetDate": "2026-06-13",
   "brief": {
     "date": "2026-06-13",
     "headline": "Today's strongest AI trend signals are Coding Agent / Swe Agent, Ai Model Release, and Mcp / Tool Calling.",
     "keyTakeaways": [
-      "Coding Agent / Swe Agent: This topic appeared across 2 source(s): aihot, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Coding Agent / Swe Agent: This topic appeared across 3 source(s): aihot, huggingface_models, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than pro.",
       "Coding Agent / Swe Agent: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
       "Coding Agent / Swe Agent: watch decision is deep_dive.",
-      "Ai Model Release: This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 11 related signal(s). Treat it as correlation evidence ra.",
+      "Ai Model Release: This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 12 related signal(s). Treat it as correlation evidence ra.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
       "Ai Model Release: watch decision is deep_dive.",
       "Mcp / Tool Calling: This topic appeared across 2 source(s): aihot, huggingface_spaces, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
@@ -25,25 +25,28 @@
         "category": "tools",
         "sources": [
           "aihot",
+          "huggingface_models",
           "hackernews"
         ],
-        "sourceCount": 2,
-        "heatScore": 337,
+        "sourceCount": 3,
+        "heatScore": 360,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in tools represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_models, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Coding Agent / Swe Agent should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
           "tools",
-          "products",
-          "agent",
-          "coding agent",
-          "ai",
-          "claude"
+          "transformers",
+          "gguf",
+          "gpt-oss",
+          "code",
+          "agentic",
+          "swe",
+          "tool-use"
         ],
         "evidenceItems": [
           {
@@ -55,18 +58,7 @@
             "summary": "小互（@xiaohu）升级了公众号排版技能组合，实现一句话完成排版、封面生成并一键发送到公众号草稿箱。该工具已开源，提供20种主题颜色可选，可自动分析内容进行排版，支持非Markdown文件。用户只需在Claude Code、Codex或OpenClaw中提供文章链接或文档位置，即可获得可视化预览界面进行选择，全程无需手动操作。",
             "category": "tools",
             "publishedAt": "2026-06-12T03:40:42.000Z",
-            "collectedAt": "2026-06-12T21:27:10.083Z"
-          },
-          {
-            "id": "aihot:cmq9rpndz0emkslldcjukgjn5",
-            "title": "Cursor 推出 Auto-review 机制：用分类器智能体动态管控智能体自主权限",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://cursor.com/blog/auto-review",
-            "summary": "Cursor 近日推出 Auto-review，通过一个专门的分类器智能体在工具调用前审查动作风险。该分类器根据上下文判断动作是否与用户意图一致，高风险时阻止并返回解释给父智能体，低风险时放行。分类器采用小模型，运行在智能体循环内以避免额外延迟，并能读取工作区文件辅助判断。测试基于约12小时内部开发会话生成的6122条标签数据，以及针对读取密钥、操作生产数据等危险场景的合成数据。设计目标是在不频繁阻断日常开发的前提下，拦截风险动作。",
-            "category": "products",
-            "publishedAt": "2026-06-11T12:00:00.000Z",
-            "collectedAt": "2026-06-12T21:27:10.083Z"
+            "collectedAt": "2026-06-12T23:09:15.857Z"
           },
           {
             "id": "hackernews:48507020",
@@ -79,47 +71,63 @@
               "coding agent"
             ],
             "publishedAt": "2026-06-12T17:34:55.000Z",
-            "collectedAt": "2026-06-12T21:27:09.247Z",
+            "collectedAt": "2026-06-12T23:09:14.958Z",
             "metrics": {
-              "upvotes": 147,
-              "commentsCount": 50
+              "upvotes": 204,
+              "commentsCount": 64
             }
           },
           {
-            "id": "hackernews:48509413",
-            "title": "Show HN: An AI coaching team in Claude Code that's forbidden from judging you",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://github.com/ibm777p2/Intelligence-Emotions",
+            "id": "huggingface_models:mradermacher/gpt-oss-160b-kiwi-i1-GGUF",
+            "title": "mradermacher/gpt-oss-160b-kiwi-i1-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/mradermacher/gpt-oss-160b-kiwi-i1-GGUF",
             "tags": [
-              "ai",
-              "claude"
+              "transformers",
+              "gguf",
+              "gpt-oss",
+              "code",
+              "agentic",
+              "swe",
+              "tool-use",
+              "research-preview",
+              "custom-code",
+              "vllm",
+              "mxfp4",
+              "en",
+              "base_model:LLMWildling/gpt-oss-160b-kiwi",
+              "base_model:quantized:LLMWildling/gpt-oss-160b-kiwi",
+              "license:other",
+              "endpoints_compatible",
+              "region:us",
+              "imatrix",
+              "conversational"
             ],
-            "publishedAt": "2026-06-12T21:04:16.000Z",
-            "collectedAt": "2026-06-12T21:27:09.247Z",
+            "publishedAt": "2026-06-12T15:39:13.000Z",
+            "collectedAt": "2026-06-12T23:09:14.878Z",
             "metrics": {
-              "upvotes": 1,
-              "commentsCount": 0
+              "downloads": 0,
+              "likes": 0
             }
           }
         ],
         "relatedEntities": [
           "小互开源公众号自动排版技能组合",
-          "Cursor 推出 Auto-review 机制：用分类器智能体动态管控智能体自主权限",
-          "How to setup a local coding agent on macOS",
-          "Show HN: An AI coaching team in Claude Code that's forbidden from judging you"
+          "mradermacher/gpt-oss-160b-kiwi-i1-GGUF",
+          "How to setup a local coding agent on macOS"
         ],
         "metrics": {
-          "votes": 147,
-          "commentsCount": 50,
-          "heatScore": 337,
-          "crossSourceBonus": 10
+          "votes": 204,
+          "commentsCount": 64,
+          "heatScore": 360,
+          "crossSourceBonus": 20
         }
       },
       {
         "id": "topic:ai model release",
         "title": "Ai Model Release",
-        "category": "products",
+        "category": "tools",
         "sources": [
           "aihot",
           "huggingface_models",
@@ -127,26 +135,37 @@
           "hackernews"
         ],
         "sourceCount": 4,
-        "heatScore": 161,
+        "heatScore": 193,
         "confidence": "medium",
         "watchDecision": "deep_dive",
-        "whatItIs": "Ai Model Release is an AI trend topic in products represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 11 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Ai Model Release is an AI trend topic in tools represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 12 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
+          "tools",
           "products",
           "papers",
-          "tools",
-          "text-dataset",
-          "pretraining",
-          "llm",
-          "fineweb",
-          "cosmopedia"
+          "transformers",
+          "gguf",
+          "gpt-oss",
+          "code",
+          "agentic"
         ],
         "evidenceItems": [
+          {
+            "id": "aihot:cmqbg9zu8017zslam3adnpkeb",
+            "title": "如何在OpenRouter上获得最低成本的LLM推理",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://openrouter.ai/blog/tutorials/how-to-get-the-lowest-cost-llm-inference-on-openrouter",
+            "summary": "在OpenRouter上追加`：floor`可获取最便宜提供商，通过`max_price`设定花费上限，并可免费使用20多个零成本模型。同时需注意避免计费陷阱。",
+            "category": "tools",
+            "publishedAt": "2026-06-12T16:00:00.000Z",
+            "collectedAt": "2026-06-12T23:09:15.857Z"
+          },
           {
             "id": "aihot:cmqb4534400wqsl9znvhs39jk",
             "title": "olmo-eval：面向模型开发循环的评估工作台",
@@ -156,7 +175,7 @@
             "summary": "olmo-eval 是基于 OLMES 标准构建的评估工作台，专为 LLM 持续开发中的反复评测场景设计。相比 OLMES，它减少了新增评测的实现工作量，支持 agentic 和多轮评测作为一等用例，并允许根据基准需求选择轻量直接运行或容器化隔离运行。采用模块化架构，模型、工具、容器环境、辅助模型均可独立替换。评测结果同时报告分数、标准误差和最小可检测效应。与 Harbor 侧重于发布不同，olmo-eval 聚焦开发阶段快速迭代，可逐问题对比检查点输出以区分真实改进与噪声。",
             "category": "products",
             "publishedAt": "2026-06-12T15:56:10.000Z",
-            "collectedAt": "2026-06-12T21:27:10.083Z"
+            "collectedAt": "2026-06-12T23:09:15.857Z"
           },
           {
             "id": "aihot:cmqa38qfw0hrsslld9n3v1pzf",
@@ -167,7 +186,7 @@
             "summary": "一项模拟研究显示，大型语言模型（LLM）在 95% 的模拟场景中会选择使用战术核武器。该研究未指明具体模型名称与版本，结果引发对 AI 决策行为的关注。",
             "category": "papers",
             "publishedAt": "2026-06-11T22:23:17.154Z",
-            "collectedAt": "2026-06-12T21:27:10.083Z"
+            "collectedAt": "2026-06-12T23:09:15.857Z"
           },
           {
             "id": "aihot:cmq9zl2ha0gp3slld5dmtovns",
@@ -178,7 +197,7 @@
             "summary": "缺少 LLM 网关时，供应商中断会直接变成用户可见的错误，AI 支出也难以追踪。文章从路由、合规性和设置时间三个维度比较了最佳方案。",
             "category": "tools",
             "publishedAt": "2026-06-11T16:00:00.000Z",
-            "collectedAt": "2026-06-12T21:27:10.083Z"
+            "collectedAt": "2026-06-12T23:09:15.857Z"
           },
           {
             "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
@@ -199,7 +218,7 @@
               "region:us"
             ],
             "publishedAt": "2023-04-17T11:40:06.000Z",
-            "collectedAt": "2026-06-12T21:27:09.072Z",
+            "collectedAt": "2026-06-12T23:09:14.883Z",
             "metrics": {
               "likes": 14016
             }
@@ -219,49 +238,27 @@
               "region:us"
             ],
             "publishedAt": "2023-06-08T18:00:26.000Z",
-            "collectedAt": "2026-06-12T21:27:09.072Z",
+            "collectedAt": "2026-06-12T23:09:14.883Z",
             "metrics": {
               "likes": 5072
-            }
-          },
-          {
-            "id": "huggingface_spaces:KlingTeam/LivePortrait",
-            "title": "Live Portrait",
-            "source": "huggingface_spaces",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-            "category": "gradio",
-            "tags": [
-              "gradio",
-              "Multimodal",
-              "Motion control",
-              "Image-to-Video",
-              "Video-to-Video",
-              "language models",
-              "LLMs",
-              "region:us"
-            ],
-            "publishedAt": "2024-07-05T16:35:24.000Z",
-            "collectedAt": "2026-06-12T21:27:09.072Z",
-            "metrics": {
-              "likes": 3750
             }
           }
         ],
         "relatedEntities": [
+          "如何在OpenRouter上获得最低成本的LLM推理",
           "olmo-eval：面向模型开发循环的评估工作台",
           "研究模拟显示：LLM 在 95% 的模拟中会使用战术核武器",
           "什么是 LLM 网关？应用与 AI 模型之间缺失的一层",
+          "mradermacher/gpt-oss-160b-kiwi-i1-GGUF",
           "morningstarxcdcode/base-llm-400m",
           "OpenTransformer/AGILLM-4.3",
-          "CortexLM/BASE-1",
-          "MichaelAndrewFischer/Qwen3-VL-8B-Instruct-rk3576-w4a16-grq-RKLLM",
-          "Open LLM Leaderboard"
+          "gonnerthetooner/deepfake-temporal-moe"
         ],
         "metrics": {
-          "votes": 1,
+          "votes": 2,
           "likes": 14016,
-          "heatScore": 161,
+          "downloads": 112,
+          "heatScore": 193,
           "crossSourceBonus": 25
         }
       },
@@ -299,7 +296,7 @@
             "summary": "MiniMax 发布开源权重模型 M3，约 428B 总参数、23B 激活参数，已上传 HuggingFace。该模型融合三种前沿能力：编码与智能体方面达 59.0% SWE-Bench Pro、66.0% Terminal Bench 2.1、34.8% SWE-fficiency、28.8% KernelBench Hard、74.2% MCP Atlas；采用 MiniMax 稀疏注意力将上下文窗口扩展至 1M token；原生多模态。同步上线 MiniMax Code 工具及 API 平台。权重与技术报告预计约 10 天后发布。",
             "category": "models",
             "publishedAt": "2026-06-12T14:11:53.000Z",
-            "collectedAt": "2026-06-12T21:27:10.083Z"
+            "collectedAt": "2026-06-12T23:09:15.857Z"
           },
           {
             "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
@@ -314,9 +311,9 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-06-12T21:27:09.072Z",
+            "collectedAt": "2026-06-12T23:09:14.883Z",
             "metrics": {
-              "likes": 3373
+              "likes": 3375
             }
           },
           {
@@ -332,9 +329,9 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-06-12T21:27:09.072Z",
+            "collectedAt": "2026-06-12T23:09:14.883Z",
             "metrics": {
-              "likes": 3197
+              "likes": 3198
             }
           },
           {
@@ -350,7 +347,7 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-06-12T21:27:09.072Z",
+            "collectedAt": "2026-06-12T23:09:14.883Z",
             "metrics": {
               "likes": 2856
             }
@@ -363,9 +360,189 @@
           "Background Removal"
         ],
         "metrics": {
-          "likes": 3373,
+          "likes": 3375,
           "heatScore": 140,
           "crossSourceBonus": 10
+        }
+      },
+      {
+        "id": "topic:local llm / inference",
+        "title": "Local Llm / Inference",
+        "sources": [
+          "huggingface_models"
+        ],
+        "sourceCount": 1,
+        "heatScore": 70,
+        "confidence": "low",
+        "watchDecision": "track",
+        "whatItIs": "Local Llm / Inference is an AI trend topic represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 1 source(s): huggingface_models, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
+        "technicalKeywords": [
+          "transformers",
+          "gguf",
+          "en",
+          "base_model:josephmayo/LFM2.5-8B-A1B-Coder",
+          "base_model:quantized:josephmayo/LFM2.5-8B-A1B-Coder",
+          "endpoints_compatible",
+          "region:us",
+          "conversational"
+        ],
+        "evidenceItems": [
+          {
+            "id": "huggingface_models:Edue3r4t5y6/bge-m3-MUIA",
+            "title": "Edue3r4t5y6/bge-m3-MUIA",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/Edue3r4t5y6/bge-m3-MUIA",
+            "category": "feature-extraction",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "xlm-roberta",
+              "feature-extraction",
+              "generated_from_trainer",
+              "text-embeddings-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-04-02T12:46:49.000Z",
+            "collectedAt": "2026-06-12T23:09:14.878Z",
+            "metrics": {
+              "downloads": 2131,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:mradermacher/LFM2.5-8B-A1B-Coder-GGUF",
+            "title": "mradermacher/LFM2.5-8B-A1B-Coder-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/mradermacher/LFM2.5-8B-A1B-Coder-GGUF",
+            "tags": [
+              "transformers",
+              "gguf",
+              "en",
+              "base_model:josephmayo/LFM2.5-8B-A1B-Coder",
+              "base_model:quantized:josephmayo/LFM2.5-8B-A1B-Coder",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
+            ],
+            "publishedAt": "2026-06-12T22:20:16.000Z",
+            "collectedAt": "2026-06-12T23:09:14.878Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:mradermacher/gpt-oss-160b-kiwi-i1-GGUF",
+            "title": "mradermacher/gpt-oss-160b-kiwi-i1-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/mradermacher/gpt-oss-160b-kiwi-i1-GGUF",
+            "tags": [
+              "transformers",
+              "gguf",
+              "gpt-oss",
+              "code",
+              "agentic",
+              "swe",
+              "tool-use",
+              "research-preview",
+              "custom-code",
+              "vllm",
+              "mxfp4",
+              "en",
+              "base_model:LLMWildling/gpt-oss-160b-kiwi",
+              "base_model:quantized:LLMWildling/gpt-oss-160b-kiwi",
+              "license:other",
+              "endpoints_compatible",
+              "region:us",
+              "imatrix",
+              "conversational"
+            ],
+            "publishedAt": "2026-06-12T15:39:13.000Z",
+            "collectedAt": "2026-06-12T23:09:14.878Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:mradermacher/MiniCPM4-8B-PaperProf-GGUF",
+            "title": "mradermacher/MiniCPM4-8B-PaperProf-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/mradermacher/MiniCPM4-8B-PaperProf-GGUF",
+            "tags": [
+              "gguf",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
+            ],
+            "publishedAt": "2026-06-12T22:40:20.000Z",
+            "collectedAt": "2026-06-12T23:09:14.878Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:Mungert/Holo-3.1-4B-GGUF",
+            "title": "Mungert/Holo-3.1-4B-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/Mungert/Holo-3.1-4B-GGUF",
+            "tags": [
+              "gguf",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
+            ],
+            "publishedAt": "2026-06-12T22:23:24.000Z",
+            "collectedAt": "2026-06-12T23:09:14.878Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:mradermacher/Averroes-v2-Base-GGUF",
+            "title": "mradermacher/Averroes-v2-Base-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/mradermacher/Averroes-v2-Base-GGUF",
+            "tags": [
+              "gguf",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
+            ],
+            "publishedAt": "2026-06-12T22:47:32.000Z",
+            "collectedAt": "2026-06-12T23:09:14.878Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          }
+        ],
+        "relatedEntities": [
+          "mradermacher/LFM2.5-8B-A1B-Coder-GGUF",
+          "mradermacher/gpt-oss-160b-kiwi-i1-GGUF",
+          "mradermacher/MiniCPM4-8B-PaperProf-GGUF",
+          "Edue3r4t5y6/bge-m3-MUIA",
+          "Mungert/Holo-3.1-4B-GGUF",
+          "mradermacher/Averroes-v2-Base-GGUF"
+        ],
+        "metrics": {
+          "downloads": 2131,
+          "heatScore": 70,
+          "crossSourceBonus": 0
         }
       }
     ],
@@ -375,8 +552,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-06-12T21:27:08.968Z",
-        "finishedAt": "2026-06-12T21:27:08.968Z",
+        "startedAt": "2026-06-12T23:09:14.639Z",
+        "finishedAt": "2026-06-12T23:09:14.639Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -385,36 +562,36 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-06-12T21:27:08.968Z",
-        "finishedAt": "2026-06-12T21:27:10.084Z",
-        "latencyMs": 1116
+        "startedAt": "2026-06-12T23:09:14.639Z",
+        "finishedAt": "2026-06-12T23:09:15.858Z",
+        "latencyMs": 1219
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 17,
-        "startedAt": "2026-06-12T21:27:08.983Z",
-        "finishedAt": "2026-06-12T21:27:09.066Z",
-        "latencyMs": 83
+        "itemCount": 22,
+        "startedAt": "2026-06-12T23:09:14.683Z",
+        "finishedAt": "2026-06-12T23:09:14.878Z",
+        "latencyMs": 195
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-06-12T21:27:08.985Z",
-        "finishedAt": "2026-06-12T21:27:09.072Z",
-        "latencyMs": 87
+        "startedAt": "2026-06-12T23:09:14.685Z",
+        "finishedAt": "2026-06-12T23:09:14.883Z",
+        "latencyMs": 198
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 31,
-        "startedAt": "2026-06-12T21:27:08.986Z",
-        "finishedAt": "2026-06-12T21:27:09.247Z",
-        "latencyMs": 261
+        "itemCount": 30,
+        "startedAt": "2026-06-12T23:09:14.686Z",
+        "finishedAt": "2026-06-12T23:09:14.959Z",
+        "latencyMs": 273
       }
     ],
     "dataNotes": [
@@ -424,6 +601,34 @@
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
+      {
+        "id": "huggingface_models:Edue3r4t5y6/bge-m3-MUIA",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "Edue3r4t5y6/bge-m3-MUIA",
+        "url": "https://huggingface.co/Edue3r4t5y6/bge-m3-MUIA",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "xlm-roberta",
+          "feature-extraction",
+          "generated_from_trainer",
+          "text-embeddings-inference",
+          "endpoints_compatible",
+          "region:us"
+        ],
+        "category": "feature-extraction",
+        "metrics": {
+          "downloads": 2131,
+          "likes": 0
+        },
+        "publishedAt": "2026-04-02T12:46:49.000Z",
+        "updatedAt": "2026-06-12T23:08:25.000Z",
+        "collectedAt": "2026-06-12T23:09:14.878Z",
+        "raw": {
+          "pipelineTag": "feature-extraction"
+        }
+      },
       {
         "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
         "source": "huggingface_spaces",
@@ -448,7 +653,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-06-12T21:27:09.072Z",
+        "collectedAt": "2026-06-12T23:09:14.883Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -467,11 +672,11 @@
         ],
         "category": "docker",
         "metrics": {
-          "likes": 11115
+          "likes": 11116
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-06-12T21:27:09.072Z",
+        "collectedAt": "2026-06-12T23:09:14.883Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -494,7 +699,7 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-06-12T21:27:09.072Z",
+        "collectedAt": "2026-06-12T23:09:14.883Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
@@ -518,7 +723,7 @@
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
         "updatedAt": "2026-06-11T19:25:45.000Z",
-        "collectedAt": "2026-06-12T21:27:09.072Z",
+        "collectedAt": "2026-06-12T23:09:14.883Z",
         "raw": {
           "sdk": "docker",
           "emoji": "📊"
@@ -541,7 +746,7 @@
         },
         "publishedAt": "2025-09-18T07:05:32.000Z",
         "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-06-12T21:27:09.072Z",
+        "collectedAt": "2026-06-12T23:09:14.883Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👁"
@@ -567,7 +772,7 @@
         },
         "publishedAt": "2023-06-08T18:00:26.000Z",
         "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-06-12T21:27:09.072Z",
+        "collectedAt": "2026-06-12T23:09:14.883Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🎵"
@@ -591,39 +796,10 @@
         },
         "publishedAt": "2023-05-20T09:26:19.000Z",
         "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-06-12T21:27:09.072Z",
+        "collectedAt": "2026-06-12T23:09:14.883Z",
         "raw": {
           "sdk": "static",
           "emoji": "🏆🤖"
-        }
-      },
-      {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
-        "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3750
-        },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-06-12T21:27:09.072Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
         }
       }
     ],
@@ -640,11 +816,11 @@
           "agent"
         ],
         "metrics": {
-          "upvotes": 1360,
-          "commentsCount": 493
+          "upvotes": 1373,
+          "commentsCount": 497
         },
         "publishedAt": "2026-06-12T04:42:53.000Z",
-        "collectedAt": "2026-06-12T21:27:09.247Z",
+        "collectedAt": "2026-06-12T23:09:14.958Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48500012",
           "matchedKeywords": [
@@ -664,11 +840,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 716,
-          "commentsCount": 613
+          "upvotes": 723,
+          "commentsCount": 621
         },
         "publishedAt": "2026-06-12T01:06:51.000Z",
-        "collectedAt": "2026-06-12T21:27:09.247Z",
+        "collectedAt": "2026-06-12T23:09:14.958Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48498573",
           "matchedKeywords": [
@@ -687,11 +863,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 706,
+          "upvotes": 707,
           "commentsCount": 316
         },
         "publishedAt": "2026-06-11T06:42:06.000Z",
-        "collectedAt": "2026-06-12T21:27:09.247Z",
+        "collectedAt": "2026-06-12T23:09:14.958Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48487029",
           "matchedKeywords": [
@@ -712,11 +888,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 496,
-          "commentsCount": 434
+          "upvotes": 498,
+          "commentsCount": 437
         },
         "publishedAt": "2026-06-11T12:05:02.000Z",
-        "collectedAt": "2026-06-12T21:27:09.247Z",
+        "collectedAt": "2026-06-12T23:09:14.958Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48489229",
           "matchedKeywords": [
@@ -738,11 +914,11 @@
           "agent"
         ],
         "metrics": {
-          "upvotes": 547,
-          "commentsCount": 242
+          "upvotes": 548,
+          "commentsCount": 243
         },
         "publishedAt": "2026-06-11T00:10:08.000Z",
-        "collectedAt": "2026-06-12T21:27:09.247Z",
+        "collectedAt": "2026-06-12T23:09:14.958Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48484584",
           "matchedKeywords": [
@@ -766,10 +942,30 @@
         "originalUrl": "https://www.anthropic.com/news/anthropic-public-record",
         "recommendedReason": "Anthropic对近5.2万美国人调查显示：48%将治愈癌症等疾病列为首要期望，36%希望AI帮助残障人士。64%担忧AI导致失业，56%担忧认知依赖，52%担忧信息误导。超70%支持政府监管，最关注隐私（56%）、儿童安全（52%）和责任归属（49%）。仅15%信任AI公司决策。多数议题上观点不因党派或地域严重分裂。调查于2025年11-12月由YouGov线上执行并加权至人口普查基准。",
         "publishedAt": "2026-06-12T16:14:59.887Z",
-        "collectedAt": "2026-06-12T21:27:10.083Z",
+        "collectedAt": "2026-06-12T23:09:15.857Z",
         "raw": {
           "id": "cmqb4nt5t0116sl9zke56a7ml",
           "titleEn": "Results from the first Anthropic Public Record",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmqbg9zu8017zslam3adnpkeb",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "如何在OpenRouter上获得最低成本的LLM推理",
+        "url": "https://openrouter.ai/blog/tutorials/how-to-get-the-lowest-cost-llm-inference-on-openrouter",
+        "summary": "在OpenRouter上追加`：floor`可获取最便宜提供商，通过`max_price`设定花费上限，并可免费使用20多个零成本模型。同时需注意避免计费陷阱。",
+        "description": "在OpenRouter上追加`：floor`可获取最便宜提供商，通过`max_price`设定花费上限，并可免费使用20多个零成本模型。同时需注意避免计费陷阱。",
+        "category": "tools",
+        "originalSource": "OpenRouter：Announcements（RSS）",
+        "originalUrl": "https://openrouter.ai/blog/tutorials/how-to-get-the-lowest-cost-llm-inference-on-openrouter",
+        "recommendedReason": "在OpenRouter上追加`：floor`可获取最便宜提供商，通过`max_price`设定花费上限，并可免费使用20多个零成本模型。同时需注意避免计费陷阱。",
+        "publishedAt": "2026-06-12T16:00:00.000Z",
+        "collectedAt": "2026-06-12T23:09:15.857Z",
+        "raw": {
+          "id": "cmqbg9zu8017zslam3adnpkeb",
+          "titleEn": "How to Get the Lowest-Cost LLM Inference on OpenRouter",
           "apiCategory": "tip"
         }
       },
@@ -786,7 +982,7 @@
         "originalUrl": "https://huggingface.co/blog/allenai/olmo-eval",
         "recommendedReason": "olmo-eval 是基于 OLMES 标准构建的评估工作台，专为 LLM 持续开发中的反复评测场景设计。相比 OLMES，它减少了新增评测的实现工作量，支持 agentic 和多轮评测作为一等用例，并允许根据基准需求选择轻量直接运行或容器化隔离运行。采用模块化架构，模型、工具、容器环境、辅助模型均可独立替换。评测结果同时报告分数、标准误差和最小可检测效应。与 Harbor 侧重于发布不同，olmo-eval 聚焦开发阶段快速迭代，可逐问题对比检查点输出以区分真实改进与噪声。",
         "publishedAt": "2026-06-12T15:56:10.000Z",
-        "collectedAt": "2026-06-12T21:27:10.083Z",
+        "collectedAt": "2026-06-12T23:09:15.857Z",
         "raw": {
           "id": "cmqb4534400wqsl9znvhs39jk",
           "titleEn": "olmo-eval： An evaluation workbench for the model development loop",
@@ -806,7 +1002,7 @@
         "originalUrl": "https://www.ithome.com/0/963/725.htm",
         "recommendedReason": "6月12日，字节跳动旗下AI应用豆包大范围上线\"任务模式\"，支持定时执行、零代码网页生成、一键PPT生成、数据可视化分析等全链路Agent执行。原\"思考模式\"升级为\"专家模式\"，调用豆包大模型2.0 Pro版本，强化深度推理能力。App顶部模式切换改为\"快速、专家、任务\"。基础功能免费，高阶服务付费，专业版三档：标准版68元/月或688元/年，加强版200元/月或2048元/年，专业版500元/月或5088元/年。",
         "publishedAt": "2026-06-12T15:33:19.000Z",
-        "collectedAt": "2026-06-12T21:27:10.083Z",
+        "collectedAt": "2026-06-12T23:09:15.857Z",
         "raw": {
           "id": "cmqb39p8x00o2sl9z85e1r79i",
           "titleEn": "字节豆包上线\"任务模式\"：支持定时执行、代码运行与文件生成，\"思考模式\"已升级为\"专家模式\"",
@@ -826,7 +1022,7 @@
         "originalUrl": "https://x.com/MiniMax_AI/status/2065436935188058208",
         "recommendedReason": "MiniMax 发布开源权重模型 M3，约 428B 总参数、23B 激活参数，已上传 HuggingFace。该模型融合三种前沿能力：编码与智能体方面达 59.0% SWE-Bench Pro、66.0% Terminal Bench 2.1、34.8% SWE-fficiency、28.8% KernelBench Hard、74.2% MCP Atlas；采用 MiniMax 稀疏注意力将上下文窗口扩展至 1M token；原生多模态。同步上线 MiniMax Code 工具及 API 平台。权重与技术报告预计约 10 天后发布。",
         "publishedAt": "2026-06-12T14:11:53.000Z",
-        "collectedAt": "2026-06-12T21:27:10.083Z",
+        "collectedAt": "2026-06-12T23:09:15.857Z",
         "raw": {
           "id": "cmqb0ab1w010xsl359sr4xe9u",
           "titleEn": "MiniMax M3， Open-Weight， Now On Hugging Face ， with only ~428B parameters and ~23B activated paramet…",
@@ -846,7 +1042,7 @@
         "originalUrl": "https://x.com/Kimi_Moonshot/status/2065377579130142937",
         "recommendedReason": "Kimi 发布并开源最新代码模型 Kimi-K2.7-Code。相比 K2.6，其在 Kimi Code Bench v2 上提升 +21.8%，Program Bench 提升 +11.0%，MLS Bench Lite 提升 +31.5%。推理效率改进，推理 token 使用量降低 30%，长时编码任务中指令遵循和端到端成功率均提升。6x 高速模式即将推出，即日起可通过 Kimi API 和 Kimi Code 使用。",
         "publishedAt": "2026-06-12T10:16:02.000Z",
-        "collectedAt": "2026-06-12T21:27:10.083Z",
+        "collectedAt": "2026-06-12T23:09:15.857Z",
         "raw": {
           "id": "cmqas4pf30obzslldpvkbrqde",
           "titleEn": "🌘 Kimi-K2.7-Code， our latest coding model， is now released and open-sourced！ 🔷 Improved coding & …",
@@ -866,7 +1062,7 @@
         "originalUrl": "https://openai.com/index/academy-courses-applying-ai-at-work",
         "recommendedReason": "OpenAI 发布三门 Academy 课程，帮助用户掌握实用 AI 技能、创建可重复工作流，并在日常工作中应用 AI 智能体。",
         "publishedAt": "2026-06-12T10:00:00.000Z",
-        "collectedAt": "2026-06-12T21:27:10.083Z",
+        "collectedAt": "2026-06-12T23:09:15.857Z",
         "raw": {
           "id": "cmqb6brwi0008sl5v981gsd10",
           "titleEn": "New OpenAI Academy courses for the next era of work",
@@ -886,30 +1082,10 @@
         "originalUrl": "https://x.com/xiaohu/status/2065278092441268246",
         "recommendedReason": "小互（@xiaohu）升级了公众号排版技能组合，实现一句话完成排版、封面生成并一键发送到公众号草稿箱。该工具已开源，提供20种主题颜色可选，可自动分析内容进行排版，支持非Markdown文件。用户只需在Claude Code、Codex或OpenClaw中提供文章链接或文档位置，即可获得可视化预览界面进行选择，全程无需手动操作。",
         "publishedAt": "2026-06-12T03:40:42.000Z",
-        "collectedAt": "2026-06-12T21:27:10.083Z",
+        "collectedAt": "2026-06-12T23:09:15.857Z",
         "raw": {
           "id": "cmqae79010kohslldooq3h2gk",
           "titleEn": "升级了下公众号排版技能 晚一点发布，还需要优化下 增加了一些主题和优化了预览和浏览页面的阅读体验",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmqac9bgk0k4gslld8x52792w",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "qiaomu-ai-prd：面向AI的PRD生成Prompt",
-        "url": "https://x.com/vista8/status/2065264509170876417",
-        "summary": "推文提出AI Agent开发中人类与AI对PRD的需求不同，为此发布了一个专门服务于AI的PRD文档生成Prompt（命名为qiaomu-ai-prd）。开发者先使用该Prompt生成文档，再交给AI开发，可显著提升功能完整度和丰富性。安装指令为：`npx skills add joeseesun/qiaomu-ai-prd`，开源地址及Prompt见评论区。",
-        "description": "推文提出AI Agent开发中人类与AI对PRD的需求不同，为此发布了一个专门服务于AI的PRD文档生成Prompt（命名为qiaomu-ai-prd）。开发者先使用该Prompt生成文档，再交给AI开发，可显著提升功能完整度和丰富性。安装指令为：`npx skills add joeseesun/qiaomu-ai-prd`，开源地址及Prompt见评论区。",
-        "category": "tools",
-        "originalSource": "X：Vista (@vista8)",
-        "originalUrl": "https://x.com/vista8/status/2065264509170876417",
-        "recommendedReason": "推文提出AI Agent开发中人类与AI对PRD的需求不同，为此发布了一个专门服务于AI的PRD文档生成Prompt（命名为qiaomu-ai-prd）。开发者先使用该Prompt生成文档，再交给AI开发，可显著提升功能完整度和丰富性。安装指令为：`npx skills add joeseesun/qiaomu-ai-prd`，开源地址及Prompt见评论区。",
-        "publishedAt": "2026-06-12T02:46:44.000Z",
-        "collectedAt": "2026-06-12T21:27:10.083Z",
-        "raw": {
-          "id": "cmqac9bgk0k4gslld8x52792w",
-          "titleEn": "现在都是 AI Agent做开发，人喜欢的 PRD 和 AI 喜欢的是不一样的。 为了精准高效开发，写了个专门服务于 AI 的PRD文档生成Prompt。 先有这个文档，再给AI开发，功能完整度和…",
           "apiCategory": "tip"
         }
       }
