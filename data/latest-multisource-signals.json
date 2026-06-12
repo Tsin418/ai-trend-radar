@@ -1,10 +1,204 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-06-12T02:44:28.138Z",
+  "generatedAt": "2026-06-12T05:03:53.010Z",
   "sections": {
     "productLaunches": [],
-    "modelDemoSignals": [],
+    "modelDemoSignals": [
+      {
+        "id": "http://arxiv.org/abs/2606.13681v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments",
+        "url": "https://arxiv.org/pdf/2606.13681v1",
+        "description": "Large language model (LLM) agents have achieved strong performance on a wide range of benchmarks, yet most evaluations assume static environments. In contrast, real-world deployment is inherently dynamic, requiring agents to continually align their knowledge, skills, and behavior with changing environments and updated task conditions. To address this gap, we introduce EvoArena, a benchmark suite that models environment changes as sequences of progressive updates across terminal, software, and so",
+        "summary": "Large language model (LLM) agents have achieved strong performance on a wide range of benchmarks, yet most evaluations assume static environments. In contrast, real-world deployment is inherently dynamic, requiring agents to continually align their knowledge, skills, and behavior with changing environments and updated task conditions. To address this gap, we introduce EvoArena, a benchmark suite that models environment changes as sequences of progressive updates across terminal, software, and social domains. We further propose EvoMem, a patch-based memory paradigm that records memory evolution as structured update histories, enabling agents to reason about environmental evolution through changes in their memory. Experiments show that current agents struggle on EvoArena, achieving an average accuracy of 39.6% across evolving terminal, software, and social-preference domains. EvoMem consistently improves performance, yielding an average gain of 1.5% on EvoArena and also improving standard benchmarks such as GAIA and LoCoMo by 6.1% and 4.8%. Beyond individual tasks, EvoMem further improves chain-level accuracy by 3.7% on EvoArena, where success requires completing a consecutive sequence of related evolutionary subtasks. Mechanistic analysis shows that EvoMem improves evidence capture in the memory, indicating better preservation of complete evolving environment states. Our results highlight the importance of modeling evolution in both evaluation and memory for reliable agent deployment.",
+        "author": "Jundong Xu, Qingchuan Li, Jiaying Wu, Yihuai Lan, Shuyue Stella Li, Huichi Zhou, Bowen Jiang, Lei Wang, Jun Wang, Anh Tuan Luu, Caiming Xiong, Hae Won Park, Bryan Hooi, Zhiyuan Hu",
+        "tags": [
+          "cs.CL",
+          "large language model",
+          "llm",
+          "agent",
+          "rag",
+          "benchmark",
+          "evaluation"
+        ],
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-06-11T17:59:59Z",
+        "updatedAt": "2026-06-11T17:59:59Z",
+        "collectedAt": "2026-06-12T05:03:07.276Z",
+        "metrics": {},
+        "raw": {
+          "abstractUrl": "http://arxiv.org/abs/2606.13681v1",
+          "authors": [
+            "Jundong Xu",
+            "Qingchuan Li",
+            "Jiaying Wu",
+            "Yihuai Lan",
+            "Shuyue Stella Li",
+            "Huichi Zhou",
+            "Bowen Jiang",
+            "Lei Wang",
+            "Jun Wang",
+            "Anh Tuan Luu",
+            "Caiming Xiong",
+            "Hae Won Park",
+            "Bryan Hooi",
+            "Zhiyuan Hu"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, agent, rag, benchmark"
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.13680v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning",
+        "url": "https://arxiv.org/pdf/2606.13680v1",
+        "description": "Retrieval-augmented generation (RAG) has become a standard mechanism for grounding language models in external knowledge, yet conventional retrieval based on lexical or semantic similarity is poorly suited for complex reasoning tasks: a semantically similar problem may demand an entirely different solution strategy, while a superficially different problem may share the same underlying reasoning pattern. We propose Retrieval-Augmented Reinforcement Fine-Tuning (RA-RFT), a post-training framework ",
+        "summary": "Retrieval-augmented generation (RAG) has become a standard mechanism for grounding language models in external knowledge, yet conventional retrieval based on lexical or semantic similarity is poorly suited for complex reasoning tasks: a semantically similar problem may demand an entirely different solution strategy, while a superficially different problem may share the same underlying reasoning pattern. We propose Retrieval-Augmented Reinforcement Fine-Tuning (RA-RFT), a post-training framework that teaches language models to reason by analogy. RA-RFT uses gold-relevance distillation to train a retriever that ranks contexts by expected reasoning benefit rather than semantic overlap, and then fine-tunes the policy model via reinforcement fine-tuning methods with retrieved analogous demonstrations, so the model learns to leverage reasoning traces under verifiable outcome rewards. We further analyze the diversity of retrieved contexts and find that reasoning-aware retrieval surfaces complementary solution strategies that provide distinct reasoning scaffolds for individual problems. Across challenging mathematical reasoning benchmarks, RA-RFT consistently outperforms standard reinforcement fine-tuning methods. For example, it improves AIME 2025 average@32 accuracy by 7.1 and 2.8 points over GRPO for Qwen3-1.7B and Qwen3-4B respectively -- suggesting that reasoning-aware retrieval is a complementary axis of improvement and orthogonal to advances in reward design or training curricula.",
+        "author": "Zilin Xiao, Qi Ma, Chun-cheng Jason Chen, Xintao Chen, Avinash Atreya, Hanjie Chen, Vicente Ordonez",
+        "tags": [
+          "cs.CL",
+          "cs.AI",
+          "retrieval-augmented",
+          "rag",
+          "fine-tuning",
+          "benchmark"
+        ],
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-06-11T17:59:52Z",
+        "updatedAt": "2026-06-11T17:59:52Z",
+        "collectedAt": "2026-06-12T05:03:07.276Z",
+        "metrics": {},
+        "raw": {
+          "abstractUrl": "http://arxiv.org/abs/2606.13680v1",
+          "authors": [
+            "Zilin Xiao",
+            "Qi Ma",
+            "Chun-cheng Jason Chen",
+            "Xintao Chen",
+            "Avinash Atreya",
+            "Hanjie Chen",
+            "Vicente Ordonez"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: retrieval-augmented, rag, fine-tuning, benchmark"
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.13677v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Mana: Dexterous Manipulation of Articulated Tools",
+        "url": "https://arxiv.org/pdf/2606.13677v1",
+        "description": "Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions. While prior work has largely focused on rigid objects, articulated tool use remains underexplored because of its physical complexity and the difficulty of learning functional grasping and manipulation policies. We present Mana (Manipulation Animator), a general sim-to-real framework that reinterprets dexterous manipulation as an an",
+        "summary": "Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions. While prior work has largely focused on rigid objects, articulated tool use remains underexplored because of its physical complexity and the difficulty of learning functional grasping and manipulation policies. We present Mana (Manipulation Animator), a general sim-to-real framework that reinterprets dexterous manipulation as an animation problem. Inspired by computer animation, Mana employs a coarse-to-fine pipeline that transforms procedurally-generated grasp keyframes into manipulation trajectories through motion planning and reinforcement learning. The data generation process is largely automatic, requiring only a few mouse clicks to specify functional affordances (<1 minute per tool). Across four articulated tools spanning different scales and joint types, Mana achieves zero-shot sim-to-real transfer for both grasping and in-hand manipulation, demonstrating a scalable approach to dexterous articulated tool use.",
+        "author": "Zhao-Heng Yin, Guanya Shi, Pieter Abbeel, C. Karen Liu",
+        "tags": [
+          "cs.RO",
+          "cs.AI",
+          "cs.CV",
+          "cs.LG",
+          "tool use"
+        ],
+        "category": "cs.RO",
+        "language": "en",
+        "publishedAt": "2026-06-11T17:59:49Z",
+        "updatedAt": "2026-06-11T17:59:49Z",
+        "collectedAt": "2026-06-12T05:03:07.276Z",
+        "metrics": {},
+        "raw": {
+          "abstractUrl": "http://arxiv.org/abs/2606.13677v1",
+          "authors": [
+            "Zhao-Heng Yin",
+            "Guanya Shi",
+            "Pieter Abbeel",
+            "C. Karen Liu"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: tool use"
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.13673v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning",
+        "url": "https://arxiv.org/pdf/2606.13673v1",
+        "description": "Spatial reasoning, the ability to determine where objects are, how they relate, and how they move in 3D, remains a fundamental challenge for vision-language models (VLMs). Tool-augmented agents attempt to address this by augmenting VLMs with specialist perception modules, yet their effectiveness is bounded by the action interface through which those tools are invoked. In this work, we study how the design of this interface shapes the agent's capacity for open-ended spatial reasoning. Existing sp",
+        "summary": "Spatial reasoning, the ability to determine where objects are, how they relate, and how they move in 3D, remains a fundamental challenge for vision-language models (VLMs). Tool-augmented agents attempt to address this by augmenting VLMs with specialist perception modules, yet their effectiveness is bounded by the action interface through which those tools are invoked. In this work, we study how the design of this interface shapes the agent's capacity for open-ended spatial reasoning. Existing spatial agents either employ single-pass code execution, which commits to a full analysis strategy before any intermediate result is observed, or rely on a structured tool-call interface that often offers less flexibility for freely composing operations or tailoring the analysis to each task. Both designs offer limited flexibility for open-ended, complex 3D/4D spatial reasoning. We therefore propose SpatialClaw, a training-free framework for spatial reasoning that adopts code as the action interface. SpatialClaw maintains a stateful Python kernel pre-loaded with input frames and a suite of perception and geometry primitives, letting a VLM-backed agent write one executable cell per step conditioned on all prior outputs, enabling the agent to flexibly compose and manipulate perception results and adapt its analysis to both intermediate text and visual observations and the demands of each problem. Evaluated across 20 spatial reasoning benchmarks spanning a broad range of static and dynamic 3D/4D spatial reasoning tasks, SpatialClaw achieves 59.9% average accuracy, outperforming the recent spatial agent by +11.2 points, with consistent gains across six VLM backbones from two model families without any benchmark- or model-specific adaptation.",
+        "author": "Seokju Cho, Ryo Hachiuma, Abhishek Badki, Hang Su, Byung-Kwan Lee, Chan Hee Song, Sifei Liu, Subhashree Radhakrishnan, Seungryong Kim, Yu-Chiang Frank Wang, Min-Hung Chen",
+        "tags": [
+          "cs.CV",
+          "cs.AI",
+          "agent",
+          "rag",
+          "benchmark",
+          "agentic"
+        ],
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-06-11T17:59:36Z",
+        "updatedAt": "2026-06-11T17:59:36Z",
+        "collectedAt": "2026-06-12T05:03:07.276Z",
+        "metrics": {},
+        "raw": {
+          "abstractUrl": "http://arxiv.org/abs/2606.13673v1",
+          "authors": [
+            "Seokju Cho",
+            "Ryo Hachiuma",
+            "Abhishek Badki",
+            "Hang Su",
+            "Byung-Kwan Lee",
+            "Chan Hee Song",
+            "Sifei Liu",
+            "Subhashree Radhakrishnan",
+            "Seungryong Kim",
+            "Yu-Chiang Frank Wang",
+            "Min-Hung Chen"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: agent, rag, benchmark, agentic"
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.13670v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Automated reproducibility assessments in the social and behavioral sciences using large language models",
+        "url": "https://arxiv.org/pdf/2606.13670v1",
+        "description": "Reproducibility in the social and behavioral sciences is typically evaluated by independent researchers who reanalyze the original data to assess whether the published findings can be recovered. However, such approaches are resource-intensive and difficult to scale. Here, we show that large language models (LLMs) can automate reproducibility assessments. Using N=76 published studies with predefined claims from the behavioral and social sciences, we compare LLM-generated analysis with the origina",
+        "summary": "Reproducibility in the social and behavioral sciences is typically evaluated by independent researchers who reanalyze the original data to assess whether the published findings can be recovered. However, such approaches are resource-intensive and difficult to scale. Here, we show that large language models (LLMs) can automate reproducibility assessments. Using N=76 published studies with predefined claims from the behavioral and social sciences, we compare LLM-generated analysis with the original findings and human reanalysis. For 7 studies, the LLM could not produce a viable effect size estimate. For the remaining studies, our LLM pipeline recovered the original effect sizes in 41% of studies using a +/-0.05 tolerance in Cohen's d. Further, our LLM pipeline reached the same qualitative conclusion as the original study in 96% of cases, where conclusions indicate whether the reanalysis supports the original claim. For comparison, human reanalysts recovered the original effect sizes in 34% of studies and reached the same qualitative conclusion in 74% of cases. Together, these results show that LLMs can serve as a scalable tool for automated reproducibility assessment and provide a foundation for systematic auditing of empirical results in the social and behavioral sciences.",
+        "author": "Tobias Holtdirk, Pietro Marcolongo, Anna Steinberg Schulten, Felix Henninger, Stefan Rose, Sarah Ball, Bolei Ma, Frauke Kreuter, Markus Weinmann, Stefan Feuerriegel",
+        "tags": [
+          "cs.AI",
+          "large language model",
+          "llm"
+        ],
+        "category": "cs.AI",
+        "language": "en",
+        "publishedAt": "2026-06-11T17:58:36Z",
+        "updatedAt": "2026-06-11T17:58:36Z",
+        "collectedAt": "2026-06-12T05:03:07.276Z",
+        "metrics": {},
+        "raw": {
+          "abstractUrl": "http://arxiv.org/abs/2606.13670v1",
+          "authors": [
+            "Tobias Holtdirk",
+            "Pietro Marcolongo",
+            "Anna Steinberg Schulten",
+            "Felix Henninger",
+            "Stefan Rose",
+            "Sarah Ball",
+            "Bolei Ma",
+            "Frauke Kreuter",
+            "Markus Weinmann",
+            "Stefan Feuerriegel"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm"
+      }
+    ],
     "developerBuzz": [
       {
         "id": "hackernews:48487029",
@@ -17,11 +211,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 684,
-          "commentsCount": 307
+          "upvotes": 686,
+          "commentsCount": 308
         },
         "publishedAt": "2026-06-11T06:42:06.000Z",
-        "collectedAt": "2026-06-12T02:44:28.541Z",
+        "collectedAt": "2026-06-12T05:03:07.180Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48487029",
           "matchedKeywords": [
@@ -42,10 +236,10 @@
         ],
         "metrics": {
           "upvotes": 581,
-          "commentsCount": 514
+          "commentsCount": 515
         },
         "publishedAt": "2026-06-10T16:42:00.000Z",
-        "collectedAt": "2026-06-12T02:44:28.541Z",
+        "collectedAt": "2026-06-12T05:03:07.180Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48478969",
           "matchedKeywords": [
@@ -67,11 +261,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 327,
-          "commentsCount": 322
+          "upvotes": 365,
+          "commentsCount": 357
         },
         "publishedAt": "2026-06-11T12:05:02.000Z",
-        "collectedAt": "2026-06-12T02:44:28.541Z",
+        "collectedAt": "2026-06-12T05:03:07.180Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48489229",
           "matchedKeywords": [
@@ -93,11 +287,11 @@
           "agent"
         ],
         "metrics": {
-          "upvotes": 539,
-          "commentsCount": 238
+          "upvotes": 540,
+          "commentsCount": 239
         },
         "publishedAt": "2026-06-11T00:10:08.000Z",
-        "collectedAt": "2026-06-12T02:44:28.541Z",
+        "collectedAt": "2026-06-12T05:03:07.180Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48484584",
           "matchedKeywords": [
@@ -117,11 +311,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 280,
-          "commentsCount": 320
+          "upvotes": 284,
+          "commentsCount": 325
         },
         "publishedAt": "2026-06-11T07:51:17.000Z",
-        "collectedAt": "2026-06-12T02:44:28.541Z",
+        "collectedAt": "2026-06-12T05:03:07.180Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48487540",
           "matchedKeywords": [
@@ -131,6 +325,46 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmqae79010kohslldooq3h2gk",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "小互开源公众号自动排版技能组合",
+        "url": "https://x.com/xiaohu/status/2065278092441268246",
+        "summary": "小互（@xiaohu）升级了公众号排版技能组合，实现一句话完成排版、封面生成并一键发送到公众号草稿箱。该工具已开源，提供20种主题颜色可选，可自动分析内容进行排版，支持非Markdown文件。用户只需在Claude Code、Codex或OpenClaw中提供文章链接或文档位置，即可获得可视化预览界面进行选择，全程无需手动操作。",
+        "description": "小互（@xiaohu）升级了公众号排版技能组合，实现一句话完成排版、封面生成并一键发送到公众号草稿箱。该工具已开源，提供20种主题颜色可选，可自动分析内容进行排版，支持非Markdown文件。用户只需在Claude Code、Codex或OpenClaw中提供文章链接或文档位置，即可获得可视化预览界面进行选择，全程无需手动操作。",
+        "category": "tools",
+        "originalSource": "X：小互 (@xiaohu)",
+        "originalUrl": "https://x.com/xiaohu/status/2065278092441268246",
+        "recommendedReason": "小互（@xiaohu）升级了公众号排版技能组合，实现一句话完成排版、封面生成并一键发送到公众号草稿箱。该工具已开源，提供20种主题颜色可选，可自动分析内容进行排版，支持非Markdown文件。用户只需在Claude Code、Codex或OpenClaw中提供文章链接或文档位置，即可获得可视化预览界面进行选择，全程无需手动操作。",
+        "publishedAt": "2026-06-12T03:40:42.000Z",
+        "collectedAt": "2026-06-12T05:03:09.006Z",
+        "raw": {
+          "id": "cmqae79010kohslldooq3h2gk",
+          "titleEn": "升级了下公众号排版技能 晚一点发布，还需要优化下 增加了一些主题和优化了预览和浏览页面的阅读体验",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmqac9bgk0k4gslld8x52792w",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "qiaomu-ai-prd：面向AI的PRD生成Prompt",
+        "url": "https://x.com/vista8/status/2065264509170876417",
+        "summary": "推文提出AI Agent开发中人类与AI对PRD的需求不同，为此发布了一个专门服务于AI的PRD文档生成Prompt（命名为qiaomu-ai-prd）。开发者先使用该Prompt生成文档，再交给AI开发，可显著提升功能完整度和丰富性。安装指令为：`npx skills add joeseesun/qiaomu-ai-prd`，开源地址及Prompt见评论区。",
+        "description": "推文提出AI Agent开发中人类与AI对PRD的需求不同，为此发布了一个专门服务于AI的PRD文档生成Prompt（命名为qiaomu-ai-prd）。开发者先使用该Prompt生成文档，再交给AI开发，可显著提升功能完整度和丰富性。安装指令为：`npx skills add joeseesun/qiaomu-ai-prd`，开源地址及Prompt见评论区。",
+        "category": "tools",
+        "originalSource": "X：Vista (@vista8)",
+        "originalUrl": "https://x.com/vista8/status/2065264509170876417",
+        "recommendedReason": "推文提出AI Agent开发中人类与AI对PRD的需求不同，为此发布了一个专门服务于AI的PRD文档生成Prompt（命名为qiaomu-ai-prd）。开发者先使用该Prompt生成文档，再交给AI开发，可显著提升功能完整度和丰富性。安装指令为：`npx skills add joeseesun/qiaomu-ai-prd`，开源地址及Prompt见评论区。",
+        "publishedAt": "2026-06-12T02:46:44.000Z",
+        "collectedAt": "2026-06-12T05:03:09.006Z",
+        "raw": {
+          "id": "cmqac9bgk0k4gslld8x52792w",
+          "titleEn": "现在都是 AI Agent做开发，人喜欢的 PRD 和 AI 喜欢的是不一样的。 为了精准高效开发，写了个专门服务于 AI 的PRD文档生成Prompt。 先有这个文档，再给AI开发，功能完整度和…",
+          "apiCategory": "tip"
+        }
+      },
       {
         "id": "aihot:cmqabcv2q0jvmslldd7my04uo",
         "source": "aihot",
@@ -144,7 +378,7 @@
         "originalUrl": "https://www.ithome.com/0/963/302.htm",
         "recommendedReason": "苹果在 iOS 27 中优化健康 App，将列表改为卡片布局并增加导航栏。新增视觉智能营养识别，用户通过相机 Siri 模式拍摄食物可获取加工程度、蛋白质、含糖量等信息及营养价值评级，不提供精确卡路里，需 iPhone 15 Pro 及以上。经期追踪扩展支持围绝经期，可分析长期周期异常模式并推送提醒与指导。Fitness+ 新增围绝经期和绝经期课程。数据同步速度提升，GymKit 扩展至 iPhone，无需 Apple Watch 即可与健身设备配对同步数据。",
         "publishedAt": "2026-06-12T02:06:41.000Z",
-        "collectedAt": "2026-06-12T02:44:29.331Z",
+        "collectedAt": "2026-06-12T05:03:09.006Z",
         "raw": {
           "id": "cmqabcv2q0jvmslldd7my04uo",
           "titleEn": "苹果升级 iOS 27 版健康 App：卡片布局、评估食物营养、追踪围绝经期等",
@@ -164,7 +398,7 @@
         "originalUrl": "https://x.com/shao__meng/status/2065234132431675439",
         "recommendedReason": "邵猛分享 Spec 驱动开发（SDD）方法，用三个 Skills（/write-product-spec、/write-tech-spec、/validate-changes-match-specs）覆盖 Spec→Implement→Verify 闭环。规格分两层：PRODUCT.md（用户故事、不变量）和 TECH.md（架构、实现策略），均放在 specs/<issue>/ 目录，随 PR 提交。五步流程：写产品规格、写技术规格、Agent 按规格实现、一致性校验、计算机操作端到端验证。Skills 可移植，不绑定 Warp。开源仓库 warpdotdev/common-skills，安装：npx skills add warpdotdev/common-skills。",
         "publishedAt": "2026-06-12T00:46:02.000Z",
-        "collectedAt": "2026-06-12T02:44:29.331Z",
+        "collectedAt": "2026-06-12T05:03:09.006Z",
         "raw": {
           "id": "cmqa7y9h20iyrsllds3s2dok3",
           "titleEn": "Spec 驱动开发 （SDD） 需要这三个 Skills：覆盖 Spec -> Implement -> Verify 闭环 Agent 出错往往是需求理解偏差。解决办法是把规格当作 PR 的一部分…",
@@ -184,7 +418,7 @@
         "originalUrl": "https://x.com/OpenAIDevs/status/2065226355495895521",
         "recommendedReason": "为 Chrome 和 Codex 内置浏览器引入开发者模式。 Codex 可以使用 Chrome DevTools 协议（CDP）来调试浏览器问题，通过分析 JavaScript 性能、检查控制台输出、网络流量和页面状态。",
         "publishedAt": "2026-06-12T00:15:07.000Z",
-        "collectedAt": "2026-06-12T02:44:29.331Z",
+        "collectedAt": "2026-06-12T05:03:09.006Z",
         "raw": {
           "id": "cmqa7bz2g0itbslld0f4rluhk",
           "titleEn": "Introducing developer mode for browser use in Chrome and the Codex in-app browser. Codex can use th…",
@@ -204,7 +438,7 @@
         "originalUrl": "https://x.com/OpenAI/status/2065225362544726371",
         "recommendedReason": "我们听说您希望能在自己方便的时候使用 Codex 速率限制重置。 从今天起，我们开始推出将速率限制重置保留到以后使用的功能。 我们从 Go、Plus、Pro 和 Business 用户开始，每人提供一次免费重置：",
         "publishedAt": "2026-06-12T00:11:11.000Z",
-        "collectedAt": "2026-06-12T02:44:29.331Z",
+        "collectedAt": "2026-06-12T05:03:09.006Z",
         "raw": {
           "id": "cmqa6vs2i0iodslldledhp882",
           "titleEn": "We heard you wanted to use Codex rate limit resets on your own time. Starting today， we're rolling …",
@@ -224,7 +458,7 @@
         "originalUrl": "https://www.kennethpayne.uk/p/shall-we-play-a-game",
         "recommendedReason": "一项模拟研究显示，大型语言模型（LLM）在 95% 的模拟场景中会选择使用战术核武器。该研究未指明具体模型名称与版本，结果引发对 AI 决策行为的关注。",
         "publishedAt": "2026-06-11T22:23:17.154Z",
-        "collectedAt": "2026-06-12T02:44:29.331Z",
+        "collectedAt": "2026-06-12T05:03:09.006Z",
         "raw": {
           "id": "cmqa38qfw0hrsslld9n3v1pzf",
           "titleEn": "我们来玩个游戏吧？--在95%的模拟中，大型语言模型都会使用战术核武器",
@@ -244,7 +478,7 @@
         "originalUrl": "https://x.com/Replit/status/2065192392718733327",
         "recommendedReason": "如何像专家一样使用 Replit 进行提示 🤖 模糊的提示词只会导致更多重写。以下是如何让 Agent 第一次就构建出正确的东西。 🧵 展开线程 ↓",
         "publishedAt": "2026-06-11T22:00:10.000Z",
-        "collectedAt": "2026-06-12T02:44:29.331Z",
+        "collectedAt": "2026-06-12T05:03:09.006Z",
         "raw": {
           "id": "cmqa20ewf0hf8slldlq4bawrp",
           "titleEn": "How to prompt like a pro with Replit 🤖 Vague prompts just mean more rewrites. Here's how to get Ag…",
@@ -264,7 +498,7 @@
         "originalUrl": "https://x.com/Replit/status/2065189762365813089",
         "recommendedReason": "Replit 与 @databricks 集成刚刚升级了。 构建应用，让每个用户只看到他们应该看到的内容。你的 HR 分析师可以为 CEO 构建完整的组织视图，而无需访问底层数据。 公开预览已开放注册！了解更多 → https：//replit.com/blog/databricksjune2026",
         "publishedAt": "2026-06-11T21:49:43.000Z",
-        "collectedAt": "2026-06-12T02:44:29.331Z",
+        "collectedAt": "2026-06-12T05:03:09.006Z",
         "raw": {
           "id": "cmqa20ewf0hf9slldu9bj1rhz",
           "titleEn": "Replit and @databricks integration just leveled up. Build apps where every user sees only what they…",
@@ -284,12 +518,235 @@
         "originalUrl": "https://www.newscientist.com/article/2529849-fully-autonomous-drones-have-killed-human-soldiers-for-the-first-time",
         "recommendedReason": "据《新科学家》6月10日报道，全自主无人机首次击毙了人类士兵。这是有记录以来第一次由完全自主运行的无人机执行致命攻击，标志着自主武器系统在实战中的新进展。该报道来自《新科学家》网站，目前尚无更多细节公布。",
         "publishedAt": "2026-06-11T19:29:06.279Z",
-        "collectedAt": "2026-06-12T02:44:29.331Z",
+        "collectedAt": "2026-06-12T05:03:09.006Z",
         "raw": {
           "id": "cmq9wt5fl0g09slldyw8h9u7p",
           "titleEn": null,
           "apiCategory": "industry"
         }
+      },
+      {
+        "id": "aihot:cmq9vker90fnyslldhowm7reb",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Replit Agent 新增自定义指令与技能功能",
+        "url": "https://x.com/Replit/status/2065146579326271883",
+        "summary": "AI 智能体很强大，但它们不记得你的偏好。 所以你总是重复指令--如何组织项目、你的品牌指南。 现在你可以通过自定义指令和技能让 Replit Agent 学会你的惯例。 它会在每个项目中自动将这些考虑进去。",
+        "description": "AI 智能体很强大，但它们不记得你的偏好。 所以你总是重复指令--如何组织项目、你的品牌指南。 现在你可以通过自定义指令和技能让 Replit Agent 学会你的惯例。 它会在每个项目中自动将这些考虑进去。",
+        "category": "products",
+        "originalSource": "X：Replit (@Replit)",
+        "originalUrl": "https://x.com/Replit/status/2065146579326271883",
+        "recommendedReason": "AI 智能体很强大，但它们不记得你的偏好。 所以你总是重复指令--如何组织项目、你的品牌指南。 现在你可以通过自定义指令和技能让 Replit Agent 学会你的惯例。 它会在每个项目中自动将这些考虑进去。",
+        "publishedAt": "2026-06-11T18:58:07.000Z",
+        "collectedAt": "2026-06-12T05:03:09.006Z",
+        "raw": {
+          "id": "cmq9vker90fnyslldhowm7reb",
+          "titleEn": "AI agents are powerful， but they don't remember your preferences. So you end up repeating instructi…",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmq9tg1bi0f3qslld86ne1vt3",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Anthropic与DXC达成全球联盟，将Claude引入关键行业系统",
+        "url": "https://www.anthropic.com/news/dxc-anthropic-alliance",
+        "summary": "Anthropic与IT服务公司DXC Technology达成多年全球联盟。DXC将培训数万名获得Claude认证的前沿部署工程师（FDE），将Claude引入其为全球大型银行、航空公司、保险公司及政府机构运营的关键系统。内部部署中，Claude已成为DXC OASIS平台的默认基础模型，该平台超95%代码由Claude编写，开发速度提升10倍，已服务50多家客户。DXC加入Claude Partner Network，将在保险、现代化服务、网络安全及应用服务四个领域率先推出基于Claude的解决方案。",
+        "description": "Anthropic与IT服务公司DXC Technology达成多年全球联盟。DXC将培训数万名获得Claude认证的前沿部署工程师（FDE），将Claude引入其为全球大型银行、航空公司、保险公司及政府机构运营的关键系统。内部部署中，Claude已成为DXC OASIS平台的默认基础模型，该平台超95%代码由Claude编写，开发速度提升10倍，已服务50多家客户。DXC加入Claude Partner Network，将在保险、现代化服务、网络安全及应用服务四个领域率先推出基于Claude的解决方案。",
+        "category": "industry",
+        "originalSource": "Anthropic：Newsroom（网页）",
+        "originalUrl": "https://www.anthropic.com/news/dxc-anthropic-alliance",
+        "recommendedReason": "Anthropic与IT服务公司DXC Technology达成多年全球联盟。DXC将培训数万名获得Claude认证的前沿部署工程师（FDE），将Claude引入其为全球大型银行、航空公司、保险公司及政府机构运营的关键系统。内部部署中，Claude已成为DXC OASIS平台的默认基础模型，该平台超95%代码由Claude编写，开发速度提升10倍，已服务50多家客户。DXC加入Claude Partner Network，将在保险、现代化服务、网络安全及应用服务四个领域率先推出基于Claude的解决方案。",
+        "publishedAt": "2026-06-11T18:13:16.585Z",
+        "collectedAt": "2026-06-12T05:03:09.006Z",
+        "raw": {
+          "id": "cmq9tg1bi0f3qslld86ne1vt3",
+          "titleEn": "DXC will integrate Claude into the systems banks， airlines， and other regulated industries rely on",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmq9sr7km0exoslld90mxla1z",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Perplexity Computer 集成 Deep Research",
+        "url": "https://x.com/perplexity_ai/status/2065124930463916317",
+        "summary": "我们正在将 Deep Research 作为原生技能集成到 Computer 中。 它现在连接到驱动 Computer 的智能体框架，可访问搜索即代码生成、长运行沙箱、连接器、工具和授权数据。 Pro 和 Max 订阅者现已可用。",
+        "description": "我们正在将 Deep Research 作为原生技能集成到 Computer 中。 它现在连接到驱动 Computer 的智能体框架，可访问搜索即代码生成、长运行沙箱、连接器、工具和授权数据。 Pro 和 Max 订阅者现已可用。",
+        "category": "products",
+        "originalSource": "X：Perplexity (@perplexity_ai)",
+        "originalUrl": "https://x.com/perplexity_ai/status/2065124930463916317",
+        "recommendedReason": "我们正在将 Deep Research 作为原生技能集成到 Computer 中。 它现在连接到驱动 Computer 的智能体框架，可访问搜索即代码生成、长运行沙箱、连接器、工具和授权数据。 Pro 和 Max 订阅者现已可用。",
+        "publishedAt": "2026-06-11T17:32:06.000Z",
+        "collectedAt": "2026-06-12T05:03:09.006Z",
+        "raw": {
+          "id": "cmq9sr7km0exoslld90mxla1z",
+          "titleEn": "We're integrating Deep Research as a native skill inside Computer. It now connects to the agent har…",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmq9rg6q70ekjslldnvejg7m9",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "DeepSeek-R1 的开源实现",
+        "url": "https://github.com/huggingface/open-r1",
+        "summary": "DeepSeek-R1 的开源复现项目已在 GitHub 发布，在 Hacker News 上获得 101 个积分。该项目旨在以开源方式复现 DeepSeek-R1 模型。",
+        "description": "DeepSeek-R1 的开源复现项目已在 GitHub 发布，在 Hacker News 上获得 101 个积分。该项目旨在以开源方式复现 DeepSeek-R1 模型。",
+        "category": "products",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://github.com/huggingface/open-r1",
+        "recommendedReason": "DeepSeek-R1 的开源复现项目已在 GitHub 发布，在 Hacker News 上获得 101 个积分。该项目旨在以开源方式复现 DeepSeek-R1 模型。",
+        "publishedAt": "2026-06-11T17:07:18.181Z",
+        "collectedAt": "2026-06-12T05:03:09.006Z",
+        "raw": {
+          "id": "cmq9rg6q70ekjslldnvejg7m9",
+          "titleEn": null,
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmq9rke110ekyslldmbw1ap3o",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Gemini Omni Flash 视频任务达 SOTA",
+        "url": "https://x.com/OfficialLoganK/status/2065118111360303414",
+        "summary": "Gemini Omni Flash 在图像到视频、文本到视频和视频编辑方面达到了 SATA ： ） 很高兴很快能将这一能力通过 API 提供给开发者！",
+        "description": "Gemini Omni Flash 在图像到视频、文本到视频和视频编辑方面达到了 SATA ： ） 很高兴很快能将这一能力通过 API 提供给开发者！",
+        "category": "models",
+        "originalSource": "X：Logan Kilpatrick (@OfficialLoganK)",
+        "originalUrl": "https://x.com/OfficialLoganK/status/2065118111360303414",
+        "recommendedReason": "Gemini Omni Flash 在图像到视频、文本到视频和视频编辑方面达到了 SATA ： ） 很高兴很快能将这一能力通过 API 提供给开发者！",
+        "publishedAt": "2026-06-11T17:05:00.000Z",
+        "collectedAt": "2026-06-12T05:03:09.006Z",
+        "raw": {
+          "id": "cmq9rke110ekyslldmbw1ap3o",
+          "titleEn": "Gemini Omni Flash is SOTA at image to video， text to video， and video editing ： ） Excited to get t…",
+          "apiCategory": "ai-models"
+        }
+      }
+    ],
+    "crossSourceHighlights": [
+      {
+        "id": "url:https://github.com/huggingface/open-r1",
+        "canonicalId": "url:https://github.com/huggingface/open-r1",
+        "title": "DeepSeek-R1 的开源实现",
+        "canonicalUrl": "https://github.com/huggingface/open-r1",
+        "entityType": "repo",
+        "normalizedKeys": [
+          "url:https://github.com/huggingface/open-r1",
+          "github:huggingface/open-r1",
+          "title:deepseek r1 的开源实现",
+          "title:open reproduction of deepseek r1"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmq9rg6q70ekjslldnvejg7m9",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "DeepSeek-R1 的开源实现",
+            "url": "https://github.com/huggingface/open-r1",
+            "summary": "DeepSeek-R1 的开源复现项目已在 GitHub 发布，在 Hacker News 上获得 101 个积分。该项目旨在以开源方式复现 DeepSeek-R1 模型。",
+            "description": "DeepSeek-R1 的开源复现项目已在 GitHub 发布，在 Hacker News 上获得 101 个积分。该项目旨在以开源方式复现 DeepSeek-R1 模型。",
+            "category": "products",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://github.com/huggingface/open-r1",
+            "recommendedReason": "DeepSeek-R1 的开源复现项目已在 GitHub 发布，在 Hacker News 上获得 101 个积分。该项目旨在以开源方式复现 DeepSeek-R1 模型。",
+            "publishedAt": "2026-06-11T17:07:18.181Z",
+            "collectedAt": "2026-06-12T05:03:09.006Z",
+            "raw": {
+              "id": "cmq9rg6q70ekjslldnvejg7m9",
+              "titleEn": null,
+              "apiCategory": "ai-products"
+            }
+          },
+          {
+            "id": "hackernews:48489917",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Open Reproduction of DeepSeek-R1",
+            "url": "https://github.com/huggingface/open-r1",
+            "author": "yogthos",
+            "tags": [
+              "deepseek"
+            ],
+            "metrics": {
+              "upvotes": 217,
+              "commentsCount": 17
+            },
+            "publishedAt": "2026-06-11T13:14:31.000Z",
+            "collectedAt": "2026-06-12T05:03:07.180Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48489917",
+              "matchedKeywords": [
+                "deepseek"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmq9rg6q70ekjslldnvejg7m9",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "DeepSeek-R1 的开源实现",
+            "url": "https://github.com/huggingface/open-r1",
+            "summary": "DeepSeek-R1 的开源复现项目已在 GitHub 发布，在 Hacker News 上获得 101 个积分。该项目旨在以开源方式复现 DeepSeek-R1 模型。",
+            "description": "DeepSeek-R1 的开源复现项目已在 GitHub 发布，在 Hacker News 上获得 101 个积分。该项目旨在以开源方式复现 DeepSeek-R1 模型。",
+            "category": "products",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://github.com/huggingface/open-r1",
+            "recommendedReason": "DeepSeek-R1 的开源复现项目已在 GitHub 发布，在 Hacker News 上获得 101 个积分。该项目旨在以开源方式复现 DeepSeek-R1 模型。",
+            "publishedAt": "2026-06-11T17:07:18.181Z",
+            "collectedAt": "2026-06-12T05:03:09.006Z",
+            "raw": {
+              "id": "cmq9rg6q70ekjslldnvejg7m9",
+              "titleEn": null,
+              "apiCategory": "ai-products"
+            }
+          },
+          {
+            "id": "hackernews:48489917",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Open Reproduction of DeepSeek-R1",
+            "url": "https://github.com/huggingface/open-r1",
+            "author": "yogthos",
+            "tags": [
+              "deepseek"
+            ],
+            "metrics": {
+              "upvotes": 217,
+              "commentsCount": 17
+            },
+            "publishedAt": "2026-06-11T13:14:31.000Z",
+            "collectedAt": "2026-06-12T05:03:07.180Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48489917",
+              "matchedKeywords": [
+                "deepseek"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 217,
+          "commentsCount": 17,
+          "hnScore": 217,
+          "crossSourceBonus": 10,
+          "heatScore": 241
+        },
+        "crossSourceBonus": 10,
+        "category": "products",
+        "summary": "DeepSeek-R1 的开源复现项目已在 GitHub 发布，在 Hacker News 上获得 101 个积分。该项目旨在以开源方式复现 DeepSeek-R1 模型。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-06-11T13:14:31.000Z",
+        "lastSeenAt": "2026-06-12T05:03:09.006Z"
       }
     ]
   }
