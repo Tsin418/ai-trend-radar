@@ -8540,5 +8540,77 @@
     },
     "createdAt": "2026-06-13T08:36:19.352Z",
     "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-13T10:38:15Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go for prefix-cache stability and low token costs.",
+      "problemSolved": "Provides a configurable, plugin-driven AI coding assistant that leverages DeepSeek's prefix caching to reduce token costs during long sessions, with a single static binary for easy distribution.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 21,678 stars, a 24h delta of +349, and a 7-day delta of +3,125, the project shows sustained high velocity (7-day avg 455.4 stars/day) and an acceleration of 0.8, indicating strong, steady growth without sudden spikes. It ranks top 2 in Agents and top 3 in LLMs/CLI by velocity on OOSMetrics.",
+      "whatChanged": "The 1.0 ground-up rewrite in Go (main-v2 branch) is the likely catalyst, delivering a single static binary, improved performance, and prefix-cache optimization. Recent commits and a release within 30 days confirm active development.",
+      "whyTrending": "Combines the popularity of DeepSeek models with a practical, well-engineered terminal tool that reduces API costs, appealing to developers seeking efficient AI coding assistants.",
+      "developerTakeaway": "A well-architected, config-driven AI agent that demonstrates how to optimize for model-specific features (prefix caching) and deliver a cross-platform binary with minimal dependencies.",
+      "developerInsight": "Signals a shift toward model-native tooling that exploits provider-specific optimizations (e.g., caching) to reduce costs, and a preference for compiled, single-binary distributions over interpreted runtimes.",
+      "targetUsers": "Developers using DeepSeek models who want a terminal-based AI coding agent with low token costs, extensibility via plugins, and easy setup.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix-caching behavior; changes to DeepSeek's pricing or caching policy could impact value. 445 open issues suggest active community but also potential growing pains.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-13T11:27:37.022Z",
+    "model": "deepseek-v4-flash"
+  },
+  "topoteretes/cognee:2026-06-13T10:52:12Z": {
+    "summary": {
+      "oneLiner": "Cognee is an open-source AI memory platform that gives agents persistent long-term memory via a self-hosted knowledge graph.",
+      "problemSolved": "AI agents lack persistent memory across sessions, forcing them to re-learn context each time. Cognee solves this by ingesting data in any format, building a knowledge graph that agents can query with full context.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sudden_breakout",
+      "whyNow": "Cognee has 17,804 stars and is accelerating sharply: 36 stars in the last 24 hours, 116 in the last 7 days, with a 7-day average delta of 18.8 and an acceleration ratio of 2.1 (high). This sudden breakout signals a rapid surge in attention, likely driven by the growing need for persistent memory in AI agents.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. However, recent releases (within 30 days) and active commits (within 7 days) suggest ongoing development that may be attracting new users.",
+      "whyTrending": "As AI agents become more prevalent, the lack of persistent memory is a critical pain point. Cognee offers a practical, open-source solution that integrates with popular agent frameworks like Claude Code, making it highly relevant for developers building production agents.",
+      "developerTakeaway": "Cognee provides a ready-to-use memory layer for agents, reducing the need to build custom knowledge graph infrastructure. Its simple API (remember/recall/forget/improve) and support for multiple LLM providers lower the barrier to adoption.",
+      "developerInsight": "This signals a shift toward memory-augmented AI agents as a standard architectural pattern. Developers should consider integrating persistent memory early to avoid context loss and enable cross-session learning.",
+      "targetUsers": "AI agent developers, builders of conversational AI, RAG systems, and any team needing long-term context management for LLM-based applications.",
+      "riskNotes": "The project is still relatively young (77 open issues) and may have scalability or reliability concerns in production. Dependency on specific LLM providers could introduce vendor lock-in. Self-hosting requires operational overhead.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-13T11:27:37.298Z",
+    "model": "deepseek-v4-flash"
+  },
+  "safishamsi/graphify:2026-06-13T10:28:43Z": {
+    "summary": {
+      "oneLiner": "Graphify turns any codebase, docs, or media into a queryable knowledge graph for AI coding assistants.",
+      "problemSolved": "Developers waste time grepping through files and re-reading context; Graphify lets them query their entire project as a knowledge graph via a simple slash command in their AI assistant.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 66,476 stars, a 24h delta of +687, and a 7-day average delta of 895.1, the project shows sustained high-velocity growth. The acceleration of 0.9 (high) indicates continued strong interest without a sudden spike, suggesting organic adoption by developers integrating AI assistants into their workflows.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. Recent commits and a release within 30 days indicate active maintenance, and the broad platform support (Claude Code, Codex, Cursor, Gemini CLI, etc.) likely drives steady word-of-mouth adoption.",
+      "whyTrending": "It solves a universal pain point for developers using AI coding assistants: providing rich, structured context without manual file hunting. The zero-config setup (`/graphify .`) and support for 20+ platforms make it immediately useful.",
+      "developerTakeaway": "Graphify is a practical tool to instantly improve AI assistant accuracy by feeding it a knowledge graph of your entire project. Worth trying if you use any supported AI coding tool.",
+      "developerInsight": "This signals a shift toward 'memory layers' for AI coding agents — the next frontier is not just code generation but context retrieval. Graphify's approach of indexing code, schemas, docs, and even media into a graph could become a standard pattern for AI-assisted development.",
+      "targetUsers": "Developers and teams using AI coding assistants (Claude Code, Codex, Cursor, Gemini CLI, etc.) who want to improve context quality without manual effort.",
+      "riskNotes": "Dependency on Python and uv/pipx for installation may deter some users. The project is very new (YC S26) and may have undiscovered bugs or scalability limits with very large codebases.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-13T11:27:46.407Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-13T09:52:54Z": {
+    "summary": {
+      "oneLiner": "Open Design is a local-first, open-source alternative to Claude Design that turns your laptop into an agentic design studio with 259+ skills, 142+ design systems, and native MCP integration for 21 coding agents.",
+      "problemSolved": "Design tools today are either closed (Figma, Claude Design) or require manual pixel-pushing. Open Design lets coding agents generate real CSS/HTML prototypes, decks, images, and videos directly from a design system contract (DESIGN.md), all running locally without cloud lock-in.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 64,162 stars, a 24h delta of +550, and a 7-day average of +663 stars/day, Open Design is experiencing sustained, high-velocity growth. The acceleration ratio of 0.9 indicates steady organic momentum rather than a sudden spike. This is a project that has already crossed into mainstream developer attention and continues to gain traction daily.",
+      "whatChanged": "The recent release of v0.10.0 (all-in-one agentic design workspace with parallel sessions) and the launch of the AMR (Agentic Model Router) service likely drove the latest surge. The README also highlights a new Fellow program, signaling active community building.",
+      "whyTrending": "It fills a clear gap: a local-first, open-source design tool that works with the coding agents developers already use (Claude Code, Codex, Cursor, Copilot, etc.). The MCP server integration makes it plug-and-play, and the 142+ design systems lower the barrier to brand-consistent output.",
+      "developerTakeaway": "If you build AI-powered design tools or agent workflows, Open Design demonstrates that the market wants local-first, agent-native design generation. Its plugin system and MCP architecture are worth studying as a reference for integrating AI into creative pipelines.",
+      "developerInsight": "The convergence of coding agents and design tools is accelerating. Open Design shows that the next frontier isn't better canvas editors but agent-readable design contracts (DESIGN.md) that produce production-ready artifacts. Developers should watch for similar patterns in other creative domains.",
+      "targetUsers": "Design engineers, frontend developers, product builders, and AI agent users who want to generate prototypes, decks, and assets without leaving their terminal or IDE.",
+      "riskNotes": "As an open-source project with rapid growth, there may be scalability challenges in maintaining 259+ skills and 142+ design systems. The reliance on third-party AI models (BYOK) means quality depends on the underlying model. Also, the project's scope is broad, which could lead to feature creep or maintenance burden.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-13T11:27:46.828Z",
+    "model": "deepseek-v4-flash"
   }
 }
