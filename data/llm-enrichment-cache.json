@@ -9170,5 +9170,77 @@
     },
     "createdAt": "2026-06-14T13:10:30.272Z",
     "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-14T15:02:44Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go for prefix-cache stability and low token costs.",
+      "problemSolved": "Developers need a persistent, config-driven AI coding assistant that stays efficient over long sessions by leveraging DeepSeek's prefix caching, avoiding token waste and context resets.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 21,973 stars, a 24-hour delta of +367, and a 7-day average of +436 stars/day, this project shows sustained high velocity. The acceleration of 0.9 indicates steady, organic growth rather than a sudden spike. It's ranked top 2 in Agents and top 3 in CLI by velocity on OOSMetrics, signaling strong community traction.",
+      "whatChanged": "The recent 1.0 ground-up rewrite in Go (from TypeScript) is a major shift, improving performance and distribution as a single static binary. The README highlights this as the new default branch, with legacy 0.x on maintenance. This architectural change likely attracted attention and contributed to the sustained growth.",
+      "whyTrending": "It's a purpose-built agent for DeepSeek models, optimized for prefix caching to reduce costs, and offers a plugin-driven, configurable architecture. The Go rewrite delivers a zero-friction binary, and the project has an active bilingual community on Discord.",
+      "developerTakeaway": "If you use DeepSeek models and want a terminal-based coding agent that stays efficient over long sessions, this is a strong candidate. Its config-driven design and MCP-compatible plugin system make it extensible.",
+      "developerInsight": "The focus on prefix-cache optimization signals a growing trend: as LLM usage scales, cost efficiency and session persistence become critical. This project shows that specialized agents for specific model families can outperform generic tools.",
+      "targetUsers": "Developers who use DeepSeek models (especially flash/pro) and want a terminal-based AI coding agent with low token costs, configurable tools, and plugin support.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix-cache behavior; if DeepSeek changes its caching model, the core advantage may diminish. The project is still young (1.0 rewrite) and has 483 open issues, indicating active but potentially rough edges.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-14T15:23:27.818Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-14T14:35:08Z": {
+    "summary": {
+      "oneLiner": "Open Design is a local-first, open-source alternative to Claude Design that turns your laptop into an agent-native design studio, generating prototypes, decks, images, and videos from a single design system via any coding agent CLI.",
+      "problemSolved": "Design tools today are either closed-source (Figma, Claude Design) or require manual pixel-pushing. Open Design lets developers and designers define a brand contract once in a DESIGN.md file, then have any coding agent (Claude Code, Codex, Cursor, etc.) generate consistent, exportable artifacts (HTML, PDF, PPTX, MP4) without leaving the terminal or desktop app.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 64,655 stars, a 24-hour delta of +614, and a 7-day average of +647 stars/day, Open Design is experiencing sustained, high-velocity growth. The acceleration ratio of 1.1 indicates steady momentum rather than a sudden spike, suggesting deep organic adoption. The recent 0.10.0 release (all-in-one agentic workspace) and the launch of the AMR model router likely fuel continued interest.",
+      "whatChanged": "The 0.10.0 release introduced an all-in-one agentic design workspace with parallel sessions, making the tool feel like a local design team. Additionally, the AMR (Agentic Model Router) service launched, allowing users to access 20+ flagship models with a single recharge. These product milestones, combined with active community building (Discord, Fellow program), are driving the sustained growth.",
+      "whyTrending": "Open Design taps into the growing demand for open-source, local-first alternatives to proprietary AI design tools. Its ability to integrate with 21+ coding agents and export to multiple formats (HTML, PDF, PPTX, MP4) makes it a versatile bridge between AI coding agents and design output. The 150+ design systems and 261 plugins lower the barrier for teams to adopt agent-driven design workflows.",
+      "developerTakeaway": "Open Design demonstrates a new paradigm: design as code, governed by a DESIGN.md file and executed by any agent. Developers can now treat design artifacts as part of their CI/CD pipeline, version-controlled and reproducible. The MCP server integration means any agent can call design tools without switching context.",
+      "developerInsight": "This signals a shift toward agent-native design workflows where the design system is a first-class code artifact. For AI developers, Open Design shows how to build extensible, local-first tools that leverage the ecosystem of coding agents rather than competing with them. The BYOK proxy and MCP architecture are patterns worth studying for building interoperable AI tools.",
+      "targetUsers": "Developers and designers who want to generate design artifacts programmatically using AI coding agents, teams seeking open-source alternatives to Claude Design or Figma, and builders of agentic workflows who need a design engine that integrates with their existing CLI tools.",
+      "riskNotes": "The project is still in early stages (0.10.0) with 386 open issues, indicating active development but potential instability. As a local-first tool, it requires users to manage their own model API keys or use the paid AMR service. The reliance on coding agents means the quality of output depends on the underlying model's capabilities.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-14T15:23:30.380Z",
+    "model": "deepseek-v4-flash"
+  },
+  "HKUDS/nanobot:2026-06-14T14:19:42Z": {
+    "summary": {
+      "oneLiner": "An ultra-lightweight, open-source personal AI agent that you can truly own, with WebUI, chat channels, tools, memory, MCP, model routing, automation, and deployment.",
+      "problemSolved": "Provides a small, readable, and extensible AI agent core that integrates with multiple LLM providers, chat platforms, and tools, enabling users to build and run long-running autonomous workflows without vendor lock-in.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sustained_hot",
+      "whyNow": "With 44,189 stars, a 7-day average delta of 54.4 stars/day, and a 24h delta of 65, the project shows strong, sustained growth. The acceleration ratio of 1.2 indicates steady momentum rather than a sudden spike, making it a reliable choice for developers seeking a mature, actively maintained agent framework.",
+      "whatChanged": "The recent v0.2.1 release (2026-06-01) introduced a 'Workbench' WebUI with clearer thought/response timelines, live file-edit activity, project workspaces, and broader provider/channel support. This major feature update likely drove the sustained attention.",
+      "whyTrending": "It combines a lightweight core with practical, production-ready features (WebUI, MCP, multi-channel chat, memory, model routing) and has a very active release cadence (daily updates in May 2026). The project is backed by HKUDS and has a growing community across Discord, WeChat, and Feishu.",
+      "developerTakeaway": "If you need a customizable, self-hosted AI agent that can integrate with your existing tools and chat platforms, nanobot offers a well-documented, Python-based solution with a strong focus on extensibility and long-running tasks.",
+      "developerInsight": "The rapid iteration and broad provider support signal a shift toward modular, multi-model agent frameworks that prioritize user ownership and local deployment over cloud-dependent solutions.",
+      "targetUsers": "Developers and teams who want to build and deploy their own AI agents for automation, chat integration, and tool orchestration, with a preference for open-source, self-hosted solutions.",
+      "riskNotes": "The project is still in early versions (v0.2.1) and may have breaking changes. With 874 open issues, some stability concerns exist. The rapid release pace could lead to documentation lag.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-14T15:23:35.633Z",
+    "model": "deepseek-v4-flash"
+  },
+  "sickn33/antigravity-awesome-skills:2026-06-14T09:00:42Z": {
+    "summary": {
+      "oneLiner": "An installable library of 1,550+ reusable SKILL.md playbooks for AI coding assistants like Claude Code, Cursor, and Gemini CLI.",
+      "problemSolved": "Eliminates the need to craft one-off prompts by providing a searchable, installable catalog of structured agentic skills for common development, testing, security, and workflow tasks.",
+      "aiCategory": "MCP / Tool Calling",
+      "trendType": "sustained_hot",
+      "whyNow": "With 40,690 stars, a 24h delta of +154, and a 7-day delta of +776, the project shows sustained high attention. The acceleration ratio of 1.3 indicates steady growth without a sudden spike, suggesting broad, ongoing adoption rather than a viral event.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The latest release (v12.5.0) and continuous commits within the last 7 days indicate active maintenance and feature additions, which likely reinforce its reputation.",
+      "whyTrending": "It addresses a clear pain point for developers using AI coding assistants: the need for reusable, high-quality skill definitions. The combination of a large catalog, multi-tool support, and an easy npm installer makes it a practical tool for daily workflows.",
+      "developerTakeaway": "This project demonstrates the value of structured, shareable skill definitions for AI agents. Developers can adopt it to reduce prompt engineering overhead and standardize agent behavior across tools.",
+      "developerInsight": "The rise of skill libraries signals a shift from ad-hoc prompting to curated, reusable agent instructions. This could become a standard layer in AI-assisted development, similar to how package managers transformed code reuse.",
+      "targetUsers": "Developers using AI coding assistants (Claude Code, Cursor, Codex CLI, Gemini CLI, etc.) who want to accelerate common tasks without writing custom prompts.",
+      "riskNotes": "The project depends on the continued popularity and API stability of the supported AI tools. If any of these tools change their skill format or deprecate the feature, the library may require updates. Also, the quality of community-contributed skills may vary.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-14T15:23:37.715Z",
+    "model": "deepseek-v4-flash"
   }
 }
