@@ -9008,5 +9008,77 @@
     },
     "createdAt": "2026-06-14T07:02:06.511Z",
     "model": "deepseek-v4-flash"
+  },
+  "addyosmani/agent-skills:2026-06-14T08:41:45Z": {
+    "summary": {
+      "oneLiner": "A curated pack of 24 production-grade engineering skills packaged as Markdown workflows for AI coding agents, covering the full development lifecycle from spec to ship.",
+      "problemSolved": "AI coding agents often produce low-quality, inconsistent code because they lack the structured workflows, quality gates, and best practices that senior engineers follow. This repo encodes those practices into reusable skill files that agents can execute consistently.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sustained_hot",
+      "whyNow": "The repo is experiencing explosive growth with 58,952 stars, a 24-hour delta of 1,919, and a 7-day delta of 10,228. The three-day average star delta is 2,396.7, and the acceleration ratio is 0.8 (high but not sudden breakout). This sustained hot trend reflects massive developer interest in standardizing AI agent behavior for production code.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The high velocity and consistent star accumulation over the past week suggest broad adoption driven by word-of-mouth and the growing need for agentic coding workflows.",
+      "whyTrending": "As AI coding agents (Claude Code, Cursor, Copilot) become mainstream, developers need a way to enforce consistent, high-quality engineering practices. This repo provides a ready-made, open-source solution that works across multiple agent platforms, filling a critical gap in the AI-assisted development stack.",
+      "developerTakeaway": "This is a practical, immediately usable resource for any developer using AI coding agents. It offers 24 structured skills (slash commands) that can be installed in Claude Code, Cursor, Windsurf, Gemini CLI, and others, turning agents into disciplined engineering teammates.",
+      "developerInsight": "The rapid adoption signals a shift: developers are moving from 'prompting agents' to 'governing agents' with structured workflows. This repo is a blueprint for how agent behavior can be standardized, and it may influence how future AI coding tools design their skill systems.",
+      "targetUsers": "Software engineers and teams using AI coding agents (Claude Code, Cursor, Copilot, Windsurf, Gemini CLI) who want to enforce production-grade engineering practices like spec-driven development, TDD, code review, and CI/CD automation.",
+      "riskNotes": "The skills are Markdown files that rely on the agent's ability to follow instructions consistently. Effectiveness may vary across different agents and models. The project is new and rapidly evolving, so breaking changes or incomplete coverage are possible.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-14T10:35:17.420Z",
+    "model": "deepseek-v4-flash"
+  },
+  "LMCache/LMCache:2026-06-14T09:22:41Z": {
+    "summary": {
+      "oneLiner": "LMCache is a vendor-neutral KV cache management layer that turns LLM inference KV caches into persistent, reusable, and observable assets across serving engines and hardware.",
+      "problemSolved": "LLM inference suffers from high time-to-first-token (TTFT) and low throughput due to repeated prefill computation, especially in long-context, multi-turn, and RAG workloads. LMCache solves this by enabling persistent, tiered KV cache storage and reuse across requests, sessions, and engine instances, reducing redundant computation and improving latency and throughput.",
+      "aiCategory": "Local LLM / Inference",
+      "trendType": "sustained_hot",
+      "whyNow": "With 9,009 stars, a 24-hour delta of +343 stars, and sustained commit activity (last push within 7 days), LMCache is experiencing strong, consistent growth. The acceleration ratio is low (1.0), indicating steady organic interest rather than a sudden spike. This sustained momentum, combined with recent releases (multiprocess architecture, agentic workload benchmarks on AMD MI300X) and ecosystem integrations (NVIDIA Dynamo, PyTorch Foundation, Redis), makes it a hot project in the LLM inference space.",
+      "whatChanged": "Recent updates include a new multiprocess architecture release (April 2026) that boosts MoE inference performance by 10x, agentic workload benchmarks on AMD MI300X (May 2026), and multi-node P2P CPU memory sharing reaching production (January 2026). These features, along with integration announcements (NVIDIA Dynamo, PyTorch Foundation), likely drove recent attention.",
+      "whyTrending": "LMCache addresses a critical bottleneck in LLM inference—KV cache management—with a production-ready, vendor-neutral solution. Its growing ecosystem (vLLM, SGLang, TensorRT-LLM, AMD, NVIDIA) and strong community support (PyTorch Foundation, Slack, regular releases) make it a go-to layer for efficient inference, attracting both developers and enterprises.",
+      "developerTakeaway": "LMCache is becoming the de facto standard for KV cache management. Developers building LLM serving systems should evaluate integrating LMCache to reduce latency and cost, especially for long-context and multi-turn applications. Its pluggable storage and transport backends offer flexibility for diverse deployment scenarios.",
+      "developerInsight": "This signals a shift toward treating KV caches as persistent, reusable infrastructure rather than ephemeral state. For AI developers, adopting LMCache can unlock significant performance gains without vendor lock-in, and its observability features enable better debugging and optimization of inference pipelines.",
+      "targetUsers": "LLM inference engineers, platform teams deploying large-scale serving systems, researchers working on KV cache optimization, and organizations using long-context or multi-turn LLM applications (e.g., RAG, agentic workflows).",
+      "riskNotes": "Project is still relatively young (first release ~2025) and may have breaking changes. Dependency on specific serving engines (vLLM, SGLang) could limit portability. The 312 open issues suggest active development but also potential stability concerns. Competition from other KV cache solutions (e.g., vLLM's built-in caching) may reduce adoption.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-14T10:35:17.904Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-14T09:47:59Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go for performance and prefix-cache stability.",
+      "problemSolved": "Provides a configurable, plugin-driven AI coding assistant that leverages DeepSeek's prefix caching to reduce token costs during long sessions, with a single static binary for easy distribution.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 21,906 stars, a 24-hour delta of 300, and a 7-day average delta of 436.1, this project shows sustained high velocity. The acceleration of 0.7 indicates continued strong growth without sudden spikes, making it a consistent hot project in the AI coding agent space.",
+      "whatChanged": "The recent 1.0 release (ground-up rewrite in Go) and active maintenance with commits within 7 days likely drove attention. The README highlights a migration from legacy TypeScript, and the project has badges for top velocity in Agents, LLMs, and CLI categories on oosmetrics.",
+      "whyTrending": "It combines DeepSeek's cost-efficient models with a polished terminal experience, plugin system, and multi-model support, appealing to developers seeking a free or low-cost alternative to GitHub Copilot or Cursor.",
+      "developerTakeaway": "A practical, open-source AI coding agent optimized for DeepSeek, with a focus on long-running sessions and low token costs. Worth trying for terminal-centric workflows.",
+      "developerInsight": "Signals a shift toward specialized, model-native agents that optimize for specific LLM features (like prefix caching). Developers should consider building agents that are tightly coupled to a model's strengths rather than generic multi-model wrappers.",
+      "targetUsers": "Developers who use DeepSeek models and want a terminal-based AI coding assistant with configurable tools, plugins, and multi-model collaboration.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix caching; if DeepSeek changes pricing or caching behavior, the value proposition may weaken. Also, 503 open issues suggest active development but potential instability.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-14T10:35:25.047Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-14T10:31:35Z": {
+    "summary": {
+      "oneLiner": "Local-first, open-source Claude Design alternative that turns your laptop into an agent-native design studio with 259+ skills, 142+ design systems, and MCP integration for 21 coding agents.",
+      "problemSolved": "Design tools today are either closed-source SaaS (Figma, Claude Design) or require manual pixel-pushing. Open Design lets coding agents (Claude Code, Codex, Cursor, etc.) generate prototypes, decks, images, and videos directly from a brief and a DESIGN.md brand contract — all local-first, sandboxed, and exportable to HTML/PDF/PPTX/MP4.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 64,524 stars, a 24-hour delta of +483, and a 7-day average of +647 stars/day, this project is sustaining massive organic growth. The acceleration of 0.9 (high but not sudden) indicates steady, compounding interest — likely driven by the v0.10.0 release and the expanding list of supported coding agents (21 CLIs).",
+      "whatChanged": "The v0.10.0 release introduced an all-in-one agentic design workspace with parallel sessions, plus the AMR (Agentic Model Router) service for unified access to GPT, Claude, Gemini, and DeepSeek. The README also highlights new integrations with 21 coding agents and a growing plugin ecosystem (261 plugins).",
+      "whyTrending": "It fills a clear gap: an open-source, local-first design tool that works with the coding agents developers already use. The 'Figma alternative for the agent era' positioning resonates, and the rapid addition of agent integrations (Claude Code, Codex, Cursor, etc.) makes it immediately useful without switching tools.",
+      "developerTakeaway": "Open Design demonstrates a new paradigm: design as a filesystem of skills and design systems consumed by AI agents. Developers can install it, wire it into their existing agent via `od mcp install <agent>`, and start generating production-ready artifacts from natural language briefs — all offline and with full control over the output.",
+      "developerInsight": "This signals a shift toward agent-native design workflows where the CLI and MCP server replace the canvas. For AI developers, it means design is becoming a programmable, composable layer — not a separate tool. The BYOK proxy and local-first approach also reduce vendor lock-in and latency.",
+      "targetUsers": "Developers and designers using AI coding agents (Claude Code, Codex, Cursor, Copilot, etc.) who want to generate prototypes, decks, images, and videos without leaving their terminal or IDE. Also teams looking for a local-first, open-source alternative to Claude Design or Figma.",
+      "riskNotes": "The project is still early (v0.10.0) with 383 open issues. The quality of generated artifacts depends heavily on the underlying model and the DESIGN.md system. The plugin and skill ecosystem is community-driven, so consistency may vary. Also, the project's rapid growth may outpace documentation and stability.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-14T10:35:29.000Z",
+    "model": "deepseek-v4-flash"
   }
 }
