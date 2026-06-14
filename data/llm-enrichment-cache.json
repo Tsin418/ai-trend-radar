@@ -8828,5 +8828,77 @@
     },
     "createdAt": "2026-06-13T22:34:10.825Z",
     "model": "deepseek-v4-flash"
+  },
+  "iptv-org/iptv:2026-06-14T01:13:12Z": {
+    "summary": {
+      "oneLiner": "A massive, community-curated collection of publicly available IPTV channel playlists from around the world.",
+      "problemSolved": "Provides a single, open-source repository of M3U playlists for thousands of live TV channels, eliminating the need to search for individual streams.",
+      "aiCategory": "Other AI",
+      "trendType": "sustained_hot",
+      "whyNow": "With 119k stars and a 24-hour delta of +1,281 stars, this project shows sustained, high-velocity growth. The acceleration ratio is low (1), indicating steady organic interest rather than a sudden spike. It remains one of the most-starred repositories on GitHub, consistently attracting thousands of new stars daily.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. Recent commits within the last 7 days show active maintenance, but no major release or external event is evident.",
+      "whyTrending": "It solves a universal need for free, accessible live TV streaming, and its massive playlist database is continuously updated by the community. The project's scale and reliability make it a go-to resource for cord-cutters worldwide.",
+      "developerTakeaway": "A prime example of how a well-organized, community-driven data aggregation project can achieve viral adoption. Developers can learn from its modular architecture (separate repos for database, API, EPG) and automated update workflows.",
+      "developerInsight": "For AI developers, this repo signals the value of curated, structured datasets. The underlying database could be used to train models for channel classification, content recommendation, or stream quality prediction.",
+      "targetUsers": "Cord-cutters, live TV enthusiasts, developers building IPTV apps, and anyone seeking free access to global TV channels.",
+      "riskNotes": "Legal gray area: while the repo only links to publicly available streams, copyright holders may still challenge it. Playlist links can break or become outdated without notice.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-14T01:40:37.791Z",
+    "model": "deepseek-v4-flash"
+  },
+  "LMCache/LMCache:2026-06-13T22:40:50Z": {
+    "summary": {
+      "oneLiner": "LMCache is a vendor-neutral KV cache management layer that turns LLM inference KV caches into persistent, reusable, and observable assets, reducing TTFT and improving throughput for long-context and multi-turn workloads.",
+      "problemSolved": "LLM inference suffers from repeated prefill computation and high memory pressure, especially for long-context, multi-turn, and RAG workloads. LMCache solves this by enabling persistent, tiered KV cache offloading and reuse across requests, sessions, and engine instances, reducing latency and improving throughput.",
+      "aiCategory": "Local LLM / Inference",
+      "trendType": "sustained_hot",
+      "whyNow": "With 8,895 stars and a 24-hour delta of +335, LMCache is experiencing strong sustained growth. The acceleration ratio is low (1.0), indicating steady organic interest rather than a sudden spike. Recent releases (e.g., multiprocess architecture in April 2026, agentic workload benchmarks on AMD MI300X in May 2026) and integrations with NVIDIA Dynamo, Redis, and CoreWeave keep the project in the spotlight.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. However, recent blog posts (e.g., multiprocess architecture, agentic workload benchmarks) and ecosystem integrations (NVIDIA Dynamo, PyTorch Foundation membership) likely contribute to continued attention.",
+      "whyTrending": "LMCache addresses a critical bottleneck in LLM inference (KV cache management) with a production-ready, vendor-neutral solution. Its growing ecosystem of integrations (vLLM, NVIDIA Dynamo, Redis, AMD, etc.) and active community (high commit activity, Slack, community meetings) drive sustained interest.",
+      "developerTakeaway": "LMCache is becoming the de facto standard for KV cache management in LLM inference. Developers building long-context, multi-turn, or RAG-based applications should evaluate LMCache to reduce latency and cost. Its pluggable architecture allows easy integration with existing serving stacks.",
+      "developerInsight": "This signals a shift toward treating KV caches as persistent, reusable infrastructure rather than ephemeral state. For AI developers, adopting LMCache can unlock significant performance gains without changing models, and its vendor neutrality reduces lock-in risk.",
+      "targetUsers": "LLM inference engineers, platform teams deploying large-scale serving systems, researchers working on KV cache optimization, and developers building agentic or RAG applications that require long-context handling.",
+      "riskNotes": "The project is still evolving (313 open issues) and may have breaking changes. Dependency on specific hardware (CUDA, ROCm) could limit portability. The ecosystem is growing but not yet universal — integration with some engines may require custom work.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-14T01:40:39.667Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-13T22:59:26Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go for performance and prefix-cache stability.",
+      "problemSolved": "Provides a configurable, plugin-driven AI coding assistant that leverages DeepSeek's prefix caching to reduce token costs during long sessions, with a single static binary for easy distribution.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 21,783 stars, a 24-hour delta of 454, and a 7-day delta of 2,930, this project shows sustained high velocity (7-day avg delta 637.6). The acceleration of 0.7 indicates steady growth without sudden spikes, making it a reliable hot project in the AI coding agent space.",
+      "whatChanged": "The recent 1.0 release (ground-up rewrite in Go) and active maintenance (commits within 7 days) likely drove attention. The project also has a migration guide from legacy TypeScript, signaling a major upgrade.",
+      "whyTrending": "Combines DeepSeek's cost-efficient API with a polished terminal UI and plugin system, appealing to developers seeking a free, open-source alternative to GitHub Copilot or Cursor.",
+      "developerTakeaway": "A well-engineered, config-driven AI agent that prioritizes token efficiency and extensibility via MCP-compatible plugins.",
+      "developerInsight": "Signals a shift toward specialized, model-native coding agents that optimize for API costs and session persistence, rather than generic LLM wrappers.",
+      "targetUsers": "Developers using DeepSeek models who want a terminal-based AI coding assistant with plugin support and low token consumption.",
+      "riskNotes": "Heavy reliance on DeepSeek's API and prefix caching; if DeepSeek changes pricing or caching behavior, the value proposition weakens. Also, 482 open issues suggest active but potentially buggy development.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-14T01:40:43.056Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-13T23:15:13Z": {
+    "summary": {
+      "oneLiner": "Local-first, open-source alternative to Claude Design that turns your laptop into an agent-native design studio with 150+ design systems, 260+ plugins, and MCP integration for 21 coding agents.",
+      "problemSolved": "Design tools today are either closed-source SaaS (Figma, Claude Design) or require manual pixel-pushing. Open Design lets coding agents (Claude Code, Codex, Cursor, etc.) generate prototypes, decks, images, and videos directly from a brief and a DESIGN.md brand contract — all local-first, sandboxed, and exportable to HTML/PDF/PPTX/MP4.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 64,374 stars, a 24h delta of +762, and a 7-day average of +928.6 stars/day, this project is sustaining explosive growth. The acceleration ratio of 0.9 indicates steady, high-velocity momentum rather than a sudden spike. The recent v0.10.0 release (all-in-one agentic workspace) and the launch of the AMR model router likely fuel continued adoption.",
+      "whatChanged": "The v0.10.0 release introduced parallel sessions and a unified workspace, and the AMR (Agentic Model Router) service launched — one recharge for GPT, Claude, Gemini, DeepSeek. These product milestones, combined with growing ecosystem of 21 supported coding agents, are the likely triggers for sustained attention.",
+      "whyTrending": "It bridges the gap between AI coding agents and design output, offering a local-first, open-source workflow that competes with Claude Design and Figma. The ability to use any coding agent with a single MCP install command and 150+ ready-made design systems lowers the barrier for developers to generate production-quality artifacts.",
+      "developerTakeaway": "If you use Claude Code, Codex, Cursor, or any of the 21 supported agents, you can install Open Design in one command and start generating prototypes, decks, and videos from your existing workflow. It's a practical way to add design capabilities to agent-driven development without leaving the terminal.",
+      "developerInsight": "This signals a shift toward agent-native design tools where the CLI and MCP become the primary interface for creative output. Developers should watch for how local-first, open-source alternatives to SaaS design tools can reduce dependency on closed platforms and enable fully offline, agent-orchestrated design pipelines.",
+      "targetUsers": "Developers and designers using AI coding agents (Claude Code, Codex, Cursor, Copilot, etc.) who want to generate prototypes, decks, images, and videos from natural language briefs without switching to a separate design tool. Also teams looking for a local-first, open-source Figma/Claude Design alternative.",
+      "riskNotes": "The project is still in early stages (v0.10.0) with 387 open issues. The reliance on external AI model APIs (even with BYOK) means costs and latency depend on the provider. The MCP integration requires the user to have the corresponding coding agent installed and configured. The rapid pace of development may lead to breaking changes.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-14T01:40:48.492Z",
+    "model": "deepseek-v4-flash"
   }
 }
