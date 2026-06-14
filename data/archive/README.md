@@ -1,11 +1,11 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-14T10:35:34.301Z
+Updated: 2026-06-14T13:10:34.746Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-14 | daily | [AI Developer Radar｜Daily｜2026-06-14](2026/06/2026-06-14-daily.md) | LMCache/LMCache, microsoft/PowerToys, iptv-org/iptv, Panniantong/Agent-Reach, addyosmani/agent-skills |
+| 2026-06-14 | daily | [AI Developer Radar｜Daily｜2026-06-14](2026/06/2026-06-14-daily.md) | iptv-org/iptv, swc-project/swc, Panniantong/Agent-Reach, chopratejas/headroom, addyosmani/agent-skills |
 | 2026-06-13 | daily | [AI Developer Radar｜Daily｜2026-06-13](2026/06/2026-06-13-daily.md) | eyaltoledano/claude-task-master, stas00/ml-engineering, topoteretes/cognee, addyosmani/agent-skills, Panniantong/Agent-Reach |
 | 2026-06-12 | daily | [AI Developer Radar｜Daily｜2026-06-12](2026/06/2026-06-12-daily.md) | kenn-io/agentsview, hexo-ai/sia, NVIDIA/SkillSpector, chatwoot/chatwoot, msitarzewski/agency-agents |
 | 2026-06-11 | daily | [AI Developer Radar｜Daily｜2026-06-11](2026/06/2026-06-11-daily.md) | masterking32/MasterDnsVPN, soxoj/maigret, thedaviddias/Front-End-Checklist, netdata/netdata, stas00/ml-engineering |
