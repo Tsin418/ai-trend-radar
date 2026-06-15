@@ -1,12 +1,12 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-15T06:16:41.473Z
+Updated: 2026-06-15T12:47:41.942Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-15 | daily | [AI Developer Radar｜Daily｜2026-06-15](2026/06/2026-06-15-daily.md) | deepspeedai/DeepSpeed, Panniantong/Agent-Reach, chopratejas/headroom, rohitg00/ai-engineering-from-scratch, addyosmani/agent-skills |
+| 2026-06-15 | daily | [AI Developer Radar｜Daily｜2026-06-15](2026/06/2026-06-15-daily.md) | trycua/cua, deepspeedai/DeepSpeed, hpcaitech/ColossalAI, automazeio/ccpm, ChatGPTNextWeb/NextChat |
 | 2026-06-14 | daily | [AI Developer Radar｜Daily｜2026-06-14](2026/06/2026-06-14-daily.md) | iptv-org/iptv, swc-project/swc, Panniantong/Agent-Reach, chopratejas/headroom, addyosmani/agent-skills |
 | 2026-06-13 | daily | [AI Developer Radar｜Daily｜2026-06-13](2026/06/2026-06-13-daily.md) | eyaltoledano/claude-task-master, stas00/ml-engineering, topoteretes/cognee, addyosmani/agent-skills, Panniantong/Agent-Reach |
 | 2026-06-12 | daily | [AI Developer Radar｜Daily｜2026-06-12](2026/06/2026-06-12-daily.md) | kenn-io/agentsview, hexo-ai/sia, NVIDIA/SkillSpector, chatwoot/chatwoot, msitarzewski/agency-agents |
