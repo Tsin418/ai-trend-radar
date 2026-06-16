@@ -10106,5 +10106,59 @@
     },
     "createdAt": "2026-06-16T17:27:50.642Z",
     "model": "deepseek-v4-flash"
+  },
+  "google-ai-edge/mediapipe:2026-06-16T21:14:18Z": {
+    "summary": {
+      "oneLiner": "Google's cross-platform framework for building on-device ML pipelines for live and streaming media.",
+      "problemSolved": "MediaPipe solves the challenge of deploying high-performance, real-time machine learning pipelines across mobile, web, desktop, and edge devices, providing pre-built solutions for vision, text, and audio tasks, along with a low-level framework for custom pipelines.",
+      "aiCategory": "Local LLM / Inference",
+      "trendType": "sudden_breakout",
+      "whyNow": "With 35,667 stars and a sudden breakout acceleration of 3.3 (high), the project gained 43 stars in the last 24 hours and 135 in the last 7 days. The acceleration indicates a spike in attention, likely driven by renewed interest in on-device AI or a specific update, though no recent release is tagged.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. However, the high acceleration and recent commits (within 7 days) suggest ongoing development activity may be drawing attention.",
+      "whyTrending": "MediaPipe is trending because it provides a production-ready, Google-backed framework for on-device ML, which is increasingly critical for privacy-preserving and low-latency AI applications. Its cross-platform support and pre-built solutions lower the barrier for developers.",
+      "developerTakeaway": "MediaPipe is a mature, well-supported framework for integrating real-time ML into applications. Developers should evaluate its pre-built solutions for common tasks (object detection, hand tracking, etc.) and consider the custom pipeline framework for specialized needs.",
+      "developerInsight": "This signals a shift toward on-device inference as a standard requirement for AI applications, with MediaPipe offering a unified path across platforms. Developers should prioritize privacy and latency by adopting on-device ML where possible.",
+      "targetUsers": "Mobile and web developers building real-time AI features (e.g., AR, video analysis, gesture recognition), ML engineers deploying models on edge devices, and researchers prototyping perception pipelines.",
+      "riskNotes": "The project has moved its primary documentation to Google's site, which may cause confusion. Legacy solutions are deprecated, and the framework's complexity could be a barrier for beginners. Google's control over the project introduces dependency risk.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-16T21:24:10.494Z",
+    "model": "deepseek-v4-flash"
+  },
+  "topoteretes/cognee:2026-06-16T21:15:33Z": {
+    "summary": {
+      "oneLiner": "Cognee is an open-source AI memory platform that gives agents persistent long-term memory via a self-hosted knowledge graph.",
+      "problemSolved": "AI agents lack persistent memory across sessions, forcing them to re-learn context each time. Cognee provides a unified ingestion, graph/vector search, and ontology generation pipeline to store, recall, and connect knowledge over time.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sudden_breakout",
+      "whyNow": "The repo is experiencing a sudden breakout with a 24h star delta of 41, a 7-day delta of 123, and an acceleration ratio of 2.6 (high). At 17,856 stars and 1,894 forks, it has strong community momentum. The velocity pattern shows a sharp uptick in attention, likely driven by recent releases and growing interest in agent memory infrastructure.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. However, recent commits (within 7 days), a recent release (within 30 days), and the publication of a research paper (arXiv 2025) may have contributed to the breakout. The README also highlights new integrations (Claude Code plugin, Cognee Cloud) that expand its reach.",
+      "whyTrending": "Cognee addresses a critical gap in the AI agent ecosystem: persistent memory. As agents become more autonomous, the need for structured, long-term knowledge storage grows. Its open-source nature, self-hosted option, and support for multiple data formats make it accessible to developers building production agents.",
+      "developerTakeaway": "Cognee offers a ready-to-use memory layer for AI agents, reducing the need to build custom knowledge graph pipelines. Developers can integrate it quickly via Python SDK or CLI, and it supports session memory, graph reasoning, and multi-tenant isolation.",
+      "developerInsight": "This signals a shift toward infrastructure-level memory management for AI agents. Developers should consider adopting a memory platform early to avoid fragmentation and ensure agents can learn and adapt across sessions. Cognee's approach of combining vector and graph storage may become a standard pattern.",
+      "targetUsers": "AI agent developers, RAG pipeline builders, teams building customer support bots, knowledge management systems, and any application requiring persistent agent memory.",
+      "riskNotes": "The project is still relatively young (17k stars but rapid growth). The README mentions a research paper but the technology may not be battle-tested at scale. Dependency on external LLM providers (e.g., OpenAI) could be a lock-in risk. The open issues count (126) suggests active development but also potential rough edges.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-16T21:24:11.999Z",
+    "model": "deepseek-v4-flash"
+  },
+  "chopratejas/headroom:2026-06-16T21:11:37Z": {
+    "summary": {
+      "oneLiner": "Headroom compresses AI agent inputs (tool outputs, logs, RAG chunks) by 60–95% before they reach the LLM, preserving answer quality while slashing token costs.",
+      "problemSolved": "LLM context windows fill up quickly with verbose tool outputs, logs, and RAG results, driving up costs and limiting context depth. Headroom reduces token usage without sacrificing accuracy, and works as a library, proxy, or MCP server.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "Headroom has exploded from 0 to 29,941 stars in a short time, with a 24h delta of 2,119 stars and a 7-day delta of 15,278 stars. The three-day average star delta is 6,579.5, and the acceleration ratio is 0.3 (medium), indicating sustained, massive organic growth. This is one of the fastest-growing AI infrastructure projects on GitHub right now.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The recent release (within 30 days) and continuous commits suggest active development, but the star velocity is driven by word-of-mouth and viral adoption among AI agent users.",
+      "whyTrending": "Headroom solves a universal pain point for anyone using AI coding agents: token costs and context limits. It offers immediate, measurable savings (60–95% fewer tokens) with zero code changes via its proxy mode. The combination of multiple compression algorithms, reversible compression (CCR), cross-agent memory, and support for all major agents (Claude Code, Cursor, Codex, Aider, Copilot) makes it a must-have tool for the AI engineering community.",
+      "developerTakeaway": "If you use AI coding agents daily, Headroom can cut your token spend by 60–95% with no code changes. It's a drop-in proxy or library that works with any LLM provider and agent. The reversible compression ensures you never lose data. Worth trying immediately.",
+      "developerInsight": "Headroom signals a shift toward infrastructure that optimizes the AI agent workflow at the data layer. Token compression is becoming a critical primitive for cost-effective, high-quality agent interactions. Developers should expect more tools that sit between agents and LLMs to manage context, memory, and cost.",
+      "targetUsers": "AI engineers, developers using Claude Code, Cursor, Codex, Aider, Copilot CLI, or any OpenAI-compatible agent; teams building multi-agent systems; anyone looking to reduce LLM costs without sacrificing quality.",
+      "riskNotes": "The project is very new and rapidly evolving — expect breaking changes. The compression algorithms may not preserve accuracy for all edge cases (though benchmarks show minimal degradation). The proxy mode introduces a local dependency that may not suit all environments. The open issues count (267) is high relative to its age, suggesting growing pains.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-16T21:24:20.357Z",
+    "model": "deepseek-v4-flash"
   }
 }
