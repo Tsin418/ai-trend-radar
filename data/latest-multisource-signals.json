@@ -1,188 +1,211 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-06-16T05:41:09.852Z",
+  "generatedAt": "2026-06-16T06:26:09.363Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2606.17056v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "The Value Axis: Language Models Encode Whether They're on the Right Track",
-        "url": "https://arxiv.org/pdf/2606.17056v1",
-        "description": "We investigate whether language models internally track the value of their current trajectory, defined as the likelihood that their ongoing strategy will achieve their goals. Using synthetic, in-context reinforcement learning data, we construct a \"value\" axis for Qwen3-8B. We find that activations along this axis distinguish between high vs. low verbalized confidence, rollouts without and with backtracking, and correct vs. corrupted code. Steering towards high value causally suppresses self-corr",
-        "summary": "We investigate whether language models internally track the value of their current trajectory, defined as the likelihood that their ongoing strategy will achieve their goals. Using synthetic, in-context reinforcement learning data, we construct a \"value\" axis for Qwen3-8B. We find that activations along this axis distinguish between high vs. low verbalized confidence, rollouts without and with backtracking, and correct vs. corrupted code. Steering towards high value causally suppresses self-correction and reduces explanatory verbosity, while steering towards low value induces backtracking and exploration. We demonstrate that direct preference optimization (DPO) can increase the internal value of rewarded behaviors (e.g. use a certain word), causing the model to act more confidently after exhibiting them. Finally, we apply the value axis to study in-the-wild settings. For example, we find that Qwen assigns low value to politically sensitive chat queries after post-training and that supervised fine-tuning increases internal confidence within the training domain. Our results suggest that language models linearly encode an estimate of expected goal success that modulates their confidence in pursuing a direction.",
-        "author": "Nick Jiang, Isaac Kauvar, Jack Lindsey",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.CL",
-          "fine-tuning"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-06-15T17:59:58Z",
-        "updatedAt": "2026-06-15T17:59:58Z",
-        "collectedAt": "2026-06-16T05:40:28.382Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.17056v1",
-          "authors": [
-            "Nick Jiang",
-            "Isaac Kauvar",
-            "Jack Lindsey"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14022
         },
-        "recommendedReason": "Matched AI developer keywords: fine-tuning"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-06-16T06:26:09.508Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.17053v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Context-Aware RL for Agentic and Multimodal LLMs",
-        "url": "https://arxiv.org/pdf/2606.17053v1",
-        "description": "Large language models (LLMs) often fail when answering requires identifying a small but decisive piece of evidence within a long or complex context, such as a single line in a tool trace or a subtle detail in an image. We propose ContextRL, a context-aware reinforcement learning (RL) method that improves long-horizon reasoning and multimodal performance through an \\emph{indirect} auxiliary objective. Instead of supervising only the final answer, ContextRL presents the model with a query, an answ",
-        "summary": "Large language models (LLMs) often fail when answering requires identifying a small but decisive piece of evidence within a long or complex context, such as a single line in a tool trace or a subtle detail in an image. We propose ContextRL, a context-aware reinforcement learning (RL) method that improves long-horizon reasoning and multimodal performance through an \\emph{indirect} auxiliary objective. Instead of supervising only the final answer, ContextRL presents the model with a query, an answer, and two highly similar contexts, and rewards it for selecting the context that supports the query--answer pair, thereby encouraging fine-grained grounding. We construct contrastive context data in two domains: for coding agents, trajectories serve as contexts, yielding 1k pairs built via condition filtering; for multimodal reasoning, images serve as contexts, yielding 7K pairs built via generative editing and similarity search. ContextRL achieves average gains of +2.2% over standard GRPO on 5 long-horizon benchmarks, and +1.8% across 12 diverse visual question answering benchmarks. To disentangle the effect of the proposed objective from that of additional data, we compare against data-augmentation baselines that repurpose the same contrastive contexts as standard query--context--answer examples. These baselines provide little to no improvement, showing that the gains arise from the proposed context-selection objective rather than from the contrastive data alone.",
-        "author": "Peiyang Xu, Bangzheng Li, Sijia Liu, Karthik R. Narasimhan, Pramod Viswanath, Prateek Mittal, Xingyu Fu",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.CL",
-          "cs.CV",
-          "large language model",
-          "llm",
-          "agent",
-          "rag",
-          "coding agent",
-          "benchmark",
-          "agentic"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-06-15T17:59:28Z",
-        "updatedAt": "2026-06-15T17:59:28Z",
-        "collectedAt": "2026-06-16T05:40:28.382Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.17053v1",
-          "authors": [
-            "Peiyang Xu",
-            "Bangzheng Li",
-            "Sijia Liu",
-            "Karthik R. Narasimhan",
-            "Pramod Viswanath",
-            "Prateek Mittal",
-            "Xingyu Fu"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11122
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, agent, rag, coding agent"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-06-16T06:26:09.508Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.17048v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Exact Posterior Score Estimation for Solving Linear Inverse Problems",
-        "url": "https://arxiv.org/pdf/2606.17048v1",
-        "description": "Diffusion and flow-based models learn powerful data priors by training a denoiser to reverse Gaussian corruption. To use this prior to solve a linear inverse problem, one needs to sample from the posterior, but the score that the prior provides is the unconditional score, not the posterior score. Existing methods either steer a fixed pretrained denoiser with approximate measurement-matching corrections, or train a conditional restoration model that abandons the denoising structure of the prior. ",
-        "summary": "Diffusion and flow-based models learn powerful data priors by training a denoiser to reverse Gaussian corruption. To use this prior to solve a linear inverse problem, one needs to sample from the posterior, but the score that the prior provides is the unconditional score, not the posterior score. Existing methods either steer a fixed pretrained denoiser with approximate measurement-matching corrections, or train a conditional restoration model that abandons the denoising structure of the prior. We derive the exact posterior score in closed form for linear Gaussian inverse problems under general Gaussian interpolants, and show that posterior sampling reduces to a denoising problem at an operator-dependent shifted pivot under an anisotropic noise covariance. We turn this identity into Exact Posterior Score (EPS), a denoising training objective that preserves the input/output structure of standard pretraining and can therefore be trained from scratch or fine-tuned from a pretrained denoiser. At inference, EPS uses the same sampler as the underlying backbone, with no likelihood gradients or projections. We evaluate EPS on five linear inverse problems across FFHQ and ImageNet, where it outperforms training-free and training-based baselines on fidelity, perceptual, and distributional metrics, while using roughly an order of magnitude fewer denoiser evaluations than gradient-based posterior samplers.",
-        "author": "Abbas Mammadov, Ozgur Kara, Kaan Oktay, Iskander Azangulov, Adil Kaan Akan, Hyungjin Chung, James Matthew Rehg, Yee Whye Teh",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.LG",
-          "cs.CV",
-          "stat.ML",
-          "evaluation"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-06-15T17:58:22Z",
-        "updatedAt": "2026-06-15T17:58:22Z",
-        "collectedAt": "2026-06-16T05:40:28.382Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.17048v1",
-          "authors": [
-            "Abbas Mammadov",
-            "Ozgur Kara",
-            "Kaan Oktay",
-            "Iskander Azangulov",
-            "Adil Kaan Akan",
-            "Hyungjin Chung",
-            "James Matthew Rehg",
-            "Yee Whye Teh"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10107
         },
-        "recommendedReason": "Matched AI developer keywords: evaluation"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-06-16T06:26:09.508Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.17046v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Geometric Action Model for Robot Policy Learning",
-        "url": "https://arxiv.org/pdf/2606.17046v1",
-        "description": "Generalist robot policies must follow user instructions while reasoning about how objects, cameras, and robot actions interact in the 3D physical world. Recent vision-language-action models (VLAs) and video world-action models (WAMs) inherit strong semantic or temporal priors from large-scale foundation models, but they still operate primarily on 2D image frames or 2D-derived latent spaces, leaving implicit the 3D geometry required for contact-rich manipulation. We propose the Geometric Action M",
-        "summary": "Generalist robot policies must follow user instructions while reasoning about how objects, cameras, and robot actions interact in the 3D physical world. Recent vision-language-action models (VLAs) and video world-action models (WAMs) inherit strong semantic or temporal priors from large-scale foundation models, but they still operate primarily on 2D image frames or 2D-derived latent spaces, leaving implicit the 3D geometry required for contact-rich manipulation. We propose the Geometric Action Model (GAM), a language-conditioned manipulation policy that directly repurposes a pretrained geometric foundation model (GFM) as a shared substrate for perception, temporal prediction, and action decoding. GAM splits the GFM at an intermediate layer: the shallow layers serve as an observation encoder, and a causal future predictor inserted at the split layer forecasts future latent tokens conditioned on language, proprioception, and action history. The predicted future tokens are then routed through the remaining GFM blocks for feature propagation and decoding, allowing a single backbone to produce both future geometry and actions. This design equips the GFM with language-conditioned temporal world modeling through minimal architectural modification while preserving its rich geometric priors. Across a broad suite of simulation and real-robot manipulation benchmarks, GAM is more accurate, more robust, faster, and lighter than current foundation-model-scale baselines.",
-        "author": "Jisang Han, Seonghu Jeon, Jaewoo Jung, René Zurbrügg, Honggyu An, Tifanny Portela, Marco Hutter, Marc Pollefeys, Seungryong Kim, Sunghwan Hong",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "cs.RO",
-          "cs.CV",
-          "cs.LG",
-          "benchmark"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "cs.RO",
-        "language": "en",
-        "publishedAt": "2026-06-15T17:58:03Z",
-        "updatedAt": "2026-06-15T17:58:03Z",
-        "collectedAt": "2026-06-16T05:40:28.382Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.17046v1",
-          "authors": [
-            "Jisang Han",
-            "Seonghu Jeon",
-            "Jaewoo Jung",
-            "René Zurbrügg",
-            "Honggyu An",
-            "Tifanny Portela",
-            "Marco Hutter",
-            "Marc Pollefeys",
-            "Seungryong Kim",
-            "Sunghwan Hong"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7477
         },
-        "recommendedReason": "Matched AI developer keywords: benchmark"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-06-14T10:55:27.000Z",
+        "collectedAt": "2026-06-16T06:26:09.508Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.17043v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Hierarchical Advantage Weighting for Online RL Fine-Tuning of VLAs from Sparse Episode Outcomes",
-        "url": "https://arxiv.org/pdf/2606.17043v1",
-        "description": "When pretrained VLA policies are fine-tuned through online RL, each rollout episode produces only a single binary outcome (success or failure), yet the actor update requires per-transition supervision. Existing approaches commonly reduce this sparse outcome to a single scalar reward or advantage signal, which conflates distinct forms of transition-level feedback and provides limited guidance once basic task success becomes achievable. First, a single scalar signal conflates the two objectives of",
-        "summary": "When pretrained VLA policies are fine-tuned through online RL, each rollout episode produces only a single binary outcome (success or failure), yet the actor update requires per-transition supervision. Existing approaches commonly reduce this sparse outcome to a single scalar reward or advantage signal, which conflates distinct forms of transition-level feedback and provides limited guidance once basic task success becomes achievable. First, a single scalar signal conflates the two objectives of viability and efficiency; once basic success is achieved, the binary label provides no gradient to distinguish efficient completions from slow ones. Second, real-world rollouts mix autonomous and intervention segments; naively assigning episode outcomes across these boundaries introduces incorrect credit assignment. To address these issues, we propose Hierarchical Advantage-Weighted Behavior Cloning (HABC), which trains separate critic heads for these two objectives on different data subsets and combines their outputs with a state-adaptive balance. A state-adaptive gate $g_t$ merges their one-step advantages, prioritizing viability when success is uncertain and shifting to efficiency only when viability is high, and converts the result into per-transition weights on the actor loss. Intervention-aware credit assignment further restricts outcome labels to segments executed by the current policy, preventing supervision from leaking across intervention boundaries. In real-robot experiments on three contact-rich bimanual tasks, HABC raises success from supervised fine-tuning (SFT) baselines of 36%, 44%, and 12% to 92%, 88%, and 38%.",
-        "author": "Tongyan Fang, Siyuan Huang, Naiyu Fang, Ganlong Zhao, Zhongjin Luo, Jianbo Liu, Xiaogang Wang, Ying Dong, Hongsheng Li",
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
         "tags": [
-          "cs.RO",
-          "cs.LG",
-          "fine-tuning"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.RO",
-        "language": "en",
-        "publishedAt": "2026-06-15T17:57:14Z",
-        "updatedAt": "2026-06-15T17:57:14Z",
-        "collectedAt": "2026-06-16T05:40:28.382Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.17043v1",
-          "authors": [
-            "Tongyan Fang",
-            "Siyuan Huang",
-            "Naiyu Fang",
-            "Ganlong Zhao",
-            "Zhongjin Luo",
-            "Jianbo Liu",
-            "Xiaogang Wang",
-            "Ying Dong",
-            "Hongsheng Li"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 5118
         },
-        "recommendedReason": "Matched AI developer keywords: fine-tuning"
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-06-16T06:26:09.508Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5073
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-06-16T06:26:09.508Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Arena Leaderboard",
+        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
+        "author": "lmarena-ai",
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "static",
+        "metrics": {
+          "likes": 4919
+        },
+        "publishedAt": "2023-05-20T09:26:19.000Z",
+        "updatedAt": "2026-02-21T23:20:43.000Z",
+        "collectedAt": "2026-06-16T06:26:09.508Z",
+        "raw": {
+          "sdk": "static",
+          "emoji": "🏆🤖"
+        }
+      },
+      {
+        "id": "huggingface_spaces:KlingTeam/LivePortrait",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Live Portrait",
+        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
+        "author": "KlingTeam",
+        "tags": [
+          "gradio",
+          "Multimodal",
+          "Motion control",
+          "Image-to-Video",
+          "Video-to-Video",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 3751
+        },
+        "publishedAt": "2024-07-05T16:35:24.000Z",
+        "updatedAt": "2024-08-30T11:20:51.000Z",
+        "collectedAt": "2026-06-16T06:26:09.508Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🤪"
+        }
       }
     ],
     "developerBuzz": [
@@ -198,11 +221,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 831,
-          "commentsCount": 384
+          "upvotes": 864,
+          "commentsCount": 397
         },
         "publishedAt": "2026-06-15T14:46:53.000Z",
-        "collectedAt": "2026-06-16T05:40:28.449Z",
+        "collectedAt": "2026-06-16T06:26:09.749Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48542100",
           "matchedKeywords": [
@@ -222,11 +245,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 380,
-          "commentsCount": 535
+          "upvotes": 390,
+          "commentsCount": 546
         },
         "publishedAt": "2026-06-15T13:19:39.000Z",
-        "collectedAt": "2026-06-16T05:40:28.449Z",
+        "collectedAt": "2026-06-16T06:26:09.749Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48540844",
           "matchedKeywords": [
@@ -245,11 +268,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 703,
-          "commentsCount": 145
+          "upvotes": 732,
+          "commentsCount": 146
         },
         "publishedAt": "2026-06-15T16:15:53.000Z",
-        "collectedAt": "2026-06-16T05:40:28.449Z",
+        "collectedAt": "2026-06-16T06:26:09.749Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48543475",
           "matchedKeywords": [
@@ -268,11 +291,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 500,
+          "upvotes": 501,
           "commentsCount": 538
         },
         "publishedAt": "2026-06-14T14:44:29.000Z",
-        "collectedAt": "2026-06-16T05:40:28.449Z",
+        "collectedAt": "2026-06-16T06:26:09.749Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48527700",
           "matchedKeywords": [
@@ -291,11 +314,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 468,
-          "commentsCount": 217
+          "upvotes": 470,
+          "commentsCount": 218
         },
         "publishedAt": "2026-06-15T04:55:34.000Z",
-        "collectedAt": "2026-06-16T05:40:28.449Z",
+        "collectedAt": "2026-06-16T06:26:09.749Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48536776",
           "matchedKeywords": [
@@ -318,7 +341,7 @@
         "originalUrl": "https://www.ithome.com/0/964/691.htm",
         "recommendedReason": "支付宝今日开启 AI 版邀测，用户可右滑进入新版界面，在对话框或语音中输入指令，由\"阿宝\"助手代办事项。以查询公积金为例，阿宝自动匹配对应小程序和服务入口，用户点击确认即可完成，将多步跳转折叠为一句指令。所有涉及资金变动和支付的环节均需用户本人确认。首批放出 100 个邀请码。",
         "publishedAt": "2026-06-16T02:39:06.000Z",
-        "collectedAt": "2026-06-16T05:40:30.319Z",
+        "collectedAt": "2026-06-16T06:26:10.776Z",
         "raw": {
           "id": "cmqg20v1a02rtslspl2co5zge",
           "titleEn": null,
@@ -338,7 +361,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/DRzNIiojGLO-iqqPyJ7f8Q",
         "recommendedReason": "当前毕业生面临论文AIGC率检测荒诞困境。学生手写摘要被判定99%AI率，纯AI写部分却为0%。学校要求AIGC率不超40%，学生用Claude反复修改并花上百元检测费（维普20元/篇，知网/万方2元/千字符），最终降至36.1%。答辩时老师要求改回学术表达，AI率回升至37.21%。同一论文在不同平台检测结果差异巨大（48%、44%、59%）。部分平台提供降重收费服务，少数学校已改用AI使用声明表替代一刀切检测。",
         "publishedAt": "2026-06-16T02:06:00.000Z",
-        "collectedAt": "2026-06-16T05:40:30.319Z",
+        "collectedAt": "2026-06-16T06:26:10.776Z",
         "raw": {
           "id": "cmqg0mmda02ghslsp3utz9ssv",
           "titleEn": "2026年的毕业生们，正在花钱向AI证明自己是人类。",
@@ -358,7 +381,7 @@
         "originalUrl": "https://rdi.berkeley.edu/blog/agents-last-exam",
         "recommendedReason": "2026年6月，伯克利RDI发布Agents' Last Exam（ALE）基准，包含1，500余项源于真实工作的任务，覆盖55个非体力职业。对Fable 5、GPT-5.5、Composer 2.5等前沿智能体的测评显示：在最困难层级成功率均为0%；整体任务表现接近，但单任务成本差异巨大（Fable 5约$15.70，GPT-5.5约$3.80，Composer 2.5约$1.33）。CLI子集ALE-CLI最佳通过率仅25.2%。主要失败模式是智能体未验证输出即宣称完成。数据集、代码及CLI子集已开源。",
         "publishedAt": "2026-06-16T01:59:10.841Z",
-        "collectedAt": "2026-06-16T05:40:30.319Z",
+        "collectedAt": "2026-06-16T06:26:10.776Z",
         "raw": {
           "id": "cmqfzukav0264slspmybg065u",
           "titleEn": "Agents' Last Exam",
@@ -378,7 +401,7 @@
         "originalUrl": "https://www.ithome.com/0/964/675.htm",
         "recommendedReason": "教育部\"阳光志愿\"信息服务系统今日全新升级上线，依托招生、学籍、就业等海量官方数据，免费为考生和家长提供志愿填报服务。系统支持31个省区市本专科普通批次志愿筛选，输入高考成绩、位次及个性化条件即可快速生成合理参考方案。AI助手\"智慧小招\"24小时在线解答政策规则。平台数据由高校直接报送、官方核验，真实可靠。同时推出专业倾向测评和21项生涯测评工具，帮助学生认清特长、规划未来。",
         "publishedAt": "2026-06-16T01:56:49.000Z",
-        "collectedAt": "2026-06-16T05:40:30.319Z",
+        "collectedAt": "2026-06-16T06:26:10.776Z",
         "raw": {
           "id": "cmqfzvk1h026rslspuhwh30px",
           "titleEn": null,
@@ -398,7 +421,7 @@
         "originalUrl": "https://www.ithome.com/0/964/672.htm",
         "recommendedReason": "字节跳动火山引擎旗下火山方舟体验中心于 6 月 15 日上线 Seedance 2.0 Mini 视频生成模型，计划近期开放 API。该模型比 Seedance 2.0 Fast 快 2 倍，输出质量相当。图生视频定价 0.023 元/千 tokens，视频生视频 0.014 元/千 tokens，720P 规格下单秒生成成本约 0.5 元，较 Seedance 2.0 标准版降低约一半。模型面向电商内容生产、营销素材批量生成、UGC 创作及特效玩法等高频率、大规模视频生成场景。",
         "publishedAt": "2026-06-16T01:49:40.000Z",
-        "collectedAt": "2026-06-16T05:40:30.319Z",
+        "collectedAt": "2026-06-16T06:26:10.776Z",
         "raw": {
           "id": "cmqfzvk1h026sslspt58nzmdd",
           "titleEn": null,
@@ -418,7 +441,7 @@
         "originalUrl": "https://x.com/AYi_AInotes/status/2066679835607412846",
         "recommendedReason": "五角大楼宣布已将超2/3日常AI工作流从Anthropic转移，目标9月前清零。起因是年初五角大楼要求Anthropic签署协议允许Claude用于大规模监控和全自动武器，CEO Dario Amodei以模型不可靠为由拒绝。五角大楼将其列为\"供应链风险\"，起诉未果。OpenAI调整立场获得订单。Polymarket预测6月底前和解概率仅9%。此事件凸显AI公司需在原则与政府合作间抉择。",
         "publishedAt": "2026-06-16T00:30:44.000Z",
-        "collectedAt": "2026-06-16T05:40:30.319Z",
+        "collectedAt": "2026-06-16T06:26:10.776Z",
         "raw": {
           "id": "cmqfxtzua01mkslsp8ne75foj",
           "titleEn": "五角大楼今天宣布，已经把日常AI工作流的2/3以上从Anthropic切走了，目标9月前清零。 这事得从年初说起，2-3月的时候，五角大楼想让Anthropic签个协议，允许Claude用在\"所有合…",
@@ -438,7 +461,7 @@
         "originalUrl": "https://qwen.ai/blog?id=qwen-robotmanip",
         "recommendedReason": "Qwen-RobotManip 是通义千问基于 Qwen-VL 的视觉-语言-动作（VLA）基础模型，引入覆盖表示、运动和行为三维度的统一对齐框架。仅使用开源机器人数据集和人演示视频，构建约 38，100 小时预训练语料，涵盖 15 种机器人形态。在 LIBERO-Plus 达 91.4%，RoboTwin-C2R Hard 达 69.4%，RoboCasa365 Composite-Unseen 达 14.9%，EBench 达 45.6%，RoboTwin-IF 达 72.0%，并在 RoboChallenge Table30 v1 generalist track 夺冠。模型采用 80 维状态-动作表示、人-机器人数据合成管道（1，933 小时第一人称视频转 24，808 小时数据）及上下文策略适配。",
         "publishedAt": "2026-06-16T00:00:00.000Z",
-        "collectedAt": "2026-06-16T05:40:30.319Z",
+        "collectedAt": "2026-06-16T06:26:10.776Z",
         "raw": {
           "id": "cmqg5kvq2006hslncx7x7o1r2",
           "titleEn": "Qwen-RobotManip： Alignment Unlocks Scale for Robotic Manipulation Foundation Models",
@@ -458,154 +481,13 @@
         "originalUrl": "https://qwen.ai/blog?id=qwen-robotworld",
         "recommendedReason": "Qwen-RobotWorld以语言为统一动作接口，采用双流Multimodal Diffusion Transformer（MMDiT）架构，将Qwen2.5-VL作为动作编码器。在4个基准测试中取得顶尖成绩，统一20余种机器人形态，基于860万跨场景训练对和1300多项操作技能。语言接口标准化500多种动作类别，支持操作、自动驾驶、室内导航的联合训练。还支持Scene2Robot人类到机器人转移及2-4路多视角几何一致视频生成。",
         "publishedAt": "2026-06-16T00:00:00.000Z",
-        "collectedAt": "2026-06-16T05:40:30.319Z",
+        "collectedAt": "2026-06-16T06:26:10.776Z",
         "raw": {
           "id": "cmqg5kvq2006gslnchk1ngslk",
           "titleEn": "Qwen-RobotWorld： Boundless Worlds for Embodied Agents",
           "apiCategory": "ai-models"
         }
-      },
-      {
-        "id": "aihot:cmqg5kvq2006eslnc27k3juhc",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Qwen-RobotNav：面向智能体导航系统的可扩展导航模型",
-        "url": "https://qwen.ai/blog?id=qwen-robotnav",
-        "summary": "Qwen 发布 Qwen-RobotNav，基于 Qwen3-VL 在 15.6M 样本上训练，统一了视觉语言导航、目标导航、目标跟踪、自动驾驶和具身问答五个领域，无需修改架构即可在推理时切换任务模式和观察参数。模型在多项基准取得 SOTA：VLN-CE RxR 成功率 76.5%，HM3Dv2 目标导航 75.6%（仅 RGB），EVT-Bench 跟踪率 90.0%，NAVSIM PDMS 91.4，以及三项 EQA 新标杆。模型暴露四个可调轴（视觉 token 预算、时间衰减、相机权重、帧采样模式）。作为智能体系统的一部分，上层规划器 Qwen3.7-Plus 在 EXPRESS-Bench 上提升 15.4%，导航步数减少 77%。模型已零样本部署在 Unitree Go2 四足机器人上，无需环境微调。",
-        "description": "Qwen 发布 Qwen-RobotNav，基于 Qwen3-VL 在 15.6M 样本上训练，统一了视觉语言导航、目标导航、目标跟踪、自动驾驶和具身问答五个领域，无需修改架构即可在推理时切换任务模式和观察参数。模型在多项基准取得 SOTA：VLN-CE RxR 成功率 76.5%，HM3Dv2 目标导航 75.6%（仅 RGB），EVT-Bench 跟踪率 90.0%，NAVSIM PDMS 91.4，以及三项 EQA 新标杆。模型暴露四个可调轴（视觉 token 预算、时间衰减、相机权重、帧采样模式）。作为智能体系统的一部分，上层规划器 Qwen3.7-Plus 在 EXPRESS-Bench 上提升 15.4%，导航步数减少 77%。模型已零样本部署在 Unitree Go2 四足机器人上，无需环境微调。",
-        "category": "models",
-        "originalSource": "Qwen：Blog Retrieval（API）",
-        "originalUrl": "https://qwen.ai/blog?id=qwen-robotnav",
-        "recommendedReason": "Qwen 发布 Qwen-RobotNav，基于 Qwen3-VL 在 15.6M 样本上训练，统一了视觉语言导航、目标导航、目标跟踪、自动驾驶和具身问答五个领域，无需修改架构即可在推理时切换任务模式和观察参数。模型在多项基准取得 SOTA：VLN-CE RxR 成功率 76.5%，HM3Dv2 目标导航 75.6%（仅 RGB），EVT-Bench 跟踪率 90.0%，NAVSIM PDMS 91.4，以及三项 EQA 新标杆。模型暴露四个可调轴（视觉 token 预算、时间衰减、相机权重、帧采样模式）。作为智能体系统的一部分，上层规划器 Qwen3.7-Plus 在 EXPRESS-Bench 上提升 15.4%，导航步数减少 77%。模型已零样本部署在 Unitree Go2 四足机器人上，无需环境微调。",
-        "publishedAt": "2026-06-16T00:00:00.000Z",
-        "collectedAt": "2026-06-16T05:40:30.319Z",
-        "raw": {
-          "id": "cmqg5kvq2006eslnc27k3juhc",
-          "titleEn": "Qwen-RobotNav： A Scalable Navigation Model Designed for an Agentic Navigation System",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmqfvl6p3010yslsptgi5885d",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "项目负责人揭秘为何苹果 AI 版 Siri 姗姗来迟：推倒重来，彻底重构",
-        "url": "https://www.ithome.com/0/964/620.htm",
-        "summary": "苹果AI版Siri迟迟未上线，项目负责人迈克·罗克韦尔在WWDC技术分享会上透露，去年团队曾做出在原有Siri基础上小幅改良、新增工具调用的可运行版本，但因无法达到产品愿景，最终选择推倒重来，完整从零重构系统，依托全新大模型搭建。重构后的Siri拥有独立应用程序，原生支持多模态交互，隐私保护贯穿底层架构，并覆盖iPhone、iPad、Mac、Apple Watch、Vision Pro、CarPlay、AirPods等全平台，提供统一连贯体验。",
-        "description": "苹果AI版Siri迟迟未上线，项目负责人迈克·罗克韦尔在WWDC技术分享会上透露，去年团队曾做出在原有Siri基础上小幅改良、新增工具调用的可运行版本，但因无法达到产品愿景，最终选择推倒重来，完整从零重构系统，依托全新大模型搭建。重构后的Siri拥有独立应用程序，原生支持多模态交互，隐私保护贯穿底层架构，并覆盖iPhone、iPad、Mac、Apple Watch、Vision Pro、CarPlay、AirPods等全平台，提供统一连贯体验。",
-        "category": "tools",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/964/620.htm",
-        "recommendedReason": "苹果AI版Siri迟迟未上线，项目负责人迈克·罗克韦尔在WWDC技术分享会上透露，去年团队曾做出在原有Siri基础上小幅改良、新增工具调用的可运行版本，但因无法达到产品愿景，最终选择推倒重来，完整从零重构系统，依托全新大模型搭建。重构后的Siri拥有独立应用程序，原生支持多模态交互，隐私保护贯穿底层架构，并覆盖iPhone、iPad、Mac、Apple Watch、Vision Pro、CarPlay、AirPods等全平台，提供统一连贯体验。",
-        "publishedAt": "2026-06-15T23:16:58.000Z",
-        "collectedAt": "2026-06-16T05:40:30.319Z",
-        "raw": {
-          "id": "cmqfvl6p3010yslsptgi5885d",
-          "titleEn": null,
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmqfp50sf0004sl002o8dcc7w",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "GitHub Copilot CLI 初学者指南：常用斜杠命令概览",
-        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-overview-of-common-slash-commands",
-        "summary": "GitHub Copilot CLI 为初学者提供了常用斜杠命令的概述，帮助用户通过命令控制终端中的 AI 智能体。",
-        "description": "GitHub Copilot CLI 为初学者提供了常用斜杠命令的概述，帮助用户通过命令控制终端中的 AI 智能体。",
-        "category": "tools",
-        "originalSource": "GitHub Blog",
-        "originalUrl": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-overview-of-common-slash-commands",
-        "recommendedReason": "GitHub Copilot CLI 为初学者提供了常用斜杠命令的概述，帮助用户通过命令控制终端中的 AI 智能体。",
-        "publishedAt": "2026-06-15T20:15:31.000Z",
-        "collectedAt": "2026-06-16T05:40:30.319Z",
-        "raw": {
-          "id": "cmqfp50sf0004sl002o8dcc7w",
-          "titleEn": "GitHub Copilot CLI for Beginners： Overview of common slash commands",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmqfjwpb500o2slq8vbryuxyg",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Meta 在 Facebook 上线\"AI Mode\"，基于平台公开信息合成答案",
-        "url": "https://techcrunch.com/2026/06/15/metas-new-ai-mode-on-facebook-pulls-from-public-info-across-its-platforms",
-        "summary": "Meta 宣布在 Facebook 推出\"AI Mode\"搜索功能，利用 Meta AI 从公开帖子（含群组和 Reels）提取信息并合成答案，用户可用自然语言提问获得摘要。同时新增视频拼贴剪辑、过渡效果及 AI 照片预设（可更换服装、发型和配饰），体育迷可在 Stories 中点击\"AI Edit\"虚拟穿上队服。这些更新延续了此前动态头像、Marketplace 自动回复和创作者 AI 助手的部署节奏。此外，Meta 近期启动了 Facebook、Instagram 和 WhatsApp 的全球订阅计划（每月 3.99 美元起），更多 AI 订阅层级正在规划中。",
-        "description": "Meta 宣布在 Facebook 推出\"AI Mode\"搜索功能，利用 Meta AI 从公开帖子（含群组和 Reels）提取信息并合成答案，用户可用自然语言提问获得摘要。同时新增视频拼贴剪辑、过渡效果及 AI 照片预设（可更换服装、发型和配饰），体育迷可在 Stories 中点击\"AI Edit\"虚拟穿上队服。这些更新延续了此前动态头像、Marketplace 自动回复和创作者 AI 助手的部署节奏。此外，Meta 近期启动了 Facebook、Instagram 和 WhatsApp 的全球订阅计划（每月 3.99 美元起），更多 AI 订阅层级正在规划中。",
-        "category": "products",
-        "originalSource": "TechCrunch：AI（RSS）",
-        "originalUrl": "https://techcrunch.com/2026/06/15/metas-new-ai-mode-on-facebook-pulls-from-public-info-across-its-platforms",
-        "recommendedReason": "Meta 宣布在 Facebook 推出\"AI Mode\"搜索功能，利用 Meta AI 从公开帖子（含群组和 Reels）提取信息并合成答案，用户可用自然语言提问获得摘要。同时新增视频拼贴剪辑、过渡效果及 AI 照片预设（可更换服装、发型和配饰），体育迷可在 Stories 中点击\"AI Edit\"虚拟穿上队服。这些更新延续了此前动态头像、Marketplace 自动回复和创作者 AI 助手的部署节奏。此外，Meta 近期启动了 Facebook、Instagram 和 WhatsApp 的全球订阅计划（每月 3.99 美元起），更多 AI 订阅层级正在规划中。",
-        "publishedAt": "2026-06-15T18:30:58.000Z",
-        "collectedAt": "2026-06-16T05:40:30.319Z",
-        "raw": {
-          "id": "cmqfjwpb500o2slq8vbryuxyg",
-          "titleEn": "Meta's new 'AI Mode' on Facebook pulls from public info across its platforms",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmqfjwkcg00nsslq8hl0hy4hc",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenRouter新增免费模型gpt-oss-20b和Gemma4 26B",
-        "url": "https://x.com/OpenRouter/status/2066585705581797616",
-        "summary": "OpenRouter 上新增免费容量，由 @eigenlabs 的 Darkbloom 提供：gpt-oss-20b 和 Gemma 4 26B。 今天就开始使用这些模型吧 ↓",
-        "description": "OpenRouter 上新增免费容量，由 @eigenlabs 的 Darkbloom 提供：gpt-oss-20b 和 Gemma 4 26B。 今天就开始使用这些模型吧 ↓",
-        "category": "products",
-        "originalSource": "X：OpenRouter (@OpenRouter)",
-        "originalUrl": "https://x.com/OpenRouter/status/2066585705581797616",
-        "recommendedReason": "OpenRouter 上新增免费容量，由 @eigenlabs 的 Darkbloom 提供：gpt-oss-20b 和 Gemma 4 26B。 今天就开始使用这些模型吧 ↓",
-        "publishedAt": "2026-06-15T18:16:42.000Z",
-        "collectedAt": "2026-06-16T05:40:30.319Z",
-        "raw": {
-          "id": "cmqfjwkcg00nsslq8hl0hy4hc",
-          "titleEn": "New Free capacity on OpenRouter， served by @eigenlabs's Darkbloom： gpt-oss-20b and Gemma 4 26B Star…",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmqfhhoq001hksl2aw53w2wz8",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "下一代投机解码：DFlash 与 Spec V2",
-        "url": "https://www.lmsys.org/blog/2026-06-15-next-generation-speculative-decoding-dflash-v2",
-        "summary": "Z Lab、Modal 与 SGLang 团队联合发布 DFlash 投机解码模型和 SGLang 的默认 Spec V2 引擎。DFlash 采用块扩散+KV 注入并行生成整块 draft token，在 Qwen 3.5 397B-A17B（BF16）的 HumanEval 数据集上、并发 1 时吞吐量达到基线的 4.3",
-        "description": "Z Lab、Modal 与 SGLang 团队联合发布 DFlash 投机解码模型和 SGLang 的默认 Spec V2 引擎。DFlash 采用块扩散+KV 注入并行生成整块 draft token，在 Qwen 3.5 397B-A17B（BF16）的 HumanEval 数据集上、并发 1 时吞吐量达到基线的 4.3",
-        "category": "models",
-        "originalSource": "LMSYS：Blog（Chatbot Arena 团队）",
-        "originalUrl": "https://www.lmsys.org/blog/2026-06-15-next-generation-speculative-decoding-dflash-v2",
-        "recommendedReason": "Z Lab、Modal 与 SGLang 团队联合发布 DFlash 投机解码模型和 SGLang 的默认 Spec V2 引擎。DFlash 采用块扩散+KV 注入并行生成整块 draft token，在 Qwen 3.5 397B-A17B（BF16）的 HumanEval 数据集上、并发 1 时吞吐量达到基线的 4.3",
-        "publishedAt": "2026-06-15T17:25:17.048Z",
-        "collectedAt": "2026-06-16T05:40:30.319Z",
-        "raw": {
-          "id": "cmqfhhoq001hksl2aw53w2wz8",
-          "titleEn": "Blog The next generation of speculative decoding： DFlash and Spec V2 Using Modal and Z Lab's DFlash speculative decoding models with SGLang's newly default Spec V2 engine， you can achieve state-of-the-art latencies for LLM inference serving. Our new， jointly-released D… Z Lab， Modal， and SGLang Teams",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmqfewpje00u4sl2awgrmj4ke",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Nvidia 加入 AI 债务热潮，发行 200 亿美元债券",
-        "url": "https://the-decoder.com/nvidia-joins-ai-debt-boom-with-20-billion-bond-sale",
-        "summary": "Nvidia 计划通过自 2021 年以来的首次债券发行筹集至少 200 亿美元，消息援引知情人士透露。此举标志着 Nvidia 加入 AI 领域的债务融资热潮。",
-        "description": "Nvidia 计划通过自 2021 年以来的首次债券发行筹集至少 200 亿美元，消息援引知情人士透露。此举标志着 Nvidia 加入 AI 领域的债务融资热潮。",
-        "category": "industry",
-        "originalSource": "The Decoder：AI News（RSS）",
-        "originalUrl": "https://the-decoder.com/nvidia-joins-ai-debt-boom-with-20-billion-bond-sale",
-        "recommendedReason": "Nvidia 计划通过自 2021 年以来的首次债券发行筹集至少 200 亿美元，消息援引知情人士透露。此举标志着 Nvidia 加入 AI 领域的债务融资热潮。",
-        "publishedAt": "2026-06-15T15:43:04.000Z",
-        "collectedAt": "2026-06-16T05:40:30.319Z",
-        "raw": {
-          "id": "cmqfewpje00u4sl2awgrmj4ke",
-          "titleEn": "Nvidia joins AI debt boom with $20 billion bond sale",
-          "apiCategory": "industry"
-        }
       }
-    ],
-    "crossSourceHighlights": []
+    ]
   }
 }
