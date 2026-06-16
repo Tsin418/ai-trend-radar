@@ -1,12 +1,12 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-16T21:24:26.548Z
+Updated: 2026-06-16T23:52:12.683Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-17 | daily | [AI Developer Radar｜Daily｜2026-06-17](2026/06/2026-06-17-daily.md) | teslamate-org/teslamate, automazeio/ccpm, gvergnaud/ts-pattern, ChatGPTNextWeb/NextChat, Tencent/ncnn |
+| 2026-06-17 | daily | [AI Developer Radar｜Daily｜2026-06-17](2026/06/2026-06-17-daily.md) | teslamate-org/teslamate, automazeio/ccpm, gvergnaud/ts-pattern, Tencent/ncnn, ChatGPTNextWeb/NextChat |
 | 2026-06-16 | daily | [AI Developer Radar｜Daily｜2026-06-16](2026/06/2026-06-16-daily.md) | puppeteer/puppeteer, meshery/meshery, cypress-io/cypress, freeCodeCamp/freeCodeCamp, automazeio/ccpm |
 | 2026-06-15 | daily | [AI Developer Radar｜Daily｜2026-06-15](2026/06/2026-06-15-daily.md) | trycua/cua, deepspeedai/DeepSpeed, hpcaitech/ColossalAI, automazeio/ccpm, ChatGPTNextWeb/NextChat |
 | 2026-06-14 | daily | [AI Developer Radar｜Daily｜2026-06-14](2026/06/2026-06-14-daily.md) | iptv-org/iptv, swc-project/swc, Panniantong/Agent-Reach, chopratejas/headroom, addyosmani/agent-skills |
