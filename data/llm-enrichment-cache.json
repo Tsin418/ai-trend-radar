@@ -10214,5 +10214,95 @@
     },
     "createdAt": "2026-06-16T23:52:08.814Z",
     "model": "deepseek-v4-flash"
+  },
+  "addyosmani/agent-skills:2026-06-16T00:13:14Z": {
+    "summary": {
+      "oneLiner": "A production-grade skill pack for AI coding agents that encodes senior engineer workflows, quality gates, and best practices into reusable Markdown files.",
+      "problemSolved": "AI coding agents often produce inconsistent, low-quality code because they lack the structured workflows, verification gates, and engineering discipline that senior developers apply. Agent Skills packages these practices into slash commands and skill files that agents can follow automatically.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sustained_hot",
+      "whyNow": "With 61,464 stars, a 24-hour delta of +1,171, and a 7-day average of +1,823 stars per day, this project is experiencing sustained, high-velocity growth. The acceleration of 0.7 (moderate but positive) indicates continued momentum without a sudden spike. It has become a go-to resource for developers integrating AI agents into their workflows.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The recent release and continuous commits suggest ongoing refinement, and the broad compatibility with Claude Code, Cursor, Gemini CLI, and other tools has likely driven steady adoption.",
+      "whyTrending": "Agent Skills addresses a critical pain point: making AI agents produce production-quality code. Its practical, tool-agnostic approach (plain Markdown skills) and endorsement by Addy Osmani (a well-known engineering leader) have fueled rapid adoption across the developer community.",
+      "developerTakeaway": "This is a must-try for any developer using AI coding agents. It provides a ready-made set of workflows that can be dropped into Claude Code, Cursor, or other agents to immediately improve code quality and consistency.",
+      "developerInsight": "The rise of structured skill packs signals a shift from 'prompt engineering' to 'workflow engineering' for AI agents. Developers should expect more curated, domain-specific skill libraries to emerge, making agent behavior more predictable and reliable.",
+      "targetUsers": "Developers and teams using AI coding agents (Claude Code, Cursor, Gemini CLI, Windsurf, etc.) who want to enforce consistent engineering practices and improve code quality.",
+      "riskNotes": "The project is heavily dependent on the ecosystem of AI coding tools; changes in those tools' plugin systems could break compatibility. Also, the skills are opinionated — teams with different workflows may need to adapt them.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-17T05:17:19.535Z",
+    "model": "deepseek-v4-flash"
+  },
+  "chopratejas/headroom:2026-06-17T04:07:07Z": {
+    "summary": {
+      "oneLiner": "Headroom compresses AI agent inputs (tool outputs, logs, RAG chunks) by 60-95% before they reach the LLM, preserving answer quality while drastically cutting token costs.",
+      "problemSolved": "LLM context windows fill up quickly with verbose tool outputs, logs, and RAG results, driving up costs and limiting context for complex tasks. Headroom solves this by compressing prompts locally before sending them to the LLM, reducing token usage by 60-95% without sacrificing accuracy.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "Headroom has exploded from 0 to 30,234 stars with a sustained 7-day average of 7,078 stars per day and a 24-hour delta of 1,414. The acceleration ratio of 0.2 indicates steady, organic growth rather than a sudden spike. This level of sustained attention signals a deep, ongoing need in the AI developer community for cost-efficient LLM usage.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The high star velocity over the past week suggests continued word-of-mouth and social media amplification, likely driven by its practical value for developers using AI coding agents daily.",
+      "whyTrending": "Headroom addresses a universal pain point for AI developers: token costs. With a simple install and immediate savings (60-95% fewer tokens), it offers a clear ROI. Its multi-mode support (library, proxy, MCP, agent wrap) makes it easy to adopt across any workflow, and the reversible compression (CCR) removes the risk of losing information.",
+      "developerTakeaway": "Headroom is a must-try for any developer using AI coding agents (Claude Code, Cursor, Codex, etc.) or building LLM-powered applications. It can cut your token bill by more than half with minimal integration effort, and the proxy mode requires zero code changes.",
+      "developerInsight": "This signals a shift toward 'context engineering' as a first-class concern in AI development. Developers are no longer willing to pay for wasted tokens — tools that optimize the input pipeline will become standard infrastructure. Headroom's cross-agent memory and output token reduction also point to a future where AI agents are more efficient and collaborative.",
+      "targetUsers": "AI developers and teams using coding agents (Claude Code, Cursor, Codex, Aider, Copilot CLI), building RAG pipelines, or running LLM-powered applications who want to reduce token costs without changing their code or sacrificing answer quality.",
+      "riskNotes": "The project is very new (30k stars in a short time) and may have undiscovered edge cases or bugs. The compression algorithms may not preserve all nuances for certain content types. Reliance on a single maintainer could be a risk for long-term support. The 'output token reduction' feature is still experimental and uses estimates rather than direct measurements.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-17T05:17:20.486Z",
+    "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-17T05:15:08Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go for performance and prefix-cache stability.",
+      "problemSolved": "Developers need a fast, cost-effective AI coding assistant that stays running in the terminal, leverages DeepSeek's prefix caching to reduce token costs, and is configurable via plugins and multiple models.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 22,741 stars, a 24-hour delta of +446, and a 7-day average of +392.7 stars/day, this project is experiencing sustained high growth. The acceleration ratio of 1.4 indicates continued strong interest without a sudden spike, suggesting organic adoption. It ranks top 2 in Agents, top 3 in LLMs, and top 3 in CLI by velocity on OOSMetrics.",
+      "whatChanged": "The project underwent a ground-up rewrite from TypeScript to Go (version 1.0), which is now the default branch. This rewrite promises better performance and stability. Recent commits and a release within 30 days indicate active development.",
+      "whyTrending": "It combines the popularity of DeepSeek models with a practical, configurable terminal agent that emphasizes cost efficiency through prefix caching. The Go rewrite and active community (Discord, bilingual support) drive engagement.",
+      "developerTakeaway": "If you use DeepSeek models and want a lightweight, plugin-driven coding agent that stays in your terminal, this is a strong candidate. Its config-driven design and MCP-compatible plugin system make it extensible.",
+      "developerInsight": "The shift to Go signals a trend toward performance-critical AI tooling. The focus on prefix caching highlights the importance of cost optimization in AI agent workflows. Developers should watch for similar optimizations in other agents.",
+      "targetUsers": "Developers who use DeepSeek models, want a terminal-based AI coding assistant, and value low token costs and extensibility via plugins.",
+      "riskNotes": "The project is relatively new in its Go rewrite (1.0), so stability may still evolve. 590 open issues suggest active development but also potential bugs. Dependency on DeepSeek's API and prefix caching may limit portability to other providers.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-17T05:17:26.328Z",
+    "model": "deepseek-v4-flash"
+  },
+  "HKUDS/nanobot:2026-06-16T17:55:39Z": {
+    "summary": {
+      "oneLiner": "An ultra-lightweight, open-source personal AI agent that you can truly own, with WebUI, multi-channel chat, tools, memory, MCP, and model routing.",
+      "problemSolved": "Most AI agents are either too heavy, closed-source, or tied to a single provider. nanobot gives developers a small, readable core that can be extended with custom tools, multiple LLM providers, and chat channels (Telegram, Discord, WeChat, etc.) while remaining fully self-hosted.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sudden_breakout",
+      "whyNow": "The repo has exploded from 44,333 stars with a 24h delta of +103 and a 7d delta of +374, showing a sudden acceleration ratio of 2.1 (high). The three-day average star delta of 49.3 and seven-day average of 54 indicate sustained high velocity. This is a clear breakout pattern, not just organic growth.",
+      "whatChanged": "The most recent release v0.2.1 (The Workbench Release) on 2026-06-01 introduced a packaged WebUI with project workspaces, live file-edit activity, and steadier sustained goals. The README shows daily updates with new features, providers, and channels. The project has also gained external partnerships with Kimi and MiniMax, which may have driven visibility.",
+      "whyTrending": "It combines the hottest trends in AI: agentic workflows, multi-model support, MCP (Model Context Protocol), and a self-hosted WebUI. The rapid release cadence and active community (7833 forks, 879 open issues) signal a project that is both useful and actively maintained.",
+      "developerTakeaway": "If you want to build a custom AI assistant that works across chat platforms and can be extended with your own tools, nanobot offers a well-documented, Python-based starting point. The architecture is designed to be hackable.",
+      "developerInsight": "The sudden breakout suggests that the AI agent framework space is still wide open. Developers are hungry for lightweight, open-source alternatives to closed platforms. The inclusion of MCP and multi-provider support positions nanobot as a flexible backbone for agentic workflows.",
+      "targetUsers": "Python developers building personal or team AI assistants, AI agent framework enthusiasts, and anyone wanting a self-hosted alternative to ChatGPT Codex or Claude Code.",
+      "riskNotes": "The project is very young (first release ~2 months ago) and has 879 open issues, which may indicate growing pains. The rapid pace of changes could lead to instability. The README is marketing-heavy and may oversell capabilities.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-17T05:17:29.231Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-17T05:08:38Z": {
+    "summary": {
+      "oneLiner": "Local-first, open-source alternative to Claude Design that turns your laptop into an agent-native design studio with 259+ skills, 142+ design systems, and support for 21 coding agent CLIs.",
+      "problemSolved": "Design tools today are either closed SaaS (Figma, Claude Design) or require manual pixel-pushing. Open Design lets coding agents (Claude Code, Codex, Cursor, etc.) generate prototypes, decks, images, and videos directly from a design system (DESIGN.md) — all local-first, sandboxed, and exportable to HTML/PDF/PPTX/MP4.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 66,120 stars, a 24h delta of +667, and a 7-day average of +603 stars/day, this project is sustaining massive organic growth. The acceleration ratio of 1.1 indicates steady, high-velocity attention — not a sudden spike. The recent 0.10.0 release (all-in-one agentic design workspace) and the launch of AMR (Agentic Model Router) are likely fueling continued adoption.",
+      "whatChanged": "The 0.10.0 release introduced an all-in-one agentic design workspace with parallel sessions, making the tool feel like a local design team. The AMR service (one recharge for GPT, Claude, Gemini, DeepSeek) lowered friction for users. These product milestones, combined with growing interest in agent-native workflows, explain the sustained momentum.",
+      "whyTrending": "Open Design taps into the convergence of AI coding agents and design tooling. It offers a local-first, open-source alternative to Claude Design, supporting 21 different coding agent CLIs and 142+ design systems. The ability to generate production-ready artifacts (HTML, PDF, PPTX, MP4) from a simple brief, all while keeping data local, resonates with developers and designers alike.",
+      "developerTakeaway": "If you build with AI agents, Open Design provides a ready-made design engine that plugs into your existing CLI workflow. It's a practical way to generate UI prototypes, decks, and assets without leaving the terminal.",
+      "developerInsight": "This signals a shift toward agent-native design tools where the design system is a file (DESIGN.md) and the agent is the renderer. For AI developers, it means the line between coding and design is blurring — agents can now own the full artifact pipeline from brief to export.",
+      "targetUsers": "Developers using AI coding agents (Claude Code, Codex, Cursor, etc.) who need to generate design artifacts; designers who want a local-first, open-source alternative to Claude Design; teams building agentic workflows that include UI generation.",
+      "riskNotes": "The project is still evolving (410 open issues). Reliance on external AI model APIs (even with BYOK) may introduce cost or latency. The rapid pace of change could lead to breaking changes. Also, the 'open-source' label may be nuanced — check the license (Apache 2.0) and contribution model.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-17T05:17:36.118Z",
+    "model": "deepseek-v4-flash"
   }
 }
