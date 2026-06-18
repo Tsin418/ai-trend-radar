@@ -1,186 +1,202 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-06-18T11:34:57.954Z",
+  "generatedAt": "2026-06-18T13:58:15.653Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2606.19341v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Native Active Perception as Reasoning for Omni-Modal Understanding",
-        "url": "https://arxiv.org/pdf/2606.19341v1",
-        "description": "Passive models for long video understanding typically rely on a \"watch-it-all\" paradigm, processing frames uniformly regardless of query difficulty, causing computational cost to grow with video duration. Although interactive frameworks have emerged, they often rely on global pre-scanning, and their context cost still scales with video length. We propose OmniAgent, the first native omni-modal agent that formulates video understanding as a POMDP-based iterative Observation-Thought-Action cycle. O",
-        "summary": "Passive models for long video understanding typically rely on a \"watch-it-all\" paradigm, processing frames uniformly regardless of query difficulty, causing computational cost to grow with video duration. Although interactive frameworks have emerged, they often rely on global pre-scanning, and their context cost still scales with video length. We propose OmniAgent, the first native omni-modal agent that formulates video understanding as a POMDP-based iterative Observation-Thought-Action cycle. OmniAgent executes on-demand actions to selectively distill audio-visual cues into a persistent textual memory, effectively decoupling reasoning complexity from raw video duration. To operationalize this, we introduce (1) Agentic Supervised Fine-Tuning to bootstrap native active perception via best-of-N trajectory synthesis with dual-stage quality control, and (2) Agentic Reinforcement Learning with TAURA (Turn-aware Adaptive Uncertainty Rescaled Advantage), which leverages turn-level entropy to steer credit assignment toward pivotal discovery turns. Crucially, OmniAgent exhibits positive test-time scaling, where performance improves as the number of reasoning turns increases, validating the efficacy of active perception. Empirical results across ten benchmarks (e.g., VideoMME, LVBench) demonstrate that OmniAgent achieves state-of-the-art performance among open-source models. Notably, on LVBench, our 7B agent outperforms the 10$\\times$ larger Qwen2.5-VL-72B (50.5% vs. 47.3%).",
-        "author": "Zhenghao Xing, Ruiyang Xu, Yuxuan Wang, Jinzheng He, Ziyang Ma, Qize Yang, Yunfei Chu, Jin Xu, Junyang Lin, Chi-Wing Fu, Pheng-Ann Heng",
+        "id": "huggingface_models:Herman172/Comfyui",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "Herman172/Comfyui",
+        "url": "https://huggingface.co/Herman172/Comfyui",
         "tags": [
-          "cs.CV",
-          "cs.CL",
-          "cs.SD",
-          "agent",
-          "rag",
-          "fine-tuning",
-          "benchmark",
-          "agentic"
+          "safetensors",
+          "gguf",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-06-17T17:59:56Z",
-        "updatedAt": "2026-06-17T17:59:56Z",
-        "collectedAt": "2026-06-18T11:33:56.514Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.19341v1",
-          "authors": [
-            "Zhenghao Xing",
-            "Ruiyang Xu",
-            "Yuxuan Wang",
-            "Jinzheng He",
-            "Ziyang Ma",
-            "Qize Yang",
-            "Yunfei Chu",
-            "Jin Xu",
-            "Junyang Lin",
-            "Chi-Wing Fu",
-            "Pheng-Ann Heng"
-          ]
+        "metrics": {
+          "downloads": 346,
+          "likes": 7
         },
-        "recommendedReason": "Matched AI developer keywords: agent, rag, fine-tuning, benchmark, agentic"
+        "publishedAt": "2025-02-16T10:15:12.000Z",
+        "updatedAt": "2026-06-18T13:57:31.000Z",
+        "collectedAt": "2026-06-18T13:58:15.828Z",
+        "raw": {}
       },
       {
-        "id": "http://arxiv.org/abs/2606.19336v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Learning User Simulators with Turing Rewards",
-        "url": "https://arxiv.org/pdf/2606.19336v1",
-        "description": "Learning to simulate human users in interactive settings could advance the training of agent assistants, evaluation of personalization systems, research in the social sciences, and more. Existing approaches generally do so by training a large language model (LLM) to match a single ground truth response, either by maximizing the log probability or by using a similarity reward. We instead propose {Turing-RL}: a Turing-Test-based reinforcement learning approach for training user simulator models. {",
-        "summary": "Learning to simulate human users in interactive settings could advance the training of agent assistants, evaluation of personalization systems, research in the social sciences, and more. Existing approaches generally do so by training a large language model (LLM) to match a single ground truth response, either by maximizing the log probability or by using a similarity reward. We instead propose {Turing-RL}: a Turing-Test-based reinforcement learning approach for training user simulator models. {Turing-RL} uses a discriminative Turing reward with an LLM judge to score how indistinguishable a generated response is from the real user's given the user's history, and the user simulator LLM learns to produce responses indistinguishable from what the user could have said with such rewards. Across two different domains--conversational chat and Reddit forum discussion--we find that {Turing-RL} consistently outperforms baseline methods on both LLM and human evaluation metrics. Our study suggests that optimizing for indistinguishability, rather than response matching, is effective for learning user simulators.",
-        "author": "Yingshan Susan Wang, Cedegao E. Zhang, Linlu Qiu, Zexue He, Pengyuan Li, Alex Pentland, Roger P. Levy, Yoon Kim",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.CL",
-          "large language model",
-          "llm",
-          "agent",
-          "evaluation"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-06-17T17:58:48Z",
-        "updatedAt": "2026-06-17T17:58:48Z",
-        "collectedAt": "2026-06-18T11:33:56.514Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.19336v1",
-          "authors": [
-            "Yingshan Susan Wang",
-            "Cedegao E. Zhang",
-            "Linlu Qiu",
-            "Zexue He",
-            "Pengyuan Li",
-            "Alex Pentland",
-            "Roger P. Levy",
-            "Yoon Kim"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14025
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, agent, evaluation"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-06-18T13:58:15.836Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.19334v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Freeing the Law with LOCUS: A Local Ordinance Corpus for the United States",
-        "url": "https://arxiv.org/pdf/2606.19334v1",
-        "description": "Progress in legal AI increasingly depends on access to authoritative legal text at scale. Yet one of the most consequential layers of American law remains largely absent from existing machine-readable corpora: local ordinances. Local codes govern zoning, housing, business licensing, public health, noise, animal control, and many other domains of everyday regulation, but they are fragmented across vendor platforms designed for human browsing rather than bulk research access. We introduce LOCUS - ",
-        "summary": "Progress in legal AI increasingly depends on access to authoritative legal text at scale. Yet one of the most consequential layers of American law remains largely absent from existing machine-readable corpora: local ordinances. Local codes govern zoning, housing, business licensing, public health, noise, animal control, and many other domains of everyday regulation, but they are fragmented across vendor platforms designed for human browsing rather than bulk research access. We introduce LOCUS - the Local Ordinance Corpus for the United States - a comprehensive corpus and county-harmonized access layer for U.S. municipal and county ordinance codes. The raw corpus, available for release to researchers, represents nearly all publicly available municipal and county ordinance codes. The resulting raw corpus contains codes from 9,239 cities and counties. A smaller county-harmonized LOCUS access layer provides coverage for the largest 2,309 of 3,144 U.S. counties, accounting for a majority of the population. We use OCR to handle the myriad of document formats that have kept the law from being a public resource. We release the corpus with coverage metadata to support reproducibility, downstream legal AI research, and the incremental expansion of machine-readable access to local law. We train a collection of ModernBERT-based classifiers and scorers to facilitate analyzing U.S. local law among several dimensions, such as opacity and paternalism, that have not previously been studied at this scale. LOCUS-v1 and its derivative models are available at: https://huggingface.co/datasets/LocalLaws/LOCUS-v1",
-        "author": "Denis Peskoff, Joe Barrow, Christopher Vu, Diag Davenport",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.CL",
-          "cs.CY",
-          "cs.LG",
-          "rag"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-06-17T17:58:22Z",
-        "updatedAt": "2026-06-17T17:58:22Z",
-        "collectedAt": "2026-06-18T11:33:56.514Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.19334v1",
-          "authors": [
-            "Denis Peskoff",
-            "Joe Barrow",
-            "Christopher Vu",
-            "Diag Davenport"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11127
         },
-        "recommendedReason": "Matched AI developer keywords: rag"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-06-18T13:58:15.836Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.19328v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "UBP2: Uncertainty-Balanced Preference Planning for Efficient Preference-based Reinforcement Learning",
-        "url": "https://arxiv.org/pdf/2606.19328v1",
-        "description": "Preference-based RL provides an approach to learning reward models from pairwise comparisons of behaviors, bypassing the need for explicit reward design. However, existing methods typically rely on passive data collection and suffer from poor sample efficiency, especially during the early stages of learning. We introduce a model-based approach that actively directs exploration by jointly reasoning over uncertainties in the reward, dynamics, and value functions. Our method, Uncertainty-Balanced P",
-        "summary": "Preference-based RL provides an approach to learning reward models from pairwise comparisons of behaviors, bypassing the need for explicit reward design. However, existing methods typically rely on passive data collection and suffer from poor sample efficiency, especially during the early stages of learning. We introduce a model-based approach that actively directs exploration by jointly reasoning over uncertainties in the reward, dynamics, and value functions. Our method, Uncertainty-Balanced Preference Planning (UBP2), uses ensembles of reward, dynamics, and value function models to evaluate candidate trajectories according to a unified score that combines expected reward, terminal value, and epistemic uncertainty. Planning under this objective yields an explicit tradeoff between exploitation and information acquisition without requiring ad hoc exploration heuristics. Under standard regularity assumptions, we establish sublinear regret guarantees for both finite-horizon and infinite-horizon settings. Empirically, experiments on the Meta-World benchmark show UBP2 achieves substantially higher sample efficiency than model-free preference-based methods and non-optimistic model-based baselines.",
-        "author": "Mohamed Nabail, Leo Cheng, Jingmin Wang, Nicholas Rhinehart",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.LG",
-          "cs.AI",
-          "cs.RO",
-          "benchmark"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-06-17T17:54:32Z",
-        "updatedAt": "2026-06-17T17:54:32Z",
-        "collectedAt": "2026-06-18T11:33:56.514Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.19328v1",
-          "authors": [
-            "Mohamed Nabail",
-            "Leo Cheng",
-            "Jingmin Wang",
-            "Nicholas Rhinehart"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10106
         },
-        "recommendedReason": "Matched AI developer keywords: benchmark"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-06-18T13:58:15.836Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.19327v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation",
-        "url": "https://arxiv.org/pdf/2606.19327v1",
-        "description": "Post-training of reasoning language models is commonly driven by supervised distillation and reinforcement learning with verifiable rewards. Distillation often relies on chain-of-thought annotations that are expensive to obtain and may themselves be noisy, incomplete, or partially incorrect; even when the final solution is correct, an imperfect rationale can interfere with learning. Reinforcement learning with verified rewards, on the other hand, typically compresses evaluative feedback into a s",
-        "summary": "Post-training of reasoning language models is commonly driven by supervised distillation and reinforcement learning with verifiable rewards. Distillation often relies on chain-of-thought annotations that are expensive to obtain and may themselves be noisy, incomplete, or partially incorrect; even when the final solution is correct, an imperfect rationale can interfere with learning. Reinforcement learning with verified rewards, on the other hand, typically compresses evaluative feedback into a scalar signal, obscuring which aspects of a response should be improved. We propose \\textbf{Rubric-Conditioned Self-Distillation}, a framework that incorporates rubrics as structured, fine-grained feedback for on-policy self-distillation. Our method conditions the teacher model on criterion-level rubrics and uses it to provide token-level guidance on the student's own sampled trajectories. This design avoids treating a single reference rationale as the sole supervision target. Instead, rubrics specify what a strong response should satisfy, enabling more fine-grained credit assignment over the reasoning process than scalar reward optimization. We instantiate this framework with a two-stage pipeline that first learns to generate task-specific rubrics and then trains a rubric-guided reasoner. We evaluate on a diverse suite of science reasoning benchmarks and results show that rubric-conditioned self-distillation effectively converts rubric-level criteria into token-level guidance over the reasoning process, surpassing GRPO by 1.0 points and OPSD by 0.9 points on average.",
-        "author": "Siyi Gu, Jialin Chen, Sophia Zhou, Arman Cohan, Rex Ying",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "cs.AI",
-          "cs.CL",
-          "rag",
-          "benchmark"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-06-17T17:54:04Z",
-        "updatedAt": "2026-06-17T17:54:04Z",
-        "collectedAt": "2026-06-18T11:33:56.514Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.19327v1",
-          "authors": [
-            "Siyi Gu",
-            "Jialin Chen",
-            "Sophia Zhou",
-            "Arman Cohan",
-            "Rex Ying"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7482
         },
-        "recommendedReason": "Matched AI developer keywords: rag, benchmark"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-06-17T20:43:09.000Z",
+        "collectedAt": "2026-06-18T13:58:15.836Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
+      },
+      {
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
+        "tags": [
+          "gradio",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5115
+        },
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-06-18T13:58:15.836Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5073
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-06-18T13:58:15.836Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Arena Leaderboard",
+        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
+        "author": "lmarena-ai",
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "static",
+        "metrics": {
+          "likes": 4920
+        },
+        "publishedAt": "2023-05-20T09:26:19.000Z",
+        "updatedAt": "2026-02-21T23:20:43.000Z",
+        "collectedAt": "2026-06-18T13:58:15.836Z",
+        "raw": {
+          "sdk": "static",
+          "emoji": "🏆🤖"
+        }
       }
     ],
     "developerBuzz": [
@@ -195,38 +211,15 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1045,
-          "commentsCount": 555
+          "upvotes": 1050,
+          "commentsCount": 561
         },
         "publishedAt": "2026-06-17T12:11:27.000Z",
-        "collectedAt": "2026-06-18T11:33:56.296Z",
+        "collectedAt": "2026-06-18T13:58:16.152Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48569278",
           "matchedKeywords": [
             "ai"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48553224",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "SpaceX to buy Cursor for $60B",
-        "url": "https://www.reuters.com/legal/transactional/spacex-buy-anysphere-60-billion-2026-06-16/",
-        "author": "itsmarcelg",
-        "tags": [
-          "cursor"
-        ],
-        "metrics": {
-          "upvotes": 1127,
-          "commentsCount": 1654
-        },
-        "publishedAt": "2026-06-16T10:44:24.000Z",
-        "collectedAt": "2026-06-18T11:33:56.296Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48553224",
-          "matchedKeywords": [
-            "cursor"
           ]
         }
       },
@@ -241,11 +234,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 857,
-          "commentsCount": 416
+          "upvotes": 858,
+          "commentsCount": 421
         },
         "publishedAt": "2026-06-17T09:12:00.000Z",
-        "collectedAt": "2026-06-18T11:33:56.296Z",
+        "collectedAt": "2026-06-18T13:58:16.152Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48567759",
           "matchedKeywords": [
@@ -264,11 +257,11 @@
           "rag"
         ],
         "metrics": {
-          "upvotes": 643,
-          "commentsCount": 594
+          "upvotes": 644,
+          "commentsCount": 597
         },
         "publishedAt": "2026-06-16T16:42:32.000Z",
-        "collectedAt": "2026-06-18T11:33:56.296Z",
+        "collectedAt": "2026-06-18T13:58:16.152Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48558045",
           "matchedKeywords": [
@@ -287,20 +280,103 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 380,
-          "commentsCount": 460
+          "upvotes": 381,
+          "commentsCount": 466
         },
         "publishedAt": "2026-06-17T17:07:32.000Z",
-        "collectedAt": "2026-06-18T11:33:56.296Z",
+        "collectedAt": "2026-06-18T13:58:16.152Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48573332",
           "matchedKeywords": [
             "ai"
           ]
         }
+      },
+      {
+        "id": "hackernews:48565498",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "US holds off blacklisting DeepSeek, more than 100 firms deemed security risks",
+        "url": "https://www.reuters.com/world/china/us-holds-off-blacklisting-chinas-deepseek-more-than-100-firms-deemed-security-2026-06-17/",
+        "author": "giuliomagnifico",
+        "tags": [
+          "deepseek"
+        ],
+        "metrics": {
+          "upvotes": 489,
+          "commentsCount": 539
+        },
+        "publishedAt": "2026-06-17T03:55:16.000Z",
+        "collectedAt": "2026-06-18T13:58:16.152Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48565498",
+          "matchedKeywords": [
+            "deepseek"
+          ]
+        }
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmqjj40zi03y2slmhpeucu9ao",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Adobe 为 Photoshop、Premiere 等多款 Creative Cloud 应用加入 AI 智能体",
+        "url": "https://the-decoder.com/adobe-adds-ai-agents-to-photoshop-premiere-and-more-creative-cloud-apps",
+        "summary": "Adobe 将其\"创意智能体\"扩展至 Photoshop、Premiere 等应用，以公开测试形式提供 AI Assistant。该智能体可自动完成多步骤常规任务，如 Premiere 分拣素材和粗剪、Photoshop 换背景、Illustrator 批量生成文件、InDesign 更新版式等。Firefly 新增面向个人创作者的品牌套件、产品图转短视频及 Quick Cut 自动剪辑功能。Adobe 工具已集成至 ChatGPT、Claude 及 Microsoft 365 Copilot，Google Gemini 和 Slack 集成即将推出。",
+        "description": "Adobe 将其\"创意智能体\"扩展至 Photoshop、Premiere 等应用，以公开测试形式提供 AI Assistant。该智能体可自动完成多步骤常规任务，如 Premiere 分拣素材和粗剪、Photoshop 换背景、Illustrator 批量生成文件、InDesign 更新版式等。Firefly 新增面向个人创作者的品牌套件、产品图转短视频及 Quick Cut 自动剪辑功能。Adobe 工具已集成至 ChatGPT、Claude 及 Microsoft 365 Copilot，Google Gemini 和 Slack 集成即将推出。",
+        "category": "products",
+        "originalSource": "The Decoder：AI News（RSS）",
+        "originalUrl": "https://the-decoder.com/adobe-adds-ai-agents-to-photoshop-premiere-and-more-creative-cloud-apps",
+        "recommendedReason": "Adobe 将其\"创意智能体\"扩展至 Photoshop、Premiere 等应用，以公开测试形式提供 AI Assistant。该智能体可自动完成多步骤常规任务，如 Premiere 分拣素材和粗剪、Photoshop 换背景、Illustrator 批量生成文件、InDesign 更新版式等。Firefly 新增面向个人创作者的品牌套件、产品图转短视频及 Quick Cut 自动剪辑功能。Adobe 工具已集成至 ChatGPT、Claude 及 Microsoft 365 Copilot，Google Gemini 和 Slack 集成即将推出。",
+        "publishedAt": "2026-06-18T12:59:00.000Z",
+        "collectedAt": "2026-06-18T13:58:16.573Z",
+        "raw": {
+          "id": "cmqjj40zi03y2slmhpeucu9ao",
+          "titleEn": "Adobe adds AI agents to Photoshop， Premiere， and more Creative Cloud apps",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmqjgpxud036hslmhb8vvzvs7",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "皮尤民调：63%美国人认为AI发展太快，ChatGPT使用率翻番",
+        "url": "https://www.ithome.com/0/966/233.htm",
+        "summary": "皮尤研究中心最新民调显示，63%美国人认为AI发展速度过快。ChatGPT使用率较2023年翻番，44%受访者曾使用。49%偶尔使用聊天机器人，仅16%认为AI会有积极社会影响。青年群体使用率更高但更悲观：18-29岁中66%用过，48%认为有负面影响，仅14%看好。30-49岁中34%每天至少使用一次。约四成用AI处理工作，30%认为提高效率，28%认为帮助获取信息。此外，66%成年人担心AI传播错误信息。",
+        "description": "皮尤研究中心最新民调显示，63%美国人认为AI发展速度过快。ChatGPT使用率较2023年翻番，44%受访者曾使用。49%偶尔使用聊天机器人，仅16%认为AI会有积极社会影响。青年群体使用率更高但更悲观：18-29岁中66%用过，48%认为有负面影响，仅14%看好。30-49岁中34%每天至少使用一次。约四成用AI处理工作，30%认为提高效率，28%认为帮助获取信息。此外，66%成年人担心AI传播错误信息。",
+        "category": "tools",
+        "originalSource": "IT之家（RSS）",
+        "originalUrl": "https://www.ithome.com/0/966/233.htm",
+        "recommendedReason": "皮尤研究中心最新民调显示，63%美国人认为AI发展速度过快。ChatGPT使用率较2023年翻番，44%受访者曾使用。49%偶尔使用聊天机器人，仅16%认为AI会有积极社会影响。青年群体使用率更高但更悲观：18-29岁中66%用过，48%认为有负面影响，仅14%看好。30-49岁中34%每天至少使用一次。约四成用AI处理工作，30%认为提高效率，28%认为帮助获取信息。此外，66%成年人担心AI传播错误信息。",
+        "publishedAt": "2026-06-18T12:11:32.000Z",
+        "collectedAt": "2026-06-18T13:58:16.573Z",
+        "raw": {
+          "id": "cmqjgpxud036hslmhb8vvzvs7",
+          "titleEn": "皮尤研究中心民调：63% 美国人认为 AI 发展速度过快",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmqjfr2vi02xmslmhwqz72cx7",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "ChatGPT 图像生成器可被绕过滤镜生成暴力和色情内容",
+        "url": "https://mindgard.ai/blog/chatgpt-spontaneously-generated-violent-images-from-a-viral-prompt",
+        "summary": "Mindgard 红队研究发现，ChatGPT 的图像生成器可通过简单提示词轻易绕过内容过滤器，在未直接请求的情况下自动生成性暴力、血腥谋杀等露骨图像。一个热门的\"恢复照片\"提示词因输入模糊而绕过输入过滤器，结果如同俄罗斯轮盘赌；进一步添加虚假图像 ID 和\"不做审查\"指令后，模型持续生成高度性化女性图像，甚至出现被捆绑殴打的尸体，并自动赋予惊悚标题。研究指出，OpenAI 此前声称修复的裸体问题仍未解决，暴露了 AI 工具广泛可及性与不足内容过滤的现实风险。",
+        "description": "Mindgard 红队研究发现，ChatGPT 的图像生成器可通过简单提示词轻易绕过内容过滤器，在未直接请求的情况下自动生成性暴力、血腥谋杀等露骨图像。一个热门的\"恢复照片\"提示词因输入模糊而绕过输入过滤器，结果如同俄罗斯轮盘赌；进一步添加虚假图像 ID 和\"不做审查\"指令后，模型持续生成高度性化女性图像，甚至出现被捆绑殴打的尸体，并自动赋予惊悚标题。研究指出，OpenAI 此前声称修复的裸体问题仍未解决，暴露了 AI 工具广泛可及性与不足内容过滤的现实风险。",
+        "category": "papers",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://mindgard.ai/blog/chatgpt-spontaneously-generated-violent-images-from-a-viral-prompt",
+        "recommendedReason": "Mindgard 红队研究发现，ChatGPT 的图像生成器可通过简单提示词轻易绕过内容过滤器，在未直接请求的情况下自动生成性暴力、血腥谋杀等露骨图像。一个热门的\"恢复照片\"提示词因输入模糊而绕过输入过滤器，结果如同俄罗斯轮盘赌；进一步添加虚假图像 ID 和\"不做审查\"指令后，模型持续生成高度性化女性图像，甚至出现被捆绑殴打的尸体，并自动赋予惊悚标题。研究指出，OpenAI 此前声称修复的裸体问题仍未解决，暴露了 AI 工具广泛可及性与不足内容过滤的现实风险。",
+        "publishedAt": "2026-06-18T11:25:28.101Z",
+        "collectedAt": "2026-06-18T13:58:16.573Z",
+        "raw": {
+          "id": "cmqjfr2vi02xmslmhwqz72cx7",
+          "titleEn": "ChatGPT的图像生成器可以被利用来生成暴力和色情内容",
+          "apiCategory": "paper"
+        }
+      },
       {
         "id": "aihot:cmqjdctxe02bfslmhz7m5hdlk",
         "source": "aihot",
@@ -314,7 +390,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/L4BJnexabQu5DAxDnwEGxw",
         "recommendedReason": "火山引擎上线豆包实时语音模型3.0（Seeduplex）API 服务并开启邀测。该模型为原生全双工端到端语音大模型，具备精准遵循、抗干扰、动态判停三大优势。可在多人对话中安静待命，指定话题出现时主动加入；支持通过自定义工具在实时交互中完成预定日历、发送邮件等任务。抗干扰力提升，误回复率与误打断率大幅降低；判停延迟缩短约250ms，复杂场景抢话比例下降40%，用户主动打断延迟缩短约300ms。适用于汽车智能座舱、智能硬件、智能客服等场景。",
         "publishedAt": "2026-06-18T10:36:31.000Z",
-        "collectedAt": "2026-06-18T11:33:57.277Z",
+        "collectedAt": "2026-06-18T13:58:16.573Z",
         "raw": {
           "id": "cmqjdctxe02bfslmhz7m5hdlk",
           "titleEn": "豆包实时语音模型3.0 API 服务正式上线",
@@ -334,7 +410,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/KJav-s9qlkzV9yN8r6-sNg",
         "recommendedReason": "月之暗面旗下 Kimi Work（Beta 版）新增「目标模式」，支持设定终点后由 Agent 自主循环推进任务，最长连续运行24小时，过程中人类可随时中断调整。同时上线「插件中心」，可选装百度网盘、Canva可画、钉钉、飞书、WPS、Notion、Cloudflare 等外部应用。6月限时福利期间，Kimi 电脑客户端 Work 模式所有任务会员额度消耗减半，即从0.02%降至0.01%。",
         "publishedAt": "2026-06-18T09:06:57.000Z",
-        "collectedAt": "2026-06-18T11:33:57.277Z",
+        "collectedAt": "2026-06-18T13:58:16.573Z",
         "raw": {
           "id": "cmqja53m201fgslmhigeqiqu6",
           "titleEn": "Kimi Work 上新：目标模式、插件中心和 6 月限时福利",
@@ -354,7 +430,7 @@
         "originalUrl": "https://www.ithome.com/0/966/154.htm",
         "recommendedReason": "商务部等八部门6月18日发布关于加快\"人工智能+消费\"发展的实施意见。其中提到加大财政资金支持，落实数码和智能产品购新政策，鼓励地方在消费品以旧换新框架内自主制定补贴，重点支持新一代智能终端消费。增加AI手机、智能电脑、智能电视、智能家居、AI眼镜、智能网联汽车、人形机器人等产品供给，培育智能穿戴消费市场。同时加快AI在居家服务、养老服务、文化旅游、住宿餐饮、教育教学等领域的应用，建设AI商品首发平台，举办\"人工智能进万家\"活动。",
         "publishedAt": "2026-06-18T09:03:28.000Z",
-        "collectedAt": "2026-06-18T11:33:57.277Z",
+        "collectedAt": "2026-06-18T13:58:16.573Z",
         "raw": {
           "id": "cmqjaaffp01gcslmhhkxrobvo",
           "titleEn": null,
@@ -374,7 +450,7 @@
         "originalUrl": "https://www.ithome.com/0/966/066.htm",
         "recommendedReason": "DeepSeek 识图模式于6月18日在网页和 App 端正式上线，与快速模式、专家模式并列。开启后用户可直接上传图片让 DeepSeek 识别图像，能力超越简单文字提取。目前 App 端仍显示\"图片理解功能内测中\"，网页端无此提示。该模式背后的多模态模型技术细节于今年4月公开，核心框架为\"Thinking with Visual Primitives（以视觉原语思考）\"。",
         "publishedAt": "2026-06-18T07:48:11.000Z",
-        "collectedAt": "2026-06-18T11:33:57.277Z",
+        "collectedAt": "2026-06-18T13:58:16.573Z",
         "raw": {
           "id": "cmqj858gd00vvslmhbegt7ms5",
           "titleEn": null,
@@ -394,462 +470,12 @@
         "originalUrl": "https://x.com/vista8/status/2067513484364140994",
         "recommendedReason": "乔木画布推出免费开源在线图像编辑器，可一键部署Vercel为网站，功能类似简化版PS。支持Seedream和GPT-image-2生图、图片模板存储分享、一键抠图、2万图标和常见Emoji，甚至能绘制PRD。随时创建3：4/16：9/21：9等不同尺寸画布。原计划高级功能收费，庆祝端午节现全免费开源。在线体验：https：//ps.qiaomu.ai/，GitHub见评论区。",
         "publishedAt": "2026-06-18T07:43:21.000Z",
-        "collectedAt": "2026-06-18T11:33:57.277Z",
+        "collectedAt": "2026-06-18T13:58:16.573Z",
         "raw": {
           "id": "cmqj7f40n00tmslmhcbr93w6l",
           "titleEn": "免费开源乔木画布，一键部署Vercel为网站，简化版 PS。 支持Seedream生图、GPT-image-2，图片模版存储分享。 支持一键抠图、2w图标和常见Emoji，甚至都能画PRD了。 …",
           "apiCategory": "ai-products"
         }
-      },
-      {
-        "id": "aihot:cmqj36zhf06vksl5w4wx2c0eo",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "MOSS-TTS-Local-Transformer-v1.5 在 SGLang-Omni 上：原生流式 48 kHz 语音服务",
-        "url": "https://www.lmsys.org/blog/2026-06-17-moss-tts-local-v15",
-        "summary": "MOSS-TTS-Local-Transformer-v1.5 是一款开源 TTS 模型，支持 48 kHz 立体声、零样本声音克隆、最长 10 分钟长文本合成、时长控制及 31 种语言。其核心采用 Qwen3-4B 骨干与约 2B 参数的 MOSS-Audio-Tokenizer-v2 音频编解码器，通过 12 个 RVQ 码本运行。SGLang-Omni 以三阶段流水线部署该模型。在 Seed-TTS-Eval 上词错误率 5.10%、语音相似度 69.23%，CV3-Eval 上 WER 7.48%、SIM 61.59%，MiniMax Multilingual 上 WER 6.37%、SIM 75.31%，X Voice 上 WER 20.48%、SIM 63.00%。",
-        "description": "MOSS-TTS-Local-Transformer-v1.5 是一款开源 TTS 模型，支持 48 kHz 立体声、零样本声音克隆、最长 10 分钟长文本合成、时长控制及 31 种语言。其核心采用 Qwen3-4B 骨干与约 2B 参数的 MOSS-Audio-Tokenizer-v2 音频编解码器，通过 12 个 RVQ 码本运行。SGLang-Omni 以三阶段流水线部署该模型。在 Seed-TTS-Eval 上词错误率 5.10%、语音相似度 69.23%，CV3-Eval 上 WER 7.48%、SIM 61.59%，MiniMax Multilingual 上 WER 6.37%、SIM 75.31%，X Voice 上 WER 20.48%、SIM 63.00%。",
-        "category": "products",
-        "originalSource": "LMSYS：Blog（Chatbot Arena 团队）",
-        "originalUrl": "https://www.lmsys.org/blog/2026-06-17-moss-tts-local-v15",
-        "recommendedReason": "MOSS-TTS-Local-Transformer-v1.5 是一款开源 TTS 模型，支持 48 kHz 立体声、零样本声音克隆、最长 10 分钟长文本合成、时长控制及 31 种语言。其核心采用 Qwen3-4B 骨干与约 2B 参数的 MOSS-Audio-Tokenizer-v2 音频编解码器，通过 12 个 RVQ 码本运行。SGLang-Omni 以三阶段流水线部署该模型。在 Seed-TTS-Eval 上词错误率 5.10%、语音相似度 69.23%，CV3-Eval 上 WER 7.48%、SIM 61.59%，MiniMax Multilingual 上 WER 6.37%、SIM 75.31%，X Voice 上 WER 20.48%、SIM 63.00%。",
-        "publishedAt": "2026-06-18T05:56:08.548Z",
-        "collectedAt": "2026-06-18T11:33:57.277Z",
-        "raw": {
-          "id": "cmqj36zhf06vksl5w4wx2c0eo",
-          "titleEn": "Blog MOSS-TTS Local Transformer v1.5 on SGLang-Omni： Serving Native-Streaming 48 kHz Speech Today we are announcing end-to-end serving for MOSS-TTS-Local-Transformer-v1.5 on SGLang-Omni， together with MOSI and the OpenMOSS Team. MOSS-TTS-Local-Transformer-v1.5 is an open TTS model for 48 kH… MOSI， OpenMOSS Team & SGLang-Omni Team",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmqixf0ar057msl5w132f09uc",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "cuTile Rust：安全无数据竞争的 GPU 内核系统",
-        "url": "https://github.com/nvlabs/cutile-rs",
-        "summary": "cuTile Rust 是一个基于 tile 的 GPU 编程系统，允许用 Rust 编写内存安全、无数据竞争的内核。它通过 `#【cutile：：module】` 宏将内核 AST 嵌入主机二进制，在运行时经 CUDA Tile IR JIT 编译为 GPU cubin。可变张量在启动前分割，不可变张量共享，启动器在 GPU 工作期间保持所有权。在 NVIDIA B200 上，逐元素操作达 7 TB/s（约 91% 峰值带宽），GEMM 达 2 PFlop/s（约 92% 密集 f16 峰值）。基于 cuTile Rust 构建的 Grout 推理引擎在 RTX 5090 上解码 Qwen3-4B 达 171 tokens/s，在 B200 上解码 Qwen3-32B 达 82 tokens/s。项目处于早期研究阶段。",
-        "description": "cuTile Rust 是一个基于 tile 的 GPU 编程系统，允许用 Rust 编写内存安全、无数据竞争的内核。它通过 `#【cutile：：module】` 宏将内核 AST 嵌入主机二进制，在运行时经 CUDA Tile IR JIT 编译为 GPU cubin。可变张量在启动前分割，不可变张量共享，启动器在 GPU 工作期间保持所有权。在 NVIDIA B200 上，逐元素操作达 7 TB/s（约 91% 峰值带宽），GEMM 达 2 PFlop/s（约 92% 密集 f16 峰值）。基于 cuTile Rust 构建的 Grout 推理引擎在 RTX 5090 上解码 Qwen3-4B 达 171 tokens/s，在 B200 上解码 Qwen3-32B 达 82 tokens/s。项目处于早期研究阶段。",
-        "category": "products",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://github.com/nvlabs/cutile-rs",
-        "recommendedReason": "cuTile Rust 是一个基于 tile 的 GPU 编程系统，允许用 Rust 编写内存安全、无数据竞争的内核。它通过 `#【cutile：：module】` 宏将内核 AST 嵌入主机二进制，在运行时经 CUDA Tile IR JIT 编译为 GPU cubin。可变张量在启动前分割，不可变张量共享，启动器在 GPU 工作期间保持所有权。在 NVIDIA B200 上，逐元素操作达 7 TB/s（约 91% 峰值带宽），GEMM 达 2 PFlop/s（约 92% 密集 f16 峰值）。基于 cuTile Rust 构建的 Grout 推理引擎在 RTX 5090 上解码 Qwen3-4B 达 171 tokens/s，在 B200 上解码 Qwen3-32B 达 82 tokens/s。项目处于早期研究阶段。",
-        "publishedAt": "2026-06-18T03:09:11.275Z",
-        "collectedAt": "2026-06-18T11:33:57.277Z",
-        "raw": {
-          "id": "cmqixf0ar057msl5w132f09uc",
-          "titleEn": "Show HN： cuTile Rust：用 Rust 编写的、安全且无数据竞争的 GPU 内核",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmqiw7jw604v7sl5w10zed5s8",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "首个统一科学大模型 LOGOS 正式开源",
-        "url": "https://mp.weixin.qq.com/s/50q5uY849FKnBzk1Q04MRg",
-        "summary": "LOGOS 由 ATH-Token Foundry 联合中国人民大学高瓴人工智能学院开源，是首个基于统一\"科学语法\"的多领域科学生成基础模型。LOGOS-1B（1B参数）在六大科学任务上匹配或超越领域专用方法：口袋条件配体生成纯序列范式首次超越3D扩散模型，超越NatureLM（8×7B）；逆合成预测Top-1准确率74.8%；口袋位点识别仅靠序列达58.5% Top-n准确率；MOF材料生成NBB提升至17.78%。模型采用统一词汇表将蛋白质、小分子等编码为离散Token，通过空间交互离散化实现无需3D坐标的序列预测。预训练与下游任务形式与目标一致，跨领域知识迁移经实验验证有效。已完整开源模型权重、推理代码与技术报告。",
-        "description": "LOGOS 由 ATH-Token Foundry 联合中国人民大学高瓴人工智能学院开源，是首个基于统一\"科学语法\"的多领域科学生成基础模型。LOGOS-1B（1B参数）在六大科学任务上匹配或超越领域专用方法：口袋条件配体生成纯序列范式首次超越3D扩散模型，超越NatureLM（8×7B）；逆合成预测Top-1准确率74.8%；口袋位点识别仅靠序列达58.5% Top-n准确率；MOF材料生成NBB提升至17.78%。模型采用统一词汇表将蛋白质、小分子等编码为离散Token，通过空间交互离散化实现无需3D坐标的序列预测。预训练与下游任务形式与目标一致，跨领域知识迁移经实验验证有效。已完整开源模型权重、推理代码与技术报告。",
-        "category": "models",
-        "originalSource": "公众号：通义实验室（千问）",
-        "originalUrl": "https://mp.weixin.qq.com/s/50q5uY849FKnBzk1Q04MRg",
-        "recommendedReason": "LOGOS 由 ATH-Token Foundry 联合中国人民大学高瓴人工智能学院开源，是首个基于统一\"科学语法\"的多领域科学生成基础模型。LOGOS-1B（1B参数）在六大科学任务上匹配或超越领域专用方法：口袋条件配体生成纯序列范式首次超越3D扩散模型，超越NatureLM（8×7B）；逆合成预测Top-1准确率74.8%；口袋位点识别仅靠序列达58.5% Top-n准确率；MOF材料生成NBB提升至17.78%。模型采用统一词汇表将蛋白质、小分子等编码为离散Token，通过空间交互离散化实现无需3D坐标的序列预测。预训练与下游任务形式与目标一致，跨领域知识迁移经实验验证有效。已完整开源模型权重、推理代码与技术报告。",
-        "publishedAt": "2026-06-18T02:31:28.000Z",
-        "collectedAt": "2026-06-18T11:33:57.277Z",
-        "raw": {
-          "id": "cmqiw7jw604v7sl5w10zed5s8",
-          "titleEn": null,
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmqiu8fi704ddsl5w9tfb6f52",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "深入解析 Midjourney Scanner 技术内幕",
-        "url": "https://x.com/midjourney/status/2067422898407837797",
-        "summary": "我们全新\"Midjourney Scanner\"的技术深潜。",
-        "description": "我们全新\"Midjourney Scanner\"的技术深潜。",
-        "category": "products",
-        "originalSource": "X：Midjourney (@midjourney)",
-        "originalUrl": "https://x.com/midjourney/status/2067422898407837797",
-        "recommendedReason": "我们全新\"Midjourney Scanner\"的技术深潜。",
-        "publishedAt": "2026-06-18T01:43:24.000Z",
-        "collectedAt": "2026-06-18T11:33:57.277Z",
-        "raw": {
-          "id": "cmqiu8fi704ddsl5w9tfb6f52",
-          "titleEn": "A technical dive inside our new \"Midjourney Scanner\"",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmqit4gtr040zsl5wam5ck48b",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "上交所发布指引：AI大模型企业可适用科创板第五套上市标准",
-        "url": "https://www.ithome.com/0/965/735.htm",
-        "summary": "上海证券交易所6月17日发布指引，支持尚未形成稳定收入的优质人工智能大模型企业通过科创板第五套上市标准发行上市。申报企业需在行业地位、产业链优势、目标市场需求、研发进度及关键指标方面具备突出竞争力。指引明确，申报时至少有一个大模型产品已完成上线发布并实现规模化应用，以验证商业模式可行性。下一步，上交所将在中国证监会指导下推进符合标准的企业上市。",
-        "description": "上海证券交易所6月17日发布指引，支持尚未形成稳定收入的优质人工智能大模型企业通过科创板第五套上市标准发行上市。申报企业需在行业地位、产业链优势、目标市场需求、研发进度及关键指标方面具备突出竞争力。指引明确，申报时至少有一个大模型产品已完成上线发布并实现规模化应用，以验证商业模式可行性。下一步，上交所将在中国证监会指导下推进符合标准的企业上市。",
-        "category": "industry",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/965/735.htm",
-        "recommendedReason": "上海证券交易所6月17日发布指引，支持尚未形成稳定收入的优质人工智能大模型企业通过科创板第五套上市标准发行上市。申报企业需在行业地位、产业链优势、目标市场需求、研发进度及关键指标方面具备突出竞争力。指引明确，申报时至少有一个大模型产品已完成上线发布并实现规模化应用，以验证商业模式可行性。下一步，上交所将在中国证监会指导下推进符合标准的企业上市。",
-        "publishedAt": "2026-06-18T00:49:16.000Z",
-        "collectedAt": "2026-06-18T11:33:57.277Z",
-        "raw": {
-          "id": "cmqit4gtr040zsl5wam5ck48b",
-          "titleEn": "上交所：AI 大模型企业适用科创板第五套上市标准，在申报时至少有一个大模型产品已完成上线发布并实现规模化应用",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmqit4gtr0410sl5w4ovwwmwa",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "苹果 Xcode 27 核心首次深度集成 AI 智能体：支持自然语言修 Bug、构建 App",
-        "url": "https://www.ithome.com/0/965/734.htm",
-        "summary": "在 2026 年 WWDC 期间，苹果发布 Xcode 27，其核心组件首次整合 AI 智能体，能理解 Swift 语言并通过多轮自然语言对话辅助开发。AI 可跨多个文件修改整个代码库，也能根据提示与资源生成应用设计并独立构建完整应用，建成后仍可通过对话添加特效、动画等。Xcode 27 支持接入 Anthropic、OpenAI 和 Google 等第三方 AI 模型，同时引入 Core AI 框架提供现代 Swift API 调用端侧模型，并升级开源框架 MLX。",
-        "description": "在 2026 年 WWDC 期间，苹果发布 Xcode 27，其核心组件首次整合 AI 智能体，能理解 Swift 语言并通过多轮自然语言对话辅助开发。AI 可跨多个文件修改整个代码库，也能根据提示与资源生成应用设计并独立构建完整应用，建成后仍可通过对话添加特效、动画等。Xcode 27 支持接入 Anthropic、OpenAI 和 Google 等第三方 AI 模型，同时引入 Core AI 框架提供现代 Swift API 调用端侧模型，并升级开源框架 MLX。",
-        "category": "products",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/965/734.htm",
-        "recommendedReason": "在 2026 年 WWDC 期间，苹果发布 Xcode 27，其核心组件首次整合 AI 智能体，能理解 Swift 语言并通过多轮自然语言对话辅助开发。AI 可跨多个文件修改整个代码库，也能根据提示与资源生成应用设计并独立构建完整应用，建成后仍可通过对话添加特效、动画等。Xcode 27 支持接入 Anthropic、OpenAI 和 Google 等第三方 AI 模型，同时引入 Core AI 框架提供现代 Swift API 调用端侧模型，并升级开源框架 MLX。",
-        "publishedAt": "2026-06-18T00:43:26.000Z",
-        "collectedAt": "2026-06-18T11:33:57.277Z",
-        "raw": {
-          "id": "cmqit4gtr0410sl5w4ovwwmwa",
-          "titleEn": null,
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmqirdp5603n0sl5wjfnes2e3",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Noam Shazeer 离开 Google 加入 OpenAI",
-        "url": "https://x.com/Yuchenj_UW/status/2067401895178817999",
-        "summary": "两年前谷歌花 27 亿美元请回的 AI 传奇 Noam Shazeer 已离开谷歌，加入 OpenAI。 对 Gemini 来说是个残酷的消息。",
-        "description": "两年前谷歌花 27 亿美元请回的 AI 传奇 Noam Shazeer 已离开谷歌，加入 OpenAI。 对 Gemini 来说是个残酷的消息。",
-        "category": "industry",
-        "originalSource": "X：Yuchen Jin (@Yuchenj_UW)",
-        "originalUrl": "https://x.com/Yuchenj_UW/status/2067401895178817999",
-        "recommendedReason": "两年前谷歌花 27 亿美元请回的 AI 传奇 Noam Shazeer 已离开谷歌，加入 OpenAI。 对 Gemini 来说是个残酷的消息。",
-        "publishedAt": "2026-06-18T00:19:56.000Z",
-        "collectedAt": "2026-06-18T11:33:57.277Z",
-        "raw": {
-          "id": "cmqirdp5603n0sl5wjfnes2e3",
-          "titleEn": "Noam Shazeer， the AI legend Google paid $2.7B to bring back two years ago， has left Google， to join …",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmqiot8mp02u5sl5w0n1vprt0",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "泄露文件显示OpenAI年营收130亿但亏损远超收入",
-        "url": "https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year",
-        "summary": "OpenAI 2025年营收130.7亿美元（2024年37亿），但研发成本达191.8亿（含向微软支付105.9亿），收入成本（推理计算）75亿，销售营销成本57.3亿，运营亏损209.2亿。2025年净亏损约390亿，扣除约300亿一次性会计费用后约80亿。2025年3月获1220亿融资（估值8520亿）。ChatGPT周活超9亿，付费约5000万。为控制成本已关闭Sora视频模型并削减非核心业务。",
-        "description": "OpenAI 2025年营收130.7亿美元（2024年37亿），但研发成本达191.8亿（含向微软支付105.9亿），收入成本（推理计算）75亿，销售营销成本57.3亿，运营亏损209.2亿。2025年净亏损约390亿，扣除约300亿一次性会计费用后约80亿。2025年3月获1220亿融资（估值8520亿）。ChatGPT周活超9亿，付费约5000万。为控制成本已关闭Sora视频模型并削减非核心业务。",
-        "category": "industry",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year",
-        "recommendedReason": "OpenAI 2025年营收130.7亿美元（2024年37亿），但研发成本达191.8亿（含向微软支付105.9亿），收入成本（推理计算）75亿，销售营销成本57.3亿，运营亏损209.2亿。2025年净亏损约390亿，扣除约300亿一次性会计费用后约80亿。2025年3月获1220亿融资（估值8520亿）。ChatGPT周活超9亿，付费约5000万。为控制成本已关闭Sora视频模型并削减非核心业务。",
-        "publishedAt": "2026-06-17T23:09:09.056Z",
-        "collectedAt": "2026-06-18T11:33:57.277Z",
-        "raw": {
-          "id": "cmqiot8mp02u5sl5w0n1vprt0",
-          "titleEn": "泄露的财务文件显示，OpenAI每年亏损数十亿美元",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmqiotxxz02vfsl5wx32nujv2",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "库克：AI 浪潮引发存储芯片价格暴涨，iPhone 等苹果产品涨价已\"不可避免\"",
-        "url": "https://www.ithome.com/0/965/694.htm",
-        "summary": "苹果CEO库克确认，AI热潮导致存储芯片严重短缺和价格暴涨，苹果产品涨价已\"不可避免\"。库克未透露涨价具体细节。华尔街日报指出，全球AI巨头大幅增加资本开支，高带宽内存需求激增，挤压消费电子芯片供应。自2024年以来内存和存储芯片价格已翻四倍，涨势预计延续至2027年。研究机构估算，下一代iPhone 18 Pro售价或需增加约270美元。苹果已在上月提高Mac Mini起售价。摩根士丹利预测，今年美国智能手机和PC价格将上涨15%。",
-        "description": "苹果CEO库克确认，AI热潮导致存储芯片严重短缺和价格暴涨，苹果产品涨价已\"不可避免\"。库克未透露涨价具体细节。华尔街日报指出，全球AI巨头大幅增加资本开支，高带宽内存需求激增，挤压消费电子芯片供应。自2024年以来内存和存储芯片价格已翻四倍，涨势预计延续至2027年。研究机构估算，下一代iPhone 18 Pro售价或需增加约270美元。苹果已在上月提高Mac Mini起售价。摩根士丹利预测，今年美国智能手机和PC价格将上涨15%。",
-        "category": "industry",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/965/694.htm",
-        "recommendedReason": "苹果CEO库克确认，AI热潮导致存储芯片严重短缺和价格暴涨，苹果产品涨价已\"不可避免\"。库克未透露涨价具体细节。华尔街日报指出，全球AI巨头大幅增加资本开支，高带宽内存需求激增，挤压消费电子芯片供应。自2024年以来内存和存储芯片价格已翻四倍，涨势预计延续至2027年。研究机构估算，下一代iPhone 18 Pro售价或需增加约270美元。苹果已在上月提高Mac Mini起售价。摩根士丹利预测，今年美国智能手机和PC价格将上涨15%。",
-        "publishedAt": "2026-06-17T22:41:15.000Z",
-        "collectedAt": "2026-06-18T11:33:57.277Z",
-        "raw": {
-          "id": "cmqiotxxz02vfsl5wx32nujv2",
-          "titleEn": null,
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmqio5ehw02r0sl5wdidvo2dc",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Claude Code v2.1.181 发布",
-        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.181",
-        "summary": "Claude Code v2.1.181 发布，新增 `/config key=value` 语法允许在提示中直接设置任意配置项，新增 `sandbox.allowAppleEvents` 选项使沙盒命令支持 Apple Events，新增 `CLAUDE_CLIENT_PRESENCE_FILE` 环境变量用于抑制移动端推送通知。内置 Bun 运行时升级至 1.4，改进了长段落流式输出（逐行显示）和 API 连接中断后自动重试。子 agent 面板优化：空闲 agent 30 秒自动隐藏、列表最多 5 行。修复了提示缓存读取、Write/Edit 在网络驱动器产生 0 字节文件、启动性能回归（约 120ms）、启动阻塞（最长 15 秒）、macOS TUI 冻结、子 agent 时长显示错误、API 重试指示器残留、AWS 凭证刷新等问题。",
-        "description": "Claude Code v2.1.181 发布，新增 `/config key=value` 语法允许在提示中直接设置任意配置项，新增 `sandbox.allowAppleEvents` 选项使沙盒命令支持 Apple Events，新增 `CLAUDE_CLIENT_PRESENCE_FILE` 环境变量用于抑制移动端推送通知。内置 Bun 运行时升级至 1.4，改进了长段落流式输出（逐行显示）和 API 连接中断后自动重试。子 agent 面板优化：空闲 agent 30 秒自动隐藏、列表最多 5 行。修复了提示缓存读取、Write/Edit 在网络驱动器产生 0 字节文件、启动性能回归（约 120ms）、启动阻塞（最长 15 秒）、macOS TUI 冻结、子 agent 时长显示错误、API 重试指示器残留、AWS 凭证刷新等问题。",
-        "category": "products",
-        "originalSource": "Claude Code：GitHub Releases（RSS）",
-        "originalUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.181",
-        "recommendedReason": "Claude Code v2.1.181 发布，新增 `/config key=value` 语法允许在提示中直接设置任意配置项，新增 `sandbox.allowAppleEvents` 选项使沙盒命令支持 Apple Events，新增 `CLAUDE_CLIENT_PRESENCE_FILE` 环境变量用于抑制移动端推送通知。内置 Bun 运行时升级至 1.4，改进了长段落流式输出（逐行显示）和 API 连接中断后自动重试。子 agent 面板优化：空闲 agent 30 秒自动隐藏、列表最多 5 行。修复了提示缓存读取、Write/Edit 在网络驱动器产生 0 字节文件、启动性能回归（约 120ms）、启动阻塞（最长 15 秒）、macOS TUI 冻结、子 agent 时长显示错误、API 重试指示器残留、AWS 凭证刷新等问题。",
-        "publishedAt": "2026-06-17T22:07:41.000Z",
-        "collectedAt": "2026-06-18T11:33:57.277Z",
-        "raw": {
-          "id": "cmqio5ehw02r0sl5wdidvo2dc",
-          "titleEn": "v2.1.181",
-          "apiCategory": "ai-products"
-        }
-      }
-    ],
-    "crossSourceHighlights": [
-      {
-        "id": "url:https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year",
-        "canonicalId": "url:https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year",
-        "title": "泄露文件显示OpenAI年营收130亿但亏损远超收入",
-        "canonicalUrl": "https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year",
-          "title:泄露文件显示openai年营收130亿但亏损远超收入",
-          "title:leaked financial docs show openai is losing billions of dollars a year"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmqiot8mp02u5sl5w0n1vprt0",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "泄露文件显示OpenAI年营收130亿但亏损远超收入",
-            "url": "https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year",
-            "summary": "OpenAI 2025年营收130.7亿美元（2024年37亿），但研发成本达191.8亿（含向微软支付105.9亿），收入成本（推理计算）75亿，销售营销成本57.3亿，运营亏损209.2亿。2025年净亏损约390亿，扣除约300亿一次性会计费用后约80亿。2025年3月获1220亿融资（估值8520亿）。ChatGPT周活超9亿，付费约5000万。为控制成本已关闭Sora视频模型并削减非核心业务。",
-            "description": "OpenAI 2025年营收130.7亿美元（2024年37亿），但研发成本达191.8亿（含向微软支付105.9亿），收入成本（推理计算）75亿，销售营销成本57.3亿，运营亏损209.2亿。2025年净亏损约390亿，扣除约300亿一次性会计费用后约80亿。2025年3月获1220亿融资（估值8520亿）。ChatGPT周活超9亿，付费约5000万。为控制成本已关闭Sora视频模型并削减非核心业务。",
-            "category": "industry",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year",
-            "recommendedReason": "OpenAI 2025年营收130.7亿美元（2024年37亿），但研发成本达191.8亿（含向微软支付105.9亿），收入成本（推理计算）75亿，销售营销成本57.3亿，运营亏损209.2亿。2025年净亏损约390亿，扣除约300亿一次性会计费用后约80亿。2025年3月获1220亿融资（估值8520亿）。ChatGPT周活超9亿，付费约5000万。为控制成本已关闭Sora视频模型并削减非核心业务。",
-            "publishedAt": "2026-06-17T23:09:09.056Z",
-            "collectedAt": "2026-06-18T11:33:57.277Z",
-            "raw": {
-              "id": "cmqiot8mp02u5sl5w0n1vprt0",
-              "titleEn": "泄露的财务文件显示，OpenAI每年亏损数十亿美元",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:48577208",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Leaked financial docs show OpenAI is losing billions of dollars a year",
-            "url": "https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year/",
-            "author": "greenchair",
-            "tags": [
-              "ai",
-              "openai"
-            ],
-            "metrics": {
-              "upvotes": 353,
-              "commentsCount": 4
-            },
-            "publishedAt": "2026-06-17T21:31:35.000Z",
-            "collectedAt": "2026-06-18T11:33:56.296Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48577208",
-              "matchedKeywords": [
-                "ai",
-                "openai"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmqiot8mp02u5sl5w0n1vprt0",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "泄露文件显示OpenAI年营收130亿但亏损远超收入",
-            "url": "https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year",
-            "summary": "OpenAI 2025年营收130.7亿美元（2024年37亿），但研发成本达191.8亿（含向微软支付105.9亿），收入成本（推理计算）75亿，销售营销成本57.3亿，运营亏损209.2亿。2025年净亏损约390亿，扣除约300亿一次性会计费用后约80亿。2025年3月获1220亿融资（估值8520亿）。ChatGPT周活超9亿，付费约5000万。为控制成本已关闭Sora视频模型并削减非核心业务。",
-            "description": "OpenAI 2025年营收130.7亿美元（2024年37亿），但研发成本达191.8亿（含向微软支付105.9亿），收入成本（推理计算）75亿，销售营销成本57.3亿，运营亏损209.2亿。2025年净亏损约390亿，扣除约300亿一次性会计费用后约80亿。2025年3月获1220亿融资（估值8520亿）。ChatGPT周活超9亿，付费约5000万。为控制成本已关闭Sora视频模型并削减非核心业务。",
-            "category": "industry",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year",
-            "recommendedReason": "OpenAI 2025年营收130.7亿美元（2024年37亿），但研发成本达191.8亿（含向微软支付105.9亿），收入成本（推理计算）75亿，销售营销成本57.3亿，运营亏损209.2亿。2025年净亏损约390亿，扣除约300亿一次性会计费用后约80亿。2025年3月获1220亿融资（估值8520亿）。ChatGPT周活超9亿，付费约5000万。为控制成本已关闭Sora视频模型并削减非核心业务。",
-            "publishedAt": "2026-06-17T23:09:09.056Z",
-            "collectedAt": "2026-06-18T11:33:57.277Z",
-            "raw": {
-              "id": "cmqiot8mp02u5sl5w0n1vprt0",
-              "titleEn": "泄露的财务文件显示，OpenAI每年亏损数十亿美元",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:48577208",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Leaked financial docs show OpenAI is losing billions of dollars a year",
-            "url": "https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year/",
-            "author": "greenchair",
-            "tags": [
-              "ai",
-              "openai"
-            ],
-            "metrics": {
-              "upvotes": 353,
-              "commentsCount": 4
-            },
-            "publishedAt": "2026-06-17T21:31:35.000Z",
-            "collectedAt": "2026-06-18T11:33:56.296Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48577208",
-              "matchedKeywords": [
-                "ai",
-                "openai"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 353,
-          "commentsCount": 4,
-          "hnScore": 353,
-          "crossSourceBonus": 10,
-          "heatScore": 202
-        },
-        "crossSourceBonus": 10,
-        "category": "industry",
-        "summary": "OpenAI 2025年营收130.7亿美元（2024年37亿），但研发成本达191.8亿（含向微软支付105.9亿），收入成本（推理计算）75亿，销售营销成本57.3亿，运营亏损209.2亿。2025年净亏损约390亿，扣除约300亿一次性会计费用后约80亿。2025年3月获1220亿融资（估值8520亿）。ChatGPT周活超9亿，付费约5000万。为控制成本已关闭Sora视频模型并削减非核心业务。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-06-17T21:31:35.000Z",
-        "lastSeenAt": "2026-06-18T11:33:57.277Z"
-      },
-      {
-        "id": "url:https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
-        "canonicalId": "url:https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
-        "title": "Claude Design 更新：跨项目保持品牌一致，与Claude Code协同",
-        "canonicalUrl": "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
-          "title:claude design 更新 跨项目保持品牌一致 与claude code协同",
-          "topic:coding agent / swe agent",
-          "title:claude design now stays on brand for daily work"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmqijhrqi01insl5wwxvq9xc6",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Claude Design 更新：跨项目保持品牌一致，与Claude Code协同",
-            "url": "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
-            "summary": "6月17日，Claude Design 更新，支持跨项目使用统一设计系统，并与Claude Code同步工作流。用户可直接拖拽、对齐和缩放画布元素，编辑器稳定性大幅提升。设计系统可从GitHub、设计文件或原始上传导入，团队管理员可锁定标准系统防止篡改。新增桌面端侧边栏入口及独立网页端claude.ai/design。使用限制与聊天、Claude Cowork、Claude Code共享，每次任务消耗更少token，错误率下降。支持导出PDF、PPT，集成Adobe、Canva、Gamma等工具。发布首周用户超一百万。",
-            "description": "6月17日，Claude Design 更新，支持跨项目使用统一设计系统，并与Claude Code同步工作流。用户可直接拖拽、对齐和缩放画布元素，编辑器稳定性大幅提升。设计系统可从GitHub、设计文件或原始上传导入，团队管理员可锁定标准系统防止篡改。新增桌面端侧边栏入口及独立网页端claude.ai/design。使用限制与聊天、Claude Cowork、Claude Code共享，每次任务消耗更少token，错误率下降。支持导出PDF、PPT，集成Adobe、Canva、Gamma等工具。发布首周用户超一百万。",
-            "category": "products",
-            "originalSource": "Claude：Blog（网页）",
-            "originalUrl": "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
-            "recommendedReason": "6月17日，Claude Design 更新，支持跨项目使用统一设计系统，并与Claude Code同步工作流。用户可直接拖拽、对齐和缩放画布元素，编辑器稳定性大幅提升。设计系统可从GitHub、设计文件或原始上传导入，团队管理员可锁定标准系统防止篡改。新增桌面端侧边栏入口及独立网页端claude.ai/design。使用限制与聊天、Claude Cowork、Claude Code共享，每次任务消耗更少token，错误率下降。支持导出PDF、PPT，集成Adobe、Canva、Gamma等工具。发布首周用户超一百万。",
-            "publishedAt": "2026-06-17T20:44:36.833Z",
-            "collectedAt": "2026-06-18T11:33:57.277Z",
-            "raw": {
-              "id": "cmqijhrqi01insl5wwxvq9xc6",
-              "titleEn": "Claude Design now stays on brand for daily work",
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "hackernews:48583736",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Claude Design now stays on brand for daily work",
-            "url": "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
-            "author": "peterspath",
-            "tags": [
-              "ai",
-              "claude"
-            ],
-            "metrics": {
-              "upvotes": 1,
-              "commentsCount": 0
-            },
-            "publishedAt": "2026-06-18T11:23:43.000Z",
-            "collectedAt": "2026-06-18T11:33:56.296Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48583736",
-              "matchedKeywords": [
-                "ai",
-                "claude"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmqijhrqi01insl5wwxvq9xc6",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Claude Design 更新：跨项目保持品牌一致，与Claude Code协同",
-            "url": "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
-            "summary": "6月17日，Claude Design 更新，支持跨项目使用统一设计系统，并与Claude Code同步工作流。用户可直接拖拽、对齐和缩放画布元素，编辑器稳定性大幅提升。设计系统可从GitHub、设计文件或原始上传导入，团队管理员可锁定标准系统防止篡改。新增桌面端侧边栏入口及独立网页端claude.ai/design。使用限制与聊天、Claude Cowork、Claude Code共享，每次任务消耗更少token，错误率下降。支持导出PDF、PPT，集成Adobe、Canva、Gamma等工具。发布首周用户超一百万。",
-            "description": "6月17日，Claude Design 更新，支持跨项目使用统一设计系统，并与Claude Code同步工作流。用户可直接拖拽、对齐和缩放画布元素，编辑器稳定性大幅提升。设计系统可从GitHub、设计文件或原始上传导入，团队管理员可锁定标准系统防止篡改。新增桌面端侧边栏入口及独立网页端claude.ai/design。使用限制与聊天、Claude Cowork、Claude Code共享，每次任务消耗更少token，错误率下降。支持导出PDF、PPT，集成Adobe、Canva、Gamma等工具。发布首周用户超一百万。",
-            "category": "products",
-            "originalSource": "Claude：Blog（网页）",
-            "originalUrl": "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
-            "recommendedReason": "6月17日，Claude Design 更新，支持跨项目使用统一设计系统，并与Claude Code同步工作流。用户可直接拖拽、对齐和缩放画布元素，编辑器稳定性大幅提升。设计系统可从GitHub、设计文件或原始上传导入，团队管理员可锁定标准系统防止篡改。新增桌面端侧边栏入口及独立网页端claude.ai/design。使用限制与聊天、Claude Cowork、Claude Code共享，每次任务消耗更少token，错误率下降。支持导出PDF、PPT，集成Adobe、Canva、Gamma等工具。发布首周用户超一百万。",
-            "publishedAt": "2026-06-17T20:44:36.833Z",
-            "collectedAt": "2026-06-18T11:33:57.277Z",
-            "raw": {
-              "id": "cmqijhrqi01insl5wwxvq9xc6",
-              "titleEn": "Claude Design now stays on brand for daily work",
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "hackernews:48583736",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Claude Design now stays on brand for daily work",
-            "url": "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
-            "author": "peterspath",
-            "tags": [
-              "ai",
-              "claude"
-            ],
-            "metrics": {
-              "upvotes": 1,
-              "commentsCount": 0
-            },
-            "publishedAt": "2026-06-18T11:23:43.000Z",
-            "collectedAt": "2026-06-18T11:33:56.296Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48583736",
-              "matchedKeywords": [
-                "ai",
-                "claude"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 1,
-          "hnScore": 1,
-          "crossSourceBonus": 10,
-          "heatScore": 41
-        },
-        "crossSourceBonus": 10,
-        "category": "products",
-        "summary": "6月17日，Claude Design 更新，支持跨项目使用统一设计系统，并与Claude Code同步工作流。用户可直接拖拽、对齐和缩放画布元素，编辑器稳定性大幅提升。设计系统可从GitHub、设计文件或原始上传导入，团队管理员可锁定标准系统防止篡改。新增桌面端侧边栏入口及独立网页端claude.ai/design。使用限制与聊天、Claude Cowork、Claude Code共享，每次任务消耗更少token，错误率下降。支持导出PDF、PPT，集成Adobe、Canva、Gamma等工具。发布首周用户超一百万。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-06-17T20:44:36.833Z",
-        "lastSeenAt": "2026-06-18T11:33:57.277Z"
       }
     ]
   }
