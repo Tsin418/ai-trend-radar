@@ -1,178 +1,186 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-06-18T01:47:15.699Z",
+  "generatedAt": "2026-06-18T05:02:49.449Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2606.19157v1",
+        "id": "http://arxiv.org/abs/2606.19341v1",
         "source": "arxiv",
         "sourceType": "paper",
-        "title": "IndicContextEval: A Benchmark for Evaluating Context Utilisation in Audio Large Language Models Across 8 Indic Languages",
-        "url": "https://arxiv.org/pdf/2606.19157v1",
-        "description": "AudioLLMs enable speech recognition conditioned on textual prompts such as domain descriptions or entity lists. However, it remains unclear whether these models genuinely utilise such context or rely on parametric knowledge learned during pretraining. Existing benchmarks cannot answer this question because they evaluate transcription under fixed prompting conditions and rarely include explicit contextual inputs. We introduce IndicContextEval, a 56-hour multilingual benchmark of natural speech fr",
-        "summary": "AudioLLMs enable speech recognition conditioned on textual prompts such as domain descriptions or entity lists. However, it remains unclear whether these models genuinely utilise such context or rely on parametric knowledge learned during pretraining. Existing benchmarks cannot answer this question because they evaluate transcription under fixed prompting conditions and rarely include explicit contextual inputs. We introduce IndicContextEval, a 56-hour multilingual benchmark of natural speech from 555 speakers across 8 Indian languages and 23 professional domains. We design a 7-level prompting framework that progressively introduces contextual signals, including metadata, natural-language descriptions, entity lists in English and native script, and adversarial prompts with incorrect entities. Evaluating five models reveals substantial differences in context utilisation behaviour, highlighting the need for explicit evaluation of contextual grounding in AudioLLMs.",
-        "author": "Sakshi Joshi, Dhruv Subhash Rathi, Sanskar Singh, Eldho Ittan George, R J Hari, Kaushal Bhogale, Mitesh M. Khapra",
+        "title": "Native Active Perception as Reasoning for Omni-Modal Understanding",
+        "url": "https://arxiv.org/pdf/2606.19341v1",
+        "description": "Passive models for long video understanding typically rely on a \"watch-it-all\" paradigm, processing frames uniformly regardless of query difficulty, causing computational cost to grow with video duration. Although interactive frameworks have emerged, they often rely on global pre-scanning, and their context cost still scales with video length. We propose OmniAgent, the first native omni-modal agent that formulates video understanding as a POMDP-based iterative Observation-Thought-Action cycle. O",
+        "summary": "Passive models for long video understanding typically rely on a \"watch-it-all\" paradigm, processing frames uniformly regardless of query difficulty, causing computational cost to grow with video duration. Although interactive frameworks have emerged, they often rely on global pre-scanning, and their context cost still scales with video length. We propose OmniAgent, the first native omni-modal agent that formulates video understanding as a POMDP-based iterative Observation-Thought-Action cycle. OmniAgent executes on-demand actions to selectively distill audio-visual cues into a persistent textual memory, effectively decoupling reasoning complexity from raw video duration. To operationalize this, we introduce (1) Agentic Supervised Fine-Tuning to bootstrap native active perception via best-of-N trajectory synthesis with dual-stage quality control, and (2) Agentic Reinforcement Learning with TAURA (Turn-aware Adaptive Uncertainty Rescaled Advantage), which leverages turn-level entropy to steer credit assignment toward pivotal discovery turns. Crucially, OmniAgent exhibits positive test-time scaling, where performance improves as the number of reasoning turns increases, validating the efficacy of active perception. Empirical results across ten benchmarks (e.g., VideoMME, LVBench) demonstrate that OmniAgent achieves state-of-the-art performance among open-source models. Notably, on LVBench, our 7B agent outperforms the 10$\\times$ larger Qwen2.5-VL-72B (50.5% vs. 47.3%).",
+        "author": "Zhenghao Xing, Ruiyang Xu, Yuxuan Wang, Jinzheng He, Ziyang Ma, Qize Yang, Yunfei Chu, Jin Xu, Junyang Lin, Chi-Wing Fu, Pheng-Ann Heng",
         "tags": [
-          "eess.AS",
+          "cs.CV",
+          "cs.CL",
+          "cs.SD",
+          "agent",
+          "rag",
+          "fine-tuning",
+          "benchmark",
+          "agentic"
+        ],
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-06-17T17:59:56Z",
+        "updatedAt": "2026-06-17T17:59:56Z",
+        "collectedAt": "2026-06-18T05:02:00.174Z",
+        "metrics": {},
+        "raw": {
+          "abstractUrl": "http://arxiv.org/abs/2606.19341v1",
+          "authors": [
+            "Zhenghao Xing",
+            "Ruiyang Xu",
+            "Yuxuan Wang",
+            "Jinzheng He",
+            "Ziyang Ma",
+            "Qize Yang",
+            "Yunfei Chu",
+            "Jin Xu",
+            "Junyang Lin",
+            "Chi-Wing Fu",
+            "Pheng-Ann Heng"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: agent, rag, fine-tuning, benchmark, agentic"
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.19336v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Learning User Simulators with Turing Rewards",
+        "url": "https://arxiv.org/pdf/2606.19336v1",
+        "description": "Learning to simulate human users in interactive settings could advance the training of agent assistants, evaluation of personalization systems, research in the social sciences, and more. Existing approaches generally do so by training a large language model (LLM) to match a single ground truth response, either by maximizing the log probability or by using a similarity reward. We instead propose {Turing-RL}: a Turing-Test-based reinforcement learning approach for training user simulator models. {",
+        "summary": "Learning to simulate human users in interactive settings could advance the training of agent assistants, evaluation of personalization systems, research in the social sciences, and more. Existing approaches generally do so by training a large language model (LLM) to match a single ground truth response, either by maximizing the log probability or by using a similarity reward. We instead propose {Turing-RL}: a Turing-Test-based reinforcement learning approach for training user simulator models. {Turing-RL} uses a discriminative Turing reward with an LLM judge to score how indistinguishable a generated response is from the real user's given the user's history, and the user simulator LLM learns to produce responses indistinguishable from what the user could have said with such rewards. Across two different domains--conversational chat and Reddit forum discussion--we find that {Turing-RL} consistently outperforms baseline methods on both LLM and human evaluation metrics. Our study suggests that optimizing for indistinguishability, rather than response matching, is effective for learning user simulators.",
+        "author": "Yingshan Susan Wang, Cedegao E. Zhang, Linlu Qiu, Zexue He, Pengyuan Li, Alex Pentland, Roger P. Levy, Yoon Kim",
+        "tags": [
           "cs.CL",
           "large language model",
           "llm",
-          "benchmark",
-          "evaluation"
-        ],
-        "category": "eess.AS",
-        "language": "en",
-        "publishedAt": "2026-06-17T14:59:37Z",
-        "updatedAt": "2026-06-17T14:59:37Z",
-        "collectedAt": "2026-06-18T01:46:34.431Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.19157v1",
-          "authors": [
-            "Sakshi Joshi",
-            "Dhruv Subhash Rathi",
-            "Sanskar Singh",
-            "Eldho Ittan George",
-            "R J Hari",
-            "Kaushal Bhogale",
-            "Mitesh M. Khapra"
-          ]
-        },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, benchmark, evaluation"
-      },
-      {
-        "id": "http://arxiv.org/abs/2606.19152v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "AdsMind: A Physics-Grounded Multi-Agent System for Self-Correcting Discovery of Adsorption Configurations on Heterogeneous Catalyst Surfaces",
-        "url": "https://arxiv.org/pdf/2606.19152v1",
-        "description": "Identifying the lowest-energy surface-adsorbate configuration is critical for modeling heterogeneous catalysis, yet exhaustive exploration with ab initio calculations is computationally prohibitive. Machine-learning force fields (MLFFs) accelerate structural relaxation but leave the search over the vast configurational space a major bottleneck, and open-loop large language model (LLM) agents lack a physics-grounded feedback mechanism to correct erroneous initial guesses. We propose AdsMind (Adso",
-        "summary": "Identifying the lowest-energy surface-adsorbate configuration is critical for modeling heterogeneous catalysis, yet exhaustive exploration with ab initio calculations is computationally prohibitive. Machine-learning force fields (MLFFs) accelerate structural relaxation but leave the search over the vast configurational space a major bottleneck, and open-loop large language model (LLM) agents lack a physics-grounded feedback mechanism to correct erroneous initial guesses. We propose AdsMind (Adsorption configuration discovery with Machine intelligence and relaxation feedback), a closed-loop multi-agent framework that enables autonomous error correction through MLFF relaxation feedback. Across four LLM backends, AdsMind achieves consistently high search reliability, with success rates of 100% and 98.8% on the benchmarks AA20 and OCD-GMAE62. Relative to its single-pass (1-Shot) ablation it reduces cross-backend energy dispersion, and it uses only 4.11 and 4.67 MLFF relaxations per case, respectively -- an approximately 14-fold reduction over heuristic enumeration baselines. Density functional theory (DFT) validation using VASP/PBE on six representative AA20 systems shows that the reported open-loop Adsorb-Agent outputs exhibit qualitative adsorption-energy sign errors for molecular adsorbates, whereas AdsMind preserves the correct sign in all tested cases with closer quantitative agreement. AdsMind thus delivers reliability, self-reflection, and interpretability simultaneously, supporting more DFT-informed autonomous chemistry workflows.",
-        "author": "Zongmin Zhang, Yuyang Lou, Bowen Zhang, Junwu Chen, Ryo Kuroki, Xuan Vu Nguyen, Edvin Fako, Lixue Cheng, Philippe Schwaller",
-        "tags": [
-          "cond-mat.mtrl-sci",
-          "cs.AI",
-          "large language model",
-          "llm",
           "agent",
-          "multi-agent",
-          "benchmark",
-          "workflow"
-        ],
-        "category": "cond-mat.mtrl-sci",
-        "language": "en",
-        "publishedAt": "2026-06-17T14:57:16Z",
-        "updatedAt": "2026-06-17T14:57:16Z",
-        "collectedAt": "2026-06-18T01:46:34.431Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.19152v1",
-          "authors": [
-            "Zongmin Zhang",
-            "Yuyang Lou",
-            "Bowen Zhang",
-            "Junwu Chen",
-            "Ryo Kuroki",
-            "Xuan Vu Nguyen",
-            "Edvin Fako",
-            "Lixue Cheng",
-            "Philippe Schwaller"
-          ]
-        },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, agent, multi-agent, benchmark"
-      },
-      {
-        "id": "http://arxiv.org/abs/2606.19150v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Complementary Attention Head Pruning for Efficient Transformers",
-        "url": "https://arxiv.org/pdf/2606.19150v1",
-        "description": "The remarkable success of Transformer-based models in natural language processing stems from architectural scaling, which leads to a large number of parameters and hinders deployment in resource-constrained environments. While structured pruning offers a pathway to compression, existing state-of-the-art methods often rely on gradient-based importance ranking or stochastic gating, which suffer from instability, structural degeneration, and the need for extensive manual hyperparameter tuning. In t",
-        "summary": "The remarkable success of Transformer-based models in natural language processing stems from architectural scaling, which leads to a large number of parameters and hinders deployment in resource-constrained environments. While structured pruning offers a pathway to compression, existing state-of-the-art methods often rely on gradient-based importance ranking or stochastic gating, which suffer from instability, structural degeneration, and the need for extensive manual hyperparameter tuning. In this paper, we introduce CAHP (Complementary Attention Head Pruning), a novel post-hoc framework that redefines head selection as a global graph-theoretical problem. Rather than evaluating heads in isolation, CAHP utilizes graph-based clustering combined with information-theoretic distance measures to identify and preserve a topologically diverse subset of complementary attention heads. Without requiring a predefined sparsity level or pruning ratio, the framework automatically determines the number of selected attention heads across layers by identifying a diminishing marginal performance curve, where pruning additional heads leads to a sharp degradation in performance, as determined by the chosen polynomial degree. Extensive evaluations on the SST-5 and MNLI benchmarks, across different Transformer model scales, demonstrate that CAHP consistently outperforms competitive baselines, particularly in high-compression regimes. Furthermore, our structural analysis shows that CAHP avoids the \"proximity bias\" of gradient-based pruning methods, which tend to preserve heads mainly in layers close to the output, and instead retains a functionally critical set of attention heads in the model's intermediate layers.",
-        "author": "Yaniv Livertovsky, Shahar Somin, Gonen Singer",
-        "tags": [
-          "cs.LG",
-          "benchmark",
           "evaluation"
         ],
-        "category": "cs.LG",
+        "category": "cs.CL",
         "language": "en",
-        "publishedAt": "2026-06-17T14:56:27Z",
-        "updatedAt": "2026-06-17T14:56:27Z",
-        "collectedAt": "2026-06-18T01:46:34.431Z",
+        "publishedAt": "2026-06-17T17:58:48Z",
+        "updatedAt": "2026-06-17T17:58:48Z",
+        "collectedAt": "2026-06-18T05:02:00.174Z",
         "metrics": {},
         "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.19150v1",
+          "abstractUrl": "http://arxiv.org/abs/2606.19336v1",
           "authors": [
-            "Yaniv Livertovsky",
-            "Shahar Somin",
-            "Gonen Singer"
+            "Yingshan Susan Wang",
+            "Cedegao E. Zhang",
+            "Linlu Qiu",
+            "Zexue He",
+            "Pengyuan Li",
+            "Alex Pentland",
+            "Roger P. Levy",
+            "Yoon Kim"
           ]
         },
-        "recommendedReason": "Matched AI developer keywords: benchmark, evaluation"
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, agent, evaluation"
       },
       {
-        "id": "http://arxiv.org/abs/2606.19149v1",
+        "id": "http://arxiv.org/abs/2606.19334v1",
         "source": "arxiv",
         "sourceType": "paper",
-        "title": "OpenAnt: LLM-Powered Vulnerability Discovery Through Code Decomposition, Adversarial Verification, and Dynamic Testing",
-        "url": "https://arxiv.org/pdf/2606.19149v1",
-        "description": "Automated vulnerability discovery in large codebases remains challenging: traditional static analysis produces high false-positive rates, while dynamic approaches such as fuzzing require substantial infrastructure and often target narrow classes of bugs. Recent advances in large language models (LLMs) enable semantic reasoning about program behavior, but applying LLMs to repository-scale security analysis introduces challenges related to context management, cost, and verification. We present Ope",
-        "summary": "Automated vulnerability discovery in large codebases remains challenging: traditional static analysis produces high false-positive rates, while dynamic approaches such as fuzzing require substantial infrastructure and often target narrow classes of bugs. Recent advances in large language models (LLMs) enable semantic reasoning about program behavior, but applying LLMs to repository-scale security analysis introduces challenges related to context management, cost, and verification. We present OpenAnt, an open-source vulnerability discovery system that integrates static program analysis with LLM-based reasoning in a multi-stage pipeline. OpenAnt introduces three key techniques. First, codebases are decomposed into self-contained analysis units filtered by reachability from external entry points, reducing the analysis surface by up to 97% while preserving attack-relevant code. Second, candidate vulnerabilities undergo adversarial verification through constrained attacker simulation, where the model evaluates exploitability under realistic attacker capabilities. Third, findings are validated through dynamic verification, in which exploit environments are generated automatically, executed in sandboxed containers, and discarded after use. Evaluation on widely used open-source projects including OpenSSL, WordPress, and Flowise shows that this architecture can identify previously unknown vulnerabilities while maintaining manageable analysis cost and substantially reducing false positives. Our results suggest that closed-loop vulnerability discovery pipelines, combining semantic reasoning with exploit validation, provide a practical path toward scalable automated security analysis. OpenAnt is released as open source under the Apache 2.0 license at https://github.com/knostic/OpenAnt.",
-        "author": "Nahum Korda, Gadi Evron",
+        "title": "Freeing the Law with LOCUS: A Local Ordinance Corpus for the United States",
+        "url": "https://arxiv.org/pdf/2606.19334v1",
+        "description": "Progress in legal AI increasingly depends on access to authoritative legal text at scale. Yet one of the most consequential layers of American law remains largely absent from existing machine-readable corpora: local ordinances. Local codes govern zoning, housing, business licensing, public health, noise, animal control, and many other domains of everyday regulation, but they are fragmented across vendor platforms designed for human browsing rather than bulk research access. We introduce LOCUS - ",
+        "summary": "Progress in legal AI increasingly depends on access to authoritative legal text at scale. Yet one of the most consequential layers of American law remains largely absent from existing machine-readable corpora: local ordinances. Local codes govern zoning, housing, business licensing, public health, noise, animal control, and many other domains of everyday regulation, but they are fragmented across vendor platforms designed for human browsing rather than bulk research access. We introduce LOCUS - the Local Ordinance Corpus for the United States - a comprehensive corpus and county-harmonized access layer for U.S. municipal and county ordinance codes. The raw corpus, available for release to researchers, represents nearly all publicly available municipal and county ordinance codes. The resulting raw corpus contains codes from 9,239 cities and counties. A smaller county-harmonized LOCUS access layer provides coverage for the largest 2,309 of 3,144 U.S. counties, accounting for a majority of the population. We use OCR to handle the myriad of document formats that have kept the law from being a public resource. We release the corpus with coverage metadata to support reproducibility, downstream legal AI research, and the incremental expansion of machine-readable access to local law. We train a collection of ModernBERT-based classifiers and scorers to facilitate analyzing U.S. local law among several dimensions, such as opacity and paternalism, that have not previously been studied at this scale. LOCUS-v1 and its derivative models are available at: https://huggingface.co/datasets/LocalLaws/LOCUS-v1",
+        "author": "Denis Peskoff, Joe Barrow, Christopher Vu, Diag Davenport",
         "tags": [
-          "cs.CR",
+          "cs.CL",
+          "cs.CY",
           "cs.LG",
-          "large language model",
-          "llm",
-          "evaluation"
+          "rag"
         ],
-        "category": "cs.CR",
+        "category": "cs.CL",
         "language": "en",
-        "publishedAt": "2026-06-17T14:56:04Z",
-        "updatedAt": "2026-06-17T14:56:04Z",
-        "collectedAt": "2026-06-18T01:46:34.431Z",
+        "publishedAt": "2026-06-17T17:58:22Z",
+        "updatedAt": "2026-06-17T17:58:22Z",
+        "collectedAt": "2026-06-18T05:02:00.174Z",
         "metrics": {},
         "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.19149v1",
+          "abstractUrl": "http://arxiv.org/abs/2606.19334v1",
           "authors": [
-            "Nahum Korda",
-            "Gadi Evron"
+            "Denis Peskoff",
+            "Joe Barrow",
+            "Christopher Vu",
+            "Diag Davenport"
           ]
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, evaluation"
+        "recommendedReason": "Matched AI developer keywords: rag"
       },
       {
-        "id": "http://arxiv.org/abs/2606.19145v1",
+        "id": "http://arxiv.org/abs/2606.19328v1",
         "source": "arxiv",
         "sourceType": "paper",
-        "title": "OrthoReg: Orthogonal Regularization for Hybrid Symbolic-Neural Dynamical Systems",
-        "url": "https://arxiv.org/pdf/2606.19145v1",
-        "description": "Dynamical systems are fundamental to modeling the natural world, yet modeling them involves a persistent trade-off: manually prescribed mechanistic models are interpretable by design but often overly simplistic and misspecified; in contrast, flexible data-driven neural methods lack physical insight. Hybrid modeling aims for the best of both worlds by combining a prescribed or symbolic, physics-based component with a flexible neural network. A critical challenge, however, is that the neural compo",
-        "summary": "Dynamical systems are fundamental to modeling the natural world, yet modeling them involves a persistent trade-off: manually prescribed mechanistic models are interpretable by design but often overly simplistic and misspecified; in contrast, flexible data-driven neural methods lack physical insight. Hybrid modeling aims for the best of both worlds by combining a prescribed or symbolic, physics-based component with a flexible neural network. A critical challenge, however, is that the neural component may relearn mechanistic parts, yielding redundant and uninterpretable models, especially when the symbolic structure itself is discovered from data. Existing methods based on standard $L^2$ regularization rely on a projection argument that breaks when the symbolic component is learned through sparse discovery, allowing the neural augmentation to overlap with symbolic structure. We introduce \\textbf{OrthoReg} (Orthogonal Regularization), which directly penalizes overlap between the symbolic and neural components, preventing symbolic structure from being absorbed by the neural residual. This yields a complementary decomposition: the symbolic part captures what the library can express, and the neural part captures what remains. On benchmark dynamical systems with partial library mismatch, OrthoReg improves symbolic recovery and out-of-distribution behavior.",
-        "author": "Till Richter, Niki Kilbertus",
+        "title": "UBP2: Uncertainty-Balanced Preference Planning for Efficient Preference-based Reinforcement Learning",
+        "url": "https://arxiv.org/pdf/2606.19328v1",
+        "description": "Preference-based RL provides an approach to learning reward models from pairwise comparisons of behaviors, bypassing the need for explicit reward design. However, existing methods typically rely on passive data collection and suffer from poor sample efficiency, especially during the early stages of learning. We introduce a model-based approach that actively directs exploration by jointly reasoning over uncertainties in the reward, dynamics, and value functions. Our method, Uncertainty-Balanced P",
+        "summary": "Preference-based RL provides an approach to learning reward models from pairwise comparisons of behaviors, bypassing the need for explicit reward design. However, existing methods typically rely on passive data collection and suffer from poor sample efficiency, especially during the early stages of learning. We introduce a model-based approach that actively directs exploration by jointly reasoning over uncertainties in the reward, dynamics, and value functions. Our method, Uncertainty-Balanced Preference Planning (UBP2), uses ensembles of reward, dynamics, and value function models to evaluate candidate trajectories according to a unified score that combines expected reward, terminal value, and epistemic uncertainty. Planning under this objective yields an explicit tradeoff between exploitation and information acquisition without requiring ad hoc exploration heuristics. Under standard regularity assumptions, we establish sublinear regret guarantees for both finite-horizon and infinite-horizon settings. Empirically, experiments on the Meta-World benchmark show UBP2 achieves substantially higher sample efficiency than model-free preference-based methods and non-optimistic model-based baselines.",
+        "author": "Mohamed Nabail, Leo Cheng, Jingmin Wang, Nicholas Rhinehart",
         "tags": [
           "cs.LG",
           "cs.AI",
-          "eess.SY",
+          "cs.RO",
           "benchmark"
         ],
         "category": "cs.LG",
         "language": "en",
-        "publishedAt": "2026-06-17T14:48:10Z",
-        "updatedAt": "2026-06-17T14:48:10Z",
-        "collectedAt": "2026-06-18T01:46:34.431Z",
+        "publishedAt": "2026-06-17T17:54:32Z",
+        "updatedAt": "2026-06-17T17:54:32Z",
+        "collectedAt": "2026-06-18T05:02:00.174Z",
         "metrics": {},
         "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.19145v1",
+          "abstractUrl": "http://arxiv.org/abs/2606.19328v1",
           "authors": [
-            "Till Richter",
-            "Niki Kilbertus"
+            "Mohamed Nabail",
+            "Leo Cheng",
+            "Jingmin Wang",
+            "Nicholas Rhinehart"
           ]
         },
         "recommendedReason": "Matched AI developer keywords: benchmark"
+      },
+      {
+        "id": "http://arxiv.org/abs/2606.19327v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation",
+        "url": "https://arxiv.org/pdf/2606.19327v1",
+        "description": "Post-training of reasoning language models is commonly driven by supervised distillation and reinforcement learning with verifiable rewards. Distillation often relies on chain-of-thought annotations that are expensive to obtain and may themselves be noisy, incomplete, or partially incorrect; even when the final solution is correct, an imperfect rationale can interfere with learning. Reinforcement learning with verified rewards, on the other hand, typically compresses evaluative feedback into a s",
+        "summary": "Post-training of reasoning language models is commonly driven by supervised distillation and reinforcement learning with verifiable rewards. Distillation often relies on chain-of-thought annotations that are expensive to obtain and may themselves be noisy, incomplete, or partially incorrect; even when the final solution is correct, an imperfect rationale can interfere with learning. Reinforcement learning with verified rewards, on the other hand, typically compresses evaluative feedback into a scalar signal, obscuring which aspects of a response should be improved. We propose \\textbf{Rubric-Conditioned Self-Distillation}, a framework that incorporates rubrics as structured, fine-grained feedback for on-policy self-distillation. Our method conditions the teacher model on criterion-level rubrics and uses it to provide token-level guidance on the student's own sampled trajectories. This design avoids treating a single reference rationale as the sole supervision target. Instead, rubrics specify what a strong response should satisfy, enabling more fine-grained credit assignment over the reasoning process than scalar reward optimization. We instantiate this framework with a two-stage pipeline that first learns to generate task-specific rubrics and then trains a rubric-guided reasoner. We evaluate on a diverse suite of science reasoning benchmarks and results show that rubric-conditioned self-distillation effectively converts rubric-level criteria into token-level guidance over the reasoning process, surpassing GRPO by 1.0 points and OPSD by 0.9 points on average.",
+        "author": "Siyi Gu, Jialin Chen, Sophia Zhou, Arman Cohan, Rex Ying",
+        "tags": [
+          "cs.AI",
+          "cs.CL",
+          "rag",
+          "benchmark"
+        ],
+        "category": "cs.AI",
+        "language": "en",
+        "publishedAt": "2026-06-17T17:54:04Z",
+        "updatedAt": "2026-06-17T17:54:04Z",
+        "collectedAt": "2026-06-18T05:02:00.174Z",
+        "metrics": {},
+        "raw": {
+          "abstractUrl": "http://arxiv.org/abs/2606.19327v1",
+          "authors": [
+            "Siyi Gu",
+            "Jialin Chen",
+            "Sophia Zhou",
+            "Arman Cohan",
+            "Rex Ying"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: rag, benchmark"
       }
     ],
     "developerBuzz": [
@@ -187,11 +195,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1001,
-          "commentsCount": 529
+          "upvotes": 1024,
+          "commentsCount": 535
         },
         "publishedAt": "2026-06-17T12:11:27.000Z",
-        "collectedAt": "2026-06-18T01:46:34.344Z",
+        "collectedAt": "2026-06-18T05:02:00.019Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48569278",
           "matchedKeywords": [
@@ -210,11 +218,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 789,
-          "commentsCount": 385
+          "upvotes": 822,
+          "commentsCount": 398
         },
         "publishedAt": "2026-06-17T09:12:00.000Z",
-        "collectedAt": "2026-06-18T01:46:34.344Z",
+        "collectedAt": "2026-06-18T05:02:00.019Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48567759",
           "matchedKeywords": [
@@ -233,11 +241,11 @@
           "cursor"
         ],
         "metrics": {
-          "upvotes": 1113,
-          "commentsCount": 1643
+          "upvotes": 1116,
+          "commentsCount": 1647
         },
         "publishedAt": "2026-06-16T10:44:24.000Z",
-        "collectedAt": "2026-06-18T01:46:34.344Z",
+        "collectedAt": "2026-06-18T05:02:00.019Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48553224",
           "matchedKeywords": [
@@ -256,11 +264,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 916,
+          "upvotes": 921,
           "commentsCount": 451
         },
         "publishedAt": "2026-06-16T04:58:15.000Z",
-        "collectedAt": "2026-06-18T01:46:34.344Z",
+        "collectedAt": "2026-06-18T05:02:00.019Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48550779",
           "matchedKeywords": [
@@ -279,11 +287,11 @@
           "rag"
         ],
         "metrics": {
-          "upvotes": 635,
-          "commentsCount": 585
+          "upvotes": 639,
+          "commentsCount": 588
         },
         "publishedAt": "2026-06-16T16:42:32.000Z",
-        "collectedAt": "2026-06-18T01:46:34.344Z",
+        "collectedAt": "2026-06-18T05:02:00.019Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48558045",
           "matchedKeywords": [
@@ -294,23 +302,63 @@
     ],
     "aihotHighlights": [
       {
-        "id": "aihot:cmqiu6my004bhsl5we9emftn9",
+        "id": "aihot:cmqixf0ar057msl5w132f09uc",
         "source": "aihot",
         "sourceType": "curated_trend",
-        "title": "Noam Shazeer 加入 OpenAI，告别 Google",
-        "url": "https://x.com/jxnlco/status/2067417431836934406",
-        "summary": "Noam Shazeer 宣布将加入 OpenAI，期待与那里的优秀团队合作。离开 Google 是一个艰难的决定，他为 Google 的团队和共同取得的成就感到自豪。",
-        "description": "Noam Shazeer 宣布将加入 OpenAI，期待与那里的优秀团队合作。离开 Google 是一个艰难的决定，他为 Google 的团队和共同取得的成就感到自豪。",
-        "category": "industry",
-        "originalSource": "X：Jason Liu (@jxnlco)",
-        "originalUrl": "https://x.com/jxnlco/status/2067417431836934406",
-        "recommendedReason": "Noam Shazeer 宣布将加入 OpenAI，期待与那里的优秀团队合作。离开 Google 是一个艰难的决定，他为 Google 的团队和共同取得的成就感到自豪。",
-        "publishedAt": "2026-06-18T01:21:41.000Z",
-        "collectedAt": "2026-06-18T01:46:35.624Z",
+        "title": "cuTile Rust：安全无数据竞争的 GPU 内核系统",
+        "url": "https://github.com/nvlabs/cutile-rs",
+        "summary": "cuTile Rust 是一个基于 tile 的 GPU 编程系统，允许用 Rust 编写内存安全、无数据竞争的内核。它通过 `#【cutile：：module】` 宏将内核 AST 嵌入主机二进制，在运行时经 CUDA Tile IR JIT 编译为 GPU cubin。可变张量在启动前分割，不可变张量共享，启动器在 GPU 工作期间保持所有权。在 NVIDIA B200 上，逐元素操作达 7 TB/s（约 91% 峰值带宽），GEMM 达 2 PFlop/s（约 92% 密集 f16 峰值）。基于 cuTile Rust 构建的 Grout 推理引擎在 RTX 5090 上解码 Qwen3-4B 达 171 tokens/s，在 B200 上解码 Qwen3-32B 达 82 tokens/s。项目处于早期研究阶段。",
+        "description": "cuTile Rust 是一个基于 tile 的 GPU 编程系统，允许用 Rust 编写内存安全、无数据竞争的内核。它通过 `#【cutile：：module】` 宏将内核 AST 嵌入主机二进制，在运行时经 CUDA Tile IR JIT 编译为 GPU cubin。可变张量在启动前分割，不可变张量共享，启动器在 GPU 工作期间保持所有权。在 NVIDIA B200 上，逐元素操作达 7 TB/s（约 91% 峰值带宽），GEMM 达 2 PFlop/s（约 92% 密集 f16 峰值）。基于 cuTile Rust 构建的 Grout 推理引擎在 RTX 5090 上解码 Qwen3-4B 达 171 tokens/s，在 B200 上解码 Qwen3-32B 达 82 tokens/s。项目处于早期研究阶段。",
+        "category": "products",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://github.com/nvlabs/cutile-rs",
+        "recommendedReason": "cuTile Rust 是一个基于 tile 的 GPU 编程系统，允许用 Rust 编写内存安全、无数据竞争的内核。它通过 `#【cutile：：module】` 宏将内核 AST 嵌入主机二进制，在运行时经 CUDA Tile IR JIT 编译为 GPU cubin。可变张量在启动前分割，不可变张量共享，启动器在 GPU 工作期间保持所有权。在 NVIDIA B200 上，逐元素操作达 7 TB/s（约 91% 峰值带宽），GEMM 达 2 PFlop/s（约 92% 密集 f16 峰值）。基于 cuTile Rust 构建的 Grout 推理引擎在 RTX 5090 上解码 Qwen3-4B 达 171 tokens/s，在 B200 上解码 Qwen3-32B 达 82 tokens/s。项目处于早期研究阶段。",
+        "publishedAt": "2026-06-18T03:09:11.275Z",
+        "collectedAt": "2026-06-18T05:02:00.999Z",
         "raw": {
-          "id": "cmqiu6my004bhsl5we9emftn9",
-          "titleEn": "I'm so excited",
-          "apiCategory": "industry"
+          "id": "cmqixf0ar057msl5w132f09uc",
+          "titleEn": "Show HN： cuTile Rust：用 Rust 编写的、安全且无数据竞争的 GPU 内核",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmqiw7jw604v7sl5w10zed5s8",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "首个统一科学大模型 LOGOS 正式开源",
+        "url": "https://mp.weixin.qq.com/s/50q5uY849FKnBzk1Q04MRg",
+        "summary": "LOGOS 由 ATH-Token Foundry 联合中国人民大学高瓴人工智能学院开源，是首个基于统一\"科学语法\"的多领域科学生成基础模型。LOGOS-1B（1B参数）在六大科学任务上匹配或超越领域专用方法：口袋条件配体生成纯序列范式首次超越3D扩散模型，超越NatureLM（8×7B）；逆合成预测Top-1准确率74.8%；口袋位点识别仅靠序列达58.5% Top-n准确率；MOF材料生成NBB提升至17.78%。模型采用统一词汇表将蛋白质、小分子等编码为离散Token，通过空间交互离散化实现无需3D坐标的序列预测。预训练与下游任务形式与目标一致，跨领域知识迁移经实验验证有效。已完整开源模型权重、推理代码与技术报告。",
+        "description": "LOGOS 由 ATH-Token Foundry 联合中国人民大学高瓴人工智能学院开源，是首个基于统一\"科学语法\"的多领域科学生成基础模型。LOGOS-1B（1B参数）在六大科学任务上匹配或超越领域专用方法：口袋条件配体生成纯序列范式首次超越3D扩散模型，超越NatureLM（8×7B）；逆合成预测Top-1准确率74.8%；口袋位点识别仅靠序列达58.5% Top-n准确率；MOF材料生成NBB提升至17.78%。模型采用统一词汇表将蛋白质、小分子等编码为离散Token，通过空间交互离散化实现无需3D坐标的序列预测。预训练与下游任务形式与目标一致，跨领域知识迁移经实验验证有效。已完整开源模型权重、推理代码与技术报告。",
+        "category": "models",
+        "originalSource": "公众号：通义实验室（千问）",
+        "originalUrl": "https://mp.weixin.qq.com/s/50q5uY849FKnBzk1Q04MRg",
+        "recommendedReason": "LOGOS 由 ATH-Token Foundry 联合中国人民大学高瓴人工智能学院开源，是首个基于统一\"科学语法\"的多领域科学生成基础模型。LOGOS-1B（1B参数）在六大科学任务上匹配或超越领域专用方法：口袋条件配体生成纯序列范式首次超越3D扩散模型，超越NatureLM（8×7B）；逆合成预测Top-1准确率74.8%；口袋位点识别仅靠序列达58.5% Top-n准确率；MOF材料生成NBB提升至17.78%。模型采用统一词汇表将蛋白质、小分子等编码为离散Token，通过空间交互离散化实现无需3D坐标的序列预测。预训练与下游任务形式与目标一致，跨领域知识迁移经实验验证有效。已完整开源模型权重、推理代码与技术报告。",
+        "publishedAt": "2026-06-18T02:31:28.000Z",
+        "collectedAt": "2026-06-18T05:02:00.999Z",
+        "raw": {
+          "id": "cmqiw7jw604v7sl5w10zed5s8",
+          "titleEn": null,
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmqiu8fi704ddsl5w9tfb6f52",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "深入解析 Midjourney Scanner 技术内幕",
+        "url": "https://x.com/midjourney/status/2067422898407837797",
+        "summary": "我们全新\"Midjourney Scanner\"的技术深潜。",
+        "description": "我们全新\"Midjourney Scanner\"的技术深潜。",
+        "category": "products",
+        "originalSource": "X：Midjourney (@midjourney)",
+        "originalUrl": "https://x.com/midjourney/status/2067422898407837797",
+        "recommendedReason": "我们全新\"Midjourney Scanner\"的技术深潜。",
+        "publishedAt": "2026-06-18T01:43:24.000Z",
+        "collectedAt": "2026-06-18T05:02:00.999Z",
+        "raw": {
+          "id": "cmqiu8fi704ddsl5w9tfb6f52",
+          "titleEn": "A technical dive inside our new \"Midjourney Scanner\"",
+          "apiCategory": "ai-products"
         }
       },
       {
@@ -326,7 +374,7 @@
         "originalUrl": "https://www.ithome.com/0/965/735.htm",
         "recommendedReason": "上海证券交易所6月17日发布指引，支持尚未形成稳定收入的优质人工智能大模型企业通过科创板第五套上市标准发行上市。申报企业需在行业地位、产业链优势、目标市场需求、研发进度及关键指标方面具备突出竞争力。指引明确，申报时至少有一个大模型产品已完成上线发布并实现规模化应用，以验证商业模式可行性。下一步，上交所将在中国证监会指导下推进符合标准的企业上市。",
         "publishedAt": "2026-06-18T00:49:16.000Z",
-        "collectedAt": "2026-06-18T01:46:35.624Z",
+        "collectedAt": "2026-06-18T05:02:00.999Z",
         "raw": {
           "id": "cmqit4gtr040zsl5wam5ck48b",
           "titleEn": "上交所：AI 大模型企业适用科创板第五套上市标准，在申报时至少有一个大模型产品已完成上线发布并实现规模化应用",
@@ -346,7 +394,7 @@
         "originalUrl": "https://www.ithome.com/0/965/734.htm",
         "recommendedReason": "在 2026 年 WWDC 期间，苹果发布 Xcode 27，其核心组件首次整合 AI 智能体，能理解 Swift 语言并通过多轮自然语言对话辅助开发。AI 可跨多个文件修改整个代码库，也能根据提示与资源生成应用设计并独立构建完整应用，建成后仍可通过对话添加特效、动画等。Xcode 27 支持接入 Anthropic、OpenAI 和 Google 等第三方 AI 模型，同时引入 Core AI 框架提供现代 Swift API 调用端侧模型，并升级开源框架 MLX。",
         "publishedAt": "2026-06-18T00:43:26.000Z",
-        "collectedAt": "2026-06-18T01:46:35.624Z",
+        "collectedAt": "2026-06-18T05:02:00.999Z",
         "raw": {
           "id": "cmqit4gtr0410sl5w4ovwwmwa",
           "titleEn": null,
@@ -366,7 +414,7 @@
         "originalUrl": "https://x.com/Yuchenj_UW/status/2067401895178817999",
         "recommendedReason": "两年前谷歌花 27 亿美元请回的 AI 传奇 Noam Shazeer 已离开谷歌，加入 OpenAI。 对 Gemini 来说是个残酷的消息。",
         "publishedAt": "2026-06-18T00:19:56.000Z",
-        "collectedAt": "2026-06-18T01:46:35.624Z",
+        "collectedAt": "2026-06-18T05:02:00.999Z",
         "raw": {
           "id": "cmqirdp5603n0sl5wjfnes2e3",
           "titleEn": "Noam Shazeer， the AI legend Google paid $2.7B to bring back two years ago， has left Google， to join …",
@@ -386,7 +434,7 @@
         "originalUrl": "https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year",
         "recommendedReason": "OpenAI 2025年营收130.7亿美元（2024年37亿），但研发成本达191.8亿（含向微软支付105.9亿），收入成本（推理计算）75亿，销售营销成本57.3亿，运营亏损209.2亿。2025年净亏损约390亿，扣除约300亿一次性会计费用后约80亿。2025年3月获1220亿融资（估值8520亿）。ChatGPT周活超9亿，付费约5000万。为控制成本已关闭Sora视频模型并削减非核心业务。",
         "publishedAt": "2026-06-17T23:09:09.056Z",
-        "collectedAt": "2026-06-18T01:46:35.624Z",
+        "collectedAt": "2026-06-18T05:02:00.999Z",
         "raw": {
           "id": "cmqiot8mp02u5sl5w0n1vprt0",
           "titleEn": "泄露的财务文件显示，OpenAI每年亏损数十亿美元",
@@ -406,7 +454,7 @@
         "originalUrl": "https://www.ithome.com/0/965/694.htm",
         "recommendedReason": "苹果CEO库克确认，AI热潮导致存储芯片严重短缺和价格暴涨，苹果产品涨价已\"不可避免\"。库克未透露涨价具体细节。华尔街日报指出，全球AI巨头大幅增加资本开支，高带宽内存需求激增，挤压消费电子芯片供应。自2024年以来内存和存储芯片价格已翻四倍，涨势预计延续至2027年。研究机构估算，下一代iPhone 18 Pro售价或需增加约270美元。苹果已在上月提高Mac Mini起售价。摩根士丹利预测，今年美国智能手机和PC价格将上涨15%。",
         "publishedAt": "2026-06-17T22:41:15.000Z",
-        "collectedAt": "2026-06-18T01:46:35.624Z",
+        "collectedAt": "2026-06-18T05:02:00.999Z",
         "raw": {
           "id": "cmqiotxxz02vfsl5wx32nujv2",
           "titleEn": null,
@@ -426,7 +474,7 @@
         "originalUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.181",
         "recommendedReason": "Claude Code v2.1.181 发布，新增 `/config key=value` 语法允许在提示中直接设置任意配置项，新增 `sandbox.allowAppleEvents` 选项使沙盒命令支持 Apple Events，新增 `CLAUDE_CLIENT_PRESENCE_FILE` 环境变量用于抑制移动端推送通知。内置 Bun 运行时升级至 1.4，改进了长段落流式输出（逐行显示）和 API 连接中断后自动重试。子 agent 面板优化：空闲 agent 30 秒自动隐藏、列表最多 5 行。修复了提示缓存读取、Write/Edit 在网络驱动器产生 0 字节文件、启动性能回归（约 120ms）、启动阻塞（最长 15 秒）、macOS TUI 冻结、子 agent 时长显示错误、API 重试指示器残留、AWS 凭证刷新等问题。",
         "publishedAt": "2026-06-17T22:07:41.000Z",
-        "collectedAt": "2026-06-18T01:46:35.624Z",
+        "collectedAt": "2026-06-18T05:02:00.999Z",
         "raw": {
           "id": "cmqio5ehw02r0sl5wdidvo2dc",
           "titleEn": "v2.1.181",
@@ -446,7 +494,7 @@
         "originalUrl": "https://developers.googleblog.com/a2ui-and-mcp-apps",
         "recommendedReason": "Google 分享了三种集成 A2UI 与 MCP Apps 的架构模式，旨在结合两者优势。A2UI 采用声明式框架，通过 JSON payload 定义 UI，由宿主原生渲染，确保一致性与安全性，但受限于预定义组件库。MCP Apps 在 iframe 中使用标准 Web 技术提供自定义界面，但存在设计碎片化、性能与安全挑战。三种模式包括：通过 MCP 服务器提供 A2UI，利用 MCP Resources 或 Tool 调用传递 JSON，实现\"一次编写，原生渲染\"的跨平台能力；以及静态与动态交付方案。Google 正考虑扩展 MCP 以原生支持 A2UI。",
         "publishedAt": "2026-06-17T21:13:53.385Z",
-        "collectedAt": "2026-06-18T01:46:35.624Z",
+        "collectedAt": "2026-06-18T05:02:00.999Z",
         "raw": {
           "id": "cmqikjgrp01sesl5wptxhpc6s",
           "titleEn": "A2UI + MCP Apps： Combining the best of declarative and custom agentic UIs",
@@ -466,7 +514,7 @@
         "originalUrl": "https://claude.com/blog/workload-identity-federation",
         "recommendedReason": "Workload Identity Federation （WIF） 已在 Claude Platform 上全面可用。WIF 兼容任何 OIDC 身份提供者，覆盖所有 Claude API 端点（包括第一方 SDK 和 Claude Code）。WIF 用短生命期凭证替代静态 API 密钥，并引入服务账户，每个工作负载拥有独立身份、角色和审计日志。Claude Console 提供引导设置流程，支持 Admin API 进行组织管理。API 密钥可并行使用以便逐步迁移。",
         "publishedAt": "2026-06-17T20:44:36.833Z",
-        "collectedAt": "2026-06-18T01:46:35.624Z",
+        "collectedAt": "2026-06-18T05:02:00.999Z",
         "raw": {
           "id": "cmqijhrqi01iosl5wt876piz9",
           "titleEn": "Secure access to the Claude Platform with Workload Identity Federation",
@@ -486,7 +534,7 @@
         "originalUrl": "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
         "recommendedReason": "6月17日，Claude Design 更新，支持跨项目使用统一设计系统，并与Claude Code同步工作流。用户可直接拖拽、对齐和缩放画布元素，编辑器稳定性大幅提升。设计系统可从GitHub、设计文件或原始上传导入，团队管理员可锁定标准系统防止篡改。新增桌面端侧边栏入口及独立网页端claude.ai/design。使用限制与聊天、Claude Cowork、Claude Code共享，每次任务消耗更少token，错误率下降。支持导出PDF、PPT，集成Adobe、Canva、Gamma等工具。发布首周用户超一百万。",
         "publishedAt": "2026-06-17T20:44:36.833Z",
-        "collectedAt": "2026-06-18T01:46:35.624Z",
+        "collectedAt": "2026-06-18T05:02:00.999Z",
         "raw": {
           "id": "cmqijhrqi01insl5wwxvq9xc6",
           "titleEn": "Claude Design now stays on brand for daily work",
@@ -506,7 +554,7 @@
         "originalUrl": "https://github.blog/ai-and-ml/github-copilot/getting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing",
         "recommendedReason": "GitHub 推出一个新的仓库级数据集，采用 CC0-1.0 许可证，旨在帮助研究人员和开发者发现跨 README、Issue 和 Pull Request 的多语言开发者内容，加速多语言 AI 开发。",
         "publishedAt": "2026-06-17T19:41:46.000Z",
-        "collectedAt": "2026-06-18T01:46:35.624Z",
+        "collectedAt": "2026-06-18T05:02:00.999Z",
         "raw": {
           "id": "cmqiicjpx015ysl5wa4xk67zg",
           "titleEn": "Getting more from each token： How Copilot improves context handling and model routing",
@@ -526,7 +574,7 @@
         "originalUrl": "https://x.com/Replit/status/2067328501003497684",
         "recommendedReason": "在Claude中设计。在Replit中构建。 你现在可以将Claude Design中的设计发送到Replit，将其变成一个可工作的应用。",
         "publishedAt": "2026-06-17T19:28:18.000Z",
-        "collectedAt": "2026-06-18T01:46:35.624Z",
+        "collectedAt": "2026-06-18T05:02:00.999Z",
         "raw": {
           "id": "cmqihbkcr00xcsl5wavwez5ua",
           "titleEn": "Design in Claude. Build in Replit You can now send your design from Claude Design to Replit to turn…",
@@ -546,51 +594,11 @@
         "originalUrl": "https://x.com/AYi_AInotes/status/2067327021005656135",
         "recommendedReason": "Matt Pocock（Total TypeScript 作者）开源了 skills v1，将技能描述的 Token 成本降低 63%。该工具包将技能分为模型可调用和用户可调用，新增 /codebase-design、/domain-modeling、/grilling 三项技能；重写 /writing-great-skills；将 /diagnose 更新为 /diagnosing-bugs 并改为模型可调用；新增 /ask-matt 路由技能，帮助 AI 自动判断时机触发合适工程流程。主推文评价其将 prompt 从咒语拆解为纪律性流程。",
         "publishedAt": "2026-06-17T19:22:25.000Z",
-        "collectedAt": "2026-06-18T01:46:35.624Z",
+        "collectedAt": "2026-06-18T05:02:00.999Z",
         "raw": {
           "id": "cmqiie2vh018hsl5wbdaj9mz3",
           "titleEn": "被 vibe coding 反噬过的AI玩家和开发者们看过来，这个工具包把 Token 消耗砍掉了 63%，注意可不是单纯的砍功能，主要是砍废话。 @mattpocockuk Pocock（Tota…",
           "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmqiewg85009zsl5w0gbt6hbe",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Anthropic与DeepMind CEO呼吁G7组建AI联盟排除中国",
-        "url": "https://x.com/kimmonismus/status/2067310431669223425",
-        "summary": "Dario Amodei（Anthropic）与Demis Hassabis（Google DeepMind）在G7闭门会议上呼吁组建美国主导的联盟，为人工智能制定全球规则和标准。Amodei指出，该联盟应以前沿模型和硬件（包括芯片及其他关键组件）的访问权限为手段，将中国排除在外。这一主张被评论为高技术新冷战的开端，竞争方将从根本上被剥夺参与权。",
-        "description": "Dario Amodei（Anthropic）与Demis Hassabis（Google DeepMind）在G7闭门会议上呼吁组建美国主导的联盟，为人工智能制定全球规则和标准。Amodei指出，该联盟应以前沿模型和硬件（包括芯片及其他关键组件）的访问权限为手段，将中国排除在外。这一主张被评论为高技术新冷战的开端，竞争方将从根本上被剥夺参与权。",
-        "category": "industry",
-        "originalSource": "X：Kim (@kimmonismus)",
-        "originalUrl": "https://x.com/kimmonismus/status/2067310431669223425",
-        "recommendedReason": "Dario Amodei（Anthropic）与Demis Hassabis（Google DeepMind）在G7闭门会议上呼吁组建美国主导的联盟，为人工智能制定全球规则和标准。Amodei指出，该联盟应以前沿模型和硬件（包括芯片及其他关键组件）的访问权限为手段，将中国排除在外。这一主张被评论为高技术新冷战的开端，竞争方将从根本上被剥夺参与权。",
-        "publishedAt": "2026-06-17T18:16:30.000Z",
-        "collectedAt": "2026-06-18T01:46:35.624Z",
-        "raw": {
-          "id": "cmqiewg85009zsl5w0gbt6hbe",
-          "titleEn": "We are entering a new era of the Cold War. Dario Amodei and Demis Hassabis are calling for a \"U.S.-…",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmqiddvsx07xcslf0wcefjhm6",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "用SGLang-JAX在TPU上优化Ling-2.6-1T：一个Pallas核将MoE数据移动隐藏在计算中",
-        "url": "https://www.lmsys.org/blog/2026-06-17-ling-2-6-tpu",
-        "summary": "SGLang-JAX现已支持inclusionAI的Ling-2.6-1T（1T稀疏MoE，63B激活参数，256路由专家，top-8路由加共享专家）在TPU v7x上高效推理。团队开发了Fused MoE V2--一个融合scatter、专家FFN和gather的Pallas核，通过将MoE数据移动隐藏在计算中，使MoE预填充延迟从5.16ms降至2.42ms（降幅53%），解码核延迟从0.249ms降至0.211ms（降幅约15%）。仅替换MoE核即提升预填充吞吐量24.8%，解码吞吐量18.5%-35.3%。在SGLang解码基准测试中，16块TPU v7x芯片输出吞吐量达16块H200 GPU的1.29倍（mc=128）至1.77倍（mc=512）。完整上线还包含混合KV/循环内存池、GLA线性注意力和单控制器数据并行支持。",
-        "description": "SGLang-JAX现已支持inclusionAI的Ling-2.6-1T（1T稀疏MoE，63B激活参数，256路由专家，top-8路由加共享专家）在TPU v7x上高效推理。团队开发了Fused MoE V2--一个融合scatter、专家FFN和gather的Pallas核，通过将MoE数据移动隐藏在计算中，使MoE预填充延迟从5.16ms降至2.42ms（降幅53%），解码核延迟从0.249ms降至0.211ms（降幅约15%）。仅替换MoE核即提升预填充吞吐量24.8%，解码吞吐量18.5%-35.3%。在SGLang解码基准测试中，16块TPU v7x芯片输出吞吐量达16块H200 GPU的1.29倍（mc=128）至1.77倍（mc=512）。完整上线还包含混合KV/循环内存池、GLA线性注意力和单控制器数据并行支持。",
-        "category": "papers",
-        "originalSource": "LMSYS：Blog（Chatbot Arena 团队）",
-        "originalUrl": "https://www.lmsys.org/blog/2026-06-17-ling-2-6-tpu",
-        "recommendedReason": "SGLang-JAX现已支持inclusionAI的Ling-2.6-1T（1T稀疏MoE，63B激活参数，256路由专家，top-8路由加共享专家）在TPU v7x上高效推理。团队开发了Fused MoE V2--一个融合scatter、专家FFN和gather的Pallas核，通过将MoE数据移动隐藏在计算中，使MoE预填充延迟从5.16ms降至2.42ms（降幅53%），解码核延迟从0.249ms降至0.211ms（降幅约15%）。仅替换MoE核即提升预填充吞吐量24.8%，解码吞吐量18.5%-35.3%。在SGLang解码基准测试中，16块TPU v7x芯片输出吞吐量达16块H200 GPU的1.29倍（mc=128）至1.77倍（mc=512）。完整上线还包含混合KV/循环内存池、GLA线性注意力和单控制器数据并行支持。",
-        "publishedAt": "2026-06-17T17:53:38.527Z",
-        "collectedAt": "2026-06-18T01:46:35.624Z",
-        "raw": {
-          "id": "cmqiddvsx07xcslf0wcefjhm6",
-          "titleEn": "Blog Optimizing Ling-2.6-1T on TPU with SGLang-JAX： Hiding MoE Data Movement Behind Compute with One Pallas Kernel SGLang-JAX now supports efficient serving of inclusionAI's Ling-2.6-1T on TPU v7x. With a working baseline in place， profiling pointed to the Mixture-of-Experts （MoE） path as the main bottleneck： each… Prayer， JamesBrianD， Haolin Fu， Haoguang Cai， Qinghan Chen",
-          "apiCategory": "paper"
         }
       }
     ],
@@ -625,7 +633,7 @@
             "originalUrl": "https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year",
             "recommendedReason": "OpenAI 2025年营收130.7亿美元（2024年37亿），但研发成本达191.8亿（含向微软支付105.9亿），收入成本（推理计算）75亿，销售营销成本57.3亿，运营亏损209.2亿。2025年净亏损约390亿，扣除约300亿一次性会计费用后约80亿。2025年3月获1220亿融资（估值8520亿）。ChatGPT周活超9亿，付费约5000万。为控制成本已关闭Sora视频模型并削减非核心业务。",
             "publishedAt": "2026-06-17T23:09:09.056Z",
-            "collectedAt": "2026-06-18T01:46:35.624Z",
+            "collectedAt": "2026-06-18T05:02:00.999Z",
             "raw": {
               "id": "cmqiot8mp02u5sl5w0n1vprt0",
               "titleEn": "泄露的财务文件显示，OpenAI每年亏损数十亿美元",
@@ -644,11 +652,11 @@
               "openai"
             ],
             "metrics": {
-              "upvotes": 291,
-              "commentsCount": 207
+              "upvotes": 349,
+              "commentsCount": 4
             },
             "publishedAt": "2026-06-17T21:31:35.000Z",
-            "collectedAt": "2026-06-18T01:46:34.344Z",
+            "collectedAt": "2026-06-18T05:02:00.019Z",
             "raw": {
               "hnUrl": "https://news.ycombinator.com/item?id=48577208",
               "matchedKeywords": [
@@ -672,7 +680,7 @@
             "originalUrl": "https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year",
             "recommendedReason": "OpenAI 2025年营收130.7亿美元（2024年37亿），但研发成本达191.8亿（含向微软支付105.9亿），收入成本（推理计算）75亿，销售营销成本57.3亿，运营亏损209.2亿。2025年净亏损约390亿，扣除约300亿一次性会计费用后约80亿。2025年3月获1220亿融资（估值8520亿）。ChatGPT周活超9亿，付费约5000万。为控制成本已关闭Sora视频模型并削减非核心业务。",
             "publishedAt": "2026-06-17T23:09:09.056Z",
-            "collectedAt": "2026-06-18T01:46:35.624Z",
+            "collectedAt": "2026-06-18T05:02:00.999Z",
             "raw": {
               "id": "cmqiot8mp02u5sl5w0n1vprt0",
               "titleEn": "泄露的财务文件显示，OpenAI每年亏损数十亿美元",
@@ -691,11 +699,11 @@
               "openai"
             ],
             "metrics": {
-              "upvotes": 291,
-              "commentsCount": 207
+              "upvotes": 349,
+              "commentsCount": 4
             },
             "publishedAt": "2026-06-17T21:31:35.000Z",
-            "collectedAt": "2026-06-18T01:46:34.344Z",
+            "collectedAt": "2026-06-18T05:02:00.019Z",
             "raw": {
               "hnUrl": "https://news.ycombinator.com/item?id=48577208",
               "matchedKeywords": [
@@ -706,18 +714,18 @@
           }
         ],
         "metrics": {
-          "votes": 291,
-          "commentsCount": 207,
-          "hnScore": 291,
+          "votes": 349,
+          "commentsCount": 4,
+          "hnScore": 349,
           "crossSourceBonus": 10,
-          "heatScore": 340
+          "heatScore": 202
         },
         "crossSourceBonus": 10,
         "category": "industry",
         "summary": "OpenAI 2025年营收130.7亿美元（2024年37亿），但研发成本达191.8亿（含向微软支付105.9亿），收入成本（推理计算）75亿，销售营销成本57.3亿，运营亏损209.2亿。2025年净亏损约390亿，扣除约300亿一次性会计费用后约80亿。2025年3月获1220亿融资（估值8520亿）。ChatGPT周活超9亿，付费约5000万。为控制成本已关闭Sora视频模型并削减非核心业务。",
         "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
         "firstSeenAt": "2026-06-17T21:31:35.000Z",
-        "lastSeenAt": "2026-06-18T01:46:35.624Z"
+        "lastSeenAt": "2026-06-18T05:02:00.999Z"
       }
     ]
   }
