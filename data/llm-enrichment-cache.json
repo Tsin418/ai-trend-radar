@@ -11204,5 +11204,59 @@
     },
     "createdAt": "2026-06-19T00:03:53.660Z",
     "model": "deepseek-v4-flash"
+  },
+  "esengine/DeepSeek-Reasonix:2026-06-18T19:27:31Z": {
+    "summary": {
+      "oneLiner": "A DeepSeek-native AI coding agent for the terminal, rewritten in Go for performance and prefix-cache stability.",
+      "problemSolved": "Developers need a persistent, cost-efficient AI coding assistant that leverages DeepSeek's prefix caching to reduce token costs during long sessions, with a configurable, plugin-driven architecture.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 23,147 stars, a 24-hour delta of +218, and a 7-day average of +347 stars/day, this project shows sustained high growth. The acceleration ratio of 0.6 indicates continued strong momentum without sudden spikes, suggesting organic adoption. It ranks top 2 in Agents by velocity on OOSMetrics.",
+      "whatChanged": "The project underwent a ground-up rewrite from TypeScript to Go (v1.0), with the main branch now delivering a single static binary. This rewrite, along with recent releases and active commits (within 7 days), likely drove renewed attention and migration from legacy users.",
+      "whyTrending": "It combines the popularity of DeepSeek models with a practical, config-driven agent that minimizes token costs via prefix caching. The Go rewrite improves performance and distribution, and the active community (Discord, bilingual support) fuels engagement.",
+      "developerTakeaway": "If you use DeepSeek models and want a terminal-based coding agent that is cost-aware and extensible via plugins (MCP), Reasonix is a strong choice. Its config-driven design makes it easy to adapt to different workflows.",
+      "developerInsight": "The focus on prefix-cache optimization signals a growing trend in AI tooling: reducing operational costs for long-running agent sessions. Developers should consider caching strategies when building AI assistants to improve user retention and cost efficiency.",
+      "targetUsers": "Developers who use DeepSeek models (or OpenAI-compatible endpoints) and want a terminal-based AI coding agent with plugin support, especially those working on long-lived projects where token costs matter.",
+      "riskNotes": "The project has 664 open issues, which may indicate growing pains or feature requests outpacing development. The rewrite from TypeScript to Go could introduce migration friction for existing users. DeepSeek API availability and pricing changes could impact the project's value proposition.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-19T05:25:08.572Z",
+    "model": "deepseek-v4-flash"
+  },
+  "addyosmani/agent-skills:2026-06-19T03:51:37Z": {
+    "summary": {
+      "oneLiner": "A production-grade skill pack for AI coding agents that encodes senior engineering workflows into reusable, agent-executable skills.",
+      "problemSolved": "AI coding agents often produce low-quality code because they lack the structured workflows, quality gates, and best practices that senior engineers follow. This project packages those practices into 24 Markdown skills that agents can execute consistently across the development lifecycle.",
+      "aiCategory": "AI Agent Framework",
+      "trendType": "sustained_hot",
+      "whyNow": "The repo has 63,015 stars and is growing at a sustained rate of ~1,736 stars per day over the last week, with a 24-hour delta of 703 stars. The acceleration ratio of 0.5 indicates steady, organic growth rather than a sudden spike. This is a project that has already achieved massive adoption and continues to attract attention daily.",
+      "whatChanged": "No single obvious trigger — the project appears to be sustaining organic growth. The high star velocity is likely driven by word-of-mouth in the AI coding agent community, combined with recent commits and a release within the last 30 days.",
+      "whyTrending": "It directly addresses a critical pain point for developers using AI coding agents: inconsistent output quality. By providing a standardized, battle-tested skill set, it reduces the need for developers to manually prompt-engineer every session. The broad compatibility with Claude Code, Cursor, Gemini CLI, Windsurf, and others makes it a universal tool.",
+      "developerTakeaway": "This is a practical, immediately useful resource for anyone using AI coding agents in production. It can be installed in minutes and immediately improves agent output quality by enforcing senior-level engineering practices.",
+      "developerInsight": "The rise of agent skill packs signals a shift from raw LLM prompting to structured, workflow-driven agent interactions. Developers should expect more such 'agent middleware' to emerge, and those who adopt it early will gain a significant productivity advantage.",
+      "targetUsers": "Developers and teams using AI coding agents (Claude Code, Cursor, Gemini CLI, Windsurf, etc.) who want to improve code quality, consistency, and adherence to best practices without manual oversight.",
+      "riskNotes": "The skills are opinionated and may not fit every team's workflow or coding standards. Over-reliance on pre-packaged skills could reduce critical thinking about when to deviate. Also, the project's rapid growth may lead to maintenance challenges or fragmentation as more agents and IDEs emerge.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-19T05:25:09.037Z",
+    "model": "deepseek-v4-flash"
+  },
+  "nexu-io/open-design:2026-06-19T04:34:08Z": {
+    "summary": {
+      "oneLiner": "Local-first, open-source alternative to Claude Design that turns your laptop into an agent-native design studio with 259+ skills, 142+ design systems, and MCP integration for 21+ coding agents.",
+      "problemSolved": "Design tools today are either closed SaaS (Figma, Claude Design) or require manual pixel-pushing. Open Design lets coding agents (Claude Code, Codex, Cursor, etc.) generate prototypes, decks, images, and videos directly from a brief and a DESIGN.md brand contract, all locally without cloud lock-in.",
+      "aiCategory": "Coding Agent / SWE Agent",
+      "trendType": "sustained_hot",
+      "whyNow": "With 67,540 stars, a 7-day average delta of 632 stars/day, and a 24h delta of 787, this project is in a sustained hot streak. The acceleration ratio of 1 indicates steady, organic growth rather than a sudden spike. The recent v0.10.0 release and active Discord community signal strong momentum.",
+      "whatChanged": "The v0.10.0 release introduced an all-in-one agentic design workspace with parallel sessions, making it feel like a local design team. The README also highlights the new AMR (Agentic Model Router) service and the Open Design Fellow program, which likely contributed to recent attention.",
+      "whyTrending": "It fills a gap for developers who want AI-generated design artifacts without leaving their coding agent or paying for proprietary services. The local-first, open-source ethos combined with broad agent support (21+ CLIs) makes it a versatile tool for the vibe-coding and agent-native workflow communities.",
+      "developerTakeaway": "Open Design demonstrates that design can be fully agent-driven and local. Developers should consider integrating MCP-based design generation into their workflows to accelerate prototyping and reduce context switching.",
+      "developerInsight": "This signals a shift toward agent-native design tools where the CLI and MCP become the primary interface for creating UI artifacts. The ability to export to HTML/PDF/PPTX/MP4 means design outputs are immediately usable in presentations, documentation, or deployment.",
+      "targetUsers": "AI developers, coding agent users (Claude Code, Codex, Cursor), designers who want to automate repetitive design tasks, and teams building agentic workflows that include visual output.",
+      "riskNotes": "The project is still in early stages (v0.10.0) with 418 open issues. Quality of generated artifacts may vary depending on the design system and agent used. The reliance on external coding agents means the user experience is tied to the capabilities of those agents.",
+      "confidence": "high"
+    },
+    "createdAt": "2026-06-19T05:25:16.953Z",
+    "model": "deepseek-v4-flash"
   }
 }
