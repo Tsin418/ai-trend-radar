@@ -1,12 +1,12 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-19T05:30:43.814Z
+Updated: 2026-06-19T11:01:23.354Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-19 | daily | [AI Developer Radar｜Daily｜2026-06-19](2026/06/2026-06-19-daily.md) | stas00/ml-engineering, milvus-io/milvus, chopratejas/headroom, Panniantong/Agent-Reach, Kilo-Org/kilocode |
+| 2026-06-19 | daily | [AI Developer Radar｜Daily｜2026-06-19](2026/06/2026-06-19-daily.md) | stas00/ml-engineering, milvus-io/milvus, siyuan-note/siyuan, chopratejas/headroom, Kilo-Org/kilocode |
 | 2026-06-18 | daily | [AI Developer Radar｜Daily｜2026-06-18](2026/06/2026-06-18-daily.md) | DeusData/codebase-memory-mcp, withastro/flue, alibaba/zvec, makeplane/plane, Tencent/ncnn |
 | 2026-06-17 | daily | [AI Developer Radar｜Daily｜2026-06-17](2026/06/2026-06-17-daily.md) | netdata/netdata, bytedance/UI-TARS-desktop, n0-computer/iroh, Universal-Debloater-Alliance/universal-android-debloater-next-generation, krahets/hello-algo |
 | 2026-06-16 | daily | [AI Developer Radar｜Daily｜2026-06-16](2026/06/2026-06-16-daily.md) | puppeteer/puppeteer, meshery/meshery, cypress-io/cypress, freeCodeCamp/freeCodeCamp, automazeio/ccpm |
