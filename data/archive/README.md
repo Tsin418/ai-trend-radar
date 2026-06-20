@@ -1,12 +1,12 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-20T04:46:39.991Z
+Updated: 2026-06-20T08:30:49.771Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-20 | daily | [AI Developer Radar｜Daily｜2026-06-20](2026/06/2026-06-20-daily.md) | topoteretes/cognee, zai-org/GLM-5, Kong/insomnia, Lightricks/LTX-2, ChatGPTNextWeb/NextChat |
+| 2026-06-20 | daily | [AI Developer Radar｜Daily｜2026-06-20](2026/06/2026-06-20-daily.md) | topoteretes/cognee, zai-org/GLM-5, Lightricks/LTX-2, Kong/insomnia, ChatGPTNextWeb/NextChat |
 | 2026-06-19 | daily | [AI Developer Radar｜Daily｜2026-06-19](2026/06/2026-06-19-daily.md) | aishwaryanr/awesome-generative-ai-guide, stas00/ml-engineering, milvus-io/milvus, topoteretes/cognee, siyuan-note/siyuan |
 | 2026-06-18 | daily | [AI Developer Radar｜Daily｜2026-06-18](2026/06/2026-06-18-daily.md) | DeusData/codebase-memory-mcp, withastro/flue, alibaba/zvec, makeplane/plane, Tencent/ncnn |
 | 2026-06-17 | daily | [AI Developer Radar｜Daily｜2026-06-17](2026/06/2026-06-17-daily.md) | netdata/netdata, bytedance/UI-TARS-desktop, n0-computer/iroh, Universal-Debloater-Alliance/universal-android-debloater-next-generation, krahets/hello-algo |
