@@ -1,12 +1,12 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-21T01:44:01.724Z
+Updated: 2026-06-21T05:19:00.922Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-21 | daily | [AI Developer Radar｜Daily｜2026-06-21](2026/06/2026-06-21-daily.md) | ChatGPTNextWeb/NextChat, chopratejas/headroom, Panniantong/Agent-Reach, DeusData/codebase-memory-mcp, Kilo-Org/kilocode |
+| 2026-06-21 | daily | [AI Developer Radar｜Daily｜2026-06-21](2026/06/2026-06-21-daily.md) | chopratejas/headroom, Panniantong/Agent-Reach, DeusData/codebase-memory-mcp, topoteretes/cognee, Kilo-Org/kilocode |
 | 2026-06-20 | daily | [AI Developer Radar｜Daily｜2026-06-20](2026/06/2026-06-20-daily.md) | palmier-io/palmier-pro, topoteretes/cognee, Kong/insomnia, owainlewis/awesome-artificial-intelligence, ChatGPTNextWeb/NextChat |
 | 2026-06-19 | daily | [AI Developer Radar｜Daily｜2026-06-19](2026/06/2026-06-19-daily.md) | aishwaryanr/awesome-generative-ai-guide, stas00/ml-engineering, milvus-io/milvus, topoteretes/cognee, siyuan-note/siyuan |
 | 2026-06-18 | daily | [AI Developer Radar｜Daily｜2026-06-18](2026/06/2026-06-18-daily.md) | DeusData/codebase-memory-mcp, withastro/flue, alibaba/zvec, makeplane/plane, Tencent/ncnn |
