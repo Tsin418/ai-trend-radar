@@ -1,13 +1,13 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-22T06:23:34.943Z
+Updated: 2026-06-22T12:30:31.908Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-22 | daily | [AI Developer Radar｜Daily｜2026-06-22](2026/06/2026-06-22-daily.md) | automazeio/ccpm, chopratejas/headroom, mukul975/Anthropic-Cybersecurity-Skills, Panniantong/Agent-Reach, ZhuLinsen/daily_stock_analysis |
+| 2026-06-22 | daily | [AI Developer Radar｜Daily｜2026-06-22](2026/06/2026-06-22-daily.md) | lyogavin/airllm, bytedance/deer-flow, garrytan/gstack, jamiepine/voicebox, deepspeedai/DeepSpeed |
 | 2026-06-21 | daily | [AI Developer Radar｜Daily｜2026-06-21](2026/06/2026-06-21-daily.md) | mukul975/Anthropic-Cybersecurity-Skills, koala73/worldmonitor, conductor-oss/conductor, tursodatabase/turso, chopratejas/headroom |
 | 2026-06-20 | daily | [AI Developer Radar｜Daily｜2026-06-20](2026/06/2026-06-20-daily.md) | palmier-io/palmier-pro, topoteretes/cognee, Kong/insomnia, owainlewis/awesome-artificial-intelligence, ChatGPTNextWeb/NextChat |
 | 2026-06-19 | daily | [AI Developer Radar｜Daily｜2026-06-19](2026/06/2026-06-19-daily.md) | aishwaryanr/awesome-generative-ai-guide, stas00/ml-engineering, milvus-io/milvus, topoteretes/cognee, siyuan-note/siyuan |
