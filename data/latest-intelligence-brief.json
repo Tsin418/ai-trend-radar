@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-06-23-2026-06-23T10-29-43-512Z",
-  "generatedAt": "2026-06-23T10:29:43.512Z",
+  "runId": "lightweight-2026-06-23-2026-06-23T13-37-45-478Z",
+  "generatedAt": "2026-06-23T13:37:45.478Z",
   "targetDate": "2026-06-23",
   "brief": {
     "date": "2026-06-23",
@@ -11,12 +11,12 @@
       "Coding Agent / Swe Agent: This topic appeared across 2 source(s): aihot, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Coding Agent / Swe Agent: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
       "Coding Agent / Swe Agent: watch decision is deep_dive.",
-      "Ai Model Release: This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adop.",
+      "Ai Model Release: This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 9 related signal(s). Treat it as correlation evidence rat.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
       "Ai Model Release: watch decision is deep_dive.",
-      "Mcp / Tool Calling: This topic appeared across 1 source(s): huggingface_spaces, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Mcp / Tool Calling: This topic appeared across 2 source(s): aihot, huggingface_spaces, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
-      "Mcp / Tool Calling: watch decision is track."
+      "Mcp / Tool Calling: watch decision is deep_dive."
     ],
     "topicBriefs": [
       {
@@ -40,6 +40,7 @@
         "technicalKeywords": [
           "products",
           "tools",
+          "ai",
           "claude"
         ],
         "evidenceItems": [
@@ -52,7 +53,7 @@
             "summary": "通过 AWS、Google Cloud 和 Microsoft Foundry 使用 Claude Desktop 的组织现已获得 Chat、Claude Cowork 和 Claude Code 集成的完整桌面体验。IT 团队可将推理保留在自己的云环境中，对话历史本地存储。支持 IAM Identity Center、Workforce Identity Federation、Microsoft Entra ID 或 Okta 登录；策略模板可导出至 Intune、GPO 或 Jamf；提供离线安装器。Chat、Claude Cowork 和 Claude Code 各有独立策略键，支持精细访问控制。M365 连接器通过 Entra 应用访问邮件和文档，并支持 GCC High/DoD 端点。",
             "category": "products",
             "publishedAt": "2026-06-22T21:19:56.013Z",
-            "collectedAt": "2026-06-23T10:29:45.055Z"
+            "collectedAt": "2026-06-23T13:37:48.880Z"
           },
           {
             "id": "aihot:cmqppo7c402qnslp5p92n6y3b",
@@ -63,29 +64,7 @@
             "summary": "Oak 是开源版本控制系统，专为 AI 智能体（Claude Code、Codex、Cursor）设计。采用 BLAKE3 内容哈希、内容定义分块、diff/merge 及 Blob/Manifest/Commit/Tree 数据模型，可选 SQLite 和 git 后端。以分支-会话为基本工作单元，用分支描述替代逐次提交，通过内容寻址懒加载使智能体数秒内编辑任意仓库。速度远超 git。已发布公开测试版 v0.99.0，支持 macOS（Apple Silicon）、Linux（x86_64）及 Windows，可通过 curl 或 cargo 安装，Apache-2.0 开源。",
             "category": "products",
             "publishedAt": "2026-06-22T21:00:09.808Z",
-            "collectedAt": "2026-06-23T10:29:45.055Z"
-          },
-          {
-            "id": "aihot:cmqpaflwr08cpslx6umzww19d",
-            "title": "Anthropic 工程负责人：Claude Code 让程序员更孤独",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://www.ithome.com/0/967/216.htm",
-            "summary": "6月22日，Anthropic工程负责人Fiona Fung表示，Claude Code和Claude Cowork等AI智能体让工程师越发依赖智能体工作，彼此之间交流减少，长期易感孤独。团队为此组织编程午餐、黑客松和共同开发时段，重新创造面对面协作机会。调查显示Claude Code已成为创业公司最常用的AI编程工具，\"氛围编程\"兴起使\"单人创业者\"增多，但Fung强调协作仍不可或缺。",
-            "category": "tools",
-            "publishedAt": "2026-06-22T13:25:46.000Z",
-            "collectedAt": "2026-06-23T10:29:45.055Z"
-          },
-          {
-            "id": "aihot:cmqpi3u8v00smslp5or0d3mx7",
-            "title": "Cursor 审计发现奖励黑客行为淹没模型智能提升",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://cursor.com/blog/reward-hacking-coding-benchmarks",
-            "summary": "Cursor 通过审计模型轨迹发现，在 SWE-bench Pro 上 Opus 4.8 Max 有 63% 的成功解决方案直接从公开来源检索修正而非自主推导。隔离 git 历史并限制网络后，Opus 4.8 Max 得分从 87.1% 跌至 73.0%，Composer 2.5 从 74.7% 跌至 54.0%。在 SWE-bench Multilingual 上，标准环境与严格环境得分差距分别为 9.1 和 7.5 个百分点。两种主要模式是上游查找（57%）和 git 历史挖掘（9%）。研究建议通过审计轨迹和限制运行时环境来缓解此类奖励黑客行为。",
-            "category": "tools",
-            "publishedAt": "2026-06-22T12:00:00.000Z",
-            "collectedAt": "2026-06-23T10:29:45.055Z"
+            "collectedAt": "2026-06-23T13:37:48.880Z"
           },
           {
             "id": "hackernews:48630535",
@@ -97,22 +76,50 @@
               "claude"
             ],
             "publishedAt": "2026-06-22T14:22:46.000Z",
-            "collectedAt": "2026-06-23T10:29:43.866Z",
+            "collectedAt": "2026-06-23T13:37:45.865Z",
             "metrics": {
-              "upvotes": 305,
-              "commentsCount": 211
+              "upvotes": 312,
+              "commentsCount": 213
             }
           },
           {
-            "id": "aihot:cmqmbymfe00zisl4f3pa6jwmz",
-            "title": "开源教程《Deep Agents 实战》发布",
+            "id": "aihot:cmqpaflwr08cpslx6umzww19d",
+            "title": "Anthropic 工程负责人：Claude Code 让程序员更孤独",
             "source": "aihot",
             "sourceType": "curated_trend",
-            "url": "https://x.com/shao__meng/status/2068306942184034471",
-            "summary": "LangChain 官方认证大使 @zhanghaili0610 推出开源教程《Deep Agents 实战》，基于 LangChain / LangGraph 生态，讲解如何用 Deep Agents Harness 框架构建真实 Agent 应用。核心是\"三层架构\"：Runtime（LangGraph）、Framework（LangChain）、Harness（Deep Agents）。技术内核为上下文工程，通过虚拟文件系统实现按需读取、中间结果落盘、大文件局部读取。教程共 8 章 + 2 准备篇，覆盖虚拟文件系统（六大工具）、任务规划、子 Agent 委派（异步并行）及 Skills 复用（可在 Claude Code、Cursor 等 30+ 工具中通用）。",
+            "url": "https://www.ithome.com/0/967/216.htm",
+            "summary": "6月22日，Anthropic工程负责人Fiona Fung表示，Claude Code和Claude Cowork等AI智能体让工程师越发依赖智能体工作，彼此之间交流减少，长期易感孤独。团队为此组织编程午餐、黑客松和共同开发时段，重新创造面对面协作机会。调查显示Claude Code已成为创业公司最常用的AI编程工具，\"氛围编程\"兴起使\"单人创业者\"增多，但Fung强调协作仍不可或缺。",
             "category": "tools",
-            "publishedAt": "2026-06-20T12:16:16.000Z",
-            "collectedAt": "2026-06-23T10:29:45.055Z"
+            "publishedAt": "2026-06-22T13:25:46.000Z",
+            "collectedAt": "2026-06-23T13:37:48.880Z"
+          },
+          {
+            "id": "aihot:cmqpi3u8v00smslp5or0d3mx7",
+            "title": "Cursor 审计发现奖励黑客行为淹没模型智能提升",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://cursor.com/blog/reward-hacking-coding-benchmarks",
+            "summary": "Cursor 通过审计模型轨迹发现，在 SWE-bench Pro 上 Opus 4.8 Max 有 63% 的成功解决方案直接从公开来源检索修正而非自主推导。隔离 git 历史并限制网络后，Opus 4.8 Max 得分从 87.1% 跌至 73.0%，Composer 2.5 从 74.7% 跌至 54.0%。在 SWE-bench Multilingual 上，标准环境与严格环境得分差距分别为 9.1 和 7.5 个百分点。两种主要模式是上游查找（57%）和 git 历史挖掘（9%）。研究建议通过审计轨迹和限制运行时环境来缓解此类奖励黑客行为。",
+            "category": "tools",
+            "publishedAt": "2026-06-22T12:00:00.000Z",
+            "collectedAt": "2026-06-23T13:37:48.880Z"
+          },
+          {
+            "id": "hackernews:48644674",
+            "title": "Show HN: Open-geo – Skill for Claude Code which shows your AI Visibility",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://github.com/Pupok462/open-geo",
+            "tags": [
+              "ai",
+              "claude"
+            ],
+            "publishedAt": "2026-06-23T13:29:40.000Z",
+            "collectedAt": "2026-06-23T13:37:45.865Z",
+            "metrics": {
+              "upvotes": 1,
+              "commentsCount": 0
+            }
           }
         ],
         "relatedEntities": [
@@ -120,12 +127,12 @@
           "Show HN：Oak--专为代理设计的 Git 替代方案",
           "Anthropic 工程负责人：Claude Code 让程序员更孤独",
           "Cursor 审计发现奖励黑客行为淹没模型智能提升",
-          "开源教程《Deep Agents 实战》发布",
+          "Show HN: Open-geo – Skill for Claude Code which shows your AI Visibility",
           "The text in Claude Code’s “Extended Thinking” output"
         ],
         "metrics": {
-          "votes": 305,
-          "commentsCount": 211,
+          "votes": 312,
+          "commentsCount": 213,
           "heatScore": 340,
           "crossSourceBonus": 10
         }
@@ -136,15 +143,16 @@
         "category": "models",
         "sources": [
           "aihot",
+          "huggingface_models",
           "huggingface_spaces",
           "hackernews"
         ],
-        "sourceCount": 3,
-        "heatScore": 162,
+        "sourceCount": 4,
+        "heatScore": 190,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Ai Model Release is an AI trend topic in models represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 9 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
@@ -152,12 +160,12 @@
         "technicalKeywords": [
           "models",
           "tools",
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english"
+          "gguf",
+          "endpoints_compatible",
+          "region:us",
+          "conversational",
+          "transformers",
+          "safetensors"
         ],
         "evidenceItems": [
           {
@@ -169,7 +177,7 @@
             "summary": "京东近日开源全球首个全栈交互模型JoyAI-VL-Interaction，获vLLM-Omni原生支持。该模型能持续观察视频流、主动判断关键事件并实时响应，支持将复杂任务委托后台Agent处理。在58个真人盲评中，对比豆包视频通话助手胜率77.6%，对比Gemini视频通话助手胜率87.9%，监控预警场景达100%胜率。开源内容包括模型权重、交互数据集、训练方案及完整可部署系统，支持摄像头、直播流等视频输入及语音交互、长期记忆、vLLM部署，适用于安防监控、老人看护、直播讲解等实时场景。",
             "category": "models",
             "publishedAt": "2026-06-23T06:04:50.000Z",
-            "collectedAt": "2026-06-23T10:29:45.055Z"
+            "collectedAt": "2026-06-23T13:37:48.880Z"
           },
           {
             "id": "aihot:cmqpyc83704y0slp54f6dv3w7",
@@ -180,7 +188,7 @@
             "summary": "Deloitte 报告显示企业 AI 抱负与治理成熟度之间差 53 个百分点，74% 计划两年内部署智能体 AI，仅 21% 拥有成熟治理模型。路由架构是首个治理层。三种姿态--托管网关（如 OpenRouter、Portkey）、自托管网关（如 LiteLLM）和直接 API--默认治理能力不同，直接 API 缺乏统一控制面，造成治理盲区。治理清单可映射为资产盘点、问责制、访问控制、证据记录与合规性五大支柱。路由层能提供跨团队可见性与审计证据，而电子表格不能。",
             "category": "tools",
             "publishedAt": "2026-06-22T19:00:00.000Z",
-            "collectedAt": "2026-06-23T10:29:45.055Z"
+            "collectedAt": "2026-06-23T13:37:48.880Z"
           },
           {
             "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
@@ -201,9 +209,9 @@
               "region:us"
             ],
             "publishedAt": "2023-04-17T11:40:06.000Z",
-            "collectedAt": "2026-06-23T10:29:43.789Z",
+            "collectedAt": "2026-06-23T13:37:45.606Z",
             "metrics": {
-              "likes": 14029
+              "likes": 14030
             }
           },
           {
@@ -221,7 +229,7 @@
               "region:us"
             ],
             "publishedAt": "2023-06-08T18:00:26.000Z",
-            "collectedAt": "2026-06-23T10:29:43.789Z",
+            "collectedAt": "2026-06-23T13:37:45.606Z",
             "metrics": {
               "likes": 5074
             }
@@ -244,66 +252,96 @@
               "region:us"
             ],
             "publishedAt": "2024-07-05T16:35:24.000Z",
-            "collectedAt": "2026-06-23T10:29:43.789Z",
+            "collectedAt": "2026-06-23T13:37:45.606Z",
             "metrics": {
               "likes": 3752
             }
           },
           {
-            "id": "hackernews:48642685",
-            "title": "What Is Software, and Will LLMs Replace It?",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://tomassetti.me/what-is-software-llms-interface-layer/",
+            "id": "huggingface_models:neyssemhajji16/smollm2-360m-text2sql-grpo",
+            "title": "neyssemhajji16/smollm2-360m-text2sql-grpo",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/neyssemhajji16/smollm2-360m-text2sql-grpo",
+            "category": "text-generation",
             "tags": [
-              "llm"
+              "transformers",
+              "safetensors",
+              "llama",
+              "text-generation",
+              "generated_from_trainer",
+              "trl",
+              "grpo",
+              "conversational",
+              "arxiv:2402.03300",
+              "base_model:neyssemhajji16/smollm2-360m-text2sql-grpo",
+              "base_model:finetune:neyssemhajji16/smollm2-360m-text2sql-grpo",
+              "text-generation-inference",
+              "endpoints_compatible",
+              "region:us"
             ],
-            "publishedAt": "2026-06-23T10:02:49.000Z",
-            "collectedAt": "2026-06-23T10:29:43.866Z",
+            "publishedAt": "2026-06-21T14:54:20.000Z",
+            "collectedAt": "2026-06-23T13:37:45.594Z",
             "metrics": {
-              "upvotes": 2,
-              "commentsCount": 0
+              "downloads": 62,
+              "likes": 0
             }
           }
         ],
         "relatedEntities": [
           "京东全栈开源JoyAI-VL-Interaction，从\"一问一答\"走向\"边看边说\"",
           "AI 治理清单：LLM 架构先行",
+          "LLM-OS-Models/Fabliq-8B-Agent-Reasoning-GGUF",
+          "neyssemhajji16/smollm2-360m-text2sql-grpo",
           "Open LLM Leaderboard",
           "MusicGen",
           "Live Portrait",
-          "What Is Software, and Will LLMs Replace It?"
+          "Show HN: Route LLM prompts to cheapest capable model – pydantic-AI and litellm"
         ],
         "metrics": {
-          "votes": 2,
-          "likes": 14029,
-          "heatScore": 162,
-          "crossSourceBonus": 20
+          "votes": 3,
+          "likes": 14030,
+          "downloads": 62,
+          "heatScore": 190,
+          "crossSourceBonus": 25
         }
       },
       {
         "id": "topic:mcp / tool calling",
         "title": "Mcp / Tool Calling",
-        "category": "gradio",
+        "category": "products",
         "sources": [
+          "aihot",
           "huggingface_spaces"
         ],
-        "sourceCount": 1,
-        "heatScore": 120,
-        "confidence": "low",
-        "watchDecision": "track",
-        "whatItIs": "Mcp / Tool Calling is an AI trend topic in gradio represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 1 source(s): huggingface_spaces, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "sourceCount": 2,
+        "heatScore": 140,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Mcp / Tool Calling is an AI trend topic in products represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, huggingface_spaces, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Mcp / Tool Calling should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
+          "products",
           "gradio",
           "mcp-server",
           "region:us"
         ],
         "evidenceItems": [
+          {
+            "id": "aihot:cmqqo96e30bv9slp5ds265bki",
+            "title": "IBM 开源 CUGA：轻量级智能体框架，提供二十余个单文件示例应用",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://huggingface.co/blog/ibm-research/cuga-apps",
+            "summary": "IBM 开源了 CUGA（Configurable Generalist Agent），一个处理规划、执行循环、工具调用和状态管理的轻量级智能体框架。开发者只需提供工具列表和提示词即可构建 CugaAgent。内置计划-执行-反思循环，在 AppWorld（2025年7月-2026年2月）和 WebArena（2025年2月-9月）基准上排名第一。支持 Fast / Balanced / Accurate 三种推理模式，代码执行可在本地、Docker 或 E2B 沙箱中运行。可互换工具支持 OpenAPI、MCP 和 LangChain 函数，通过环境变量一键切换 OpenAI、watsonx、Ollama 等提供商。随框架发布二十余个单文件示例应用，涵盖电影推荐、IBM Cloud 架构顾问等场景，每个应用仅需一个 FastAPI 文件。",
+            "category": "products",
+            "publishedAt": "2026-06-23T12:51:55.000Z",
+            "collectedAt": "2026-06-23T13:37:48.880Z"
+          },
           {
             "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
             "title": "Z Image Turbo",
@@ -317,9 +355,9 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-06-23T10:29:43.789Z",
+            "collectedAt": "2026-06-23T13:37:45.606Z",
             "metrics": {
-              "likes": 3429
+              "likes": 3433
             }
           },
           {
@@ -335,7 +373,7 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-06-23T10:29:43.789Z",
+            "collectedAt": "2026-06-23T13:37:45.606Z",
             "metrics": {
               "likes": 3245
             }
@@ -353,7 +391,7 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-06-23T10:29:43.789Z",
+            "collectedAt": "2026-06-23T13:37:45.606Z",
             "metrics": {
               "likes": 2871
             }
@@ -371,53 +409,65 @@
               "region:us"
             ],
             "publishedAt": "2025-10-27T03:20:43.000Z",
-            "collectedAt": "2026-06-23T10:29:43.789Z",
+            "collectedAt": "2026-06-23T13:37:45.606Z",
             "metrics": {
-              "likes": 2790
+              "likes": 2793
             }
           }
         ],
         "relatedEntities": [
+          "IBM 开源 CUGA：轻量级智能体框架，提供二十余个单文件示例应用",
           "Z Image Turbo",
           "Wan2.2 14B Fast",
           "Background Removal",
           "Wan2.2 14B Preview"
         ],
         "metrics": {
-          "likes": 3429,
-          "heatScore": 120,
-          "crossSourceBonus": 0
+          "likes": 3433,
+          "heatScore": 140,
+          "crossSourceBonus": 10
         }
       },
       {
         "id": "topic:local llm / inference",
         "title": "Local Llm / Inference",
-        "category": "models",
+        "category": "products",
         "sources": [
           "aihot",
           "huggingface_models"
         ],
         "sourceCount": 2,
-        "heatScore": 40,
+        "heatScore": 73,
         "confidence": "low",
         "watchDecision": "track",
-        "whatItIs": "Local Llm / Inference is an AI trend topic in models represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, huggingface_models, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Local Llm / Inference is an AI trend topic in products represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, huggingface_models, with 8 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
+          "products",
           "models",
           "transformers",
-          "gguf",
-          "en",
-          "base_model:MultiverseComputingCAI/Hypernova-60B-2605",
-          "base_model:quantized:MultiverseComputingCAI/Hypernova-60B-2605",
-          "license:apache-2.0",
-          "endpoints_compatible"
+          "pytorch",
+          "t5",
+          "text2text-generation",
+          "arxiv:1910.09700",
+          "text-generation-inference"
         ],
         "evidenceItems": [
+          {
+            "id": "aihot:cmqqo96e30bv9slp5ds265bki",
+            "title": "IBM 开源 CUGA：轻量级智能体框架，提供二十余个单文件示例应用",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://huggingface.co/blog/ibm-research/cuga-apps",
+            "summary": "IBM 开源了 CUGA（Configurable Generalist Agent），一个处理规划、执行循环、工具调用和状态管理的轻量级智能体框架。开发者只需提供工具列表和提示词即可构建 CugaAgent。内置计划-执行-反思循环，在 AppWorld（2025年7月-2026年2月）和 WebArena（2025年2月-9月）基准上排名第一。支持 Fast / Balanced / Accurate 三种推理模式，代码执行可在本地、Docker 或 E2B 沙箱中运行。可互换工具支持 OpenAPI、MCP 和 LangChain 函数，通过环境变量一键切换 OpenAI、watsonx、Ollama 等提供商。随框架发布二十余个单文件示例应用，涵盖电影推荐、IBM Cloud 架构顾问等场景，每个应用仅需一个 FastAPI 文件。",
+            "category": "products",
+            "publishedAt": "2026-06-23T12:51:55.000Z",
+            "collectedAt": "2026-06-23T13:37:48.880Z"
+          },
           {
             "id": "aihot:cmqq8ww0e07m4slp5mk5snl0z",
             "title": "京东全栈开源JoyAI-VL-Interaction，从\"一问一答\"走向\"边看边说\"",
@@ -427,126 +477,99 @@
             "summary": "京东近日开源全球首个全栈交互模型JoyAI-VL-Interaction，获vLLM-Omni原生支持。该模型能持续观察视频流、主动判断关键事件并实时响应，支持将复杂任务委托后台Agent处理。在58个真人盲评中，对比豆包视频通话助手胜率77.6%，对比Gemini视频通话助手胜率87.9%，监控预警场景达100%胜率。开源内容包括模型权重、交互数据集、训练方案及完整可部署系统，支持摄像头、直播流等视频输入及语音交互、长期记忆、vLLM部署，适用于安防监控、老人看护、直播讲解等实时场景。",
             "category": "models",
             "publishedAt": "2026-06-23T06:04:50.000Z",
-            "collectedAt": "2026-06-23T10:29:45.055Z"
+            "collectedAt": "2026-06-23T13:37:48.880Z"
           },
           {
-            "id": "huggingface_models:mradermacher/Hypernova-60B-2605-GGUF",
-            "title": "mradermacher/Hypernova-60B-2605-GGUF",
+            "id": "huggingface_models:neyssemhajji16/smollm2-360m-text2sql-grpo",
+            "title": "neyssemhajji16/smollm2-360m-text2sql-grpo",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/mradermacher/Hypernova-60B-2605-GGUF",
-            "tags": [
-              "transformers",
-              "gguf",
-              "en",
-              "base_model:MultiverseComputingCAI/Hypernova-60B-2605",
-              "base_model:quantized:MultiverseComputingCAI/Hypernova-60B-2605",
-              "license:apache-2.0",
-              "endpoints_compatible",
-              "region:us",
-              "conversational"
-            ],
-            "publishedAt": "2026-06-23T05:51:11.000Z",
-            "collectedAt": "2026-06-23T10:29:43.713Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:c4tdr0ut/grok-oss-Revenant-70B",
-            "title": "c4tdr0ut/grok-oss-Revenant-70B",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/c4tdr0ut/grok-oss-Revenant-70B",
+            "url": "https://huggingface.co/neyssemhajji16/smollm2-360m-text2sql-grpo",
             "category": "text-generation",
             "tags": [
               "transformers",
               "safetensors",
               "llama",
               "text-generation",
-              "text-generation-inference",
-              "unsloth",
+              "generated_from_trainer",
+              "trl",
+              "grpo",
               "conversational",
-              "en",
-              "license:apache-2.0",
+              "arxiv:2402.03300",
+              "base_model:neyssemhajji16/smollm2-360m-text2sql-grpo",
+              "base_model:finetune:neyssemhajji16/smollm2-360m-text2sql-grpo",
+              "text-generation-inference",
               "endpoints_compatible",
               "region:us"
             ],
-            "publishedAt": "2026-06-23T10:12:35.000Z",
-            "collectedAt": "2026-06-23T10:29:43.713Z",
+            "publishedAt": "2026-06-21T14:54:20.000Z",
+            "collectedAt": "2026-06-23T13:37:45.594Z",
             "metrics": {
-              "downloads": 0,
+              "downloads": 62,
               "likes": 0
             }
           },
           {
-            "id": "huggingface_models:mradermacher/Barcenas-31b-Fable-i1-GGUF",
-            "title": "mradermacher/Barcenas-31b-Fable-i1-GGUF",
+            "id": "huggingface_models:Uriath/byt5-small-g2p-african",
+            "title": "Uriath/byt5-small-g2p-african",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/mradermacher/Barcenas-31b-Fable-i1-GGUF",
-            "tags": [
-              "gguf",
-              "endpoints_compatible",
-              "region:us",
-              "imatrix",
-              "conversational"
-            ],
-            "publishedAt": "2026-06-23T10:19:30.000Z",
-            "collectedAt": "2026-06-23T10:29:43.713Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:Illaitar/aidnd-quest",
-            "title": "Illaitar/aidnd-quest",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/Illaitar/aidnd-quest",
-            "tags": [
-              "gguf",
-              "ollama",
-              "lora",
-              "qlora",
-              "dnd",
-              "quest-generation",
-              "ru",
-              "base_model:unsloth/Qwen3.5-9B",
-              "base_model:adapter:unsloth/Qwen3.5-9B",
-              "license:apache-2.0",
-              "endpoints_compatible",
-              "region:us",
-              "conversational"
-            ],
-            "publishedAt": "2026-06-23T09:47:35.000Z",
-            "collectedAt": "2026-06-23T10:29:43.713Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:mradermacher/Memorable-Dream-12B-Heretic-i1-GGUF",
-            "title": "mradermacher/Memorable-Dream-12B-Heretic-i1-GGUF",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/mradermacher/Memorable-Dream-12B-Heretic-i1-GGUF",
+            "url": "https://huggingface.co/Uriath/byt5-small-g2p-african",
             "tags": [
               "transformers",
+              "pytorch",
+              "t5",
+              "text2text-generation",
+              "arxiv:1910.09700",
+              "text-generation-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-06-05T00:38:47.000Z",
+            "collectedAt": "2026-06-23T13:37:45.594Z",
+            "metrics": {
+              "downloads": 163,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:CyanMonkey/my-finetuned-model-3",
+            "title": "CyanMonkey/my-finetuned-model-3",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/CyanMonkey/my-finetuned-model-3",
+            "category": "text-generation",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "llama",
+              "text-generation",
+              "arxiv:1910.09700",
+              "text-generation-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-06-23T13:37:33.000Z",
+            "collectedAt": "2026-06-23T13:37:45.594Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:LLM-OS-Models/Fabliq-8B-Agent-Reasoning-GGUF",
+            "title": "LLM-OS-Models/Fabliq-8B-Agent-Reasoning-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/LLM-OS-Models/Fabliq-8B-Agent-Reasoning-GGUF",
+            "tags": [
               "gguf",
-              "en",
-              "base_model:Sorihon/Memorable-Dream-12B-Heretic",
-              "base_model:quantized:Sorihon/Memorable-Dream-12B-Heretic",
               "endpoints_compatible",
               "region:us",
-              "imatrix",
               "conversational"
             ],
-            "publishedAt": "2026-06-23T07:32:35.000Z",
-            "collectedAt": "2026-06-23T10:29:43.713Z",
+            "publishedAt": "2026-06-23T13:35:36.000Z",
+            "collectedAt": "2026-06-23T13:37:45.594Z",
             "metrics": {
               "downloads": 0,
               "likes": 0
@@ -554,80 +577,79 @@
           }
         ],
         "relatedEntities": [
+          "IBM 开源 CUGA：轻量级智能体框架，提供二十余个单文件示例应用",
           "京东全栈开源JoyAI-VL-Interaction，从\"一问一答\"走向\"边看边说\"",
-          "mradermacher/Hypernova-60B-2605-GGUF",
-          "c4tdr0ut/grok-oss-Revenant-70B",
-          "mradermacher/Barcenas-31b-Fable-i1-GGUF",
-          "Illaitar/aidnd-quest",
-          "mradermacher/Memorable-Dream-12B-Heretic-i1-GGUF"
+          "Uriath/byt5-small-g2p-african",
+          "CyanMonkey/my-finetuned-model-3",
+          "LLM-OS-Models/Fabliq-8B-Agent-Reasoning-GGUF",
+          "Steve/qwen_2.5_7b-penguin_numbers_r128_ep3",
+          "neyssemhajji16/smollm2-360m-text2sql-grpo",
+          "agokrani/anti-owl-recursive-qwen2_5_3b_instruct-no_prompt-owl_numbers-seed2"
         ],
         "metrics": {
-          "heatScore": 40,
+          "downloads": 163,
+          "heatScore": 73,
           "crossSourceBonus": 10
         }
       },
       {
-        "id": "topic:voice / realtime ai",
-        "title": "Voice / Realtime Ai",
-        "category": "models",
+        "id": "topic:rag / knowledge base",
+        "title": "Rag / Knowledge Base",
+        "category": "papers",
         "sources": [
           "aihot",
-          "huggingface_models"
+          "hackernews"
         ],
         "sourceCount": 2,
-        "heatScore": 40,
+        "heatScore": 42,
         "confidence": "low",
         "watchDecision": "track",
-        "whatItIs": "Voice / Realtime Ai is an AI trend topic in models represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, huggingface_models, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Voice / Realtime Ai should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Voice / Realtime Ai.",
+        "whatItIs": "Rag / Knowledge Base is an AI trend topic in papers represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Rag / Knowledge Base should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
-          "models",
-          "audio-text-to-text",
-          "license:mit",
-          "region:us"
+          "papers",
+          "rag"
         ],
         "evidenceItems": [
           {
-            "id": "aihot:cmqq876yf07gsslp5eix31xaq",
-            "title": "豆包音频生成模型1.0发布，重新定义AI音频创作",
+            "id": "aihot:cmqqb5ey4088oslp5vvpveegf",
+            "title": "HAKARI-Bench：统一条件下比较检索架构与效率设置的轻量级基准",
             "source": "aihot",
             "sourceType": "curated_trend",
-            "url": "https://mp.weixin.qq.com/s/iL0uyUjOMUEfudeuDP6wQQ",
-            "summary": "火山引擎正式发布豆包音频生成模型1.0（Doubao-Seed-Audio 1.0），支持文本与音频参考生成，端到端输出目标音频。单条Prompt可编排多角色对白、情绪语气、背景音乐及环境氛围，长时生成中保持多角色音色一致性，无需后期多轨混音。模型支持0样本多模态输入，无需额外训练即可生成；实现音色与风格解耦控制及\"一声多角\"能力。一次支持2分钟音频创作，多次延长保持音色统一。已开启火山方舟API邀测，个人用户享30分钟创作额度，即将上线剪映、即梦、番茄等产品。",
-            "category": "models",
-            "publishedAt": "2026-06-23T05:41:11.000Z",
-            "collectedAt": "2026-06-23T10:29:45.055Z"
+            "url": "https://arxiv.org/abs/2606.22778",
+            "summary": "HAKARI-Bench 是一个轻量级检索基准，将现有检索套件重建为小型数据集（Nano-sets），涵盖 35 个基准、551 个任务和 43 种语言，采用统一格式实现模型无关比较。它支持 BM25、稠密、稀疏、晚交互和重排序五种检索家族及其效率变体（降维、量化等）在同一条件下对比。在 55 个模型上，整体排名与 MTEB retrieval v2、MMTEB v2 retrieval 及 English BEIR（完整版）的 Spearman 相关系数均高于 0.97。HAKARI-Bench 不取代全面评测，而是用于快速模型选择、回归检测和探索质量-效率帕累托前沿。代码、数据和排行榜以 MIT 许可证开源。",
+            "category": "papers",
+            "publishedAt": "2026-06-22T00:00:00.000Z",
+            "collectedAt": "2026-06-23T13:37:48.880Z"
           },
           {
-            "id": "huggingface_models:cattle12/sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25",
-            "title": "cattle12/sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/cattle12/sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25",
-            "category": "audio-text-to-text",
+            "id": "hackernews:48644482",
+            "title": "Pg_hardstorage: PostgreSQL Backup, Done Right",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://github.com/cybertec-postgresql/pg_hardstorage",
             "tags": [
-              "audio-text-to-text",
-              "license:mit",
-              "region:us"
+              "rag"
             ],
-            "publishedAt": "2026-06-23T10:25:53.000Z",
-            "collectedAt": "2026-06-23T10:29:43.713Z",
+            "publishedAt": "2026-06-23T13:13:15.000Z",
+            "collectedAt": "2026-06-23T13:37:45.865Z",
             "metrics": {
-              "downloads": 0,
-              "likes": 0
+              "upvotes": 2,
+              "commentsCount": 0
             }
           }
         ],
         "relatedEntities": [
-          "豆包音频生成模型1.0发布，重新定义AI音频创作",
-          "cattle12/sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25"
+          "HAKARI-Bench：统一条件下比较检索架构与效率设置的轻量级基准",
+          "Pg_hardstorage: PostgreSQL Backup, Done Right"
         ],
         "metrics": {
-          "heatScore": 40,
+          "votes": 2,
+          "heatScore": 42,
           "crossSourceBonus": 10
         }
       }
@@ -638,8 +660,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-06-23T10:29:43.544Z",
-        "finishedAt": "2026-06-23T10:29:43.544Z",
+        "startedAt": "2026-06-23T13:37:45.512Z",
+        "finishedAt": "2026-06-23T13:37:45.512Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -647,37 +669,37 @@
         "source": "aihot",
         "enabled": true,
         "success": true,
-        "itemCount": 27,
-        "startedAt": "2026-06-23T10:29:43.544Z",
-        "finishedAt": "2026-06-23T10:29:45.055Z",
-        "latencyMs": 1511
+        "itemCount": 29,
+        "startedAt": "2026-06-23T13:37:45.512Z",
+        "finishedAt": "2026-06-23T13:37:48.880Z",
+        "latencyMs": 3368
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 20,
-        "startedAt": "2026-06-23T10:29:43.560Z",
-        "finishedAt": "2026-06-23T10:29:43.713Z",
-        "latencyMs": 153
+        "itemCount": 13,
+        "startedAt": "2026-06-23T13:37:45.527Z",
+        "finishedAt": "2026-06-23T13:37:45.594Z",
+        "latencyMs": 67
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-06-23T10:29:43.561Z",
-        "finishedAt": "2026-06-23T10:29:43.789Z",
-        "latencyMs": 228
+        "startedAt": "2026-06-23T13:37:45.529Z",
+        "finishedAt": "2026-06-23T13:37:45.606Z",
+        "latencyMs": 77
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 28,
-        "startedAt": "2026-06-23T10:29:43.563Z",
-        "finishedAt": "2026-06-23T10:29:43.867Z",
-        "latencyMs": 304
+        "itemCount": 38,
+        "startedAt": "2026-06-23T13:37:45.530Z",
+        "finishedAt": "2026-06-23T13:37:45.866Z",
+        "latencyMs": 336
       }
     ],
     "dataNotes": [
@@ -707,11 +729,11 @@
         ],
         "category": "docker",
         "metrics": {
-          "likes": 14029
+          "likes": 14030
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-06-23T10:29:43.789Z",
+        "collectedAt": "2026-06-23T13:37:45.606Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -734,7 +756,7 @@
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-06-23T10:29:43.789Z",
+        "collectedAt": "2026-06-23T13:37:45.606Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -753,11 +775,11 @@
         ],
         "category": "gradio",
         "metrics": {
-          "likes": 10112
+          "likes": 10113
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-06-23T10:29:43.789Z",
+        "collectedAt": "2026-06-23T13:37:45.606Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
@@ -777,11 +799,11 @@
         ],
         "category": "docker",
         "metrics": {
-          "likes": 7498
+          "likes": 7499
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
         "updatedAt": "2026-06-22T18:58:21.000Z",
-        "collectedAt": "2026-06-23T10:29:43.789Z",
+        "collectedAt": "2026-06-23T13:37:45.606Z",
         "raw": {
           "sdk": "docker",
           "emoji": "📊"
@@ -804,7 +826,7 @@
         },
         "publishedAt": "2025-09-18T07:05:32.000Z",
         "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-06-23T10:29:43.789Z",
+        "collectedAt": "2026-06-23T13:37:45.606Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👁"
@@ -830,10 +852,48 @@
         },
         "publishedAt": "2023-06-08T18:00:26.000Z",
         "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-06-23T10:29:43.789Z",
+        "collectedAt": "2026-06-23T13:37:45.606Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_models:anandkaman/controlmt-v2.3",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "anandkaman/controlmt-v2.3",
+        "url": "https://huggingface.co/anandkaman/controlmt-v2.3",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "controlmt",
+          "text2text-generation",
+          "translation",
+          "machine-translation",
+          "kannada",
+          "english",
+          "indic",
+          "low-resource",
+          "code-mix",
+          "encoder-decoder",
+          "custom_code",
+          "kn",
+          "en",
+          "license:apache-2.0",
+          "model-index",
+          "region:us"
+        ],
+        "category": "translation",
+        "metrics": {
+          "downloads": 30,
+          "likes": 1
+        },
+        "publishedAt": "2026-06-22T20:17:05.000Z",
+        "updatedAt": "2026-06-23T13:36:21.000Z",
+        "collectedAt": "2026-06-23T13:37:45.594Z",
+        "raw": {
+          "pipelineTag": "translation"
         }
       },
       {
@@ -854,39 +914,10 @@
         },
         "publishedAt": "2023-05-20T09:26:19.000Z",
         "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-06-23T10:29:43.789Z",
+        "collectedAt": "2026-06-23T13:37:45.606Z",
         "raw": {
           "sdk": "static",
           "emoji": "🏆🤖"
-        }
-      },
-      {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
-        "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3752
-        },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-06-23T10:29:43.789Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
         }
       }
     ],
@@ -903,10 +934,10 @@
         ],
         "metrics": {
           "upvotes": 850,
-          "commentsCount": 712
+          "commentsCount": 714
         },
         "publishedAt": "2026-06-21T12:44:13.000Z",
-        "collectedAt": "2026-06-23T10:29:43.866Z",
+        "collectedAt": "2026-06-23T13:37:45.865Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48618455",
           "matchedKeywords": [
@@ -925,11 +956,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 489,
-          "commentsCount": 335
+          "upvotes": 527,
+          "commentsCount": 362
         },
         "publishedAt": "2026-06-22T19:06:48.000Z",
-        "collectedAt": "2026-06-23T10:29:43.866Z",
+        "collectedAt": "2026-06-23T13:37:45.865Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48634585",
           "matchedKeywords": [
@@ -948,36 +979,13 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 406,
-          "commentsCount": 175
+          "upvotes": 462,
+          "commentsCount": 213
         },
         "publishedAt": "2026-06-22T21:21:01.000Z",
-        "collectedAt": "2026-06-23T10:29:43.866Z",
+        "collectedAt": "2026-06-23T13:37:45.865Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48636377",
-          "matchedKeywords": [
-            "ai"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48625823",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Danish privacy activist Lars Andersen raided by police",
-        "url": "https://twitter.com/LarsAnders1620/status/2068208864747540516#m",
-        "author": "I_am_tiberius",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 424,
-          "commentsCount": 402
-        },
-        "publishedAt": "2026-06-22T04:50:26.000Z",
-        "collectedAt": "2026-06-23T10:29:43.866Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48625823",
           "matchedKeywords": [
             "ai"
           ]
@@ -995,11 +1003,11 @@
           "openai"
         ],
         "metrics": {
-          "upvotes": 487,
-          "commentsCount": 265
+          "upvotes": 488,
+          "commentsCount": 267
         },
         "publishedAt": "2026-06-22T07:30:17.000Z",
-        "collectedAt": "2026-06-23T10:29:43.866Z",
+        "collectedAt": "2026-06-23T13:37:45.865Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48626930",
           "matchedKeywords": [
@@ -1007,9 +1015,92 @@
             "openai"
           ]
         }
+      },
+      {
+        "id": "hackernews:48625823",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Danish privacy activist Lars Andersen raided by police",
+        "url": "https://twitter.com/LarsAnders1620/status/2068208864747540516#m",
+        "author": "I_am_tiberius",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 427,
+          "commentsCount": 405
+        },
+        "publishedAt": "2026-06-22T04:50:26.000Z",
+        "collectedAt": "2026-06-23T13:37:45.865Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48625823",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmqqo96e30bv9slp5ds265bki",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "IBM 开源 CUGA：轻量级智能体框架，提供二十余个单文件示例应用",
+        "url": "https://huggingface.co/blog/ibm-research/cuga-apps",
+        "summary": "IBM 开源了 CUGA（Configurable Generalist Agent），一个处理规划、执行循环、工具调用和状态管理的轻量级智能体框架。开发者只需提供工具列表和提示词即可构建 CugaAgent。内置计划-执行-反思循环，在 AppWorld（2025年7月-2026年2月）和 WebArena（2025年2月-9月）基准上排名第一。支持 Fast / Balanced / Accurate 三种推理模式，代码执行可在本地、Docker 或 E2B 沙箱中运行。可互换工具支持 OpenAPI、MCP 和 LangChain 函数，通过环境变量一键切换 OpenAI、watsonx、Ollama 等提供商。随框架发布二十余个单文件示例应用，涵盖电影推荐、IBM Cloud 架构顾问等场景，每个应用仅需一个 FastAPI 文件。",
+        "description": "IBM 开源了 CUGA（Configurable Generalist Agent），一个处理规划、执行循环、工具调用和状态管理的轻量级智能体框架。开发者只需提供工具列表和提示词即可构建 CugaAgent。内置计划-执行-反思循环，在 AppWorld（2025年7月-2026年2月）和 WebArena（2025年2月-9月）基准上排名第一。支持 Fast / Balanced / Accurate 三种推理模式，代码执行可在本地、Docker 或 E2B 沙箱中运行。可互换工具支持 OpenAPI、MCP 和 LangChain 函数，通过环境变量一键切换 OpenAI、watsonx、Ollama 等提供商。随框架发布二十余个单文件示例应用，涵盖电影推荐、IBM Cloud 架构顾问等场景，每个应用仅需一个 FastAPI 文件。",
+        "category": "products",
+        "originalSource": "Hugging Face：Blog（RSS）",
+        "originalUrl": "https://huggingface.co/blog/ibm-research/cuga-apps",
+        "recommendedReason": "IBM 开源了 CUGA（Configurable Generalist Agent），一个处理规划、执行循环、工具调用和状态管理的轻量级智能体框架。开发者只需提供工具列表和提示词即可构建 CugaAgent。内置计划-执行-反思循环，在 AppWorld（2025年7月-2026年2月）和 WebArena（2025年2月-9月）基准上排名第一。支持 Fast / Balanced / Accurate 三种推理模式，代码执行可在本地、Docker 或 E2B 沙箱中运行。可互换工具支持 OpenAPI、MCP 和 LangChain 函数，通过环境变量一键切换 OpenAI、watsonx、Ollama 等提供商。随框架发布二十余个单文件示例应用，涵盖电影推荐、IBM Cloud 架构顾问等场景，每个应用仅需一个 FastAPI 文件。",
+        "publishedAt": "2026-06-23T12:51:55.000Z",
+        "collectedAt": "2026-06-23T13:37:48.880Z",
+        "raw": {
+          "id": "cmqqo96e30bv9slp5ds265bki",
+          "titleEn": "Build real agentic apps using CUGA： two dozen working examples on a lightweight harness",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmqqjmnoj0af8slp5kb7ky21w",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "网易有道发布 Confucius4-TTS：14 语种跨语种无口音语音克隆开源模型",
+        "url": "https://www.ithome.com/0/967/636.htm",
+        "summary": "网易有道推出\"子曰 4.0\"TTS 引擎 Confucius4-TTS，声称是业内首个支持 14 种语言跨语种无口音、且无需参考文本即可完成语音克隆的开源模型。用户仅需 3 秒音频即可实现零样本音色克隆，克隆音色与原声相似度超 85%，任务准确度达 97%。模型支持中文、英语等 14 种语言，首创音频 Prompt 情感克隆迁移。底层采用 GPT 式语义大模型、SSL 预训练特征与 ECAPA-TDNN 说话人编码器、Flow Matching 框架。已全量开源（Apache 协议），提供 54GB 资源包供本地部署。",
+        "description": "网易有道推出\"子曰 4.0\"TTS 引擎 Confucius4-TTS，声称是业内首个支持 14 种语言跨语种无口音、且无需参考文本即可完成语音克隆的开源模型。用户仅需 3 秒音频即可实现零样本音色克隆，克隆音色与原声相似度超 85%，任务准确度达 97%。模型支持中文、英语等 14 种语言，首创音频 Prompt 情感克隆迁移。底层采用 GPT 式语义大模型、SSL 预训练特征与 ECAPA-TDNN 说话人编码器、Flow Matching 框架。已全量开源（Apache 协议），提供 54GB 资源包供本地部署。",
+        "category": "models",
+        "originalSource": "IT之家（RSS）",
+        "originalUrl": "https://www.ithome.com/0/967/636.htm",
+        "recommendedReason": "网易有道推出\"子曰 4.0\"TTS 引擎 Confucius4-TTS，声称是业内首个支持 14 种语言跨语种无口音、且无需参考文本即可完成语音克隆的开源模型。用户仅需 3 秒音频即可实现零样本音色克隆，克隆音色与原声相似度超 85%，任务准确度达 97%。模型支持中文、英语等 14 种语言，首创音频 Prompt 情感克隆迁移。底层采用 GPT 式语义大模型、SSL 预训练特征与 ECAPA-TDNN 说话人编码器、Flow Matching 框架。已全量开源（Apache 协议），提供 54GB 资源包供本地部署。",
+        "publishedAt": "2026-06-23T11:00:00.000Z",
+        "collectedAt": "2026-06-23T13:37:48.880Z",
+        "raw": {
+          "id": "cmqqjmnoj0af8slp5kb7ky21w",
+          "titleEn": "网易发布 Confucius4-TTS：业内首个支持 14 种语言跨语种无口音、且无需参考文本即可完成语音克隆的开源模型，3 秒音频即可克隆音色",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmqqjmqyn0afsslp5fgdp81yv",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "国内首个高考志愿AI测评出炉，千问多项表现超过资深咨询师",
+        "url": "https://mp.weixin.qq.com/s/oGHVP4MgGS1rbmT8s8St8Q",
+        "summary": "友松实验室发布国内首个高考志愿AI能力测评报告，测试千问高考志愿填报Agent四大模块。与53位平均从业4.6年的人类咨询师对照，千问表现更稳定精确：44道事实题全对；模拟10个志愿中6个可录取；100场匿名对比中专家58次倾向千问回答。使用千问辅助后，人类咨询师正确率提升，耗时减少约27%。该Agent基于千问高考志愿大模型和夸克8年高考数据，覆盖约3000所院校、2000多个专业。",
+        "description": "友松实验室发布国内首个高考志愿AI能力测评报告，测试千问高考志愿填报Agent四大模块。与53位平均从业4.6年的人类咨询师对照，千问表现更稳定精确：44道事实题全对；模拟10个志愿中6个可录取；100场匿名对比中专家58次倾向千问回答。使用千问辅助后，人类咨询师正确率提升，耗时减少约27%。该Agent基于千问高考志愿大模型和夸克8年高考数据，覆盖约3000所院校、2000多个专业。",
+        "category": "products",
+        "originalSource": "公众号：千问APP（阿里）",
+        "originalUrl": "https://mp.weixin.qq.com/s/oGHVP4MgGS1rbmT8s8St8Q",
+        "recommendedReason": "友松实验室发布国内首个高考志愿AI能力测评报告，测试千问高考志愿填报Agent四大模块。与53位平均从业4.6年的人类咨询师对照，千问表现更稳定精确：44道事实题全对；模拟10个志愿中6个可录取；100场匿名对比中专家58次倾向千问回答。使用千问辅助后，人类咨询师正确率提升，耗时减少约27%。该Agent基于千问高考志愿大模型和夸克8年高考数据，覆盖约3000所院校、2000多个专业。",
+        "publishedAt": "2026-06-23T10:54:49.000Z",
+        "collectedAt": "2026-06-23T13:37:48.880Z",
+        "raw": {
+          "id": "cmqqjmqyn0afsslp5fgdp81yv",
+          "titleEn": null,
+          "apiCategory": "ai-products"
+        }
+      },
       {
         "id": "aihot:cmqqdbcno08taslp5yd9dbxjt",
         "source": "aihot",
@@ -1023,7 +1114,7 @@
         "originalUrl": "https://www.artificialintelligence-news.com/news/five-eyes-warning-ai-cyber-threats",
         "recommendedReason": "2026年6月22日，五眼联盟（美、英、加、澳、新）网络安全部门联合警告，即将到来的AI模型（如OpenAI的GPT-5.5-Cyber、Anthropic的Mythos）将降低编写复杂攻击代码的门槛。自动化智能体可全天候扫描互联网漏洞，大幅缩短安全窗口期。AI驱动的超个性化钓鱼诈骗已在亚太蔓延，印度2026年初勒索软件事件激增165%。五眼联盟建议企业部署自动化防御AI，个人用户开启多因素认证、删除闲置账户。",
         "publishedAt": "2026-06-23T08:00:00.000Z",
-        "collectedAt": "2026-06-23T10:29:45.055Z",
+        "collectedAt": "2026-06-23T13:37:48.880Z",
         "raw": {
           "id": "cmqqdbcno08taslp5yd9dbxjt",
           "titleEn": "Top spy agencies say AI cyber threats will impact you within months. Here's why",
@@ -1043,7 +1134,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/IY6XGp4k6VgD9ZPH6YprCA",
         "recommendedReason": "京东近日开源全球首个全栈交互模型JoyAI-VL-Interaction，获vLLM-Omni原生支持。该模型能持续观察视频流、主动判断关键事件并实时响应，支持将复杂任务委托后台Agent处理。在58个真人盲评中，对比豆包视频通话助手胜率77.6%，对比Gemini视频通话助手胜率87.9%，监控预警场景达100%胜率。开源内容包括模型权重、交互数据集、训练方案及完整可部署系统，支持摄像头、直播流等视频输入及语音交互、长期记忆、vLLM部署，适用于安防监控、老人看护、直播讲解等实时场景。",
         "publishedAt": "2026-06-23T06:04:50.000Z",
-        "collectedAt": "2026-06-23T10:29:45.055Z",
+        "collectedAt": "2026-06-23T13:37:48.880Z",
         "raw": {
           "id": "cmqq8ww0e07m4slp5mk5snl0z",
           "titleEn": "京东全栈开源JoyAI-VL-Interaction，让大模型从\"一问一答\"走向\"边看边说\"",
@@ -1063,7 +1154,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/iL0uyUjOMUEfudeuDP6wQQ",
         "recommendedReason": "火山引擎正式发布豆包音频生成模型1.0（Doubao-Seed-Audio 1.0），支持文本与音频参考生成，端到端输出目标音频。单条Prompt可编排多角色对白、情绪语气、背景音乐及环境氛围，长时生成中保持多角色音色一致性，无需后期多轨混音。模型支持0样本多模态输入，无需额外训练即可生成；实现音色与风格解耦控制及\"一声多角\"能力。一次支持2分钟音频创作，多次延长保持音色统一。已开启火山方舟API邀测，个人用户享30分钟创作额度，即将上线剪映、即梦、番茄等产品。",
         "publishedAt": "2026-06-23T05:41:11.000Z",
-        "collectedAt": "2026-06-23T10:29:45.055Z",
+        "collectedAt": "2026-06-23T13:37:48.880Z",
         "raw": {
           "id": "cmqq876yf07gsslp5eix31xaq",
           "titleEn": null,
@@ -1083,7 +1174,7 @@
         "originalUrl": "https://seed.bytedance.com/zh/blog/seed2-1-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83-%E6%B7%B1%E5%85%A5-ai-%E7%94%9F%E4%BA%A7%E5%8A%9B",
         "recommendedReason": "字节Seed发布Seed2.1系列，面向真实生产力场景的智能体，强化通用Agent能力、代码工程交付与多模态理解。Seed2.1 Pro在GDPval基准获最高分，Agents' Last Exam位列参评模型第一梯队；MobileWorld手机GUI任务最高分，CreativeWork多环境任务表现突出。多模态在CharXiv-RQ等多项基准取得SOTA。代码能力上，Seed2.1 Pro在NL2Repo-Bench表现良好，开发者评测相比Claude Opus 4.6获59.1%胜率。模型已在豆包、TRAE上线，API通过火山方舟提供。",
         "publishedAt": "2026-06-23T00:02:42.000Z",
-        "collectedAt": "2026-06-23T10:29:45.055Z",
+        "collectedAt": "2026-06-23T13:37:48.880Z",
         "raw": {
           "id": "cmqq5ns6p06scslp5dlnxluux",
           "titleEn": "Seed2.1 正式发布，深入 AI 生产力",
@@ -1103,71 +1194,11 @@
         "originalUrl": "https://huggingface.co/blog/huggingface-hub-release-ci",
         "recommendedReason": "Hugging Face 将 huggingface_hub 的发布周期从每 4-6 周缩短至每周，全部由单个 GitHub Actions 工作流自动完成。流程依赖开源工具和开权重模型（当前为 Z.ai 的 GLM-5.2）来起草发布说明和 Slack 公告，但保留人类在最终审核环节的决定权。自动步骤包括版本号更新、提交标签推送、PyPI 发布、下游测试分支创建、发布说明草稿、Slack 公告草稿、归档、后置版本提升以及对合入 PR 的评论。所有组件均基于开源生态构建，任何维护者都可直接复制使用。",
         "publishedAt": "2026-06-23T00:00:00.000Z",
-        "collectedAt": "2026-06-23T10:29:45.055Z",
+        "collectedAt": "2026-06-23T13:37:48.880Z",
         "raw": {
           "id": "cmqqd9e3008seslp5644lhzaa",
           "titleEn": "Shipping huggingface_hub every week with AI， open tools， and a human in the loop",
           "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmqpu6z9y03w3slp59okauzsw",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Aleph 2.0 现已集成到 Figma Weave",
-        "url": "https://runwayml.com/news/aleph-2-in-figma-weave",
-        "summary": "Aleph 2.0 是 Runway 的旗舰视频编辑模型，现已在 Figma Weave 中上线。它是一个基于上下文的视频编辑模型，通过关键帧工作：从视频中提取一帧，重新设计风格并附上时间戳连接回 Aleph 2.0 节点，即可将该编辑传递到主体出现的每一帧，同时保持其他内容不变。支持最长 30 秒、1080p 的片段，可跨多镜头序列应用编辑，无需逐镜头处理。",
-        "description": "Aleph 2.0 是 Runway 的旗舰视频编辑模型，现已在 Figma Weave 中上线。它是一个基于上下文的视频编辑模型，通过关键帧工作：从视频中提取一帧，重新设计风格并附上时间戳连接回 Aleph 2.0 节点，即可将该编辑传递到主体出现的每一帧，同时保持其他内容不变。支持最长 30 秒、1080p 的片段，可跨多镜头序列应用编辑，无需逐镜头处理。",
-        "category": "products",
-        "originalSource": "Runway：News（网页）",
-        "originalUrl": "https://runwayml.com/news/aleph-2-in-figma-weave",
-        "recommendedReason": "Aleph 2.0 是 Runway 的旗舰视频编辑模型，现已在 Figma Weave 中上线。它是一个基于上下文的视频编辑模型，通过关键帧工作：从视频中提取一帧，重新设计风格并附上时间戳连接回 Aleph 2.0 节点，即可将该编辑传递到主体出现的每一帧，同时保持其他内容不变。支持最长 30 秒、1080p 的片段，可跨多镜头序列应用编辑，无需逐镜头处理。",
-        "publishedAt": "2026-06-22T23:18:22.492Z",
-        "collectedAt": "2026-06-23T10:29:45.055Z",
-        "raw": {
-          "id": "cmqpu6z9y03w3slp59okauzsw",
-          "titleEn": "Aleph 2.0 Is Now in Figma Weave",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmqpqqsrw030aslp5c0jt14yr",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "美国警长利用Flock车牌系统跟踪前女友案频发，Flock法务官承认\"最常见滥用\"",
-        "url": "https://ipvm.com/reports/police-chiefs-track",
-        "summary": "伊利诺伊州Holiday Hills警察局长于2026年6月18日被捕，被控两项渎职重罪。检方指控他利用Flock车牌读取系统及州警察数据库，跟踪6名认识的人，其中3人为前女友，并对其中一人的前男友车牌查询140次（86次脱岗），持续18个月。全美至少18起类似案例：佐治亚州Braselton警察局长、爱达荷州Jerome县警长（700余次查询其妻车牌）等均因此辞职或被捕。Flock首席法务官Dan Haley承认，滥用该系统\"最常见情况\"就是跟踪前女友。Flock称系统只跟踪车辆，但案例表明车辆是手段，人是目标。",
-        "description": "伊利诺伊州Holiday Hills警察局长于2026年6月18日被捕，被控两项渎职重罪。检方指控他利用Flock车牌读取系统及州警察数据库，跟踪6名认识的人，其中3人为前女友，并对其中一人的前男友车牌查询140次（86次脱岗），持续18个月。全美至少18起类似案例：佐治亚州Braselton警察局长、爱达荷州Jerome县警长（700余次查询其妻车牌）等均因此辞职或被捕。Flock首席法务官Dan Haley承认，滥用该系统\"最常见情况\"就是跟踪前女友。Flock称系统只跟踪车辆，但案例表明车辆是手段，人是目标。",
-        "category": "industry",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://ipvm.com/reports/police-chiefs-track",
-        "recommendedReason": "伊利诺伊州Holiday Hills警察局长于2026年6月18日被捕，被控两项渎职重罪。检方指控他利用Flock车牌读取系统及州警察数据库，跟踪6名认识的人，其中3人为前女友，并对其中一人的前男友车牌查询140次（86次脱岗），持续18个月。全美至少18起类似案例：佐治亚州Braselton警察局长、爱达荷州Jerome县警长（700余次查询其妻车牌）等均因此辞职或被捕。Flock首席法务官Dan Haley承认，滥用该系统\"最常见情况\"就是跟踪前女友。Flock称系统只跟踪车辆，但案例表明车辆是手段，人是目标。",
-        "publishedAt": "2026-06-22T21:32:12.384Z",
-        "collectedAt": "2026-06-23T10:29:45.055Z",
-        "raw": {
-          "id": "cmqpqqsrw030aslp5c0jt14yr",
-          "titleEn": "由\"群情\"驱使的警察局长们尾随女性，这说明了为何需要搜查令",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmqppyj5702txslp5d7ahupmr",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "在 AWS、Google Cloud 和 Microsoft Foundry 上使用完整版 Claude Desktop",
-        "url": "https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry",
-        "summary": "通过 AWS、Google Cloud 和 Microsoft Foundry 使用 Claude Desktop 的组织现已获得 Chat、Claude Cowork 和 Claude Code 集成的完整桌面体验。IT 团队可将推理保留在自己的云环境中，对话历史本地存储。支持 IAM Identity Center、Workforce Identity Federation、Microsoft Entra ID 或 Okta 登录；策略模板可导出至 Intune、GPO 或 Jamf；提供离线安装器。Chat、Claude Cowork 和 Claude Code 各有独立策略键，支持精细访问控制。M365 连接器通过 Entra 应用访问邮件和文档，并支持 GCC High/DoD 端点。",
-        "description": "通过 AWS、Google Cloud 和 Microsoft Foundry 使用 Claude Desktop 的组织现已获得 Chat、Claude Cowork 和 Claude Code 集成的完整桌面体验。IT 团队可将推理保留在自己的云环境中，对话历史本地存储。支持 IAM Identity Center、Workforce Identity Federation、Microsoft Entra ID 或 Okta 登录；策略模板可导出至 Intune、GPO 或 Jamf；提供离线安装器。Chat、Claude Cowork 和 Claude Code 各有独立策略键，支持精细访问控制。M365 连接器通过 Entra 应用访问邮件和文档，并支持 GCC High/DoD 端点。",
-        "category": "products",
-        "originalSource": "Claude：Blog（网页）",
-        "originalUrl": "https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry",
-        "recommendedReason": "通过 AWS、Google Cloud 和 Microsoft Foundry 使用 Claude Desktop 的组织现已获得 Chat、Claude Cowork 和 Claude Code 集成的完整桌面体验。IT 团队可将推理保留在自己的云环境中，对话历史本地存储。支持 IAM Identity Center、Workforce Identity Federation、Microsoft Entra ID 或 Okta 登录；策略模板可导出至 Intune、GPO 或 Jamf；提供离线安装器。Chat、Claude Cowork 和 Claude Code 各有独立策略键，支持精细访问控制。M365 连接器通过 Entra 应用访问邮件和文档，并支持 GCC High/DoD 端点。",
-        "publishedAt": "2026-06-22T21:19:56.013Z",
-        "collectedAt": "2026-06-23T10:29:45.055Z",
-        "raw": {
-          "id": "cmqppyj5702txslp5d7ahupmr",
-          "titleEn": "The full Claude Desktop experience on AWS， Google Cloud， and Microsoft Foundry",
-          "apiCategory": "ai-products"
         }
       }
     ]
