@@ -1,12 +1,13 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-23T13:58:39.885Z
+Updated: 2026-06-23T16:46:09.959Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
+| 2026-06-24 | daily | [AI Developer Radar｜Daily｜2026-06-24](2026/06/2026-06-24-daily.md) | ChatGPTNextWeb/NextChat, Tencent/ncnn, deepspeedai/DeepSpeed, gvergnaud/ts-pattern, milvus-io/milvus |
 | 2026-06-23 | daily | [AI Developer Radar｜Daily｜2026-06-23](2026/06/2026-06-23-daily.md) | anthropics/claude-plugins-official, headroomlabs-ai/headroom, JCodesMore/ai-website-cloner-template, deepspeedai/DeepSpeed, ChatGPTNextWeb/NextChat |
 | 2026-06-22 | daily | [AI Developer Radar｜Daily｜2026-06-22](2026/06/2026-06-22-daily.md) | lyogavin/airllm, bytedance/deer-flow, garrytan/gstack, jamiepine/voicebox, deepspeedai/DeepSpeed |
 | 2026-06-21 | daily | [AI Developer Radar｜Daily｜2026-06-21](2026/06/2026-06-21-daily.md) | mukul975/Anthropic-Cybersecurity-Skills, koala73/worldmonitor, conductor-oss/conductor, tursodatabase/turso, chopratejas/headroom |

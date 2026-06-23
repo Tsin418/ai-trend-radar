@@ -1,211 +1,183 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-06-23T16:22:48.528Z",
+  "generatedAt": "2026-06-23T16:46:09.904Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
+        "id": "http://arxiv.org/abs/2606.23687v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Randomized YaRN Improves Length Generalization for Long-Context Reasoning",
+        "url": "https://arxiv.org/pdf/2606.23687v1",
+        "description": "Large language models (LLMs) are typically pretrained on short sequences and then extended to work on longer sequences with additional training. However, such LLMs still struggle to further generalize to very long sequences. We propose Randomized YaRN, a training method that improves length generalization by combining YaRN-based positional extrapolation with randomized positional encoding and a length curriculum. During training on short context data, tokens are assigned YaRN positional encoding",
+        "summary": "Large language models (LLMs) are typically pretrained on short sequences and then extended to work on longer sequences with additional training. However, such LLMs still struggle to further generalize to very long sequences. We propose Randomized YaRN, a training method that improves length generalization by combining YaRN-based positional extrapolation with randomized positional encoding and a length curriculum. During training on short context data, tokens are assigned YaRN positional encodings sampled from a larger position range, exposing the model to out-of-distribution positional representations even on short-context inputs. We evaluate Randomized YaRN on two challenging long-context reasoning benchmarks, BABILong and Multi-Round Coreference Resolution (MRCR). When training on data with <8K context, Randomized YaRN consistently improves reasoning performance on context lengths from 16K to 128K and outperforms standard fine-tuning, with the largest gains appearing at far out-of-distribution lengths. Our results suggest that progressively exposing models to OOD positional distributions provides an effective recipe for generalizable long-context reasoning.",
+        "author": "Manas Mehta, Fangcong Yin, Greg Durrett",
         "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
+          "cs.CL",
+          "large language model",
+          "llm",
+          "fine-tuning",
+          "benchmark"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 14030
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-06-23T16:22:48.717Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-06-22T17:59:53Z",
+        "updatedAt": "2026-06-22T17:59:53Z",
+        "collectedAt": "2026-06-23T16:46:01.156Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.23687v1",
+          "authors": [
+            "Manas Mehta",
+            "Fangcong Yin",
+            "Greg Durrett"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, fine-tuning, benchmark"
       },
       {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
+        "id": "http://arxiv.org/abs/2606.23679v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Semantic Browsing: Controllable Diversity for Image Generation",
+        "url": "https://arxiv.org/pdf/2606.23679v1",
+        "description": "Modern text-to-image models excel in visual fidelity and prompt adherence. However, this strict adherence comes at the cost of diversity: generated samples tend to collapse into a single visual interpretation. Existing methods to improve diversity produce outputs driven by incidental variations rather than meaningful design choices. This motivates a new variant of the diversity task where structure is enforced on the generated samples. We introduce a method for controlled diversity that enables ",
+        "summary": "Modern text-to-image models excel in visual fidelity and prompt adherence. However, this strict adherence comes at the cost of diversity: generated samples tend to collapse into a single visual interpretation. Existing methods to improve diversity produce outputs driven by incidental variations rather than meaningful design choices. This motivates a new variant of the diversity task where structure is enforced on the generated samples. We introduce a method for controlled diversity that enables Semantic Browsing, where users can navigate structured image galleries and experience creative exploration through a systematic traversal of meaningful, interpretable axes of variation. Achieving this level of semantic control requires a deep understanding of the scene. We exploit the fact that recent text-to-image models are trained on elaborated captions, effectively decoupling semantic decision-making from pixel generation. This enables a paradigm shift: instead of relying on stochastic variation within the text-to-image model, we induce diversity directly at the text level. By leveraging rich textual representations, we allow a Vision Language Model (VLM) to operate on the full scene context. To overcome the generic outputs typical of standard VLMs, we employ an agentic workflow that explicitly enforces structured variation attuned to the original prompt. We demonstrate that our method produces diverse and navigable design spaces where every variation corresponds to a specific, user-understandable semantic decision.",
+        "author": "Sara Dorfman, Maya Vishnevsky, Omer Dahary, Or Patashnik, Daniel Cohen-Or",
         "tags": [
-          "docker",
-          "region:us"
+          "cs.CV",
+          "cs.AI",
+          "cs.GR",
+          "cs.LG",
+          "agent",
+          "rag",
+          "agentic",
+          "workflow"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11133
-        },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-06-23T16:22:48.717Z",
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-06-22T17:59:17Z",
+        "updatedAt": "2026-06-22T17:59:17Z",
+        "collectedAt": "2026-06-23T16:46:01.156Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.23679v1",
+          "authors": [
+            "Sara Dorfman",
+            "Maya Vishnevsky",
+            "Omer Dahary",
+            "Or Patashnik",
+            "Daniel Cohen-Or"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: agent, rag, agentic, workflow"
       },
       {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
+        "id": "http://arxiv.org/abs/2606.23678v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "AIR: Adaptive Interleaved Reasoning with Code in MLLMs",
+        "url": "https://arxiv.org/pdf/2606.23678v1",
+        "description": "Following the paradigm shift initiated by OpenAI o3, interleaved reasoning with code to enhance multimodal large language models (MLLMs) has become a pivotal research frontier. The existing literature focuses primarily on tool-use within vision-perception tasks. However, such approaches typically rely on predefined heuristics for visual manipulation and are inherently incapable of addressing numerical computation problems due to their exclusive focus on visual operations. This paper empowers MLL",
+        "summary": "Following the paradigm shift initiated by OpenAI o3, interleaved reasoning with code to enhance multimodal large language models (MLLMs) has become a pivotal research frontier. The existing literature focuses primarily on tool-use within vision-perception tasks. However, such approaches typically rely on predefined heuristics for visual manipulation and are inherently incapable of addressing numerical computation problems due to their exclusive focus on visual operations. This paper empowers MLLMs with adaptive interleaved reasoning capabilities through extended reinforcement learning training on code-augmented complex numerical computation tasks. To this end, we propose a comprehensive three-component solution consisting of: a two-stage cold-start data construction pipeline, data filtering strategies for RL dataset curation, and an adaptive tool-invocation strategy leveraging a group-constrained reward function for interleaved reasoning trajectories. Extensive experiments demonstrate that after Reinforcement Learning training with the group-constrained reward function, performance improves by an average of 6.1 percentage points (pp) on evaluation benchmarks. Specifically, the accuracy for interleaved reasoning samples increases by 9.9 pp, and the overall success rate of tool-use exceeds 95%. Our data and code are available at: https://github.com/CongHan0808/AIR.git.",
+        "author": "Cong Han, Xiaohan Lan, Haibo Qiu, Yujie Zhong",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.CV",
+          "cs.AI",
+          "large language model",
+          "llm",
+          "rag",
+          "benchmark",
+          "evaluation"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10113
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-06-23T16:22:48.717Z",
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-06-22T17:58:54Z",
+        "updatedAt": "2026-06-22T17:58:54Z",
+        "collectedAt": "2026-06-23T16:46:01.156Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.23678v1",
+          "authors": [
+            "Cong Han",
+            "Xiaohan Lan",
+            "Haibo Qiu",
+            "Yujie Zhong"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, rag, benchmark, evaluation"
       },
       {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
+        "id": "http://arxiv.org/abs/2606.23676v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Open Problem: Is AdamW Effective Under Heavy-Tailed Noise?",
+        "url": "https://arxiv.org/pdf/2606.23676v1",
+        "description": "AdamW is the de facto optimizer for training large language models (LLMs), yet the theory behind it still lives mostly in finite-variance regimes. This is increasingly unsatisfying, as empirical evidence indicates that stochastic gradient noise in LLM pretraining is typically heavy-tailed. Recent work shows that sign-based optimizers such as Lion and Muon achieve sharp heavy-tailed rates, and that AdaGrad can also converge under heavy-tailed noise. However, no rigorous convergence theory for Ada",
+        "summary": "AdamW is the de facto optimizer for training large language models (LLMs), yet the theory behind it still lives mostly in finite-variance regimes. This is increasingly unsatisfying, as empirical evidence indicates that stochastic gradient noise in LLM pretraining is typically heavy-tailed. Recent work shows that sign-based optimizers such as Lion and Muon achieve sharp heavy-tailed rates, and that AdaGrad can also converge under heavy-tailed noise. However, no rigorous convergence theory for AdamW has yet been established in this regime. Can AdamW converge under the same heavy-tailed assumptions, or does its second-moment accumulator create a genuine obstruction? We formulate this as an open problem, prove a positive weighted-metric benchmark, and give a corridor lower-bound mechanism showing how denominator memory can hide large gradients.",
+        "author": "Dingzhi Yu, Hongyi Tao, Yuanyu Wan, Luo Luo, Lijun Zhang",
         "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
+          "cs.LG",
+          "cs.AI",
+          "math.OC",
+          "stat.ML",
+          "large language model",
+          "llm",
+          "benchmark"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7499
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-06-22T18:58:21.000Z",
-        "collectedAt": "2026-06-23T16:22:48.717Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-06-22T17:58:52Z",
+        "updatedAt": "2026-06-22T17:58:52Z",
+        "collectedAt": "2026-06-23T16:46:01.156Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "📊"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.23676v1",
+          "authors": [
+            "Dingzhi Yu",
+            "Hongyi Tao",
+            "Yuanyu Wan",
+            "Luo Luo",
+            "Lijun Zhang"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, benchmark"
       },
       {
-        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Wan2.2 Animate",
-        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
-        "author": "Wan-AI",
+        "id": "http://arxiv.org/abs/2606.23673v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "PsyBridge: A Hybrid Intelligent Framework for Multi-Dimensional Mental Health Assessment and Decision Support",
+        "url": "https://arxiv.org/pdf/2606.23673v1",
+        "description": "Mental health assessment commonly relies on isolated screening instruments or data-driven models that often lack interpretability and multi-dimensional integration. Existing approaches frequently focus on individual indicators such as depression or anxiety while providing limited support for comprehensive and explainable decision-making. To address this limitation, this study proposes PsyBridge, a hybrid intelligent decision-support framework designed for multi-dimensional mental health assessme",
+        "summary": "Mental health assessment commonly relies on isolated screening instruments or data-driven models that often lack interpretability and multi-dimensional integration. Existing approaches frequently focus on individual indicators such as depression or anxiety while providing limited support for comprehensive and explainable decision-making. To address this limitation, this study proposes PsyBridge, a hybrid intelligent decision-support framework designed for multi-dimensional mental health assessment through the integration of clinically validated screening tools, cognitive evaluation, and personality profiling within a unified architecture. The proposed framework incorporates PHQ-9 and GAD-7 assessments alongside cognitive and behavioural indicators using a modular design and a weighted aggregation mechanism to generate interpretable mental health risk classifications and recommendations. To evaluate the framework, a semi-synthetic dataset consisting of 500 patient profiles representing varying severity levels was constructed based on clinically grounded score distributions. Experimental results demonstrate that PsyBridge achieves an overall accuracy of 0.84, outperforming standalone PHQ-9 and GAD-7 assessments while improving precision, recall, and F1-score. Sensitivity analysis and ablation studies further indicate that integrating cognitive and personality components contributes to more stable classification performance and reduces inconsistencies in moderate-risk prediction. The findings suggest that PsyBridge provides a scalable and interpretable approach for AI-assisted mental health decision support, particularly within digital healthcare and telehealth environments.",
+        "author": "Sunil Wanjari, Manish Thakre, Aayushi Asole, Sharwari Raut, Kwabena Adu-Duodu, Yinhao Li, Stanly Wilson",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.AI",
+          "cs.LG",
+          "evaluation"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5113
-        },
-        "publishedAt": "2025-09-18T07:05:32.000Z",
-        "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-06-23T16:22:48.717Z",
+        "category": "cs.AI",
+        "language": "en",
+        "publishedAt": "2026-06-22T17:57:15Z",
+        "updatedAt": "2026-06-22T17:57:15Z",
+        "collectedAt": "2026-06-23T16:46:01.156Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👁"
-        }
-      },
-      {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
-        "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5074
+          "abstractUrl": "http://arxiv.org/abs/2606.23673v1",
+          "authors": [
+            "Sunil Wanjari",
+            "Manish Thakre",
+            "Aayushi Asole",
+            "Sharwari Raut",
+            "Kwabena Adu-Duodu",
+            "Yinhao Li",
+            "Stanly Wilson"
+          ]
         },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-06-23T16:22:48.717Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4924
-        },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-06-23T16:22:48.717Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
-      },
-      {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
-        "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3752
-        },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-06-23T16:22:48.717Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
-        }
+        "recommendedReason": "Matched AI developer keywords: evaluation"
       }
     ],
     "developerBuzz": [],
@@ -223,7 +195,7 @@
         "originalUrl": "https://mistral.ai/news/ocr-4",
         "recommendedReason": "Mistral AI 发布 OCR 4，新增边界框、块分类（标题、表格、方程式、签名等）及逐页逐词置信度分数。支持 170 种语言、10 个语系，可单容器全自托管部署。在 OlmOCRBench 上得分 85.20，独立标注者偏好率平均 72%。定价每 1000 页 $4，Batch API 享 50% 折扣。可通过 API 或 Mistral Studio 的 Document AI 调用。",
         "publishedAt": "2026-06-23T14:24:55.949Z",
-        "collectedAt": "2026-06-23T16:22:50.174Z",
+        "collectedAt": "2026-06-23T16:46:01.939Z",
         "raw": {
           "id": "cmqqqkqoh0chzslp5i6l20j5q",
           "titleEn": null,
@@ -243,7 +215,7 @@
         "originalUrl": "https://github.com/baidu/Unlimited-OCR",
         "recommendedReason": "Unlimited OCR 是一个托管在 GitHub 的项目，实现单次长时域解析（One-Shot Long-Horizon Parsing），旨在一次性处理长时间跨度的 OCR 任务。",
         "publishedAt": "2026-06-23T13:32:22.612Z",
-        "collectedAt": "2026-06-23T16:22:50.174Z",
+        "collectedAt": "2026-06-23T16:46:01.939Z",
         "raw": {
           "id": "cmqqpk6qr0c7cslp5tgwky5n0",
           "titleEn": null,
@@ -263,7 +235,7 @@
         "originalUrl": "https://huggingface.co/blog/ibm-research/cuga-apps",
         "recommendedReason": "IBM 开源了 CUGA（Configurable Generalist Agent），一个处理规划、执行循环、工具调用和状态管理的轻量级智能体框架。开发者只需提供工具列表和提示词即可构建 CugaAgent。内置计划-执行-反思循环，在 AppWorld（2025年7月-2026年2月）和 WebArena（2025年2月-9月）基准上排名第一。支持 Fast / Balanced / Accurate 三种推理模式，代码执行可在本地、Docker 或 E2B 沙箱中运行。可互换工具支持 OpenAPI、MCP 和 LangChain 函数，通过环境变量一键切换 OpenAI、watsonx、Ollama 等提供商。随框架发布二十余个单文件示例应用，涵盖电影推荐、IBM Cloud 架构顾问等场景，每个应用仅需一个 FastAPI 文件。",
         "publishedAt": "2026-06-23T12:51:55.000Z",
-        "collectedAt": "2026-06-23T16:22:50.174Z",
+        "collectedAt": "2026-06-23T16:46:01.939Z",
         "raw": {
           "id": "cmqqo96e30bv9slp5ds265bki",
           "titleEn": "Build real agentic apps using CUGA： two dozen working examples on a lightweight harness",
@@ -283,7 +255,7 @@
         "originalUrl": "https://www.ithome.com/0/967/636.htm",
         "recommendedReason": "网易有道推出\"子曰 4.0\"TTS 引擎 Confucius4-TTS，声称是业内首个支持 14 种语言跨语种无口音、且无需参考文本即可完成语音克隆的开源模型。用户仅需 3 秒音频即可实现零样本音色克隆，克隆音色与原声相似度超 85%，任务准确度达 97%。模型支持中文、英语等 14 种语言，首创音频 Prompt 情感克隆迁移。底层采用 GPT 式语义大模型、SSL 预训练特征与 ECAPA-TDNN 说话人编码器、Flow Matching 框架。已全量开源（Apache 协议），提供 54GB 资源包供本地部署。",
         "publishedAt": "2026-06-23T11:00:00.000Z",
-        "collectedAt": "2026-06-23T16:22:50.174Z",
+        "collectedAt": "2026-06-23T16:46:01.939Z",
         "raw": {
           "id": "cmqqjmnoj0af8slp5kb7ky21w",
           "titleEn": "网易发布 Confucius4-TTS：业内首个支持 14 种语言跨语种无口音、且无需参考文本即可完成语音克隆的开源模型，3 秒音频即可克隆音色",
@@ -303,7 +275,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/oGHVP4MgGS1rbmT8s8St8Q",
         "recommendedReason": "友松实验室发布国内首个高考志愿AI能力测评报告，测试千问高考志愿填报Agent四大模块。与53位平均从业4.6年的人类咨询师对照，千问表现更稳定精确：44道事实题全对；模拟10个志愿中6个可录取；100场匿名对比中专家58次倾向千问回答。使用千问辅助后，人类咨询师正确率提升，耗时减少约27%。该Agent基于千问高考志愿大模型和夸克8年高考数据，覆盖约3000所院校、2000多个专业。",
         "publishedAt": "2026-06-23T10:54:49.000Z",
-        "collectedAt": "2026-06-23T16:22:50.174Z",
+        "collectedAt": "2026-06-23T16:46:01.939Z",
         "raw": {
           "id": "cmqqjmqyn0afsslp5fgdp81yv",
           "titleEn": null,
@@ -323,7 +295,7 @@
         "originalUrl": "https://www.artificialintelligence-news.com/news/five-eyes-warning-ai-cyber-threats",
         "recommendedReason": "2026年6月22日，五眼联盟（美、英、加、澳、新）网络安全部门联合警告，即将到来的AI模型（如OpenAI的GPT-5.5-Cyber、Anthropic的Mythos）将降低编写复杂攻击代码的门槛。自动化智能体可全天候扫描互联网漏洞，大幅缩短安全窗口期。AI驱动的超个性化钓鱼诈骗已在亚太蔓延，印度2026年初勒索软件事件激增165%。五眼联盟建议企业部署自动化防御AI，个人用户开启多因素认证、删除闲置账户。",
         "publishedAt": "2026-06-23T08:00:00.000Z",
-        "collectedAt": "2026-06-23T16:22:50.174Z",
+        "collectedAt": "2026-06-23T16:46:01.939Z",
         "raw": {
           "id": "cmqqdbcno08taslp5yd9dbxjt",
           "titleEn": "Top spy agencies say AI cyber threats will impact you within months. Here's why",
@@ -343,7 +315,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/IY6XGp4k6VgD9ZPH6YprCA",
         "recommendedReason": "京东近日开源全球首个全栈交互模型JoyAI-VL-Interaction，获vLLM-Omni原生支持。该模型能持续观察视频流、主动判断关键事件并实时响应，支持将复杂任务委托后台Agent处理。在58个真人盲评中，对比豆包视频通话助手胜率77.6%，对比Gemini视频通话助手胜率87.9%，监控预警场景达100%胜率。开源内容包括模型权重、交互数据集、训练方案及完整可部署系统，支持摄像头、直播流等视频输入及语音交互、长期记忆、vLLM部署，适用于安防监控、老人看护、直播讲解等实时场景。",
         "publishedAt": "2026-06-23T06:04:50.000Z",
-        "collectedAt": "2026-06-23T16:22:50.174Z",
+        "collectedAt": "2026-06-23T16:46:01.939Z",
         "raw": {
           "id": "cmqq8ww0e07m4slp5mk5snl0z",
           "titleEn": "京东全栈开源JoyAI-VL-Interaction，让大模型从\"一问一答\"走向\"边看边说\"",
@@ -363,13 +335,154 @@
         "originalUrl": "https://mp.weixin.qq.com/s/iL0uyUjOMUEfudeuDP6wQQ",
         "recommendedReason": "火山引擎正式发布豆包音频生成模型1.0（Doubao-Seed-Audio 1.0），支持文本与音频参考生成，端到端输出目标音频。单条Prompt可编排多角色对白、情绪语气、背景音乐及环境氛围，长时生成中保持多角色音色一致性，无需后期多轨混音。模型支持0样本多模态输入，无需额外训练即可生成；实现音色与风格解耦控制及\"一声多角\"能力。一次支持2分钟音频创作，多次延长保持音色统一。已开启火山方舟API邀测，个人用户享30分钟创作额度，即将上线剪映、即梦、番茄等产品。",
         "publishedAt": "2026-06-23T05:41:11.000Z",
-        "collectedAt": "2026-06-23T16:22:50.174Z",
+        "collectedAt": "2026-06-23T16:46:01.939Z",
         "raw": {
           "id": "cmqq876yf07gsslp5eix31xaq",
           "titleEn": null,
           "apiCategory": "ai-models"
         }
+      },
+      {
+        "id": "aihot:cmqq5ns6p06scslp5dlnxluux",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Seed2.1 正式发布，深入 AI 生产力",
+        "url": "https://seed.bytedance.com/zh/blog/seed2-1-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83-%E6%B7%B1%E5%85%A5-ai-%E7%94%9F%E4%BA%A7%E5%8A%9B",
+        "summary": "字节Seed发布Seed2.1系列，面向真实生产力场景的智能体，强化通用Agent能力、代码工程交付与多模态理解。Seed2.1 Pro在GDPval基准获最高分，Agents' Last Exam位列参评模型第一梯队；MobileWorld手机GUI任务最高分，CreativeWork多环境任务表现突出。多模态在CharXiv-RQ等多项基准取得SOTA。代码能力上，Seed2.1 Pro在NL2Repo-Bench表现良好，开发者评测相比Claude Opus 4.6获59.1%胜率。模型已在豆包、TRAE上线，API通过火山方舟提供。",
+        "description": "字节Seed发布Seed2.1系列，面向真实生产力场景的智能体，强化通用Agent能力、代码工程交付与多模态理解。Seed2.1 Pro在GDPval基准获最高分，Agents' Last Exam位列参评模型第一梯队；MobileWorld手机GUI任务最高分，CreativeWork多环境任务表现突出。多模态在CharXiv-RQ等多项基准取得SOTA。代码能力上，Seed2.1 Pro在NL2Repo-Bench表现良好，开发者评测相比Claude Opus 4.6获59.1%胜率。模型已在豆包、TRAE上线，API通过火山方舟提供。",
+        "category": "models",
+        "originalSource": "字节 Seed：Research Feed（网页内嵌数据）",
+        "originalUrl": "https://seed.bytedance.com/zh/blog/seed2-1-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83-%E6%B7%B1%E5%85%A5-ai-%E7%94%9F%E4%BA%A7%E5%8A%9B",
+        "recommendedReason": "字节Seed发布Seed2.1系列，面向真实生产力场景的智能体，强化通用Agent能力、代码工程交付与多模态理解。Seed2.1 Pro在GDPval基准获最高分，Agents' Last Exam位列参评模型第一梯队；MobileWorld手机GUI任务最高分，CreativeWork多环境任务表现突出。多模态在CharXiv-RQ等多项基准取得SOTA。代码能力上，Seed2.1 Pro在NL2Repo-Bench表现良好，开发者评测相比Claude Opus 4.6获59.1%胜率。模型已在豆包、TRAE上线，API通过火山方舟提供。",
+        "publishedAt": "2026-06-23T00:02:42.000Z",
+        "collectedAt": "2026-06-23T16:46:01.939Z",
+        "raw": {
+          "id": "cmqq5ns6p06scslp5dlnxluux",
+          "titleEn": "Seed2.1 正式发布，深入 AI 生产力",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmqqd9e3008seslp5644lhzaa",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "huggingface_hub 实现每周发布：AI、开源工具、人工审核闭环",
+        "url": "https://huggingface.co/blog/huggingface-hub-release-ci",
+        "summary": "Hugging Face 将 huggingface_hub 的发布周期从每 4-6 周缩短至每周，全部由单个 GitHub Actions 工作流自动完成。流程依赖开源工具和开权重模型（当前为 Z.ai 的 GLM-5.2）来起草发布说明和 Slack 公告，但保留人类在最终审核环节的决定权。自动步骤包括版本号更新、提交标签推送、PyPI 发布、下游测试分支创建、发布说明草稿、Slack 公告草稿、归档、后置版本提升以及对合入 PR 的评论。所有组件均基于开源生态构建，任何维护者都可直接复制使用。",
+        "description": "Hugging Face 将 huggingface_hub 的发布周期从每 4-6 周缩短至每周，全部由单个 GitHub Actions 工作流自动完成。流程依赖开源工具和开权重模型（当前为 Z.ai 的 GLM-5.2）来起草发布说明和 Slack 公告，但保留人类在最终审核环节的决定权。自动步骤包括版本号更新、提交标签推送、PyPI 发布、下游测试分支创建、发布说明草稿、Slack 公告草稿、归档、后置版本提升以及对合入 PR 的评论。所有组件均基于开源生态构建，任何维护者都可直接复制使用。",
+        "category": "tools",
+        "originalSource": "Hugging Face：Blog（RSS）",
+        "originalUrl": "https://huggingface.co/blog/huggingface-hub-release-ci",
+        "recommendedReason": "Hugging Face 将 huggingface_hub 的发布周期从每 4-6 周缩短至每周，全部由单个 GitHub Actions 工作流自动完成。流程依赖开源工具和开权重模型（当前为 Z.ai 的 GLM-5.2）来起草发布说明和 Slack 公告，但保留人类在最终审核环节的决定权。自动步骤包括版本号更新、提交标签推送、PyPI 发布、下游测试分支创建、发布说明草稿、Slack 公告草稿、归档、后置版本提升以及对合入 PR 的评论。所有组件均基于开源生态构建，任何维护者都可直接复制使用。",
+        "publishedAt": "2026-06-23T00:00:00.000Z",
+        "collectedAt": "2026-06-23T16:46:01.939Z",
+        "raw": {
+          "id": "cmqqd9e3008seslp5644lhzaa",
+          "titleEn": "Shipping huggingface_hub every week with AI， open tools， and a human in the loop",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmqpqqsrw030aslp5c0jt14yr",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "美国警长利用Flock车牌系统跟踪前女友案频发，Flock法务官承认\"最常见滥用\"",
+        "url": "https://ipvm.com/reports/police-chiefs-track",
+        "summary": "伊利诺伊州Holiday Hills警察局长于2026年6月18日被捕，被控两项渎职重罪。检方指控他利用Flock车牌读取系统及州警察数据库，跟踪6名认识的人，其中3人为前女友，并对其中一人的前男友车牌查询140次（86次脱岗），持续18个月。全美至少18起类似案例：佐治亚州Braselton警察局长、爱达荷州Jerome县警长（700余次查询其妻车牌）等均因此辞职或被捕。Flock首席法务官Dan Haley承认，滥用该系统\"最常见情况\"就是跟踪前女友。Flock称系统只跟踪车辆，但案例表明车辆是手段，人是目标。",
+        "description": "伊利诺伊州Holiday Hills警察局长于2026年6月18日被捕，被控两项渎职重罪。检方指控他利用Flock车牌读取系统及州警察数据库，跟踪6名认识的人，其中3人为前女友，并对其中一人的前男友车牌查询140次（86次脱岗），持续18个月。全美至少18起类似案例：佐治亚州Braselton警察局长、爱达荷州Jerome县警长（700余次查询其妻车牌）等均因此辞职或被捕。Flock首席法务官Dan Haley承认，滥用该系统\"最常见情况\"就是跟踪前女友。Flock称系统只跟踪车辆，但案例表明车辆是手段，人是目标。",
+        "category": "industry",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://ipvm.com/reports/police-chiefs-track",
+        "recommendedReason": "伊利诺伊州Holiday Hills警察局长于2026年6月18日被捕，被控两项渎职重罪。检方指控他利用Flock车牌读取系统及州警察数据库，跟踪6名认识的人，其中3人为前女友，并对其中一人的前男友车牌查询140次（86次脱岗），持续18个月。全美至少18起类似案例：佐治亚州Braselton警察局长、爱达荷州Jerome县警长（700余次查询其妻车牌）等均因此辞职或被捕。Flock首席法务官Dan Haley承认，滥用该系统\"最常见情况\"就是跟踪前女友。Flock称系统只跟踪车辆，但案例表明车辆是手段，人是目标。",
+        "publishedAt": "2026-06-22T21:32:12.384Z",
+        "collectedAt": "2026-06-23T16:46:01.939Z",
+        "raw": {
+          "id": "cmqpqqsrw030aslp5c0jt14yr",
+          "titleEn": "由\"群情\"驱使的警察局长们尾随女性，这说明了为何需要搜查令",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmqppo7c402qnslp5p92n6y3b",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Show HN：Oak--专为代理设计的 Git 替代方案",
+        "url": "https://oak.space/oak/oak",
+        "summary": "Oak 是开源版本控制系统，专为 AI 智能体（Claude Code、Codex、Cursor）设计。采用 BLAKE3 内容哈希、内容定义分块、diff/merge 及 Blob/Manifest/Commit/Tree 数据模型，可选 SQLite 和 git 后端。以分支-会话为基本工作单元，用分支描述替代逐次提交，通过内容寻址懒加载使智能体数秒内编辑任意仓库。速度远超 git。已发布公开测试版 v0.99.0，支持 macOS（Apple Silicon）、Linux（x86_64）及 Windows，可通过 curl 或 cargo 安装，Apache-2.0 开源。",
+        "description": "Oak 是开源版本控制系统，专为 AI 智能体（Claude Code、Codex、Cursor）设计。采用 BLAKE3 内容哈希、内容定义分块、diff/merge 及 Blob/Manifest/Commit/Tree 数据模型，可选 SQLite 和 git 后端。以分支-会话为基本工作单元，用分支描述替代逐次提交，通过内容寻址懒加载使智能体数秒内编辑任意仓库。速度远超 git。已发布公开测试版 v0.99.0，支持 macOS（Apple Silicon）、Linux（x86_64）及 Windows，可通过 curl 或 cargo 安装，Apache-2.0 开源。",
+        "category": "products",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://oak.space/oak/oak",
+        "recommendedReason": "Oak 是开源版本控制系统，专为 AI 智能体（Claude Code、Codex、Cursor）设计。采用 BLAKE3 内容哈希、内容定义分块、diff/merge 及 Blob/Manifest/Commit/Tree 数据模型，可选 SQLite 和 git 后端。以分支-会话为基本工作单元，用分支描述替代逐次提交，通过内容寻址懒加载使智能体数秒内编辑任意仓库。速度远超 git。已发布公开测试版 v0.99.0，支持 macOS（Apple Silicon）、Linux（x86_64）及 Windows，可通过 curl 或 cargo 安装，Apache-2.0 开源。",
+        "publishedAt": "2026-06-22T21:00:09.808Z",
+        "collectedAt": "2026-06-23T16:46:01.939Z",
+        "raw": {
+          "id": "cmqppo7c402qnslp5p92n6y3b",
+          "titleEn": "Show HN： Oak--专为代理设计的 Git 替代方案",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmqpyc83704y0slp54f6dv3w7",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "AI 治理清单：LLM 架构先行",
+        "url": "https://openrouter.ai/blog/insights/ai-governance-checklist",
+        "summary": "Deloitte 报告显示企业 AI 抱负与治理成熟度之间差 53 个百分点，74% 计划两年内部署智能体 AI，仅 21% 拥有成熟治理模型。路由架构是首个治理层。三种姿态--托管网关（如 OpenRouter、Portkey）、自托管网关（如 LiteLLM）和直接 API--默认治理能力不同，直接 API 缺乏统一控制面，造成治理盲区。治理清单可映射为资产盘点、问责制、访问控制、证据记录与合规性五大支柱。路由层能提供跨团队可见性与审计证据，而电子表格不能。",
+        "description": "Deloitte 报告显示企业 AI 抱负与治理成熟度之间差 53 个百分点，74% 计划两年内部署智能体 AI，仅 21% 拥有成熟治理模型。路由架构是首个治理层。三种姿态--托管网关（如 OpenRouter、Portkey）、自托管网关（如 LiteLLM）和直接 API--默认治理能力不同，直接 API 缺乏统一控制面，造成治理盲区。治理清单可映射为资产盘点、问责制、访问控制、证据记录与合规性五大支柱。路由层能提供跨团队可见性与审计证据，而电子表格不能。",
+        "category": "tools",
+        "originalSource": "OpenRouter：Announcements（RSS）",
+        "originalUrl": "https://openrouter.ai/blog/insights/ai-governance-checklist",
+        "recommendedReason": "Deloitte 报告显示企业 AI 抱负与治理成熟度之间差 53 个百分点，74% 计划两年内部署智能体 AI，仅 21% 拥有成熟治理模型。路由架构是首个治理层。三种姿态--托管网关（如 OpenRouter、Portkey）、自托管网关（如 LiteLLM）和直接 API--默认治理能力不同，直接 API 缺乏统一控制面，造成治理盲区。治理清单可映射为资产盘点、问责制、访问控制、证据记录与合规性五大支柱。路由层能提供跨团队可见性与审计证据，而电子表格不能。",
+        "publishedAt": "2026-06-22T19:00:00.000Z",
+        "collectedAt": "2026-06-23T16:46:01.939Z",
+        "raw": {
+          "id": "cmqpyc83704y0slp54f6dv3w7",
+          "titleEn": "AI Governance Checklist： Your LLM Architecture Comes First",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmqpl4smd01j1slp5npj3krmn",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Google DeepMind 7500 万美元投资 A24，合作开发电影 AI 工具",
+        "url": "https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal",
+        "summary": "Google DeepMind 宣布向独立电影制片厂 A24 投资 7500 万美元（据《华尔街日报》），双方将合作开发电影制作 AI 工具。A24 出品过《万事俱备》《后室》等影片。Google DeepMind CEO Demis Hassabis 称，希望通过与艺术家直接合作，打造支持创意表达的 AI 功能。此举是好莱坞最新一次科技公司与电影 AI 联手，此前 Netflix 已收购 Ben Affleck 的 AI 工具公司 Interpositive，亚马逊 MGM 工作室也在去年设立了影视 AI 部门。",
+        "description": "Google DeepMind 宣布向独立电影制片厂 A24 投资 7500 万美元（据《华尔街日报》），双方将合作开发电影制作 AI 工具。A24 出品过《万事俱备》《后室》等影片。Google DeepMind CEO Demis Hassabis 称，希望通过与艺术家直接合作，打造支持创意表达的 AI 功能。此举是好莱坞最新一次科技公司与电影 AI 联手，此前 Netflix 已收购 Ben Affleck 的 AI 工具公司 Interpositive，亚马逊 MGM 工作室也在去年设立了影视 AI 部门。",
+        "category": "industry",
+        "originalSource": "TechCrunch：AI（RSS）",
+        "originalUrl": "https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal",
+        "recommendedReason": "Google DeepMind 宣布向独立电影制片厂 A24 投资 7500 万美元（据《华尔街日报》），双方将合作开发电影制作 AI 工具。A24 出品过《万事俱备》《后室》等影片。Google DeepMind CEO Demis Hassabis 称，希望通过与艺术家直接合作，打造支持创意表达的 AI 功能。此举是好莱坞最新一次科技公司与电影 AI 联手，此前 Netflix 已收购 Ben Affleck 的 AI 工具公司 Interpositive，亚马逊 MGM 工作室也在去年设立了影视 AI 部门。",
+        "publishedAt": "2026-06-22T18:49:44.000Z",
+        "collectedAt": "2026-06-23T16:46:01.939Z",
+        "raw": {
+          "id": "cmqpl4smd01j1slp5npj3krmn",
+          "titleEn": "Google DeepMind bets $75M on AI's future in Hollywood with A24 deal",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmqpgzgfq00hislp5hwlbgz0h",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Google ADK 与 A2A 协议：跨语言多智能体团队构建实战",
+        "url": "https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a",
+        "summary": "一篇技术博客展示了如何用 Google Agent Development Kit （ADK） 与 Agent2Agent （A2A） 协议搭建跨语言多智能体流水线：Python agent 调用 Gemini 解析合同条款，Go agent 用纯确定性逻辑校验合规性。A2A 协议通过 Agent Card 实现能力发现、JSON-RPC 2.0 完成通信、Task 状态机管理任务生命周期；ADK 的 RemoteA2aAgent 抽象可将任意 A2A 兼容服务封装成本地子智能体。文中强调将单体提示词分解为专业化微智能体，以解决上下文退化、故障爆炸半径和不可测试性问题。完整源码已在 GitHub 发布。",
+        "description": "一篇技术博客展示了如何用 Google Agent Development Kit （ADK） 与 Agent2Agent （A2A） 协议搭建跨语言多智能体流水线：Python agent 调用 Gemini 解析合同条款，Go agent 用纯确定性逻辑校验合规性。A2A 协议通过 Agent Card 实现能力发现、JSON-RPC 2.0 完成通信、Task 状态机管理任务生命周期；ADK 的 RemoteA2aAgent 抽象可将任意 A2A 兼容服务封装成本地子智能体。文中强调将单体提示词分解为专业化微智能体，以解决上下文退化、故障爆炸半径和不可测试性问题。完整源码已在 GitHub 发布。",
+        "category": "tools",
+        "originalSource": "Google Developers Blog（RSS）",
+        "originalUrl": "https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a",
+        "recommendedReason": "一篇技术博客展示了如何用 Google Agent Development Kit （ADK） 与 Agent2Agent （A2A） 协议搭建跨语言多智能体流水线：Python agent 调用 Gemini 解析合同条款，Go agent 用纯确定性逻辑校验合规性。A2A 协议通过 Agent Card 实现能力发现、JSON-RPC 2.0 完成通信、Task 状态机管理任务生命周期；ADK 的 RemoteA2aAgent 抽象可将任意 A2A 兼容服务封装成本地子智能体。文中强调将单体提示词分解为专业化微智能体，以解决上下文退化、故障爆炸半径和不可测试性问题。完整源码已在 GitHub 发布。",
+        "publishedAt": "2026-06-22T17:08:43.358Z",
+        "collectedAt": "2026-06-23T16:46:01.939Z",
+        "raw": {
+          "id": "cmqpgzgfq00hislp5hwlbgz0h",
+          "titleEn": "Build Cross-Language Multi-Agent Team with Google's Agent Development Kit and A2A",
+          "apiCategory": "tip"
+        }
       }
-    ]
+    ],
+    "crossSourceHighlights": []
   }
 }
