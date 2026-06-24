@@ -1,226 +1,211 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-06-24T15:13:39.774Z",
+  "generatedAt": "2026-06-24T16:10:13.813Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2606.24874v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "FLUX3D: High-Fidelity 3D Gaussian Generation with Diffusion-Aligned Sparse Representation",
-        "url": "https://arxiv.org/pdf/2606.24874v1",
-        "description": "Sparse voxel representation has emerged as a scalable foundation for image-to-3D Gaussian Splatting (3DGS) generation, yet current methods struggle to preserve high-frequency visual details of input images due to two structural bottlenecks. First, they adopt discriminative 2D features optimized for semantic abstraction to construct sparse voxel latents, which suppress reconstructive cues and induce a representation bottleneck. Second, in the generation stage, standard diffusion transformers lack",
-        "summary": "Sparse voxel representation has emerged as a scalable foundation for image-to-3D Gaussian Splatting (3DGS) generation, yet current methods struggle to preserve high-frequency visual details of input images due to two structural bottlenecks. First, they adopt discriminative 2D features optimized for semantic abstraction to construct sparse voxel latents, which suppress reconstructive cues and induce a representation bottleneck. Second, in the generation stage, standard diffusion transformers lack effective mechanisms to align dense 2D image tokens with sparse 3D voxel latents, resulting in a cross-modal correspondence bottleneck. To address these issues, we propose FLUX3D, a scalable image-to-3DGS framework that boosts both representation learning and cross-modal alignment during generation. We first revisit 2D feature selection for sparse-voxel-based 3D representation learning, propose Diffusion-Aligned Structured Latents (DA-SLAT) and couple it with a decoder-only architecture to improve 3DGS reconstruction fidelity. We also design a sparse-structure-aware diffusion framework, which integrates the Sparse-structure Multimodal Diffusion Transformer (SMDiT) and Modal-Aware Rotary Positional Embedding (MARoPE) to achieve geometry-agnostic 2D-3D alignment. Extensive benchmark experiments demonstrate that FLUX3D yields substantial improvements in appearance fidelity and significantly outperforms all state-of-the-art (SOTA) methods in generating high-quality 3DGS assets.",
-        "author": "Haorui Ji, Weizhe Liu, Hongdong Li, Hengkai Guo",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.CV",
-          "cs.AI",
-          "embedding",
-          "alignment",
-          "benchmark"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-06-23T17:52:21Z",
-        "updatedAt": "2026-06-23T17:52:21Z",
-        "collectedAt": "2026-06-24T15:13:32.959Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.24874v1",
-          "authors": [
-            "Haorui Ji",
-            "Weizhe Liu",
-            "Hongdong Li",
-            "Hengkai Guo"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14031
         },
-        "recommendedReason": "Matched AI developer keywords: embedding, alignment, benchmark"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-06-24T16:10:13.981Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.24855v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
-        "url": "https://arxiv.org/pdf/2606.24855v1",
-        "description": "Agentic language models dramatically expand the applications of AI yet little is publicly known about how to curate training data for broadly capable agents. Existing open efforts such as SWE-Smith, SERA, and Nemotron-Terminal typically target a single benchmark, leaving open the question of how to train models that generalize across diverse agentic tasks. The OpenThoughts-Agent (OT-Agent) project addresses this gap with a fully open data curation pipeline for training agentic models. We conduct",
-        "summary": "Agentic language models dramatically expand the applications of AI yet little is publicly known about how to curate training data for broadly capable agents. Existing open efforts such as SWE-Smith, SERA, and Nemotron-Terminal typically target a single benchmark, leaving open the question of how to train models that generalize across diverse agentic tasks. The OpenThoughts-Agent (OT-Agent) project addresses this gap with a fully open data curation pipeline for training agentic models. We conduct more than 100 controlled ablation experiments to systematically investigate each stage of the pipeline, yielding insights on the importance of task sources and diversity. We then assemble a training set of 100K examples from our pipeline and fine-tune Qwen3-32B on this dataset, which yields an average accuracy of 44.8% across seven agentic benchmarks and a 3.9 percentage point improvement over the strongest existing open data agentic model (Nemotron-Terminal-32B, 40.9%). Moreover, our training data exhibits strong scaling properties, outperforming alternative open datasets at every training set size in compute-controlled comparisons. We publicly release our training sets, data pipeline, experimental data, and models at openthoughts.ai to support future open research on agentic model training.",
-        "author": "Negin Raoof, Richard Zhuang, Marianna Nezhurina, Etash Guha, Atula Tejaswi, Ryan Marten, Charlie F. Ruan, Tyler Griggs, Alexander Glenn Shaw, Hritik Bansal, E. Kelly Buchanan, Artem Gazizov, Reinhard Heckel, Chinmay Hegde, Sankalp Jajee, Daanish Khazi, Emmanouil Koukoumidis, Xiangyi Li, Hange Liu, Shlok Natarajan, Harsh Raj, Nicholas Roberts, Ethan Shen, Nishad Singhi, Michael Siu, Ashima Suvarna, Hanwen Xing, Patrick Yubeaton, Robert Zhang, Leon Liangyu Chen, Xiaokun Chen, Steven Dillmann, Saadia Gabriel, Xunyi Jiang, Anurag Kashyap, Boxuan Li, Yein Park, Minh Pham, Sujay Sanghavi, Lin Shi, Ke Sun, Yixin Wang, Zhiwei Xu, Erica Zhang, Siyan Zhao, Wanjia Zhao, Jenia Jitsev, Alex Dimakis, Benjamin Feuer, Ludwig Schmidt",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.AI",
-          "agent",
-          "rag",
-          "benchmark",
-          "agentic"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-06-23T17:34:29Z",
-        "updatedAt": "2026-06-23T17:34:29Z",
-        "collectedAt": "2026-06-24T15:13:32.959Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.24855v1",
-          "authors": [
-            "Negin Raoof",
-            "Richard Zhuang",
-            "Marianna Nezhurina",
-            "Etash Guha",
-            "Atula Tejaswi",
-            "Ryan Marten",
-            "Charlie F. Ruan",
-            "Tyler Griggs",
-            "Alexander Glenn Shaw",
-            "Hritik Bansal",
-            "E. Kelly Buchanan",
-            "Artem Gazizov",
-            "Reinhard Heckel",
-            "Chinmay Hegde",
-            "Sankalp Jajee",
-            "Daanish Khazi",
-            "Emmanouil Koukoumidis",
-            "Xiangyi Li",
-            "Hange Liu",
-            "Shlok Natarajan",
-            "Harsh Raj",
-            "Nicholas Roberts",
-            "Ethan Shen",
-            "Nishad Singhi",
-            "Michael Siu",
-            "Ashima Suvarna",
-            "Hanwen Xing",
-            "Patrick Yubeaton",
-            "Robert Zhang",
-            "Leon Liangyu Chen",
-            "Xiaokun Chen",
-            "Steven Dillmann",
-            "Saadia Gabriel",
-            "Xunyi Jiang",
-            "Anurag Kashyap",
-            "Boxuan Li",
-            "Yein Park",
-            "Minh Pham",
-            "Sujay Sanghavi",
-            "Lin Shi",
-            "Ke Sun",
-            "Yixin Wang",
-            "Zhiwei Xu",
-            "Erica Zhang",
-            "Siyan Zhao",
-            "Wanjia Zhao",
-            "Jenia Jitsev",
-            "Alex Dimakis",
-            "Benjamin Feuer",
-            "Ludwig Schmidt"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11138
         },
-        "recommendedReason": "Matched AI developer keywords: agent, rag, benchmark, agentic"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-06-24T16:10:13.981Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.24854v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "It's Complicated: On the Design and Evaluation of AI-Powered AAC Interfaces",
-        "url": "https://arxiv.org/pdf/2606.24854v1",
-        "description": "Artificial intelligence (AI) can enhance what people who use augmentative and alternative communication (AAC) are able to do with their systems. However, evaluating AI-powered AAC interfaces can be difficult. People are intersectional beings and current evaluation metrics can struggle to capture the multifaceted and nuanced desires people may have for their AAC. We explore the complicated nature of six AAC problem spaces, explore how AI might be used in these spaces, and suggest more robust meth",
-        "summary": "Artificial intelligence (AI) can enhance what people who use augmentative and alternative communication (AAC) are able to do with their systems. However, evaluating AI-powered AAC interfaces can be difficult. People are intersectional beings and current evaluation metrics can struggle to capture the multifaceted and nuanced desires people may have for their AAC. We explore the complicated nature of six AAC problem spaces, explore how AI might be used in these spaces, and suggest more robust methods of evaluation that take the intersectional nuances of people into account. We also discuss broader issues that arise across these problem spaces and how they could be addressed using our proposed evaluation methods.",
-        "author": "Blade Frisch, Will Wade, Dylan Gaines, Michelle Kinsella, Betts Peters, Tamara Broderick, Keith Vertanen",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.HC",
-          "cs.AI",
-          "evaluation"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.HC",
-        "language": "en",
-        "publishedAt": "2026-06-23T17:34:18Z",
-        "updatedAt": "2026-06-23T17:34:18Z",
-        "collectedAt": "2026-06-24T15:13:32.959Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.24854v1",
-          "authors": [
-            "Blade Frisch",
-            "Will Wade",
-            "Dylan Gaines",
-            "Michelle Kinsella",
-            "Betts Peters",
-            "Tamara Broderick",
-            "Keith Vertanen"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10113
         },
-        "recommendedReason": "Matched AI developer keywords: evaluation"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-06-24T16:10:13.981Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.24851v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Real vs. Complex Spectral Bases for Neural Operators: The Role of Green's Function Alignment",
-        "url": "https://arxiv.org/pdf/2606.24851v1",
-        "description": "Fourier Neural Operators (FNO) learn solution operators of partial differential equations by parameterizing global convolutions in the complex Fourier domain. For real-valued PDE solutions, the complex FFT carries representational redundancy through conjugate symmetry. We introduce the Hartley Neural Operator (HNO), the exact real-valued mirror of FNO: it replaces the FFT with the purely real Discrete Hartley Transform and learns a single real multiplier per retained spectral mode, with no compl",
-        "summary": "Fourier Neural Operators (FNO) learn solution operators of partial differential equations by parameterizing global convolutions in the complex Fourier domain. For real-valued PDE solutions, the complex FFT carries representational redundancy through conjugate symmetry. We introduce the Hartley Neural Operator (HNO), the exact real-valued mirror of FNO: it replaces the FFT with the purely real Discrete Hartley Transform and learns a single real multiplier per retained spectral mode, with no complex arithmetic. Because the real Hartley spectrum is not halved by conjugate symmetry, HNO retains twice as many frequency corners as FNO but one real weight where FNO carries a complex pair, so the two operators are iso-parametric at equal width and differ only in spectral basis. Our central thesis is that the best basis is a property of the operator. Self-adjoint elliptic operators (Poisson, biharmonic) have real, symmetric Green's functions that the real Hartley multiplier diagonalizes exactly, and HNO is favored there. Time-dependent operators carry phase, from oscillation in the wave equation to transport in advection, Burgers, and Navier-Stokes, which a real diagonal multiplier cannot represent, so FNO is favored there, and increasingly so with the operator's phase content, leaving the phaseless heat equation as the borderline case. Training both operators identically and benchmarking across PDE classes, initial-condition families, and boundary conditions, we find an elliptic-versus-time-dependent split that is monotone in operator phase content and matches the Green's-function theory we develop. Rather than a universal winner, our findings give a predictive rule: match the spectral basis to the symmetry of the solution operator.",
-        "author": "Jason Sulskis, Sathya Ravi",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "cs.LG",
-          "alignment",
-          "benchmark"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-06-23T17:29:15Z",
-        "updatedAt": "2026-06-23T17:29:15Z",
-        "collectedAt": "2026-06-24T15:13:32.959Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.24851v1",
-          "authors": [
-            "Jason Sulskis",
-            "Sathya Ravi"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7500
         },
-        "recommendedReason": "Matched AI developer keywords: alignment, benchmark"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-06-22T18:58:21.000Z",
+        "collectedAt": "2026-06-24T16:10:13.981Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.24849v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "IV-CoT: Implicit Visual Chain-of-Thought for Structure-Aware Text-to-Image Generation",
-        "url": "https://arxiv.org/pdf/2606.24849v1",
-        "description": "Unified multi-modal large language models (MLLMs) have achieved strong text-to-image generation quality, but still struggle with structure-aware prompt following, where object counts, spatial relations, attribute bindings, and coarse layouts must be preserved. We attribute this limitation in part to the entanglement of structural planning and appearance rendering within a single conditioning stream. To address this issue, we propose Implicit Visual Chain-of-Thought (IV-CoT), a latent visual reas",
-        "summary": "Unified multi-modal large language models (MLLMs) have achieved strong text-to-image generation quality, but still struggle with structure-aware prompt following, where object counts, spatial relations, attribute bindings, and coarse layouts must be preserved. We attribute this limitation in part to the entanglement of structural planning and appearance rendering within a single conditioning stream. To address this issue, we propose Implicit Visual Chain-of-Thought (IV-CoT), a latent visual reasoning framework for query-conditioned image generation. IV-CoT decomposes the visual conditioning queries into a structural-to-semantic cascade, where structural queries first form a latent visual plan and semantic queries then render appearance conditioned on this plan. To guide the structural queries, we introduce training-only sketch supervision, which encourages them to capture structure from sketches without requiring sketch extraction or intermediate decoding at inference time. IV-CoT performs implicit CoT reasoning in a single forward pass and achieves superior results on GenEval and T2I-CompBench. Visualizations and analyses demonstrate that the learned structural and semantic queries play complementary roles in structure-aware generation.",
-        "author": "Zixuan Li, Haokun Lin, Yicheng Xiao, Zhiwei Li, Xinyang Song, Zelong Zheng, Yong He, Heng Yao, Ke Ding, Chao Yu, Chuan Yuan, Qi Li, Zhenan Sun",
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
         "tags": [
-          "cs.CV",
-          "cs.AI",
-          "large language model",
-          "llm",
-          "rag"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-06-23T17:28:00Z",
-        "updatedAt": "2026-06-23T17:28:00Z",
-        "collectedAt": "2026-06-24T15:13:32.959Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.24849v1",
-          "authors": [
-            "Zixuan Li",
-            "Haokun Lin",
-            "Yicheng Xiao",
-            "Zhiwei Li",
-            "Xinyang Song",
-            "Zelong Zheng",
-            "Yong He",
-            "Heng Yao",
-            "Ke Ding",
-            "Chao Yu",
-            "Chuan Yuan",
-            "Qi Li",
-            "Zhenan Sun"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 5113
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, rag"
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-06-24T16:10:13.981Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5074
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-06-24T16:10:13.981Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Arena Leaderboard",
+        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
+        "author": "lmarena-ai",
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "static",
+        "metrics": {
+          "likes": 4928
+        },
+        "publishedAt": "2023-05-20T09:26:19.000Z",
+        "updatedAt": "2026-02-21T23:20:43.000Z",
+        "collectedAt": "2026-06-24T16:10:13.981Z",
+        "raw": {
+          "sdk": "static",
+          "emoji": "🏆🤖"
+        }
+      },
+      {
+        "id": "huggingface_spaces:KlingTeam/LivePortrait",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Live Portrait",
+        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
+        "author": "KlingTeam",
+        "tags": [
+          "gradio",
+          "Multimodal",
+          "Motion control",
+          "Image-to-Video",
+          "Video-to-Video",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 3752
+        },
+        "publishedAt": "2024-07-05T16:35:24.000Z",
+        "updatedAt": "2024-08-30T11:20:51.000Z",
+        "collectedAt": "2026-06-24T16:10:13.981Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🤪"
+        }
       }
     ],
     "developerBuzz": [
@@ -235,11 +220,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 586,
-          "commentsCount": 459
+          "upvotes": 587,
+          "commentsCount": 462
         },
         "publishedAt": "2026-06-22T19:06:48.000Z",
-        "collectedAt": "2026-06-24T15:13:32.799Z",
+        "collectedAt": "2026-06-24T16:10:14.164Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48634585",
           "matchedKeywords": [
@@ -258,11 +243,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 597,
+          "upvotes": 598,
           "commentsCount": 293
         },
         "publishedAt": "2026-06-22T21:21:01.000Z",
-        "collectedAt": "2026-06-24T15:13:32.799Z",
+        "collectedAt": "2026-06-24T16:10:14.164Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48636377",
           "matchedKeywords": [
@@ -281,11 +266,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 307,
+          "upvotes": 310,
           "commentsCount": 399
         },
         "publishedAt": "2026-06-23T15:11:17.000Z",
-        "collectedAt": "2026-06-24T15:13:32.799Z",
+        "collectedAt": "2026-06-24T16:10:14.164Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48646276",
           "matchedKeywords": [
@@ -305,11 +290,11 @@
           "mistral"
         ],
         "metrics": {
-          "upvotes": 477,
-          "commentsCount": 130
+          "upvotes": 482,
+          "commentsCount": 131
         },
         "publishedAt": "2026-06-23T14:03:19.000Z",
-        "collectedAt": "2026-06-24T15:13:32.799Z",
+        "collectedAt": "2026-06-24T16:10:14.164Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48645152",
           "matchedKeywords": [
@@ -333,7 +318,7 @@
           "commentsCount": 108
         },
         "publishedAt": "2026-06-23T11:35:05.000Z",
-        "collectedAt": "2026-06-24T15:13:32.799Z",
+        "collectedAt": "2026-06-24T16:10:14.164Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48643426",
           "matchedKeywords": [
@@ -344,22 +329,22 @@
     ],
     "aihotHighlights": [
       {
-        "id": "aihot:cmqs7p1m300muslfuwclohr1e",
+        "id": "aihot:cmqs9eic7012cslfuu3w4io4c",
         "source": "aihot",
         "sourceType": "curated_trend",
-        "title": "OpenRouter 推出统一图像 API 聚合多模型",
-        "url": "https://x.com/OpenRouter/status/2069799707019215241",
-        "summary": "推出全新专用图像 API，包含类型化动态能力。 统一访问来自8家提供商的30+图像生成模型：Google、OpenAI、Black Forest Labs、Recraft、ByteDance、Sourceful、Microsoft 和 xAI。 此外，还提供针对图像 API 异构性的新方案👇",
-        "description": "推出全新专用图像 API，包含类型化动态能力。 统一访问来自8家提供商的30+图像生成模型：Google、OpenAI、Black Forest Labs、Recraft、ByteDance、Sourceful、Microsoft 和 xAI。 此外，还提供针对图像 API 异构性的新方案👇",
+        "title": "Mistral AI 为 Connectors 推出多项安全与可控新能力",
+        "url": "https://mistral.ai/news/more-control-over-connectors",
+        "summary": "2026年6月24日，Mistral AI 发布 Connectors 多项新能力：Enriched admin controls（GA）支持按工作空间设置连接器访问权限并单独开关工具；API keys with connector scopes（GA）防止自动化 AI 工作负载中身份冒充；Multi-account connectors（GA）允许单个连接器绑定多个账户；Connectors Debugger（公开预览）对 MCP 连接器进行端到端根因分析；Connectors in Vibe Code（GA）和 Connectors in Workflows（公开预览）分别允许在开发者界面复用连接器及支持长时间运行任务不中断。",
+        "description": "2026年6月24日，Mistral AI 发布 Connectors 多项新能力：Enriched admin controls（GA）支持按工作空间设置连接器访问权限并单独开关工具；API keys with connector scopes（GA）防止自动化 AI 工作负载中身份冒充；Multi-account connectors（GA）允许单个连接器绑定多个账户；Connectors Debugger（公开预览）对 MCP 连接器进行端到端根因分析；Connectors in Vibe Code（GA）和 Connectors in Workflows（公开预览）分别允许在开发者界面复用连接器及支持长时间运行任务不中断。",
         "category": "products",
-        "originalSource": "X：OpenRouter (@OpenRouter)",
-        "originalUrl": "https://x.com/OpenRouter/status/2069799707019215241",
-        "recommendedReason": "推出全新专用图像 API，包含类型化动态能力。 统一访问来自8家提供商的30+图像生成模型：Google、OpenAI、Black Forest Labs、Recraft、ByteDance、Sourceful、Microsoft 和 xAI。 此外，还提供针对图像 API 异构性的新方案👇",
-        "publishedAt": "2026-06-24T15:07:59.000Z",
-        "collectedAt": "2026-06-24T15:13:35.445Z",
+        "originalSource": "Mistral AI：News（网页）",
+        "originalUrl": "https://mistral.ai/news/more-control-over-connectors",
+        "recommendedReason": "2026年6月24日，Mistral AI 发布 Connectors 多项新能力：Enriched admin controls（GA）支持按工作空间设置连接器访问权限并单独开关工具；API keys with connector scopes（GA）防止自动化 AI 工作负载中身份冒充；Multi-account connectors（GA）允许单个连接器绑定多个账户；Connectors Debugger（公开预览）对 MCP 连接器进行端到端根因分析；Connectors in Vibe Code（GA）和 Connectors in Workflows（公开预览）分别允许在开发者界面复用连接器及支持长时间运行任务不中断。",
+        "publishedAt": "2026-06-24T15:59:47.708Z",
+        "collectedAt": "2026-06-24T16:10:15.072Z",
         "raw": {
-          "id": "cmqs7p1m300muslfuwclohr1e",
-          "titleEn": "Introducing a new， dedicated Image API， including typed dynamic capabilities. Unified access to 30+…",
+          "id": "cmqs9eic7012cslfuu3w4io4c",
+          "titleEn": "Bringing more control over your connectors June 24， 2026 Mistral AI",
           "apiCategory": "ai-products"
         }
       },
@@ -376,7 +361,7 @@
         "originalUrl": "https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake",
         "recommendedReason": "LinkedIn联合创始人、Anthropic和OpenAI投资者Reid Hoffman在播客中公开批评SpaceX和xAI。他指出SpaceX\"不是一家人工智能公司\"，6月12日上市后收购AI编程工具Cursor属于\"花钱买相关性\"；xAI则是\"彻底的灾难\"，所有11位联合创始人已离职，Grok模型在基准测试中落后于Anthropic和OpenAI。他还批评美国政府6月11日以出口管制为由强制Anthropic下架Fable和Mythos模型，理由仅为Amazon CEO报告Fable 5存在jailbreak漏洞，称此举\"专断随意\"。Hoffman认为Anthropic和OpenAI均有巨大发展空间，但Cursor可能已过巅峰。他建议年轻人不要抵制AI。",
         "publishedAt": "2026-06-24T14:20:14.340Z",
-        "collectedAt": "2026-06-24T15:13:35.445Z",
+        "collectedAt": "2026-06-24T16:10:15.072Z",
         "raw": {
           "id": "cmqs65ogk008hslfuodhruc4w",
           "titleEn": null,
@@ -396,7 +381,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/mdmaAyUIvxE8WT_GEbF2wQ",
         "recommendedReason": "在火山引擎Force大会，字节跳动技术副总裁洪定坤分享AI Coding实践。过去一年，字节AI代码贡献率增长6倍，tokens消耗增长5倍，但过度关注单一指标可能失真--TRAE团队代码超90%由AI生成，人均需求吞吐率仅提升60%。900次实验显示，主流Coding模型组合代码正确率超80%，但可交付性仅40-60分；结合Harness基建后提升至80分。AI降低编程门槛但需优化指标、治理、协作。字节探索原型驱动开发，能力沉淀至TRAE（日均Token消耗5.6万亿，增长50倍），并推出TRAE Work。",
         "publishedAt": "2026-06-24T14:02:42.000Z",
-        "collectedAt": "2026-06-24T15:13:35.445Z",
+        "collectedAt": "2026-06-24T16:10:15.072Z",
         "raw": {
           "id": "cmqs68cgx0090slfuumt36jny",
           "titleEn": null,
@@ -416,7 +401,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/83mrPAPgQRKhxLkoSvRgBQ",
         "recommendedReason": "火山引擎在FORCE大会推出面向企业智能应用的Agent Ready基础设施，构建AI云与Agent三层架构。AgentKit升级提供Identity、Runtime、Sandbox、Evaluation等模块，实现Agent可靠、可控、可衡量。Identity已接入数千家身份体系，Runtime支持长程任务和分钟级12万沙箱并发。ArkClaw企业版集成Agent广场、技能中心与企业知识库，支持IDP/SSO/OAuth及飞书、钉钉等IM入口统一管控。实践案例：海底捞门店经营Agent将小时级工作压缩到分钟级，人工跟进时长缩减70%，巡检满意度提升50%；创维酷开借助ArkClaw终端版打造AIOS，Token消耗节省50%，支撑百万级终端。",
         "publishedAt": "2026-06-24T10:17:58.000Z",
-        "collectedAt": "2026-06-24T15:13:35.445Z",
+        "collectedAt": "2026-06-24T16:10:15.072Z",
         "raw": {
           "id": "cmqrxnmqg0p2zslp51p8cc1ln",
           "titleEn": "火山引擎Agent Infra升级，让Agent真正进入企业工作流",
@@ -436,7 +421,7 @@
         "originalUrl": "https://www.marktechpost.com/2026/06/24/dflash-speculative-decoding-drafts-whole-token-blocks-in-parallel-for-up-to-15x-higher-throughput-on-nvidia-blackwell",
         "recommendedReason": "DFlash 由 UC San Diego 团队提出，是一种用于投机解码的轻量块扩散草稿模型。它一次前向推理生成整块 token，再由目标模型并行验证，保证输出无损。相比 EAGLE-3，DFlash 实现最高 2.5 倍加速，在 Qwen3-8B 等多种模型上平均无损加速超过 6 倍（MATH-500 达 6.08×）。在 NVIDIA Blackwell 上（TensorRT-LLM），gpt-oss-120b 模型吞吐量提升最高 15 倍，约为 EAGLE-3 的 1.5 倍。核心创新是将目标模型多层隐藏特征注入草稿模型每一层的 Key-Value 投影，使接受长度随草稿深度增长。",
         "publishedAt": "2026-06-24T07:21:10.000Z",
-        "collectedAt": "2026-06-24T15:13:35.445Z",
+        "collectedAt": "2026-06-24T16:10:15.072Z",
         "raw": {
           "id": "cmqrrgnay0n08slp5phvdk394",
           "titleEn": "DFlash Speculative Decoding Drafts Whole Token Blocks in Parallel for Up to 15x Higher Throughput on NVIDIA Blackwell",
@@ -456,7 +441,7 @@
         "originalUrl": "https://x.com/OpenBMB/status/2069676334381728106",
         "recommendedReason": "🥳感谢分享，@MLBoy_DaisukeMajima 🚀 MiniCPM-V 4.6 在设备上以这样的速度运行，实在令人印象深刻--尤其是在 Apple Core AI 上以不到 2B 参数跑出。 干得漂亮，推动高效多模态 AI 向前发展。🫡",
         "publishedAt": "2026-06-24T06:57:45.000Z",
-        "collectedAt": "2026-06-24T15:13:35.445Z",
+        "collectedAt": "2026-06-24T16:10:15.072Z",
         "raw": {
           "id": "cmqrqhlvx0mr7slp5atv7dptr",
           "titleEn": "🥳Thanks for sharing this， @MLBoy_DaisukeMajima 🚀 MiniCPM-V 4.6 running at this speed on-device is …",
@@ -476,7 +461,7 @@
         "originalUrl": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
         "recommendedReason": "OpenAI 与 Broadcom 联合推出 Jalapeño，一款专为大语言模型（LLM）推理优化的定制 AI 芯片，旨在提升 AI 系统的性能、效率与规模。",
         "publishedAt": "2026-06-24T06:00:00.000Z",
-        "collectedAt": "2026-06-24T15:13:35.445Z",
+        "collectedAt": "2026-06-24T16:10:15.072Z",
         "raw": {
           "id": "cmqs319vw0qkcslp52gzwr77q",
           "titleEn": "OpenAI and Broadcom unveil LLM-optimized inference chip",
@@ -496,527 +481,12 @@
         "originalUrl": "https://www.ithome.com/0/967/852.htm",
         "recommendedReason": "6月23日，部分用户反馈 ChatGPT 网页版和 App 版上线了双向 AI 语音模型 Bidi 1，位于设置模型选择器中，与标准语音和高级语音并列。该模型支持边说话边监听，用户可在对话中途打断并发出新指令，例如要求从1数到10时中途喊停倒数，模型会立即切换执行。OpenAI 尚未官宣，预计本周启动更大范围测试。",
         "publishedAt": "2026-06-24T04:34:24.000Z",
-        "collectedAt": "2026-06-24T15:13:35.445Z",
+        "collectedAt": "2026-06-24T16:10:15.072Z",
         "raw": {
           "id": "cmqrl73460l9gslp5w33pryqi",
           "titleEn": "OpenAI ChatGPT 语音最大规模升级：双向 AI 语音模型 Bidi 1 已上线测试",
           "apiCategory": "ai-models"
         }
-      },
-      {
-        "id": "aihot:cmqrizuey0kmcslp5zt7bajh0",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Qwen-AgentWorld 开源：让 Agent 学会\"先预测，再行动\"",
-        "url": "https://mp.weixin.qq.com/s/NV9WGpGsfFz35jww5agM9g",
-        "summary": "通义千问推出首个原生语言世界模型 Qwen-AgentWorld，覆盖 MCP、Search、Terminal、SWE、Web、OS、Android 七大领域。模型基于超 1000 万条真实交互轨迹，经 CPT→SFT→RL 三阶段训练，在 AgentWorldBench 上超越 GPT-5.4（58.25）和 Claude Opus 4.8，Qwen-AgentWorld-397B-A17B 取得 58.71 分。两种范式已验证其能力：作为解耦环境模拟器实现可控 Sim RL，在 WideSearch 上超越真实环境 RL（F1 50.3% vs 45.6%）；作为智能体基础模型，LWM 预热可迁移至七个基准（三个完全未出现在训练集中）。模型与评测基准已开源。",
-        "description": "通义千问推出首个原生语言世界模型 Qwen-AgentWorld，覆盖 MCP、Search、Terminal、SWE、Web、OS、Android 七大领域。模型基于超 1000 万条真实交互轨迹，经 CPT→SFT→RL 三阶段训练，在 AgentWorldBench 上超越 GPT-5.4（58.25）和 Claude Opus 4.8，Qwen-AgentWorld-397B-A17B 取得 58.71 分。两种范式已验证其能力：作为解耦环境模拟器实现可控 Sim RL，在 WideSearch 上超越真实环境 RL（F1 50.3% vs 45.6%）；作为智能体基础模型，LWM 预热可迁移至七个基准（三个完全未出现在训练集中）。模型与评测基准已开源。",
-        "category": "models",
-        "originalSource": "公众号：通义实验室（千问）",
-        "originalUrl": "https://mp.weixin.qq.com/s/NV9WGpGsfFz35jww5agM9g",
-        "recommendedReason": "通义千问推出首个原生语言世界模型 Qwen-AgentWorld，覆盖 MCP、Search、Terminal、SWE、Web、OS、Android 七大领域。模型基于超 1000 万条真实交互轨迹，经 CPT→SFT→RL 三阶段训练，在 AgentWorldBench 上超越 GPT-5.4（58.25）和 Claude Opus 4.8，Qwen-AgentWorld-397B-A17B 取得 58.71 分。两种范式已验证其能力：作为解耦环境模拟器实现可控 Sim RL，在 WideSearch 上超越真实环境 RL（F1 50.3% vs 45.6%）；作为智能体基础模型，LWM 预热可迁移至七个基准（三个完全未出现在训练集中）。模型与评测基准已开源。",
-        "publishedAt": "2026-06-24T03:32:04.000Z",
-        "collectedAt": "2026-06-24T15:13:35.445Z",
-        "raw": {
-          "id": "cmqrizuey0kmcslp5zt7bajh0",
-          "titleEn": null,
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmqrdmylf0iyeslp50lteppvq",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "今天，豆包正式推出专业版",
-        "url": "https://mp.weixin.qq.com/s/Sb-NMXTrWFQES1EDO_Gr2g",
-        "summary": "豆包专业版基于豆包2.1系列大模型上线，面向复杂办公与生产力场景。办公任务模式接入可执行Agent任务的豆包2.1模型，支持操作本地电脑、浏览器、调用Skills技能、定时任务，内置Office办公套件，并可生成带后端数据库的在线应用。免费用户可体验豆包2.1 Turbo版办公任务模式，专业版接入豆包2.1 Pro模型。定价：标准套餐68元/月（连续包月），加强套餐200元/月，高级套餐500元/月。大学生认证后标准套餐38元/月，持续6个月。",
-        "description": "豆包专业版基于豆包2.1系列大模型上线，面向复杂办公与生产力场景。办公任务模式接入可执行Agent任务的豆包2.1模型，支持操作本地电脑、浏览器、调用Skills技能、定时任务，内置Office办公套件，并可生成带后端数据库的在线应用。免费用户可体验豆包2.1 Turbo版办公任务模式，专业版接入豆包2.1 Pro模型。定价：标准套餐68元/月（连续包月），加强套餐200元/月，高级套餐500元/月。大学生认证后标准套餐38元/月，持续6个月。",
-        "category": "products",
-        "originalSource": "公众号：豆包（字节）",
-        "originalUrl": "https://mp.weixin.qq.com/s/Sb-NMXTrWFQES1EDO_Gr2g",
-        "recommendedReason": "豆包专业版基于豆包2.1系列大模型上线，面向复杂办公与生产力场景。办公任务模式接入可执行Agent任务的豆包2.1模型，支持操作本地电脑、浏览器、调用Skills技能、定时任务，内置Office办公套件，并可生成带后端数据库的在线应用。免费用户可体验豆包2.1 Turbo版办公任务模式，专业版接入豆包2.1 Pro模型。定价：标准套餐68元/月（连续包月），加强套餐200元/月，高级套餐500元/月。大学生认证后标准套餐38元/月，持续6个月。",
-        "publishedAt": "2026-06-24T01:00:00.000Z",
-        "collectedAt": "2026-06-24T15:13:35.445Z",
-        "raw": {
-          "id": "cmqrdmylf0iyeslp50lteppvq",
-          "titleEn": null,
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmqr73j5g0h1nslp5g9y52k0v",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "AI招聘工具存在种族偏见和系统性排斥；黑人占比26%，亚裔占比15%",
-        "url": "https://hai.stanford.edu/news/ai-hiring-tools-can-yield-racial-bias-and-systemic-rejection",
-        "summary": "一项覆盖340万人、400万份申请、150家雇主和1700个职位的大规模实地研究发现，AI招聘筛选工具存在显著的种族歧视：26%的黑人申请者和15%的亚裔申请者遭遇算法对其族群的系统性排斥；若AI按推荐率最高群体（通常为白人）标准执行，将有4万份额外申请进入下一轮。多数雇主依赖同一第三方供应商算法，形成\"算法单一文化\"，导致10%提交4份申请者被所有职位拒绝。对比同期未用AI的招聘数据（8.3万份申请、108家财富500强企业），未发现此类模式。研究呼吁对算法招聘进行独立监管。",
-        "description": "一项覆盖340万人、400万份申请、150家雇主和1700个职位的大规模实地研究发现，AI招聘筛选工具存在显著的种族歧视：26%的黑人申请者和15%的亚裔申请者遭遇算法对其族群的系统性排斥；若AI按推荐率最高群体（通常为白人）标准执行，将有4万份额外申请进入下一轮。多数雇主依赖同一第三方供应商算法，形成\"算法单一文化\"，导致10%提交4份申请者被所有职位拒绝。对比同期未用AI的招聘数据（8.3万份申请、108家财富500强企业），未发现此类模式。研究呼吁对算法招聘进行独立监管。",
-        "category": "papers",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://hai.stanford.edu/news/ai-hiring-tools-can-yield-racial-bias-and-systemic-rejection",
-        "recommendedReason": "一项覆盖340万人、400万份申请、150家雇主和1700个职位的大规模实地研究发现，AI招聘筛选工具存在显著的种族歧视：26%的黑人申请者和15%的亚裔申请者遭遇算法对其族群的系统性排斥；若AI按推荐率最高群体（通常为白人）标准执行，将有4万份额外申请进入下一轮。多数雇主依赖同一第三方供应商算法，形成\"算法单一文化\"，导致10%提交4份申请者被所有职位拒绝。对比同期未用AI的招聘数据（8.3万份申请、108家财富500强企业），未发现此类模式。研究呼吁对算法招聘进行独立监管。",
-        "publishedAt": "2026-06-23T21:48:25.964Z",
-        "collectedAt": "2026-06-24T15:13:35.445Z",
-        "raw": {
-          "id": "cmqr73j5g0h1nslp5g9y52k0v",
-          "titleEn": null,
-          "apiCategory": "paper"
-        }
-      },
-      {
-        "id": "aihot:cmqr6bnad0gw8slp5xmrffynm",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Runway推出Seedance 4K等三款新模型",
-        "url": "https://x.com/runwayml/status/2069535148450705517",
-        "summary": "Seedance 4K。Seedance Mini。Kling 3.0 Turbo。现已推出。 全球最佳模型，汇聚一处。 使用优惠码 30RUNWAY，前三个月可享七折优惠。 通过下方链接开始使用。",
-        "description": "Seedance 4K。Seedance Mini。Kling 3.0 Turbo。现已推出。 全球最佳模型，汇聚一处。 使用优惠码 30RUNWAY，前三个月可享七折优惠。 通过下方链接开始使用。",
-        "category": "products",
-        "originalSource": "X：Runway (@runwayml)",
-        "originalUrl": "https://x.com/runwayml/status/2069535148450705517",
-        "recommendedReason": "Seedance 4K。Seedance Mini。Kling 3.0 Turbo。现已推出。 全球最佳模型，汇聚一处。 使用优惠码 30RUNWAY，前三个月可享七折优惠。 通过下方链接开始使用。",
-        "publishedAt": "2026-06-23T21:36:44.000Z",
-        "collectedAt": "2026-06-24T15:13:35.445Z",
-        "raw": {
-          "id": "cmqr6bnad0gw8slp5xmrffynm",
-          "titleEn": "Seedance 4K. Seedance Mini. Kling 3.0 Turbo. Available now. The world's best models， in one place. …",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmqr4zhkm0gidslp5x8ow892r",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Oracle因AI应用裁员21000人，债务驱动云基础设施投资",
-        "url": "https://arstechnica.com/ai/2026/06/oracles-21000-layoffs-help-drive-its-debt-fueled-ai-investments",
-        "summary": "Oracle在截至5月31日的财年裁员21000人，员工总数降至141，000人，降幅12.9%。公司称AI技术的采用导致劳动力缩减，同时重组成本达18亿美元，同比增长481%。Oracle计划2026年通过债务和股权筹集450至500亿美元，扩建Oracle Cloud Infrastructure，服务OpenAI、xAI、AMD、Nvidia、Meta等客户。公司债务超1200亿美元。分析人士指出裁员有助于改善现金流，但Oracle也承认大规模裁员可能带来生产力下降、人才短缺和员工士气受损等风险。",
-        "description": "Oracle在截至5月31日的财年裁员21000人，员工总数降至141，000人，降幅12.9%。公司称AI技术的采用导致劳动力缩减，同时重组成本达18亿美元，同比增长481%。Oracle计划2026年通过债务和股权筹集450至500亿美元，扩建Oracle Cloud Infrastructure，服务OpenAI、xAI、AMD、Nvidia、Meta等客户。公司债务超1200亿美元。分析人士指出裁员有助于改善现金流，但Oracle也承认大规模裁员可能带来生产力下降、人才短缺和员工士气受损等风险。",
-        "category": "industry",
-        "originalSource": "Ars Technica：AI（RSS）",
-        "originalUrl": "https://arstechnica.com/ai/2026/06/oracles-21000-layoffs-help-drive-its-debt-fueled-ai-investments",
-        "recommendedReason": "Oracle在截至5月31日的财年裁员21000人，员工总数降至141，000人，降幅12.9%。公司称AI技术的采用导致劳动力缩减，同时重组成本达18亿美元，同比增长481%。Oracle计划2026年通过债务和股权筹集450至500亿美元，扩建Oracle Cloud Infrastructure，服务OpenAI、xAI、AMD、Nvidia、Meta等客户。公司债务超1200亿美元。分析人士指出裁员有助于改善现金流，但Oracle也承认大规模裁员可能带来生产力下降、人才短缺和员工士气受损等风险。",
-        "publishedAt": "2026-06-23T20:17:38.000Z",
-        "collectedAt": "2026-06-24T15:13:35.445Z",
-        "raw": {
-          "id": "cmqr4zhkm0gidslp5x8ow892r",
-          "titleEn": "Oracle's 21，000 layoffs help drive its debt-fueled AI investments",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmqr15pz20fjzslp5eps5gotw",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "FastWan-QAD：单卡5090上1.8秒生成5秒视频",
-        "url": "https://x.com/haoailab/status/2069493820732170695",
-        "summary": "Sky Computing Lab 发布 FastWan-QAD 视频生成模型系列，基于 FastVideo 的量化感知蒸馏（QAD）方案训练。在单张 NVIDIA GeForce RTX 5090 上，端到端生成一段 5 秒 480P 视频仅需 1.8 秒。模型、代码及博客已开源。",
-        "description": "Sky Computing Lab 发布 FastWan-QAD 视频生成模型系列，基于 FastVideo 的量化感知蒸馏（QAD）方案训练。在单张 NVIDIA GeForce RTX 5090 上，端到端生成一段 5 秒 480P 视频仅需 1.8 秒。模型、代码及博客已开源。",
-        "category": "models",
-        "originalSource": "X：Sky Computing Lab (@haoailab)",
-        "originalUrl": "https://x.com/haoailab/status/2069493820732170695",
-        "recommendedReason": "Sky Computing Lab 发布 FastWan-QAD 视频生成模型系列，基于 FastVideo 的量化感知蒸馏（QAD）方案训练。在单张 NVIDIA GeForce RTX 5090 上，端到端生成一段 5 秒 480P 视频仅需 1.8 秒。模型、代码及博客已开源。",
-        "publishedAt": "2026-06-23T18:52:30.000Z",
-        "collectedAt": "2026-06-24T15:13:35.445Z",
-        "raw": {
-          "id": "cmqr15pz20fjzslp5eps5gotw",
-          "titleEn": "（1/5） 5 seconds of video. 1.8s seconds of generation. One NVIDIA GeForce RTX 5090 on FastVideo. 🤯🚀…",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmqqxfykz0ehkslp55nlmaje0",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Krea 2 技术报告正式发布",
-        "url": "https://x.com/krea_ai/status/2069473417804591191",
-        "summary": "我们的技术报告已发布。 深入解析创建 Krea 2 所用的数据、架构及训练技巧。 https：//www.krea.ai/blog/krea-2-technical-report",
-        "description": "我们的技术报告已发布。 深入解析创建 Krea 2 所用的数据、架构及训练技巧。 https：//www.krea.ai/blog/krea-2-technical-report",
-        "category": "models",
-        "originalSource": "X：Krea AI (@krea_ai)",
-        "originalUrl": "https://x.com/krea_ai/status/2069473417804591191",
-        "recommendedReason": "我们的技术报告已发布。 深入解析创建 Krea 2 所用的数据、架构及训练技巧。 https：//www.krea.ai/blog/krea-2-technical-report",
-        "publishedAt": "2026-06-23T17:31:26.000Z",
-        "collectedAt": "2026-06-24T15:13:35.445Z",
-        "raw": {
-          "id": "cmqqxfykz0ehkslp55nlmaje0",
-          "titleEn": "our technical report is out. deep dive on the data， architecture， and training techniques used to c…",
-          "apiCategory": "ai-models"
-        }
-      }
-    ],
-    "crossSourceHighlights": [
-      {
-        "id": "url:https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake",
-        "canonicalId": "url:https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake",
-        "title": "里德·霍夫曼称SpaceX\"不是一家人工智能公司\"，xAI则是\"彻底的灾难\"",
-        "canonicalUrl": "https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake",
-          "title:里德 霍夫曼称spacex 不是一家人工智能公司 xai则是 彻底的灾难",
-          "topic:coding agent / swe agent",
-          "title:reid hoffman says spacex not an ai company xai complete train wreck"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmqs65ogk008hslfuodhruc4w",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "里德·霍夫曼称SpaceX\"不是一家人工智能公司\"，xAI则是\"彻底的灾难\"",
-            "url": "https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake",
-            "summary": "LinkedIn联合创始人、Anthropic和OpenAI投资者Reid Hoffman在播客中公开批评SpaceX和xAI。他指出SpaceX\"不是一家人工智能公司\"，6月12日上市后收购AI编程工具Cursor属于\"花钱买相关性\"；xAI则是\"彻底的灾难\"，所有11位联合创始人已离职，Grok模型在基准测试中落后于Anthropic和OpenAI。他还批评美国政府6月11日以出口管制为由强制Anthropic下架Fable和Mythos模型，理由仅为Amazon CEO报告Fable 5存在jailbreak漏洞，称此举\"专断随意\"。Hoffman认为Anthropic和OpenAI均有巨大发展空间，但Cursor可能已过巅峰。他建议年轻人不要抵制AI。",
-            "description": "LinkedIn联合创始人、Anthropic和OpenAI投资者Reid Hoffman在播客中公开批评SpaceX和xAI。他指出SpaceX\"不是一家人工智能公司\"，6月12日上市后收购AI编程工具Cursor属于\"花钱买相关性\"；xAI则是\"彻底的灾难\"，所有11位联合创始人已离职，Grok模型在基准测试中落后于Anthropic和OpenAI。他还批评美国政府6月11日以出口管制为由强制Anthropic下架Fable和Mythos模型，理由仅为Amazon CEO报告Fable 5存在jailbreak漏洞，称此举\"专断随意\"。Hoffman认为Anthropic和OpenAI均有巨大发展空间，但Cursor可能已过巅峰。他建议年轻人不要抵制AI。",
-            "category": "tools",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake",
-            "recommendedReason": "LinkedIn联合创始人、Anthropic和OpenAI投资者Reid Hoffman在播客中公开批评SpaceX和xAI。他指出SpaceX\"不是一家人工智能公司\"，6月12日上市后收购AI编程工具Cursor属于\"花钱买相关性\"；xAI则是\"彻底的灾难\"，所有11位联合创始人已离职，Grok模型在基准测试中落后于Anthropic和OpenAI。他还批评美国政府6月11日以出口管制为由强制Anthropic下架Fable和Mythos模型，理由仅为Amazon CEO报告Fable 5存在jailbreak漏洞，称此举\"专断随意\"。Hoffman认为Anthropic和OpenAI均有巨大发展空间，但Cursor可能已过巅峰。他建议年轻人不要抵制AI。",
-            "publishedAt": "2026-06-24T14:20:14.340Z",
-            "collectedAt": "2026-06-24T15:13:35.445Z",
-            "raw": {
-              "id": "cmqs65ogk008hslfuodhruc4w",
-              "titleEn": null,
-              "apiCategory": "tip"
-            }
-          },
-          {
-            "id": "hackernews:48658647",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Reid Hoffman says SpaceX 'not an AI company', xAI 'complete train wreck'",
-            "url": "https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake/",
-            "author": "1vuio0pswjnm7",
-            "tags": [
-              "ai",
-              "openai",
-              "anthropic"
-            ],
-            "metrics": {
-              "upvotes": 159,
-              "commentsCount": 175
-            },
-            "publishedAt": "2026-06-24T12:23:59.000Z",
-            "collectedAt": "2026-06-24T15:13:32.799Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48658647",
-              "matchedKeywords": [
-                "ai",
-                "openai",
-                "anthropic"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmqs65ogk008hslfuodhruc4w",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "里德·霍夫曼称SpaceX\"不是一家人工智能公司\"，xAI则是\"彻底的灾难\"",
-            "url": "https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake",
-            "summary": "LinkedIn联合创始人、Anthropic和OpenAI投资者Reid Hoffman在播客中公开批评SpaceX和xAI。他指出SpaceX\"不是一家人工智能公司\"，6月12日上市后收购AI编程工具Cursor属于\"花钱买相关性\"；xAI则是\"彻底的灾难\"，所有11位联合创始人已离职，Grok模型在基准测试中落后于Anthropic和OpenAI。他还批评美国政府6月11日以出口管制为由强制Anthropic下架Fable和Mythos模型，理由仅为Amazon CEO报告Fable 5存在jailbreak漏洞，称此举\"专断随意\"。Hoffman认为Anthropic和OpenAI均有巨大发展空间，但Cursor可能已过巅峰。他建议年轻人不要抵制AI。",
-            "description": "LinkedIn联合创始人、Anthropic和OpenAI投资者Reid Hoffman在播客中公开批评SpaceX和xAI。他指出SpaceX\"不是一家人工智能公司\"，6月12日上市后收购AI编程工具Cursor属于\"花钱买相关性\"；xAI则是\"彻底的灾难\"，所有11位联合创始人已离职，Grok模型在基准测试中落后于Anthropic和OpenAI。他还批评美国政府6月11日以出口管制为由强制Anthropic下架Fable和Mythos模型，理由仅为Amazon CEO报告Fable 5存在jailbreak漏洞，称此举\"专断随意\"。Hoffman认为Anthropic和OpenAI均有巨大发展空间，但Cursor可能已过巅峰。他建议年轻人不要抵制AI。",
-            "category": "tools",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake",
-            "recommendedReason": "LinkedIn联合创始人、Anthropic和OpenAI投资者Reid Hoffman在播客中公开批评SpaceX和xAI。他指出SpaceX\"不是一家人工智能公司\"，6月12日上市后收购AI编程工具Cursor属于\"花钱买相关性\"；xAI则是\"彻底的灾难\"，所有11位联合创始人已离职，Grok模型在基准测试中落后于Anthropic和OpenAI。他还批评美国政府6月11日以出口管制为由强制Anthropic下架Fable和Mythos模型，理由仅为Amazon CEO报告Fable 5存在jailbreak漏洞，称此举\"专断随意\"。Hoffman认为Anthropic和OpenAI均有巨大发展空间，但Cursor可能已过巅峰。他建议年轻人不要抵制AI。",
-            "publishedAt": "2026-06-24T14:20:14.340Z",
-            "collectedAt": "2026-06-24T15:13:35.445Z",
-            "raw": {
-              "id": "cmqs65ogk008hslfuodhruc4w",
-              "titleEn": null,
-              "apiCategory": "tip"
-            }
-          },
-          {
-            "id": "hackernews:48658647",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Reid Hoffman says SpaceX 'not an AI company', xAI 'complete train wreck'",
-            "url": "https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake/",
-            "author": "1vuio0pswjnm7",
-            "tags": [
-              "ai",
-              "openai",
-              "anthropic"
-            ],
-            "metrics": {
-              "upvotes": 159,
-              "commentsCount": 175
-            },
-            "publishedAt": "2026-06-24T12:23:59.000Z",
-            "collectedAt": "2026-06-24T15:13:32.799Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48658647",
-              "matchedKeywords": [
-                "ai",
-                "openai",
-                "anthropic"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 159,
-          "commentsCount": 175,
-          "hnScore": 159,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "tools",
-        "summary": "LinkedIn联合创始人、Anthropic和OpenAI投资者Reid Hoffman在播客中公开批评SpaceX和xAI。他指出SpaceX\"不是一家人工智能公司\"，6月12日上市后收购AI编程工具Cursor属于\"花钱买相关性\"；xAI则是\"彻底的灾难\"，所有11位联合创始人已离职，Grok模型在基准测试中落后于Anthropic和OpenAI。他还批评美国政府6月11日以出口管制为由强制Anthropic下架Fable和Mythos模型，理由仅为Amazon CEO报告Fable 5存在jailbreak漏洞，称此举\"专断随意\"。Hoffman认为Anthropic和OpenAI均有巨大发展空间，但Cursor可能已过巅峰。他建议年轻人不要抵制AI。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-06-24T12:23:59.000Z",
-        "lastSeenAt": "2026-06-24T15:13:35.445Z"
-      },
-      {
-        "id": "url:https://mistral.ai/news/ocr-4",
-        "canonicalId": "url:https://mistral.ai/news/ocr-4",
-        "title": "Mistral OCR 4",
-        "canonicalUrl": "https://mistral.ai/news/ocr-4",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://mistral.ai/news/ocr-4",
-          "title:mistral ocr 4"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmqqqkqoh0chzslp5i6l20j5q",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Mistral OCR 4",
-            "url": "https://mistral.ai/news/ocr-4",
-            "summary": "Mistral AI 发布 OCR 4，新增边界框、块分类（标题、表格、方程式、签名等）及逐页逐词置信度分数。支持 170 种语言、10 个语系，可单容器全自托管部署。在 OlmOCRBench 上得分 85.20，独立标注者偏好率平均 72%。定价每 1000 页 $4，Batch API 享 50% 折扣。可通过 API 或 Mistral Studio 的 Document AI 调用。",
-            "description": "Mistral AI 发布 OCR 4，新增边界框、块分类（标题、表格、方程式、签名等）及逐页逐词置信度分数。支持 170 种语言、10 个语系，可单容器全自托管部署。在 OlmOCRBench 上得分 85.20，独立标注者偏好率平均 72%。定价每 1000 页 $4，Batch API 享 50% 折扣。可通过 API 或 Mistral Studio 的 Document AI 调用。",
-            "category": "models",
-            "originalSource": "Mistral AI：News（网页）",
-            "originalUrl": "https://mistral.ai/news/ocr-4",
-            "recommendedReason": "Mistral AI 发布 OCR 4，新增边界框、块分类（标题、表格、方程式、签名等）及逐页逐词置信度分数。支持 170 种语言、10 个语系，可单容器全自托管部署。在 OlmOCRBench 上得分 85.20，独立标注者偏好率平均 72%。定价每 1000 页 $4，Batch API 享 50% 折扣。可通过 API 或 Mistral Studio 的 Document AI 调用。",
-            "publishedAt": "2026-06-23T14:24:55.949Z",
-            "collectedAt": "2026-06-24T15:13:35.445Z",
-            "raw": {
-              "id": "cmqqqkqoh0chzslp5i6l20j5q",
-              "titleEn": null,
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:48645152",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Mistral OCR 4",
-            "url": "https://mistral.ai/news/ocr-4/",
-            "author": "meetpateltech",
-            "tags": [
-              "ai",
-              "mistral"
-            ],
-            "metrics": {
-              "upvotes": 477,
-              "commentsCount": 130
-            },
-            "publishedAt": "2026-06-23T14:03:19.000Z",
-            "collectedAt": "2026-06-24T15:13:32.799Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48645152",
-              "matchedKeywords": [
-                "ai",
-                "mistral"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmqqqkqoh0chzslp5i6l20j5q",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Mistral OCR 4",
-            "url": "https://mistral.ai/news/ocr-4",
-            "summary": "Mistral AI 发布 OCR 4，新增边界框、块分类（标题、表格、方程式、签名等）及逐页逐词置信度分数。支持 170 种语言、10 个语系，可单容器全自托管部署。在 OlmOCRBench 上得分 85.20，独立标注者偏好率平均 72%。定价每 1000 页 $4，Batch API 享 50% 折扣。可通过 API 或 Mistral Studio 的 Document AI 调用。",
-            "description": "Mistral AI 发布 OCR 4，新增边界框、块分类（标题、表格、方程式、签名等）及逐页逐词置信度分数。支持 170 种语言、10 个语系，可单容器全自托管部署。在 OlmOCRBench 上得分 85.20，独立标注者偏好率平均 72%。定价每 1000 页 $4，Batch API 享 50% 折扣。可通过 API 或 Mistral Studio 的 Document AI 调用。",
-            "category": "models",
-            "originalSource": "Mistral AI：News（网页）",
-            "originalUrl": "https://mistral.ai/news/ocr-4",
-            "recommendedReason": "Mistral AI 发布 OCR 4，新增边界框、块分类（标题、表格、方程式、签名等）及逐页逐词置信度分数。支持 170 种语言、10 个语系，可单容器全自托管部署。在 OlmOCRBench 上得分 85.20，独立标注者偏好率平均 72%。定价每 1000 页 $4，Batch API 享 50% 折扣。可通过 API 或 Mistral Studio 的 Document AI 调用。",
-            "publishedAt": "2026-06-23T14:24:55.949Z",
-            "collectedAt": "2026-06-24T15:13:35.445Z",
-            "raw": {
-              "id": "cmqqqkqoh0chzslp5i6l20j5q",
-              "titleEn": null,
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:48645152",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Mistral OCR 4",
-            "url": "https://mistral.ai/news/ocr-4/",
-            "author": "meetpateltech",
-            "tags": [
-              "ai",
-              "mistral"
-            ],
-            "metrics": {
-              "upvotes": 477,
-              "commentsCount": 130
-            },
-            "publishedAt": "2026-06-23T14:03:19.000Z",
-            "collectedAt": "2026-06-24T15:13:32.799Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48645152",
-              "matchedKeywords": [
-                "ai",
-                "mistral"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 477,
-          "commentsCount": 130,
-          "hnScore": 477,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "models",
-        "summary": "Mistral AI 发布 OCR 4，新增边界框、块分类（标题、表格、方程式、签名等）及逐页逐词置信度分数。支持 170 种语言、10 个语系，可单容器全自托管部署。在 OlmOCRBench 上得分 85.20，独立标注者偏好率平均 72%。定价每 1000 页 $4，Batch API 享 50% 折扣。可通过 API 或 Mistral Studio 的 Document AI 调用。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-06-23T14:03:19.000Z",
-        "lastSeenAt": "2026-06-24T15:13:35.445Z"
-      },
-      {
-        "id": "url:https://github.com/baidu/unlimited-ocr",
-        "canonicalId": "url:https://github.com/baidu/unlimited-ocr",
-        "title": "无限制OCR：单次长时域解析",
-        "canonicalUrl": "https://github.com/baidu/unlimited-ocr",
-        "entityType": "repo",
-        "normalizedKeys": [
-          "url:https://github.com/baidu/unlimited-ocr",
-          "github:baidu/unlimited-ocr",
-          "title:无限制ocr 单次长时域解析",
-          "title:unlimited ocr one shot long horizon parsing"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmqqpk6qr0c7cslp5tgwky5n0",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "无限制OCR：单次长时域解析",
-            "url": "https://github.com/baidu/Unlimited-OCR",
-            "summary": "Unlimited OCR 是一个托管在 GitHub 的项目，实现单次长时域解析（One-Shot Long-Horizon Parsing），旨在一次性处理长时间跨度的 OCR 任务。",
-            "description": "Unlimited OCR 是一个托管在 GitHub 的项目，实现单次长时域解析（One-Shot Long-Horizon Parsing），旨在一次性处理长时间跨度的 OCR 任务。",
-            "category": "products",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://github.com/baidu/Unlimited-OCR",
-            "recommendedReason": "Unlimited OCR 是一个托管在 GitHub 的项目，实现单次长时域解析（One-Shot Long-Horizon Parsing），旨在一次性处理长时间跨度的 OCR 任务。",
-            "publishedAt": "2026-06-23T13:32:22.612Z",
-            "collectedAt": "2026-06-24T15:13:35.445Z",
-            "raw": {
-              "id": "cmqqpk6qr0c7cslp5tgwky5n0",
-              "titleEn": null,
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "hackernews:48643426",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Unlimited OCR: One-shot long-horizon parsing",
-            "url": "https://github.com/baidu/Unlimited-OCR",
-            "author": "ingve",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 479,
-              "commentsCount": 108
-            },
-            "publishedAt": "2026-06-23T11:35:05.000Z",
-            "collectedAt": "2026-06-24T15:13:32.799Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48643426",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmqqpk6qr0c7cslp5tgwky5n0",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "无限制OCR：单次长时域解析",
-            "url": "https://github.com/baidu/Unlimited-OCR",
-            "summary": "Unlimited OCR 是一个托管在 GitHub 的项目，实现单次长时域解析（One-Shot Long-Horizon Parsing），旨在一次性处理长时间跨度的 OCR 任务。",
-            "description": "Unlimited OCR 是一个托管在 GitHub 的项目，实现单次长时域解析（One-Shot Long-Horizon Parsing），旨在一次性处理长时间跨度的 OCR 任务。",
-            "category": "products",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://github.com/baidu/Unlimited-OCR",
-            "recommendedReason": "Unlimited OCR 是一个托管在 GitHub 的项目，实现单次长时域解析（One-Shot Long-Horizon Parsing），旨在一次性处理长时间跨度的 OCR 任务。",
-            "publishedAt": "2026-06-23T13:32:22.612Z",
-            "collectedAt": "2026-06-24T15:13:35.445Z",
-            "raw": {
-              "id": "cmqqpk6qr0c7cslp5tgwky5n0",
-              "titleEn": null,
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "hackernews:48643426",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Unlimited OCR: One-shot long-horizon parsing",
-            "url": "https://github.com/baidu/Unlimited-OCR",
-            "author": "ingve",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 479,
-              "commentsCount": 108
-            },
-            "publishedAt": "2026-06-23T11:35:05.000Z",
-            "collectedAt": "2026-06-24T15:13:32.799Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48643426",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 479,
-          "commentsCount": 108,
-          "hnScore": 479,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "products",
-        "summary": "Unlimited OCR 是一个托管在 GitHub 的项目，实现单次长时域解析（One-Shot Long-Horizon Parsing），旨在一次性处理长时间跨度的 OCR 任务。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-06-23T11:35:05.000Z",
-        "lastSeenAt": "2026-06-24T15:13:35.445Z"
       }
     ]
   }
