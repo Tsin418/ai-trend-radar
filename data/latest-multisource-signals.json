@@ -1,222 +1,181 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-06-25T00:00:28.642Z",
+  "generatedAt": "2026-06-25T04:34:13.496Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
+        "id": "http://arxiv.org/abs/2606.26095v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Learning Action Priors for Cross-embodiment Robot Manipulation",
+        "url": "https://arxiv.org/pdf/2606.26095v1",
+        "description": "Most Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM) backbone by attaching an action module and optimizing the full policy jointly. This design inherits strong visual and linguistic priors from the VLM, but leaves the action module to learn physical motion almost from scratch. As a result, the policy lacks an explicit motion prior, forcing early optimization to simultaneously discover temporal action dynamics and cross-modal alignment, a challenge further amplified in ",
+        "summary": "Most Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM) backbone by attaching an action module and optimizing the full policy jointly. This design inherits strong visual and linguistic priors from the VLM, but leaves the action module to learn physical motion almost from scratch. As a result, the policy lacks an explicit motion prior, forcing early optimization to simultaneously discover temporal action dynamics and cross-modal alignment, a challenge further amplified in cross-embodiment settings. In this work, we propose to pretrain the action module with motion priors before cross-modal VLA alignment. Specifically, we introduce a two-stage training framework that equips the action module with cross-embodiment temporal motion structure before VLA training begins. In Stage~1, a lightweight flow-matching-based encoder-decoder action module efficiently learns temporal motion structure solely from unconditioned action trajectories, without processing visual or language tokens. In Stage~2, this learned prior is transferred to VLA training through decoder reuse and early-stage latent distillation, aligning visual-language features with the action embedding space while still allowing end-to-end policy refinement. In addition, the trained encoder serves as a compact history compressor, summarizing state-action histories into a single temporal context token for history-aware modeling at negligible cost. Extensive experiments across 13 diverse cross-embodiment tasks on both simulated and real-world platforms validate the effectiveness of our approach. Compared with VLA training without action priors, our model achieves faster convergence, higher success rates, and substantially stronger performance on data-scarce real-world tasks. Moreover, scaling up the action data in Stage~1 yields a more generalizable action prior that directly improves downstream VLA performance.",
+        "author": "Dong Jing, Tianqi Zhang, Jiaqi Liu, Jinman Zhao, Zelong Sun, Li Erran Li, Zhiwu Lu, Mingyu Ding",
         "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
+          "cs.RO",
+          "cs.AI",
+          "cs.CV",
+          "embedding",
+          "alignment"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 14031
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-06-25T00:00:28.747Z",
+        "category": "cs.RO",
+        "language": "en",
+        "publishedAt": "2026-06-24T17:59:56Z",
+        "updatedAt": "2026-06-24T17:59:56Z",
+        "collectedAt": "2026-06-25T04:34:07.309Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.26095v1",
+          "authors": [
+            "Dong Jing",
+            "Tianqi Zhang",
+            "Jiaqi Liu",
+            "Jinman Zhao",
+            "Zelong Sun",
+            "Li Erran Li",
+            "Zhiwu Lu",
+            "Mingyu Ding"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: embedding, alignment"
       },
       {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
+        "id": "http://arxiv.org/abs/2606.26094v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "RevengeBench: Reverse Engineering Code-Space Policies from Behavioral Experiments",
+        "url": "https://arxiv.org/pdf/2606.26094v1",
+        "description": "For most of scientific history, researchers studying behavior could only infer hidden mechanisms from outward actions: an inverse problem that becomes more tractable when observation is augmented by targeted intervention. We pose a computational analogue: given only behavioral traces of an agent in a game environment, can a learner reconstruct the underlying decision program as executable code, and how much does this reconstruction improve with the ability to design controlled experiments? We in",
+        "summary": "For most of scientific history, researchers studying behavior could only infer hidden mechanisms from outward actions: an inverse problem that becomes more tractable when observation is augmented by targeted intervention. We pose a computational analogue: given only behavioral traces of an agent in a game environment, can a learner reconstruct the underlying decision program as executable code, and how much does this reconstruction improve with the ability to design controlled experiments? We introduce RevengeBench, a benchmark of 75 LLM generated, Elo-calibrated policies across five game environments, drawn from CodeClash tournament trajectories. The learner observes the hidden target policy play against sampled opponents and designs behavioral probes in the form of custom opponent policies that elicit informative behavior. It then submits an executable hypothesis, which is evaluated using continuous action-distance metrics. We further validate that recovered code carries informative signal in downstream player-versus-player tournaments. Across twelve frontier LLMs, recovery quality varies substantially (34 to 72% of initial distance closed), with reconstructed policies yielding measurable competitive advantage, particularly for weaker models that otherwise struggle to design effective counter-strategies. Our benchmark positions behavioral recovery of programmatic policies as a tractable inverse problem in code-space, opening a path to opponent modeling, policy interpretability, and the broader question of inferring latent mechanisms from observations.",
+        "author": "Babak Rahmani, Sebastian Dziadzio, Joschka Strüber, Sergio Hernández-Gutiérrez, Matthias Bethge",
         "tags": [
-          "docker",
-          "region:us"
+          "cs.LG",
+          "llm",
+          "agent",
+          "benchmark"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11138
-        },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-06-25T00:00:28.747Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-06-24T17:59:46Z",
+        "updatedAt": "2026-06-24T17:59:46Z",
+        "collectedAt": "2026-06-25T04:34:07.309Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.26094v1",
+          "authors": [
+            "Babak Rahmani",
+            "Sebastian Dziadzio",
+            "Joschka Strüber",
+            "Sergio Hernández-Gutiérrez",
+            "Matthias Bethge"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, agent, benchmark"
       },
       {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
+        "id": "http://arxiv.org/abs/2606.26091v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
+        "url": "https://arxiv.org/pdf/2606.26091v1",
+        "description": "On-policy self-distillation achieves strong pass@1 accuracy by using a single model as both teacher and student, with the teacher conditioned on a correct demonstration to provide dense token-level feedback. We show that this could come at a hidden cost: rollout diversity decreases and pass@k curves flatten (i.e., generating more rollouts fails to improve accuracy). We trace this to compounding biases in the design of self-distillation with sampled demonstrations. The teacher scores each student",
+        "summary": "On-policy self-distillation achieves strong pass@1 accuracy by using a single model as both teacher and student, with the teacher conditioned on a correct demonstration to provide dense token-level feedback. We show that this could come at a hidden cost: rollout diversity decreases and pass@k curves flatten (i.e., generating more rollouts fails to improve accuracy). We trace this to compounding biases in the design of self-distillation with sampled demonstrations. The teacher scores each student rollout while conditioned on a sampled correct rollout, channeling its feedback through the model's own biases. We theoretically analyze the optimal self-distillation policy and show that it tilts the base distribution by a pointwise conditional mutual information score between the student's rollout and the correct rollout used as context. Unlike the ideal optimal on-policy reinforcement learning (RL), which preserves probability ratios among equally correct rollouts, self-distillation can amplify existing probability gaps, concentrating mass on already-dominant modes. On a controlled graph path-finding task and science question-answering benchmarks, self-distilled models match or exceed RL on average performance but exhibit substantially lower functional and semantic diversity, failing on out-of-distribution settings that require diverse strategies.",
+        "author": "Andrei Liviu Nicolicioiu, Mohammad Pezeshki, Aaron Courville",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.LG",
+          "cs.AI",
+          "rag",
+          "benchmark"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10113
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-06-25T00:00:28.747Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-06-24T17:59:02Z",
+        "updatedAt": "2026-06-24T17:59:02Z",
+        "collectedAt": "2026-06-25T04:34:07.309Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.26091v1",
+          "authors": [
+            "Andrei Liviu Nicolicioiu",
+            "Mohammad Pezeshki",
+            "Aaron Courville"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: rag, benchmark"
       },
       {
-        "id": "huggingface_models:Qapdex/SLM750-Edge-1.58-bit",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "Qapdex/SLM750-Edge-1.58-bit",
-        "url": "https://huggingface.co/Qapdex/SLM750-Edge-1.58-bit",
+        "id": "http://arxiv.org/abs/2606.26080v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+        "url": "https://arxiv.org/pdf/2606.26080v1",
+        "description": "Process reward models enable fine-grained, step-level evaluation of LLMs, yet building them for agentic settings remains prohibitively difficult: long-horizon interactions, irreversible actions, and stochastic environment feedback make both human annotation and Monte Carlo estimation infeasible at scale. In this work, we show that reinforcement learning (RL) post-training already provides the ingredients for effective step-level scoring, eliminating the need for dedicated reward model training a",
+        "summary": "Process reward models enable fine-grained, step-level evaluation of LLMs, yet building them for agentic settings remains prohibitively difficult: long-horizon interactions, irreversible actions, and stochastic environment feedback make both human annotation and Monte Carlo estimation infeasible at scale. In this work, we show that reinforcement learning (RL) post-training already provides the ingredients for effective step-level scoring, eliminating the need for dedicated reward model training altogether. Concretely, we derive an implicit advantage under a general stochastic Markov decision process, which we term progress advantage -- log-probability ratio between the RL-trained policy and its reference policy exactly recovers the optimal advantage function. This formulation makes the resulting signal annotation-free, domain-agnostic, and available as a byproduct of the standard RL post-training pipeline. We validate the effectiveness of the progress advantage across three different applications: test-time scaling, uncertainty quantification, and failure attribution on five benchmarks and four model families. Across all settings, it consistently outperforms confidence-based baselines and, despite requiring no task-specific training, surpasses dedicated trained reward models. We complement these results with deeper analyses on characteristics of progress advantage, offering practical guidance for adoption in real-world agentic systems.",
+        "author": "Changdae Oh, Wendi Li, Seongheon Park, Samuel Yeh, Tanwi Mallick, Sharon Li",
         "tags": [
-          "llama.cpp",
-          "gguf",
-          "bitnet",
-          "ternary",
-          "1.58-bit",
-          "quantized",
-          "q4_k_m",
-          "edge",
-          "efficient-inference",
-          "cpu",
-          "tool-calling",
-          "text-generation",
-          "en",
-          "dataset:Qapdex/agentic-foresight-actions-2k",
-          "arxiv:2402.17764",
-          "base_model:Qapdex/SLM750-Edge-1.58-bit",
-          "base_model:quantized:Qapdex/SLM750-Edge-1.58-bit",
-          "license:mit",
-          "endpoints_compatible",
-          "region:us"
+          "cs.LG",
+          "cs.AI",
+          "llm",
+          "agent",
+          "benchmark",
+          "evaluation",
+          "agentic"
         ],
-        "category": "text-generation",
-        "metrics": {
-          "downloads": 329,
-          "likes": 1
-        },
-        "publishedAt": "2026-06-20T22:20:25.000Z",
-        "updatedAt": "2026-06-24T23:57:50.000Z",
-        "collectedAt": "2026-06-25T00:00:28.741Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-06-24T17:54:08Z",
+        "updatedAt": "2026-06-24T17:54:08Z",
+        "collectedAt": "2026-06-25T04:34:07.309Z",
+        "metrics": {},
         "raw": {
-          "pipelineTag": "text-generation"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.26080v1",
+          "authors": [
+            "Changdae Oh",
+            "Wendi Li",
+            "Seongheon Park",
+            "Samuel Yeh",
+            "Tanwi Mallick",
+            "Sharon Li"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, agent, benchmark, evaluation, agentic"
       },
       {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
+        "id": "http://arxiv.org/abs/2606.26079v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
+        "url": "https://arxiv.org/pdf/2606.26079v1",
+        "description": "Standard benchmarks for multimodal large language models (MLLMs) score each item on one canonical ordering and miss whether order-irrelevant shuffling changes the answer, a baseline reliability property called for by emerging AI evaluation guidelines. We introduce Facet-Probe, a five-facet audit (option, evidence-chunk, document-rank, image-set, and mixed-modality ordering) of 18 frontier and open-weight MLLMs. A Bayesian item-response model separates ordering noise from per-facet bias, and a sa",
+        "summary": "Standard benchmarks for multimodal large language models (MLLMs) score each item on one canonical ordering and miss whether order-irrelevant shuffling changes the answer, a baseline reliability property called for by emerging AI evaluation guidelines. We introduce Facet-Probe, a five-facet audit (option, evidence-chunk, document-rank, image-set, and mixed-modality ordering) of 18 frontier and open-weight MLLMs. A Bayesian item-response model separates ordering noise from per-facet bias, and a same-ordering control estimates the decoder-stochastic floor for observed flips. We find that none of the 18 MLLMs we audit are order-invariant: screened per-facet panel-mean flip rates span 24-50%. A Gemini same-ordering control at temperature 0 estimates a substantial ordering excess over a same-input decoder-noise floor in verified cells. Capability predicts but does not eliminate flips; the best model still flips on 13.4% of trials. In our Gemini mitigation tests, training-free prompt changes are modality-conditional and do not transfer from text to visual reasoning. These results suggest that prompt-level mitigation alone is unlikely to provide general order robustness, motivating future work on training-time and architectural approaches. We propose cross-ordering flip rate as a standard reporting axis for MLLMs.",
+        "author": "Akshay Paruchuri, Sanmi Koyejo, Ehsan Adeli",
         "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
+          "cs.CL",
+          "cs.CV",
+          "cs.LG",
+          "large language model",
+          "llm",
+          "benchmark",
+          "evaluation"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7500
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-06-22T18:58:21.000Z",
-        "collectedAt": "2026-06-25T00:00:28.747Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-06-24T17:53:26Z",
+        "updatedAt": "2026-06-24T17:53:26Z",
+        "collectedAt": "2026-06-25T04:34:07.309Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "📊"
-        }
-      },
-      {
-        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Wan2.2 Animate",
-        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
-        "author": "Wan-AI",
-        "tags": [
-          "gradio",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5113
+          "abstractUrl": "http://arxiv.org/abs/2606.26079v1",
+          "authors": [
+            "Akshay Paruchuri",
+            "Sanmi Koyejo",
+            "Ehsan Adeli"
+          ]
         },
-        "publishedAt": "2025-09-18T07:05:32.000Z",
-        "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-06-25T00:00:28.747Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "👁"
-        }
-      },
-      {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
-        "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5074
-        },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-06-25T00:00:28.747Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4928
-        },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-06-25T00:00:28.747Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, benchmark, evaluation"
       }
     ],
     "developerBuzz": [
@@ -232,11 +191,11 @@
           "openai"
         ],
         "metrics": {
-          "upvotes": 463,
-          "commentsCount": 296
+          "upvotes": 614,
+          "commentsCount": 356
         },
         "publishedAt": "2026-06-24T17:47:00.000Z",
-        "collectedAt": "2026-06-25T00:00:28.978Z",
+        "collectedAt": "2026-06-25T04:34:07.090Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48663324",
           "matchedKeywords": [
@@ -256,13 +215,63 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 321,
-          "commentsCount": 410
+          "upvotes": 322,
+          "commentsCount": 411
         },
         "publishedAt": "2026-06-23T15:11:17.000Z",
-        "collectedAt": "2026-06-25T00:00:28.978Z",
+        "collectedAt": "2026-06-25T04:34:07.090Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48646276",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48664814",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
+        "url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/",
+        "author": "htrp",
+        "tags": [
+          "ai",
+          "anthropic",
+          "claude"
+        ],
+        "metrics": {
+          "upvotes": 171,
+          "commentsCount": 322
+        },
+        "publishedAt": "2026-06-24T19:48:01.000Z",
+        "collectedAt": "2026-06-25T04:34:07.090Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48664814",
+          "matchedKeywords": [
+            "ai",
+            "anthropic",
+            "claude"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48660178",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "45°C cooling design cuts data center water use to near zero",
+        "url": "https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/",
+        "author": "nitin_flanker",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 244,
+          "commentsCount": 167
+        },
+        "publishedAt": "2026-06-24T14:10:11.000Z",
+        "collectedAt": "2026-06-25T04:34:07.090Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48660178",
           "matchedKeywords": [
             "ai"
           ]
@@ -280,11 +289,11 @@
           "mistral"
         ],
         "metrics": {
-          "upvotes": 490,
-          "commentsCount": 132
+          "upvotes": 493,
+          "commentsCount": 133
         },
         "publishedAt": "2026-06-23T14:03:19.000Z",
-        "collectedAt": "2026-06-25T00:00:28.978Z",
+        "collectedAt": "2026-06-25T04:34:07.090Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48645152",
           "matchedKeywords": [
@@ -292,57 +301,49 @@
             "mistral"
           ]
         }
-      },
-      {
-        "id": "hackernews:48643426",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Unlimited OCR: One-shot long-horizon parsing",
-        "url": "https://github.com/baidu/Unlimited-OCR",
-        "author": "ingve",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 486,
-          "commentsCount": 110
-        },
-        "publishedAt": "2026-06-23T11:35:05.000Z",
-        "collectedAt": "2026-06-25T00:00:28.978Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48643426",
-          "matchedKeywords": [
-            "ai"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48648039",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Claude Tag",
-        "url": "https://www.anthropic.com/news/introducing-claude-tag",
-        "author": "adocomplete",
-        "tags": [
-          "anthropic",
-          "claude"
-        ],
-        "metrics": {
-          "upvotes": 261,
-          "commentsCount": 180
-        },
-        "publishedAt": "2026-06-23T17:09:18.000Z",
-        "collectedAt": "2026-06-25T00:00:28.978Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48648039",
-          "matchedKeywords": [
-            "anthropic",
-            "claude"
-          ]
-        }
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmqsy1vs107c5slfu4fmksjzd",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Anthropic称阿里巴巴非法获取了Claude AI模型的功能",
+        "url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+        "summary": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+        "description": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+        "category": "industry",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+        "recommendedReason": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+        "publishedAt": "2026-06-25T03:07:48.942Z",
+        "collectedAt": "2026-06-25T04:34:08.348Z",
+        "raw": {
+          "id": "cmqsy1vs107c5slfu4fmksjzd",
+          "titleEn": null,
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmqst0js5060tslfu7s6uxjhf",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "盈透证券（Interactive Brokers）与 Grok 集成：组合分析、情景建模与实时交易指令生成",
+        "url": "https://x.ai/news/grok-interactive-brokers",
+        "summary": "盈透证券（Interactive Brokers）近日与 Grok 集成，用户可在几分钟内免费关联现有账户，无需注册新账户。通过自然语言与 Grok 对话，可完成组合收益分析（如股息与利息预测）、行业/地区/经济事件的风险敞口情景建模、市场趋势研究，并直接生成对冲订单等实时交易指令，实现从数据洞察到执行决策的一体化。",
+        "description": "盈透证券（Interactive Brokers）近日与 Grok 集成，用户可在几分钟内免费关联现有账户，无需注册新账户。通过自然语言与 Grok 对话，可完成组合收益分析（如股息与利息预测）、行业/地区/经济事件的风险敞口情景建模、市场趋势研究，并直接生成对冲订单等实时交易指令，实现从数据洞察到执行决策的一体化。",
+        "category": "products",
+        "originalSource": "xAI：News（网页）",
+        "originalUrl": "https://x.ai/news/grok-interactive-brokers",
+        "recommendedReason": "盈透证券（Interactive Brokers）近日与 Grok 集成，用户可在几分钟内免费关联现有账户，无需注册新账户。通过自然语言与 Grok 对话，可完成组合收益分析（如股息与利息预测）、行业/地区/经济事件的风险敞口情景建模、市场趋势研究，并直接生成对冲订单等实时交易指令，实现从数据洞察到执行决策的一体化。",
+        "publishedAt": "2026-06-25T00:00:00.000Z",
+        "collectedAt": "2026-06-25T04:34:08.348Z",
+        "raw": {
+          "id": "cmqst0js5060tslfu7s6uxjhf",
+          "titleEn": "Explore the markets with Interactive Brokers and Grok",
+          "apiCategory": "ai-products"
+        }
+      },
       {
         "id": "aihot:cmqsmijfz04cwslfuwufeuxwz",
         "source": "aihot",
@@ -356,7 +357,7 @@
         "originalUrl": "https://techcrunch.com/2026/06/24/ai-was-supposed-to-kill-engineering-jobs-but-new-data-suggests-theyre-the-most-resilient",
         "recommendedReason": "风投机构SignalFire追踪8000万家公司数百万员工数据发现，工程是2025年最具韧性的岗位。大型科技公司总招聘较2019年下降25%，工程岗仅降11%；工程岗占Alphabet、Meta等12家\"Tech Majors\"新招员工的55%（2019年为46%）。早期初创公司2025年工程师招聘比2019年增长7%。Anthropic CEO警告AI可能消灭一半入门级白领，但该公司经济主管称尚未看到显著影响。NVIDIA CEO黄仁勋表示AI让工程师更忙碌，是杰文斯悖论的典型例证。",
         "publishedAt": "2026-06-24T21:56:41.000Z",
-        "collectedAt": "2026-06-25T00:00:29.964Z",
+        "collectedAt": "2026-06-25T04:34:08.348Z",
         "raw": {
           "id": "cmqsmijfz04cwslfuwufeuxwz",
           "titleEn": "AI was supposed to kill engineering jobs， but new data suggests they're the most resilient",
@@ -376,7 +377,7 @@
         "originalUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
         "recommendedReason": "Google 将计算机使用（Computer use）作为内置工具集成至 Gemini 3.5 Flash，使开发者能构建跨浏览器、移动端和桌面环境的智能体。此前该功能仅作为独立模型在 Gemini 2.5 中提供，现已原生整合至主 Flash 模型。开发者可通过 Gemini API 及 Gemini Enterprise Agent Platform 调用。安全方面，模型采用针对性对抗训练降低提示注入风险，并新增两项可选企业级保护：要求用户确认敏感操作、检测到间接提示注入时自动停止。该能力在持续软件测试、跨应用知识工作等长周期企业自动化场景中表现更优。（198字）",
         "publishedAt": "2026-06-24T21:16:01.786Z",
-        "collectedAt": "2026-06-25T00:00:29.964Z",
+        "collectedAt": "2026-06-25T04:34:08.348Z",
         "raw": {
           "id": "cmqsl6c5y042hslfu74apxkap",
           "titleEn": null,
@@ -396,7 +397,7 @@
         "originalUrl": "https://cursor.com/blog/notion",
         "recommendedReason": "Notion 通过 Cursor SDK 在数周内将编码智能体嵌入产品。用户可在文档中@Cursor、在讨论串中提及或向数据库指派任务，Cursor 即可端到端完成规划、构建、测试、验证并自动创建 PR。集成基于一套 Provider 无关的智能体框架，Notion 的讨论串对应一个 Cursor 智能体，每条消息对应一次智能体运行；结果通过 SSE 流式传输，支持断连恢复。Cursor SDK 提供与生产环境相同的模型、运行时和远程 MCP 支持，让 Notion 无需自建智能体基础设施即可获得完整栈编码能力。用户还可自定义模板、MCP 服务器、技能和子智能体，并设置自动触发规则。",
         "publishedAt": "2026-06-24T20:55:19.799Z",
-        "collectedAt": "2026-06-25T00:00:29.964Z",
+        "collectedAt": "2026-06-25T04:34:08.348Z",
         "raw": {
           "id": "cmqsjydyy03s2slfu0akeh868",
           "titleEn": "How Notion used the Cursor SDK to embed coding agents",
@@ -416,7 +417,7 @@
         "originalUrl": "https://x.com/perplexity_ai/status/2069866668671766804",
         "recommendedReason": "推出 Computer for Counsel。 Computer 现在连接了律师日常使用的研究数据库、文档工具和案件管理系统。可从中提取可引用来源：@midpageAI、@LegalZoom、@Docusign、@netdocuments 等。 所有 Pro 和 Max 订阅用户均可使用。",
         "publishedAt": "2026-06-24T19:34:04.000Z",
-        "collectedAt": "2026-06-25T00:00:29.964Z",
+        "collectedAt": "2026-06-25T04:34:08.348Z",
         "raw": {
           "id": "cmqshf6dl0354slfug4vof984",
           "titleEn": "Introducing Computer for Counsel. Computer now connects the research databases， document tools， and…",
@@ -436,7 +437,7 @@
         "originalUrl": "https://www.nytimes.com/2026/06/23/us/politics/nsa-lost-access-anthropic-tool.html",
         "recommendedReason": "美国国家安全局（NSA）因与人工智能公司Anthropic的纠纷，失去了对Mythos系统的访问权限。",
         "publishedAt": "2026-06-24T19:08:32.032Z",
-        "collectedAt": "2026-06-25T00:00:29.964Z",
+        "collectedAt": "2026-06-25T04:34:08.348Z",
         "raw": {
           "id": "cmqsgw1tf0304slfurlccxlvs",
           "titleEn": null,
@@ -456,7 +457,7 @@
         "originalUrl": "https://x.com/OpenAI/status/2069843083701915755",
         "recommendedReason": "我们为你带来了新版 GPT-5.5 Instant，它现在聊起天来有趣多了。 我们最常用的模型现在能更好地理解问题背后的意图，并相应地调整回应。 它也能更可靠地处理复杂约束，让购物和本地推荐更加实用和连贯。 今天向付费用户推送，明天向免费用户推送。",
         "publishedAt": "2026-06-24T18:00:21.000Z",
-        "collectedAt": "2026-06-25T00:00:29.964Z",
+        "collectedAt": "2026-06-25T04:34:08.348Z",
         "raw": {
           "id": "cmqsef9c302f0slfu6lvuhnu7",
           "titleEn": "We have a new version of GPT-5.5 Instant for you， and it's much more fun to talk to. Our most-used …",
@@ -476,7 +477,7 @@
         "originalUrl": "https://research.google/blog/thinking-to-recall-how-reasoning-unlocks-parametric-knowledge-in-llms",
         "recommendedReason": "Google Research研究发现，推理（chain-of-thought）能帮助大语言模型（LLM）回忆简单事实，即使这些事实无需复杂推导。在Gemini-2.5 Flash和Pro以及Qwen3-32B上，启用推理后模型能够回答原本无法直接回答的简单问题，pass@k显示正确事实存在于输出分布中。该现象由两个机制驱动：一是生成的推理token充当计算缓冲，允许模型进行隐藏计算以提取参数化知识；二是推理过程中产生的相关事实起到启动效应（factual priming），帮助模型激活正确答案。",
         "publishedAt": "2026-06-24T17:05:40.380Z",
-        "collectedAt": "2026-06-25T00:00:29.964Z",
+        "collectedAt": "2026-06-25T04:34:08.348Z",
         "raw": {
           "id": "cmqsbr8l701ndslfubzp0hnmi",
           "titleEn": "Thinking to recall： How reasoning unlocks parametric knowledge in LLMs",
@@ -496,12 +497,367 @@
         "originalUrl": "https://the-decoder.com/figma-bets-on-human-judgment-at-config-2026-while-the-ai-powering-its-canvas-belongs-to-someone-else",
         "recommendedReason": "Figma在Config 2026将设计画布扩展至代码、动画、3D深度和着色器效果，并集成去年收购的Weave工作流系统。新功能包括Code Layers（代码与设计并存）、Motion动画、深度层、Shader及Generative Plugins。协作方面，团队可搜索复用AI提示词、保存工作流为技能、共享插件。Figma的AI功能依赖Anthropic、OpenAI和Google等外部模型，推理成本挤压利润率。同时，Anthropic等公司的竞争产品可直接生成界面，构成威胁。",
         "publishedAt": "2026-06-24T16:49:01.000Z",
-        "collectedAt": "2026-06-25T00:00:29.964Z",
+        "collectedAt": "2026-06-25T04:34:08.348Z",
         "raw": {
           "id": "cmqsbrhhm01o1slfu2kei9qhy",
           "titleEn": "Figma bets on human judgment at Config 2026 while the AI powering its canvas belongs to someone else",
           "apiCategory": "ai-products"
         }
+      },
+      {
+        "id": "aihot:cmqs9yjcy0187slfupnhipvhf",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "NVIDIA NeMo AutoModel：一行代码加速Transformer MoE模型微调",
+        "url": "https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel",
+        "summary": "NVIDIA NeMo AutoModel 是基于 Transformers v5 的开源库，添加 Expert Parallelism、DeepEP 融合 all-to-all 调度和 TransformerEngine 内核。在 MoE 模型微调中，相比原生 v5，训练吞吐量提升 3.4-3.7 倍，GPU 内存减少 29-32%，仅需改动一行 import。在 16 节点 128 张 H100 上全微调 Nemotron 3 Ultra 550B A55B 时，v5 因内存不足无法运行，而 AutoModel 凭借 EP=64 专家并行使训练可行。单节点 30B MoE 模型（如 Qwen3-30B-A3B）同样获得可量化的性能优势。",
+        "description": "NVIDIA NeMo AutoModel 是基于 Transformers v5 的开源库，添加 Expert Parallelism、DeepEP 融合 all-to-all 调度和 TransformerEngine 内核。在 MoE 模型微调中，相比原生 v5，训练吞吐量提升 3.4-3.7 倍，GPU 内存减少 29-32%，仅需改动一行 import。在 16 节点 128 张 H100 上全微调 Nemotron 3 Ultra 550B A55B 时，v5 因内存不足无法运行，而 AutoModel 凭借 EP=64 专家并行使训练可行。单节点 30B MoE 模型（如 Qwen3-30B-A3B）同样获得可量化的性能优势。",
+        "category": "tools",
+        "originalSource": "Hugging Face：Blog（RSS）",
+        "originalUrl": "https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel",
+        "recommendedReason": "NVIDIA NeMo AutoModel 是基于 Transformers v5 的开源库，添加 Expert Parallelism、DeepEP 融合 all-to-all 调度和 TransformerEngine 内核。在 MoE 模型微调中，相比原生 v5，训练吞吐量提升 3.4-3.7 倍，GPU 内存减少 29-32%，仅需改动一行 import。在 16 节点 128 张 H100 上全微调 Nemotron 3 Ultra 550B A55B 时，v5 因内存不足无法运行，而 AutoModel 凭借 EP=64 专家并行使训练可行。单节点 30B MoE 模型（如 Qwen3-30B-A3B）同样获得可量化的性能优势。",
+        "publishedAt": "2026-06-24T16:00:13.000Z",
+        "collectedAt": "2026-06-25T04:34:08.348Z",
+        "raw": {
+          "id": "cmqs9yjcy0187slfupnhipvhf",
+          "titleEn": "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmqsi8c9303azslfuexk0h241",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "OpenRouter 零数据留存（ZDR）实践：97 款新模型，流量占比近半",
+        "url": "https://openrouter.ai/blog/insights/when-zero-means-zero",
+        "summary": "OpenRouter 的零数据留存（ZDR）保证用户提示词和模型响应不被存储，元数据一般安全。自 1 月以来新增 97 款支持 ZDR 的模型，月度 token 量增长 4.3 倍，约占全部路由流量一半。ZDR 在三个层面执行：账户级（整个供应商开启）、护栏级（按 API Key 或组织成员限定）、单次请求级（传参数仅路由至 ZDR 端点）。企业用户可灵活选择控制粒度，避免锁定单一供应商。",
+        "description": "OpenRouter 的零数据留存（ZDR）保证用户提示词和模型响应不被存储，元数据一般安全。自 1 月以来新增 97 款支持 ZDR 的模型，月度 token 量增长 4.3 倍，约占全部路由流量一半。ZDR 在三个层面执行：账户级（整个供应商开启）、护栏级（按 API Key 或组织成员限定）、单次请求级（传参数仅路由至 ZDR 端点）。企业用户可灵活选择控制粒度，避免锁定单一供应商。",
+        "category": "tools",
+        "originalSource": "OpenRouter：Announcements（RSS）",
+        "originalUrl": "https://openrouter.ai/blog/insights/when-zero-means-zero",
+        "recommendedReason": "OpenRouter 的零数据留存（ZDR）保证用户提示词和模型响应不被存储，元数据一般安全。自 1 月以来新增 97 款支持 ZDR 的模型，月度 token 量增长 4.3 倍，约占全部路由流量一半。ZDR 在三个层面执行：账户级（整个供应商开启）、护栏级（按 API Key 或组织成员限定）、单次请求级（传参数仅路由至 ZDR 端点）。企业用户可灵活选择控制粒度，避免锁定单一供应商。",
+        "publishedAt": "2026-06-24T16:00:00.000Z",
+        "collectedAt": "2026-06-25T04:34:08.348Z",
+        "raw": {
+          "id": "cmqsi8c9303azslfuexk0h241",
+          "titleEn": "When Zero Means Zero",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmqs9eic7012cslfuu3w4io4c",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Mistral AI 为 Connectors 推出多项安全与可控新能力",
+        "url": "https://mistral.ai/news/more-control-over-connectors",
+        "summary": "2026年6月24日，Mistral AI 发布 Connectors 多项新能力：Enriched admin controls（GA）支持按工作空间设置连接器访问权限并单独开关工具；API keys with connector scopes（GA）防止自动化 AI 工作负载中身份冒充；Multi-account connectors（GA）允许单个连接器绑定多个账户；Connectors Debugger（公开预览）对 MCP 连接器进行端到端根因分析；Connectors in Vibe Code（GA）和 Connectors in Workflows（公开预览）分别允许在开发者界面复用连接器及支持长时间运行任务不中断。",
+        "description": "2026年6月24日，Mistral AI 发布 Connectors 多项新能力：Enriched admin controls（GA）支持按工作空间设置连接器访问权限并单独开关工具；API keys with connector scopes（GA）防止自动化 AI 工作负载中身份冒充；Multi-account connectors（GA）允许单个连接器绑定多个账户；Connectors Debugger（公开预览）对 MCP 连接器进行端到端根因分析；Connectors in Vibe Code（GA）和 Connectors in Workflows（公开预览）分别允许在开发者界面复用连接器及支持长时间运行任务不中断。",
+        "category": "products",
+        "originalSource": "Mistral AI：News（网页）",
+        "originalUrl": "https://mistral.ai/news/more-control-over-connectors",
+        "recommendedReason": "2026年6月24日，Mistral AI 发布 Connectors 多项新能力：Enriched admin controls（GA）支持按工作空间设置连接器访问权限并单独开关工具；API keys with connector scopes（GA）防止自动化 AI 工作负载中身份冒充；Multi-account connectors（GA）允许单个连接器绑定多个账户；Connectors Debugger（公开预览）对 MCP 连接器进行端到端根因分析；Connectors in Vibe Code（GA）和 Connectors in Workflows（公开预览）分别允许在开发者界面复用连接器及支持长时间运行任务不中断。",
+        "publishedAt": "2026-06-24T15:59:47.708Z",
+        "collectedAt": "2026-06-25T04:34:08.348Z",
+        "raw": {
+          "id": "cmqs9eic7012cslfuu3w4io4c",
+          "titleEn": "Bringing more control over your connectors June 24， 2026 Mistral AI",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmqs65ogk008hslfuodhruc4w",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "里德·霍夫曼称SpaceX\"不是一家人工智能公司\"，xAI则是\"彻底的灾难\"",
+        "url": "https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake",
+        "summary": "LinkedIn联合创始人、Anthropic和OpenAI投资者Reid Hoffman在播客中公开批评SpaceX和xAI。他指出SpaceX\"不是一家人工智能公司\"，6月12日上市后收购AI编程工具Cursor属于\"花钱买相关性\"；xAI则是\"彻底的灾难\"，所有11位联合创始人已离职，Grok模型在基准测试中落后于Anthropic和OpenAI。他还批评美国政府6月11日以出口管制为由强制Anthropic下架Fable和Mythos模型，理由仅为Amazon CEO报告Fable 5存在jailbreak漏洞，称此举\"专断随意\"。Hoffman认为Anthropic和OpenAI均有巨大发展空间，但Cursor可能已过巅峰。他建议年轻人不要抵制AI。",
+        "description": "LinkedIn联合创始人、Anthropic和OpenAI投资者Reid Hoffman在播客中公开批评SpaceX和xAI。他指出SpaceX\"不是一家人工智能公司\"，6月12日上市后收购AI编程工具Cursor属于\"花钱买相关性\"；xAI则是\"彻底的灾难\"，所有11位联合创始人已离职，Grok模型在基准测试中落后于Anthropic和OpenAI。他还批评美国政府6月11日以出口管制为由强制Anthropic下架Fable和Mythos模型，理由仅为Amazon CEO报告Fable 5存在jailbreak漏洞，称此举\"专断随意\"。Hoffman认为Anthropic和OpenAI均有巨大发展空间，但Cursor可能已过巅峰。他建议年轻人不要抵制AI。",
+        "category": "tools",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake",
+        "recommendedReason": "LinkedIn联合创始人、Anthropic和OpenAI投资者Reid Hoffman在播客中公开批评SpaceX和xAI。他指出SpaceX\"不是一家人工智能公司\"，6月12日上市后收购AI编程工具Cursor属于\"花钱买相关性\"；xAI则是\"彻底的灾难\"，所有11位联合创始人已离职，Grok模型在基准测试中落后于Anthropic和OpenAI。他还批评美国政府6月11日以出口管制为由强制Anthropic下架Fable和Mythos模型，理由仅为Amazon CEO报告Fable 5存在jailbreak漏洞，称此举\"专断随意\"。Hoffman认为Anthropic和OpenAI均有巨大发展空间，但Cursor可能已过巅峰。他建议年轻人不要抵制AI。",
+        "publishedAt": "2026-06-24T14:20:14.340Z",
+        "collectedAt": "2026-06-25T04:34:08.348Z",
+        "raw": {
+          "id": "cmqs65ogk008hslfuodhruc4w",
+          "titleEn": null,
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmqs68cgx0090slfuumt36jny",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "字节跳动技术副总裁洪定坤：AI Coding 的实践与探索",
+        "url": "https://mp.weixin.qq.com/s/mdmaAyUIvxE8WT_GEbF2wQ",
+        "summary": "在火山引擎Force大会，字节跳动技术副总裁洪定坤分享AI Coding实践。过去一年，字节AI代码贡献率增长6倍，tokens消耗增长5倍，但过度关注单一指标可能失真--TRAE团队代码超90%由AI生成，人均需求吞吐率仅提升60%。900次实验显示，主流Coding模型组合代码正确率超80%，但可交付性仅40-60分；结合Harness基建后提升至80分。AI降低编程门槛但需优化指标、治理、协作。字节探索原型驱动开发，能力沉淀至TRAE（日均Token消耗5.6万亿，增长50倍），并推出TRAE Work。",
+        "description": "在火山引擎Force大会，字节跳动技术副总裁洪定坤分享AI Coding实践。过去一年，字节AI代码贡献率增长6倍，tokens消耗增长5倍，但过度关注单一指标可能失真--TRAE团队代码超90%由AI生成，人均需求吞吐率仅提升60%。900次实验显示，主流Coding模型组合代码正确率超80%，但可交付性仅40-60分；结合Harness基建后提升至80分。AI降低编程门槛但需优化指标、治理、协作。字节探索原型驱动开发，能力沉淀至TRAE（日均Token消耗5.6万亿，增长50倍），并推出TRAE Work。",
+        "category": "tools",
+        "originalSource": "公众号：火山引擎",
+        "originalUrl": "https://mp.weixin.qq.com/s/mdmaAyUIvxE8WT_GEbF2wQ",
+        "recommendedReason": "在火山引擎Force大会，字节跳动技术副总裁洪定坤分享AI Coding实践。过去一年，字节AI代码贡献率增长6倍，tokens消耗增长5倍，但过度关注单一指标可能失真--TRAE团队代码超90%由AI生成，人均需求吞吐率仅提升60%。900次实验显示，主流Coding模型组合代码正确率超80%，但可交付性仅40-60分；结合Harness基建后提升至80分。AI降低编程门槛但需优化指标、治理、协作。字节探索原型驱动开发，能力沉淀至TRAE（日均Token消耗5.6万亿，增长50倍），并推出TRAE Work。",
+        "publishedAt": "2026-06-24T14:02:42.000Z",
+        "collectedAt": "2026-06-25T04:34:08.348Z",
+        "raw": {
+          "id": "cmqs68cgx0090slfuumt36jny",
+          "titleEn": null,
+          "apiCategory": "tip"
+        }
+      }
+    ],
+    "crossSourceHighlights": [
+      {
+        "id": "url:https://reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+        "canonicalId": "url:https://reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+        "title": "Anthropic称阿里巴巴非法获取了Claude AI模型的功能",
+        "canonicalUrl": "https://reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+          "title:anthropic称阿里巴巴非法获取了claude ai模型的功能",
+          "title:anthropic says alibaba illicitly extracted claude ai model capabilities"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmqsy1vs107c5slfu4fmksjzd",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Anthropic称阿里巴巴非法获取了Claude AI模型的功能",
+            "url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+            "summary": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+            "description": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+            "category": "industry",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+            "recommendedReason": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+            "publishedAt": "2026-06-25T03:07:48.942Z",
+            "collectedAt": "2026-06-25T04:34:08.348Z",
+            "raw": {
+              "id": "cmqsy1vs107c5slfu4fmksjzd",
+              "titleEn": null,
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48664814",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
+            "url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/",
+            "author": "htrp",
+            "tags": [
+              "ai",
+              "anthropic",
+              "claude"
+            ],
+            "metrics": {
+              "upvotes": 171,
+              "commentsCount": 322
+            },
+            "publishedAt": "2026-06-24T19:48:01.000Z",
+            "collectedAt": "2026-06-25T04:34:07.090Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48664814",
+              "matchedKeywords": [
+                "ai",
+                "anthropic",
+                "claude"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmqsy1vs107c5slfu4fmksjzd",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Anthropic称阿里巴巴非法获取了Claude AI模型的功能",
+            "url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+            "summary": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+            "description": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+            "category": "industry",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+            "recommendedReason": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+            "publishedAt": "2026-06-25T03:07:48.942Z",
+            "collectedAt": "2026-06-25T04:34:08.348Z",
+            "raw": {
+              "id": "cmqsy1vs107c5slfu4fmksjzd",
+              "titleEn": null,
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48664814",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
+            "url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/",
+            "author": "htrp",
+            "tags": [
+              "ai",
+              "anthropic",
+              "claude"
+            ],
+            "metrics": {
+              "upvotes": 171,
+              "commentsCount": 322
+            },
+            "publishedAt": "2026-06-24T19:48:01.000Z",
+            "collectedAt": "2026-06-25T04:34:07.090Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48664814",
+              "matchedKeywords": [
+                "ai",
+                "anthropic",
+                "claude"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 171,
+          "commentsCount": 322,
+          "hnScore": 171,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "industry",
+        "summary": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-06-24T19:48:01.000Z",
+        "lastSeenAt": "2026-06-25T04:34:08.348Z"
+      },
+      {
+        "id": "url:https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
+        "canonicalId": "url:https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
+        "title": "Gemini 3.5 Flash 中的计算机使用",
+        "canonicalUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
+          "title:gemini 3 5 flash 中的计算机使用",
+          "topic:ai browser / computer use",
+          "title:computer use in gemini 3 5 flash"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmqsl6c5y042hslfu74apxkap",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Gemini 3.5 Flash 中的计算机使用",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
+            "summary": "Google 将计算机使用（Computer use）作为内置工具集成至 Gemini 3.5 Flash，使开发者能构建跨浏览器、移动端和桌面环境的智能体。此前该功能仅作为独立模型在 Gemini 2.5 中提供，现已原生整合至主 Flash 模型。开发者可通过 Gemini API 及 Gemini Enterprise Agent Platform 调用。安全方面，模型采用针对性对抗训练降低提示注入风险，并新增两项可选企业级保护：要求用户确认敏感操作、检测到间接提示注入时自动停止。该能力在持续软件测试、跨应用知识工作等长周期企业自动化场景中表现更优。（198字）",
+            "description": "Google 将计算机使用（Computer use）作为内置工具集成至 Gemini 3.5 Flash，使开发者能构建跨浏览器、移动端和桌面环境的智能体。此前该功能仅作为独立模型在 Gemini 2.5 中提供，现已原生整合至主 Flash 模型。开发者可通过 Gemini API 及 Gemini Enterprise Agent Platform 调用。安全方面，模型采用针对性对抗训练降低提示注入风险，并新增两项可选企业级保护：要求用户确认敏感操作、检测到间接提示注入时自动停止。该能力在持续软件测试、跨应用知识工作等长周期企业自动化场景中表现更优。（198字）",
+            "category": "models",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
+            "recommendedReason": "Google 将计算机使用（Computer use）作为内置工具集成至 Gemini 3.5 Flash，使开发者能构建跨浏览器、移动端和桌面环境的智能体。此前该功能仅作为独立模型在 Gemini 2.5 中提供，现已原生整合至主 Flash 模型。开发者可通过 Gemini API 及 Gemini Enterprise Agent Platform 调用。安全方面，模型采用针对性对抗训练降低提示注入风险，并新增两项可选企业级保护：要求用户确认敏感操作、检测到间接提示注入时自动停止。该能力在持续软件测试、跨应用知识工作等长周期企业自动化场景中表现更优。（198字）",
+            "publishedAt": "2026-06-24T21:16:01.786Z",
+            "collectedAt": "2026-06-25T04:34:08.348Z",
+            "raw": {
+              "id": "cmqsl6c5y042hslfu74apxkap",
+              "titleEn": null,
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:48662999",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Computer use in Gemini 3.5 Flash",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
+            "author": "swolpers",
+            "tags": [
+              "ai",
+              "gemini"
+            ],
+            "metrics": {
+              "upvotes": 193,
+              "commentsCount": 120
+            },
+            "publishedAt": "2026-06-24T17:21:34.000Z",
+            "collectedAt": "2026-06-25T04:34:07.090Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48662999",
+              "matchedKeywords": [
+                "ai",
+                "gemini"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmqsl6c5y042hslfu74apxkap",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Gemini 3.5 Flash 中的计算机使用",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
+            "summary": "Google 将计算机使用（Computer use）作为内置工具集成至 Gemini 3.5 Flash，使开发者能构建跨浏览器、移动端和桌面环境的智能体。此前该功能仅作为独立模型在 Gemini 2.5 中提供，现已原生整合至主 Flash 模型。开发者可通过 Gemini API 及 Gemini Enterprise Agent Platform 调用。安全方面，模型采用针对性对抗训练降低提示注入风险，并新增两项可选企业级保护：要求用户确认敏感操作、检测到间接提示注入时自动停止。该能力在持续软件测试、跨应用知识工作等长周期企业自动化场景中表现更优。（198字）",
+            "description": "Google 将计算机使用（Computer use）作为内置工具集成至 Gemini 3.5 Flash，使开发者能构建跨浏览器、移动端和桌面环境的智能体。此前该功能仅作为独立模型在 Gemini 2.5 中提供，现已原生整合至主 Flash 模型。开发者可通过 Gemini API 及 Gemini Enterprise Agent Platform 调用。安全方面，模型采用针对性对抗训练降低提示注入风险，并新增两项可选企业级保护：要求用户确认敏感操作、检测到间接提示注入时自动停止。该能力在持续软件测试、跨应用知识工作等长周期企业自动化场景中表现更优。（198字）",
+            "category": "models",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
+            "recommendedReason": "Google 将计算机使用（Computer use）作为内置工具集成至 Gemini 3.5 Flash，使开发者能构建跨浏览器、移动端和桌面环境的智能体。此前该功能仅作为独立模型在 Gemini 2.5 中提供，现已原生整合至主 Flash 模型。开发者可通过 Gemini API 及 Gemini Enterprise Agent Platform 调用。安全方面，模型采用针对性对抗训练降低提示注入风险，并新增两项可选企业级保护：要求用户确认敏感操作、检测到间接提示注入时自动停止。该能力在持续软件测试、跨应用知识工作等长周期企业自动化场景中表现更优。（198字）",
+            "publishedAt": "2026-06-24T21:16:01.786Z",
+            "collectedAt": "2026-06-25T04:34:08.348Z",
+            "raw": {
+              "id": "cmqsl6c5y042hslfu74apxkap",
+              "titleEn": null,
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:48662999",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Computer use in Gemini 3.5 Flash",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
+            "author": "swolpers",
+            "tags": [
+              "ai",
+              "gemini"
+            ],
+            "metrics": {
+              "upvotes": 193,
+              "commentsCount": 120
+            },
+            "publishedAt": "2026-06-24T17:21:34.000Z",
+            "collectedAt": "2026-06-25T04:34:07.090Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48662999",
+              "matchedKeywords": [
+                "ai",
+                "gemini"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 193,
+          "commentsCount": 120,
+          "hnScore": 193,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "models",
+        "summary": "Google 将计算机使用（Computer use）作为内置工具集成至 Gemini 3.5 Flash，使开发者能构建跨浏览器、移动端和桌面环境的智能体。此前该功能仅作为独立模型在 Gemini 2.5 中提供，现已原生整合至主 Flash 模型。开发者可通过 Gemini API 及 Gemini Enterprise Agent Platform 调用。安全方面，模型采用针对性对抗训练降低提示注入风险，并新增两项可选企业级保护：要求用户确认敏感操作、检测到间接提示注入时自动停止。该能力在持续软件测试、跨应用知识工作等长周期企业自动化场景中表现更优。（198字）",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-06-24T17:21:34.000Z",
+        "lastSeenAt": "2026-06-25T04:34:08.348Z"
       }
     ]
   }
