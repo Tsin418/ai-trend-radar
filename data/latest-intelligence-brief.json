@@ -1,21 +1,250 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-06-25-2026-06-25T11-33-15-948Z",
-  "generatedAt": "2026-06-25T11:33:15.948Z",
+  "runId": "lightweight-2026-06-25-2026-06-25T14-06-50-441Z",
+  "generatedAt": "2026-06-25T14:06:50.441Z",
   "targetDate": "2026-06-25",
   "brief": {
     "date": "2026-06-25",
-    "headline": "Today's strongest AI trend signals are Mcp / Tool Calling and Ai Model Release.",
+    "headline": "Today's strongest AI trend signals are Ai Model Release, Ai Browser / Computer Use, and Mcp / Tool Calling.",
     "keyTakeaways": [
+      "Ai Model Release: This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 8 related signal(s). Treat it as correlation evidence rat.",
+      "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
+      "Ai Model Release: watch decision is deep_dive.",
+      "Ai Browser / Computer Use: This topic appeared across 2 source(s): aihot, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Ai Browser / Computer Use: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Browser / Computer Use.",
+      "Ai Browser / Computer Use: watch decision is deep_dive.",
       "Mcp / Tool Calling: This topic appeared across 2 source(s): aihot, huggingface_spaces, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
-      "Mcp / Tool Calling: watch decision is deep_dive.",
-      "Ai Model Release: This topic appeared across 2 source(s): aihot, huggingface_spaces, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-      "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
-      "Ai Model Release: watch decision is deep_dive."
+      "Mcp / Tool Calling: watch decision is deep_dive."
     ],
     "topicBriefs": [
+      {
+        "id": "topic:ai model release",
+        "title": "Ai Model Release",
+        "category": "papers",
+        "sources": [
+          "aihot",
+          "huggingface_models",
+          "huggingface_spaces",
+          "hackernews"
+        ],
+        "sourceCount": 4,
+        "heatScore": 460,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Ai Model Release is an AI trend topic in papers represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 8 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "technicalKeywords": [
+          "papers",
+          "products",
+          "region:us",
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public"
+        ],
+        "evidenceItems": [
+          {
+            "id": "aihot:cmqsbr8l701ndslfubzp0hnmi",
+            "title": "思考即回忆：推理如何解锁LLM中的参数化知识",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://research.google/blog/thinking-to-recall-how-reasoning-unlocks-parametric-knowledge-in-llms",
+            "summary": "Google Research研究发现，推理（chain-of-thought）能帮助大语言模型（LLM）回忆简单事实，即使这些事实无需复杂推导。在Gemini-2.5 Flash和Pro以及Qwen3-32B上，启用推理后模型能够回答原本无法直接回答的简单问题，pass@k显示正确事实存在于输出分布中。该现象由两个机制驱动：一是生成的推理token充当计算缓冲，允许模型进行隐藏计算以提取参数化知识；二是推理过程中产生的相关事实起到启动效应（factual priming），帮助模型激活正确答案。",
+            "category": "papers",
+            "publishedAt": "2026-06-24T17:05:40.380Z",
+            "collectedAt": "2026-06-25T14:06:56.874Z"
+          },
+          {
+            "id": "hackernews:48660711",
+            "title": "RubyLLM: A Ruby framework for all major AI providers",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://rubyllm.com/",
+            "tags": [
+              "ai",
+              "llm"
+            ],
+            "publishedAt": "2026-06-24T14:41:41.000Z",
+            "collectedAt": "2026-06-25T14:06:50.858Z",
+            "metrics": {
+              "upvotes": 413,
+              "commentsCount": 70
+            }
+          },
+          {
+            "id": "aihot:cmqrrgnay0n08slp5phvdk394",
+            "title": "DFlash：块扩散草稿模型实现最高15倍吞吐量提升",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://www.marktechpost.com/2026/06/24/dflash-speculative-decoding-drafts-whole-token-blocks-in-parallel-for-up-to-15x-higher-throughput-on-nvidia-blackwell",
+            "summary": "DFlash 由 UC San Diego 团队提出，是一种用于投机解码的轻量块扩散草稿模型。它一次前向推理生成整块 token，再由目标模型并行验证，保证输出无损。相比 EAGLE-3，DFlash 实现最高 2.5 倍加速，在 Qwen3-8B 等多种模型上平均无损加速超过 6 倍（MATH-500 达 6.08×）。在 NVIDIA Blackwell 上（TensorRT-LLM），gpt-oss-120b 模型吞吐量提升最高 15 倍，约为 EAGLE-3 的 1.5 倍。核心创新是将目标模型多层隐藏特征注入草稿模型每一层的 Key-Value 投影，使接受长度随草稿深度增长。",
+            "category": "papers",
+            "publishedAt": "2026-06-24T07:21:10.000Z",
+            "collectedAt": "2026-06-25T14:06:56.874Z"
+          },
+          {
+            "id": "aihot:cmqs319vw0qkcslp52gzwr77q",
+            "title": "OpenAI 与 Broadcom 发布面向 LLM 推理的定制芯片 Jalapeño",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
+            "summary": "OpenAI 与 Broadcom 联合推出 Jalapeño，一款专为大语言模型（LLM）推理优化的定制 AI 芯片，旨在提升 AI 系统的性能、效率与规模。",
+            "category": "products",
+            "publishedAt": "2026-06-24T06:00:00.000Z",
+            "collectedAt": "2026-06-25T14:06:56.874Z"
+          },
+          {
+            "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+            "title": "Open LLM Leaderboard",
+            "source": "huggingface_spaces",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+            "category": "docker",
+            "tags": [
+              "docker",
+              "leaderboard",
+              "modality:text",
+              "submission:automatic",
+              "test:public",
+              "language:english",
+              "eval:code",
+              "eval:math",
+              "region:us"
+            ],
+            "publishedAt": "2023-04-17T11:40:06.000Z",
+            "collectedAt": "2026-06-25T14:06:50.594Z",
+            "metrics": {
+              "likes": 14032
+            }
+          },
+          {
+            "id": "huggingface_spaces:facebook/MusicGen",
+            "title": "MusicGen",
+            "source": "huggingface_spaces",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/spaces/facebook/MusicGen",
+            "category": "gradio",
+            "tags": [
+              "gradio",
+              "music generation",
+              "language models",
+              "LLMs",
+              "region:us"
+            ],
+            "publishedAt": "2023-06-08T18:00:26.000Z",
+            "collectedAt": "2026-06-25T14:06:50.594Z",
+            "metrics": {
+              "likes": 5074
+            }
+          }
+        ],
+        "relatedEntities": [
+          "思考即回忆：推理如何解锁LLM中的参数化知识",
+          "DFlash：块扩散草稿模型实现最高15倍吞吐量提升",
+          "OpenAI 与 Broadcom 发布面向 LLM 推理的定制芯片 Jalapeño",
+          "Cisco1963/llmplasticity-random-en_never_1-d0.01-c0.99-r0.25-s42",
+          "Open LLM Leaderboard",
+          "MusicGen",
+          "Live Portrait",
+          "RubyLLM: A Ruby framework for all major AI providers"
+        ],
+        "metrics": {
+          "votes": 413,
+          "likes": 14032,
+          "commentsCount": 70,
+          "heatScore": 460,
+          "crossSourceBonus": 25
+        }
+      },
+      {
+        "id": "topic:ai browser / computer use",
+        "title": "Ai Browser / Computer Use",
+        "category": "models",
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "heatScore": 340,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Ai Browser / Computer Use is an AI trend topic in models represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Browser / Computer Use should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Browser / Computer Use.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "technicalKeywords": [
+          "models",
+          "ai",
+          "gemini",
+          "agent"
+        ],
+        "evidenceItems": [
+          {
+            "id": "aihot:cmqsl6c5y042hslfu74apxkap",
+            "title": "Gemini 3.5 Flash 中的计算机使用",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
+            "summary": "Google 将计算机使用（Computer use）作为内置工具集成至 Gemini 3.5 Flash，使开发者能构建跨浏览器、移动端和桌面环境的智能体。此前该功能仅作为独立模型在 Gemini 2.5 中提供，现已原生整合至主 Flash 模型。开发者可通过 Gemini API 及 Gemini Enterprise Agent Platform 调用。安全方面，模型采用针对性对抗训练降低提示注入风险，并新增两项可选企业级保护：要求用户确认敏感操作、检测到间接提示注入时自动停止。该能力在持续软件测试、跨应用知识工作等长周期企业自动化场景中表现更优。（198字）",
+            "category": "models",
+            "publishedAt": "2026-06-24T21:16:01.786Z",
+            "collectedAt": "2026-06-25T14:06:56.874Z"
+          },
+          {
+            "id": "hackernews:48662999",
+            "title": "Computer use in Gemini 3.5 Flash",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
+            "tags": [
+              "ai",
+              "gemini"
+            ],
+            "publishedAt": "2026-06-24T17:21:34.000Z",
+            "collectedAt": "2026-06-25T14:06:50.858Z",
+            "metrics": {
+              "upvotes": 232,
+              "commentsCount": 150
+            }
+          },
+          {
+            "id": "hackernews:48673449",
+            "title": "X401: HTTP-Native Identity Exchange for the Agentic Web",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://www.proof.com/blog/introducing-x401",
+            "tags": [
+              "agent"
+            ],
+            "publishedAt": "2026-06-25T13:54:01.000Z",
+            "collectedAt": "2026-06-25T14:06:50.858Z",
+            "metrics": {
+              "upvotes": 2,
+              "commentsCount": 0
+            }
+          }
+        ],
+        "relatedEntities": [
+          "Gemini 3.5 Flash 中的计算机使用",
+          "Computer use in Gemini 3.5 Flash",
+          "X401: HTTP-Native Identity Exchange for the Agentic Web"
+        ],
+        "metrics": {
+          "votes": 232,
+          "commentsCount": 150,
+          "heatScore": 340,
+          "crossSourceBonus": 10
+        }
+      },
       {
         "id": "topic:mcp / tool calling",
         "title": "Mcp / Tool Calling",
@@ -51,7 +280,7 @@
             "summary": "Notion 通过 Cursor SDK 在数周内将编码智能体嵌入产品。用户可在文档中@Cursor、在讨论串中提及或向数据库指派任务，Cursor 即可端到端完成规划、构建、测试、验证并自动创建 PR。集成基于一套 Provider 无关的智能体框架，Notion 的讨论串对应一个 Cursor 智能体，每条消息对应一次智能体运行；结果通过 SSE 流式传输，支持断连恢复。Cursor SDK 提供与生产环境相同的模型、运行时和远程 MCP 支持，让 Notion 无需自建智能体基础设施即可获得完整栈编码能力。用户还可自定义模板、MCP 服务器、技能和子智能体，并设置自动触发规则。",
             "category": "products",
             "publishedAt": "2026-06-24T20:55:19.799Z",
-            "collectedAt": "2026-06-25T11:33:17.387Z"
+            "collectedAt": "2026-06-25T14:06:56.874Z"
           },
           {
             "id": "aihot:cmqs9eic7012cslfuu3w4io4c",
@@ -62,7 +291,7 @@
             "summary": "2026年6月24日，Mistral AI 发布 Connectors 多项新能力：Enriched admin controls（GA）支持按工作空间设置连接器访问权限并单独开关工具；API keys with connector scopes（GA）防止自动化 AI 工作负载中身份冒充；Multi-account connectors（GA）允许单个连接器绑定多个账户；Connectors Debugger（公开预览）对 MCP 连接器进行端到端根因分析；Connectors in Vibe Code（GA）和 Connectors in Workflows（公开预览）分别允许在开发者界面复用连接器及支持长时间运行任务不中断。",
             "category": "products",
             "publishedAt": "2026-06-24T15:59:47.708Z",
-            "collectedAt": "2026-06-25T11:33:17.387Z"
+            "collectedAt": "2026-06-25T14:06:56.874Z"
           },
           {
             "id": "aihot:cmqrizuey0kmcslp5zt7bajh0",
@@ -73,7 +302,7 @@
             "summary": "通义千问推出首个原生语言世界模型 Qwen-AgentWorld，覆盖 MCP、Search、Terminal、SWE、Web、OS、Android 七大领域。模型基于超 1000 万条真实交互轨迹，经 CPT→SFT→RL 三阶段训练，在 AgentWorldBench 上超越 GPT-5.4（58.25）和 Claude Opus 4.8，Qwen-AgentWorld-397B-A17B 取得 58.71 分。两种范式已验证其能力：作为解耦环境模拟器实现可控 Sim RL，在 WideSearch 上超越真实环境 RL（F1 50.3% vs 45.6%）；作为智能体基础模型，LWM 预热可迁移至七个基准（三个完全未出现在训练集中）。模型与评测基准已开源。",
             "category": "models",
             "publishedAt": "2026-06-24T03:32:04.000Z",
-            "collectedAt": "2026-06-25T11:33:17.387Z"
+            "collectedAt": "2026-06-25T14:06:56.874Z"
           },
           {
             "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
@@ -88,7 +317,7 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-06-25T11:33:16.101Z",
+            "collectedAt": "2026-06-25T14:06:50.594Z",
             "metrics": {
               "likes": 3441
             }
@@ -106,9 +335,9 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-06-25T11:33:16.101Z",
+            "collectedAt": "2026-06-25T14:06:50.594Z",
             "metrics": {
-              "likes": 3253
+              "likes": 3255
             }
           },
           {
@@ -124,7 +353,7 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-06-25T11:33:16.101Z",
+            "collectedAt": "2026-06-25T14:06:50.594Z",
             "metrics": {
               "likes": 2872
             }
@@ -144,150 +373,6 @@
           "heatScore": 140,
           "crossSourceBonus": 10
         }
-      },
-      {
-        "id": "topic:ai model release",
-        "title": "Ai Model Release",
-        "category": "papers",
-        "sources": [
-          "aihot",
-          "huggingface_spaces"
-        ],
-        "sourceCount": 2,
-        "heatScore": 140,
-        "confidence": "medium",
-        "watchDecision": "deep_dive",
-        "whatItIs": "Ai Model Release is an AI trend topic in papers represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, huggingface_spaces, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
-        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
-        "technicalKeywords": [
-          "papers",
-          "products",
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english"
-        ],
-        "evidenceItems": [
-          {
-            "id": "aihot:cmqsbr8l701ndslfubzp0hnmi",
-            "title": "思考即回忆：推理如何解锁LLM中的参数化知识",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://research.google/blog/thinking-to-recall-how-reasoning-unlocks-parametric-knowledge-in-llms",
-            "summary": "Google Research研究发现，推理（chain-of-thought）能帮助大语言模型（LLM）回忆简单事实，即使这些事实无需复杂推导。在Gemini-2.5 Flash和Pro以及Qwen3-32B上，启用推理后模型能够回答原本无法直接回答的简单问题，pass@k显示正确事实存在于输出分布中。该现象由两个机制驱动：一是生成的推理token充当计算缓冲，允许模型进行隐藏计算以提取参数化知识；二是推理过程中产生的相关事实起到启动效应（factual priming），帮助模型激活正确答案。",
-            "category": "papers",
-            "publishedAt": "2026-06-24T17:05:40.380Z",
-            "collectedAt": "2026-06-25T11:33:17.387Z"
-          },
-          {
-            "id": "aihot:cmqrrgnay0n08slp5phvdk394",
-            "title": "DFlash：块扩散草稿模型实现最高15倍吞吐量提升",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://www.marktechpost.com/2026/06/24/dflash-speculative-decoding-drafts-whole-token-blocks-in-parallel-for-up-to-15x-higher-throughput-on-nvidia-blackwell",
-            "summary": "DFlash 由 UC San Diego 团队提出，是一种用于投机解码的轻量块扩散草稿模型。它一次前向推理生成整块 token，再由目标模型并行验证，保证输出无损。相比 EAGLE-3，DFlash 实现最高 2.5 倍加速，在 Qwen3-8B 等多种模型上平均无损加速超过 6 倍（MATH-500 达 6.08×）。在 NVIDIA Blackwell 上（TensorRT-LLM），gpt-oss-120b 模型吞吐量提升最高 15 倍，约为 EAGLE-3 的 1.5 倍。核心创新是将目标模型多层隐藏特征注入草稿模型每一层的 Key-Value 投影，使接受长度随草稿深度增长。",
-            "category": "papers",
-            "publishedAt": "2026-06-24T07:21:10.000Z",
-            "collectedAt": "2026-06-25T11:33:17.387Z"
-          },
-          {
-            "id": "aihot:cmqs319vw0qkcslp52gzwr77q",
-            "title": "OpenAI 与 Broadcom 发布面向 LLM 推理的定制芯片 Jalapeño",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
-            "summary": "OpenAI 与 Broadcom 联合推出 Jalapeño，一款专为大语言模型（LLM）推理优化的定制 AI 芯片，旨在提升 AI 系统的性能、效率与规模。",
-            "category": "products",
-            "publishedAt": "2026-06-24T06:00:00.000Z",
-            "collectedAt": "2026-06-25T11:33:17.387Z"
-          },
-          {
-            "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-            "title": "Open LLM Leaderboard",
-            "source": "huggingface_spaces",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-            "category": "docker",
-            "tags": [
-              "docker",
-              "leaderboard",
-              "modality:text",
-              "submission:automatic",
-              "test:public",
-              "language:english",
-              "eval:code",
-              "eval:math",
-              "region:us"
-            ],
-            "publishedAt": "2023-04-17T11:40:06.000Z",
-            "collectedAt": "2026-06-25T11:33:16.101Z",
-            "metrics": {
-              "likes": 14032
-            }
-          },
-          {
-            "id": "huggingface_spaces:facebook/MusicGen",
-            "title": "MusicGen",
-            "source": "huggingface_spaces",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/spaces/facebook/MusicGen",
-            "category": "gradio",
-            "tags": [
-              "gradio",
-              "music generation",
-              "language models",
-              "LLMs",
-              "region:us"
-            ],
-            "publishedAt": "2023-06-08T18:00:26.000Z",
-            "collectedAt": "2026-06-25T11:33:16.101Z",
-            "metrics": {
-              "likes": 5074
-            }
-          },
-          {
-            "id": "huggingface_spaces:KlingTeam/LivePortrait",
-            "title": "Live Portrait",
-            "source": "huggingface_spaces",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-            "category": "gradio",
-            "tags": [
-              "gradio",
-              "Multimodal",
-              "Motion control",
-              "Image-to-Video",
-              "Video-to-Video",
-              "language models",
-              "LLMs",
-              "region:us"
-            ],
-            "publishedAt": "2024-07-05T16:35:24.000Z",
-            "collectedAt": "2026-06-25T11:33:16.101Z",
-            "metrics": {
-              "likes": 3752
-            }
-          }
-        ],
-        "relatedEntities": [
-          "思考即回忆：推理如何解锁LLM中的参数化知识",
-          "DFlash：块扩散草稿模型实现最高15倍吞吐量提升",
-          "OpenAI 与 Broadcom 发布面向 LLM 推理的定制芯片 Jalapeño",
-          "Open LLM Leaderboard",
-          "MusicGen",
-          "Live Portrait"
-        ],
-        "metrics": {
-          "likes": 14032,
-          "heatScore": 140,
-          "crossSourceBonus": 10
-        }
       }
     ],
     "sourceHealth": [
@@ -296,8 +381,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-06-25T11:33:15.992Z",
-        "finishedAt": "2026-06-25T11:33:15.992Z",
+        "startedAt": "2026-06-25T14:06:50.484Z",
+        "finishedAt": "2026-06-25T14:06:50.484Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -306,42 +391,40 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-06-25T11:33:15.992Z",
-        "finishedAt": "2026-06-25T11:33:17.388Z",
-        "latencyMs": 1396
+        "startedAt": "2026-06-25T14:06:50.484Z",
+        "finishedAt": "2026-06-25T14:06:56.875Z",
+        "latencyMs": 6391
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 5,
-        "startedAt": "2026-06-25T11:33:16.008Z",
-        "finishedAt": "2026-06-25T11:33:16.094Z",
-        "latencyMs": 86
+        "itemCount": 14,
+        "startedAt": "2026-06-25T14:06:50.501Z",
+        "finishedAt": "2026-06-25T14:06:50.583Z",
+        "latencyMs": 82
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-06-25T11:33:16.010Z",
-        "finishedAt": "2026-06-25T11:33:16.101Z",
+        "startedAt": "2026-06-25T14:06:50.503Z",
+        "finishedAt": "2026-06-25T14:06:50.594Z",
         "latencyMs": 91
       },
       {
         "source": "hackernews",
         "enabled": true,
-        "success": false,
-        "itemCount": 0,
-        "startedAt": "2026-06-25T11:33:16.012Z",
-        "finishedAt": "2026-06-25T11:33:17.119Z",
-        "latencyMs": 1107,
-        "error": "Cannot read properties of null (reading 'type')"
+        "success": true,
+        "itemCount": 27,
+        "startedAt": "2026-06-25T14:06:50.504Z",
+        "finishedAt": "2026-06-25T14:06:50.859Z",
+        "latencyMs": 355
       }
     ],
     "dataNotes": [
-      "Lightweight intelligence update: GitHub repository collection, GitHub scoring, and LLM enrichment were skipped.",
-      "Multi-source warning: Hacker News collection failed: Cannot read properties of null (reading 'type')"
+      "Lightweight intelligence update: GitHub repository collection, GitHub scoring, and LLM enrichment were skipped."
     ]
   },
   "sections": {
@@ -371,7 +454,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-06-25T11:33:16.101Z",
+        "collectedAt": "2026-06-25T14:06:50.594Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -394,7 +477,7 @@
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-06-25T11:33:16.101Z",
+        "collectedAt": "2026-06-25T14:06:50.594Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -417,11 +500,31 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-06-25T11:33:16.101Z",
+        "collectedAt": "2026-06-25T14:06:50.594Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
         }
+      },
+      {
+        "id": "huggingface_models:donate110/evolai-model-uid102",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "donate110/evolai-model-uid102",
+        "url": "https://huggingface.co/donate110/evolai-model-uid102",
+        "tags": [
+          "safetensors",
+          "qwen3",
+          "region:us"
+        ],
+        "metrics": {
+          "downloads": 1716,
+          "likes": 0
+        },
+        "publishedAt": "2026-06-12T07:28:47.000Z",
+        "updatedAt": "2026-06-25T14:05:36.000Z",
+        "collectedAt": "2026-06-25T14:06:50.583Z",
+        "raw": {}
       },
       {
         "id": "huggingface_spaces:mteb/leaderboard",
@@ -437,11 +540,11 @@
         ],
         "category": "docker",
         "metrics": {
-          "likes": 7502
+          "likes": 7503
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-06-22T18:58:21.000Z",
-        "collectedAt": "2026-06-25T11:33:16.101Z",
+        "updatedAt": "2026-06-25T13:12:45.000Z",
+        "collectedAt": "2026-06-25T14:06:50.594Z",
         "raw": {
           "sdk": "docker",
           "emoji": "📊"
@@ -464,7 +567,7 @@
         },
         "publishedAt": "2025-09-18T07:05:32.000Z",
         "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-06-25T11:33:16.101Z",
+        "collectedAt": "2026-06-25T14:06:50.594Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👁"
@@ -490,7 +593,7 @@
         },
         "publishedAt": "2023-06-08T18:00:26.000Z",
         "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-06-25T11:33:16.101Z",
+        "collectedAt": "2026-06-25T14:06:50.594Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🎵"
@@ -514,43 +617,138 @@
         },
         "publishedAt": "2023-05-20T09:26:19.000Z",
         "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-06-25T11:33:16.101Z",
+        "collectedAt": "2026-06-25T14:06:50.594Z",
         "raw": {
           "sdk": "static",
           "emoji": "🏆🤖"
         }
+      }
+    ],
+    "developerBuzz": [
+      {
+        "id": "hackernews:48663324",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "OpenAI unveils its first custom chip, built by Broadcom",
+        "url": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/",
+        "author": "jamdesk",
+        "tags": [
+          "ai",
+          "openai"
+        ],
+        "metrics": {
+          "upvotes": 751,
+          "commentsCount": 431
+        },
+        "publishedAt": "2026-06-24T17:47:00.000Z",
+        "collectedAt": "2026-06-25T14:06:50.858Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48663324",
+          "matchedKeywords": [
+            "ai",
+            "openai"
+          ]
+        }
       },
       {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
+        "id": "hackernews:48664814",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
+        "url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/",
+        "author": "htrp",
         "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
+          "ai",
+          "anthropic",
+          "claude"
         ],
-        "category": "gradio",
         "metrics": {
-          "likes": 3752
+          "upvotes": 577,
+          "commentsCount": 933
         },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-06-25T11:33:16.101Z",
+        "publishedAt": "2026-06-24T19:48:01.000Z",
+        "collectedAt": "2026-06-25T14:06:50.858Z",
         "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
+          "hnUrl": "https://news.ycombinator.com/item?id=48664814",
+          "matchedKeywords": [
+            "ai",
+            "anthropic",
+            "claude"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48660178",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "45°C cooling design cuts data center water use to near zero",
+        "url": "https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/",
+        "author": "nitin_flanker",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 400,
+          "commentsCount": 313
+        },
+        "publishedAt": "2026-06-24T14:10:11.000Z",
+        "collectedAt": "2026-06-25T14:06:50.858Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48660178",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48646276",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "AI's Affordability Crisis",
+        "url": "https://blog.dshr.org/2026/06/ais-affordability-crisis.html",
+        "author": "ilreb",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 328,
+          "commentsCount": 415
+        },
+        "publishedAt": "2026-06-23T15:11:17.000Z",
+        "collectedAt": "2026-06-25T14:06:50.858Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48646276",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48660711",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "RubyLLM: A Ruby framework for all major AI providers",
+        "url": "https://rubyllm.com/",
+        "author": "doener",
+        "tags": [
+          "ai",
+          "llm"
+        ],
+        "metrics": {
+          "upvotes": 413,
+          "commentsCount": 70
+        },
+        "publishedAt": "2026-06-24T14:41:41.000Z",
+        "collectedAt": "2026-06-25T14:06:50.858Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48660711",
+          "matchedKeywords": [
+            "ai",
+            "llm"
+          ]
         }
       }
     ],
-    "developerBuzz": [],
     "aihotHighlights": [
       {
         "id": "aihot:cmqtc9nw602azsl0e4dvg4t64",
@@ -565,7 +763,7 @@
         "originalUrl": "https://the-decoder.com/meta-employees-warn-ai-moderation-rollout-is-too-fast",
         "recommendedReason": "Meta在2025年已用大语言模型替换约一半人工审核请求，计划年底前将部分内容类型的AI审核比例提升至90%以上，每年节省数十亿美元。Meta否认成本动机，称自3月测试显示其模型错误率比人类低13%，且多捕捉10%违规。但员工指出模型仍会移除或限流无害内容，缺乏足够监督，快速部署已导致外包裁员。此外，Meta已从使用Google Gemini转向自家新基础模型Muse Spark，该模型基于人工审核员的历史决策训练。",
         "publishedAt": "2026-06-25T10:07:19.000Z",
-        "collectedAt": "2026-06-25T11:33:17.387Z",
+        "collectedAt": "2026-06-25T14:06:56.874Z",
         "raw": {
           "id": "cmqtc9nw602azsl0e4dvg4t64",
           "titleEn": "Meta employees warn AI moderation rollout is too fast",
@@ -585,7 +783,7 @@
         "originalUrl": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
         "recommendedReason": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
         "publishedAt": "2026-06-25T03:07:48.942Z",
-        "collectedAt": "2026-06-25T11:33:17.387Z",
+        "collectedAt": "2026-06-25T14:06:56.874Z",
         "raw": {
           "id": "cmqsy1vs107c5slfu4fmksjzd",
           "titleEn": null,
@@ -605,7 +803,7 @@
         "originalUrl": "https://x.ai/news/grok-interactive-brokers",
         "recommendedReason": "盈透证券（Interactive Brokers）近日与 Grok 集成，用户可在几分钟内免费关联现有账户，无需注册新账户。通过自然语言与 Grok 对话，可完成组合收益分析（如股息与利息预测）、行业/地区/经济事件的风险敞口情景建模、市场趋势研究，并直接生成对冲订单等实时交易指令，实现从数据洞察到执行决策的一体化。",
         "publishedAt": "2026-06-25T00:00:00.000Z",
-        "collectedAt": "2026-06-25T11:33:17.387Z",
+        "collectedAt": "2026-06-25T14:06:56.874Z",
         "raw": {
           "id": "cmqst0js5060tslfu7s6uxjhf",
           "titleEn": "Explore the markets with Interactive Brokers and Grok",
@@ -625,7 +823,7 @@
         "originalUrl": "https://techcrunch.com/2026/06/24/ai-was-supposed-to-kill-engineering-jobs-but-new-data-suggests-theyre-the-most-resilient",
         "recommendedReason": "风投机构SignalFire追踪8000万家公司数百万员工数据发现，工程是2025年最具韧性的岗位。大型科技公司总招聘较2019年下降25%，工程岗仅降11%；工程岗占Alphabet、Meta等12家\"Tech Majors\"新招员工的55%（2019年为46%）。早期初创公司2025年工程师招聘比2019年增长7%。Anthropic CEO警告AI可能消灭一半入门级白领，但该公司经济主管称尚未看到显著影响。NVIDIA CEO黄仁勋表示AI让工程师更忙碌，是杰文斯悖论的典型例证。",
         "publishedAt": "2026-06-24T21:56:41.000Z",
-        "collectedAt": "2026-06-25T11:33:17.387Z",
+        "collectedAt": "2026-06-25T14:06:56.874Z",
         "raw": {
           "id": "cmqsmijfz04cwslfuwufeuxwz",
           "titleEn": "AI was supposed to kill engineering jobs， but new data suggests they're the most resilient",
@@ -645,7 +843,7 @@
         "originalUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash",
         "recommendedReason": "Google 将计算机使用（Computer use）作为内置工具集成至 Gemini 3.5 Flash，使开发者能构建跨浏览器、移动端和桌面环境的智能体。此前该功能仅作为独立模型在 Gemini 2.5 中提供，现已原生整合至主 Flash 模型。开发者可通过 Gemini API 及 Gemini Enterprise Agent Platform 调用。安全方面，模型采用针对性对抗训练降低提示注入风险，并新增两项可选企业级保护：要求用户确认敏感操作、检测到间接提示注入时自动停止。该能力在持续软件测试、跨应用知识工作等长周期企业自动化场景中表现更优。（198字）",
         "publishedAt": "2026-06-24T21:16:01.786Z",
-        "collectedAt": "2026-06-25T11:33:17.387Z",
+        "collectedAt": "2026-06-25T14:06:56.874Z",
         "raw": {
           "id": "cmqsl6c5y042hslfu74apxkap",
           "titleEn": null,
@@ -665,7 +863,7 @@
         "originalUrl": "https://cursor.com/blog/notion",
         "recommendedReason": "Notion 通过 Cursor SDK 在数周内将编码智能体嵌入产品。用户可在文档中@Cursor、在讨论串中提及或向数据库指派任务，Cursor 即可端到端完成规划、构建、测试、验证并自动创建 PR。集成基于一套 Provider 无关的智能体框架，Notion 的讨论串对应一个 Cursor 智能体，每条消息对应一次智能体运行；结果通过 SSE 流式传输，支持断连恢复。Cursor SDK 提供与生产环境相同的模型、运行时和远程 MCP 支持，让 Notion 无需自建智能体基础设施即可获得完整栈编码能力。用户还可自定义模板、MCP 服务器、技能和子智能体，并设置自动触发规则。",
         "publishedAt": "2026-06-24T20:55:19.799Z",
-        "collectedAt": "2026-06-25T11:33:17.387Z",
+        "collectedAt": "2026-06-25T14:06:56.874Z",
         "raw": {
           "id": "cmqsjydyy03s2slfu0akeh868",
           "titleEn": "How Notion used the Cursor SDK to embed coding agents",
@@ -685,7 +883,7 @@
         "originalUrl": "https://x.com/perplexity_ai/status/2069866668671766804",
         "recommendedReason": "推出 Computer for Counsel。 Computer 现在连接了律师日常使用的研究数据库、文档工具和案件管理系统。可从中提取可引用来源：@midpageAI、@LegalZoom、@Docusign、@netdocuments 等。 所有 Pro 和 Max 订阅用户均可使用。",
         "publishedAt": "2026-06-24T19:34:04.000Z",
-        "collectedAt": "2026-06-25T11:33:17.387Z",
+        "collectedAt": "2026-06-25T14:06:56.874Z",
         "raw": {
           "id": "cmqshf6dl0354slfug4vof984",
           "titleEn": "Introducing Computer for Counsel. Computer now connects the research databases， document tools， and…",
@@ -705,7 +903,7 @@
         "originalUrl": "https://www.nytimes.com/2026/06/23/us/politics/nsa-lost-access-anthropic-tool.html",
         "recommendedReason": "美国国家安全局（NSA）因与人工智能公司Anthropic的纠纷，失去了对Mythos系统的访问权限。",
         "publishedAt": "2026-06-24T19:08:32.032Z",
-        "collectedAt": "2026-06-25T11:33:17.387Z",
+        "collectedAt": "2026-06-25T14:06:56.874Z",
         "raw": {
           "id": "cmqsgw1tf0304slfurlccxlvs",
           "titleEn": null,
