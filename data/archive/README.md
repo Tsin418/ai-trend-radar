@@ -1,13 +1,13 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-25T04:39:10.553Z
+Updated: 2026-06-25T08:34:27.784Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-25 | daily | [AI Developer Radar｜Daily｜2026-06-25](2026/06/2026-06-25-daily.md) | calesthio/OpenMontage, Panniantong/Agent-Reach, topoteretes/cognee, revfactory/harness, ZhuLinsen/daily_stock_analysis |
+| 2026-06-25 | daily | [AI Developer Radar｜Daily｜2026-06-25](2026/06/2026-06-25-daily.md) | hpcaitech/ColossalAI, stas00/ml-engineering, calesthio/OpenMontage, Panniantong/Agent-Reach, topoteretes/cognee |
 | 2026-06-24 | daily | [AI Developer Radar｜Daily｜2026-06-24](2026/06/2026-06-24-daily.md) | hpcaitech/ColossalAI, ChatGPTNextWeb/NextChat, stas00/ml-engineering, google-ai-edge/mediapipe, Tencent/ncnn |
 | 2026-06-23 | daily | [AI Developer Radar｜Daily｜2026-06-23](2026/06/2026-06-23-daily.md) | anthropics/claude-plugins-official, headroomlabs-ai/headroom, JCodesMore/ai-website-cloner-template, deepspeedai/DeepSpeed, ChatGPTNextWeb/NextChat |
 | 2026-06-22 | daily | [AI Developer Radar｜Daily｜2026-06-22](2026/06/2026-06-22-daily.md) | lyogavin/airllm, bytedance/deer-flow, garrytan/gstack, jamiepine/voicebox, deepspeedai/DeepSpeed |
