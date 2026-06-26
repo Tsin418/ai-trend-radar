@@ -1,256 +1,173 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-06-26T02:35:05.464Z",
+  "generatedAt": "2026-06-26T04:40:10.625Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_models:mlx-community/gemma-4-e4b-it-OptiQ-4bit",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "mlx-community/gemma-4-e4b-it-OptiQ-4bit",
-        "url": "https://huggingface.co/mlx-community/gemma-4-e4b-it-OptiQ-4bit",
+        "id": "http://arxiv.org/abs/2606.27369v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+        "url": "https://arxiv.org/pdf/2606.27369v1",
+        "description": "Reinforcement learning with verifiable rewards (RLVR) for training LLMs typically rely on ground-truth answers to assign rewards, limiting their applicability to tasks where the ground-truth solution is unknown. We introduce a \\textbf{R}anking-\\textbf{i}nduced \\textbf{VER}ifiable framework (RiVER) that trains LLMs on score-based optimization tasks without ground-truth solutions, using deterministic execution feedback as continuous-valued supervision. When applying group-relative RL to such conti",
+        "summary": "Reinforcement learning with verifiable rewards (RLVR) for training LLMs typically rely on ground-truth answers to assign rewards, limiting their applicability to tasks where the ground-truth solution is unknown. We introduce a \\textbf{R}anking-\\textbf{i}nduced \\textbf{VER}ifiable framework (RiVER) that trains LLMs on score-based optimization tasks without ground-truth solutions, using deterministic execution feedback as continuous-valued supervision. When applying group-relative RL to such continuous rewards, we identify two key challenges: \\emph{scale dominance}, where uncalibrated score magnitudes across test instances distort policy updates, and \\emph{frequency dominance}, where repeatedly sampled suboptimal solutions can outweigh rare but stronger candidates. RiVER addresses these challenges with calibrated reward shaping that uses instance-wise comparisons and emphasizes top-ranked solvers while retaining bounded feedback for other valid solutions. We train on 12 AtCoder Heuristic Contest tasks and evaluate on Algorithm Engineering Benchmark (ALE-Bench), LiveCodeBench, and USACO. RiVER advances Qwen3-8B and GLM-Z1-9B-0414 by 8.9\\% and 9.4\\% in ALE rating rank. More importantly, despite training exclusively on score-based tasks without any ground-truth solutions, RiVER also improves the backbones across exact-solution benchmarks such as LiveCodeBench and USACO by an absolute average improvement of 2.4\\% and 3.5\\%. By contrast, baselines trained with raw execution scores improve ALE rating but fail to transfer to exact-solution benchmarks. These results suggest that score-based optimization tasks, combined with proper reward calibration, can serve as effective training environments for general coding ability without ground-truth solutions.",
+        "author": "Yingyu Lin, Qiyue Gao, Nikki Lijing Kuang, Xunpeng Huang, Kun Zhou, Tongtong Liang, Zhewei Yao, Yi-An Ma, Yuxiong He",
         "tags": [
-          "mlx",
-          "safetensors",
-          "gemma4",
-          "quantized",
-          "mixed-precision",
-          "4bit",
-          "8bit",
-          "optiq",
-          "apple-silicon",
-          "text-generation",
-          "gemma-4",
-          "conversational",
-          "license:gemma",
-          "4-bit",
-          "region:us"
+          "cs.LG",
+          "llm",
+          "rag",
+          "benchmark"
         ],
-        "category": "text-generation",
-        "metrics": {
-          "downloads": 9106,
-          "likes": 28
-        },
-        "publishedAt": "2026-04-11T16:28:56.000Z",
-        "updatedAt": "2026-06-26T02:32:42.000Z",
-        "collectedAt": "2026-06-26T02:35:05.654Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-06-25T17:59:36Z",
+        "updatedAt": "2026-06-25T17:59:36Z",
+        "collectedAt": "2026-06-26T04:40:03.523Z",
+        "metrics": {},
         "raw": {
-          "pipelineTag": "text-generation"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.27369v1",
+          "authors": [
+            "Yingyu Lin",
+            "Qiyue Gao",
+            "Nikki Lijing Kuang",
+            "Xunpeng Huang",
+            "Kun Zhou",
+            "Tongtong Liang",
+            "Zhewei Yao",
+            "Yi-An Ma",
+            "Yuxiong He"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, rag, benchmark"
       },
       {
-        "id": "huggingface_models:mlx-community/gemma-4-26B-A4B-it-OptiQ-4bit",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "mlx-community/gemma-4-26B-A4B-it-OptiQ-4bit",
-        "url": "https://huggingface.co/mlx-community/gemma-4-26B-A4B-it-OptiQ-4bit",
+        "id": "http://arxiv.org/abs/2606.27361v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Autoregressive Boltzmann Generators",
+        "url": "https://arxiv.org/pdf/2606.27361v1",
+        "description": "Efficient sampling of molecular systems at thermodynamic equilibrium is a hallmark challenge in statistical physics. This challenge has driven the development of Boltzmann Generators (BGs), which allow rapid generation of uncorrelated equilibrium samples by combining a generative model with exact likelihoods and an importance sampling correction. However, modern BGs predominantly rely on normalizing flows (NFs), which either suffer from limited expressivity due to strict invertibility constraint",
+        "summary": "Efficient sampling of molecular systems at thermodynamic equilibrium is a hallmark challenge in statistical physics. This challenge has driven the development of Boltzmann Generators (BGs), which allow rapid generation of uncorrelated equilibrium samples by combining a generative model with exact likelihoods and an importance sampling correction. However, modern BGs predominantly rely on normalizing flows (NFs), which either suffer from limited expressivity due to strict invertibility constraints (discrete time) or computationally expensive likelihoods (continuous time). In this paper, we propose Autoregressive Boltzmann Generators (ArBG) -- a novel autoregressive modelling framework -- that overcomes these limitations by departing from the flow-based BG paradigm. ArBG circumvents the topological constraints of flows and enables sequential inference-time interventions, while offering enhanced scalability by leveraging architectures effective in Large Language Models. We empirically demonstrate that ArBG leads to significant improvements over flow-based models across all benchmarks, but particularly in larger peptide systems such as the 10-residue Chignolin. Furthermore, we introduce Robin, a 132 million parameter transferable model trained with the ArBG framework which improves over the previous state-of-the-art, reducing the zero-shot energy error, E-W$_2$, on 8-residue systems by over 60$\\%$. The code can be found at the following link: https://github.com/danyalrehman/autobg.",
+        "author": "Danyal Rehman, Charlie B. Tan, Yoshua Bengio, Avishek Joey Bose, Alexander Tong",
         "tags": [
-          "mlx",
-          "safetensors",
-          "gemma4",
-          "quantized",
-          "mixed-precision",
-          "4bit",
-          "8bit",
-          "optiq",
-          "apple-silicon",
-          "text-generation",
-          "gemma-4",
-          "conversational",
-          "base_model:google/gemma-4-26B-A4B-it",
-          "base_model:quantized:google/gemma-4-26B-A4B-it",
-          "license:gemma",
-          "4-bit",
-          "region:us"
+          "cs.LG",
+          "cs.AI",
+          "large language model",
+          "llm",
+          "rag",
+          "benchmark"
         ],
-        "category": "text-generation",
-        "metrics": {
-          "downloads": 15523,
-          "likes": 10
-        },
-        "publishedAt": "2026-04-25T16:12:35.000Z",
-        "updatedAt": "2026-06-26T02:34:57.000Z",
-        "collectedAt": "2026-06-26T02:35:05.654Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-06-25T17:58:21Z",
+        "updatedAt": "2026-06-25T17:58:21Z",
+        "collectedAt": "2026-06-26T04:40:03.523Z",
+        "metrics": {},
         "raw": {
-          "pipelineTag": "text-generation"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.27361v1",
+          "authors": [
+            "Danyal Rehman",
+            "Charlie B. Tan",
+            "Yoshua Bengio",
+            "Avishek Joey Bose",
+            "Alexander Tong"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, rag, benchmark"
       },
       {
-        "id": "huggingface_models:mlx-community/gemma-4-e2b-it-OptiQ-4bit",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "mlx-community/gemma-4-e2b-it-OptiQ-4bit",
-        "url": "https://huggingface.co/mlx-community/gemma-4-e2b-it-OptiQ-4bit",
+        "id": "http://arxiv.org/abs/2606.27359v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+        "url": "https://arxiv.org/pdf/2606.27359v1",
+        "description": "Many decoding methods for large language models can be understood as shifting probability mass toward outputs that are more likely under the model, either locally at the token level or globally at the sequence level. Therefore, their success depends on a fundamental question: when does sequence probability, that is, the conditional probability of a continuation given a prompt, actually align with correctness? In this paper, we set out to quantify this relationship across decoding methods, models",
+        "summary": "Many decoding methods for large language models can be understood as shifting probability mass toward outputs that are more likely under the model, either locally at the token level or globally at the sequence level. Therefore, their success depends on a fundamental question: when does sequence probability, that is, the conditional probability of a continuation given a prompt, actually align with correctness? In this paper, we set out to quantify this relationship across decoding methods, models, and benchmarks at four levels: across decoding methods, across hyperparameters within a method, across prompt-answer pairs within a dataset, and across repeated responses to the same prompt. We find that higher sequence probability is often predictive of correctness across prompt-answer pairs within a fixed dataset. However, this relationship does not generally transfer to decoding decisions: increasing sequence probability by changing hyperparameters or methods does not reliably improve accuracy. Further, sequence probability is not a good indicator of correctness for responses to the same prompt. These findings clarify when decoding can and cannot be expected to improve correctness, and provide practical guidance for decoding, self-consistency, and verifier-free self-improvement.",
+        "author": "Johannes Zenn, Jonas Geiping",
         "tags": [
-          "mlx",
-          "safetensors",
-          "gemma4",
-          "quantized",
-          "mixed-precision",
-          "4bit",
-          "8bit",
-          "optiq",
-          "apple-silicon",
-          "text-generation",
-          "gemma-4",
-          "conversational",
-          "license:gemma",
-          "4-bit",
-          "region:us"
+          "stat.ML",
+          "cs.LG",
+          "large language model",
+          "llm",
+          "benchmark"
         ],
-        "category": "text-generation",
-        "metrics": {
-          "downloads": 2312,
-          "likes": 4
-        },
-        "publishedAt": "2026-04-11T12:36:59.000Z",
-        "updatedAt": "2026-06-26T02:34:09.000Z",
-        "collectedAt": "2026-06-26T02:35:05.654Z",
+        "category": "stat.ML",
+        "language": "en",
+        "publishedAt": "2026-06-25T17:58:02Z",
+        "updatedAt": "2026-06-25T17:58:02Z",
+        "collectedAt": "2026-06-26T04:40:03.523Z",
+        "metrics": {},
         "raw": {
-          "pipelineTag": "text-generation"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.27359v1",
+          "authors": [
+            "Johannes Zenn",
+            "Jonas Geiping"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, benchmark"
       },
       {
-        "id": "huggingface_models:mlx-community/gemma-4-26B-A4B-it-qat-OptiQ-4bit",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "mlx-community/gemma-4-26B-A4B-it-qat-OptiQ-4bit",
-        "url": "https://huggingface.co/mlx-community/gemma-4-26B-A4B-it-qat-OptiQ-4bit",
+        "id": "http://arxiv.org/abs/2606.27347v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Mapping Political-Elite Networks in Europe with a Multilingual Joint Entity-Relation Extraction Pipeline",
+        "url": "https://arxiv.org/pdf/2606.27347v1",
+        "description": "Whether political elites organise into rent-seeking coalitions that capture public resources or civic networks that sustain governance is a central question in comparative politics. Yet observing these complex, informal, and adversarial ties at scale has historically required intensive manual coding, while automated text-as-data methods have largely been limited to simple co-occurrence. Recent large language model (LLM) approaches offer a path forward but often rely on proprietary APIs, lack cro",
+        "summary": "Whether political elites organise into rent-seeking coalitions that capture public resources or civic networks that sustain governance is a central question in comparative politics. Yet observing these complex, informal, and adversarial ties at scale has historically required intensive manual coding, while automated text-as-data methods have largely been limited to simple co-occurrence. Recent large language model (LLM) approaches offer a path forward but often rely on proprietary APIs, lack cross-lingual capability, and struggle with scalable entity resolution. We present a modular, fully open-weight pipeline for multilingual joint entity-relation extraction that builds signed, temporal knowledge graphs from massive unstructured news corpora. It combines span-based named-entity recognition (NER) with a three-stage linking cascade mapping mentions to language-independent Wikidata identifiers; a high-throughput, ontology-constrained mixture-of-experts model then uses guided decoding to extract directed, signed relationships grounded in a domain ontology. A full-coverage spot-check against a 3491-relation gold standard shows high textual correctness (68.2% strict to 93.7% lenient). Two large-scale case studies validate the pipeline against the public record. In Austria, it reconstructs a political party's complete lifecycle, dating internal fractures and tracking personnel into successor factions and court convictions. In a Polish corpus, it uncovers the overlapping economic and governance networks of state-enterprise patronage, alongside the structurally balanced, signed conflict network of the polarized Civic Platform (Platforma Obywatelska, PO)--Law and Justice (Prawo i Sprawiedliwość, PiS) duopoly. By bridging raw multilingual text and structured relational data, our framework provides a robust, replicable foundation for cross-national empirical computational social science.",
+        "author": "Kirill Solovev, Jana Lasser",
         "tags": [
-          "mlx",
-          "safetensors",
-          "gemma4",
-          "quantized",
-          "mixed-precision",
-          "4bit",
-          "8bit",
-          "optiq",
-          "qat",
-          "moe",
-          "apple-silicon",
-          "text-generation",
-          "image-text-to-text",
-          "gemma-4",
-          "conversational",
-          "base_model:google/gemma-4-26B-A4B-it-qat-q4_0-unquantized",
-          "base_model:quantized:google/gemma-4-26B-A4B-it-qat-q4_0-unquantized",
-          "license:apache-2.0",
-          "4-bit",
-          "region:us"
+          "cs.CL",
+          "large language model",
+          "llm",
+          "rag"
         ],
-        "category": "text-generation",
-        "metrics": {
-          "downloads": 736,
-          "likes": 2
-        },
-        "publishedAt": "2026-06-16T15:07:26.000Z",
-        "updatedAt": "2026-06-26T02:33:29.000Z",
-        "collectedAt": "2026-06-26T02:35:05.654Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-06-25T17:51:59Z",
+        "updatedAt": "2026-06-25T17:51:59Z",
+        "collectedAt": "2026-06-26T04:40:03.523Z",
+        "metrics": {},
         "raw": {
-          "pipelineTag": "text-generation"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.27347v1",
+          "authors": [
+            "Kirill Solovev",
+            "Jana Lasser"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, rag"
       },
       {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
+        "id": "http://arxiv.org/abs/2606.27342v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Understanding Domain-Aware Distribution Alignment in Budgeted Entity Matching",
+        "url": "https://arxiv.org/pdf/2606.27342v1",
+        "description": "Entity Matching (EM) is a core operation in the data integration pipeline, where records from different sources are compared to determine whether they refer to the same real-world entity. Recent work has incorporated domain information and low-resource learning techniques to better adapt EM systems to realistic settings. While these approaches have demonstrated strong performance, it remains unclear how they behave under varying data constraints and levels of supervision in practice. In this pap",
+        "summary": "Entity Matching (EM) is a core operation in the data integration pipeline, where records from different sources are compared to determine whether they refer to the same real-world entity. Recent work has incorporated domain information and low-resource learning techniques to better adapt EM systems to realistic settings. While these approaches have demonstrated strong performance, it remains unclear how they behave under varying data constraints and levels of supervision in practice. In this paper, we investigate a state-of-the-art method for low-resource, domain-aware EM--BEACON--and study how its performance is affected by different algorithmic choices and data availability conditions. We conduct a series of targeted experiments to evaluate these variations, providing deeper insight into the role of distribution alignment and the behavior of the BEACON framework.",
+        "author": "Nicholas Pulsone, Gregory Goren, Roee Shraga",
         "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
+          "cs.DB",
+          "cs.AI",
+          "cs.LG",
+          "alignment"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 14034
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-06-26T02:35:05.663Z",
+        "category": "cs.DB",
+        "language": "en",
+        "publishedAt": "2026-06-25T17:49:48Z",
+        "updatedAt": "2026-06-25T17:49:48Z",
+        "collectedAt": "2026-06-26T04:40:03.523Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
-      },
-      {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
-        "tags": [
-          "docker",
-          "region:us"
-        ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11141
+          "abstractUrl": "http://arxiv.org/abs/2606.27342v1",
+          "authors": [
+            "Nicholas Pulsone",
+            "Gregory Goren",
+            "Roee Shraga"
+          ]
         },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-06-26T02:35:05.663Z",
-        "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
-      },
-      {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
-        "tags": [
-          "gradio",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10114
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-06-26T02:35:05.663Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
-      },
-      {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
-        "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7506
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-06-25T16:39:43.000Z",
-        "collectedAt": "2026-06-26T02:35:05.663Z",
-        "raw": {
-          "sdk": "docker",
-          "emoji": "📊"
-        }
+        "recommendedReason": "Matched AI developer keywords: alignment"
       }
     ],
     "developerBuzz": [
@@ -265,11 +182,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 640,
-          "commentsCount": 914
+          "upvotes": 668,
+          "commentsCount": 960
         },
         "publishedAt": "2026-06-25T13:02:56.000Z",
-        "collectedAt": "2026-06-26T02:35:05.965Z",
+        "collectedAt": "2026-06-26T04:40:02.377Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48672732",
           "matchedKeywords": [
@@ -293,7 +210,7 @@
           "commentsCount": 459
         },
         "publishedAt": "2026-06-24T17:47:00.000Z",
-        "collectedAt": "2026-06-26T02:35:05.965Z",
+        "collectedAt": "2026-06-26T04:40:02.377Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48663324",
           "matchedKeywords": [
@@ -315,11 +232,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 751,
-          "commentsCount": 1215
+          "upvotes": 753,
+          "commentsCount": 1222
         },
         "publishedAt": "2026-06-24T19:48:01.000Z",
-        "collectedAt": "2026-06-26T02:35:05.965Z",
+        "collectedAt": "2026-06-26T04:40:02.377Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48664814",
           "matchedKeywords": [
@@ -340,11 +257,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 575,
-          "commentsCount": 304
+          "upvotes": 581,
+          "commentsCount": 307
         },
         "publishedAt": "2026-06-25T14:58:50.000Z",
-        "collectedAt": "2026-06-26T02:35:05.965Z",
+        "collectedAt": "2026-06-26T04:40:02.377Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48674446",
           "matchedKeywords": [
@@ -367,7 +284,7 @@
           "commentsCount": 404
         },
         "publishedAt": "2026-06-24T14:10:11.000Z",
-        "collectedAt": "2026-06-26T02:35:05.965Z",
+        "collectedAt": "2026-06-26T04:40:02.377Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48660178",
           "matchedKeywords": [
@@ -390,7 +307,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/LVj2foSXi_hBRKxjuYaUyw",
         "recommendedReason": "Claude Code 内置近30个Hook事件（年初仅13个），本质是写死的规则脚本，运行时不消耗token。6个实用玩法：权限弹窗提醒、开机日程播报（问候+天气+飞书日程）、上下文预压缩时自动生成摘要卡片、结合Skill自动整理下载文件夹、启动后每小时久坐提醒、通过Bark实现手机/手表任务完成/失败推送。让AI从被动聊天框变为事件驱动的自动化系统。",
         "publishedAt": "2026-06-26T02:02:00.000Z",
-        "collectedAt": "2026-06-26T02:35:06.637Z",
+        "collectedAt": "2026-06-26T04:40:03.194Z",
         "raw": {
           "id": "cmquanuro02prsl8053rbhfjl",
           "titleEn": "想玩Loop Engineering，可以先从这6个Hook玩法开始。",
@@ -410,7 +327,7 @@
         "originalUrl": "https://x.com/xiaohu/status/2070317717811540149",
         "recommendedReason": "博主小互开源个人IP配图技能\"小互IP Studio\"，包含31个原创角色（15个手绘线稿角色+16个谐音梗meme形象）及一套配图方法论。该Agent可自动读取文章、规划配图类型（情绪图/示意图/四格漫画）、生成并自查返工。默认画风为手绘线稿淡彩，另备5种皮肤（3D盲盒、黑白线稿等）可切换。安装仅需Python3，支持Claude Code、Codex等工具，需自备OpenAI兼容的图像API key（默认GPT-image-2）；也可只输出提示词手动生图。",
         "publishedAt": "2026-06-26T01:26:23.000Z",
-        "collectedAt": "2026-06-26T02:35:06.637Z",
+        "collectedAt": "2026-06-26T04:40:03.194Z",
         "raw": {
           "id": "cmqu93tek02e2sl80iom0bica",
           "titleEn": "http：//x.com/i/article/2070315221424787456",
@@ -430,7 +347,7 @@
         "originalUrl": "https://x.com/rohanpaul_ai/status/2070288396644491317",
         "recommendedReason": "报告基于去重后的消费端AI支出统计，过去12个月实际AI营收达1100亿美元，年化运行率超1750亿美元，增长速度约为移动/互联网普及浪潮的3倍。营收形成速度急剧加快：2023年新增10亿美元收入需180天，现缩短至不足2天。企业AI已脱离试点阶段，但全面推广仍处早期。31%的标普500公司在财报电话会提及AI，仅20%量化影响。Token降价每10%刺激12-18%用量增长，需求价格弹性强。超大规模云厂商AI收入目前大致覆盖基础设施折旧，GPU经济效益依赖6年计算寿命假设。电力供应和数据中心成本仍是未来扩展主要瓶颈。",
         "publishedAt": "2026-06-25T23:29:52.000Z",
-        "collectedAt": "2026-06-26T02:35:06.637Z",
+        "collectedAt": "2026-06-26T04:40:03.194Z",
         "raw": {
           "id": "cmqu5r7al01j7sl80meg0lje3",
           "titleEn": "This is a brilliant report. The State of the AI Economy by @exponentialview - $110B real AI revenue…",
@@ -450,7 +367,7 @@
         "originalUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.193",
         "recommendedReason": "Claude Code v2.1.193 新增 `autoMode.classifyAllShell` 设置，将全部 Bash/PowerShell 命令经自动模式分类器处理。自动模式拒绝原因现加入转录、拒绝提示及 `/permissions` 页面。新增 `claude_code.assistant_response` OpenTelemetry 日志事件（默认不记录，需设置 `OTEL_LOG_ASSISTANT_RESPONSES=1`）。Bash 模式支持实时文件路径自动补全；MCP 服务器需认证时显示启动提示。新增空闲后台 shell 命令自动内存压力回收（可禁用）。修复 `/model` UI 状态滞后、后台任务误取消、子 agent 隐藏同级等问题，并改进了后台 agent 启动指令、MCP 认证重连、插件自动重命名等行为。",
         "publishedAt": "2026-06-25T21:45:57.000Z",
-        "collectedAt": "2026-06-26T02:35:06.637Z",
+        "collectedAt": "2026-06-26T04:40:03.194Z",
         "raw": {
           "id": "cmqu24x8v00lssl8065rajmsy",
           "titleEn": "v2.1.193",
@@ -470,7 +387,7 @@
         "originalUrl": "https://x.com/OpenAIDevs/status/2070254532911882707",
         "recommendedReason": "OpenAI 宣布 Codex 在 ChatGPT 移动应用中正式开放（GA），并新增一对一设备配对实现更安全的手机与电脑连接。移动端新增通知、目标、侧边聊天、文件预览及内联审阅评论功能。此前预览版已明确，用户可通过 ChatGPT 移动 App 启动新工作、审查输出、引导执行和批准下一步，而 Codex 实际继续在笔记本、Mac mini 或开发机上后台运行。",
         "publishedAt": "2026-06-25T21:15:18.000Z",
-        "collectedAt": "2026-06-26T02:35:06.637Z",
+        "collectedAt": "2026-06-26T04:40:03.194Z",
         "raw": {
           "id": "cmqu0cbyl006isl80rufd707u",
           "titleEn": "Codex in the ChatGPT mobile app is now generally available. Connect your phone and computer more se…",
@@ -490,7 +407,7 @@
         "originalUrl": "https://x.com/rohanpaul_ai/status/2070252433109049466",
         "recommendedReason": "The Information 报道，美国政府因安全顾虑要求 OpenAI 暂缓 GPT-5.6 的广泛发布，改为推出受控预览版。OpenAI 计划先向小部分合作伙伴提供早期访问，并由政府逐客户审批准入。这一非常规做法主要担忧模型在自动化高技能网络工作上的能力：既能帮防御者更快发现漏洞，也可能被攻击者用于加速测试漏洞利用。本周四，CEO Sam Altman 已向员工确认该审批流程。",
         "publishedAt": "2026-06-25T21:06:58.000Z",
-        "collectedAt": "2026-06-26T02:35:06.637Z",
+        "collectedAt": "2026-06-26T04:40:03.194Z",
         "raw": {
           "id": "cmqu0e95l006ysl8097qhn8ny",
           "titleEn": "The Information： The US government is asking OpenAI to slow GPT-5.6 into a controlled preview instea…",
@@ -510,7 +427,7 @@
         "originalUrl": "https://x.com/midjourney/status/2070223272072065228",
         "recommendedReason": "Midjourney 带来两项更新。一是加入 `--preview` 参数可提前体验 V8.2 的美学与个性化效果；二是此前在 V8.1 推出的大批量草稿模式（生成 24 张低分辨率图，价格仅为标准 4 张的一半，点击 \"Vary\" 可升级为全分辨率）现在支持搭配 `--sref random` 使用，探索风格空间的速度比之前快 24 倍。",
         "publishedAt": "2026-06-25T19:11:05.000Z",
-        "collectedAt": "2026-06-26T02:35:06.637Z",
+        "collectedAt": "2026-06-26T04:40:03.194Z",
         "raw": {
           "id": "cmqtvqfrt07aksl0et0cawoue",
           "titleEn": "Two quick updates in image world. Try adding --preview to your prompt for a early peak at V8.2 aesth…",
@@ -530,12 +447,402 @@
         "originalUrl": "https://newsroom.ibm.com/2026-06-25-ibm-debuts-worlds-first-sub-1-nanometer-chip-technology",
         "recommendedReason": "IBM 于 2026 年 6 月 25 日发布全球首款亚纳米级芯片技术，采用 0.7 nm（7 埃米）节点与全新三维纳米堆叠（nanostack）架构。指甲盖大小的芯片集成近 1000 亿个晶体管，密度约为 IBM 2021 年 2 nm 芯片的两倍。相比 2 nm 芯片，性能最高提升 50%，能效最高提升 70%。纳米堆叠架构还实现 SRAM 面积缩减 40%，有助于支撑先进 AI 工作负载的高带宽需求。该技术已在 VLSI 2026 会议上验证，IBM 预计 5 年内量产。",
         "publishedAt": "2026-06-25T18:52:05.282Z",
-        "collectedAt": "2026-06-26T02:35:06.637Z",
+        "collectedAt": "2026-06-26T04:40:03.194Z",
         "raw": {
           "id": "cmqtvbv4r076ssl0e588aopiw",
           "titleEn": "IBM首度推出亚纳米级芯片技术",
           "apiCategory": "paper"
         }
+      },
+      {
+        "id": "aihot:cmqtv6jlv0766sl0eixynhk6m",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Midjourney V8.1 草稿模式新增随机风格功能",
+        "url": "https://updates.midjourney.com/random-styles-in-draft-mode",
+        "summary": "Midjourney V8.1 的草稿模式（draft mode）添加了随机风格功能。用户在提示词中加入 `--sref random` 即可一键生成 24 张不同风格的图片。开启草稿模式可通过点击提示栏的 ⚡ 图标或添加 `--draft` 参数。",
+        "description": "Midjourney V8.1 的草稿模式（draft mode）添加了随机风格功能。用户在提示词中加入 `--sref random` 即可一键生成 24 张不同风格的图片。开启草稿模式可通过点击提示栏的 ⚡ 图标或添加 `--draft` 参数。",
+        "category": "products",
+        "originalSource": "Midjourney：Updates（RSS）",
+        "originalUrl": "https://updates.midjourney.com/random-styles-in-draft-mode",
+        "recommendedReason": "Midjourney V8.1 的草稿模式（draft mode）添加了随机风格功能。用户在提示词中加入 `--sref random` 即可一键生成 24 张不同风格的图片。开启草稿模式可通过点击提示栏的 ⚡ 图标或添加 `--draft` 参数。",
+        "publishedAt": "2026-06-25T18:50:16.000Z",
+        "collectedAt": "2026-06-26T04:40:03.194Z",
+        "raw": {
+          "id": "cmqtv6jlv0766sl0eixynhk6m",
+          "titleEn": "Random styles in draft mode",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmqtun7jv06zvsl0ejc2rnrpp",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Runway发布Agent 2.0",
+        "url": "https://runwayml.com/news/introducing-agent-2",
+        "summary": "Runway发布Agent 2.0，帮助营销人员创建、测试和优化广告、视频及营销活动。品牌营销人员可在对话中开发活动概念、生成变体并自动本地化；绩效营销人员可上传创意并导入Meta、YouTube、TikTok或Google广告数据，由Agent分析后生成下一轮待测广告。社交媒体营销人员可一次性生成一周内容，自动裁切为9：16、16：9、1：1等格式；产品营销人员可借助Agent确定定位角度并构建活动资产。Agent 2.0面向所有用户开放。",
+        "description": "Runway发布Agent 2.0，帮助营销人员创建、测试和优化广告、视频及营销活动。品牌营销人员可在对话中开发活动概念、生成变体并自动本地化；绩效营销人员可上传创意并导入Meta、YouTube、TikTok或Google广告数据，由Agent分析后生成下一轮待测广告。社交媒体营销人员可一次性生成一周内容，自动裁切为9：16、16：9、1：1等格式；产品营销人员可借助Agent确定定位角度并构建活动资产。Agent 2.0面向所有用户开放。",
+        "category": "products",
+        "originalSource": "Runway：News（网页）",
+        "originalUrl": "https://runwayml.com/news/introducing-agent-2",
+        "recommendedReason": "Runway发布Agent 2.0，帮助营销人员创建、测试和优化广告、视频及营销活动。品牌营销人员可在对话中开发活动概念、生成变体并自动本地化；绩效营销人员可上传创意并导入Meta、YouTube、TikTok或Google广告数据，由Agent分析后生成下一轮待测广告。社交媒体营销人员可一次性生成一周内容，自动裁切为9：16、16：9、1：1等格式；产品营销人员可借助Agent确定定位角度并构建活动资产。Agent 2.0面向所有用户开放。",
+        "publishedAt": "2026-06-25T18:41:58.502Z",
+        "collectedAt": "2026-06-26T04:40:03.194Z",
+        "raw": {
+          "id": "cmqtun7jv06zvsl0ejc2rnrpp",
+          "titleEn": "Introducing Agent 2.0",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmqtu9a7r06x3sl0exw2blt0o",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "赫库兰尼姆古卷首次被完整虚拟解读",
+        "url": "https://scrollprize.org/firstscroll",
+        "summary": "研究人员利用高分辨率X射线显微断层扫描和机器学习，在未物理展开的情况下完整虚拟展开并读取了赫库兰尼姆古卷PHerc.1667（Scroll4）。这是首卷被从头到尾连续读取的纸莎草卷，内容为斯多葛哲学论著，提及克里西普斯的侄子Aristocreon。第二卷PHerc.Paris4通过更高分辨率成像使墨水在三维数据中直接可见，独立确认了2023年大奖赛的解读。第三卷PHerc.139确定标题和作者为菲洛德穆《论诸神》第八卷。所有数据与代码已公开。",
+        "description": "研究人员利用高分辨率X射线显微断层扫描和机器学习，在未物理展开的情况下完整虚拟展开并读取了赫库兰尼姆古卷PHerc.1667（Scroll4）。这是首卷被从头到尾连续读取的纸莎草卷，内容为斯多葛哲学论著，提及克里西普斯的侄子Aristocreon。第二卷PHerc.Paris4通过更高分辨率成像使墨水在三维数据中直接可见，独立确认了2023年大奖赛的解读。第三卷PHerc.139确定标题和作者为菲洛德穆《论诸神》第八卷。所有数据与代码已公开。",
+        "category": "papers",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://scrollprize.org/firstscroll",
+        "recommendedReason": "研究人员利用高分辨率X射线显微断层扫描和机器学习，在未物理展开的情况下完整虚拟展开并读取了赫库兰尼姆古卷PHerc.1667（Scroll4）。这是首卷被从头到尾连续读取的纸莎草卷，内容为斯多葛哲学论著，提及克里西普斯的侄子Aristocreon。第二卷PHerc.Paris4通过更高分辨率成像使墨水在三维数据中直接可见，独立确认了2023年大奖赛的解读。第三卷PHerc.139确定标题和作者为菲洛德穆《论诸神》第八卷。所有数据与代码已公开。",
+        "publishedAt": "2026-06-25T18:03:58.685Z",
+        "collectedAt": "2026-06-26T04:40:03.194Z",
+        "raw": {
+          "id": "cmqtu9a7r06x3sl0exw2blt0o",
+          "titleEn": "赫库兰尼姆的一卷古卷首次被解读",
+          "apiCategory": "paper"
+        }
+      },
+      {
+        "id": "aihot:cmqtpf8w405opsl0e2ldkd1q1",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "OLMo Hybrid vs Transformer：混合模型在实义词上优势明显，但重复短语上几无优势",
+        "url": "https://huggingface.co/blog/allenai/hybrid-token-prediction",
+        "summary": "通过对比7B参数的OLMo 3（Transformer）与OLMo Hybrid（混合架构），实验发现混合模型在大多数token上预测损失更低：对名词、动词、形容词等实义词优势明显（loss gap约0.04），功能词上gap约0.02，且在需上下文推理的代词指代上更好。但在重复出现的n-gram和闭合括号（如`}`）上，混合模型的优势几乎消失，Transformer凭借注意力机制更擅长从输入中直接检索精确信息。",
+        "description": "通过对比7B参数的OLMo 3（Transformer）与OLMo Hybrid（混合架构），实验发现混合模型在大多数token上预测损失更低：对名词、动词、形容词等实义词优势明显（loss gap约0.04），功能词上gap约0.02，且在需上下文推理的代词指代上更好。但在重复出现的n-gram和闭合括号（如`}`）上，混合模型的优势几乎消失，Transformer凭借注意力机制更擅长从输入中直接检索精确信息。",
+        "category": "tools",
+        "originalSource": "Hugging Face：Blog（RSS）",
+        "originalUrl": "https://huggingface.co/blog/allenai/hybrid-token-prediction",
+        "recommendedReason": "通过对比7B参数的OLMo 3（Transformer）与OLMo Hybrid（混合架构），实验发现混合模型在大多数token上预测损失更低：对名词、动词、形容词等实义词优势明显（loss gap约0.04），功能词上gap约0.02，且在需上下文推理的代词指代上更好。但在重复出现的n-gram和闭合括号（如`}`）上，混合模型的优势几乎消失，Transformer凭借注意力机制更擅长从输入中直接检索精确信息。",
+        "publishedAt": "2026-06-25T16:11:42.000Z",
+        "collectedAt": "2026-06-26T04:40:03.194Z",
+        "raw": {
+          "id": "cmqtpf8w405opsl0e2ldkd1q1",
+          "titleEn": "Which tokens does a hybrid model predict better？",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmqtp5syl05k5sl0ec5cvuedt",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "多数主流AI聊天机器人政治立场偏左，\"反觉醒\"模型也不例外",
+        "url": "https://the-decoder.com/most-major-ai-chatbots-still-lean-left-on-political-questions-even-anti-woke-models-are-no-exception",
+        "summary": "华盛顿邮报调查显示，多数主流AI聊天机器人在政治问题上明显偏左。OpenAI GPT-5.5在80%回答中仅呈现左派论据；DeepSeek V4 Pro为70%；Anthropic Claude Opus 4.8有43%纯左、57%给出双方观点。xAI的Grok 4.3左倾回答仍多于右倾。右翼平台Gab的Arya左倾回答是右倾的12倍。Google Gemini 3.1 Pro是例外，93%回答同时呈现双方立场。特朗普推动的\"反觉醒\"AI未能改变这一格局。",
+        "description": "华盛顿邮报调查显示，多数主流AI聊天机器人在政治问题上明显偏左。OpenAI GPT-5.5在80%回答中仅呈现左派论据；DeepSeek V4 Pro为70%；Anthropic Claude Opus 4.8有43%纯左、57%给出双方观点。xAI的Grok 4.3左倾回答仍多于右倾。右翼平台Gab的Arya左倾回答是右倾的12倍。Google Gemini 3.1 Pro是例外，93%回答同时呈现双方立场。特朗普推动的\"反觉醒\"AI未能改变这一格局。",
+        "category": "tools",
+        "originalSource": "The Decoder：AI News（RSS）",
+        "originalUrl": "https://the-decoder.com/most-major-ai-chatbots-still-lean-left-on-political-questions-even-anti-woke-models-are-no-exception",
+        "recommendedReason": "华盛顿邮报调查显示，多数主流AI聊天机器人在政治问题上明显偏左。OpenAI GPT-5.5在80%回答中仅呈现左派论据；DeepSeek V4 Pro为70%；Anthropic Claude Opus 4.8有43%纯左、57%给出双方观点。xAI的Grok 4.3左倾回答仍多于右倾。右翼平台Gab的Arya左倾回答是右倾的12倍。Google Gemini 3.1 Pro是例外，93%回答同时呈现双方立场。特朗普推动的\"反觉醒\"AI未能改变这一格局。",
+        "publishedAt": "2026-06-25T16:04:32.000Z",
+        "collectedAt": "2026-06-26T04:40:03.194Z",
+        "raw": {
+          "id": "cmqtp5syl05k5sl0ec5cvuedt",
+          "titleEn": "Most major AI chatbots still lean left on political questions， even \"anti-woke\" models are no exception",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmqtq76j105ubsl0e8j4fy8se",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "General Intuition 完成 3.2 亿美元融资，用游戏数据训练通用 AI 智能体",
+        "url": "https://techcrunch.com/2026/06/25/from-fortnite-to-robots-general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world",
+        "summary": "General Intuition 以 23 亿美元估值完成 3.2 亿美元融资，累计披露融资 4.54 亿美元。公司从旗下游戏剪辑平台 Medal 获取数亿小时含精确按键动作标签的游戏操作数据，训练单一模型同时驾驭 Fortnite 等虚拟环境和四足机器人。演示中，AI 智能体在游戏中连续运行 100 小时，机器人仅靠 8 分钟真实街道数据微调即可自主探索办公室。本轮由 Khosla Ventures 领投，General Catalyst、Jeff Bezos、Eric Schmidt 等参投。资金将用于通过 CoreWeave 扩大计算规模、预训练下一代模型，计划夏末前开放 API。",
+        "description": "General Intuition 以 23 亿美元估值完成 3.2 亿美元融资，累计披露融资 4.54 亿美元。公司从旗下游戏剪辑平台 Medal 获取数亿小时含精确按键动作标签的游戏操作数据，训练单一模型同时驾驭 Fortnite 等虚拟环境和四足机器人。演示中，AI 智能体在游戏中连续运行 100 小时，机器人仅靠 8 分钟真实街道数据微调即可自主探索办公室。本轮由 Khosla Ventures 领投，General Catalyst、Jeff Bezos、Eric Schmidt 等参投。资金将用于通过 CoreWeave 扩大计算规模、预训练下一代模型，计划夏末前开放 API。",
+        "category": "industry",
+        "originalSource": "TechCrunch：AI（RSS）",
+        "originalUrl": "https://techcrunch.com/2026/06/25/from-fortnite-to-robots-general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world",
+        "recommendedReason": "General Intuition 以 23 亿美元估值完成 3.2 亿美元融资，累计披露融资 4.54 亿美元。公司从旗下游戏剪辑平台 Medal 获取数亿小时含精确按键动作标签的游戏操作数据，训练单一模型同时驾驭 Fortnite 等虚拟环境和四足机器人。演示中，AI 智能体在游戏中连续运行 100 小时，机器人仅靠 8 分钟真实街道数据微调即可自主探索办公室。本轮由 Khosla Ventures 领投，General Catalyst、Jeff Bezos、Eric Schmidt 等参投。资金将用于通过 CoreWeave 扩大计算规模、预训练下一代模型，计划夏末前开放 API。",
+        "publishedAt": "2026-06-25T16:00:00.000Z",
+        "collectedAt": "2026-06-26T04:40:03.194Z",
+        "raw": {
+          "id": "cmqtq76j105ubsl0e8j4fy8se",
+          "titleEn": "General Intuition raises $2.3B on bet that video games can train AI agents for the real world",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmqtp7ycw05lbsl0ei7dpsv19",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Google Finance 全新 Android 应用与投资组合功能上线",
+        "url": "https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026",
+        "summary": "本周，Google Finance 推出正式版 Android 应用，同步上线全球投资组合跟踪功能。用户可通过截图、CSV/PDF 上传或文字描述创建组合，并利用 AI 研究工具提问资产配置、固定收益影响等问题。新增市场情报简报功能：用户设定任务（如每日盘前简报），后台自动生成并推送至 Google 应用（Android/iOS）及网页端。Android 应用包含 watchlist、实时数据、金融新闻 feed、AI 研究工具及 AI 驱动的\"关键时刻\"解释股价波动。未来数月将把更多 web 功能（如财报电话、投资组合与任务）迁移至移动端，今年晚些推出 iOS 应用。",
+        "description": "本周，Google Finance 推出正式版 Android 应用，同步上线全球投资组合跟踪功能。用户可通过截图、CSV/PDF 上传或文字描述创建组合，并利用 AI 研究工具提问资产配置、固定收益影响等问题。新增市场情报简报功能：用户设定任务（如每日盘前简报），后台自动生成并推送至 Google 应用（Android/iOS）及网页端。Android 应用包含 watchlist、实时数据、金融新闻 feed、AI 研究工具及 AI 驱动的\"关键时刻\"解释股价波动。未来数月将把更多 web 功能（如财报电话、投资组合与任务）迁移至移动端，今年晚些推出 iOS 应用。",
+        "category": "products",
+        "originalSource": "Google Blog：AI（RSS）",
+        "originalUrl": "https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026",
+        "recommendedReason": "本周，Google Finance 推出正式版 Android 应用，同步上线全球投资组合跟踪功能。用户可通过截图、CSV/PDF 上传或文字描述创建组合，并利用 AI 研究工具提问资产配置、固定收益影响等问题。新增市场情报简报功能：用户设定任务（如每日盘前简报），后台自动生成并推送至 Google 应用（Android/iOS）及网页端。Android 应用包含 watchlist、实时数据、金融新闻 feed、AI 研究工具及 AI 驱动的\"关键时刻\"解释股价波动。未来数月将把更多 web 功能（如财报电话、投资组合与任务）迁移至移动端，今年晚些推出 iOS 应用。",
+        "publishedAt": "2026-06-25T16:00:00.000Z",
+        "collectedAt": "2026-06-26T04:40:03.194Z",
+        "raw": {
+          "id": "cmqtp7ycw05lbsl0ei7dpsv19",
+          "titleEn": "Our latest Google Finance upgrades， including a new app",
+          "apiCategory": "ai-products"
+        }
+      }
+    ],
+    "crossSourceHighlights": [
+      {
+        "id": "url:https://reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+        "canonicalId": "url:https://reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+        "title": "Anthropic称阿里巴巴非法获取了Claude AI模型的功能",
+        "canonicalUrl": "https://reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+          "title:anthropic称阿里巴巴非法获取了claude ai模型的功能",
+          "title:anthropic says alibaba illicitly extracted claude ai model capabilities"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmqsy1vs107c5slfu4fmksjzd",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Anthropic称阿里巴巴非法获取了Claude AI模型的功能",
+            "url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+            "summary": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+            "description": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+            "category": "industry",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+            "recommendedReason": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+            "publishedAt": "2026-06-25T03:07:48.942Z",
+            "collectedAt": "2026-06-26T04:40:03.194Z",
+            "raw": {
+              "id": "cmqsy1vs107c5slfu4fmksjzd",
+              "titleEn": null,
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48664814",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
+            "url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/",
+            "author": "htrp",
+            "tags": [
+              "ai",
+              "anthropic",
+              "claude"
+            ],
+            "metrics": {
+              "upvotes": 753,
+              "commentsCount": 1222
+            },
+            "publishedAt": "2026-06-24T19:48:01.000Z",
+            "collectedAt": "2026-06-26T04:40:02.377Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48664814",
+              "matchedKeywords": [
+                "ai",
+                "anthropic",
+                "claude"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmqsy1vs107c5slfu4fmksjzd",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Anthropic称阿里巴巴非法获取了Claude AI模型的功能",
+            "url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+            "summary": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+            "description": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+            "category": "industry",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+            "recommendedReason": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+            "publishedAt": "2026-06-25T03:07:48.942Z",
+            "collectedAt": "2026-06-26T04:40:03.194Z",
+            "raw": {
+              "id": "cmqsy1vs107c5slfu4fmksjzd",
+              "titleEn": null,
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48664814",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
+            "url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/",
+            "author": "htrp",
+            "tags": [
+              "ai",
+              "anthropic",
+              "claude"
+            ],
+            "metrics": {
+              "upvotes": 753,
+              "commentsCount": 1222
+            },
+            "publishedAt": "2026-06-24T19:48:01.000Z",
+            "collectedAt": "2026-06-26T04:40:02.377Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48664814",
+              "matchedKeywords": [
+                "ai",
+                "anthropic",
+                "claude"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 753,
+          "commentsCount": 1222,
+          "hnScore": 753,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "industry",
+        "summary": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-06-24T19:48:01.000Z",
+        "lastSeenAt": "2026-06-26T04:40:03.194Z"
+      },
+      {
+        "id": "url:https://nytimes.com/2026/06/23/us/politics/nsa-lost-access-anthropic-tool.html",
+        "canonicalId": "url:https://nytimes.com/2026/06/23/us/politics/nsa-lost-access-anthropic-tool.html",
+        "title": "在与Anthropic的纠纷中，NSA失去了对Mythos的访问权限",
+        "canonicalUrl": "https://nytimes.com/2026/06/23/us/politics/nsa-lost-access-anthropic-tool.html",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://nytimes.com/2026/06/23/us/politics/nsa-lost-access-anthropic-tool.html",
+          "title:在与anthropic的纠纷中 nsa失去了对mythos的访问权限",
+          "title:nsa lost access to mythos amid anthropic dispute"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmqsgw1tf0304slfurlccxlvs",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "在与Anthropic的纠纷中，NSA失去了对Mythos的访问权限",
+            "url": "https://www.nytimes.com/2026/06/23/us/politics/nsa-lost-access-anthropic-tool.html",
+            "summary": "美国国家安全局（NSA）因与人工智能公司Anthropic的纠纷，失去了对Mythos系统的访问权限。",
+            "description": "美国国家安全局（NSA）因与人工智能公司Anthropic的纠纷，失去了对Mythos系统的访问权限。",
+            "category": "industry",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://www.nytimes.com/2026/06/23/us/politics/nsa-lost-access-anthropic-tool.html",
+            "recommendedReason": "美国国家安全局（NSA）因与人工智能公司Anthropic的纠纷，失去了对Mythos系统的访问权限。",
+            "publishedAt": "2026-06-24T19:08:32.032Z",
+            "collectedAt": "2026-06-26T04:40:03.194Z",
+            "raw": {
+              "id": "cmqsgw1tf0304slfurlccxlvs",
+              "titleEn": null,
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48658300",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "NSA lost access to Mythos amid Anthropic dispute",
+            "url": "https://www.nytimes.com/2026/06/23/us/politics/nsa-lost-access-anthropic-tool.html",
+            "author": "thm",
+            "tags": [
+              "anthropic"
+            ],
+            "metrics": {
+              "upvotes": 262,
+              "commentsCount": 283
+            },
+            "publishedAt": "2026-06-24T11:45:47.000Z",
+            "collectedAt": "2026-06-26T04:40:02.377Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48658300",
+              "matchedKeywords": [
+                "anthropic"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmqsgw1tf0304slfurlccxlvs",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "在与Anthropic的纠纷中，NSA失去了对Mythos的访问权限",
+            "url": "https://www.nytimes.com/2026/06/23/us/politics/nsa-lost-access-anthropic-tool.html",
+            "summary": "美国国家安全局（NSA）因与人工智能公司Anthropic的纠纷，失去了对Mythos系统的访问权限。",
+            "description": "美国国家安全局（NSA）因与人工智能公司Anthropic的纠纷，失去了对Mythos系统的访问权限。",
+            "category": "industry",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://www.nytimes.com/2026/06/23/us/politics/nsa-lost-access-anthropic-tool.html",
+            "recommendedReason": "美国国家安全局（NSA）因与人工智能公司Anthropic的纠纷，失去了对Mythos系统的访问权限。",
+            "publishedAt": "2026-06-24T19:08:32.032Z",
+            "collectedAt": "2026-06-26T04:40:03.194Z",
+            "raw": {
+              "id": "cmqsgw1tf0304slfurlccxlvs",
+              "titleEn": null,
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48658300",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "NSA lost access to Mythos amid Anthropic dispute",
+            "url": "https://www.nytimes.com/2026/06/23/us/politics/nsa-lost-access-anthropic-tool.html",
+            "author": "thm",
+            "tags": [
+              "anthropic"
+            ],
+            "metrics": {
+              "upvotes": 262,
+              "commentsCount": 283
+            },
+            "publishedAt": "2026-06-24T11:45:47.000Z",
+            "collectedAt": "2026-06-26T04:40:02.377Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48658300",
+              "matchedKeywords": [
+                "anthropic"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 262,
+          "commentsCount": 283,
+          "hnScore": 262,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "industry",
+        "summary": "美国国家安全局（NSA）因与人工智能公司Anthropic的纠纷，失去了对Mythos系统的访问权限。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-06-24T11:45:47.000Z",
+        "lastSeenAt": "2026-06-26T04:40:03.194Z"
       }
     ]
   }
