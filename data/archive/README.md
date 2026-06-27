@@ -1,13 +1,13 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-27T01:26:46.981Z
+Updated: 2026-06-27T04:17:05.732Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-27 | daily | [AI Developer Radar｜Daily｜2026-06-27](2026/06/2026-06-27-daily.md) | siyuan-note/siyuan, hpcaitech/ColossalAI, PatrickJS/awesome-cursorrules, Tencent/ncnn, automazeio/ccpm |
+| 2026-06-27 | daily | [AI Developer Radar｜Daily｜2026-06-27](2026/06/2026-06-27-daily.md) | siyuan-note/siyuan, calesthio/OpenMontage, Panniantong/Agent-Reach, xbtlin/ai-berkshire, aws/agent-toolkit-for-aws |
 | 2026-06-26 | daily | [AI Developer Radar｜Daily｜2026-06-26](2026/06/2026-06-26-daily.md) | xbtlin/ai-berkshire, aws/agent-toolkit-for-aws, mauriceboe/TREK, opendatalab/MinerU, IceWhaleTech/CasaOS |
 | 2026-06-25 | daily | [AI Developer Radar｜Daily｜2026-06-25](2026/06/2026-06-25-daily.md) | shanraisshan/claude-code-best-practice, google-labs-code/design.md, hpcaitech/ColossalAI, stas00/ml-engineering, calesthio/OpenMontage |
 | 2026-06-24 | daily | [AI Developer Radar｜Daily｜2026-06-24](2026/06/2026-06-24-daily.md) | hpcaitech/ColossalAI, ChatGPTNextWeb/NextChat, stas00/ml-engineering, google-ai-edge/mediapipe, Tencent/ncnn |
