@@ -6,13 +6,13 @@
     <description>Daily AI open-source trend intelligence</description>
     <language>en</language>
     <ttl>360</ttl>
-    <lastBuildDate>Mon, 29 Jun 2026 17:56:36 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 20:19:15 GMT</lastBuildDate>
     <item>
       <title>AI Developer Radar｜Daily｜2026-06-30 - Today&apos;s Summary</title>
       <link>https://github.com/Tsin418/ai-trend-radar</link>
       <guid isPermaLink="false">daily-2026-06-30-summary</guid>
-      <description><![CDATA[扫描到 100 个候选项目，AI 相关候选 98 个。 今日新增 stars >= 50 的 AI 项目不足 12 个，已补充 Early Signals。 发现 4 个突然加速项目。 当前最强信号集中在 RAG / Knowledge Base。
-Top projects: stas00/ml-engineering, ChatGPTNextWeb/NextChat, deepspeedai/DeepSpeed, thedaviddias/Front-End-Checklist, xbtlin/ai-berkshire, calesthio/OpenMontage, HKUDS/Vibe-Trading, Panniantong/Agent-Reach, headroomlabs-ai/headroom, safishamsi/graphify, nexu-io/open-design, ZhuLinsen/daily_stock_analysis
+      <description><![CDATA[扫描到 100 个候选项目，AI 相关候选 98 个。 今日新增 stars >= 50 的 AI 项目不足 12 个，已补充 Early Signals。 发现 6 个突然加速项目。 当前最强信号集中在 RAG / Knowledge Base。
+Top projects: stas00/ml-engineering, deepspeedai/DeepSpeed, ChatGPTNextWeb/NextChat, thedaviddias/Front-End-Checklist, google-ai-edge/mediapipe, PatrickJS/awesome-cursorrules, xbtlin/ai-berkshire, calesthio/OpenMontage, HKUDS/Vibe-Trading, Panniantong/Agent-Reach, headroomlabs-ai/headroom, safishamsi/graphify
 Note: GitHub API 只提供当前 stars，总量变化来自本项目保存的历史 snapshot。
 Note: daily delta 使用约 24h 前 snapshot，weekly delta 使用约 7 天前 snapshot。
 Note: Accelerating 只展示至少 3 天历史基线且今日 delta 超过前 3 日均值 2 倍的项目。
@@ -25,11 +25,11 @@ Note: Trend enrichment warning: Trend LLM enrichment failed for safishamsi/graph
 Note: Trend enrichment warning: Trend LLM enrichment failed for nexu-io/open-design: DeepSeek API request failed: HTTP 401. {"error":{"message":"Authentication Fails, Your api key: ****c776 is invalid","type":"authentication_error","param":null,"code":"invalid_request_error"}}
 Note: Trend enrichment warning: Trend LLM enrichment failed for ZhuLinsen/daily_stock_analysis: DeepSeek API request failed: HTTP 401. {"error":{"message":"Authentication Fails, Your api key: ****c776 is invalid","type":"authentication_error","param":null,"code":"invalid_request_error"}}
 Note: Trend enrichment warning: Trend LLM enrichment failed for addyosmani/agent-skills: DeepSeek API request failed: HTTP 401. {"error":{"message":"Authentication Fails, Your api key: ****c776 is invalid","type":"authentication_error","param":null,"code":"invalid_request_error"}}
+Note: Trend enrichment warning: Trend LLM enrichment failed for affaan-m/ECC: DeepSeek API request failed: HTTP 401. {"error":{"message":"Authentication Fails, Your api key: ****c776 is invalid","type":"authentication_error","param":null,"code":"invalid_request_error"}}
 Note: Trend enrichment warning: Trend LLM enrichment failed for rohitg00/ai-engineering-from-scratch: DeepSeek API request failed: HTTP 401. {"error":{"message":"Authentication Fails, Your api key: ****c776 is invalid","type":"authentication_error","param":null,"code":"invalid_request_error"}}
-Note: Trend enrichment warning: Trend LLM enrichment failed for sickn33/antigravity-awesome-skills: DeepSeek API request failed: HTTP 401. {"error":{"message":"Authentication Fails, Your api key: ****c776 is invalid","type":"authentication_error","param":null,"code":"invalid_request_error"}}
 Note: LLM enrichment partially unavailable for 7 project(s); fallback descriptions were used.
 Note: Digest narrative LLM failed, using template fallback: DeepSeek API request failed: HTTP 401. {"error":{"message":"Authentication Fails, Your api key: ****c776 is invalid","type":"authentication_error","param":null,"code":"invalid_request_error"}}]]></description>
-      <pubDate>Mon, 29 Jun 2026 17:56:36 GMT</pubDate>
+      <pubDate>Mon, 29 Jun 2026 20:19:15 GMT</pubDate>
       <category>Summary</category>
     </item>
     <item>
@@ -37,15 +37,27 @@ Note: Digest narrative LLM failed, using template fallback: DeepSeek API request
       <link>https://github.com/stas00/ml-engineering</link>
       <guid isPermaLink="true">https://github.com/stas00/ml-engineering</guid>
       <description><![CDATA[Category: RAG / Knowledge Base
-Description: A comprehensive open book of methodologies, tools, and commands for training and fine-tuning large language and multi-modal models.
-Why it matters: With 18,015 stars and a sudden acceleration ratio of 2.9 (high), the repo is experiencing a breakout. The 24-hour star delta of 20 and 7-day average of 6 indicate a sharp increase in attention, likely driven by the growing need for hands-on ML engineering guidance as LLM training becomes more accessible.
-Developer insight: Signals a shift toward open, community-driven knowledge sharing in ML engineering, reducing the barrier for smaller teams to adopt large-scale training practices.
-Risk: Medium]]></description>
+Description: Machine Learning Engineering Open Book
+Why it matters: RAG / Knowledge Base 方向出现突然加速：24h stars +12，前 3 日均值 3，加速度 4x，今天值得优先排查触发原因。
+Developer insight: 重点看数据接入、检索质量和 production workflow，而不是只看 demo 效果。
+Risk: Low]]></description>
       <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
       <category>RAG / Knowledge Base</category>
     </item>
     <item>
-      <title>[sudden_breakout] ChatGPTNextWeb/NextChat (+22 stars/24h)</title>
+      <title>[sudden_breakout] deepspeedai/DeepSpeed (+19 stars/24h)</title>
+      <link>https://github.com/deepspeedai/DeepSpeed</link>
+      <guid isPermaLink="true">https://github.com/deepspeedai/DeepSpeed</guid>
+      <description><![CDATA[Category: Local LLM / Inference
+Description: DeepSpeed is a deep learning optimization library that makes distributed training and inference easy, efficient, and effective.
+Why it matters: Local LLM / Inference 方向出现突然加速：24h stars +19，前 3 日均值 5，加速度 3.8x，今天值得优先排查触发原因。
+Developer insight: 重点看部署复杂度、性能边界和模型兼容性，判断是否能进入本地 AI 应用栈。
+Risk: Low]]></description>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Local LLM / Inference</category>
+    </item>
+    <item>
+      <title>[sudden_breakout] ChatGPTNextWeb/NextChat (+23 stars/24h)</title>
       <link>https://github.com/ChatGPTNextWeb/NextChat</link>
       <guid isPermaLink="true">https://github.com/ChatGPTNextWeb/NextChat</guid>
       <description><![CDATA[Category: Local LLM / Inference
@@ -57,19 +69,7 @@ Risk: Medium]]></description>
       <category>Local LLM / Inference</category>
     </item>
     <item>
-      <title>[sudden_breakout] deepspeedai/DeepSpeed (+18 stars/24h)</title>
-      <link>https://github.com/deepspeedai/DeepSpeed</link>
-      <guid isPermaLink="true">https://github.com/deepspeedai/DeepSpeed</guid>
-      <description><![CDATA[Category: Local LLM / Inference
-Description: DeepSpeed is a deep learning optimization library that makes distributed training and inference easy, efficient, and effective.
-Why it matters: Local LLM / Inference 方向出现突然加速：24h stars +18，前 3 日均值 5，加速度 3.6x，今天值得优先排查触发原因。
-Developer insight: 重点看部署复杂度、性能边界和模型兼容性，判断是否能进入本地 AI 应用栈。
-Risk: Low]]></description>
-      <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
-      <category>Local LLM / Inference</category>
-    </item>
-    <item>
-      <title>[sudden_breakout] thedaviddias/Front-End-Checklist (+18 stars/24h)</title>
+      <title>[sudden_breakout] thedaviddias/Front-End-Checklist (+17 stars/24h)</title>
       <link>https://github.com/thedaviddias/Front-End-Checklist</link>
       <guid isPermaLink="true">https://github.com/thedaviddias/Front-End-Checklist</guid>
       <description><![CDATA[Category: AI Agent Framework
@@ -81,100 +81,100 @@ Risk: Low]]></description>
       <category>AI Agent Framework</category>
     </item>
     <item>
-      <title>[sudden_breakout] xbtlin/ai-berkshire (+2355 stars/24h)</title>
+      <title>[sudden_breakout] google-ai-edge/mediapipe (+27 stars/24h)</title>
+      <link>https://github.com/google-ai-edge/mediapipe</link>
+      <guid isPermaLink="true">https://github.com/google-ai-edge/mediapipe</guid>
+      <description><![CDATA[Category: Local LLM / Inference
+Description: Cross-platform, customizable ML solutions for live and streaming media.
+Why it matters: Local LLM / Inference 方向出现突然加速：24h stars +27，前 3 日均值 13，加速度 2.1x，今天值得优先排查触发原因。
+Developer insight: 重点看部署复杂度、性能边界和模型兼容性，判断是否能进入本地 AI 应用栈。
+Risk: Low]]></description>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Local LLM / Inference</category>
+    </item>
+    <item>
+      <title>[sudden_breakout] PatrickJS/awesome-cursorrules (+24 stars/24h)</title>
+      <link>https://github.com/PatrickJS/awesome-cursorrules</link>
+      <guid isPermaLink="true">https://github.com/PatrickJS/awesome-cursorrules</guid>
+      <description><![CDATA[Category: Coding Agent / SWE Agent
+Description: A curated collection of .mdc configuration files that customize Cursor AI editor behavior for specific frameworks, libraries, and workflows.
+Why it matters: The repo has 39,842 stars and is accelerating sharply: 30 stars in the last 24 hours, 125 in the last 7 days, with a 7-day average of 16 stars/day and a 3-day average of 10.7 stars/day. The acceleration ratio of 2.8 (high) and the 'sudden_breakout' trend type indicate a recent spike in attention, likely driven by the growing adoption of Cursor AI and the need for project-specific rules.
+Developer insight: This signals a shift toward 'AI configuration as a shared asset' — teams are treating AI behavior as something that can be version-controlled, reviewed, and optimized just like code. Expect more curated rule collections and possibly a marketplace for AI editor rules.
+Risk: Low]]></description>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Coding Agent / SWE Agent</category>
+    </item>
+    <item>
+      <title>[sudden_breakout] xbtlin/ai-berkshire (+2391 stars/24h)</title>
       <link>https://github.com/xbtlin/ai-berkshire</link>
       <guid isPermaLink="true">https://github.com/xbtlin/ai-berkshire</guid>
       <description><![CDATA[Category: AI Agent Framework
 Description: AI 时代的伯克希尔：基于 Claude Code / Codex 的价值投资研究框架。巴菲特·芒格·段永平·李录四大师方法论 + 多Agent并行研究。| AI-era Berkshire: a value investing research framework built for Claude Code / Codex. 4 masters' methodologies + multi-agent adversarial analysis.
-Why it matters: AI Agent Framework 方向出现突然加速：24h stars +2355，前 3 日均值 877，加速度 2.7x，今天值得优先排查触发原因。
+Why it matters: AI Agent Framework 方向出现突然加速：24h stars +2391，前 3 日均值 877，加速度 2.7x，今天值得优先排查触发原因。
 Developer insight: 可以用一个最小样例验证 API、文档和集成成本，再决定是否纳入长期技术观察。
 Risk: Low]]></description>
       <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
       <category>AI Agent Framework</category>
     </item>
     <item>
-      <title>[sustained_hot] calesthio/OpenMontage (+4678 stars/24h)</title>
+      <title>[sustained_hot] calesthio/OpenMontage (+4748 stars/24h)</title>
       <link>https://github.com/calesthio/OpenMontage</link>
       <guid isPermaLink="true">https://github.com/calesthio/OpenMontage</guid>
       <description><![CDATA[Category: Coding Agent / SWE Agent
 Description: World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.
-Why it matters: Coding Agent / SWE Agent 方向保持持续热门，24h stars +4678，总 stars 28,322，适合看近期 release、commit 或社区讨论是否解释了增长。
+Why it matters: Coding Agent / SWE Agent 方向保持持续热门，24h stars +4748，总 stars 28,392，适合看近期 release、commit 或社区讨论是否解释了增长。
 Developer insight: 关注它如何拆解代码任务、接入工具和处理仓库上下文，可作为 coding agent 产品能力参考。
 Risk: Low]]></description>
       <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
       <category>Coding Agent / SWE Agent</category>
     </item>
     <item>
-      <title>[sustained_hot] HKUDS/Vibe-Trading (+1238 stars/24h)</title>
+      <title>[sustained_hot] HKUDS/Vibe-Trading (+1294 stars/24h)</title>
       <link>https://github.com/HKUDS/Vibe-Trading</link>
       <guid isPermaLink="true">https://github.com/HKUDS/Vibe-Trading</guid>
       <description><![CDATA[Category: AI Agent Framework
 Description: "Vibe-Trading: Your Personal Trading Agent"
-Why it matters: AI Agent Framework 方向保持持续热门，24h stars +1238，总 stars 14,956，适合看近期 release、commit 或社区讨论是否解释了增长。
+Why it matters: AI Agent Framework 方向保持持续热门，24h stars +1294，总 stars 15,012，适合看近期 release、commit 或社区讨论是否解释了增长。
 Developer insight: 可以用一个最小样例验证 API、文档和集成成本，再决定是否纳入长期技术观察。
 Risk: Low]]></description>
       <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
       <category>AI Agent Framework</category>
     </item>
     <item>
-      <title>[sustained_hot] Panniantong/Agent-Reach (+2051 stars/24h)</title>
+      <title>[sustained_hot] Panniantong/Agent-Reach (+2122 stars/24h)</title>
       <link>https://github.com/Panniantong/Agent-Reach</link>
       <guid isPermaLink="true">https://github.com/Panniantong/Agent-Reach</guid>
       <description><![CDATA[Category: MCP / Tool Calling
 Description: Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.
-Why it matters: MCP / Tool Calling 方向保持持续热门，24h stars +2051，总 stars 45,550，适合看近期 release、commit 或社区讨论是否解释了增长。
+Why it matters: MCP / Tool Calling 方向保持持续热门，24h stars +2122，总 stars 45,621，适合看近期 release、commit 或社区讨论是否解释了增长。
 Developer insight: 重点看协议适配、工具注册和真实示例，判断它是否能降低 agent 接工具的成本。
 Risk: Low]]></description>
       <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
       <category>MCP / Tool Calling</category>
     </item>
     <item>
-      <title>[sustained_hot] headroomlabs-ai/headroom (+1107 stars/24h)</title>
+      <title>[sustained_hot] headroomlabs-ai/headroom (+1185 stars/24h)</title>
       <link>https://github.com/headroomlabs-ai/headroom</link>
       <guid isPermaLink="true">https://github.com/headroomlabs-ai/headroom</guid>
       <description><![CDATA[Category: Coding Agent / SWE Agent
 Description: Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.
-Why it matters: Coding Agent / SWE Agent 方向保持持续热门，24h stars +1107，总 stars 53,715，适合看近期 release、commit 或社区讨论是否解释了增长。
+Why it matters: Coding Agent / SWE Agent 方向保持持续热门，24h stars +1185，总 stars 53,793，适合看近期 release、commit 或社区讨论是否解释了增长。
 Developer insight: 关注它如何拆解代码任务、接入工具和处理仓库上下文，可作为 coding agent 产品能力参考。
 Risk: Low]]></description>
       <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
       <category>Coding Agent / SWE Agent</category>
     </item>
     <item>
-      <title>[sudden_breakout] safishamsi/graphify (+1245 stars/24h)</title>
+      <title>[sudden_breakout] safishamsi/graphify (+1315 stars/24h)</title>
       <link>https://github.com/safishamsi/graphify</link>
       <guid isPermaLink="true">https://github.com/safishamsi/graphify</guid>
       <description><![CDATA[Category: Coding Agent / SWE Agent
 Description: AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.
-Why it matters: Coding Agent / SWE Agent 方向出现突然加速：24h stars +1245，前 3 日均值 428，加速度 2.9x，今天值得优先排查触发原因。
+Why it matters: Coding Agent / SWE Agent 方向出现突然加速：24h stars +1315，前 3 日均值 428，加速度 3.1x，今天值得优先排查触发原因。
 Developer insight: 关注它如何拆解代码任务、接入工具和处理仓库上下文，可作为 coding agent 产品能力参考。
 Risk: Low]]></description>
       <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
       <category>Coding Agent / SWE Agent</category>
-    </item>
-    <item>
-      <title>[sustained_hot] nexu-io/open-design (+808 stars/24h)</title>
-      <link>https://github.com/nexu-io/open-design</link>
-      <guid isPermaLink="true">https://github.com/nexu-io/open-design</guid>
-      <description><![CDATA[Category: Coding Agent / SWE Agent
-Description: 🎨 Local-first, open-source Claude Design alternative. 🖥️ Native desktop app. ⚡ 259+ Skills · ✨ 142+ Design Systems 🖼️ Web · desktop · mobile prototypes · slides · images · videos · HyperFrames 📦 Sandboxed preview · HTML/PDF/PPTX/MP4 export 🤖 Claude Code / OpenClaw / Codex / Cursor / OpenCode / Qwen / Copilot / Hermes / Kimi & 17+ CLIs.
-Why it matters: Coding Agent / SWE Agent 方向保持持续热门，24h stars +808，总 stars 72,836，适合看近期 release、commit 或社区讨论是否解释了增长。
-Developer insight: 关注它如何拆解代码任务、接入工具和处理仓库上下文，可作为 coding agent 产品能力参考。
-Risk: Low]]></description>
-      <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
-      <category>Coding Agent / SWE Agent</category>
-    </item>
-    <item>
-      <title>[sudden_breakout] ZhuLinsen/daily_stock_analysis (+1215 stars/24h)</title>
-      <link>https://github.com/ZhuLinsen/daily_stock_analysis</link>
-      <guid isPermaLink="true">https://github.com/ZhuLinsen/daily_stock_analysis</guid>
-      <description><![CDATA[Category: AI Agent Framework
-Description: LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.
-Why it matters: AI Agent Framework 方向出现突然加速：24h stars +1215，前 3 日均值 579.7，加速度 2.1x，今天值得优先排查触发原因。
-Developer insight: 可以用一个最小样例验证 API、文档和集成成本，再决定是否纳入长期技术观察。
-Risk: Low]]></description>
-      <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
-      <category>AI Agent Framework</category>
     </item>
   </channel>
 </rss>
