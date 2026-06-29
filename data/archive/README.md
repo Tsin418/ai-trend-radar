@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-29T20:19:22.604Z
+Updated: 2026-06-29T21:49:36.905Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -8,7 +8,7 @@ Updated: 2026-06-29T20:19:22.604Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-30 | daily | [AI Developer Radar｜Daily｜2026-06-30](2026/06/2026-06-30-daily.md) | stas00/ml-engineering, deepspeedai/DeepSpeed, ChatGPTNextWeb/NextChat, thedaviddias/Front-End-Checklist, google-ai-edge/mediapipe |
+| 2026-06-30 | daily | [AI Developer Radar｜Daily｜2026-06-30](2026/06/2026-06-30-daily.md) | stas00/ml-engineering, deepspeedai/DeepSpeed, ChatGPTNextWeb/NextChat, PatrickJS/awesome-cursorrules, thedaviddias/Front-End-Checklist |
 | 2026-06-29 | daily | [AI Developer Radar｜Daily｜2026-06-29](2026/06/2026-06-29-daily.md) | cupy/cupy, browser-use/video-use, stas00/ml-engineering, ChatGPTNextWeb/NextChat, deepspeedai/DeepSpeed |
 | 2026-06-28 | daily | [AI Developer Radar｜Daily｜2026-06-28](2026/06/2026-06-28-daily.md) | datawhalechina/hello-agents, gvergnaud/ts-pattern, Tencent/ncnn, ChatGPTNextWeb/NextChat, thedaviddias/Front-End-Checklist |
 | 2026-06-27 | daily | [AI Developer Radar｜Daily｜2026-06-27](2026/06/2026-06-27-daily.md) | HKUDS/Vibe-Trading, every-app/open-seo, siyuan-note/siyuan, simplex-chat/simplex-chat, commaai/openpilot |
