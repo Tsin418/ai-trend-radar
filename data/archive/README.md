@@ -1,13 +1,13 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-28T23:35:10.125Z
+Updated: 2026-06-29T05:00:12.236Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-06-29 | daily | [AI Developer Radar｜Daily｜2026-06-29](2026/06/2026-06-29-daily.md) | gvergnaud/ts-pattern, ChatGPTNextWeb/NextChat, thedaviddias/Front-End-Checklist, Tencent/ncnn, deepspeedai/DeepSpeed |
+| 2026-06-29 | daily | [AI Developer Radar｜Daily｜2026-06-29](2026/06/2026-06-29-daily.md) | deepspeedai/DeepSpeed, milvus-io/milvus, DeusData/codebase-memory-mcp, Panniantong/Agent-Reach, xbtlin/ai-berkshire |
 | 2026-06-28 | daily | [AI Developer Radar｜Daily｜2026-06-28](2026/06/2026-06-28-daily.md) | datawhalechina/hello-agents, gvergnaud/ts-pattern, Tencent/ncnn, ChatGPTNextWeb/NextChat, thedaviddias/Front-End-Checklist |
 | 2026-06-27 | daily | [AI Developer Radar｜Daily｜2026-06-27](2026/06/2026-06-27-daily.md) | HKUDS/Vibe-Trading, every-app/open-seo, siyuan-note/siyuan, simplex-chat/simplex-chat, commaai/openpilot |
 | 2026-06-26 | daily | [AI Developer Radar｜Daily｜2026-06-26](2026/06/2026-06-26-daily.md) | xbtlin/ai-berkshire, aws/agent-toolkit-for-aws, mauriceboe/TREK, opendatalab/MinerU, IceWhaleTech/CasaOS |
