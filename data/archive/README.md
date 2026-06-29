@@ -1,9 +1,10 @@
 # AI Trend Radar Archive
 
-Updated: 2026-06-29T05:05:00.001Z
+Updated: 2026-06-29T05:24:03.913Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
+| 2026-W27 | weekly | [AI Developer Radar｜Weekly｜2026-W27](2026/06/2026-W27-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, deepspeedai/DeepSpeed, usestrix/strix |
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
