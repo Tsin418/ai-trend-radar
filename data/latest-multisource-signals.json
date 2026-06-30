@@ -1,211 +1,187 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-06-30T13:04:58.333Z",
+  "generatedAt": "2026-06-30T14:47:50.235Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
+        "id": "http://arxiv.org/abs/2606.30645v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "VLK: Learning Humanoid Loco-Manipulation from Synthetic Interactions in Reconstructed Scenes",
+        "url": "https://arxiv.org/pdf/2606.30645v1",
+        "description": "Perception-based humanoid loco-manipulation requires connecting egocentric observations and task instructions to whole-body motion. Learning this mapping requires synchronized egocentric images, language commands, and robot-compatible kinematic trajectories, yet no existing data source provides this complete tuple at scale. We address this bottleneck by generating vision-language-kinematics (VLK) supervision synthetically in reconstructed scenes. Our pipeline leverages 3D Gaussian Splatting to r",
+        "summary": "Perception-based humanoid loco-manipulation requires connecting egocentric observations and task instructions to whole-body motion. Learning this mapping requires synchronized egocentric images, language commands, and robot-compatible kinematic trajectories, yet no existing data source provides this complete tuple at scale. We address this bottleneck by generating vision-language-kinematics (VLK) supervision synthetically in reconstructed scenes. Our pipeline leverages 3D Gaussian Splatting to reconstruct metric-scale indoor environments, synthesizes navigation and object-interaction trajectories using privileged scene information, and renders paired egocentric observations after the fact. We produce 48,000 paired trajectories with no human intervention and train a VLK policy that predicts short-horizon whole-body kinematic trajectories. A whole-body tracker converts these predictions into actions on the physical humanoid. We evaluate on the physical Unitree G1 performing navigation and single-object transport, demonstrating that synthesized interactions in reconstructed scenes provide effective supervision for sim-to-real perception-based humanoid loco-manipulation. Project Website: https://vision-language-kinematics.github.io/",
+        "author": "Yen-Jen Wang, Jiaman Li, Sirui Chen, Takara E. Truong, Pei Xu, Pieter Abbeel, Rocky Duan, Koushil Sreenath, Angjoo Kanazawa, Carmelo Sferrazza, Guanya Shi, Karen Liu",
         "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
+          "cs.RO",
+          "cs.AI",
+          "cs.GR",
+          "eess.SY",
+          "rag"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 14036
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-06-30T13:04:58.998Z",
+        "category": "cs.RO",
+        "language": "en",
+        "publishedAt": "2026-06-29T17:59:55Z",
+        "updatedAt": "2026-06-29T17:59:55Z",
+        "collectedAt": "2026-06-30T14:47:42.520Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.30645v1",
+          "authors": [
+            "Yen-Jen Wang",
+            "Jiaman Li",
+            "Sirui Chen",
+            "Takara E. Truong",
+            "Pei Xu",
+            "Pieter Abbeel",
+            "Rocky Duan",
+            "Koushil Sreenath",
+            "Angjoo Kanazawa",
+            "Carmelo Sferrazza",
+            "Guanya Shi",
+            "Karen Liu"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: rag"
       },
       {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
+        "id": "http://arxiv.org/abs/2606.30642v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "LeVo 2: Stable and Melodious Song Generation via Hierarchical Representation Modeling and Progressive Post-Training",
+        "url": "https://arxiv.org/pdf/2606.30642v1",
+        "description": "Full-length song generation must preserve coherence and musicality, render detailed vocal and accompaniment acoustics, and follow lyrics and prompts. Existing language model-based systems face a structural trade-off: mixed-token modeling preserves vocal-instrument coordination but obscures track-specific details, whereas dual-track prediction improves acoustics but requires longer sequences and weakens global planning. We present LeVo 2, a hybrid LLM-Diffusion framework for controllable full-len",
+        "summary": "Full-length song generation must preserve coherence and musicality, render detailed vocal and accompaniment acoustics, and follow lyrics and prompts. Existing language model-based systems face a structural trade-off: mixed-token modeling preserves vocal-instrument coordination but obscures track-specific details, whereas dual-track prediction improves acoustics but requires longer sequences and weakens global planning. We present LeVo 2, a hybrid LLM-Diffusion framework for controllable full-length song generation. LeVo 2 formulates this trade-off as hierarchical modeling: LeLM first predicts mixed tokens for semantic planning, then predicts vocal and accompaniment tokens in parallel for track-specific refinement, while a diffusion-based Music Codec reconstructs full-length waveforms. A central contribution of this extended version is an aesthetics-guided training schedule for alignment. During pre-training, an automated music aesthetic evaluation framework assigns musicality-tier conditions to large-scale data, providing musicality priors before preference alignment. Progressive post-training applies SFT, large-scale offline DPO, and closed-loop semi-online DPO to separately improve generation quality, controllability, and musicality. Modular extension then trains the Track-Specific LM for acoustic refinement while preserving the aligned semantic planner. This schedule separates musicality learning, controllability alignment, and acoustic refinement, mitigating optimization conflict and the limitations of static offline preference pairs. Expert listening tests and objective evaluations show that LeVo 2 outperforms open-source baselines across six subjective dimensions, and approaches leading commercial systems on several listening metrics. Ablations validate the effects of the training strategy, aesthetics guidance, scaling, and hierarchical architecture.",
+        "author": "Shun Lei, Huaicheng Zhang, Dapeng Wu, Yaoxun Xu, Lishi Zuo, Wei Tan, Hangting Chen, Guangzheng Li, Jianwei Yu, Zhiyong Wu, Dong Yu",
         "tags": [
-          "docker",
-          "region:us"
+          "cs.SD",
+          "cs.AI",
+          "llm",
+          "alignment",
+          "evaluation"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11151
-        },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-06-30T13:04:58.998Z",
+        "category": "cs.SD",
+        "language": "en",
+        "publishedAt": "2026-06-29T17:59:20Z",
+        "updatedAt": "2026-06-29T17:59:20Z",
+        "collectedAt": "2026-06-30T14:47:42.520Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.30642v1",
+          "authors": [
+            "Shun Lei",
+            "Huaicheng Zhang",
+            "Dapeng Wu",
+            "Yaoxun Xu",
+            "Lishi Zuo",
+            "Wei Tan",
+            "Hangting Chen",
+            "Guangzheng Li",
+            "Jianwei Yu",
+            "Zhiyong Wu",
+            "Dong Yu"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, alignment, evaluation"
       },
       {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
+        "id": "http://arxiv.org/abs/2606.30639v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Self-Evolving World Models for LLM Agent Planning",
+        "url": "https://arxiv.org/pdf/2606.30639v1",
+        "description": "World models offer a principled way to equip long-horizon LLM agents with foresight: predictions of action consequences before execution. However, unreliable foresight can be ignored, misused, or even degrade downstream decision-making. In this paper, we introduce WorldEvolver, a self-evolving world model framework that revises its deployment-time context while keeping the downstream agent and all model parameters frozen. WorldEvolver integrates three modules: (i) Episodic Memory, which exploits",
+        "summary": "World models offer a principled way to equip long-horizon LLM agents with foresight: predictions of action consequences before execution. However, unreliable foresight can be ignored, misused, or even degrade downstream decision-making. In this paper, we introduce WorldEvolver, a self-evolving world model framework that revises its deployment-time context while keeping the downstream agent and all model parameters frozen. WorldEvolver integrates three modules: (i) Episodic Memory, which exploits real action transitions through retrieval-based simulation; (ii) Semantic Memory, which extracts persistent heuristic rules from prediction-observation mismatches; and (iii) Selective Foresight, which filters low-confidence predictions before integrating them into agent reasoning context. We evaluate WorldEvolver on ALFWorld and ScienceWorld, measuring world model prediction accuracy on Word2World and downstream agent success rate on AgentBoard. Extensive experiments show that WorldEvolver achieves the highest prediction accuracy across three backbones and leads other world model baselines on downstream agent success rate, demonstrating that test-time memory revision enhances both predictive fidelity and planning performance.",
+        "author": "Xuan Zhang, Wenxuan Zhang, See-Kiong Ng, Yang Deng",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.AI",
+          "cs.CL",
+          "llm",
+          "agent"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10122
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-06-30T13:04:58.998Z",
+        "category": "cs.AI",
+        "language": "en",
+        "publishedAt": "2026-06-29T17:58:43Z",
+        "updatedAt": "2026-06-29T17:58:43Z",
+        "collectedAt": "2026-06-30T14:47:42.520Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.30639v1",
+          "authors": [
+            "Xuan Zhang",
+            "Wenxuan Zhang",
+            "See-Kiong Ng",
+            "Yang Deng"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, agent"
       },
       {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
+        "id": "http://arxiv.org/abs/2606.30634v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "One-Step Gradient Delay is Not a Barrier for Large-Scale Asynchronous Pipeline Parallel LLM Pretraining",
+        "url": "https://arxiv.org/pdf/2606.30634v1",
+        "description": "Modern large-scale LLM pretraining benefits from utilizing Pipeline Parallelism; however, synchronous implementations leave GPUs idle during pipeline bubbles, wasting computational resources. Asynchronous Pipeline Parallelism eliminates these bubbles, maximizing throughput at the cost of gradient staleness. Among asynchronous schedules, PipeDream-2BW is particularly appealing: unlike the original PipeDream schedule, it ensures a constant one-step gradient delay regardless of pipeline depth. Howe",
+        "summary": "Modern large-scale LLM pretraining benefits from utilizing Pipeline Parallelism; however, synchronous implementations leave GPUs idle during pipeline bubbles, wasting computational resources. Asynchronous Pipeline Parallelism eliminates these bubbles, maximizing throughput at the cost of gradient staleness. Among asynchronous schedules, PipeDream-2BW is particularly appealing: unlike the original PipeDream schedule, it ensures a constant one-step gradient delay regardless of pipeline depth. However, its adoption remains limited due to the common belief that optimizing under staleness is fundamentally unstable. In this work, we challenge this assumption, demonstrating that degradation under one-step delay depends strongly on optimizer choice rather than being an intrinsic limitation. We provide the first comprehensive empirical analysis showing that while AdamW, the predominant optimizer at the time when PipeDream-2BW was introduced, indeed suffers from severe degradation, recent methods like Muon exhibit strong robustness under a one-step delay. We introduce an optimizer-agnostic Error Feedback-inspired correction to further mitigate delay effects. We provide supporting theoretical analysis demonstrating convergence for Muon with and without this correction. Extensive evaluation on models up to 10B parameters confirms that our strategies bridge the performance gap with synchronous training, highlighting the practical potential of asynchronous pipeline parallelism at scale.",
+        "author": "Philip Zmushko, Egor Petrov, Nursultan Abdullaev, Mikhail Khrushchev, Samuel Horváth",
         "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
+          "cs.LG",
+          "llm",
+          "evaluation"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7521
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-06-29T07:30:35.000Z",
-        "collectedAt": "2026-06-30T13:04:58.998Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-06-29T17:57:50Z",
+        "updatedAt": "2026-06-29T17:57:50Z",
+        "collectedAt": "2026-06-30T14:47:42.520Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "📊"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.30634v1",
+          "authors": [
+            "Philip Zmushko",
+            "Egor Petrov",
+            "Nursultan Abdullaev",
+            "Mikhail Khrushchev",
+            "Samuel Horváth"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, evaluation"
       },
       {
-        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Wan2.2 Animate",
-        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
-        "author": "Wan-AI",
+        "id": "http://arxiv.org/abs/2606.30632v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "GROW$^2$: Grounding Which and Where for Robot Tool Use",
+        "url": "https://arxiv.org/pdf/2606.30632v1",
+        "description": "Can the robot use a plate to cut a cake if no knife is available? Tool use greatly expands robot capabilities, but to use tools creatively beyond their intended functions, the robot faces the challenge of $\\textit{open-world affordance grounding}$: select an open-category object to act as a tool and localize its specific region of action. To this end, we introduce GROW$^2$ (GROunding Which and Where), which leverages object parts as a natural abstraction to split the grounding process hierarchic",
+        "summary": "Can the robot use a plate to cut a cake if no knife is available? Tool use greatly expands robot capabilities, but to use tools creatively beyond their intended functions, the robot faces the challenge of $\\textit{open-world affordance grounding}$: select an open-category object to act as a tool and localize its specific region of action. To this end, we introduce GROW$^2$ (GROunding Which and Where), which leverages object parts as a natural abstraction to split the grounding process hierarchically into semantic and geometric levels, thus bypassing the need for data-heavy, end-to-end training. Semantically, GROW$^2$ harnesses the commonsense reasoning of Vision-Language Models (VLMs) to parse a natural-language task instruction, select a suitable object as the tool, and identify task-relevant parts on the tool and the target object. Geometrically, vision foundation models then ground the selected parts into precise 3D regions from a single RGB-D image. Experiments on established benchmarks show that GROW$^2$ outperforms state-of-the-art baselines on affordance prediction benchmarks. Further, it achieves zero-shot generalization over open-category objects and outperforms baselines in both simulated and real-world robot tool use experiments.",
+        "author": "Yuhong Deng, Yuyao Liu, David Hsu",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.RO",
+          "cs.AI",
+          "cs.CV",
+          "rag",
+          "tool use",
+          "benchmark"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5114
-        },
-        "publishedAt": "2025-09-18T07:05:32.000Z",
-        "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-06-30T13:04:58.998Z",
+        "category": "cs.RO",
+        "language": "en",
+        "publishedAt": "2026-06-29T17:56:53Z",
+        "updatedAt": "2026-06-29T17:56:53Z",
+        "collectedAt": "2026-06-30T14:47:42.520Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👁"
-        }
-      },
-      {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
-        "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5076
+          "abstractUrl": "http://arxiv.org/abs/2606.30632v1",
+          "authors": [
+            "Yuhong Deng",
+            "Yuyao Liu",
+            "David Hsu"
+          ]
         },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-06-30T13:04:58.998Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4933
-        },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-06-30T13:04:58.998Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
-      },
-      {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
-        "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3753
-        },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-06-30T13:04:58.998Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
-        }
+        "recommendedReason": "Matched AI developer keywords: rag, tool use, benchmark"
       }
     ],
     "developerBuzz": [
@@ -220,11 +196,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 1084,
-          "commentsCount": 503
+          "upvotes": 1085,
+          "commentsCount": 504
         },
         "publishedAt": "2026-06-28T17:50:47.000Z",
-        "collectedAt": "2026-06-30T13:04:59.122Z",
+        "collectedAt": "2026-06-30T14:47:42.427Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48709670",
           "matchedKeywords": [
@@ -243,11 +219,11 @@
           "cursor"
         ],
         "metrics": {
-          "upvotes": 985,
-          "commentsCount": 607
+          "upvotes": 989,
+          "commentsCount": 609
         },
         "publishedAt": "2026-06-29T03:42:07.000Z",
-        "collectedAt": "2026-06-30T13:04:59.122Z",
+        "collectedAt": "2026-06-30T14:47:42.427Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48714529",
           "matchedKeywords": [
@@ -266,11 +242,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 980,
-          "commentsCount": 418
+          "upvotes": 983,
+          "commentsCount": 422
         },
         "publishedAt": "2026-06-29T01:44:40.000Z",
-        "collectedAt": "2026-06-30T13:04:59.122Z",
+        "collectedAt": "2026-06-30T14:47:42.427Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48713832",
           "matchedKeywords": [
@@ -289,11 +265,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 556,
-          "commentsCount": 324
+          "upvotes": 588,
+          "commentsCount": 336
         },
         "publishedAt": "2026-06-29T19:49:28.000Z",
-        "collectedAt": "2026-06-30T13:04:59.122Z",
+        "collectedAt": "2026-06-30T14:47:42.427Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48724230",
           "matchedKeywords": [
@@ -312,11 +288,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 634,
-          "commentsCount": 1388
+          "upvotes": 640,
+          "commentsCount": 1424
         },
         "publishedAt": "2026-06-29T10:45:51.000Z",
-        "collectedAt": "2026-06-30T13:04:59.122Z",
+        "collectedAt": "2026-06-30T14:47:42.427Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48717469",
           "matchedKeywords": [
@@ -339,7 +315,7 @@
         "originalUrl": "https://the-decoder.com/meta-secretly-tested-chatgpt-gemini-and-character-ai-with-thousands-of-minor-perspective-crisis-prompts",
         "recommendedReason": "Meta通过承包商Covelen发起代号\"Cannes\"的项目，雇佣数百人假扮未成年人，向ChatGPT、Gemini和Character.AI发送关于自杀、自残、饮食障碍和毒品的敏感提示，并将回复录入表格。2025年8月一轮测试中发送了超过4.5万条提示。Meta称这是行业标准安全测试，未将数据用于训练自家模型。被测试公司不知情--Character.AI表示违反其服务条款，OpenAI已调查，Google称未批准。青少年使用AI聊天机器人引发的担忧持续，此前已有用户自杀事件。",
         "publishedAt": "2026-06-30T11:14:52.000Z",
-        "collectedAt": "2026-06-30T13:05:00.147Z",
+        "collectedAt": "2026-06-30T14:47:44.327Z",
         "raw": {
           "id": "cmr0kov5302qnslolcwg00yqd",
           "titleEn": "Meta secretly tested ChatGPT， Gemini， and Character.AI with thousands of minor-perspective crisis prompts",
@@ -359,7 +335,7 @@
         "originalUrl": "https://www.ithome.com/0/970/583.htm",
         "recommendedReason": "黑石计划未来3~5年在日本AI数据中心领域投资300亿美元，此前的500MW基础上新增超1GW容量。黑石总裁认为AI投资仍处早期，真正风险是算力短缺而非基建泡沫；谷歌、亚马逊是英伟达潜在挑战者。此外，黑石、阿波罗、博通本月9日成立AI XPV平台，目标2028年向OpenAI、Anthropic等提供超20GW算力，首期350亿美元支持Anthropic在Fluidstack数据中心部署1GW基础设施。",
         "publishedAt": "2026-06-30T07:56:46.000Z",
-        "collectedAt": "2026-06-30T13:05:00.147Z",
+        "collectedAt": "2026-06-30T14:47:44.327Z",
         "raw": {
           "id": "cmr0czddc00pyslole7byaugu",
           "titleEn": "另类资管巨头黑石未来 3~5 年将斥资 300 亿美元在日本建设 AI 数据中心",
@@ -379,7 +355,7 @@
         "originalUrl": "https://www.ithome.com/0/970/539.htm",
         "recommendedReason": "2026年6月30日，特斯拉在奥斯汀公共道路启动首批量产版Cybercab工程测试。车辆无方向盘与脚踏板，配有安全监督员，马斯克发布实拍视频。从2024年10月概念车首秀到实车上路约20个月。目前不对外开放乘客，投入34台Cybercab在市中心验证硬件可靠性。Cybercab为双座车型，完全围绕无人驾驶打造，无后期改装。此前奥斯汀已有无安全员Model Y无人驾驶出租于1月启用、6月22日开放付费服务。",
         "publishedAt": "2026-06-30T06:45:03.000Z",
-        "collectedAt": "2026-06-30T13:05:00.147Z",
+        "collectedAt": "2026-06-30T14:47:44.327Z",
         "raw": {
           "id": "cmr0au6v3005gslol3ritaun0",
           "titleEn": "无方向盘、无踏板，特斯拉 Cybercab 量产版启动公开道路工程测试",
@@ -399,7 +375,7 @@
         "originalUrl": "https://x.com/SiliconFlowAI/status/2071831773076746715",
         "recommendedReason": "美团 LongCat 推出旗舰模型 LongCat-2.0，采用 1.6T 参数 MoE 架构（约 48B 活跃参数），原生支持 1M 上下文窗口。定价为 Input Cache $0.015/1M tokens、Input $0.75/1M tokens、Output $2.95/1M tokens。模型专为 Agentic Coding 设计，包含三大技术：LSA 稀疏注意力实现高效 1M 扩展；Zero-Compute Experts 动态激活 33B-56B 参数/token，无算力浪费；MOPD 将专家分为 Agent / Reasoning / Interaction 三组，按任务门控路由。在 SWE-bench Pro 上取得 59.5 分，性能接近主流闭源模型。现已上线 SiliconFlow Day 0 服务。",
         "publishedAt": "2026-06-30T05:42:42.000Z",
-        "collectedAt": "2026-06-30T13:05:00.147Z",
+        "collectedAt": "2026-06-30T14:47:44.327Z",
         "raw": {
           "id": "cmr08dev204qjslkit52gdrur",
           "titleEn": "The full model behind \"Owl Alpha\" on @OpenRouter is here🦉 Let's meet @Meituan_LongCat 's latest fla…",
@@ -419,7 +395,7 @@
         "originalUrl": "https://x.com/op7418/status/2071816099986022650",
         "recommendedReason": "X（Twitter）官方推出 hosted X MCP，AI 智能体可通过 MCP 协议直接调用 X API 获取实时信息，支持 Grok、Cursor 等工具。用户需注册 X API 并按量付费，个人优惠价每次调用 0.01 美元（1 美元 1000 次）。有用户实测拉取近三天书签仅花 0.1 美元。配置步骤：创建 APP 并充值、获取配置 ID、辅助配置（可交给 Codex/Claude）、授权启动。",
         "publishedAt": "2026-06-30T04:40:25.000Z",
-        "collectedAt": "2026-06-30T13:05:00.147Z",
+        "collectedAt": "2026-06-30T14:47:44.327Z",
         "raw": {
           "id": "cmr07c62l04huslkimxy3vdw5",
           "titleEn": "Twitter 终于有 MCP 了，这个非常有用！ 如果你像我一样依赖 Twitter 信息的话，就可以让 AI 帮你自动整理、总结和对你的数据进行分析 不过依然需要你注册 Twitter 的 A…",
@@ -439,7 +415,7 @@
         "originalUrl": "https://techcrunch.com/2026/06/29/the-ai-jobs-debate-just-got-messier",
         "recommendedReason": "截至2026年5月，AI相关裁员接近9万个，预计未来五年美国最多15%的岗位将被AI替代。但Ramp与Revelio Labs对近22，000家公司的报告发现，高AI投入企业（前三个月人均月均支出30美元）总员工数增长10.2%，入门级岗位增长12%。报告认为AI并非普遍导致岗位消失，而是在资源充裕的科技企业里成为扩张工具--降低工程、销售、客服等职能的生产成本，从而推动整体增员。但仅购买订阅而未持续投入的公司未见人头增长，可能加剧企业间的资源鸿沟。",
         "publishedAt": "2026-06-30T04:01:00.000Z",
-        "collectedAt": "2026-06-30T13:05:00.147Z",
+        "collectedAt": "2026-06-30T14:47:44.327Z",
         "raw": {
           "id": "cmr05b2wq0414slkivvyyjlbl",
           "titleEn": "The AI jobs debate just got messier",
@@ -459,7 +435,7 @@
         "originalUrl": "https://x.com/xiaohu/status/2071796715162857477",
         "recommendedReason": "媒体软件公司Every公开「复利工程」方法论，以单人工程团队维护5款产品。核心是四步循环：Plan→Work→Review→Compound，其中Compound将每次解决问题的解法写入CLAUDE.md和docs/solutions/，使AI下次自动避坑。工程师80%时间花在Plan和Review，仅20%用于写代码。配套开源插件支持Claude Code等，含26个专项agent、23条工作流命令、13项技能，可零配置使用。/workflows：review一次并发14个agent审查代码，/workflows：plan在ultrathink模式下可并发40多个研究agent。",
         "publishedAt": "2026-06-30T03:23:23.000Z",
-        "collectedAt": "2026-06-30T13:05:00.147Z",
+        "collectedAt": "2026-06-30T14:47:44.327Z",
         "raw": {
           "id": "cmr03h5tq03jjslki3a281zet",
           "titleEn": "http：//x.com/i/article/2071795831028826112",
@@ -479,13 +455,154 @@
         "originalUrl": "https://mp.weixin.qq.com/s/aSd4kLu7xHllZatrd5EGsw",
         "recommendedReason": "具身智能数据采集员以日薪200-250元招兼职，无需学历经验。面试先测量身高体重以适配采集手套，并询问是否晕VR。工作分两种：遥操作采集--穿戴设备控制双臂机器人完成分拣积木、叠纸杯等动作；无机器人示教采集--徒手重复动作（如叠衣服），设备记录轨迹。全球高质量物理交互数据截至2026年初仅约50万小时，不足大语言模型训练数据的两万分之一，需大量人力从零采集。",
         "publishedAt": "2026-06-30T01:58:00.000Z",
-        "collectedAt": "2026-06-30T13:05:00.147Z",
+        "collectedAt": "2026-06-30T14:47:44.327Z",
         "raw": {
           "id": "cmr00f9t902pgslkiofzqdgx2",
           "titleEn": "给机器人打工了一天，我们体验上了AI时代最魔幻的工作。",
           "apiCategory": "tip"
         }
+      },
+      {
+        "id": "aihot:cmqzzpqet02gpslki3d15k1l0",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "AI News Radar 大更新：新增自媒体板块，支持订阅多平台账号",
+        "url": "https://mp.weixin.qq.com/s/iW5FVqbHtYi31mJ22Q_cog",
+        "summary": "AI News Radar 迎来大更新，新增自媒体板块，支持订阅某书、某音、某站、某X等平台账号，每日按热度推荐 Top10 信息（无热门则不硬凑），同时保留时间轴视图，可在热度优先和时间优先间切换。官方来源包括 OpenAI、Anthropic、Google 等一手消息及 GitHub AI&ML 更新日志。信息流按来源、类型、信号等级分类，标注高优先级与多源认证。项目完全开源，可零 API 部署独立 AI 日报页面，支持手机移动端及暗色界面。",
+        "description": "AI News Radar 迎来大更新，新增自媒体板块，支持订阅某书、某音、某站、某X等平台账号，每日按热度推荐 Top10 信息（无热门则不硬凑），同时保留时间轴视图，可在热度优先和时间优先间切换。官方来源包括 OpenAI、Anthropic、Google 等一手消息及 GitHub AI&ML 更新日志。信息流按来源、类型、信号等级分类，标注高优先级与多源认证。项目完全开源，可零 API 部署独立 AI 日报页面，支持手机移动端及暗色界面。",
+        "category": "products",
+        "originalSource": "公众号：卡尔的AI沃茨",
+        "originalUrl": "https://mp.weixin.qq.com/s/iW5FVqbHtYi31mJ22Q_cog",
+        "recommendedReason": "AI News Radar 迎来大更新，新增自媒体板块，支持订阅某书、某音、某站、某X等平台账号，每日按热度推荐 Top10 信息（无热门则不硬凑），同时保留时间轴视图，可在热度优先和时间优先间切换。官方来源包括 OpenAI、Anthropic、Google 等一手消息及 GitHub AI&ML 更新日志。信息流按来源、类型、信号等级分类，标注高优先级与多源认证。项目完全开源，可零 API 部署独立 AI 日报页面，支持手机移动端及暗色界面。",
+        "publishedAt": "2026-06-30T01:47:00.000Z",
+        "collectedAt": "2026-06-30T14:47:44.327Z",
+        "raw": {
+          "id": "cmqzzpqet02gpslki3d15k1l0",
+          "titleEn": "大更新我的AI热点Skill，这次把国内外自媒体大神都包圆了",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmqzq4so7002zslki45ad5xtq",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "为 Amazon Bedrock 和 Google Cloud 推出的 Claude apps gateway",
+        "url": "https://claude.com/blog/introducing-the-claude-apps-gateway",
+        "summary": "Anthropic 今日推出 Claude apps gateway，一个自托管控制平面，让企业能在 Amazon Bedrock 和 Google Cloud 上运行 Claude Code。它作为单个无状态容器部署于 Linux，后端使用 PostgreSQL，提供企业级 SSO 登录（通过 OIDC 对接 Google Workspace、Microsoft Entra ID、Okta 等）、集中策略管理、角色权限、路由（支持故障转移）以及按日/周/月、按组织/群组/用户的消费上限。遥测数据通过 OTLP 发送至用户配置的收集器。gateway 不会向 Anthropic 发送推理流量或使用数据（除非配置使用 Claude API）。即日起可用。",
+        "description": "Anthropic 今日推出 Claude apps gateway，一个自托管控制平面，让企业能在 Amazon Bedrock 和 Google Cloud 上运行 Claude Code。它作为单个无状态容器部署于 Linux，后端使用 PostgreSQL，提供企业级 SSO 登录（通过 OIDC 对接 Google Workspace、Microsoft Entra ID、Okta 等）、集中策略管理、角色权限、路由（支持故障转移）以及按日/周/月、按组织/群组/用户的消费上限。遥测数据通过 OTLP 发送至用户配置的收集器。gateway 不会向 Anthropic 发送推理流量或使用数据（除非配置使用 Claude API）。即日起可用。",
+        "category": "products",
+        "originalSource": "Claude：Blog（网页）",
+        "originalUrl": "https://claude.com/blog/introducing-the-claude-apps-gateway",
+        "recommendedReason": "Anthropic 今日推出 Claude apps gateway，一个自托管控制平面，让企业能在 Amazon Bedrock 和 Google Cloud 上运行 Claude Code。它作为单个无状态容器部署于 Linux，后端使用 PostgreSQL，提供企业级 SSO 登录（通过 OIDC 对接 Google Workspace、Microsoft Entra ID、Okta 等）、集中策略管理、角色权限、路由（支持故障转移）以及按日/周/月、按组织/群组/用户的消费上限。遥测数据通过 OTLP 发送至用户配置的收集器。gateway 不会向 Anthropic 发送推理流量或使用数据（除非配置使用 Claude API）。即日起可用。",
+        "publishedAt": "2026-06-29T21:22:33.048Z",
+        "collectedAt": "2026-06-30T14:47:44.327Z",
+        "raw": {
+          "id": "cmqzq4so7002zslki45ad5xtq",
+          "titleEn": "Introducing the Claude apps gateway for Amazon Bedrock and Google Cloud",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmqzpe7kz003xslznxpw78tx5",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Rubin Ultra取消，新版尺寸性能减半",
+        "url": "https://x.com/SemiAnalysis_/status/2071700428249596290",
+        "summary": "有意思：在GTC 2026宣布Rubin Ultra仅3个月后，原4-die Rubin Ultra因制造执行问题被取消。新的\"Rubin Ultra\"尺寸减半，实际性能约为原版的一半。1/4🧵",
+        "description": "有意思：在GTC 2026宣布Rubin Ultra仅3个月后，原4-die Rubin Ultra因制造执行问题被取消。新的\"Rubin Ultra\"尺寸减半，实际性能约为原版的一半。1/4🧵",
+        "category": "industry",
+        "originalSource": "X：SemiAnalysis (@SemiAnalysis_)",
+        "originalUrl": "https://x.com/SemiAnalysis_/status/2071700428249596290",
+        "recommendedReason": "有意思：在GTC 2026宣布Rubin Ultra仅3个月后，原4-die Rubin Ultra因制造执行问题被取消。新的\"Rubin Ultra\"尺寸减半，实际性能约为原版的一半。1/4🧵",
+        "publishedAt": "2026-06-29T21:00:47.000Z",
+        "collectedAt": "2026-06-30T14:47:44.327Z",
+        "raw": {
+          "id": "cmqzpe7kz003xslznxpw78tx5",
+          "titleEn": "INTERESTING： Only 3 months after Rubin Ultra was announced at GTC 2026， the original 4-die Rubin Ult…",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmqzo4q2o005oslkhjl7jdtoc",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "OpenClaw 发布原生 iOS 与 Android 应用",
+        "url": "https://x.com/openclaw/status/2071688039114342592",
+        "summary": "OpenClaw 现已登陆 iOS 和 Android 🦞 📱 原生移动应用，终于来了 💬 智能体装进口袋 🔔 频道、任务、回复，随时处理 用你的大拇指，在任何地方运行智能体。 iOS： https：//apps.apple.com/us/app/openclaw-ai-that-does-things/id6780396132 Android： https：//play.google.com/store/apps/details？id=ai.openclaw.app",
+        "description": "OpenClaw 现已登陆 iOS 和 Android 🦞 📱 原生移动应用，终于来了 💬 智能体装进口袋 🔔 频道、任务、回复，随时处理 用你的大拇指，在任何地方运行智能体。 iOS： https：//apps.apple.com/us/app/openclaw-ai-that-does-things/id6780396132 Android： https：//play.google.com/store/apps/details？id=ai.openclaw.app",
+        "category": "products",
+        "originalSource": "X：OpenClaw (@openclaw)",
+        "originalUrl": "https://x.com/openclaw/status/2071688039114342592",
+        "recommendedReason": "OpenClaw 现已登陆 iOS 和 Android 🦞 📱 原生移动应用，终于来了 💬 智能体装进口袋 🔔 频道、任务、回复，随时处理 用你的大拇指，在任何地方运行智能体。 iOS： https：//apps.apple.com/us/app/openclaw-ai-that-does-things/id6780396132 Android： https：//play.google.com/store/apps/details？id=ai.openclaw.app",
+        "publishedAt": "2026-06-29T20:11:33.000Z",
+        "collectedAt": "2026-06-30T14:47:44.327Z",
+        "raw": {
+          "id": "cmqzo4q2o005oslkhjl7jdtoc",
+          "titleEn": "OpenClaw is now on iOS + Android 🦞 📱 Native mobile apps， finally 💬 Agents in your pocket 🔔 Chan…",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmqzjpce1006aslqvqo2kpjo6",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Claude 在 Microsoft Foundry 正式可用",
+        "url": "https://claude.com/blog/claude-in-microsoft-foundry",
+        "summary": "从今天起，Claude 模型在 Microsoft Foundry 上正式可用，托管于 Azure 环境，运行在 NVIDIA GB300 GPU 上。首批提供 Claude Opus 4.8 和 Claude Haiku 4.5，通过 Messages API 调用，支持提示缓存和扩展思考。用户可选择推理处理位置，包括美国数据区域，由 Anthropic 负责推理运营。Azure 用户可使用现有身份验证、计费与治理控制，并获得统一账单；符合条件的 Enterprise Agreement 客户可将 Claude 用量计入 Azure 承诺消费。",
+        "description": "从今天起，Claude 模型在 Microsoft Foundry 上正式可用，托管于 Azure 环境，运行在 NVIDIA GB300 GPU 上。首批提供 Claude Opus 4.8 和 Claude Haiku 4.5，通过 Messages API 调用，支持提示缓存和扩展思考。用户可选择推理处理位置，包括美国数据区域，由 Anthropic 负责推理运营。Azure 用户可使用现有身份验证、计费与治理控制，并获得统一账单；符合条件的 Enterprise Agreement 客户可将 Claude 用量计入 Azure 承诺消费。",
+        "category": "products",
+        "originalSource": "Claude：Blog（网页）",
+        "originalUrl": "https://claude.com/blog/claude-in-microsoft-foundry",
+        "recommendedReason": "从今天起，Claude 模型在 Microsoft Foundry 上正式可用，托管于 Azure 环境，运行在 NVIDIA GB300 GPU 上。首批提供 Claude Opus 4.8 和 Claude Haiku 4.5，通过 Messages API 调用，支持提示缓存和扩展思考。用户可选择推理处理位置，包括美国数据区域，由 Anthropic 负责推理运营。Azure 用户可使用现有身份验证、计费与治理控制，并获得统一账单；符合条件的 Enterprise Agreement 客户可将 Claude 用量计入 Azure 承诺消费。",
+        "publishedAt": "2026-06-29T18:22:20.720Z",
+        "collectedAt": "2026-06-30T14:47:44.327Z",
+        "raw": {
+          "id": "cmqzjpce1006aslqvqo2kpjo6",
+          "titleEn": "Claude in Microsoft Foundry is now generally available",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmqzk693n002zslksfkrr5w2w",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Qwen 3.6 27B 是本地开发的理想选择",
+        "url": "https://quesma.com/blog/qwen-36-is-awesome",
+        "summary": "Qwen 3.6 27B 是一款密集参数本地大语言模型，原生支持 256k 上下文。在 Macbook Max M5 上运行 llama.cpp Q8_0 量化版（含多 token 预测）可达 30 tokens/s；用户反馈在 RTX 5090 上 Q6_K 量化可达 50 tokens/s。它可通过单个提示完成创意诗歌、用 pnpm 生成六边形扫雷游戏等任务，作者称其为首个真正具备通用智能的本地模型。另有一个 MoE 变体 35B A3B，但作者推荐 27B 版本。",
+        "description": "Qwen 3.6 27B 是一款密集参数本地大语言模型，原生支持 256k 上下文。在 Macbook Max M5 上运行 llama.cpp Q8_0 量化版（含多 token 预测）可达 30 tokens/s；用户反馈在 RTX 5090 上 Q6_K 量化可达 50 tokens/s。它可通过单个提示完成创意诗歌、用 pnpm 生成六边形扫雷游戏等任务，作者称其为首个真正具备通用智能的本地模型。另有一个 MoE 变体 35B A3B，但作者推荐 27B 版本。",
+        "category": "tools",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://quesma.com/blog/qwen-36-is-awesome",
+        "recommendedReason": "Qwen 3.6 27B 是一款密集参数本地大语言模型，原生支持 256k 上下文。在 Macbook Max M5 上运行 llama.cpp Q8_0 量化版（含多 token 预测）可达 30 tokens/s；用户反馈在 RTX 5090 上 Q6_K 量化可达 50 tokens/s。它可通过单个提示完成创意诗歌、用 pnpm 生成六边形扫雷游戏等任务，作者称其为首个真正具备通用智能的本地模型。另有一个 MoE 变体 35B A3B，但作者推荐 27B 版本。",
+        "publishedAt": "2026-06-29T18:03:02.582Z",
+        "collectedAt": "2026-06-30T14:47:44.327Z",
+        "raw": {
+          "id": "cmqzk693n002zslksfkrr5w2w",
+          "titleEn": null,
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmqzdby9m00o8sltjugcnx002",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Anthropic工程师Margot Van Laar：提示词工程实战--调试生产提示词为主，评估是唯一严谨方式",
+        "url": "https://x.com/berryxia/status/2071610700213191075",
+        "summary": "An anthropic应用AI工程师Margot Van Laar在Code with Claude分享提示词工程实战，核心观点：大部分时间在调试和维护已有生产提示词而非从零编写。两个场景：客服机器人维护中，用XML标签结构化清理，移除旧模型遗留的\"禁止列表\"指令（新模型会过度拟合），精确计算应调用工具，转人工决策需明确代价与收益；零售排班Agent从零构建时，拆成生成-评估-修复三个简单提示词更稳定，选用更强推理模型（Opus）。她反复强调：评估（Eval）是唯一严谨方式，没有评估就是碰运气。",
+        "description": "An anthropic应用AI工程师Margot Van Laar在Code with Claude分享提示词工程实战，核心观点：大部分时间在调试和维护已有生产提示词而非从零编写。两个场景：客服机器人维护中，用XML标签结构化清理，移除旧模型遗留的\"禁止列表\"指令（新模型会过度拟合），精确计算应调用工具，转人工决策需明确代价与收益；零售排班Agent从零构建时，拆成生成-评估-修复三个简单提示词更稳定，选用更强推理模型（Opus）。她反复强调：评估（Eval）是唯一严谨方式，没有评估就是碰运气。",
+        "category": "tools",
+        "originalSource": "X：Berry Xia (@berryxia)",
+        "originalUrl": "https://x.com/berryxia/status/2071610700213191075",
+        "recommendedReason": "An anthropic应用AI工程师Margot Van Laar在Code with Claude分享提示词工程实战，核心观点：大部分时间在调试和维护已有生产提示词而非从零编写。两个场景：客服机器人维护中，用XML标签结构化清理，移除旧模型遗留的\"禁止列表\"指令（新模型会过度拟合），精确计算应调用工具，转人工决策需明确代价与收益；零售排班Agent从零构建时，拆成生成-评估-修复三个简单提示词更稳定，选用更强推理模型（Opus）。她反复强调：评估（Eval）是唯一严谨方式，没有评估就是碰运气。",
+        "publishedAt": "2026-06-29T15:04:14.000Z",
+        "collectedAt": "2026-06-30T14:47:44.327Z",
+        "raw": {
+          "id": "cmqzdby9m00o8sltjugcnx002",
+          "titleEn": "Margot Van Laar是Anthropic应用AI团队的工程师。 她在Code with Claude大会上做了一场关于提示词工程实战的分享。 核心观点只有一个：我们很少从零写提示词，大部…",
+          "apiCategory": "tip"
+        }
       }
-    ]
+    ],
+    "crossSourceHighlights": []
   }
 }
