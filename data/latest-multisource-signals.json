@@ -1,185 +1,211 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-01T01:36:26.689Z",
+  "generatedAt": "2026-07-01T04:16:56.572Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2606.31653v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Improving Certified Robustness via Adversarial Distillation",
-        "url": "https://arxiv.org/pdf/2606.31653v1",
-        "description": "Certified training aims to produce models whose predictions can be formally verified against adversarial perturbations, typically by optimising upper bounds on the worst-case loss over an allowed perturbation set. For neural networks, certified training methods based purely on tight relaxation bounds produce networks that are amenable to certification, but sacrifice standard accuracy. Conversely, adversarial training often yields stronger empirical robustness and standard accuracy, but the resul",
-        "summary": "Certified training aims to produce models whose predictions can be formally verified against adversarial perturbations, typically by optimising upper bounds on the worst-case loss over an allowed perturbation set. For neural networks, certified training methods based purely on tight relaxation bounds produce networks that are amenable to certification, but sacrifice standard accuracy. Conversely, adversarial training often yields stronger empirical robustness and standard accuracy, but the resulting models are generally difficult to certify with neural network verifiers. Recently, the literature has shown that better standard-certified accuracy trade-offs can be achieved by combining adversarial training objectives with loose over-approximations based on Interval Bound Propagation (IBP), effectively interpolating between lower and upper bounds of the worst-case loss. Building on this, we introduce AD-CERT, a certified training objective that combines adversarial distillation with an IBP upper bound. We show that distilling adversarial information over the logit space from an empirically robust teacher provides an effective lower bound surrogate for certified training, with AD-CERT achieving state-of-the-art certified performance on several robustness benchmarks. Furthermore, in a unified setup, distilling adversarial information at the logit-level is shown to improve certified accuracy over a robust feature-space distillation objective by up to 5.40 percentage points.",
-        "author": "Matteo Melis, Jesus Martinez Del Rincon, Vishal Sharma",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.LG",
-          "cs.AI",
-          "benchmark"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-06-30T13:31:35Z",
-        "updatedAt": "2026-06-30T13:31:35Z",
-        "collectedAt": "2026-07-01T01:36:20.326Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.31653v1",
-          "authors": [
-            "Matteo Melis",
-            "Jesus Martinez Del Rincon",
-            "Vishal Sharma"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14037
         },
-        "recommendedReason": "Matched AI developer keywords: benchmark"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.31651v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "FARS: A Fully Automated Research System Deployed at Scale",
-        "url": "https://arxiv.org/pdf/2606.31651v1",
-        "description": "Recent automated research systems show that language-model agents can generate hypotheses, run experiments, and write complete manuscripts, but most evidence still comes from selected examples, human-framed topics, or a few pre-defined research tasks. We present FARS (Fully Automated Research System), a fully automated AI-for-AI research system designed to operate across research topics at scale. FARS autonomously generates and advances projects through ideation, planning, experimentation, and w",
-        "summary": "Recent automated research systems show that language-model agents can generate hypotheses, run experiments, and write complete manuscripts, but most evidence still comes from selected examples, human-framed topics, or a few pre-defined research tasks. We present FARS (Fully Automated Research System), a fully automated AI-for-AI research system designed to operate across research topics at scale. FARS autonomously generates and advances projects through ideation, planning, experimentation, and writing, using stage-specific agents coordinated through a shared workspace that records proposals, code, logs, results, and manuscripts. In its first public deployment, FARS produced 166 complete research papers spanning 67 fine-grained AI/ML topics while preserving intermediate artifacts as an auditable corpus rather than a curated set of successes. We evaluate this corpus with 282 structured reviews from volunteer reviewers covering 140 papers, including overall ratings, sub-scores, integrity checks, and LLM-use disclosure. The reviews indicate that FARS can produce review-worthy and occasionally strong AI/ML research artifacts in a large-scale public deployment, while also exposing recurring failure modes in narrow experimental scope, methodological limitations, and integrity issues.",
-        "author": "Qiong Tang, Xiangkun Hu, Xiangyang Liu, Yiran Chen, Yunfan Shao",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.AI",
-          "llm",
-          "agent"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-06-30T13:30:24Z",
-        "updatedAt": "2026-06-30T13:30:24Z",
-        "collectedAt": "2026-07-01T01:36:20.326Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.31651v1",
-          "authors": [
-            "Qiong Tang",
-            "Xiangkun Hu",
-            "Xiangyang Liu",
-            "Yiran Chen",
-            "Yunfan Shao"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11152
         },
-        "recommendedReason": "Matched AI developer keywords: llm, agent"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.31650v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "ECHO: Prune to act, trace to learn with selective turn memory in agentic RL",
-        "url": "https://arxiv.org/pdf/2606.31650v1",
-        "description": "Long-horizon language agents must repeatedly interact with tools, accumulate evidence, and make decisions under bounded context windows. Existing context-management methods make such rollouts feasible by truncating distant history, folding past turns into summaries, or selecting compact memory states. However, these breakthroughs introduce two coupled limitations. First, as the number of turns grows, historical observations are progressively removed or collapsed into compressed states, making it",
-        "summary": "Long-horizon language agents must repeatedly interact with tools, accumulate evidence, and make decisions under bounded context windows. Existing context-management methods make such rollouts feasible by truncating distant history, folding past turns into summaries, or selecting compact memory states. However, these breakthroughs introduce two coupled limitations. First, as the number of turns grows, historical observations are progressively removed or collapsed into compressed states, making it harder for the policy to reuse fine-grained evidence. Second, once the original turns are no longer source-addressable, outcome-based RL loses an explicit path for aligning policy updates with the evidence that supported a successful final answer. To this end, we propose ECHO, a selective turn-memory framework that jointly addresses history collapse and traceable learning through source-indexed reconstruction. Specifically, ECHO compresses each completed environment turn into a compact memory record, reconstructs bounded policy contexts by selecting from these records, and reuses the selected source indices to route positive outcome credit to the evidence and selection actions that support successful answers. On BrowseComp-Plus, ECHO reaches 43.4% held-out accuracy, outperforming GRPO (28.9%) and the rolling-summary baseline SUPO (36.1%), while using fewer turns and lower trajectory volume than SUPO (Figure 1). Additionally, the trained policy improves zero-shot generalization across multi-objective QA, code generation, and deep information-seeking benchmarks on both dense and MoE backbones.",
-        "author": "Zijun Xie, Binbin Zheng, Enlei Gong, Jihua Liu, Yuyang You, Lingfeng Liu, Jiayao Tang, Guanqun Zhao, Aoqi Hu, Zeyu Chen",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.LG",
-          "cs.AI",
-          "agent",
-          "code generation",
-          "benchmark",
-          "agentic"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-06-30T13:29:58Z",
-        "updatedAt": "2026-06-30T13:29:58Z",
-        "collectedAt": "2026-07-01T01:36:20.326Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.31650v1",
-          "authors": [
-            "Zijun Xie",
-            "Binbin Zheng",
-            "Enlei Gong",
-            "Jihua Liu",
-            "Yuyang You",
-            "Lingfeng Liu",
-            "Jiayao Tang",
-            "Guanqun Zhao",
-            "Aoqi Hu",
-            "Zeyu Chen"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10124
         },
-        "recommendedReason": "Matched AI developer keywords: agent, code generation, benchmark, agentic"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.31648v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Think in English, Answer in Korean: Efficient Adaptation of Multilingual Tool-Using Agents",
-        "url": "https://arxiv.org/pdf/2606.31648v1",
-        "description": "We present LuckyStar 111B, a 111B-parameter hybrid reasoning model developed through a collaboration between Cohere and LG CNS for Korean-English enterprise agents under practical memory and serving constraints. The model trains from Cohere's fully post-trained Command A model rather than a new pretraining run, and uses preamble conditioning to switch between concise non-reasoning behavior and longer tool-oriented reasoning. We study four choices for scaling tool-using agents efficiently: multil",
-        "summary": "We present LuckyStar 111B, a 111B-parameter hybrid reasoning model developed through a collaboration between Cohere and LG CNS for Korean-English enterprise agents under practical memory and serving constraints. The model trains from Cohere's fully post-trained Command A model rather than a new pretraining run, and uses preamble conditioning to switch between concise non-reasoning behavior and longer tool-oriented reasoning. We study four choices for scaling tool-using agents efficiently: multilingual supervised fine-tuning, reinforcement learning with verifiable rewards for multi-step tool-use tasks, language-consistency rewards for Korean user-facing responses, and 4-bit quantization for single-GPU serving. The adapted model improves mathematical reasoning, function calling, and agentic natural-language-to-SQL (NL2SQL) performance while preserving general Korean and English instruction-following quality. These results provide a practical recipe and failure-mode analysis for adapting post-trained multilingual models to verifiable agentic workflows under memory-constrained deployment.",
-        "author": "Utsav Garg, Sungjin Hong, Jason Jung, Justin Lee, Shaan Desai, Joon Hee Kim, Anirudh Shrinivason, Edmond Wen, Susie Park",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "cs.AI",
-          "cs.LG",
-          "agent",
-          "function calling",
-          "fine-tuning",
-          "agentic",
-          "workflow"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-06-30T13:29:16Z",
-        "updatedAt": "2026-06-30T13:29:16Z",
-        "collectedAt": "2026-07-01T01:36:20.326Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.31648v1",
-          "authors": [
-            "Utsav Garg",
-            "Sungjin Hong",
-            "Jason Jung",
-            "Justin Lee",
-            "Shaan Desai",
-            "Joon Hee Kim",
-            "Anirudh Shrinivason",
-            "Edmond Wen",
-            "Susie Park"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7523
         },
-        "recommendedReason": "Matched AI developer keywords: agent, function calling, fine-tuning, agentic, workflow"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-06-30T13:58:28.000Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2606.31644v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Moral Safety in LLMs: Exposing Performative Compliance with Puzzled Cues",
-        "url": "https://arxiv.org/pdf/2606.31644v1",
-        "description": "As large language models take on morally consequential roles in healthcare, legal, and hiring contexts, we need to examine whether their ethical behaviors are genuine or superficial. We show that current fairness evaluations substantially overestimate moral safety. Models appear fair when demographic identity is stated as an explicit label, yet become measurably less fair when the same identity must be inferred. We term this failure \\emph{performative compliance}, where a model is fair when the ",
-        "summary": "As large language models take on morally consequential roles in healthcare, legal, and hiring contexts, we need to examine whether their ethical behaviors are genuine or superficial. We show that current fairness evaluations substantially overestimate moral safety. Models appear fair when demographic identity is stated as an explicit label, yet become measurably less fair when the same identity must be inferred. We term this failure \\emph{performative compliance}, where a model is fair when the presentation resembles a fairness evaluation and less fair as that cue weakens. We introduce a cue-variation methodology that holds the moral dilemma and the demographic identity fixed and varies only how that identity is conveyed. Hiding the explicit label raises harmful decisions by $+4.4$~pp and changes model safety rankings, and the shift persists when models correctly infer the demographic, ruling out attribution error. We propose the \\textbf{Cue Visibility Gap}, a model-agnostic robustness metric that can be added to any existing fairness benchmark to separate genuine from performative moral safety. Fairness evaluations that omit cue variation measure surface compliance, not moral robustness, and should not ground deployment decisions in high-stakes settings.",
-        "author": "Mohammadamin Shafiei, Shuyue Stella Li, Yulia Tsvetkov",
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
         "tags": [
-          "cs.CL",
-          "cs.CY",
-          "large language model",
-          "llm",
-          "safety",
-          "benchmark",
-          "evaluation"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-06-30T13:25:29Z",
-        "updatedAt": "2026-06-30T13:25:29Z",
-        "collectedAt": "2026-07-01T01:36:20.326Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2606.31644v1",
-          "authors": [
-            "Mohammadamin Shafiei",
-            "Shuyue Stella Li",
-            "Yulia Tsvetkov"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 5114
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, safety, benchmark, evaluation"
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5076
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Arena Leaderboard",
+        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
+        "author": "lmarena-ai",
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "static",
+        "metrics": {
+          "likes": 4934
+        },
+        "publishedAt": "2023-05-20T09:26:19.000Z",
+        "updatedAt": "2026-02-21T23:20:43.000Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
+        "raw": {
+          "sdk": "static",
+          "emoji": "🏆🤖"
+        }
+      },
+      {
+        "id": "huggingface_spaces:KlingTeam/LivePortrait",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Live Portrait",
+        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
+        "author": "KlingTeam",
+        "tags": [
+          "gradio",
+          "Multimodal",
+          "Motion control",
+          "Image-to-Video",
+          "Video-to-Video",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 3753
+        },
+        "publishedAt": "2024-07-05T16:35:24.000Z",
+        "updatedAt": "2024-08-30T11:20:51.000Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🤪"
+        }
       }
     ],
     "developerBuzz": [
@@ -195,11 +221,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 881,
-          "commentsCount": 496
+          "upvotes": 962,
+          "commentsCount": 547
         },
         "publishedAt": "2026-06-30T17:59:52.000Z",
-        "collectedAt": "2026-07-01T01:36:20.189Z",
+        "collectedAt": "2026-07-01T04:16:57.062Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48736605",
           "matchedKeywords": [
@@ -219,38 +245,15 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 1420,
-          "commentsCount": 403
+          "upvotes": 1543,
+          "commentsCount": 445
         },
         "publishedAt": "2026-06-30T15:44:24.000Z",
-        "collectedAt": "2026-07-01T01:36:20.189Z",
+        "collectedAt": "2026-07-01T04:16:57.062Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48734373",
           "matchedKeywords": [
             "claude"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48713832",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88",
-        "url": "https://danunparsed.com/p/hackerrank-open-source-ats",
-        "author": "sambellll",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 1011,
-          "commentsCount": 430
-        },
-        "publishedAt": "2026-06-29T01:44:40.000Z",
-        "collectedAt": "2026-07-01T01:36:20.189Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48713832",
-          "matchedKeywords": [
-            "ai"
           ]
         }
       },
@@ -265,11 +268,11 @@
           "cursor"
         ],
         "metrics": {
-          "upvotes": 1005,
+          "upvotes": 1006,
           "commentsCount": 616
         },
         "publishedAt": "2026-06-29T03:42:07.000Z",
-        "collectedAt": "2026-07-01T01:36:20.189Z",
+        "collectedAt": "2026-07-01T04:16:57.062Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48714529",
           "matchedKeywords": [
@@ -288,13 +291,36 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 668,
-          "commentsCount": 1505
+          "upvotes": 669,
+          "commentsCount": 1509
         },
         "publishedAt": "2026-06-29T10:45:51.000Z",
-        "collectedAt": "2026-07-01T01:36:20.189Z",
+        "collectedAt": "2026-07-01T04:16:57.062Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48717469",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48724230",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": ".self: A new top-level domain designed to support self-hosting",
+        "url": "https://hccf.onmy.cloud/2026/06/21/reclaiming-our-digital-selves-hccfs-vision-for-a-human-centered-top-level-domain/",
+        "author": "HumanCCF",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 661,
+          "commentsCount": 372
+        },
+        "publishedAt": "2026-06-29T19:49:28.000Z",
+        "collectedAt": "2026-07-01T04:16:57.062Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48724230",
           "matchedKeywords": [
             "ai"
           ]
@@ -302,6 +328,26 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmr1js18u03imslnld2yrjboo",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "美团 LongCat-2.0 正式发布：国产算力集群训练的万亿参数大模型",
+        "url": "https://mp.weixin.qq.com/s/9XFcx3fmFcmbry5bHMJsow",
+        "summary": "美团于6月30日发布新一代万亿参数大模型LongCat-2.0并开源。总参数1.6T，平均激活约48B，原生支持1M超长上下文，在五万卡国产算力集群上完成全流程训练与推理。采用LSA稀疏注意力、零计算专家、ScMoE及MOPD多专家融合（Agent/Reasoning/Interaction三组专家）架构。评测中SWE-bench Pro获59.5，SWE-bench Multilingual获77.3。预览版已通过OpenRouter和longcat.ai开放，月调用量跻身OpenRouter全球前三。",
+        "description": "美团于6月30日发布新一代万亿参数大模型LongCat-2.0并开源。总参数1.6T，平均激活约48B，原生支持1M超长上下文，在五万卡国产算力集群上完成全流程训练与推理。采用LSA稀疏注意力、零计算专家、ScMoE及MOPD多专家融合（Agent/Reasoning/Interaction三组专家）架构。评测中SWE-bench Pro获59.5，SWE-bench Multilingual获77.3。预览版已通过OpenRouter和longcat.ai开放，月调用量跻身OpenRouter全球前三。",
+        "category": "models",
+        "originalSource": "公众号：龙猫LongCat（美团）",
+        "originalUrl": "https://mp.weixin.qq.com/s/9XFcx3fmFcmbry5bHMJsow",
+        "recommendedReason": "美团于6月30日发布新一代万亿参数大模型LongCat-2.0并开源。总参数1.6T，平均激活约48B，原生支持1M超长上下文，在五万卡国产算力集群上完成全流程训练与推理。采用LSA稀疏注意力、零计算专家、ScMoE及MOPD多专家融合（Agent/Reasoning/Interaction三组专家）架构。评测中SWE-bench Pro获59.5，SWE-bench Multilingual获77.3。预览版已通过OpenRouter和longcat.ai开放，月调用量跻身OpenRouter全球前三。",
+        "publishedAt": "2026-07-01T02:24:00.000Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
+        "raw": {
+          "id": "cmr1js18u03imslnld2yrjboo",
+          "titleEn": "美团 LongCat-2.0 正式发布：在国产算力集群上完成全流程训练与推理的万亿参数模型",
+          "apiCategory": "ai-models"
+        }
+      },
       {
         "id": "aihot:cmr1eiq770260slnlxguii7jy",
         "source": "aihot",
@@ -315,7 +361,7 @@
         "originalUrl": "https://x.com/shao__meng/status/2072126769986220157",
         "recommendedReason": "mattpocockuk 的 /writing-great-skills 成为其最常调用的 Skill，指导如何编写稳定可预测的 AI Skill。核心：以过程可预测为目标；区分 model-invoked（自动触发）与 user-invoked（用户调用），description 应作触发器；采用三层信息结构（主步骤、参考、外部文件）实现渐进式披露；每步骤需明确完成标准；拆分 Skill 是为了控制模型注意力；利用 leading word 压缩行为要求。同时诊断五种失败模式：Premature completion、Duplication、Sediment、Sprawl、No-op，并提供 No-op 测试作为判断句子是否有效的标准。",
         "publishedAt": "2026-07-01T01:14:54.000Z",
-        "collectedAt": "2026-07-01T01:36:21.236Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
         "raw": {
           "id": "cmr1eiq770260slnlxguii7jy",
           "titleEn": "/writing-great-skills https：//github.com/mattpocock/skills/tree/main/skills/productivity/writing-gre…",
@@ -335,7 +381,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/yLb4T2UC16ebKHApdBbgWw",
         "recommendedReason": "Anthropic在Claude Code中植入隐写术：读取本地时区（Asia/Shanghai或Asia/Urumqi）和ANTHROPIC_BASE_URL环境变量，与一份经base64+XOR（密钥91）加密的147个域名列表（含美团、字节跳动、月之暗面等）比对，识别中国用户。识别后，在请求发送前将系统提示词中日期字符串的单引号（U+0027）替换为其他Unicode字符，连字符改为斜杠，作为2-3比特分类标记传回服务器。该隐蔽行为被社区逆向发现后引发争议，被认为破坏用户信任。",
         "publishedAt": "2026-07-01T00:11:00.000Z",
-        "collectedAt": "2026-07-01T01:36:21.236Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
         "raw": {
           "id": "cmr1bxokg01eoslnlem278yfq",
           "titleEn": "Anthropic偷偷在Claude Code中植入了隐形代码，只为识别中国用户。",
@@ -355,7 +401,7 @@
         "originalUrl": "https://www.ithome.com/0/970/810.htm",
         "recommendedReason": "苹果CEO库克与欧盟科技事务负责人维尔库宁就新版Siri AI在欧推出举行建设性视频会议。新版Siri将转为可调用用户个人数据的聊天机器人，但因《数字市场法》互操作义务苹果拒绝向竞争对手开放同等数据权限，暂不在欧盟iPhone和iPad上推出。苹果提出\"可信系统代理\"方案，拟在设备与第三方AI模型间增加软件层，但未开发，并要求18个月监管宽限期，遭欧盟拒绝。欧盟收到数百封消费者邮件及死亡威胁。",
         "publishedAt": "2026-06-30T23:43:32.000Z",
-        "collectedAt": "2026-07-01T01:36:21.236Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
         "raw": {
           "id": "cmr1bb1gr01adslnlt43fwfff",
           "titleEn": "苹果 CEO 库克与欧盟科技主管就 Siri AI 展开\"建设性\"会谈",
@@ -375,7 +421,7 @@
         "originalUrl": "https://x.com/AISafetyMemes/status/2072085914558558402",
         "recommendedReason": "AI Safety Memes 推文指出，AI 刚刚解决了 9 个未解决的数学问题，但全球没有记者报道。引用 @WeinsteinOmri 的推文称，采用\"prover-verifier\"LLM 循环的方法，成功解决了理论计算机科学中 9 个重大开放问题，其中包括一个困扰其长达 2 年的难题。该研究由哥伦比亚大学合作者完成，并计划将这一方法扩展到所有科学领域。",
         "publishedAt": "2026-06-30T22:32:34.000Z",
-        "collectedAt": "2026-07-01T01:36:21.236Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
         "raw": {
           "id": "cmr190seo00nsslnlxmfddenz",
           "titleEn": "AI just solved not one， but ***9*** unsolved math problems. Once again， instead of this being a glo…",
@@ -395,7 +441,7 @@
         "originalUrl": "https://x.com/NotebookLM/status/2072043680442245276",
         "recommendedReason": "NotebookLM 正式向 Web 英文用户全量推出 Short Video Overviews（短视频概览）功能。该功能可将复杂资料自动转化为 60 秒竖屏视频，深入讲解任意概念。此前，这一功能已面向 Google AI Ultra 和 Pro 订阅者（移动端及 Web）推出，免费用户即将可用。",
         "publishedAt": "2026-06-30T19:44:44.000Z",
-        "collectedAt": "2026-07-01T01:36:21.236Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
         "raw": {
           "id": "cmr12g90k00zlsldxyyr0fmt3",
           "titleEn": "There seems to be a *lot* of discourse about our new Short Video Overviews. Want to join in on the f…",
@@ -415,7 +461,7 @@
         "originalUrl": "https://www.anthropic.com/news/claude-sonnet-5",
         "recommendedReason": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
         "publishedAt": "2026-06-30T18:02:06.984Z",
-        "collectedAt": "2026-07-01T01:36:21.236Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
         "raw": {
           "id": "cmr0yev3s005cslw8omm20ml6",
           "titleEn": "Introducing Claude Sonnet 5",
@@ -435,299 +481,12 @@
         "originalUrl": "https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard",
         "recommendedReason": "新加坡初创公司 Acti 发布基于 Google Gemini 的智能体键盘，可代替用户在应用中执行操作。核心功能 Skills 允许用自然语言创建快捷方式，如长按 T 键翻译消息、C 键发送会议链接。早期测试者两周内创建超 1000 个 Skills。采用本地优先架构，默认不访问私人消息。公司获 530 万美元种子轮融资，由 BITKRAFT Ventures 领投，现已开放下载。",
         "publishedAt": "2026-06-30T17:52:46.000Z",
-        "collectedAt": "2026-07-01T01:36:21.236Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
         "raw": {
           "id": "cmr0yab2e003oslw8uw5zghrc",
           "titleEn": "Acti puts AI agents directly into your smartphone keyboard",
           "apiCategory": "ai-products"
         }
-      },
-      {
-        "id": "aihot:cmr0xc7sg0040slb3yenz5k02",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Claude Science 科研工作台正式上线",
-        "url": "https://www.anthropic.com/news/claude-science-ai-workbench",
-        "summary": "Anthropic 推出 AI 科研工作台 Claude Science，整合常用工具与计算资源，支持从文献分析到多步骤研究的全流程。提供超 60 项预配置技能与连接器，覆盖基因组学、单细胞、蛋白质组学、结构生物学、化学信息学等领域；可在macOS/Linux本地运行，或通过SSH/HPC远程使用。生成含代码和环境的可审计成果（3D蛋白质结构、基因组浏览器轨迹等），内置reviewer agent自动检查引用与计算错误。通过NVIDIA BioNeMo接入Evo 2、Boltz-2等模型，也支持连接自有模型与管道。今日以beta版面向Claude Pro、Max、Team和Enterprise用户开放。",
-        "description": "Anthropic 推出 AI 科研工作台 Claude Science，整合常用工具与计算资源，支持从文献分析到多步骤研究的全流程。提供超 60 项预配置技能与连接器，覆盖基因组学、单细胞、蛋白质组学、结构生物学、化学信息学等领域；可在macOS/Linux本地运行，或通过SSH/HPC远程使用。生成含代码和环境的可审计成果（3D蛋白质结构、基因组浏览器轨迹等），内置reviewer agent自动检查引用与计算错误。通过NVIDIA BioNeMo接入Evo 2、Boltz-2等模型，也支持连接自有模型与管道。今日以beta版面向Claude Pro、Max、Team和Enterprise用户开放。",
-        "category": "products",
-        "originalSource": "Anthropic：Newsroom（网页）",
-        "originalUrl": "https://www.anthropic.com/news/claude-science-ai-workbench",
-        "recommendedReason": "Anthropic 推出 AI 科研工作台 Claude Science，整合常用工具与计算资源，支持从文献分析到多步骤研究的全流程。提供超 60 项预配置技能与连接器，覆盖基因组学、单细胞、蛋白质组学、结构生物学、化学信息学等领域；可在macOS/Linux本地运行，或通过SSH/HPC远程使用。生成含代码和环境的可审计成果（3D蛋白质结构、基因组浏览器轨迹等），内置reviewer agent自动检查引用与计算错误。通过NVIDIA BioNeMo接入Evo 2、Boltz-2等模型，也支持连接自有模型与管道。今日以beta版面向Claude Pro、Max、Team和Enterprise用户开放。",
-        "publishedAt": "2026-06-30T17:32:06.724Z",
-        "collectedAt": "2026-07-01T01:36:21.236Z",
-        "raw": {
-          "id": "cmr0xc7sg0040slb3yenz5k02",
-          "titleEn": "Claude Science， an AI workbench for scientists， is now available",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmr0x7y97001yslb3tyb8w4ce",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Claude Code 入门：智能体循环",
-        "url": "https://claude.com/blog/getting-started-with-loops",
-        "summary": "Claude Code 团队将智能体循环定义为 agent 重复工作直到满足停止条件的过程，并划分出四种主要类型：turn-based 循环（用户提示触发，Claude 自行判断完成或需更多上下文）、goal-based 循环（通过 `/goal` 命令设定可验证完成标准与最大轮次）、time-based 循环（通过 `/loop` 按时间间隔重复执行，可用 `/schedule` 移至云端）、以及 proactive 循环（基于事件或计划自动运行，无人实时参与）。文章还介绍了如何编写 SKILL.md 文件将人工验证步骤编码，让 Claude 进行端到端自检，减少 turn-based 循环中的手动操作。",
-        "description": "Claude Code 团队将智能体循环定义为 agent 重复工作直到满足停止条件的过程，并划分出四种主要类型：turn-based 循环（用户提示触发，Claude 自行判断完成或需更多上下文）、goal-based 循环（通过 `/goal` 命令设定可验证完成标准与最大轮次）、time-based 循环（通过 `/loop` 按时间间隔重复执行，可用 `/schedule` 移至云端）、以及 proactive 循环（基于事件或计划自动运行，无人实时参与）。文章还介绍了如何编写 SKILL.md 文件将人工验证步骤编码，让 Claude 进行端到端自检，减少 turn-based 循环中的手动操作。",
-        "category": "tools",
-        "originalSource": "Claude：Blog（网页）",
-        "originalUrl": "https://claude.com/blog/getting-started-with-loops",
-        "recommendedReason": "Claude Code 团队将智能体循环定义为 agent 重复工作直到满足停止条件的过程，并划分出四种主要类型：turn-based 循环（用户提示触发，Claude 自行判断完成或需更多上下文）、goal-based 循环（通过 `/goal` 命令设定可验证完成标准与最大轮次）、time-based 循环（通过 `/loop` 按时间间隔重复执行，可用 `/schedule` 移至云端）、以及 proactive 循环（基于事件或计划自动运行，无人实时参与）。文章还介绍了如何编写 SKILL.md 文件将人工验证步骤编码，让 Claude 进行端到端自检，减少 turn-based 循环中的手动操作。",
-        "publishedAt": "2026-06-30T17:28:28.530Z",
-        "collectedAt": "2026-07-01T01:36:21.236Z",
-        "raw": {
-          "id": "cmr0x7y97001yslb3tyb8w4ce",
-          "titleEn": "Getting started with loops",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmr0wupt4007gsl403t7s6dbn",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "ADK Go 2.0 发布：构建可靠的多智能体应用，新增基于图的工作流引擎、人工参与循环与动态编排",
-        "url": "https://developers.googleblog.com/announcing-adk-go-20",
-        "summary": "Agent Development Kit （ADK） for Go 2.0 发布，引入了一类基于图的工作流引擎，用于组合复杂多智能体应用。新版本内置人工参与循环（HITL）编排、使用纯 Go 代码的动态执行、以及指数退避重试等自动弹性特性。统一执行模型后，单智能体应用与复杂图均运行在同一运行时上，简化了遥测与状态持久化。",
-        "description": "Agent Development Kit （ADK） for Go 2.0 发布，引入了一类基于图的工作流引擎，用于组合复杂多智能体应用。新版本内置人工参与循环（HITL）编排、使用纯 Go 代码的动态执行、以及指数退避重试等自动弹性特性。统一执行模型后，单智能体应用与复杂图均运行在同一运行时上，简化了遥测与状态持久化。",
-        "category": "products",
-        "originalSource": "Google Developers Blog（RSS）",
-        "originalUrl": "https://developers.googleblog.com/announcing-adk-go-20",
-        "recommendedReason": "Agent Development Kit （ADK） for Go 2.0 发布，引入了一类基于图的工作流引擎，用于组合复杂多智能体应用。新版本内置人工参与循环（HITL）编排、使用纯 Go 代码的动态执行、以及指数退避重试等自动弹性特性。统一执行模型后，单智能体应用与复杂图均运行在同一运行时上，简化了遥测与状态持久化。",
-        "publishedAt": "2026-06-30T17:17:40.302Z",
-        "collectedAt": "2026-07-01T01:36:21.236Z",
-        "raw": {
-          "id": "cmr0wupt4007gsl403t7s6dbn",
-          "titleEn": "Build reliable multi-agent applications with ADK Go 2.0. Discover our new graph-based workflow engine， built-in human-in-the-loop， and dynamic orchestration",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmr0x8nxp002gslb33ixw5j4z",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Apple Creator Studio 更新：更智能、更快速、更互联",
-        "url": "https://www.apple.com/newsroom/2026/06/apple-creator-studio-gets-smarter-faster-and-more-connected",
-        "summary": "Apple Creator Studio 推出多项 AI 增强更新。Final Cut Pro 新增 on-device AI 驱动的 Generate Captions（自动转录音频生成字幕）和 Edit Detection（自动检测剪辑点）。Mac 版加入 Auto Mask（自动识别皮肤、天空等主体）、增强的 Match Color 和 Advanced Trimming。支持将帧发送至 Pixelmator Pro 编辑，并在 Keynote、Pages、Numbers 中直接调用 Pixelmator Pro 修改图片。Logic Pro 新增 Grammy 制作人制作的 Producer Project 及 Chord ID 改进。订阅价 $12.99/月或 $129/年，新用户免费试用一个月，教育用户 $2.99/月。",
-        "description": "Apple Creator Studio 推出多项 AI 增强更新。Final Cut Pro 新增 on-device AI 驱动的 Generate Captions（自动转录音频生成字幕）和 Edit Detection（自动检测剪辑点）。Mac 版加入 Auto Mask（自动识别皮肤、天空等主体）、增强的 Match Color 和 Advanced Trimming。支持将帧发送至 Pixelmator Pro 编辑，并在 Keynote、Pages、Numbers 中直接调用 Pixelmator Pro 修改图片。Logic Pro 新增 Grammy 制作人制作的 Producer Project 及 Chord ID 改进。订阅价 $12.99/月或 $129/年，新用户免费试用一个月，教育用户 $2.99/月。",
-        "category": "products",
-        "originalSource": "Apple：Newsroom（RSS）",
-        "originalUrl": "https://www.apple.com/newsroom/2026/06/apple-creator-studio-gets-smarter-faster-and-more-connected",
-        "recommendedReason": "Apple Creator Studio 推出多项 AI 增强更新。Final Cut Pro 新增 on-device AI 驱动的 Generate Captions（自动转录音频生成字幕）和 Edit Detection（自动检测剪辑点）。Mac 版加入 Auto Mask（自动识别皮肤、天空等主体）、增强的 Match Color 和 Advanced Trimming。支持将帧发送至 Pixelmator Pro 编辑，并在 Keynote、Pages、Numbers 中直接调用 Pixelmator Pro 修改图片。Logic Pro 新增 Grammy 制作人制作的 Producer Project 及 Chord ID 改进。订阅价 $12.99/月或 $129/年，新用户免费试用一个月，教育用户 $2.99/月。",
-        "publishedAt": "2026-06-30T16:59:24.233Z",
-        "collectedAt": "2026-07-01T01:36:21.236Z",
-        "raw": {
-          "id": "cmr0x8nxp002gslb33ixw5j4z",
-          "titleEn": "Apple Creator Studio gets smarter， faster， and more connected",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmr0wwa6g0085sl40xkkzeruy",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "用 shot-scraper video 让 AI 智能体录制工作演示视频",
-        "url": "https://simonwillison.net/2026/Jun/30/shot-scraper-video",
-        "summary": "shot-scraper 1.10 新增 shot-scraper video 命令，支持通过 storyboard.yml 文件定义操作步骤，并利用 Playwright 录制浏览器视频。演示视频展示了 Datasette 中从粘贴的 CSV/TSV/JSON 数据创建新表的功能。该功能依赖 Playwright 1.61.0 新增的 screencast 机制，解决了此前视频开头白帧、宽度固定 800px 等问题。开发者 Simon Willison 强调，将 --help 输出设计得足够详细，可使编码 Agent 直接利用该命令生成演示视频。",
-        "description": "shot-scraper 1.10 新增 shot-scraper video 命令，支持通过 storyboard.yml 文件定义操作步骤，并利用 Playwright 录制浏览器视频。演示视频展示了 Datasette 中从粘贴的 CSV/TSV/JSON 数据创建新表的功能。该功能依赖 Playwright 1.61.0 新增的 screencast 机制，解决了此前视频开头白帧、宽度固定 800px 等问题。开发者 Simon Willison 强调，将 --help 输出设计得足够详细，可使编码 Agent 直接利用该命令生成演示视频。",
-        "category": "products",
-        "originalSource": "Simon Willison 博客",
-        "originalUrl": "https://simonwillison.net/2026/Jun/30/shot-scraper-video",
-        "recommendedReason": "shot-scraper 1.10 新增 shot-scraper video 命令，支持通过 storyboard.yml 文件定义操作步骤，并利用 Playwright 录制浏览器视频。演示视频展示了 Datasette 中从粘贴的 CSV/TSV/JSON 数据创建新表的功能。该功能依赖 Playwright 1.61.0 新增的 screencast 机制，解决了此前视频开头白帧、宽度固定 800px 等问题。开发者 Simon Willison 强调，将 --help 输出设计得足够详细，可使编码 Agent 直接利用该命令生成演示视频。",
-        "publishedAt": "2026-06-30T16:54:26.000Z",
-        "collectedAt": "2026-07-01T01:36:21.236Z",
-        "raw": {
-          "id": "cmr0wwa6g0085sl40xkkzeruy",
-          "titleEn": "Have your agent record video demos of its work with shot-scraper video",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmr0v1pn7009kslatrt4gncmj",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Claude Desktop 推出 Linux 公测版",
-        "url": "https://x.com/ClaudeDevs/status/2071988881717871065",
-        "summary": "Claude Desktop 现已在 Linux（Ubuntu 和 Debian）上推出测试版。 除了浏览器和终端，你现在可以在所有付费计划中获得一流的桌面体验，包括 Claude Code、Claude Cowork 和聊天。",
-        "description": "Claude Desktop 现已在 Linux（Ubuntu 和 Debian）上推出测试版。 除了浏览器和终端，你现在可以在所有付费计划中获得一流的桌面体验，包括 Claude Code、Claude Cowork 和聊天。",
-        "category": "products",
-        "originalSource": "X：Claude Devs (@ClaudeDevs)",
-        "originalUrl": "https://x.com/ClaudeDevs/status/2071988881717871065",
-        "recommendedReason": "Claude Desktop 现已在 Linux（Ubuntu 和 Debian）上推出测试版。 除了浏览器和终端，你现在可以在所有付费计划中获得一流的桌面体验，包括 Claude Code、Claude Cowork 和聊天。",
-        "publishedAt": "2026-06-30T16:06:59.000Z",
-        "collectedAt": "2026-07-01T01:36:21.236Z",
-        "raw": {
-          "id": "cmr0v1pn7009kslatrt4gncmj",
-          "titleEn": "Claude Desktop is now available on Linux （Ubuntu and Debian） in beta. Alongside the browser and ter…",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmr0ucc880030slatw1gfkq2h",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Google DeepMind 发布 Nano Banana 2 Lite 和 Gemini Omni Flash",
-        "url": "https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash",
-        "summary": "Google DeepMind 推出 Nano Banana 2 Lite（gemini-3.1-flash-lite-image），为 Nano Banana 系列速度最快、成本最低的图像模型，文本到图像输出仅需 4 秒，每 1K 分辨率图像成本 $0.034，已上线 Google AI Studio、Gemini API 及消费者产品（AI Mode in Search、Gemini app 等）。同时推出 Gemini Omni Flash（gemini-omni-flash-preview），支持高画质视频生成与对话式编辑，视频输出定价 $0.10/秒，面向开发者开放 API。",
-        "description": "Google DeepMind 推出 Nano Banana 2 Lite（gemini-3.1-flash-lite-image），为 Nano Banana 系列速度最快、成本最低的图像模型，文本到图像输出仅需 4 秒，每 1K 分辨率图像成本 $0.034，已上线 Google AI Studio、Gemini API 及消费者产品（AI Mode in Search、Gemini app 等）。同时推出 Gemini Omni Flash（gemini-omni-flash-preview），支持高画质视频生成与对话式编辑，视频输出定价 $0.10/秒，面向开发者开放 API。",
-        "category": "models",
-        "originalSource": "Google DeepMind：Blog（RSS）",
-        "originalUrl": "https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash",
-        "recommendedReason": "Google DeepMind 推出 Nano Banana 2 Lite（gemini-3.1-flash-lite-image），为 Nano Banana 系列速度最快、成本最低的图像模型，文本到图像输出仅需 4 秒，每 1K 分辨率图像成本 $0.034，已上线 Google AI Studio、Gemini API 及消费者产品（AI Mode in Search、Gemini app 等）。同时推出 Gemini Omni Flash（gemini-omni-flash-preview），支持高画质视频生成与对话式编辑，视频输出定价 $0.10/秒，面向开发者开放 API。",
-        "publishedAt": "2026-06-30T16:02:40.000Z",
-        "collectedAt": "2026-07-01T01:36:21.236Z",
-        "raw": {
-          "id": "cmr0ucc880030slatw1gfkq2h",
-          "titleEn": "Start building with Nano Banana 2 Lite and Gemini Omni Flash",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmr0vkch300f5slate2n251dm",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Grant Sanderson 谈 AI 与数学的未来",
-        "url": "https://www.dwarkesh.com/p/grant-sanderson-2",
-        "summary": "3Blue1Brown 创办人 Grant Sanderson 正在制作记录 AI 在数学领域进展的新项目。他在与 Dwarkesh Patel 的对谈中指出，AI 在 IMO 获金牌并不等于 AGI，只是又一个被攻克的基准。即使 AI 未来解决千禧年大奖难题，仍可能存在大量人类任务无法被自动化。对话还探讨了概念突破验证周期可长达一个世纪、Riemann 假设的 AI 证明能否被人类理解、AI 能否在已有文献间发现隐藏联系，以及现实经济任务难以套用强化学习环境等话题。",
-        "description": "3Blue1Brown 创办人 Grant Sanderson 正在制作记录 AI 在数学领域进展的新项目。他在与 Dwarkesh Patel 的对谈中指出，AI 在 IMO 获金牌并不等于 AGI，只是又一个被攻克的基准。即使 AI 未来解决千禧年大奖难题，仍可能存在大量人类任务无法被自动化。对话还探讨了概念突破验证周期可长达一个世纪、Riemann 假设的 AI 证明能否被人类理解、AI 能否在已有文献间发现隐藏联系，以及现实经济任务难以套用强化学习环境等话题。",
-        "category": "tools",
-        "originalSource": "Dwarkesh Patel：Podcast & Blog（RSS）",
-        "originalUrl": "https://www.dwarkesh.com/p/grant-sanderson-2",
-        "recommendedReason": "3Blue1Brown 创办人 Grant Sanderson 正在制作记录 AI 在数学领域进展的新项目。他在与 Dwarkesh Patel 的对谈中指出，AI 在 IMO 获金牌并不等于 AGI，只是又一个被攻克的基准。即使 AI 未来解决千禧年大奖难题，仍可能存在大量人类任务无法被自动化。对话还探讨了概念突破验证周期可长达一个世纪、Riemann 假设的 AI 证明能否被人类理解、AI 能否在已有文献间发现隐藏联系，以及现实经济任务难以套用强化学习环境等话题。",
-        "publishedAt": "2026-06-30T15:53:19.000Z",
-        "collectedAt": "2026-07-01T01:36:21.236Z",
-        "raw": {
-          "id": "cmr0vkch300f5slate2n251dm",
-          "titleEn": "Grant Sanderson - AI and the future of math",
-          "apiCategory": "tip"
-        }
-      }
-    ],
-    "crossSourceHighlights": [
-      {
-        "id": "url:https://anthropic.com/news/claude-sonnet-5",
-        "canonicalId": "url:https://anthropic.com/news/claude-sonnet-5",
-        "title": "Claude Sonnet 5 发布",
-        "canonicalUrl": "https://anthropic.com/news/claude-sonnet-5",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://anthropic.com/news/claude-sonnet-5",
-          "title:claude sonnet 5 发布",
-          "topic:coding agent / swe agent",
-          "title:claude sonnet 5"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmr0yev3s005cslw8omm20ml6",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Claude Sonnet 5 发布",
-            "url": "https://www.anthropic.com/news/claude-sonnet-5",
-            "summary": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
-            "description": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
-            "category": "models",
-            "originalSource": "Anthropic：Newsroom（网页）",
-            "originalUrl": "https://www.anthropic.com/news/claude-sonnet-5",
-            "recommendedReason": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
-            "publishedAt": "2026-06-30T18:02:06.984Z",
-            "collectedAt": "2026-07-01T01:36:21.236Z",
-            "raw": {
-              "id": "cmr0yev3s005cslw8omm20ml6",
-              "titleEn": "Introducing Claude Sonnet 5",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:48736605",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Claude Sonnet 5",
-            "url": "https://www.anthropic.com/news/claude-sonnet-5",
-            "author": "marinesebastian",
-            "tags": [
-              "anthropic",
-              "claude"
-            ],
-            "metrics": {
-              "upvotes": 881,
-              "commentsCount": 496
-            },
-            "publishedAt": "2026-06-30T17:59:52.000Z",
-            "collectedAt": "2026-07-01T01:36:20.189Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48736605",
-              "matchedKeywords": [
-                "anthropic",
-                "claude"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmr0yev3s005cslw8omm20ml6",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Claude Sonnet 5 发布",
-            "url": "https://www.anthropic.com/news/claude-sonnet-5",
-            "summary": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
-            "description": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
-            "category": "models",
-            "originalSource": "Anthropic：Newsroom（网页）",
-            "originalUrl": "https://www.anthropic.com/news/claude-sonnet-5",
-            "recommendedReason": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
-            "publishedAt": "2026-06-30T18:02:06.984Z",
-            "collectedAt": "2026-07-01T01:36:21.236Z",
-            "raw": {
-              "id": "cmr0yev3s005cslw8omm20ml6",
-              "titleEn": "Introducing Claude Sonnet 5",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:48736605",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Claude Sonnet 5",
-            "url": "https://www.anthropic.com/news/claude-sonnet-5",
-            "author": "marinesebastian",
-            "tags": [
-              "anthropic",
-              "claude"
-            ],
-            "metrics": {
-              "upvotes": 881,
-              "commentsCount": 496
-            },
-            "publishedAt": "2026-06-30T17:59:52.000Z",
-            "collectedAt": "2026-07-01T01:36:20.189Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48736605",
-              "matchedKeywords": [
-                "anthropic",
-                "claude"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 881,
-          "commentsCount": 496,
-          "hnScore": 881,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "models",
-        "summary": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-06-30T17:59:52.000Z",
-        "lastSeenAt": "2026-07-01T01:36:21.236Z"
       }
     ]
   }

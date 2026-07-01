@@ -1,28 +1,28 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-07-01-2026-06-30T23-59-59-877Z",
-  "generatedAt": "2026-06-30T23:59:59.877Z",
+  "runId": "lightweight-2026-07-01-2026-07-01T04-16-56-572Z",
+  "generatedAt": "2026-07-01T04:16:56.572Z",
   "targetDate": "2026-07-01",
   "brief": {
     "date": "2026-07-01",
-    "headline": "Today's strongest AI trend signals are Coding Agent / Swe Agent, Ai Model Release, and Mcp / Tool Calling.",
+    "headline": "Today's strongest AI trend signals are Coding Agent / Swe Agent, Rag / Knowledge Base, and Ai Model Release.",
     "keyTakeaways": [
-      "Coding Agent / Swe Agent: This topic appeared across 2 source(s): aihot, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Coding Agent / Swe Agent: This topic appeared across 2 source(s): aihot, hackernews, with 8 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Coding Agent / Swe Agent: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
       "Coding Agent / Swe Agent: watch decision is deep_dive.",
-      "Ai Model Release: This topic appeared across 3 source(s): aihot, huggingface_models, huggingface_spaces, with 5 related signal(s). Treat it as correlation evidence rather than pro.",
+      "Rag / Knowledge Base: This topic appeared across 1 source(s): hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Rag / Knowledge Base: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
+      "Rag / Knowledge Base: watch decision is track.",
+      "Ai Model Release: This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adop.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
-      "Ai Model Release: watch decision is deep_dive.",
-      "Mcp / Tool Calling: This topic appeared across 2 source(s): aihot, huggingface_spaces, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-      "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
-      "Mcp / Tool Calling: watch decision is deep_dive."
+      "Ai Model Release: watch decision is deep_dive."
     ],
     "topicBriefs": [
       {
         "id": "topic:coding agent / swe agent",
         "title": "Coding Agent / Swe Agent",
-        "category": "models",
+        "category": "industry",
         "sources": [
           "aihot",
           "hackernews"
@@ -31,13 +31,14 @@
         "heatScore": 340,
         "confidence": "medium",
         "watchDecision": "deep_dive",
-        "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in models represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in industry represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 8 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Coding Agent / Swe Agent should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
+          "industry",
           "models",
           "tools",
           "products",
@@ -55,10 +56,10 @@
               "claude"
             ],
             "publishedAt": "2026-06-30T15:44:24.000Z",
-            "collectedAt": "2026-07-01T00:00:00.242Z",
+            "collectedAt": "2026-07-01T04:16:57.062Z",
             "metrics": {
-              "upvotes": 1319,
-              "commentsCount": 378
+              "upvotes": 1543,
+              "commentsCount": 445
             }
           },
           {
@@ -71,11 +72,22 @@
               "cursor"
             ],
             "publishedAt": "2026-06-29T03:42:07.000Z",
-            "collectedAt": "2026-07-01T00:00:00.242Z",
+            "collectedAt": "2026-07-01T04:16:57.062Z",
             "metrics": {
-              "upvotes": 1003,
+              "upvotes": 1006,
               "commentsCount": 616
             }
+          },
+          {
+            "id": "aihot:cmr1bxokg01eoslnlem278yfq",
+            "title": "Anthropic在Claude Code中植入隐写术代码识别中国用户",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://mp.weixin.qq.com/s/yLb4T2UC16ebKHApdBbgWw",
+            "summary": "Anthropic在Claude Code中植入隐写术：读取本地时区（Asia/Shanghai或Asia/Urumqi）和ANTHROPIC_BASE_URL环境变量，与一份经base64+XOR（密钥91）加密的147个域名列表（含美团、字节跳动、月之暗面等）比对，识别中国用户。识别后，在请求发送前将系统提示词中日期字符串的单引号（U+0027）替换为其他Unicode字符，连字符改为斜杠，作为2-3比特分类标记传回服务器。该隐蔽行为被社区逆向发现后引发争议，被认为破坏用户信任。",
+            "category": "industry",
+            "publishedAt": "2026-07-01T00:11:00.000Z",
+            "collectedAt": "2026-07-01T04:16:57.546Z"
           },
           {
             "id": "aihot:cmr0yev3s005cslw8omm20ml6",
@@ -86,7 +98,7 @@
             "summary": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
             "category": "models",
             "publishedAt": "2026-06-30T18:02:06.984Z",
-            "collectedAt": "2026-07-01T00:00:01.582Z"
+            "collectedAt": "2026-07-01T04:16:57.546Z"
           },
           {
             "id": "aihot:cmr0x7y97001yslb3tyb8w4ce",
@@ -97,7 +109,7 @@
             "summary": "Claude Code 团队将智能体循环定义为 agent 重复工作直到满足停止条件的过程，并划分出四种主要类型：turn-based 循环（用户提示触发，Claude 自行判断完成或需更多上下文）、goal-based 循环（通过 `/goal` 命令设定可验证完成标准与最大轮次）、time-based 循环（通过 `/loop` 按时间间隔重复执行，可用 `/schedule` 移至云端）、以及 proactive 循环（基于事件或计划自动运行，无人实时参与）。文章还介绍了如何编写 SKILL.md 文件将人工验证步骤编码，让 Claude 进行端到端自检，减少 turn-based 循环中的手动操作。",
             "category": "tools",
             "publishedAt": "2026-06-30T17:28:28.530Z",
-            "collectedAt": "2026-07-01T00:00:01.582Z"
+            "collectedAt": "2026-07-01T04:16:57.546Z"
           },
           {
             "id": "aihot:cmr0v1pn7009kslatrt4gncmj",
@@ -108,21 +120,11 @@
             "summary": "Claude Desktop 现已在 Linux（Ubuntu 和 Debian）上推出测试版。 除了浏览器和终端，你现在可以在所有付费计划中获得一流的桌面体验，包括 Claude Code、Claude Cowork 和聊天。",
             "category": "products",
             "publishedAt": "2026-06-30T16:06:59.000Z",
-            "collectedAt": "2026-07-01T00:00:01.582Z"
-          },
-          {
-            "id": "aihot:cmr07c62l04huslkimxy3vdw5",
-            "title": "X（Twitter）发布 hosted X MCP，AI 智能体可直连 X API",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://x.com/op7418/status/2071816099986022650",
-            "summary": "X（Twitter）官方推出 hosted X MCP，AI 智能体可通过 MCP 协议直接调用 X API 获取实时信息，支持 Grok、Cursor 等工具。用户需注册 X API 并按量付费，个人优惠价每次调用 0.01 美元（1 美元 1000 次）。有用户实测拉取近三天书签仅花 0.1 美元。配置步骤：创建 APP 并充值、获取配置 ID、辅助配置（可交给 Codex/Claude）、授权启动。",
-            "category": "products",
-            "publishedAt": "2026-06-30T04:40:25.000Z",
-            "collectedAt": "2026-07-01T00:00:01.582Z"
+            "collectedAt": "2026-07-01T04:16:57.546Z"
           }
         ],
         "relatedEntities": [
+          "Anthropic在Claude Code中植入隐写术代码识别中国用户",
           "Claude Sonnet 5 发布",
           "Claude Code 入门：智能体循环",
           "Claude Desktop 推出 Linux 公测版",
@@ -132,10 +134,76 @@
           "Age verification is just a precursor to automated attribution of speech"
         ],
         "metrics": {
-          "votes": 1319,
+          "votes": 1543,
           "commentsCount": 616,
           "heatScore": 340,
           "crossSourceBonus": 10
+        }
+      },
+      {
+        "id": "topic:rag / knowledge base",
+        "title": "Rag / Knowledge Base",
+        "sources": [
+          "hackernews"
+        ],
+        "sourceCount": 1,
+        "heatScore": 320,
+        "confidence": "low",
+        "watchDecision": "track",
+        "whatItIs": "Rag / Knowledge Base is an AI trend topic represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 1 source(s): hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Rag / Knowledge Base should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
+        "technicalKeywords": [
+          "ai",
+          "rag"
+        ],
+        "evidenceItems": [
+          {
+            "id": "hackernews:48716902",
+            "title": "Pollen tried to remove my article and Google is assisting with it",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://blog.pragmaticengineer.com/pollen-tried-to-remove-my-article-about-callum-negus-fancey-and-google-is-assisting-to-it/",
+            "tags": [
+              "rag"
+            ],
+            "publishedAt": "2026-06-29T09:28:08.000Z",
+            "collectedAt": "2026-07-01T04:16:57.062Z",
+            "metrics": {
+              "upvotes": 905,
+              "commentsCount": 126
+            }
+          },
+          {
+            "id": "hackernews:48741847",
+            "title": "Taiwanese Go Deep into Debt to Amp 100% Stock Rally",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://www.bloomberg.com/news/articles/2026-06-23/tsmc-fueled-ai-frenzy-makes-taiwan-capital-of-leveraged-stock-bets",
+            "tags": [
+              "ai",
+              "rag"
+            ],
+            "publishedAt": "2026-07-01T03:10:37.000Z",
+            "collectedAt": "2026-07-01T04:16:57.062Z",
+            "metrics": {
+              "upvotes": 2,
+              "commentsCount": 0
+            }
+          }
+        ],
+        "relatedEntities": [
+          "Taiwanese Go Deep into Debt to Amp 100% Stock Rally",
+          "Pollen tried to remove my article and Google is assisting with it"
+        ],
+        "metrics": {
+          "votes": 905,
+          "commentsCount": 126,
+          "heatScore": 320,
+          "crossSourceBonus": 0
         }
       },
       {
@@ -144,28 +212,28 @@
         "category": "papers",
         "sources": [
           "aihot",
-          "huggingface_models",
-          "huggingface_spaces"
+          "huggingface_spaces",
+          "hackernews"
         ],
         "sourceCount": 3,
-        "heatScore": 160,
+        "heatScore": 161,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Ai Model Release is an AI trend topic in papers represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_models, huggingface_spaces, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
           "papers",
-          "transformers",
-          "safetensors",
-          "generated_from_trainer",
-          "grpo",
-          "trl",
-          "arxiv:2402.03300",
-          "base_model:HuggingFaceTB/SmolLM2-1.7B-Instruct"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code"
         ],
         "evidenceItems": [
           {
@@ -177,7 +245,7 @@
             "summary": "AI Safety Memes 推文指出，AI 刚刚解决了 9 个未解决的数学问题，但全球没有记者报道。引用 @WeinsteinOmri 的推文称，采用\"prover-verifier\"LLM 循环的方法，成功解决了理论计算机科学中 9 个重大开放问题，其中包括一个困扰其长达 2 年的难题。该研究由哥伦比亚大学合作者完成，并计划将这一方法扩展到所有科学领域。",
             "category": "papers",
             "publishedAt": "2026-06-30T22:32:34.000Z",
-            "collectedAt": "2026-07-01T00:00:01.582Z"
+            "collectedAt": "2026-07-01T04:16:57.546Z"
           },
           {
             "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
@@ -198,7 +266,7 @@
               "region:us"
             ],
             "publishedAt": "2023-04-17T11:40:06.000Z",
-            "collectedAt": "2026-06-30T23:59:59.987Z",
+            "collectedAt": "2026-07-01T04:16:56.769Z",
             "metrics": {
               "likes": 14037
             }
@@ -218,7 +286,7 @@
               "region:us"
             ],
             "publishedAt": "2023-06-08T18:00:26.000Z",
-            "collectedAt": "2026-06-30T23:59:59.987Z",
+            "collectedAt": "2026-07-01T04:16:56.769Z",
             "metrics": {
               "likes": 5076
             }
@@ -241,47 +309,40 @@
               "region:us"
             ],
             "publishedAt": "2024-07-05T16:35:24.000Z",
-            "collectedAt": "2026-06-30T23:59:59.987Z",
+            "collectedAt": "2026-07-01T04:16:56.769Z",
             "metrics": {
               "likes": 3753
             }
           },
           {
-            "id": "huggingface_models:neyssemhajji16/smollm2-1.7b-text2sql-grpo",
-            "title": "neyssemhajji16/smollm2-1.7b-text2sql-grpo",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/neyssemhajji16/smollm2-1.7b-text2sql-grpo",
+            "id": "hackernews:48741933",
+            "title": "1M Context: Making Long-Horizon Tasks Stable and Practical",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://docs.z.ai/guides/llm/glm-5.2",
             "tags": [
-              "transformers",
-              "safetensors",
-              "generated_from_trainer",
-              "grpo",
-              "trl",
-              "arxiv:2402.03300",
-              "base_model:HuggingFaceTB/SmolLM2-1.7B-Instruct",
-              "base_model:finetune:HuggingFaceTB/SmolLM2-1.7B-Instruct",
-              "endpoints_compatible",
-              "region:us"
+              "ai",
+              "llm"
             ],
-            "publishedAt": "2026-06-30T15:25:56.000Z",
-            "collectedAt": "2026-06-30T23:59:59.980Z",
+            "publishedAt": "2026-07-01T03:32:30.000Z",
+            "collectedAt": "2026-07-01T04:16:57.062Z",
             "metrics": {
-              "downloads": 0,
-              "likes": 0
+              "upvotes": 1,
+              "commentsCount": 0
             }
           }
         ],
         "relatedEntities": [
           "AI 用 prover-verifier LLM 循环攻克 9 个未解数学难题",
-          "neyssemhajji16/smollm2-1.7b-text2sql-grpo",
           "Open LLM Leaderboard",
           "MusicGen",
-          "Live Portrait"
+          "Live Portrait",
+          "1M Context: Making Long-Horizon Tasks Stable and Practical"
         ],
         "metrics": {
+          "votes": 1,
           "likes": 14037,
-          "heatScore": 160,
+          "heatScore": 161,
           "crossSourceBonus": 20
         }
       },
@@ -319,7 +380,7 @@
             "summary": "X（Twitter）官方推出 hosted X MCP，AI 智能体可通过 MCP 协议直接调用 X API 获取实时信息，支持 Grok、Cursor 等工具。用户需注册 X API 并按量付费，个人优惠价每次调用 0.01 美元（1 美元 1000 次）。有用户实测拉取近三天书签仅花 0.1 美元。配置步骤：创建 APP 并充值、获取配置 ID、辅助配置（可交给 Codex/Claude）、授权启动。",
             "category": "products",
             "publishedAt": "2026-06-30T04:40:25.000Z",
-            "collectedAt": "2026-07-01T00:00:01.582Z"
+            "collectedAt": "2026-07-01T04:16:57.546Z"
           },
           {
             "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
@@ -334,9 +395,9 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-06-30T23:59:59.987Z",
+            "collectedAt": "2026-07-01T04:16:56.769Z",
             "metrics": {
-              "likes": 3473
+              "likes": 3474
             }
           },
           {
@@ -352,7 +413,7 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-06-30T23:59:59.987Z",
+            "collectedAt": "2026-07-01T04:16:56.769Z",
             "metrics": {
               "likes": 3269
             }
@@ -370,9 +431,9 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-06-30T23:59:59.987Z",
+            "collectedAt": "2026-07-01T04:16:56.769Z",
             "metrics": {
-              "likes": 2871
+              "likes": 2872
             }
           },
           {
@@ -388,7 +449,7 @@
               "region:us"
             ],
             "publishedAt": "2025-10-27T03:20:43.000Z",
-            "collectedAt": "2026-06-30T23:59:59.987Z",
+            "collectedAt": "2026-07-01T04:16:56.769Z",
             "metrics": {
               "likes": 2828
             }
@@ -402,143 +463,9 @@
           "Wan2.2 14B Preview"
         ],
         "metrics": {
-          "likes": 3473,
+          "likes": 3474,
           "heatScore": 140,
           "crossSourceBonus": 10
-        }
-      },
-      {
-        "id": "topic:local llm / inference",
-        "title": "Local Llm / Inference",
-        "sources": [
-          "huggingface_models"
-        ],
-        "sourceCount": 1,
-        "heatScore": 20,
-        "confidence": "low",
-        "watchDecision": "wait",
-        "whatItIs": "Local Llm / Inference is an AI trend topic represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 1 source(s): huggingface_models, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
-        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
-        "technicalKeywords": [
-          "gguf",
-          "license:mit",
-          "endpoints_compatible",
-          "region:us",
-          "imatrix",
-          "conversational",
-          "transformers",
-          "safetensors"
-        ],
-        "evidenceItems": [
-          {
-            "id": "huggingface_models:tarruda/DeepSeek-V4-Flash-GGUF",
-            "title": "tarruda/DeepSeek-V4-Flash-GGUF",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/tarruda/DeepSeek-V4-Flash-GGUF",
-            "tags": [
-              "gguf",
-              "license:mit",
-              "endpoints_compatible",
-              "region:us",
-              "imatrix",
-              "conversational"
-            ],
-            "publishedAt": "2026-06-30T18:38:18.000Z",
-            "collectedAt": "2026-06-30T23:59:59.980Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:lz2pit/my-custom-model",
-            "title": "lz2pit/my-custom-model",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/lz2pit/my-custom-model",
-            "tags": [
-              "gguf",
-              "endpoints_compatible",
-              "region:us",
-              "conversational"
-            ],
-            "publishedAt": "2026-06-30T05:44:13.000Z",
-            "collectedAt": "2026-06-30T23:59:59.980Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:yunjae-won/qwen4b_noclip_default_KLeff_smooth_gamma1e-6_ReWeight_staticKL_reg4_step125",
-            "title": "yunjae-won/qwen4b_noclip_default_KLeff_smooth_gamma1e-6_ReWeight_staticKL_reg4_step125",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/yunjae-won/qwen4b_noclip_default_KLeff_smooth_gamma1e-6_ReWeight_staticKL_reg4_step125",
-            "category": "text-generation",
-            "tags": [
-              "transformers",
-              "safetensors",
-              "qwen3",
-              "text-generation",
-              "conversational",
-              "arxiv:1910.09700",
-              "base_model:Qwen/Qwen3-4B",
-              "base_model:finetune:Qwen/Qwen3-4B",
-              "text-generation-inference",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-06-30T23:57:17.000Z",
-            "collectedAt": "2026-06-30T23:59:59.980Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:fpadovani/jpn-jpan-100mb-100mb_seed10",
-            "title": "fpadovani/jpn-jpan-100mb-100mb_seed10",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/fpadovani/jpn-jpan-100mb-100mb_seed10",
-            "category": "text-generation",
-            "tags": [
-              "transformers",
-              "safetensors",
-              "gpt2",
-              "text-generation",
-              "generated_from_trainer",
-              "trl",
-              "sft",
-              "base_model:goldfish-models/jpn_jpan_100mb",
-              "base_model:finetune:goldfish-models/jpn_jpan_100mb",
-              "text-generation-inference",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-06-30T22:10:55.000Z",
-            "collectedAt": "2026-06-30T23:59:59.980Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          }
-        ],
-        "relatedEntities": [
-          "tarruda/DeepSeek-V4-Flash-GGUF",
-          "lz2pit/my-custom-model",
-          "yunjae-won/qwen4b_noclip_default_KLeff_smooth_gamma1e-6_ReWeight_staticKL_reg4_step125",
-          "fpadovani/jpn-jpan-100mb-100mb_seed10"
-        ],
-        "metrics": {
-          "heatScore": 20,
-          "crossSourceBonus": 0
         }
       }
     ],
@@ -548,8 +475,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-06-30T23:59:59.893Z",
-        "finishedAt": "2026-06-30T23:59:59.893Z",
+        "startedAt": "2026-07-01T04:16:56.606Z",
+        "finishedAt": "2026-07-01T04:16:56.606Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -558,36 +485,36 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-06-30T23:59:59.893Z",
-        "finishedAt": "2026-07-01T00:00:01.583Z",
-        "latencyMs": 1690
+        "startedAt": "2026-07-01T04:16:56.606Z",
+        "finishedAt": "2026-07-01T04:16:57.546Z",
+        "latencyMs": 940
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 13,
-        "startedAt": "2026-06-30T23:59:59.907Z",
-        "finishedAt": "2026-06-30T23:59:59.980Z",
-        "latencyMs": 73
+        "itemCount": 19,
+        "startedAt": "2026-07-01T04:16:56.621Z",
+        "finishedAt": "2026-07-01T04:16:56.750Z",
+        "latencyMs": 129
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-06-30T23:59:59.910Z",
-        "finishedAt": "2026-06-30T23:59:59.987Z",
-        "latencyMs": 77
+        "startedAt": "2026-07-01T04:16:56.623Z",
+        "finishedAt": "2026-07-01T04:16:56.769Z",
+        "latencyMs": 146
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 33,
-        "startedAt": "2026-06-30T23:59:59.912Z",
-        "finishedAt": "2026-07-01T00:00:00.243Z",
-        "latencyMs": 331
+        "itemCount": 27,
+        "startedAt": "2026-07-01T04:16:56.624Z",
+        "finishedAt": "2026-07-01T04:16:57.063Z",
+        "latencyMs": 439
       }
     ],
     "dataNotes": [
@@ -621,7 +548,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-06-30T23:59:59.987Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -644,7 +571,7 @@
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-06-30T23:59:59.987Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -667,40 +594,10 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-06-30T23:59:59.987Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
-        }
-      },
-      {
-        "id": "huggingface_models:moofeez/qwen3-coder-30b-a3b-debugger-rft",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "moofeez/qwen3-coder-30b-a3b-debugger-rft",
-        "url": "https://huggingface.co/moofeez/qwen3-coder-30b-a3b-debugger-rft",
-        "tags": [
-          "peft",
-          "safetensors",
-          "base_model:adapter:Qwen/Qwen3-Coder-30B-A3B-Instruct",
-          "lora",
-          "transformers",
-          "text-generation",
-          "conversational",
-          "arxiv:1910.09700",
-          "base_model:Qwen/Qwen3-Coder-30B-A3B-Instruct",
-          "region:us"
-        ],
-        "category": "text-generation",
-        "metrics": {
-          "downloads": 615,
-          "likes": 2
-        },
-        "publishedAt": "2026-05-25T22:47:38.000Z",
-        "updatedAt": "2026-06-30T23:59:36.000Z",
-        "collectedAt": "2026-06-30T23:59:59.980Z",
-        "raw": {
-          "pipelineTag": "text-generation"
         }
       },
       {
@@ -717,11 +614,11 @@
         ],
         "category": "docker",
         "metrics": {
-          "likes": 7522
+          "likes": 7523
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
         "updatedAt": "2026-06-30T13:58:28.000Z",
-        "collectedAt": "2026-06-30T23:59:59.987Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
         "raw": {
           "sdk": "docker",
           "emoji": "📊"
@@ -744,7 +641,7 @@
         },
         "publishedAt": "2025-09-18T07:05:32.000Z",
         "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-06-30T23:59:59.987Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👁"
@@ -770,7 +667,7 @@
         },
         "publishedAt": "2023-06-08T18:00:26.000Z",
         "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-06-30T23:59:59.987Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🎵"
@@ -794,37 +691,43 @@
         },
         "publishedAt": "2023-05-20T09:26:19.000Z",
         "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-06-30T23:59:59.987Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
         "raw": {
           "sdk": "static",
           "emoji": "🏆🤖"
         }
+      },
+      {
+        "id": "huggingface_spaces:KlingTeam/LivePortrait",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Live Portrait",
+        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
+        "author": "KlingTeam",
+        "tags": [
+          "gradio",
+          "Multimodal",
+          "Motion control",
+          "Image-to-Video",
+          "Video-to-Video",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 3753
+        },
+        "publishedAt": "2024-07-05T16:35:24.000Z",
+        "updatedAt": "2024-08-30T11:20:51.000Z",
+        "collectedAt": "2026-07-01T04:16:56.769Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🤪"
+        }
       }
     ],
     "developerBuzz": [
-      {
-        "id": "hackernews:48734373",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Claude Code is steganographically marking requests",
-        "url": "https://thereallo.dev/blog/claude-code-prompt-steganography",
-        "author": "kirushik",
-        "tags": [
-          "claude"
-        ],
-        "metrics": {
-          "upvotes": 1319,
-          "commentsCount": 378
-        },
-        "publishedAt": "2026-06-30T15:44:24.000Z",
-        "collectedAt": "2026-07-01T00:00:00.242Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48734373",
-          "matchedKeywords": [
-            "claude"
-          ]
-        }
-      },
       {
         "id": "hackernews:48736605",
         "source": "hackernews",
@@ -837,11 +740,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 810,
-          "commentsCount": 457
+          "upvotes": 962,
+          "commentsCount": 547
         },
         "publishedAt": "2026-06-30T17:59:52.000Z",
-        "collectedAt": "2026-07-01T00:00:00.242Z",
+        "collectedAt": "2026-07-01T04:16:57.062Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48736605",
           "matchedKeywords": [
@@ -851,25 +754,25 @@
         }
       },
       {
-        "id": "hackernews:48713832",
+        "id": "hackernews:48734373",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88",
-        "url": "https://danunparsed.com/p/hackerrank-open-source-ats",
-        "author": "sambellll",
+        "title": "Claude Code is steganographically marking requests",
+        "url": "https://thereallo.dev/blog/claude-code-prompt-steganography",
+        "author": "kirushik",
         "tags": [
-          "ai"
+          "claude"
         ],
         "metrics": {
-          "upvotes": 1009,
-          "commentsCount": 429
+          "upvotes": 1543,
+          "commentsCount": 445
         },
-        "publishedAt": "2026-06-29T01:44:40.000Z",
-        "collectedAt": "2026-07-01T00:00:00.242Z",
+        "publishedAt": "2026-06-30T15:44:24.000Z",
+        "collectedAt": "2026-07-01T04:16:57.062Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48713832",
+          "hnUrl": "https://news.ycombinator.com/item?id=48734373",
           "matchedKeywords": [
-            "ai"
+            "claude"
           ]
         }
       },
@@ -884,11 +787,11 @@
           "cursor"
         ],
         "metrics": {
-          "upvotes": 1003,
+          "upvotes": 1006,
           "commentsCount": 616
         },
         "publishedAt": "2026-06-29T03:42:07.000Z",
-        "collectedAt": "2026-07-01T00:00:00.242Z",
+        "collectedAt": "2026-07-01T04:16:57.062Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48714529",
           "matchedKeywords": [
@@ -907,13 +810,36 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 667,
-          "commentsCount": 1504
+          "upvotes": 669,
+          "commentsCount": 1509
         },
         "publishedAt": "2026-06-29T10:45:51.000Z",
-        "collectedAt": "2026-07-01T00:00:00.242Z",
+        "collectedAt": "2026-07-01T04:16:57.062Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48717469",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48724230",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": ".self: A new top-level domain designed to support self-hosting",
+        "url": "https://hccf.onmy.cloud/2026/06/21/reclaiming-our-digital-selves-hccfs-vision-for-a-human-centered-top-level-domain/",
+        "author": "HumanCCF",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 661,
+          "commentsCount": 372
+        },
+        "publishedAt": "2026-06-29T19:49:28.000Z",
+        "collectedAt": "2026-07-01T04:16:57.062Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48724230",
           "matchedKeywords": [
             "ai"
           ]
@@ -922,22 +848,82 @@
     ],
     "aihotHighlights": [
       {
-        "id": "aihot:cmr1b37su016jslnl980vxul0",
+        "id": "aihot:cmr1js18u03imslnld2yrjboo",
         "source": "aihot",
         "sourceType": "curated_trend",
-        "title": "商务部解除Claude Fable 5等出口管制",
-        "url": "https://x.com/AnthropicAI/status/2072106151890809341",
-        "summary": "我们已收到通知，商务部已解除对 Claude Fable 5 和 Mythos 5 的出口管制。 我们明天将开始恢复访问，并很快分享最新进展。 我们感谢用户的耐心，也感谢所有与我们合作重新部署模型的各位。",
-        "description": "我们已收到通知，商务部已解除对 Claude Fable 5 和 Mythos 5 的出口管制。 我们明天将开始恢复访问，并很快分享最新进展。 我们感谢用户的耐心，也感谢所有与我们合作重新部署模型的各位。",
-        "category": "industry",
-        "originalSource": "X：Anthropic (@AnthropicAI)",
-        "originalUrl": "https://x.com/AnthropicAI/status/2072106151890809341",
-        "recommendedReason": "我们已收到通知，商务部已解除对 Claude Fable 5 和 Mythos 5 的出口管制。 我们明天将开始恢复访问，并很快分享最新进展。 我们感谢用户的耐心，也感谢所有与我们合作重新部署模型的各位。",
-        "publishedAt": "2026-06-30T23:52:59.000Z",
-        "collectedAt": "2026-07-01T00:00:01.582Z",
+        "title": "美团 LongCat-2.0 正式发布：国产算力集群训练的万亿参数大模型",
+        "url": "https://mp.weixin.qq.com/s/9XFcx3fmFcmbry5bHMJsow",
+        "summary": "美团于6月30日发布新一代万亿参数大模型LongCat-2.0并开源。总参数1.6T，平均激活约48B，原生支持1M超长上下文，在五万卡国产算力集群上完成全流程训练与推理。采用LSA稀疏注意力、零计算专家、ScMoE及MOPD多专家融合（Agent/Reasoning/Interaction三组专家）架构。评测中SWE-bench Pro获59.5，SWE-bench Multilingual获77.3。预览版已通过OpenRouter和longcat.ai开放，月调用量跻身OpenRouter全球前三。",
+        "description": "美团于6月30日发布新一代万亿参数大模型LongCat-2.0并开源。总参数1.6T，平均激活约48B，原生支持1M超长上下文，在五万卡国产算力集群上完成全流程训练与推理。采用LSA稀疏注意力、零计算专家、ScMoE及MOPD多专家融合（Agent/Reasoning/Interaction三组专家）架构。评测中SWE-bench Pro获59.5，SWE-bench Multilingual获77.3。预览版已通过OpenRouter和longcat.ai开放，月调用量跻身OpenRouter全球前三。",
+        "category": "models",
+        "originalSource": "公众号：龙猫LongCat（美团）",
+        "originalUrl": "https://mp.weixin.qq.com/s/9XFcx3fmFcmbry5bHMJsow",
+        "recommendedReason": "美团于6月30日发布新一代万亿参数大模型LongCat-2.0并开源。总参数1.6T，平均激活约48B，原生支持1M超长上下文，在五万卡国产算力集群上完成全流程训练与推理。采用LSA稀疏注意力、零计算专家、ScMoE及MOPD多专家融合（Agent/Reasoning/Interaction三组专家）架构。评测中SWE-bench Pro获59.5，SWE-bench Multilingual获77.3。预览版已通过OpenRouter和longcat.ai开放，月调用量跻身OpenRouter全球前三。",
+        "publishedAt": "2026-07-01T02:24:00.000Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
         "raw": {
-          "id": "cmr1b37su016jslnl980vxul0",
-          "titleEn": "We've received notice that the Department of Commerce has lifted export controls on Claude Fable 5 a…",
+          "id": "cmr1js18u03imslnld2yrjboo",
+          "titleEn": "美团 LongCat-2.0 正式发布：在国产算力集群上完成全流程训练与推理的万亿参数模型",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmr1eiq770260slnlxguii7jy",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "mattpocockuk 的 /writing-great-skills：编写可预测 AI Skill 的指南",
+        "url": "https://x.com/shao__meng/status/2072126769986220157",
+        "summary": "mattpocockuk 的 /writing-great-skills 成为其最常调用的 Skill，指导如何编写稳定可预测的 AI Skill。核心：以过程可预测为目标；区分 model-invoked（自动触发）与 user-invoked（用户调用），description 应作触发器；采用三层信息结构（主步骤、参考、外部文件）实现渐进式披露；每步骤需明确完成标准；拆分 Skill 是为了控制模型注意力；利用 leading word 压缩行为要求。同时诊断五种失败模式：Premature completion、Duplication、Sediment、Sprawl、No-op，并提供 No-op 测试作为判断句子是否有效的标准。",
+        "description": "mattpocockuk 的 /writing-great-skills 成为其最常调用的 Skill，指导如何编写稳定可预测的 AI Skill。核心：以过程可预测为目标；区分 model-invoked（自动触发）与 user-invoked（用户调用），description 应作触发器；采用三层信息结构（主步骤、参考、外部文件）实现渐进式披露；每步骤需明确完成标准；拆分 Skill 是为了控制模型注意力；利用 leading word 压缩行为要求。同时诊断五种失败模式：Premature completion、Duplication、Sediment、Sprawl、No-op，并提供 No-op 测试作为判断句子是否有效的标准。",
+        "category": "tools",
+        "originalSource": "X：邵猛 (@shao__meng)",
+        "originalUrl": "https://x.com/shao__meng/status/2072126769986220157",
+        "recommendedReason": "mattpocockuk 的 /writing-great-skills 成为其最常调用的 Skill，指导如何编写稳定可预测的 AI Skill。核心：以过程可预测为目标；区分 model-invoked（自动触发）与 user-invoked（用户调用），description 应作触发器；采用三层信息结构（主步骤、参考、外部文件）实现渐进式披露；每步骤需明确完成标准；拆分 Skill 是为了控制模型注意力；利用 leading word 压缩行为要求。同时诊断五种失败模式：Premature completion、Duplication、Sediment、Sprawl、No-op，并提供 No-op 测试作为判断句子是否有效的标准。",
+        "publishedAt": "2026-07-01T01:14:54.000Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
+        "raw": {
+          "id": "cmr1eiq770260slnlxguii7jy",
+          "titleEn": "/writing-great-skills https：//github.com/mattpocock/skills/tree/main/skills/productivity/writing-gre…",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmr1bxokg01eoslnlem278yfq",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Anthropic在Claude Code中植入隐写术代码识别中国用户",
+        "url": "https://mp.weixin.qq.com/s/yLb4T2UC16ebKHApdBbgWw",
+        "summary": "Anthropic在Claude Code中植入隐写术：读取本地时区（Asia/Shanghai或Asia/Urumqi）和ANTHROPIC_BASE_URL环境变量，与一份经base64+XOR（密钥91）加密的147个域名列表（含美团、字节跳动、月之暗面等）比对，识别中国用户。识别后，在请求发送前将系统提示词中日期字符串的单引号（U+0027）替换为其他Unicode字符，连字符改为斜杠，作为2-3比特分类标记传回服务器。该隐蔽行为被社区逆向发现后引发争议，被认为破坏用户信任。",
+        "description": "Anthropic在Claude Code中植入隐写术：读取本地时区（Asia/Shanghai或Asia/Urumqi）和ANTHROPIC_BASE_URL环境变量，与一份经base64+XOR（密钥91）加密的147个域名列表（含美团、字节跳动、月之暗面等）比对，识别中国用户。识别后，在请求发送前将系统提示词中日期字符串的单引号（U+0027）替换为其他Unicode字符，连字符改为斜杠，作为2-3比特分类标记传回服务器。该隐蔽行为被社区逆向发现后引发争议，被认为破坏用户信任。",
+        "category": "industry",
+        "originalSource": "公众号：数字生命卡兹克",
+        "originalUrl": "https://mp.weixin.qq.com/s/yLb4T2UC16ebKHApdBbgWw",
+        "recommendedReason": "Anthropic在Claude Code中植入隐写术：读取本地时区（Asia/Shanghai或Asia/Urumqi）和ANTHROPIC_BASE_URL环境变量，与一份经base64+XOR（密钥91）加密的147个域名列表（含美团、字节跳动、月之暗面等）比对，识别中国用户。识别后，在请求发送前将系统提示词中日期字符串的单引号（U+0027）替换为其他Unicode字符，连字符改为斜杠，作为2-3比特分类标记传回服务器。该隐蔽行为被社区逆向发现后引发争议，被认为破坏用户信任。",
+        "publishedAt": "2026-07-01T00:11:00.000Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
+        "raw": {
+          "id": "cmr1bxokg01eoslnlem278yfq",
+          "titleEn": "Anthropic偷偷在Claude Code中植入了隐形代码，只为识别中国用户。",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmr1bb1gr01adslnlt43fwfff",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "库克与欧盟科技主管就新版Siri AI举行建设性会谈",
+        "url": "https://www.ithome.com/0/970/810.htm",
+        "summary": "苹果CEO库克与欧盟科技事务负责人维尔库宁就新版Siri AI在欧推出举行建设性视频会议。新版Siri将转为可调用用户个人数据的聊天机器人，但因《数字市场法》互操作义务苹果拒绝向竞争对手开放同等数据权限，暂不在欧盟iPhone和iPad上推出。苹果提出\"可信系统代理\"方案，拟在设备与第三方AI模型间增加软件层，但未开发，并要求18个月监管宽限期，遭欧盟拒绝。欧盟收到数百封消费者邮件及死亡威胁。",
+        "description": "苹果CEO库克与欧盟科技事务负责人维尔库宁就新版Siri AI在欧推出举行建设性视频会议。新版Siri将转为可调用用户个人数据的聊天机器人，但因《数字市场法》互操作义务苹果拒绝向竞争对手开放同等数据权限，暂不在欧盟iPhone和iPad上推出。苹果提出\"可信系统代理\"方案，拟在设备与第三方AI模型间增加软件层，但未开发，并要求18个月监管宽限期，遭欧盟拒绝。欧盟收到数百封消费者邮件及死亡威胁。",
+        "category": "industry",
+        "originalSource": "IT之家（RSS）",
+        "originalUrl": "https://www.ithome.com/0/970/810.htm",
+        "recommendedReason": "苹果CEO库克与欧盟科技事务负责人维尔库宁就新版Siri AI在欧推出举行建设性视频会议。新版Siri将转为可调用用户个人数据的聊天机器人，但因《数字市场法》互操作义务苹果拒绝向竞争对手开放同等数据权限，暂不在欧盟iPhone和iPad上推出。苹果提出\"可信系统代理\"方案，拟在设备与第三方AI模型间增加软件层，但未开发，并要求18个月监管宽限期，遭欧盟拒绝。欧盟收到数百封消费者邮件及死亡威胁。",
+        "publishedAt": "2026-06-30T23:43:32.000Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
+        "raw": {
+          "id": "cmr1bb1gr01adslnlt43fwfff",
+          "titleEn": "苹果 CEO 库克与欧盟科技主管就 Siri AI 展开\"建设性\"会谈",
           "apiCategory": "industry"
         }
       },
@@ -954,7 +940,7 @@
         "originalUrl": "https://x.com/AISafetyMemes/status/2072085914558558402",
         "recommendedReason": "AI Safety Memes 推文指出，AI 刚刚解决了 9 个未解决的数学问题，但全球没有记者报道。引用 @WeinsteinOmri 的推文称，采用\"prover-verifier\"LLM 循环的方法，成功解决了理论计算机科学中 9 个重大开放问题，其中包括一个困扰其长达 2 年的难题。该研究由哥伦比亚大学合作者完成，并计划将这一方法扩展到所有科学领域。",
         "publishedAt": "2026-06-30T22:32:34.000Z",
-        "collectedAt": "2026-07-01T00:00:01.582Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
         "raw": {
           "id": "cmr190seo00nsslnlxmfddenz",
           "titleEn": "AI just solved not one， but ***9*** unsolved math problems. Once again， instead of this being a glo…",
@@ -974,7 +960,7 @@
         "originalUrl": "https://x.com/NotebookLM/status/2072043680442245276",
         "recommendedReason": "NotebookLM 正式向 Web 英文用户全量推出 Short Video Overviews（短视频概览）功能。该功能可将复杂资料自动转化为 60 秒竖屏视频，深入讲解任意概念。此前，这一功能已面向 Google AI Ultra 和 Pro 订阅者（移动端及 Web）推出，免费用户即将可用。",
         "publishedAt": "2026-06-30T19:44:44.000Z",
-        "collectedAt": "2026-07-01T00:00:01.582Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
         "raw": {
           "id": "cmr12g90k00zlsldxyyr0fmt3",
           "titleEn": "There seems to be a *lot* of discourse about our new Short Video Overviews. Want to join in on the f…",
@@ -994,7 +980,7 @@
         "originalUrl": "https://www.anthropic.com/news/claude-sonnet-5",
         "recommendedReason": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
         "publishedAt": "2026-06-30T18:02:06.984Z",
-        "collectedAt": "2026-07-01T00:00:01.582Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
         "raw": {
           "id": "cmr0yev3s005cslw8omm20ml6",
           "titleEn": "Introducing Claude Sonnet 5",
@@ -1014,70 +1000,10 @@
         "originalUrl": "https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard",
         "recommendedReason": "新加坡初创公司 Acti 发布基于 Google Gemini 的智能体键盘，可代替用户在应用中执行操作。核心功能 Skills 允许用自然语言创建快捷方式，如长按 T 键翻译消息、C 键发送会议链接。早期测试者两周内创建超 1000 个 Skills。采用本地优先架构，默认不访问私人消息。公司获 530 万美元种子轮融资，由 BITKRAFT Ventures 领投，现已开放下载。",
         "publishedAt": "2026-06-30T17:52:46.000Z",
-        "collectedAt": "2026-07-01T00:00:01.582Z",
+        "collectedAt": "2026-07-01T04:16:57.546Z",
         "raw": {
           "id": "cmr0yab2e003oslw8uw5zghrc",
           "titleEn": "Acti puts AI agents directly into your smartphone keyboard",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmr0xc7sg0040slb3yenz5k02",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Claude Science 科研工作台正式上线",
-        "url": "https://www.anthropic.com/news/claude-science-ai-workbench",
-        "summary": "Anthropic 推出 AI 科研工作台 Claude Science，整合常用工具与计算资源，支持从文献分析到多步骤研究的全流程。提供超 60 项预配置技能与连接器，覆盖基因组学、单细胞、蛋白质组学、结构生物学、化学信息学等领域；可在macOS/Linux本地运行，或通过SSH/HPC远程使用。生成含代码和环境的可审计成果（3D蛋白质结构、基因组浏览器轨迹等），内置reviewer agent自动检查引用与计算错误。通过NVIDIA BioNeMo接入Evo 2、Boltz-2等模型，也支持连接自有模型与管道。今日以beta版面向Claude Pro、Max、Team和Enterprise用户开放。",
-        "description": "Anthropic 推出 AI 科研工作台 Claude Science，整合常用工具与计算资源，支持从文献分析到多步骤研究的全流程。提供超 60 项预配置技能与连接器，覆盖基因组学、单细胞、蛋白质组学、结构生物学、化学信息学等领域；可在macOS/Linux本地运行，或通过SSH/HPC远程使用。生成含代码和环境的可审计成果（3D蛋白质结构、基因组浏览器轨迹等），内置reviewer agent自动检查引用与计算错误。通过NVIDIA BioNeMo接入Evo 2、Boltz-2等模型，也支持连接自有模型与管道。今日以beta版面向Claude Pro、Max、Team和Enterprise用户开放。",
-        "category": "products",
-        "originalSource": "Anthropic：Newsroom（网页）",
-        "originalUrl": "https://www.anthropic.com/news/claude-science-ai-workbench",
-        "recommendedReason": "Anthropic 推出 AI 科研工作台 Claude Science，整合常用工具与计算资源，支持从文献分析到多步骤研究的全流程。提供超 60 项预配置技能与连接器，覆盖基因组学、单细胞、蛋白质组学、结构生物学、化学信息学等领域；可在macOS/Linux本地运行，或通过SSH/HPC远程使用。生成含代码和环境的可审计成果（3D蛋白质结构、基因组浏览器轨迹等），内置reviewer agent自动检查引用与计算错误。通过NVIDIA BioNeMo接入Evo 2、Boltz-2等模型，也支持连接自有模型与管道。今日以beta版面向Claude Pro、Max、Team和Enterprise用户开放。",
-        "publishedAt": "2026-06-30T17:32:06.724Z",
-        "collectedAt": "2026-07-01T00:00:01.582Z",
-        "raw": {
-          "id": "cmr0xc7sg0040slb3yenz5k02",
-          "titleEn": "Claude Science， an AI workbench for scientists， is now available",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmr0x7y97001yslb3tyb8w4ce",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Claude Code 入门：智能体循环",
-        "url": "https://claude.com/blog/getting-started-with-loops",
-        "summary": "Claude Code 团队将智能体循环定义为 agent 重复工作直到满足停止条件的过程，并划分出四种主要类型：turn-based 循环（用户提示触发，Claude 自行判断完成或需更多上下文）、goal-based 循环（通过 `/goal` 命令设定可验证完成标准与最大轮次）、time-based 循环（通过 `/loop` 按时间间隔重复执行，可用 `/schedule` 移至云端）、以及 proactive 循环（基于事件或计划自动运行，无人实时参与）。文章还介绍了如何编写 SKILL.md 文件将人工验证步骤编码，让 Claude 进行端到端自检，减少 turn-based 循环中的手动操作。",
-        "description": "Claude Code 团队将智能体循环定义为 agent 重复工作直到满足停止条件的过程，并划分出四种主要类型：turn-based 循环（用户提示触发，Claude 自行判断完成或需更多上下文）、goal-based 循环（通过 `/goal` 命令设定可验证完成标准与最大轮次）、time-based 循环（通过 `/loop` 按时间间隔重复执行，可用 `/schedule` 移至云端）、以及 proactive 循环（基于事件或计划自动运行，无人实时参与）。文章还介绍了如何编写 SKILL.md 文件将人工验证步骤编码，让 Claude 进行端到端自检，减少 turn-based 循环中的手动操作。",
-        "category": "tools",
-        "originalSource": "Claude：Blog（网页）",
-        "originalUrl": "https://claude.com/blog/getting-started-with-loops",
-        "recommendedReason": "Claude Code 团队将智能体循环定义为 agent 重复工作直到满足停止条件的过程，并划分出四种主要类型：turn-based 循环（用户提示触发，Claude 自行判断完成或需更多上下文）、goal-based 循环（通过 `/goal` 命令设定可验证完成标准与最大轮次）、time-based 循环（通过 `/loop` 按时间间隔重复执行，可用 `/schedule` 移至云端）、以及 proactive 循环（基于事件或计划自动运行，无人实时参与）。文章还介绍了如何编写 SKILL.md 文件将人工验证步骤编码，让 Claude 进行端到端自检，减少 turn-based 循环中的手动操作。",
-        "publishedAt": "2026-06-30T17:28:28.530Z",
-        "collectedAt": "2026-07-01T00:00:01.582Z",
-        "raw": {
-          "id": "cmr0x7y97001yslb3tyb8w4ce",
-          "titleEn": "Getting started with loops",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmr0wupt4007gsl403t7s6dbn",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "ADK Go 2.0 发布：构建可靠的多智能体应用，新增基于图的工作流引擎、人工参与循环与动态编排",
-        "url": "https://developers.googleblog.com/announcing-adk-go-20",
-        "summary": "Agent Development Kit （ADK） for Go 2.0 发布，引入了一类基于图的工作流引擎，用于组合复杂多智能体应用。新版本内置人工参与循环（HITL）编排、使用纯 Go 代码的动态执行、以及指数退避重试等自动弹性特性。统一执行模型后，单智能体应用与复杂图均运行在同一运行时上，简化了遥测与状态持久化。",
-        "description": "Agent Development Kit （ADK） for Go 2.0 发布，引入了一类基于图的工作流引擎，用于组合复杂多智能体应用。新版本内置人工参与循环（HITL）编排、使用纯 Go 代码的动态执行、以及指数退避重试等自动弹性特性。统一执行模型后，单智能体应用与复杂图均运行在同一运行时上，简化了遥测与状态持久化。",
-        "category": "products",
-        "originalSource": "Google Developers Blog（RSS）",
-        "originalUrl": "https://developers.googleblog.com/announcing-adk-go-20",
-        "recommendedReason": "Agent Development Kit （ADK） for Go 2.0 发布，引入了一类基于图的工作流引擎，用于组合复杂多智能体应用。新版本内置人工参与循环（HITL）编排、使用纯 Go 代码的动态执行、以及指数退避重试等自动弹性特性。统一执行模型后，单智能体应用与复杂图均运行在同一运行时上，简化了遥测与状态持久化。",
-        "publishedAt": "2026-06-30T17:17:40.302Z",
-        "collectedAt": "2026-07-01T00:00:01.582Z",
-        "raw": {
-          "id": "cmr0wupt4007gsl403t7s6dbn",
-          "titleEn": "Build reliable multi-agent applications with ADK Go 2.0. Discover our new graph-based workflow engine， built-in human-in-the-loop， and dynamic orchestration",
           "apiCategory": "ai-products"
         }
       }
