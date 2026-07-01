@@ -1,211 +1,187 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-01T11:53:04.423Z",
+  "generatedAt": "2026-07-01T13:44:34.896Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
+        "id": "http://arxiv.org/abs/2606.32034v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "QVal: Cheaply Evaluating Dense Supervision Signals for Long-Horizon LLM Agents",
+        "url": "https://arxiv.org/pdf/2606.32034v1",
+        "description": "LLM agents increasingly act over long horizons, where a single trajectory can contain hundreds or thousands of actions. In these settings, outcome-only rewards provide too sparse guidance, failing to inform the model about the goodness of intermediate actions. Dense supervision methods aim to solve this problem by scoring intermediate steps, from intrinsic confidence to self-distillation and embedding similarities. However, it is common practice to evaluate them by measuring the downstream perfo",
+        "summary": "LLM agents increasingly act over long horizons, where a single trajectory can contain hundreds or thousands of actions. In these settings, outcome-only rewards provide too sparse guidance, failing to inform the model about the goodness of intermediate actions. Dense supervision methods aim to solve this problem by scoring intermediate steps, from intrinsic confidence to self-distillation and embedding similarities. However, it is common practice to evaluate them by measuring the downstream performance of a training pipeline that integrates them. This is expensive, conflates supervision quality with training engineering confounders, and renders different methodological families requiring distinct training setups incomparable. As a result, dense supervision methods are rarely benchmarked on common ground. We introduce QVal, a training-free testbed for directly evaluating dense supervision signals. Given a state-action pair, QVal measures how well a method's score is Q-aligned: whether it orders actions according to the Q-values of a strong reference-policy. This lets us compare signals before any training run and separate signal quality from other engineering choices. We instantiate QVal as QVal-v1.0, benchmarking 21 dense supervision methods across four diverse environments and seven methodological families, with over 1.2K evaluation experiments across six open-weight model backbones. We find that simple prompting baselines consistently outperform recent dense supervision methods from the literature, and that performance clusters strongly by family. These findings hold across model sizes, environments, and observation modalities. QVal is designed to be easily extensible to new environments and methods, enabling researchers to iterate on dense supervision methods before any training run.",
+        "author": "Sergio Hernández-Gutiérrez, Matteo Merler, Ilze Amanda Auzina, Joschka Strüber, Ameya Prabhu, Matthias Bethge",
         "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
+          "cs.LG",
+          "cs.AI",
+          "cs.CL",
+          "llm",
+          "agent",
+          "embedding",
+          "benchmark",
+          "evaluation"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 14036
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-07-01T11:53:04.618Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-06-30T17:58:23Z",
+        "updatedAt": "2026-06-30T17:58:23Z",
+        "collectedAt": "2026-07-01T13:44:27.315Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.32034v1",
+          "authors": [
+            "Sergio Hernández-Gutiérrez",
+            "Matteo Merler",
+            "Ilze Amanda Auzina",
+            "Joschka Strüber",
+            "Ameya Prabhu",
+            "Matthias Bethge"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, agent, embedding, benchmark, evaluation"
       },
       {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
+        "id": "http://arxiv.org/abs/2606.32032v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs",
+        "url": "https://arxiv.org/pdf/2606.32032v1",
+        "description": "Metacognition is a critical component of intelligence that describes the ability to monitor and regulate one's own cognitive processes. Yet LLMs exhibit systemic deficiencies in key metacognitive faculties: they hallucinate with high confidence, fail to recognize knowledge boundaries, and misrepresent their internal uncertainty--undermining trustworthiness and reliability. Since monitoring task performance and adapting behavior accordingly are central to metacognition, we posit that models capab",
+        "summary": "Metacognition is a critical component of intelligence that describes the ability to monitor and regulate one's own cognitive processes. Yet LLMs exhibit systemic deficiencies in key metacognitive faculties: they hallucinate with high confidence, fail to recognize knowledge boundaries, and misrepresent their internal uncertainty--undermining trustworthiness and reliability. Since monitoring task performance and adapting behavior accordingly are central to metacognition, we posit that models capable of accurately judging their own performance are better positioned to improve it. We operationalize this idea via two novel mechanisms: reinforcement learning with metacognitive feedback (RLMF), a paradigm to refine completion rankings during preference optimization based on the quality of a model's self-judgments of performance, and metacognitive data selection, which uses similar self-judgments to identify high-value training examples, outperforming naive active learning. We apply these innovations to the problem of faithful calibration (FC), a task that is itself fundamentally metacognitive: the goal is to align expressed with intrinsic uncertainty, difficult even for frontier LLMs. We adopt a two-stage, decoupled approach, first using these methods to calibrate the faithfulness of models' self-reported confidence scores, then mapping to natural, context-adaptable linguistic uncertainty via targeted output editing. Extensive experiments show RLMF achieves generalizable, state-of-the-art FC on diverse tasks while preserving accuracy. Further, RLMF surpasses standard RL by up to 63% while enhancing models' ability to assess and express their own capability limits. This positions RLMF as a promising paradigm to enhance LLM metacognition toward improved abilities and alignment, and suggests metacognitive performance as an effective RL signal to overcome limits of prior intrinsic feedback methods.",
+        "author": "Gabrielle Kaili-May Liu, Avi Caciularu, Gal Yona, Idan Szpektor, Arman Cohan",
         "tags": [
-          "docker",
-          "region:us"
+          "cs.CL",
+          "cs.AI",
+          "llm",
+          "alignment"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11152
-        },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-07-01T11:53:04.618Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-06-30T17:56:01Z",
+        "updatedAt": "2026-06-30T17:56:01Z",
+        "collectedAt": "2026-07-01T13:44:27.315Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.32032v1",
+          "authors": [
+            "Gabrielle Kaili-May Liu",
+            "Avi Caciularu",
+            "Gal Yona",
+            "Idan Szpektor",
+            "Arman Cohan"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, alignment"
       },
       {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
+        "id": "http://arxiv.org/abs/2606.32029v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "When LLMs Read Tables Carelessly: Measuring and Reducing Data Referencing Errors",
+        "url": "https://arxiv.org/pdf/2606.32029v1",
+        "description": "While large language models (LLMs) perform well on table tasks, they still make data referencing errors (DREs), i.e., incorrectly citing or omitting table values, despite understanding the table structure. Beyond final-answer accuracy, DREs directly compromise the correctness and reliability of intermediate reasoning steps. Yet prior studies have only offered limited, small-scale analyses. In this work, we present the first systematic evaluation of tabular data referencing errors across differen",
+        "summary": "While large language models (LLMs) perform well on table tasks, they still make data referencing errors (DREs), i.e., incorrectly citing or omitting table values, despite understanding the table structure. Beyond final-answer accuracy, DREs directly compromise the correctness and reliability of intermediate reasoning steps. Yet prior studies have only offered limited, small-scale analyses. In this work, we present the first systematic evaluation of tabular data referencing errors across different models and tasks. Our results show that DREs occur across all tested models (1.7B to 20B parameters). Furthermore, we demonstrate that incorporating data referencing as a critic significantly improves answer accuracy up to 12.0%, through critic-based filtering and rejection sampling. Finally, we trained a lightweight 4B-parameter critic model that achieves an average F1 score of 78.2% in detecting both in-distribution and out-of-distribution DREs, and effectively assists inference for larger models.",
+        "author": "Yuqing Yang, Qi Zhu, Zhen Han, Boran Han, Zhengyuan Shen, Shuai Wang, Vassilis N. Ioannidis, Huzefa Rangwala",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.CL",
+          "cs.AI",
+          "large language model",
+          "llm",
+          "rag",
+          "evaluation"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10124
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-07-01T11:53:04.618Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-06-30T17:54:50Z",
+        "updatedAt": "2026-06-30T17:54:50Z",
+        "collectedAt": "2026-07-01T13:44:27.315Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.32029v1",
+          "authors": [
+            "Yuqing Yang",
+            "Qi Zhu",
+            "Zhen Han",
+            "Boran Han",
+            "Zhengyuan Shen",
+            "Shuai Wang",
+            "Vassilis N. Ioannidis",
+            "Huzefa Rangwala"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, rag, evaluation"
       },
       {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
+        "id": "http://arxiv.org/abs/2606.32027v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Freeform Preference Learning for Robotic Manipulation",
+        "url": "https://arxiv.org/pdf/2606.32027v1",
+        "description": "Reward design remains a central bottleneck for autonomous robot policy improvement, especially in long-horizon manipulation tasks where sparse success labels provide too little signal and binary preferences collapse many competing notions of quality into one ambiguous signal. We introduce Freeform Preference Learning (FPL), a method for learning robot policies from freeform human preferences. Rather than asking annotators which of two trajectories is better overall, FPL lets them define natural-",
+        "summary": "Reward design remains a central bottleneck for autonomous robot policy improvement, especially in long-horizon manipulation tasks where sparse success labels provide too little signal and binary preferences collapse many competing notions of quality into one ambiguous signal. We introduce Freeform Preference Learning (FPL), a method for learning robot policies from freeform human preferences. Rather than asking annotators which of two trajectories is better overall, FPL lets them define natural-language preference axes, such as speed, safety, quality of placement, or carefulness, and provide pairwise preferences along each axis. These annotations are used to learn a language-conditioned reward model that maps a trajectory and preference label to an axis-specific reward. We use this model to train a reward-conditioned policy that optimizes across the multiple human-specified dimensions. Across four real-world and two simulated long-horizon manipulation tasks, FPL improves over sparse-reward and binary-preference methods by 38 percentage points. Beyond improved performance, FPL learns dense progress signals without explicit subtask segmentation, shows compositionality of behavior not present in the data, and allows users to steer the policy towards different behaviors at test time without retraining. Blog post with videos available at https://freeform-pl.github.io/fpl.website/",
+        "author": "Marcel Torne, Anubha Mahajan, Abhijnya Bhat, Chelsea Finn",
         "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
+          "cs.RO",
+          "cs.AI",
+          "cs.LG",
+          "safety"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7524
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-06-30T13:58:28.000Z",
-        "collectedAt": "2026-07-01T11:53:04.618Z",
+        "category": "cs.RO",
+        "language": "en",
+        "publishedAt": "2026-06-30T17:54:02Z",
+        "updatedAt": "2026-06-30T17:54:02Z",
+        "collectedAt": "2026-07-01T13:44:27.315Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "📊"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2606.32027v1",
+          "authors": [
+            "Marcel Torne",
+            "Anubha Mahajan",
+            "Abhijnya Bhat",
+            "Chelsea Finn"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: safety"
       },
       {
-        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Wan2.2 Animate",
-        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
-        "author": "Wan-AI",
+        "id": "http://arxiv.org/abs/2606.32025v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Generative Skill Composition for LLM Agents",
+        "url": "https://arxiv.org/pdf/2606.32025v1",
+        "description": "Recent LLM agents benefit from skills for solving complex tasks. Skills encapsulate modular packages of procedural knowledge and instructions for performing specialized tasks, such as setting up a sandboxed environment, running a test suite, or refactoring a function across multiple files. As skill libraries grow and become reusable across tasks and domains, selecting an appropriate skill composition has emerged as a central bottleneck. Existing approaches fall into two categories. One exposes t",
+        "summary": "Recent LLM agents benefit from skills for solving complex tasks. Skills encapsulate modular packages of procedural knowledge and instructions for performing specialized tasks, such as setting up a sandboxed environment, running a test suite, or refactoring a function across multiple files. As skill libraries grow and become reusable across tasks and domains, selecting an appropriate skill composition has emerged as a central bottleneck. Existing approaches fall into two categories. One exposes the agent's reasoning to the entire skill collection; the other performs skill retrieval via embeddings or LLM-based rerankers. Both provide useful insights; however, they miss the structural nature of skill composition, which is a joint decision over which skills, how many, and in what order -- three dimensions that cannot be decoupled. We formalize this as structured skill composition: given a task and a skill library, predict an executable skill plan that jointly specifies the activated subset, count, and execution order. We propose SkillComposer, which instantiates structured skill composition as task-conditioned skill sequence prediction. SkillComposer uses a constrained autoregressive decoder over skill identifiers, so subset, count, and order emerge jointly from a single decoding pass, and dependencies between successive skills are captured naturally. We build a training set of task-composition pairs from a real, human-curated skill library. We then evaluate SkillComposer along two axes: composition quality on a held-out test set, and downstream task success on SkillsBench across two production-grade coding agents. On GPT-5.2-Codex, Gemini-3-Pro-Preview, SkillComposer raises the pass rate by +23.1, +18.2pp over the no-skill baseline, surpassing top-3 retrieval and matching the gold-skill retrieval upper bound at lower prompt-token cost.",
+        "author": "Xinyu Zhao, Zhen Tan, Vaishnav Tadiparthi, Nakul Agarwal, Kwonjoon Lee, Ehsan Moradi Pari, Hossein Nourkhiz Mahjoub, Tianlong Chen",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.CL",
+          "llm",
+          "agent",
+          "coding agent",
+          "embedding"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5114
-        },
-        "publishedAt": "2025-09-18T07:05:32.000Z",
-        "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-07-01T11:53:04.618Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-06-30T17:53:09Z",
+        "updatedAt": "2026-06-30T17:53:09Z",
+        "collectedAt": "2026-07-01T13:44:27.315Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👁"
-        }
-      },
-      {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
-        "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5076
+          "abstractUrl": "http://arxiv.org/abs/2606.32025v1",
+          "authors": [
+            "Xinyu Zhao",
+            "Zhen Tan",
+            "Vaishnav Tadiparthi",
+            "Nakul Agarwal",
+            "Kwonjoon Lee",
+            "Ehsan Moradi Pari",
+            "Hossein Nourkhiz Mahjoub",
+            "Tianlong Chen"
+          ]
         },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-07-01T11:53:04.618Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4934
-        },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-07-01T11:53:04.618Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
-      },
-      {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
-        "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3753
-        },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-07-01T11:53:04.618Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
-        }
+        "recommendedReason": "Matched AI developer keywords: llm, agent, coding agent, embedding"
       }
     ],
     "developerBuzz": [
@@ -220,11 +196,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 2142,
-          "commentsCount": 619
+          "upvotes": 2244,
+          "commentsCount": 653
         },
         "publishedAt": "2026-06-30T15:44:24.000Z",
-        "collectedAt": "2026-07-01T11:53:05.163Z",
+        "collectedAt": "2026-07-01T13:44:27.865Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48734373",
           "matchedKeywords": [
@@ -244,11 +220,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 1157,
-          "commentsCount": 685
+          "upvotes": 1178,
+          "commentsCount": 718
         },
         "publishedAt": "2026-06-30T17:59:52.000Z",
-        "collectedAt": "2026-07-01T11:53:05.163Z",
+        "collectedAt": "2026-07-01T13:44:27.865Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48736605",
           "matchedKeywords": [
@@ -270,11 +246,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 734,
-          "commentsCount": 437
+          "upvotes": 791,
+          "commentsCount": 492
         },
         "publishedAt": "2026-06-30T23:55:12.000Z",
-        "collectedAt": "2026-07-01T11:53:05.163Z",
+        "collectedAt": "2026-07-01T13:44:27.865Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48740771",
           "matchedKeywords": [
@@ -295,11 +271,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 665,
-          "commentsCount": 376
+          "upvotes": 667,
+          "commentsCount": 378
         },
         "publishedAt": "2026-06-29T19:49:28.000Z",
-        "collectedAt": "2026-07-01T11:53:05.163Z",
+        "collectedAt": "2026-07-01T13:44:27.865Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48724230",
           "matchedKeywords": [
@@ -308,25 +284,25 @@
         }
       },
       {
-        "id": "hackernews:48735770",
+        "id": "hackernews:48743472",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "Claude Science",
-        "url": "https://claude.com/product/claude-science",
-        "author": "lebovic",
+        "title": "Godot will no longer accept AI-authored code contributions",
+        "url": "https://www.pcgamer.com/gaming-industry/open-source-game-engine-godot-will-no-longer-accept-ai-authored-code-contributions-we-cant-trust-heavy-users-of-ai-to-understand-their-code-enough-to-fix-it/",
+        "author": "pjmlp",
         "tags": [
-          "claude"
+          "ai"
         ],
         "metrics": {
-          "upvotes": 506,
-          "commentsCount": 149
+          "upvotes": 378,
+          "commentsCount": 235
         },
-        "publishedAt": "2026-06-30T17:07:41.000Z",
-        "collectedAt": "2026-07-01T11:53:05.163Z",
+        "publishedAt": "2026-07-01T07:43:22.000Z",
+        "collectedAt": "2026-07-01T13:44:27.865Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48735770",
+          "hnUrl": "https://news.ycombinator.com/item?id=48743472",
           "matchedKeywords": [
-            "claude"
+            "ai"
           ]
         }
       }
@@ -345,7 +321,7 @@
         "originalUrl": "https://the-decoder.com/openai-paper-reveals-three-gpt-5-6-pro-models-breaking-with-single-top-tier-strategy",
         "recommendedReason": "OpenAI论文首次列出GPT-5.6的三个Pro变体：Luna Pro、Terra Pro和Sol Pro，取代以往单一Pro模式。在基因组学基准中，Sol Pro通过率31.5%居60个测试模型之首，领先标准Sol（28.7%）和Claude Opus 4.8（16.0%）。Pro相比标准版本提升逐级递减：Luna Pro提升7.1个百分点（16.5%→23.6%），Terra Pro提升5.2（23.3%→28.5%），Sol Pro仅提升2.8（28.7%→31.5%）。Terra Pro（28.5%）几乎与标准Sol（28.7%）持平。论文未披露Pro运行的token用量，也不清楚该分层是否会在ChatGPT中实际推出。",
         "publishedAt": "2026-07-01T10:03:41.000Z",
-        "collectedAt": "2026-07-01T11:53:09.977Z",
+        "collectedAt": "2026-07-01T13:44:27.941Z",
         "raw": {
           "id": "cmr1wzzsm02uosl8zop6s0sly",
           "titleEn": "OpenAI paper reveals three GPT-5.6 Pro models， breaking with single top-tier strategy",
@@ -365,7 +341,7 @@
         "originalUrl": "https://www.marktechpost.com/2026/07/01/nvidia-releases-nemotron-labs-twotower",
         "recommendedReason": "NVIDIA 发布 Nemotron-Labs-TwoTower，基于冻结的自回归骨干 Nemotron-3-Nano-30B-A3B 的扩散语言模型。采用双塔架构：上下文塔冻结，降噪器塔训练，通过层对齐交叉注意力和状态播种协作。在 2×H100 上 BF16 评估，保留 98.7% 的 AR 基线质量，生成吞吐量提升 2.42 倍（γ=0.8，块大小 S=16）。降噪器在约 2.1T token 上训练，骨干使用 25T token 预训练。总参数约 60B，每 token 活跃参数约 3B/塔。支持扩散、模拟 AR 和 AR 三种解码模式。",
         "publishedAt": "2026-07-01T08:10:17.000Z",
-        "collectedAt": "2026-07-01T11:53:09.977Z",
+        "collectedAt": "2026-07-01T13:44:27.941Z",
         "raw": {
           "id": "cmr1ti4v001xlsl8zovi1yoqa",
           "titleEn": "NVIDIA Releases Nemotron-Labs-TwoTower： an Open-Weight Diffusion Language Model Built on a Frozen Autoregressive Nemotron-3-Nano-30B-A3B Backbone",
@@ -385,7 +361,7 @@
         "originalUrl": "https://www.ithome.com/0/971/071.htm",
         "recommendedReason": "亚马逊 AWS 宣布设立新部门，组建前置驻场工程师团队，先期投入 10 亿美元（约 67.97 亿元人民币）。团队分批派驻客户企业，每批 5-6 组工程师，驻场周期 45 天，协助客户落地人工智能软件与智能体应用。该模式在 Palantir、Salesforce、Anthropic、谷歌云等企业已有先例，领英数据显示 2023 至 2025 年间同类岗位需求增长 42 倍。新部门员工规模将达数千人，首批客户包括 NBA 与理光。",
         "publishedAt": "2026-07-01T06:57:42.000Z",
-        "collectedAt": "2026-07-01T11:53:09.977Z",
+        "collectedAt": "2026-07-01T13:44:27.941Z",
         "raw": {
           "id": "cmr1qbf1w012isl8zibrcgm2h",
           "titleEn": null,
@@ -405,7 +381,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/9XFcx3fmFcmbry5bHMJsow",
         "recommendedReason": "美团于6月30日发布新一代万亿参数大模型LongCat-2.0并开源。总参数1.6T，平均激活约48B，原生支持1M超长上下文，在五万卡国产算力集群上完成全流程训练与推理。采用LSA稀疏注意力、零计算专家、ScMoE及MOPD多专家融合（Agent/Reasoning/Interaction三组专家）架构。评测中SWE-bench Pro获59.5，SWE-bench Multilingual获77.3。预览版已通过OpenRouter和longcat.ai开放，月调用量跻身OpenRouter全球前三。",
         "publishedAt": "2026-07-01T02:24:00.000Z",
-        "collectedAt": "2026-07-01T11:53:09.977Z",
+        "collectedAt": "2026-07-01T13:44:27.941Z",
         "raw": {
           "id": "cmr1js18u03imslnld2yrjboo",
           "titleEn": "美团 LongCat-2.0 正式发布：在国产算力集群上完成全流程训练与推理的万亿参数模型",
@@ -425,7 +401,7 @@
         "originalUrl": "https://x.com/shao__meng/status/2072126769986220157",
         "recommendedReason": "mattpocockuk 的 /writing-great-skills 成为其最常调用的 Skill，指导如何编写稳定可预测的 AI Skill。核心：以过程可预测为目标；区分 model-invoked（自动触发）与 user-invoked（用户调用），description 应作触发器；采用三层信息结构（主步骤、参考、外部文件）实现渐进式披露；每步骤需明确完成标准；拆分 Skill 是为了控制模型注意力；利用 leading word 压缩行为要求。同时诊断五种失败模式：Premature completion、Duplication、Sediment、Sprawl、No-op，并提供 No-op 测试作为判断句子是否有效的标准。",
         "publishedAt": "2026-07-01T01:14:54.000Z",
-        "collectedAt": "2026-07-01T11:53:09.977Z",
+        "collectedAt": "2026-07-01T13:44:27.941Z",
         "raw": {
           "id": "cmr1eiq770260slnlxguii7jy",
           "titleEn": "/writing-great-skills https：//github.com/mattpocock/skills/tree/main/skills/productivity/writing-gre…",
@@ -445,7 +421,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/yLb4T2UC16ebKHApdBbgWw",
         "recommendedReason": "Anthropic在Claude Code中植入隐写术：读取本地时区（Asia/Shanghai或Asia/Urumqi）和ANTHROPIC_BASE_URL环境变量，与一份经base64+XOR（密钥91）加密的147个域名列表（含美团、字节跳动、月之暗面等）比对，识别中国用户。识别后，在请求发送前将系统提示词中日期字符串的单引号（U+0027）替换为其他Unicode字符，连字符改为斜杠，作为2-3比特分类标记传回服务器。该隐蔽行为被社区逆向发现后引发争议，被认为破坏用户信任。",
         "publishedAt": "2026-07-01T00:11:00.000Z",
-        "collectedAt": "2026-07-01T11:53:09.977Z",
+        "collectedAt": "2026-07-01T13:44:27.941Z",
         "raw": {
           "id": "cmr1bxokg01eoslnlem278yfq",
           "titleEn": "Anthropic偷偷在Claude Code中植入了隐形代码，只为识别中国用户。",
@@ -465,7 +441,7 @@
         "originalUrl": "https://www.ithome.com/0/970/810.htm",
         "recommendedReason": "苹果CEO库克与欧盟科技事务负责人维尔库宁就新版Siri AI在欧推出举行建设性视频会议。新版Siri将转为可调用用户个人数据的聊天机器人，但因《数字市场法》互操作义务苹果拒绝向竞争对手开放同等数据权限，暂不在欧盟iPhone和iPad上推出。苹果提出\"可信系统代理\"方案，拟在设备与第三方AI模型间增加软件层，但未开发，并要求18个月监管宽限期，遭欧盟拒绝。欧盟收到数百封消费者邮件及死亡威胁。",
         "publishedAt": "2026-06-30T23:43:32.000Z",
-        "collectedAt": "2026-07-01T11:53:09.977Z",
+        "collectedAt": "2026-07-01T13:44:27.941Z",
         "raw": {
           "id": "cmr1bb1gr01adslnlt43fwfff",
           "titleEn": "苹果 CEO 库克与欧盟科技主管就 Siri AI 展开\"建设性\"会谈",
@@ -485,12 +461,279 @@
         "originalUrl": "https://x.com/AISafetyMemes/status/2072085914558558402",
         "recommendedReason": "AI Safety Memes 推文指出，AI 刚刚解决了 9 个未解决的数学问题，但全球没有记者报道。引用 @WeinsteinOmri 的推文称，采用\"prover-verifier\"LLM 循环的方法，成功解决了理论计算机科学中 9 个重大开放问题，其中包括一个困扰其长达 2 年的难题。该研究由哥伦比亚大学合作者完成，并计划将这一方法扩展到所有科学领域。",
         "publishedAt": "2026-06-30T22:32:34.000Z",
-        "collectedAt": "2026-07-01T11:53:09.977Z",
+        "collectedAt": "2026-07-01T13:44:27.941Z",
         "raw": {
           "id": "cmr190seo00nsslnlxmfddenz",
           "titleEn": "AI just solved not one， but ***9*** unsolved math problems. Once again， instead of this being a glo…",
           "apiCategory": "paper"
         }
+      },
+      {
+        "id": "aihot:cmr12g90k00zlsldxyyr0fmt3",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "NotebookLM Short Video Overviews 全量上线 Web 英文版",
+        "url": "https://x.com/NotebookLM/status/2072043680442245276",
+        "summary": "NotebookLM 正式向 Web 英文用户全量推出 Short Video Overviews（短视频概览）功能。该功能可将复杂资料自动转化为 60 秒竖屏视频，深入讲解任意概念。此前，这一功能已面向 Google AI Ultra 和 Pro 订阅者（移动端及 Web）推出，免费用户即将可用。",
+        "description": "NotebookLM 正式向 Web 英文用户全量推出 Short Video Overviews（短视频概览）功能。该功能可将复杂资料自动转化为 60 秒竖屏视频，深入讲解任意概念。此前，这一功能已面向 Google AI Ultra 和 Pro 订阅者（移动端及 Web）推出，免费用户即将可用。",
+        "category": "products",
+        "originalSource": "X：NotebookLM (@NotebookLM)",
+        "originalUrl": "https://x.com/NotebookLM/status/2072043680442245276",
+        "recommendedReason": "NotebookLM 正式向 Web 英文用户全量推出 Short Video Overviews（短视频概览）功能。该功能可将复杂资料自动转化为 60 秒竖屏视频，深入讲解任意概念。此前，这一功能已面向 Google AI Ultra 和 Pro 订阅者（移动端及 Web）推出，免费用户即将可用。",
+        "publishedAt": "2026-06-30T19:44:44.000Z",
+        "collectedAt": "2026-07-01T13:44:27.941Z",
+        "raw": {
+          "id": "cmr12g90k00zlsldxyyr0fmt3",
+          "titleEn": "There seems to be a *lot* of discourse about our new Short Video Overviews. Want to join in on the f…",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmr0yev3s005cslw8omm20ml6",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Claude Sonnet 5 发布",
+        "url": "https://www.anthropic.com/news/claude-sonnet-5",
+        "summary": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
+        "description": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
+        "category": "models",
+        "originalSource": "Anthropic：Newsroom（网页）",
+        "originalUrl": "https://www.anthropic.com/news/claude-sonnet-5",
+        "recommendedReason": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
+        "publishedAt": "2026-06-30T18:02:06.984Z",
+        "collectedAt": "2026-07-01T13:44:27.941Z",
+        "raw": {
+          "id": "cmr0yev3s005cslw8omm20ml6",
+          "titleEn": "Introducing Claude Sonnet 5",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmr0yab2e003oslw8uw5zghrc",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Acti 将 AI 智能体直接放入手机键盘",
+        "url": "https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard",
+        "summary": "新加坡初创公司 Acti 发布基于 Google Gemini 的智能体键盘，可代替用户在应用中执行操作。核心功能 Skills 允许用自然语言创建快捷方式，如长按 T 键翻译消息、C 键发送会议链接。早期测试者两周内创建超 1000 个 Skills。采用本地优先架构，默认不访问私人消息。公司获 530 万美元种子轮融资，由 BITKRAFT Ventures 领投，现已开放下载。",
+        "description": "新加坡初创公司 Acti 发布基于 Google Gemini 的智能体键盘，可代替用户在应用中执行操作。核心功能 Skills 允许用自然语言创建快捷方式，如长按 T 键翻译消息、C 键发送会议链接。早期测试者两周内创建超 1000 个 Skills。采用本地优先架构，默认不访问私人消息。公司获 530 万美元种子轮融资，由 BITKRAFT Ventures 领投，现已开放下载。",
+        "category": "products",
+        "originalSource": "TechCrunch：AI（RSS）",
+        "originalUrl": "https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard",
+        "recommendedReason": "新加坡初创公司 Acti 发布基于 Google Gemini 的智能体键盘，可代替用户在应用中执行操作。核心功能 Skills 允许用自然语言创建快捷方式，如长按 T 键翻译消息、C 键发送会议链接。早期测试者两周内创建超 1000 个 Skills。采用本地优先架构，默认不访问私人消息。公司获 530 万美元种子轮融资，由 BITKRAFT Ventures 领投，现已开放下载。",
+        "publishedAt": "2026-06-30T17:52:46.000Z",
+        "collectedAt": "2026-07-01T13:44:27.941Z",
+        "raw": {
+          "id": "cmr0yab2e003oslw8uw5zghrc",
+          "titleEn": "Acti puts AI agents directly into your smartphone keyboard",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmr0xc7sg0040slb3yenz5k02",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Claude Science 科研工作台正式上线",
+        "url": "https://www.anthropic.com/news/claude-science-ai-workbench",
+        "summary": "Anthropic 推出 AI 科研工作台 Claude Science，整合常用工具与计算资源，支持从文献分析到多步骤研究的全流程。提供超 60 项预配置技能与连接器，覆盖基因组学、单细胞、蛋白质组学、结构生物学、化学信息学等领域；可在macOS/Linux本地运行，或通过SSH/HPC远程使用。生成含代码和环境的可审计成果（3D蛋白质结构、基因组浏览器轨迹等），内置reviewer agent自动检查引用与计算错误。通过NVIDIA BioNeMo接入Evo 2、Boltz-2等模型，也支持连接自有模型与管道。今日以beta版面向Claude Pro、Max、Team和Enterprise用户开放。",
+        "description": "Anthropic 推出 AI 科研工作台 Claude Science，整合常用工具与计算资源，支持从文献分析到多步骤研究的全流程。提供超 60 项预配置技能与连接器，覆盖基因组学、单细胞、蛋白质组学、结构生物学、化学信息学等领域；可在macOS/Linux本地运行，或通过SSH/HPC远程使用。生成含代码和环境的可审计成果（3D蛋白质结构、基因组浏览器轨迹等），内置reviewer agent自动检查引用与计算错误。通过NVIDIA BioNeMo接入Evo 2、Boltz-2等模型，也支持连接自有模型与管道。今日以beta版面向Claude Pro、Max、Team和Enterprise用户开放。",
+        "category": "products",
+        "originalSource": "Anthropic：Newsroom（网页）",
+        "originalUrl": "https://www.anthropic.com/news/claude-science-ai-workbench",
+        "recommendedReason": "Anthropic 推出 AI 科研工作台 Claude Science，整合常用工具与计算资源，支持从文献分析到多步骤研究的全流程。提供超 60 项预配置技能与连接器，覆盖基因组学、单细胞、蛋白质组学、结构生物学、化学信息学等领域；可在macOS/Linux本地运行，或通过SSH/HPC远程使用。生成含代码和环境的可审计成果（3D蛋白质结构、基因组浏览器轨迹等），内置reviewer agent自动检查引用与计算错误。通过NVIDIA BioNeMo接入Evo 2、Boltz-2等模型，也支持连接自有模型与管道。今日以beta版面向Claude Pro、Max、Team和Enterprise用户开放。",
+        "publishedAt": "2026-06-30T17:32:06.724Z",
+        "collectedAt": "2026-07-01T13:44:27.941Z",
+        "raw": {
+          "id": "cmr0xc7sg0040slb3yenz5k02",
+          "titleEn": "Claude Science， an AI workbench for scientists， is now available",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmr0x7y97001yslb3tyb8w4ce",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Claude Code 入门：智能体循环",
+        "url": "https://claude.com/blog/getting-started-with-loops",
+        "summary": "Claude Code 团队将智能体循环定义为 agent 重复工作直到满足停止条件的过程，并划分出四种主要类型：turn-based 循环（用户提示触发，Claude 自行判断完成或需更多上下文）、goal-based 循环（通过 `/goal` 命令设定可验证完成标准与最大轮次）、time-based 循环（通过 `/loop` 按时间间隔重复执行，可用 `/schedule` 移至云端）、以及 proactive 循环（基于事件或计划自动运行，无人实时参与）。文章还介绍了如何编写 SKILL.md 文件将人工验证步骤编码，让 Claude 进行端到端自检，减少 turn-based 循环中的手动操作。",
+        "description": "Claude Code 团队将智能体循环定义为 agent 重复工作直到满足停止条件的过程，并划分出四种主要类型：turn-based 循环（用户提示触发，Claude 自行判断完成或需更多上下文）、goal-based 循环（通过 `/goal` 命令设定可验证完成标准与最大轮次）、time-based 循环（通过 `/loop` 按时间间隔重复执行，可用 `/schedule` 移至云端）、以及 proactive 循环（基于事件或计划自动运行，无人实时参与）。文章还介绍了如何编写 SKILL.md 文件将人工验证步骤编码，让 Claude 进行端到端自检，减少 turn-based 循环中的手动操作。",
+        "category": "tools",
+        "originalSource": "Claude：Blog（网页）",
+        "originalUrl": "https://claude.com/blog/getting-started-with-loops",
+        "recommendedReason": "Claude Code 团队将智能体循环定义为 agent 重复工作直到满足停止条件的过程，并划分出四种主要类型：turn-based 循环（用户提示触发，Claude 自行判断完成或需更多上下文）、goal-based 循环（通过 `/goal` 命令设定可验证完成标准与最大轮次）、time-based 循环（通过 `/loop` 按时间间隔重复执行，可用 `/schedule` 移至云端）、以及 proactive 循环（基于事件或计划自动运行，无人实时参与）。文章还介绍了如何编写 SKILL.md 文件将人工验证步骤编码，让 Claude 进行端到端自检，减少 turn-based 循环中的手动操作。",
+        "publishedAt": "2026-06-30T17:28:28.530Z",
+        "collectedAt": "2026-07-01T13:44:27.941Z",
+        "raw": {
+          "id": "cmr0x7y97001yslb3tyb8w4ce",
+          "titleEn": "Getting started with loops",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmr0wupt4007gsl403t7s6dbn",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "ADK Go 2.0 发布：构建可靠的多智能体应用，新增基于图的工作流引擎、人工参与循环与动态编排",
+        "url": "https://developers.googleblog.com/announcing-adk-go-20",
+        "summary": "Agent Development Kit （ADK） for Go 2.0 发布，引入了一类基于图的工作流引擎，用于组合复杂多智能体应用。新版本内置人工参与循环（HITL）编排、使用纯 Go 代码的动态执行、以及指数退避重试等自动弹性特性。统一执行模型后，单智能体应用与复杂图均运行在同一运行时上，简化了遥测与状态持久化。",
+        "description": "Agent Development Kit （ADK） for Go 2.0 发布，引入了一类基于图的工作流引擎，用于组合复杂多智能体应用。新版本内置人工参与循环（HITL）编排、使用纯 Go 代码的动态执行、以及指数退避重试等自动弹性特性。统一执行模型后，单智能体应用与复杂图均运行在同一运行时上，简化了遥测与状态持久化。",
+        "category": "products",
+        "originalSource": "Google Developers Blog（RSS）",
+        "originalUrl": "https://developers.googleblog.com/announcing-adk-go-20",
+        "recommendedReason": "Agent Development Kit （ADK） for Go 2.0 发布，引入了一类基于图的工作流引擎，用于组合复杂多智能体应用。新版本内置人工参与循环（HITL）编排、使用纯 Go 代码的动态执行、以及指数退避重试等自动弹性特性。统一执行模型后，单智能体应用与复杂图均运行在同一运行时上，简化了遥测与状态持久化。",
+        "publishedAt": "2026-06-30T17:17:40.302Z",
+        "collectedAt": "2026-07-01T13:44:27.941Z",
+        "raw": {
+          "id": "cmr0wupt4007gsl403t7s6dbn",
+          "titleEn": "Build reliable multi-agent applications with ADK Go 2.0. Discover our new graph-based workflow engine， built-in human-in-the-loop， and dynamic orchestration",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmr0x8nxp002gslb33ixw5j4z",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Apple Creator Studio 更新：更智能、更快速、更互联",
+        "url": "https://www.apple.com/newsroom/2026/06/apple-creator-studio-gets-smarter-faster-and-more-connected",
+        "summary": "Apple Creator Studio 推出多项 AI 增强更新。Final Cut Pro 新增 on-device AI 驱动的 Generate Captions（自动转录音频生成字幕）和 Edit Detection（自动检测剪辑点）。Mac 版加入 Auto Mask（自动识别皮肤、天空等主体）、增强的 Match Color 和 Advanced Trimming。支持将帧发送至 Pixelmator Pro 编辑，并在 Keynote、Pages、Numbers 中直接调用 Pixelmator Pro 修改图片。Logic Pro 新增 Grammy 制作人制作的 Producer Project 及 Chord ID 改进。订阅价 $12.99/月或 $129/年，新用户免费试用一个月，教育用户 $2.99/月。",
+        "description": "Apple Creator Studio 推出多项 AI 增强更新。Final Cut Pro 新增 on-device AI 驱动的 Generate Captions（自动转录音频生成字幕）和 Edit Detection（自动检测剪辑点）。Mac 版加入 Auto Mask（自动识别皮肤、天空等主体）、增强的 Match Color 和 Advanced Trimming。支持将帧发送至 Pixelmator Pro 编辑，并在 Keynote、Pages、Numbers 中直接调用 Pixelmator Pro 修改图片。Logic Pro 新增 Grammy 制作人制作的 Producer Project 及 Chord ID 改进。订阅价 $12.99/月或 $129/年，新用户免费试用一个月，教育用户 $2.99/月。",
+        "category": "products",
+        "originalSource": "Apple：Newsroom（RSS）",
+        "originalUrl": "https://www.apple.com/newsroom/2026/06/apple-creator-studio-gets-smarter-faster-and-more-connected",
+        "recommendedReason": "Apple Creator Studio 推出多项 AI 增强更新。Final Cut Pro 新增 on-device AI 驱动的 Generate Captions（自动转录音频生成字幕）和 Edit Detection（自动检测剪辑点）。Mac 版加入 Auto Mask（自动识别皮肤、天空等主体）、增强的 Match Color 和 Advanced Trimming。支持将帧发送至 Pixelmator Pro 编辑，并在 Keynote、Pages、Numbers 中直接调用 Pixelmator Pro 修改图片。Logic Pro 新增 Grammy 制作人制作的 Producer Project 及 Chord ID 改进。订阅价 $12.99/月或 $129/年，新用户免费试用一个月，教育用户 $2.99/月。",
+        "publishedAt": "2026-06-30T16:59:24.233Z",
+        "collectedAt": "2026-07-01T13:44:27.941Z",
+        "raw": {
+          "id": "cmr0x8nxp002gslb33ixw5j4z",
+          "titleEn": "Apple Creator Studio gets smarter， faster， and more connected",
+          "apiCategory": "ai-products"
+        }
+      }
+    ],
+    "crossSourceHighlights": [
+      {
+        "id": "url:https://anthropic.com/news/claude-sonnet-5",
+        "canonicalId": "url:https://anthropic.com/news/claude-sonnet-5",
+        "title": "Claude Sonnet 5 发布",
+        "canonicalUrl": "https://anthropic.com/news/claude-sonnet-5",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://anthropic.com/news/claude-sonnet-5",
+          "title:claude sonnet 5 发布",
+          "topic:coding agent / swe agent",
+          "title:claude sonnet 5"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmr0yev3s005cslw8omm20ml6",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Claude Sonnet 5 发布",
+            "url": "https://www.anthropic.com/news/claude-sonnet-5",
+            "summary": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
+            "description": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
+            "category": "models",
+            "originalSource": "Anthropic：Newsroom（网页）",
+            "originalUrl": "https://www.anthropic.com/news/claude-sonnet-5",
+            "recommendedReason": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
+            "publishedAt": "2026-06-30T18:02:06.984Z",
+            "collectedAt": "2026-07-01T13:44:27.941Z",
+            "raw": {
+              "id": "cmr0yev3s005cslw8omm20ml6",
+              "titleEn": "Introducing Claude Sonnet 5",
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:48736605",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Claude Sonnet 5",
+            "url": "https://www.anthropic.com/news/claude-sonnet-5",
+            "author": "marinesebastian",
+            "tags": [
+              "anthropic",
+              "claude"
+            ],
+            "metrics": {
+              "upvotes": 1178,
+              "commentsCount": 718
+            },
+            "publishedAt": "2026-06-30T17:59:52.000Z",
+            "collectedAt": "2026-07-01T13:44:27.865Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48736605",
+              "matchedKeywords": [
+                "anthropic",
+                "claude"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmr0yev3s005cslw8omm20ml6",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Claude Sonnet 5 发布",
+            "url": "https://www.anthropic.com/news/claude-sonnet-5",
+            "summary": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
+            "description": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
+            "category": "models",
+            "originalSource": "Anthropic：Newsroom（网页）",
+            "originalUrl": "https://www.anthropic.com/news/claude-sonnet-5",
+            "recommendedReason": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
+            "publishedAt": "2026-06-30T18:02:06.984Z",
+            "collectedAt": "2026-07-01T13:44:27.941Z",
+            "raw": {
+              "id": "cmr0yev3s005cslw8omm20ml6",
+              "titleEn": "Introducing Claude Sonnet 5",
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:48736605",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Claude Sonnet 5",
+            "url": "https://www.anthropic.com/news/claude-sonnet-5",
+            "author": "marinesebastian",
+            "tags": [
+              "anthropic",
+              "claude"
+            ],
+            "metrics": {
+              "upvotes": 1178,
+              "commentsCount": 718
+            },
+            "publishedAt": "2026-06-30T17:59:52.000Z",
+            "collectedAt": "2026-07-01T13:44:27.865Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48736605",
+              "matchedKeywords": [
+                "anthropic",
+                "claude"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 1178,
+          "commentsCount": 718,
+          "hnScore": 1178,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "models",
+        "summary": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及 Claude Code、Claude API 中可用。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-06-30T17:59:52.000Z",
+        "lastSeenAt": "2026-07-01T13:44:27.941Z"
       }
     ]
   }
