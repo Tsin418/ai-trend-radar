@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-07-01T04:54:56.191Z
+Updated: 2026-07-01T06:49:42.878Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -8,7 +8,7 @@ Updated: 2026-07-01T04:54:56.191Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-07-01 | daily | [AI Developer Radar｜Daily｜2026-07-01](2026/07/2026-07-01-daily.md) | altic-dev/FluidVoice, HKUDS/Vibe-Trading, calesthio/OpenMontage, Panniantong/Agent-Reach, headroomlabs-ai/headroom |
+| 2026-07-01 | daily | [AI Developer Radar｜Daily｜2026-07-01](2026/07/2026-07-01-daily.md) | altic-dev/FluidVoice, Tencent/ncnn, PatrickJS/awesome-cursorrules, HKUDS/Vibe-Trading, calesthio/OpenMontage |
 | 2026-06-30 | daily | [AI Developer Radar｜Daily｜2026-06-30](2026/06/2026-06-30-daily.md) | usestrix/strix, Tencent/ncnn, gvergnaud/ts-pattern, PatrickJS/awesome-cursorrules, milvus-io/milvus |
 | 2026-06-29 | daily | [AI Developer Radar｜Daily｜2026-06-29](2026/06/2026-06-29-daily.md) | cupy/cupy, browser-use/video-use, stas00/ml-engineering, ChatGPTNextWeb/NextChat, deepspeedai/DeepSpeed |
 | 2026-06-28 | daily | [AI Developer Radar｜Daily｜2026-06-28](2026/06/2026-06-28-daily.md) | datawhalechina/hello-agents, gvergnaud/ts-pattern, Tencent/ncnn, ChatGPTNextWeb/NextChat, thedaviddias/Front-End-Checklist |
