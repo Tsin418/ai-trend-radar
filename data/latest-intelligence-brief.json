@@ -1,167 +1,24 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-07-03-2026-07-02T20-55-48-297Z",
-  "generatedAt": "2026-07-02T20:55:48.297Z",
+  "runId": "lightweight-2026-07-03-2026-07-02T22-01-31-320Z",
+  "generatedAt": "2026-07-02T22:01:31.320Z",
   "targetDate": "2026-07-03",
   "brief": {
     "date": "2026-07-03",
-    "headline": "Today's strongest AI trend signals are Ai Model Release, Mcp / Tool Calling, and Rag / Knowledge Base.",
+    "headline": "Today's strongest AI trend signals are Mcp / Tool Calling, Ai Model Release, and Local Llm / Inference.",
     "keyTakeaways": [
-      "Ai Model Release: This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 11 related signal(s). Treat it as correlation evidence ra.",
-      "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
-      "Ai Model Release: watch decision is deep_dive.",
       "Mcp / Tool Calling: This topic appeared across 2 source(s): huggingface_spaces, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
       "Mcp / Tool Calling: watch decision is deep_dive.",
-      "Rag / Knowledge Base: This topic appeared across 1 source(s): hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-      "Rag / Knowledge Base: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
-      "Rag / Knowledge Base: watch decision is track."
+      "Ai Model Release: This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adop.",
+      "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
+      "Ai Model Release: watch decision is deep_dive.",
+      "Local Llm / Inference: This topic appeared across 2 source(s): huggingface_models, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adopti.",
+      "Local Llm / Inference: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
+      "Local Llm / Inference: watch decision is deep_dive."
     ],
     "topicBriefs": [
-      {
-        "id": "topic:ai model release",
-        "title": "Ai Model Release",
-        "category": "tools",
-        "sources": [
-          "aihot",
-          "huggingface_models",
-          "huggingface_spaces",
-          "hackernews"
-        ],
-        "sourceCount": 4,
-        "heatScore": 401,
-        "confidence": "medium",
-        "watchDecision": "deep_dive",
-        "whatItIs": "Ai Model Release is an AI trend topic in tools represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 11 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
-        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
-        "technicalKeywords": [
-          "tools",
-          "papers",
-          "vllm",
-          "safetensors",
-          "mistral3",
-          "mistral-common",
-          "abliterix",
-          "uncensored"
-        ],
-        "evidenceItems": [
-          {
-            "id": "aihot:cmr3uklx8008dslbrcmev44qb",
-            "title": "Agent辅助的SGLang开发：初步探索",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://www.lmsys.org/blog/2026-07-02-agent-assisted-sglang-development",
-            "summary": "SGLang团队将LLM服务、分布式运行时、GPU内核、扩散管道等工作流编码为可执行的SKILL.md文件、脚本、基准合约和审查循环。现有技能包括：SGLang .claude/skills（CUDA调试、内核集成、性能分析等）、SGLang diffusion .claude/skills（扩散模型添加与调优）、BBuf/AI-Infra-Auto-Driven-SKILLS（跨框架SOTA循环）、KDA（MLSys 2026 FlashInfer内核竞赛获胜方案）以及BBuf/KDA-Pilot（已合并三个SGLang集成PR）。Profile证据是性能工作的核心，长期优化转向Loop Engineering--SGLang SOTA Performance Loop将追求SOTA分解为公平基准测试、差距决策、性能分析、补丁和再验证，Humanize/RLCR添加外部审查，Codex Goal以更低协调开销运行相同循环。评审重要性提升，开发者需定义问题、选择证据、设计工作流并判断结果是否可用于生产。",
-            "category": "tools",
-            "publishedAt": "2026-07-02T18:37:56.676Z",
-            "collectedAt": "2026-07-02T20:55:49.490Z"
-          },
-          {
-            "id": "aihot:cmr3fluhr00i3sllxli2a5uko",
-            "title": "browser-use 发布开源 AI 视频剪辑 Skill「video-use」",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://x.com/shao__meng/status/2072644710523691110",
-            "summary": "browser-use 团队推出面向 Codex、Claude Code 等 AI 编码智能体的开源 Skill「video-use」，让 LLM 通过 ElevenLabs Scribe 将音频转写为约 12KB 文本（含逐词时间戳、说话人分离、事件标记），仅在决策点调用 timeline_view.py 生成 PNG 帧图。技术流水线包括转写、打包、生成 JSON 格式 EDL、ffmpeg 渲染及最多 3 轮自评估。渲染关键细节：分段提取 + `-c copy` 拼接、30ms 音频淡入淡出、PTS 时移、字幕最后叠加、HDR 自动映射、竖屏缩放、两-pass loudnorm。动画支持 HyperFrames、Remotion、Manim 等引擎。项目附带 12 条硬规则确保生产正确性。",
-            "category": "tools",
-            "publishedAt": "2026-07-02T11:33:01.000Z",
-            "collectedAt": "2026-07-02T20:55:49.490Z"
-          },
-          {
-            "id": "aihot:cmr3rd0l901btsl7lars7am9q",
-            "title": "多智能体团队阻碍专家发挥",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://machinelearning.apple.com/research/multi-agent-teams-experts",
-            "summary": "在自我组织的多智能体LLM系统中，团队无法有效利用专家成员的专业知识。在多个基准测试中，即使明确告知专家身份，团队表现仍落后于最佳成员（专家智能体）的独立能力，性能损失最高达41.1%。失败主因是未能有效利用专家意见，而非识别专家。对话分析显示，团队倾向于\"整合性妥协\"--平均化专家与非专家观点，随团队规模增大而加剧，且与表现负相关。这种寻求共识的行为同时提升了对抗恶意智能体的鲁棒性，揭示了协同对齐与专业利用之间的根本性权衡。",
-            "category": "papers",
-            "publishedAt": "2026-07-02T00:00:00.000Z",
-            "collectedAt": "2026-07-02T20:55:49.490Z"
-          },
-          {
-            "id": "hackernews:48762008",
-            "title": "No LLM Code in Dependencies",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://joeyh.name/blog/entry/no_LLM_code_in_dependencies/",
-            "tags": [
-              "llm"
-            ],
-            "publishedAt": "2026-07-02T14:17:23.000Z",
-            "collectedAt": "2026-07-02T20:55:48.869Z",
-            "metrics": {
-              "upvotes": 91,
-              "commentsCount": 63
-            }
-          },
-          {
-            "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-            "title": "Open LLM Leaderboard",
-            "source": "huggingface_spaces",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-            "category": "docker",
-            "tags": [
-              "docker",
-              "leaderboard",
-              "modality:text",
-              "submission:automatic",
-              "test:public",
-              "language:english",
-              "eval:code",
-              "eval:math",
-              "region:us"
-            ],
-            "publishedAt": "2023-04-17T11:40:06.000Z",
-            "collectedAt": "2026-07-02T20:55:48.670Z",
-            "metrics": {
-              "likes": 14035
-            }
-          },
-          {
-            "id": "huggingface_spaces:facebook/MusicGen",
-            "title": "MusicGen",
-            "source": "huggingface_spaces",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/spaces/facebook/MusicGen",
-            "category": "gradio",
-            "tags": [
-              "gradio",
-              "music generation",
-              "language models",
-              "LLMs",
-              "region:us"
-            ],
-            "publishedAt": "2023-06-08T18:00:26.000Z",
-            "collectedAt": "2026-07-02T20:55:48.670Z",
-            "metrics": {
-              "likes": 5075
-            }
-          }
-        ],
-        "relatedEntities": [
-          "Agent辅助的SGLang开发：初步探索",
-          "browser-use 发布开源 AI 视频剪辑 Skill「video-use」",
-          "多智能体团队阻碍专家发挥",
-          "0xA50C1A1/Ministral-3-3B-Instruct-2512-BF16-abliterix",
-          "LLM-OS-Models/LFM2.5-8B-A1B-Raw-ECHO-RLVR-GRPO-Adapters",
-          "alexkstern/llmtuna_c4_1pct_1e18_3e18_9e18_v2",
-          "AGCobra/Emogemma-12b-10k-v3",
-          "Open LLM Leaderboard"
-        ],
-        "metrics": {
-          "votes": 91,
-          "likes": 14035,
-          "commentsCount": 63,
-          "heatScore": 401,
-          "crossSourceBonus": 25
-        }
-      },
       {
         "id": "topic:mcp / tool calling",
         "title": "Mcp / Tool Calling",
@@ -171,7 +28,7 @@
           "hackernews"
         ],
         "sourceCount": 2,
-        "heatScore": 377,
+        "heatScore": 384,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Mcp / Tool Calling is an AI trend topic in gradio represented by related signals from today's collection.",
@@ -197,10 +54,10 @@
               "mcp"
             ],
             "publishedAt": "2026-07-02T15:11:20.000Z",
-            "collectedAt": "2026-07-02T20:55:48.869Z",
+            "collectedAt": "2026-07-02T22:01:32.579Z",
             "metrics": {
-              "upvotes": 87,
-              "commentsCount": 56
+              "upvotes": 94,
+              "commentsCount": 60
             }
           },
           {
@@ -216,7 +73,7 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-07-02T20:55:48.670Z",
+            "collectedAt": "2026-07-02T22:01:32.306Z",
             "metrics": {
               "likes": 3484
             }
@@ -234,7 +91,7 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-07-02T20:55:48.670Z",
+            "collectedAt": "2026-07-02T22:01:32.306Z",
             "metrics": {
               "likes": 3276
             }
@@ -252,7 +109,7 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-07-02T20:55:48.670Z",
+            "collectedAt": "2026-07-02T22:01:32.306Z",
             "metrics": {
               "likes": 2875
             }
@@ -270,7 +127,7 @@
               "region:us"
             ],
             "publishedAt": "2025-10-27T03:20:43.000Z",
-            "collectedAt": "2026-07-02T20:55:48.670Z",
+            "collectedAt": "2026-07-02T22:01:32.306Z",
             "metrics": {
               "likes": 2836
             }
@@ -284,76 +141,238 @@
           "Launch HN: Manufact (YC S25) – MCP Cloud"
         ],
         "metrics": {
-          "votes": 87,
+          "votes": 94,
           "likes": 3484,
-          "commentsCount": 56,
-          "heatScore": 377,
+          "commentsCount": 60,
+          "heatScore": 384,
           "crossSourceBonus": 10
         }
       },
       {
-        "id": "topic:rag / knowledge base",
-        "title": "Rag / Knowledge Base",
+        "id": "topic:ai model release",
+        "title": "Ai Model Release",
+        "category": "tools",
         "sources": [
+          "aihot",
+          "huggingface_spaces",
           "hackernews"
         ],
-        "sourceCount": 1,
-        "heatScore": 171,
-        "confidence": "low",
-        "watchDecision": "track",
-        "whatItIs": "Rag / Knowledge Base is an AI trend topic represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 1 source(s): hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Rag / Knowledge Base should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
+        "sourceCount": 3,
+        "heatScore": 213,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Ai Model Release is an AI trend topic in tools represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
-          "embedding",
-          "rag"
+          "tools",
+          "papers",
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english"
         ],
         "evidenceItems": [
           {
-            "id": "hackernews:48762038",
-            "title": "Show HN: CLI tool for detecting non-exact code duplication with embedding models",
+            "id": "aihot:cmr3uklx8008dslbrcmev44qb",
+            "title": "Agent辅助的SGLang开发：初步探索",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://www.lmsys.org/blog/2026-07-02-agent-assisted-sglang-development",
+            "summary": "SGLang团队将LLM服务、分布式运行时、GPU内核、扩散管道等工作流编码为可执行的SKILL.md文件、脚本、基准合约和审查循环。现有技能包括：SGLang .claude/skills（CUDA调试、内核集成、性能分析等）、SGLang diffusion .claude/skills（扩散模型添加与调优）、BBuf/AI-Infra-Auto-Driven-SKILLS（跨框架SOTA循环）、KDA（MLSys 2026 FlashInfer内核竞赛获胜方案）以及BBuf/KDA-Pilot（已合并三个SGLang集成PR）。Profile证据是性能工作的核心，长期优化转向Loop Engineering--SGLang SOTA Performance Loop将追求SOTA分解为公平基准测试、差距决策、性能分析、补丁和再验证，Humanize/RLCR添加外部审查，Codex Goal以更低协调开销运行相同循环。评审重要性提升，开发者需定义问题、选择证据、设计工作流并判断结果是否可用于生产。",
+            "category": "tools",
+            "publishedAt": "2026-07-02T18:37:56.676Z",
+            "collectedAt": "2026-07-02T22:01:33.087Z"
+          },
+          {
+            "id": "aihot:cmr3fluhr00i3sllxli2a5uko",
+            "title": "browser-use 发布开源 AI 视频剪辑 Skill「video-use」",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://x.com/shao__meng/status/2072644710523691110",
+            "summary": "browser-use 团队推出面向 Codex、Claude Code 等 AI 编码智能体的开源 Skill「video-use」，让 LLM 通过 ElevenLabs Scribe 将音频转写为约 12KB 文本（含逐词时间戳、说话人分离、事件标记），仅在决策点调用 timeline_view.py 生成 PNG 帧图。技术流水线包括转写、打包、生成 JSON 格式 EDL、ffmpeg 渲染及最多 3 轮自评估。渲染关键细节：分段提取 + `-c copy` 拼接、30ms 音频淡入淡出、PTS 时移、字幕最后叠加、HDR 自动映射、竖屏缩放、两-pass loudnorm。动画支持 HyperFrames、Remotion、Manim 等引擎。项目附带 12 条硬规则确保生产正确性。",
+            "category": "tools",
+            "publishedAt": "2026-07-02T11:33:01.000Z",
+            "collectedAt": "2026-07-02T22:01:33.087Z"
+          },
+          {
+            "id": "aihot:cmr3rd0l901btsl7lars7am9q",
+            "title": "多智能体团队阻碍专家发挥",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://machinelearning.apple.com/research/multi-agent-teams-experts",
+            "summary": "在自我组织的多智能体LLM系统中，团队无法有效利用专家成员的专业知识。在多个基准测试中，即使明确告知专家身份，团队表现仍落后于最佳成员（专家智能体）的独立能力，性能损失最高达41.1%。失败主因是未能有效利用专家意见，而非识别专家。对话分析显示，团队倾向于\"整合性妥协\"--平均化专家与非专家观点，随团队规模增大而加剧，且与表现负相关。这种寻求共识的行为同时提升了对抗恶意智能体的鲁棒性，揭示了协同对齐与专业利用之间的根本性权衡。",
+            "category": "papers",
+            "publishedAt": "2026-07-02T00:00:00.000Z",
+            "collectedAt": "2026-07-02T22:01:33.087Z"
+          },
+          {
+            "id": "hackernews:48766005",
+            "title": "Claude-real-video － any LLM can watch a video",
             "source": "hackernews",
             "sourceType": "developer_discussion",
-            "url": "https://github.com/rafal-qa/slopo",
+            "url": "https://github.com/HUANGCHIHHUNGLeo/claude-real-video",
             "tags": [
-              "embedding"
+              "llm",
+              "claude"
             ],
-            "publishedAt": "2026-07-02T14:19:24.000Z",
-            "collectedAt": "2026-07-02T20:55:48.869Z",
+            "publishedAt": "2026-07-02T19:10:12.000Z",
+            "collectedAt": "2026-07-02T22:01:32.579Z",
             "metrics": {
-              "upvotes": 64,
-              "commentsCount": 29
+              "upvotes": 32,
+              "commentsCount": 7
             }
           },
           {
-            "id": "hackernews:48706825",
-            "title": "How VictoriaLogs Stores Your Logs in a Columnar Layout",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://victoriametrics.com/blog/victorialogs-internals-columnar-storage-on-disk/index.html",
+            "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+            "title": "Open LLM Leaderboard",
+            "source": "huggingface_spaces",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+            "category": "docker",
             "tags": [
-              "rag"
+              "docker",
+              "leaderboard",
+              "modality:text",
+              "submission:automatic",
+              "test:public",
+              "language:english",
+              "eval:code",
+              "eval:math",
+              "region:us"
             ],
-            "publishedAt": "2026-06-28T12:46:20.000Z",
-            "collectedAt": "2026-07-02T20:55:48.869Z",
+            "publishedAt": "2023-04-17T11:40:06.000Z",
+            "collectedAt": "2026-07-02T22:01:32.306Z",
             "metrics": {
-              "upvotes": 30,
-              "commentsCount": 6
+              "likes": 14035
+            }
+          },
+          {
+            "id": "huggingface_spaces:facebook/MusicGen",
+            "title": "MusicGen",
+            "source": "huggingface_spaces",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/spaces/facebook/MusicGen",
+            "category": "gradio",
+            "tags": [
+              "gradio",
+              "music generation",
+              "language models",
+              "LLMs",
+              "region:us"
+            ],
+            "publishedAt": "2023-06-08T18:00:26.000Z",
+            "collectedAt": "2026-07-02T22:01:32.306Z",
+            "metrics": {
+              "likes": 5075
             }
           }
         ],
         "relatedEntities": [
-          "Show HN: CLI tool for detecting non-exact code duplication with embedding models",
-          "How VictoriaLogs Stores Your Logs in a Columnar Layout"
+          "Agent辅助的SGLang开发：初步探索",
+          "browser-use 发布开源 AI 视频剪辑 Skill「video-use」",
+          "多智能体团队阻碍专家发挥",
+          "Open LLM Leaderboard",
+          "MusicGen",
+          "Live Portrait",
+          "Claude-real-video － any LLM can watch a video"
         ],
         "metrics": {
-          "votes": 64,
-          "commentsCount": 29,
-          "heatScore": 171,
-          "crossSourceBonus": 0
+          "votes": 32,
+          "likes": 14035,
+          "commentsCount": 7,
+          "heatScore": 213,
+          "crossSourceBonus": 20
+        }
+      },
+      {
+        "id": "topic:local llm / inference",
+        "title": "Local Llm / Inference",
+        "category": "text-generation",
+        "sources": [
+          "huggingface_models",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "heatScore": 84,
+        "confidence": "low",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Local Llm / Inference is an AI trend topic in text-generation represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "technicalKeywords": [
+          "safetensors",
+          "gguf",
+          "llama",
+          "text-generation",
+          "conversational",
+          "en",
+          "zh",
+          "base_model:meta-llama/Llama-3.1-8B-Instruct"
+        ],
+        "evidenceItems": [
+          {
+            "id": "huggingface_models:AxionLabsAI/Lumen",
+            "title": "AxionLabsAI/Lumen",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/AxionLabsAI/Lumen",
+            "category": "text-generation",
+            "tags": [
+              "safetensors",
+              "gguf",
+              "llama",
+              "text-generation",
+              "conversational",
+              "en",
+              "zh",
+              "base_model:meta-llama/Llama-3.1-8B-Instruct",
+              "base_model:quantized:meta-llama/Llama-3.1-8B-Instruct",
+              "license:mit",
+              "region:us"
+            ],
+            "publishedAt": "2026-06-11T16:59:04.000Z",
+            "collectedAt": "2026-07-02T22:01:32.301Z",
+            "metrics": {
+              "downloads": 636,
+              "likes": 0
+            }
+          },
+          {
+            "id": "hackernews:48767565",
+            "title": "Borrowing the Night: Reclaiming Idle Inference GPUs for Research",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://runwayml.com/news/borrowing-the-night-reclaiming-idle-inference-gpus-for-research",
+            "tags": [
+              "ai",
+              "inference"
+            ],
+            "publishedAt": "2026-07-02T21:25:15.000Z",
+            "collectedAt": "2026-07-02T22:01:32.579Z",
+            "metrics": {
+              "upvotes": 2,
+              "commentsCount": 0
+            }
+          }
+        ],
+        "relatedEntities": [
+          "AxionLabsAI/Lumen",
+          "Borrowing the Night: Reclaiming Idle Inference GPUs for Research"
+        ],
+        "metrics": {
+          "votes": 2,
+          "downloads": 636,
+          "heatScore": 84,
+          "crossSourceBonus": 10
         }
       },
       {
@@ -361,21 +380,23 @@
         "title": "Coding Agent / Swe Agent",
         "category": "products",
         "sources": [
-          "aihot"
+          "aihot",
+          "hackernews"
         ],
-        "sourceCount": 1,
-        "heatScore": 20,
+        "sourceCount": 2,
+        "heatScore": 41,
         "confidence": "low",
-        "watchDecision": "wait",
+        "watchDecision": "track",
         "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in products represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 1 source(s): aihot, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Coding Agent / Swe Agent should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
           "products",
-          "tools"
+          "tools",
+          "claude"
         ],
         "evidenceItems": [
           {
@@ -387,7 +408,7 @@
             "summary": "Claude Enterprise 推出更丰富的管理分析工具和成本控制功能。仪表板现可按群组和用户分析用量与成本，支持按 SCIM 群组筛选，展示制品创建、文件编辑、技能和连接器对应的成本。Claude Code 管理控制台新增\"使用量\"和\"价值\"选项卡，分别显示活跃开发者、会话次数、常用命令，以及生产力提升估算、每次提交成本和年度价值估算。分析聊天支持自然语言查询并返回可导出图表。Analytics API 可将数据接入 Datadog Cloud Cost Management 和 CloudZero。管理员可设置模型默认和权限控制，并配置组织级支出限额的 75%、90% 告警通知；用户在 75% 和 95% 时收到应用内提醒。Admin API 支持自动审批额度增加、标记接近限额用户及快速变化的用量。",
             "category": "products",
             "publishedAt": "2026-07-02T18:03:22.345Z",
-            "collectedAt": "2026-07-02T20:55:49.490Z"
+            "collectedAt": "2026-07-02T22:01:33.087Z"
           },
           {
             "id": "aihot:cmr3fluhr00i3sllxli2a5uko",
@@ -398,7 +419,7 @@
             "summary": "browser-use 团队推出面向 Codex、Claude Code 等 AI 编码智能体的开源 Skill「video-use」，让 LLM 通过 ElevenLabs Scribe 将音频转写为约 12KB 文本（含逐词时间戳、说话人分离、事件标记），仅在决策点调用 timeline_view.py 生成 PNG 帧图。技术流水线包括转写、打包、生成 JSON 格式 EDL、ffmpeg 渲染及最多 3 轮自评估。渲染关键细节：分段提取 + `-c copy` 拼接、30ms 音频淡入淡出、PTS 时移、字幕最后叠加、HDR 自动映射、竖屏缩放、两-pass loudnorm。动画支持 HyperFrames、Remotion、Manim 等引擎。项目附带 12 条硬规则确保生产正确性。",
             "category": "tools",
             "publishedAt": "2026-07-02T11:33:01.000Z",
-            "collectedAt": "2026-07-02T20:55:49.490Z"
+            "collectedAt": "2026-07-02T22:01:33.087Z"
           },
           {
             "id": "aihot:cmr3epwmy008bsllx0y68akps",
@@ -409,7 +430,7 @@
             "summary": "Senior SWE-Bench是一个开源基准测试，用于评估AI智能体完成高级软件工程师级别任务的能力。任务分功能开发与Bug修复两类：功能任务指令类似自然语言消息，采用验证智能体基于专家配方自动生成行为测试；Bug任务要求根据日志、profiling等运行时信息深入调查。排行榜显示，Claude Opus 4.8搭配Mini-SWE-Agent（max effort）通过率24.0%，Claude Sonnet 5为19.4%，GPT-5.5为16.0%，最强前沿模型在超75%任务中未能达到高级工程师级别的正确性与品味。每个功能任务平均涉及11个文件，最强智能体也需数百步完成；中位指令长度仅为SWE-Bench Pro的31%。任务来源于从库到多服务应用的仓库PR，由拥有数百次提交的工程师编写。",
             "category": "products",
             "publishedAt": "2026-07-02T11:04:07.048Z",
-            "collectedAt": "2026-07-02T20:55:49.490Z"
+            "collectedAt": "2026-07-02T22:01:33.087Z"
           },
           {
             "id": "aihot:cmr2t1n9h0b18sl8zqxn9r5nu",
@@ -420,7 +441,7 @@
             "summary": "Emil Kowalski 将多年 UI/动画原则沉淀为三个 Skill，使 Codex、Claude Code、Cursor 等 Coding Agents 具备资深设计工程师的审美判断。核心规则：动画必须有理由；每天 100+ 次的高频操作禁用动画；UI 动画控制在 300ms 内；只动画 transform 和 opacity；入口从 scale（0.95）+opacity：0 开始；尊重 prefers-reduced-motion（仅移除位移动画）。review-animations 以严格标准审查动画代码，输出 Before/After/Why 表格。animation-vocabulary 将模糊描述（如\"弹一下的效果\"）转为专业动效术语。",
             "category": "tools",
             "publishedAt": "2026-07-02T00:56:56.000Z",
-            "collectedAt": "2026-07-02T20:55:49.490Z"
+            "collectedAt": "2026-07-02T22:01:33.087Z"
           },
           {
             "id": "aihot:cmr2jtg2z08nvsl8zt9pagjoe",
@@ -431,7 +452,23 @@
             "summary": "Claude Code v2.1.198 更新。Claude in Chrome 现已全面可用。为 claude agents 新增后台智能体通知（agent_needs_input / agent_completed）。新增 /dataviz 技能，提供图表与仪表盘设计指导及配色验证器。Gateway 增加 AWS 上的 Claude Platform 作为上游提供商。后台智能体在 worktree 中完成代码后自动提交、推送并创建草稿 PR。内置 Explore 智能体现继承主会话模型（上限 opus）。修复网络短暂断开导致响应中断、后台任务卡在\"Running\"状态、智能体团队队友因 API 错误失败等问题。",
             "category": "products",
             "publishedAt": "2026-07-01T20:45:36.000Z",
-            "collectedAt": "2026-07-02T20:55:49.490Z"
+            "collectedAt": "2026-07-02T22:01:33.087Z"
+          },
+          {
+            "id": "hackernews:48767874",
+            "title": "Show HN: Meanwhile – turn Claude Code idle time into learning",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://github.com/riccardomusumeci11/meanwhile",
+            "tags": [
+              "claude"
+            ],
+            "publishedAt": "2026-07-02T21:54:45.000Z",
+            "collectedAt": "2026-07-02T22:01:32.579Z",
+            "metrics": {
+              "upvotes": 1,
+              "commentsCount": 0
+            }
           }
         ],
         "relatedEntities": [
@@ -439,11 +476,13 @@
           "browser-use 发布开源 AI 视频剪辑 Skill「video-use」",
           "Senior SWE-Bench：评估AI智能体作为高级工程师的基准测试",
           "Emil Kowalski 发布设计工程师 Skills，让 AI 编码工具具备 UI 动画审美",
-          "Claude Code v2.1.198 发布"
+          "Claude Code v2.1.198 发布",
+          "Show HN: Meanwhile – turn Claude Code idle time into learning"
         ],
         "metrics": {
-          "heatScore": 20,
-          "crossSourceBonus": 0
+          "votes": 1,
+          "heatScore": 41,
+          "crossSourceBonus": 10
         }
       }
     ],
@@ -453,8 +492,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-07-02T20:55:48.373Z",
-        "finishedAt": "2026-07-02T20:55:48.373Z",
+        "startedAt": "2026-07-02T22:01:32.105Z",
+        "finishedAt": "2026-07-02T22:01:32.105Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -463,36 +502,36 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-07-02T20:55:48.375Z",
-        "finishedAt": "2026-07-02T20:55:49.491Z",
-        "latencyMs": 1115
+        "startedAt": "2026-07-02T22:01:32.105Z",
+        "finishedAt": "2026-07-02T22:01:33.088Z",
+        "latencyMs": 983
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 12,
-        "startedAt": "2026-07-02T20:55:48.390Z",
-        "finishedAt": "2026-07-02T20:55:48.667Z",
-        "latencyMs": 277
+        "itemCount": 11,
+        "startedAt": "2026-07-02T22:01:32.170Z",
+        "finishedAt": "2026-07-02T22:01:32.301Z",
+        "latencyMs": 131
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-07-02T20:55:48.391Z",
-        "finishedAt": "2026-07-02T20:55:48.670Z",
-        "latencyMs": 279
+        "startedAt": "2026-07-02T22:01:32.172Z",
+        "finishedAt": "2026-07-02T22:01:32.306Z",
+        "latencyMs": 134
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-07-02T20:55:48.392Z",
-        "finishedAt": "2026-07-02T20:55:48.870Z",
-        "latencyMs": 478
+        "startedAt": "2026-07-02T22:01:32.173Z",
+        "finishedAt": "2026-07-02T22:01:32.580Z",
+        "latencyMs": 407
       }
     ],
     "dataNotes": [
@@ -526,7 +565,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-07-02T20:55:48.670Z",
+        "collectedAt": "2026-07-02T22:01:32.306Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -545,11 +584,11 @@
         ],
         "category": "docker",
         "metrics": {
-          "likes": 11153
+          "likes": 11154
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-07-02T20:55:48.670Z",
+        "collectedAt": "2026-07-02T22:01:32.306Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -572,7 +611,7 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-07-02T20:55:48.670Z",
+        "collectedAt": "2026-07-02T22:01:32.306Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
@@ -596,7 +635,7 @@
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
         "updatedAt": "2026-06-30T13:58:28.000Z",
-        "collectedAt": "2026-07-02T20:55:48.670Z",
+        "collectedAt": "2026-07-02T22:01:32.306Z",
         "raw": {
           "sdk": "docker",
           "emoji": "📊"
@@ -619,7 +658,7 @@
         },
         "publishedAt": "2025-09-18T07:05:32.000Z",
         "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-07-02T20:55:48.670Z",
+        "collectedAt": "2026-07-02T22:01:32.306Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👁"
@@ -645,10 +684,38 @@
         },
         "publishedAt": "2023-06-08T18:00:26.000Z",
         "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-07-02T20:55:48.670Z",
+        "collectedAt": "2026-07-02T22:01:32.306Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_models:Rami234/Amrs",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "Rami234/Amrs",
+        "url": "https://huggingface.co/Rami234/Amrs",
+        "tags": [
+          "diffusers",
+          "text-to-image",
+          "lora",
+          "template:diffusion-lora",
+          "base_model:ideogram-ai/ideogram-4-fp8",
+          "base_model:adapter:ideogram-ai/ideogram-4-fp8",
+          "license:apache-2.0",
+          "region:us"
+        ],
+        "category": "text-to-image",
+        "metrics": {
+          "downloads": 859,
+          "likes": 0
+        },
+        "publishedAt": "2026-06-22T20:19:11.000Z",
+        "updatedAt": "2026-07-02T22:01:06.000Z",
+        "collectedAt": "2026-07-02T22:01:32.301Z",
+        "raw": {
+          "pipelineTag": "text-to-image"
         }
       },
       {
@@ -665,43 +732,14 @@
         ],
         "category": "static",
         "metrics": {
-          "likes": 4936
+          "likes": 4937
         },
         "publishedAt": "2023-05-20T09:26:19.000Z",
         "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-07-02T20:55:48.670Z",
+        "collectedAt": "2026-07-02T22:01:32.306Z",
         "raw": {
           "sdk": "static",
           "emoji": "🏆🤖"
-        }
-      },
-      {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
-        "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3751
-        },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-07-02T20:55:48.670Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
         }
       }
     ],
@@ -719,11 +757,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 960,
-          "commentsCount": 678
+          "upvotes": 962,
+          "commentsCount": 679
         },
         "publishedAt": "2026-06-30T23:55:12.000Z",
-        "collectedAt": "2026-07-02T20:55:48.869Z",
+        "collectedAt": "2026-07-02T22:01:32.579Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48740771",
           "matchedKeywords": [
@@ -744,11 +782,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 495,
-          "commentsCount": 332
+          "upvotes": 497,
+          "commentsCount": 339
         },
         "publishedAt": "2026-07-01T22:03:36.000Z",
-        "collectedAt": "2026-07-02T20:55:48.869Z",
+        "collectedAt": "2026-07-02T22:01:32.579Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48753715",
           "matchedKeywords": [
@@ -767,11 +805,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 551,
+          "upvotes": 552,
           "commentsCount": 391
         },
         "publishedAt": "2026-07-01T07:43:22.000Z",
-        "collectedAt": "2026-07-02T20:55:48.869Z",
+        "collectedAt": "2026-07-02T22:01:32.579Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48743472",
           "matchedKeywords": [
@@ -790,11 +828,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 549,
+          "upvotes": 550,
           "commentsCount": 341
         },
         "publishedAt": "2026-07-01T11:35:20.000Z",
-        "collectedAt": "2026-07-02T20:55:48.869Z",
+        "collectedAt": "2026-07-02T22:01:32.579Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48745113",
           "matchedKeywords": [
@@ -813,11 +851,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 601,
-          "commentsCount": 279
+          "upvotes": 602,
+          "commentsCount": 282
         },
         "publishedAt": "2026-07-01T14:26:07.000Z",
-        "collectedAt": "2026-07-02T20:55:48.869Z",
+        "collectedAt": "2026-07-02T22:01:32.579Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48747389",
           "matchedKeywords": [
@@ -827,6 +865,26 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmr3zye9z00qfslw2sg1izmks",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "阿里巴巴发布 Page Agent：开源 JavaScript 库实现网页 DOM 自然语言操控",
+        "url": "https://www.marktechpost.com/2026/07/02/meet-alibabas-page-agent-a-javascript-in-page-gui-agent-that-controls-web-interfaces-with-natural-language-through-the-dom",
+        "summary": "阿里巴巴发布 Page Agent，一个开源的 JavaScript 客户端库，嵌入网页后可通过自然语言指令直接操作 DOM 元素。与 Playwright、Puppeteer 等外部浏览器自动化工具不同，Page Agent 不依赖截图或多模态模型，而是将实时 DOM 脱水压缩为 FlatDomTree 文本映射，让纯文本模型精准执行点击、表单填写等操作。它继承用户 cookies 和会话，无需独立后端，并支持任意 OpenAI 兼容端点的模型（示例使用 `qwen3.5-plus`）。项目采用 MIT 许可证，适合在自有应用内构建 AI 副驾、智能表单填充或无障碍控制等场景，但限于单页面范围，风险操作仍需服务端验证。",
+        "description": "阿里巴巴发布 Page Agent，一个开源的 JavaScript 客户端库，嵌入网页后可通过自然语言指令直接操作 DOM 元素。与 Playwright、Puppeteer 等外部浏览器自动化工具不同，Page Agent 不依赖截图或多模态模型，而是将实时 DOM 脱水压缩为 FlatDomTree 文本映射，让纯文本模型精准执行点击、表单填写等操作。它继承用户 cookies 和会话，无需独立后端，并支持任意 OpenAI 兼容端点的模型（示例使用 `qwen3.5-plus`）。项目采用 MIT 许可证，适合在自有应用内构建 AI 副驾、智能表单填充或无障碍控制等场景，但限于单页面范围，风险操作仍需服务端验证。",
+        "category": "products",
+        "originalSource": "MarkTechPost（RSS）",
+        "originalUrl": "https://www.marktechpost.com/2026/07/02/meet-alibabas-page-agent-a-javascript-in-page-gui-agent-that-controls-web-interfaces-with-natural-language-through-the-dom",
+        "recommendedReason": "阿里巴巴发布 Page Agent，一个开源的 JavaScript 客户端库，嵌入网页后可通过自然语言指令直接操作 DOM 元素。与 Playwright、Puppeteer 等外部浏览器自动化工具不同，Page Agent 不依赖截图或多模态模型，而是将实时 DOM 脱水压缩为 FlatDomTree 文本映射，让纯文本模型精准执行点击、表单填写等操作。它继承用户 cookies 和会话，无需独立后端，并支持任意 OpenAI 兼容端点的模型（示例使用 `qwen3.5-plus`）。项目采用 MIT 许可证，适合在自有应用内构建 AI 副驾、智能表单填充或无障碍控制等场景，但限于单页面范围，风险操作仍需服务端验证。",
+        "publishedAt": "2026-07-02T20:51:39.000Z",
+        "collectedAt": "2026-07-02T22:01:33.087Z",
+        "raw": {
+          "id": "cmr3zye9z00qfslw2sg1izmks",
+          "titleEn": "Meet Alibaba's Page Agent： A JavaScript In-Page GUI Agent That Controls Web Interfaces With Natural Language Through the DOM",
+          "apiCategory": "ai-products"
+        }
+      },
       {
         "id": "aihot:cmr3yrwnf00e1slw21f16oh2d",
         "source": "aihot",
@@ -840,7 +898,7 @@
         "originalUrl": "https://x.com/emollick/status/2072778376494895139",
         "recommendedReason": "关于Mythos和网络安全的讨论并非炒作。 （正如任何使用Fable进行自主工作的人可能已经认识到的那样。）",
         "publishedAt": "2026-07-02T20:24:09.000Z",
-        "collectedAt": "2026-07-02T20:55:49.490Z",
+        "collectedAt": "2026-07-02T22:01:33.087Z",
         "raw": {
           "id": "cmr3yrwnf00e1slw21f16oh2d",
           "titleEn": "The talk about Mythos and cybersecurity was not， in fact， hype. （As anyone using Fable to do autonom…",
@@ -860,7 +918,7 @@
         "originalUrl": "https://the-decoder.com/microsoft-launches-2-5-billion-frontier-company-to-embed-6000-ai-engineers-inside-enterprise-clients",
         "recommendedReason": "Microsoft 新设业务部门\"Frontier Company\"，拨款 25 亿美元，将 6000 名行业与工程专家派驻企业客户现场，\"共同设计、共同创新、部署并持续改进 AI 系统\"。该部门由 Rodrigo Kede Lima 领导，旨在超越\"前部署工程\"模式，成为\"最大、以结果为导向的工程组织\"。Microsoft 将自己定位为 OpenAI 和 Anthropic 的\"平台中立\"替代方案，后两者也已设立专门部署公司。Microsoft 将借助埃森哲、凯捷、安永等系统集成商扩大覆盖范围。",
         "publishedAt": "2026-07-02T19:18:29.000Z",
-        "collectedAt": "2026-07-02T20:55:49.490Z",
+        "collectedAt": "2026-07-02T22:01:33.087Z",
         "raw": {
           "id": "cmr3wzycy008tslnxrw3opnfn",
           "titleEn": "Microsoft launches $2.5 billion \"Frontier Company\" to embed 6，000 AI engineers inside enterprise clients",
@@ -880,7 +938,7 @@
         "originalUrl": "https://www.lmsys.org/blog/2026-07-02-agent-assisted-sglang-development",
         "recommendedReason": "SGLang团队将LLM服务、分布式运行时、GPU内核、扩散管道等工作流编码为可执行的SKILL.md文件、脚本、基准合约和审查循环。现有技能包括：SGLang .claude/skills（CUDA调试、内核集成、性能分析等）、SGLang diffusion .claude/skills（扩散模型添加与调优）、BBuf/AI-Infra-Auto-Driven-SKILLS（跨框架SOTA循环）、KDA（MLSys 2026 FlashInfer内核竞赛获胜方案）以及BBuf/KDA-Pilot（已合并三个SGLang集成PR）。Profile证据是性能工作的核心，长期优化转向Loop Engineering--SGLang SOTA Performance Loop将追求SOTA分解为公平基准测试、差距决策、性能分析、补丁和再验证，Humanize/RLCR添加外部审查，Codex Goal以更低协调开销运行相同循环。评审重要性提升，开发者需定义问题、选择证据、设计工作流并判断结果是否可用于生产。",
         "publishedAt": "2026-07-02T18:37:56.676Z",
-        "collectedAt": "2026-07-02T20:55:49.490Z",
+        "collectedAt": "2026-07-02T22:01:33.087Z",
         "raw": {
           "id": "cmr3uklx8008dslbrcmev44qb",
           "titleEn": "Blog Agent-Assisted SGLang Development： An Initial Exploration SGLang development increasingly goes beyond isolated code changes. The same repository now spans LLM serving， distributed runtime， GPU kernels， diffusion pipelines， model-specific execution paths， and… SGLang Team",
@@ -900,7 +958,7 @@
         "originalUrl": "https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend",
         "recommendedReason": "Claude Enterprise 推出更丰富的管理分析工具和成本控制功能。仪表板现可按群组和用户分析用量与成本，支持按 SCIM 群组筛选，展示制品创建、文件编辑、技能和连接器对应的成本。Claude Code 管理控制台新增\"使用量\"和\"价值\"选项卡，分别显示活跃开发者、会话次数、常用命令，以及生产力提升估算、每次提交成本和年度价值估算。分析聊天支持自然语言查询并返回可导出图表。Analytics API 可将数据接入 Datadog Cloud Cost Management 和 CloudZero。管理员可设置模型默认和权限控制，并配置组织级支出限额的 75%、90% 告警通知；用户在 75% 和 95% 时收到应用内提醒。Admin API 支持自动审批额度增加、标记接近限额用户及快速变化的用量。",
         "publishedAt": "2026-07-02T18:03:22.345Z",
-        "collectedAt": "2026-07-02T20:55:49.490Z",
+        "collectedAt": "2026-07-02T22:01:33.087Z",
         "raw": {
           "id": "cmr3tce0201rwsl7lm25hjxbo",
           "titleEn": "Giving admins more visibility and control over Claude spend",
@@ -920,7 +978,7 @@
         "originalUrl": "https://x.com/OpenRouter/status/2072738704922439689",
         "recommendedReason": "用 Fable 5 构建的鲁布·戈德堡机械，仅需 4.44 美元 👀 提示词在此：https://www.reddit.com/r/openrouter/comments/1ulkilz/i_asked_claude_fable_5_to_build_a_rube_goldberg/",
         "publishedAt": "2026-07-02T17:46:31.000Z",
-        "collectedAt": "2026-07-02T20:55:49.490Z",
+        "collectedAt": "2026-07-02T22:01:33.087Z",
         "raw": {
           "id": "cmr3tdz1t01t0sl7lztwzlcaj",
           "titleEn": "Rube Goldberg machine built with Fable 5， for $4.44 👀 Prompt available here： https://www.reddit.co...",
@@ -940,7 +998,7 @@
         "originalUrl": "https://x.com/kimmonismus/status/2072718147279335507",
         "recommendedReason": "WSJ法庭文件显示，Anthropic CEO Dario Amodei与五角大楼副部长Emil Michael数月邮件往来，核心分歧在于Claude的军事用途护栏。Anthropic要求禁止全自主武器及某些监控用途，五角大楼则希望Claude可用于所有合法国家安全场景。Michael称若分歧太大不愿\"强行推动\"。随后五角大楼将Anthropic列为供应链风险，阻止合作伙伴在国防部项目中使用其模型。法官暂停部分措施，政府正在上诉。Michael称原先采用Anthropic的操作中已有三分之二切换至其他AI工具。",
         "publishedAt": "2026-07-02T16:24:50.000Z",
-        "collectedAt": "2026-07-02T20:55:49.490Z",
+        "collectedAt": "2026-07-02T22:01:33.087Z",
         "raw": {
           "id": "cmr3pz3hx00w5sl7lk3qk71x5",
           "titleEn": "Anthropic's Pentagon fight was less about access to Claude than control over how the military can us…",
@@ -960,30 +1018,10 @@
         "originalUrl": "https://www.ithome.com/0/971/954.htm",
         "recommendedReason": "快手在港交所公告，21名初始投资者同意以138.24亿元人民币（20.28亿美元）现金注资北京可灵，后者将持有可灵AI相关资产。同日15名额外投资者追加出资52.235亿元人民币（7.6639亿美元），认购总上限为204.471亿元（30亿美元），对应北京可灵扩大后注册资本的16.67%。投后估值180亿美元。快手预计未来12个月内启动可灵AI赴港上市，募资用于扩充算力、建设数据中心及人才引进。",
         "publishedAt": "2026-07-02T15:36:38.000Z",
-        "collectedAt": "2026-07-02T20:55:49.490Z",
+        "collectedAt": "2026-07-02T22:01:33.087Z",
         "raw": {
           "id": "cmr3p5u0c00qwsl7lyxbee0nd",
           "titleEn": "快手：初始投资者同意向北京可灵注资 20.28 亿美元",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmr3n0nvi006usl7l9bxrmouw",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "花旗、Adobe等企业限制员工使用AI旗舰模型以控制成本",
-        "url": "https://www.ithome.com/0/971/937.htm",
-        "summary": "据404 Media获取的内部资料，Atlassian、Adobe、亚马逊等六家企业正限制员工使用AI工具，要求改用能力较低的大模型避免成本失控。至少一家企业月度AI开销增至三倍，超1500万美元。花旗银行因GitHub改为按量计费，于6月24日禁用Claude Opus 4.6、4.7及GPT-5.5等旗舰模型。Adobe于6月30日终止Claude无限制使用协议。Atlassian数据显示其AI月支出从500万美元飙升至1500万美元，本财年预计超1.2亿美元。GitHub计划改用开源模型并测试单人按量计费模式。",
-        "description": "据404 Media获取的内部资料，Atlassian、Adobe、亚马逊等六家企业正限制员工使用AI工具，要求改用能力较低的大模型避免成本失控。至少一家企业月度AI开销增至三倍，超1500万美元。花旗银行因GitHub改为按量计费，于6月24日禁用Claude Opus 4.6、4.7及GPT-5.5等旗舰模型。Adobe于6月30日终止Claude无限制使用协议。Atlassian数据显示其AI月支出从500万美元飙升至1500万美元，本财年预计超1.2亿美元。GitHub计划改用开源模型并测试单人按量计费模式。",
-        "category": "industry",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/971/937.htm",
-        "recommendedReason": "据404 Media获取的内部资料，Atlassian、Adobe、亚马逊等六家企业正限制员工使用AI工具，要求改用能力较低的大模型避免成本失控。至少一家企业月度AI开销增至三倍，超1500万美元。花旗银行因GitHub改为按量计费，于6月24日禁用Claude Opus 4.6、4.7及GPT-5.5等旗舰模型。Adobe于6月30日终止Claude无限制使用协议。Atlassian数据显示其AI月支出从500万美元飙升至1500万美元，本财年预计超1.2亿美元。GitHub计划改用开源模型并测试单人按量计费模式。",
-        "publishedAt": "2026-07-02T14:22:49.000Z",
-        "collectedAt": "2026-07-02T20:55:49.490Z",
-        "raw": {
-          "id": "cmr3n0nvi006usl7l9bxrmouw",
-          "titleEn": "企业 AI 成本失控，消息称花旗、Adobe 等纷纷限制员工使用大模型",
           "apiCategory": "industry"
         }
       }
