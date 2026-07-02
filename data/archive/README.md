@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-07-02T01:29:17.617Z
+Updated: 2026-07-02T04:22:08.578Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -8,7 +8,7 @@ Updated: 2026-07-02T01:29:17.617Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-07-02 | daily | [AI Developer Radar｜Daily｜2026-07-02](2026/07/2026-07-02-daily.md) | CoreBunch/Instatic, hasaneyldrm/exercises-dataset, PatrickJS/awesome-cursorrules, Tencent/ncnn, stas00/ml-engineering |
+| 2026-07-02 | daily | [AI Developer Radar｜Daily｜2026-07-02](2026/07/2026-07-02-daily.md) | CoreBunch/Instatic, hasaneyldrm/exercises-dataset, stas00/ml-engineering, HKUDS/Vibe-Trading, Unclecheng-li/VulnClaw |
 | 2026-07-01 | daily | [AI Developer Radar｜Daily｜2026-07-01](2026/07/2026-07-01-daily.md) | Unclecheng-li/VulnClaw, 0xNyk/council-of-high-intelligence, diegosouzapw/OmniRoute, ogulcancelik/herdr, facebook/astryx |
 | 2026-06-30 | daily | [AI Developer Radar｜Daily｜2026-06-30](2026/06/2026-06-30-daily.md) | usestrix/strix, Tencent/ncnn, gvergnaud/ts-pattern, PatrickJS/awesome-cursorrules, milvus-io/milvus |
 | 2026-06-29 | daily | [AI Developer Radar｜Daily｜2026-06-29](2026/06/2026-06-29-daily.md) | cupy/cupy, browser-use/video-use, stas00/ml-engineering, ChatGPTNextWeb/NextChat, deepspeedai/DeepSpeed |
