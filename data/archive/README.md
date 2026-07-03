@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-07-03T11:05:05.639Z
+Updated: 2026-07-03T13:17:29.735Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -8,7 +8,7 @@ Updated: 2026-07-03T11:05:05.639Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-07-03 | daily | [AI Developer Radar｜Daily｜2026-07-03](2026/07/2026-07-03-daily.md) | TencentCloud/CubeSandbox, ChatGPTNextWeb/NextChat, automazeio/ccpm, gvergnaud/ts-pattern, stas00/ml-engineering |
+| 2026-07-03 | daily | [AI Developer Radar｜Daily｜2026-07-03](2026/07/2026-07-03-daily.md) | TencentCloud/CubeSandbox, agentskills/agentskills, pytorch/pytorch, harvard-edge/cs249r_book, ChatGPTNextWeb/NextChat |
 | 2026-07-02 | daily | [AI Developer Radar｜Daily｜2026-07-02](2026/07/2026-07-02-daily.md) | ChromeDevTools/chrome-devtools-mcp, hasaneyldrm/exercises-dataset, stas00/ml-engineering, google-ai-edge/mediapipe, ChatGPTNextWeb/NextChat |
 | 2026-07-01 | daily | [AI Developer Radar｜Daily｜2026-07-01](2026/07/2026-07-01-daily.md) | Unclecheng-li/VulnClaw, 0xNyk/council-of-high-intelligence, diegosouzapw/OmniRoute, ogulcancelik/herdr, facebook/astryx |
 | 2026-06-30 | daily | [AI Developer Radar｜Daily｜2026-06-30](2026/06/2026-06-30-daily.md) | usestrix/strix, Tencent/ncnn, gvergnaud/ts-pattern, PatrickJS/awesome-cursorrules, milvus-io/milvus |
