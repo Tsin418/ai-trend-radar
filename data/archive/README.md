@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-07-04T17:33:06.963Z
+Updated: 2026-07-04T19:42:09.760Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -8,7 +8,7 @@ Updated: 2026-07-04T17:33:06.963Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-07-05 | daily | [AI Developer Radar｜Daily｜2026-07-05](2026/07/2026-07-05-daily.md) | gvergnaud/ts-pattern, calesthio/OpenMontage, Panniantong/Agent-Reach, alibaba/page-agent, asgeirtj/system_prompts_leaks |
+| 2026-07-05 | daily | [AI Developer Radar｜Daily｜2026-07-05](2026/07/2026-07-05-daily.md) | automazeio/ccpm, gvergnaud/ts-pattern, calesthio/OpenMontage, Panniantong/Agent-Reach, asgeirtj/system_prompts_leaks |
 | 2026-07-04 | daily | [AI Developer Radar｜Daily｜2026-07-04](2026/07/2026-07-04-daily.md) | alibaba/page-agent, dotnet/skills, rommapp/romm, gvergnaud/ts-pattern, calesthio/OpenMontage |
 | 2026-07-03 | daily | [AI Developer Radar｜Daily｜2026-07-03](2026/07/2026-07-03-daily.md) | TencentCloud/CubeSandbox, agentskills/agentskills, pytorch/pytorch, harvard-edge/cs249r_book, ChatGPTNextWeb/NextChat |
 | 2026-07-02 | daily | [AI Developer Radar｜Daily｜2026-07-02](2026/07/2026-07-02-daily.md) | ChromeDevTools/chrome-devtools-mcp, hasaneyldrm/exercises-dataset, stas00/ml-engineering, google-ai-edge/mediapipe, ChatGPTNextWeb/NextChat |
