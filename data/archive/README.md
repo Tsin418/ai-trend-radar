@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-07-06T16:34:06.586Z
+Updated: 2026-07-06T19:12:08.998Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -9,7 +9,7 @@ Updated: 2026-07-06T16:34:06.586Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-07-07 | daily | [AI Developer Radar｜Daily｜2026-07-07](2026/07/2026-07-07-daily.md) | hpcaitech/ColossalAI, automazeio/ccpm, addyosmani/agent-skills, asgeirtj/system_prompts_leaks, Panniantong/Agent-Reach |
+| 2026-07-07 | daily | [AI Developer Radar｜Daily｜2026-07-07](2026/07/2026-07-07-daily.md) | hpcaitech/ColossalAI, milvus-io/milvus, automazeio/ccpm, addyosmani/agent-skills, asgeirtj/system_prompts_leaks |
 | 2026-07-06 | daily | [AI Developer Radar｜Daily｜2026-07-06](2026/07/2026-07-06-daily.md) | OpenHands/OpenHands, steipete/CodexBar, gastownhall/gastown, hpcaitech/ColossalAI, automazeio/ccpm |
 | 2026-07-05 | daily | [AI Developer Radar｜Daily｜2026-07-05](2026/07/2026-07-05-daily.md) | CoplayDev/unity-mcp, alirezarezvani/claude-skills, Graphify-Labs/graphify, Zackriya-Solutions/meetily, immich-app/immich |
 | 2026-07-04 | daily | [AI Developer Radar｜Daily｜2026-07-04](2026/07/2026-07-04-daily.md) | alibaba/page-agent, dotnet/skills, rommapp/romm, gvergnaud/ts-pattern, calesthio/OpenMontage |
