@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-07-06T05:04:46.143Z
+Updated: 2026-07-06T09:14:56.590Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -9,7 +9,7 @@ Updated: 2026-07-06T05:04:46.143Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-07-06 | daily | [AI Developer Radar｜Daily｜2026-07-06](2026/07/2026-07-06-daily.md) | hpcaitech/ColossalAI, calesthio/OpenMontage, usestrix/strix, addyosmani/agent-skills, Leonxlnx/taste-skill |
+| 2026-07-06 | daily | [AI Developer Radar｜Daily｜2026-07-06](2026/07/2026-07-06-daily.md) | hpcaitech/ColossalAI, calesthio/OpenMontage, usestrix/strix, asgeirtj/system_prompts_leaks, addyosmani/agent-skills |
 | 2026-07-05 | daily | [AI Developer Radar｜Daily｜2026-07-05](2026/07/2026-07-05-daily.md) | CoplayDev/unity-mcp, alirezarezvani/claude-skills, Graphify-Labs/graphify, Zackriya-Solutions/meetily, immich-app/immich |
 | 2026-07-04 | daily | [AI Developer Radar｜Daily｜2026-07-04](2026/07/2026-07-04-daily.md) | alibaba/page-agent, dotnet/skills, rommapp/romm, gvergnaud/ts-pattern, calesthio/OpenMontage |
 | 2026-07-03 | daily | [AI Developer Radar｜Daily｜2026-07-03](2026/07/2026-07-03-daily.md) | TencentCloud/CubeSandbox, agentskills/agentskills, pytorch/pytorch, harvard-edge/cs249r_book, ChatGPTNextWeb/NextChat |
