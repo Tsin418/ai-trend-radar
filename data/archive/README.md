@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-07-07T15:22:49.553Z
+Updated: 2026-07-07T17:32:22.067Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -9,6 +9,7 @@ Updated: 2026-07-07T15:22:49.553Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
+| 2026-07-08 | daily | [AI Developer Radar｜Daily｜2026-07-08](2026/07/2026-07-08-daily.md) | automazeio/ccpm, Tencent/ncnn, ChatGPTNextWeb/NextChat, gvergnaud/ts-pattern, addyosmani/agent-skills |
 | 2026-07-07 | daily | [AI Developer Radar｜Daily｜2026-07-07](2026/07/2026-07-07-daily.md) | ToolJet/ToolJet, hesreallyhim/awesome-claude-code, automazeio/ccpm, Tencent/ncnn, gvergnaud/ts-pattern |
 | 2026-07-06 | daily | [AI Developer Radar｜Daily｜2026-07-06](2026/07/2026-07-06-daily.md) | OpenHands/OpenHands, steipete/CodexBar, gastownhall/gastown, hpcaitech/ColossalAI, automazeio/ccpm |
 | 2026-07-05 | daily | [AI Developer Radar｜Daily｜2026-07-05](2026/07/2026-07-05-daily.md) | CoplayDev/unity-mcp, alirezarezvani/claude-skills, Graphify-Labs/graphify, Zackriya-Solutions/meetily, immich-app/immich |
