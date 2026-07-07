@@ -1,206 +1,206 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-07T15:22:49.472Z",
+  "generatedAt": "2026-07-07T17:06:28.508Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2607.05396v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model",
-        "url": "https://arxiv.org/pdf/2607.05396v1",
-        "description": "Real-world robot deployment rarely maintains the training-stage camera setup, where cameras often experience repositioning or remounting depending on actual scenarios. Existing view-robust Vision-Language-Action (VLA) policies tolerate such camera variations only when the camera extrinsics are explicitly provided, making them fragile and hard to use especially when view robustness is critical. We argue that the policy should not be told where the camera is, but rather figure it out by itself. To",
-        "summary": "Real-world robot deployment rarely maintains the training-stage camera setup, where cameras often experience repositioning or remounting depending on actual scenarios. Existing view-robust Vision-Language-Action (VLA) policies tolerate such camera variations only when the camera extrinsics are explicitly provided, making them fragile and hard to use especially when view robustness is critical. We argue that the policy should not be told where the camera is, but rather figure it out by itself. To this end, we introduce Camera-Centric VLA (CamVLA), a new VLA model that decouples manipulation controls from camera geometry by predicting (i) a camera-centric end-effector action expressed in the local camera frame, and (ii) a 6-DoF hand-eye matrix relating cameras to the robot base. A deterministic geometric transformation composes the two predictions into a robot base-frame action. This disentangles how I should move in pose-independent camera-centric action generation from where I am looking from in camera-perspective geometric grounding. The resulting policy is calibration-free, depth-free, and single-view, requiring only a single monocular RGB image as the visual observation and task instruction at deployment. Evaluations in both simulation and real-world robot data show that CamVLA consistently improves success rates across diverse unseen viewpoints. Project page: https://alibaba-damo-academy.github.io/CamVLA/.",
-        "author": "Wenhao Li, Xueying Jiang, Quanhao Qian, Deli Zhao, Shijian Lu, Gongjie Zhang, Ran Xu",
+        "id": "huggingface_models:programasweights/paw-programs",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "programasweights/paw-programs",
+        "url": "https://huggingface.co/programasweights/paw-programs",
         "tags": [
-          "cs.CV",
-          "cs.AI",
-          "cs.LG",
-          "cs.RO",
-          "rag",
-          "evaluation"
+          "safetensors",
+          "gguf",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-07-06T17:59:59Z",
-        "updatedAt": "2026-07-06T17:59:59Z",
-        "collectedAt": "2026-07-07T15:22:00.711Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.05396v1",
-          "authors": [
-            "Wenhao Li",
-            "Xueying Jiang",
-            "Quanhao Qian",
-            "Deli Zhao",
-            "Shijian Lu",
-            "Gongjie Zhang",
-            "Ran Xu"
-          ]
+        "metrics": {
+          "downloads": 223012,
+          "likes": 3
         },
-        "recommendedReason": "Matched AI developer keywords: rag, evaluation"
+        "publishedAt": "2026-03-26T23:05:35.000Z",
+        "updatedAt": "2026-07-07T17:04:53.000Z",
+        "collectedAt": "2026-07-07T17:06:28.654Z",
+        "raw": {}
       },
       {
-        "id": "http://arxiv.org/abs/2607.05394v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Weak-to-Strong Generalization via Direct On-Policy Distillation",
-        "url": "https://arxiv.org/pdf/2607.05394v1",
-        "description": "Reinforcement learning with verifiable rewards (RLVR) is a powerful recipe for improving language-model reasoning, but it is expensive to repeat on every new strong model because the target model must generate many rollouts during training. As models scale, post-training itself becomes a bottleneck. We study a weak-to-strong alternative: run RL on a smaller model where rollouts are cheaper, then reuse what that RL run learned to improve a stronger target model. Directly distilling the post-RL we",
-        "summary": "Reinforcement learning with verifiable rewards (RLVR) is a powerful recipe for improving language-model reasoning, but it is expensive to repeat on every new strong model because the target model must generate many rollouts during training. As models scale, post-training itself becomes a bottleneck. We study a weak-to-strong alternative: run RL on a smaller model where rollouts are cheaper, then reuse what that RL run learned to improve a stronger target model. Directly distilling the post-RL weak teacher is not enough, because the teacher's final policy mixes useful RL gains with the limitations of the smaller model. We propose Direct On-Policy Distillation (Direct-OPD), which transfers the teacher's RL-induced policy shift instead. Direct-OPD compares the post-RL teacher with its own pre-RL reference and treats their log-ratio as a dense implicit reward for the student. In plain terms, the checkpoint pair tells us which actions RL made the weak model more or less likely to take, and Direct-OPD applies that signal on the stronger student's own on-policy states. This directly reuses the weak model's RL supervision signal without training an explicit reward model or running sparse-reward RL on the target model. Empirically, Direct-OPD consistently leverages weaker teachers to improve stronger target models; notably, it boosts Qwen3-1.7B from 48.3% to 62.4% on AIME 2024 in just 4 hours on 8 A100 GPUs. It outperforms step-matched direct RL and enables the sequential composition of multiple policy shifts. Our results show that RL outcomes can be reused across model scales as implicit reward signals, not merely as final models to imitate.",
-        "author": "Shiyuan Feng, Huan-ang Gao, Haohan Chi, Hanlin Wu, Zhilong Zhang, Zheng Jiang, Bingxiang He, Wei-Ying Ma, Ya-Qin Zhang, Hao Zhou",
+        "id": "huggingface_models:chetty23/my-finetuned-translation-model",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "chetty23/my-finetuned-translation-model",
+        "url": "https://huggingface.co/chetty23/my-finetuned-translation-model",
         "tags": [
-          "cs.LG",
-          "cs.AI",
-          "cs.CL",
-          "rag"
+          "transformers",
+          "safetensors",
+          "t5",
+          "text2text-generation",
+          "generated_from_trainer",
+          "base_model:google-t5/t5-small",
+          "base_model:finetune:google-t5/t5-small",
+          "license:apache-2.0",
+          "text-generation-inference",
+          "endpoints_compatible",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-07-06T17:59:58Z",
-        "updatedAt": "2026-07-06T17:59:58Z",
-        "collectedAt": "2026-07-07T15:22:00.711Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.05394v1",
-          "authors": [
-            "Shiyuan Feng",
-            "Huan-ang Gao",
-            "Haohan Chi",
-            "Hanlin Wu",
-            "Zhilong Zhang",
-            "Zheng Jiang",
-            "Bingxiang He",
-            "Wei-Ying Ma",
-            "Ya-Qin Zhang",
-            "Hao Zhou"
-          ]
+        "metrics": {
+          "downloads": 1080,
+          "likes": 1
         },
-        "recommendedReason": "Matched AI developer keywords: rag"
+        "publishedAt": "2026-07-01T09:06:11.000Z",
+        "updatedAt": "2026-07-07T17:05:00.000Z",
+        "collectedAt": "2026-07-07T17:06:28.654Z",
+        "raw": {}
       },
       {
-        "id": "http://arxiv.org/abs/2607.05393v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Interpretable Human-Label-Free Deep Learning for Real-Bogus Classification with Uncertainty Quantification",
-        "url": "https://arxiv.org/pdf/2607.05393v1",
-        "description": "Time-domain surveys generate many transient candidates, making Real-Bogus classification a critical step in automated discovery pipelines. Reliable labels are costly, while community labels can be noisy and survey-dependent. We aim to develop a Real-Bogus classification framework that can be trained without human-labeled data using injected transients and bogus-dominated survey data, remains robust under strong class contamination, and provides calibrated uncertainty quantification. We combine s",
-        "summary": "Time-domain surveys generate many transient candidates, making Real-Bogus classification a critical step in automated discovery pipelines. Reliable labels are costly, while community labels can be noisy and survey-dependent. We aim to develop a Real-Bogus classification framework that can be trained without human-labeled data using injected transients and bogus-dominated survey data, remains robust under strong class contamination, and provides calibrated uncertainty quantification. We combine simulated transient injections with a contaminated survey class and train a dual-network model using asymmetric co-teaching for classes with different label-noise levels. We evaluate performance on a benchmark subset and analyze the learned representation with latent-space visualization tools. For uncertainty quantification (UQ), we compare MC dropout and deep ensembles and propose a low-cost hybrid strategy that exploits the dual-network setting to improve calibration. We extend the evaluation to the light-curve domain to assess recovery of light-curve classes. The method achieves strong Real-Bogus performance on the labeled subset and remains stable under severe class contamination. It recovers transient light-curve classes with high fidelity, while single-source identification is limited by ambiguity in light-curve-derived labels. Our hybrid UQ approach achieves competitive calibration relative to more expensive ensemble baselines. Latent-space analyses indicate that uncertainty aligns with the decision boundary and reveal subclasses within the bogus population. Our results show that injection-driven, weakly supervised training can enable scalable and consistent Real-Bogus classification without human-labeled training data while providing calibrated uncertainties. The method is suited for transfer to forthcoming surveys by re-running the injection-based training pipeline.",
-        "author": "Raphaël Bonnet-Guerrini, Bruno Sanchez, Dominique Fouchez, Benjamin Racine, Maya Guy, Mariam Sabalbal, Manal Yassine, Vincenzo Piuri",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "astro-ph.IM",
-          "astro-ph.GA",
-          "astro-ph.HE",
-          "cs.AI",
-          "cs.LG",
-          "benchmark",
-          "evaluation"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "astro-ph.IM",
-        "language": "en",
-        "publishedAt": "2026-07-06T17:59:58Z",
-        "updatedAt": "2026-07-06T17:59:58Z",
-        "collectedAt": "2026-07-07T15:22:00.711Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.05393v1",
-          "authors": [
-            "Raphaël Bonnet-Guerrini",
-            "Bruno Sanchez",
-            "Dominique Fouchez",
-            "Benjamin Racine",
-            "Maya Guy",
-            "Mariam Sabalbal",
-            "Manal Yassine",
-            "Vincenzo Piuri"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14040
         },
-        "recommendedReason": "Matched AI developer keywords: benchmark, evaluation"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-07-07T17:06:28.665Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.05391v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
-        "url": "https://arxiv.org/pdf/2607.05391v1",
-        "description": "Scaling pre-training, post-training, and test-time compute have become the central paradigms for improving the capabilities of LLMs. In this work, we identify verification, the ability to determine the correctness of a solution, as a new scaling axis. To unlock this and demonstrate its effectiveness, we introduce LLM-as-a-Verifier, a general-purpose verification framework that provides fine-grained feedback for agentic tasks without requiring additional training. Unlike standard LM judges that p",
-        "summary": "Scaling pre-training, post-training, and test-time compute have become the central paradigms for improving the capabilities of LLMs. In this work, we identify verification, the ability to determine the correctness of a solution, as a new scaling axis. To unlock this and demonstrate its effectiveness, we introduce LLM-as-a-Verifier, a general-purpose verification framework that provides fine-grained feedback for agentic tasks without requiring additional training. Unlike standard LM judges that prompt LLMs to produce discrete scores for candidate solutions, LLM-as-a-Verifier computes the expectation over the distribution of scoring token logits to generate continuous scores. This probabilistic formulation enables verification to scale along multiple dimensions: (1) score granularity, (2) repeated evaluation, and (3) criteria decomposition. In particular, we show that scaling the scoring granularity leads to better separation between positive and negative solutions, resulting in more calibrated comparisons. Moreover, scaling repeated evaluation and criteria decomposition consistently lead to additional gains in verification accuracy through variance and complexity reduction. We further introduce a cost-efficient ranking algorithm for selecting the best solution among candidates using the verifier's continuous scores. LLM-as-a-Verifier achieves state-of-the-art performance on Terminal-Bench V2 (86.5%), SWE-Bench Verified (78.2%), RoboRewardBench (87.4%), and MedAgentBench (73.3%). Beyond verification, the fine-grained signals from LLM-as-a-Verifier can also serve as a proxy for estimating task progress. We build an extension for Claude Code, enabling developers to monitor and improve their own agentic systems. Finally, we show that LLM-as-a-Verifier can provide dense feedback for RL, improving the sample efficiency of SAC and GRPO on robotics and mathematical reasoning benchmarks.",
-        "author": "Jacky Kwok, Shulu Li, Pranav Atreya, Yuejiang Liu, Yixing Jiang, Chelsea Finn, Marco Pavone, Ion Stoica, Azalia Mirhoseini",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.AI",
-          "cs.CL",
-          "cs.LG",
-          "cs.MA",
-          "cs.RO",
-          "llm",
-          "agent",
-          "benchmark",
-          "evaluation",
-          "agentic"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-07-06T17:59:35Z",
-        "updatedAt": "2026-07-06T17:59:35Z",
-        "collectedAt": "2026-07-07T15:22:00.711Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.05391v1",
-          "authors": [
-            "Jacky Kwok",
-            "Shulu Li",
-            "Pranav Atreya",
-            "Yuejiang Liu",
-            "Yixing Jiang",
-            "Chelsea Finn",
-            "Marco Pavone",
-            "Ion Stoica",
-            "Azalia Mirhoseini"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11160
         },
-        "recommendedReason": "Matched AI developer keywords: llm, agent, benchmark, evaluation, agentic"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-07-07T17:06:28.665Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.05382v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation",
-        "url": "https://arxiv.org/pdf/2607.05382v1",
-        "description": "Visual generators excel at rendering, but they confidently fabricate what they do not know. User requests are unbounded, evolving, and deeply long-tailed: new characters, trending entities, post-cutoff events, and more. This world-knowledge bottleneck is structural: generators are trained on fixed corpora, but the visual world is open-ended. We construct SearchGen-20K and SearchGen-Bench, with 20,839 prompts spanning twelve failure categories and twenty-two domains, paired with a pre-executed mu",
-        "summary": "Visual generators excel at rendering, but they confidently fabricate what they do not know. User requests are unbounded, evolving, and deeply long-tailed: new characters, trending entities, post-cutoff events, and more. This world-knowledge bottleneck is structural: generators are trained on fixed corpora, but the visual world is open-ended. We construct SearchGen-20K and SearchGen-Bench, with 20,839 prompts spanning twelve failure categories and twenty-two domains, paired with a pre-executed multimodal SearchGen-Corpus-1M to support offline, reproducible research. On SearchGen-Bench, frontier open generators score only 21 to 28 out of 100, a 40-point collapse invisible to existing benchmarks. The natural remedy is to employ search tools, enabling agentic visual generation. However, we find that naive search fails: it retrieves indiscriminately, injecting noise into prompts the generator already handles. We trace the root cause to a generator-specific, evolving knowledge boundary: the divide between what a generator can internalize through training and what must remain in external context. Although this boundary is hard to specify in advance, we show that it is discoverable through a teach-then-search co-training framework. Even a minimal version of this co-training recipe produces monotonic improvement, laying the foundation for recursive self-improvement in visual generation that can meet world-knowledge-grounded requests. We release the full dataset, co-training corpus, and search corpus as a replayable harness for tool-augmented, world-knowledge-grounded visual generation.",
-        "author": "Haozhe Wang, Weijia Feng, Jinpeng Yu, Che Liu, Ping Nie, Fangzhen Lin, Jiaming Liu, Ruihua Huang, Jimmy Lin, Wenhu Chen, Cong Wei",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.CV",
-          "cs.AI",
-          "agent",
-          "benchmark",
-          "agentic"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-07-06T17:56:12Z",
-        "updatedAt": "2026-07-06T17:56:12Z",
-        "collectedAt": "2026-07-07T15:22:00.711Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.05382v1",
-          "authors": [
-            "Haozhe Wang",
-            "Weijia Feng",
-            "Jinpeng Yu",
-            "Che Liu",
-            "Ping Nie",
-            "Fangzhen Lin",
-            "Jiaming Liu",
-            "Ruihua Huang",
-            "Jimmy Lin",
-            "Wenhu Chen",
-            "Cong Wei"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10126
         },
-        "recommendedReason": "Matched AI developer keywords: agent, benchmark, agentic"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-07-07T17:06:28.665Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
+      },
+      {
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
+        "tags": [
+          "docker",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "docker",
+        "metrics": {
+          "likes": 7534
+        },
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-07-06T10:22:14.000Z",
+        "collectedAt": "2026-07-07T17:06:28.665Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
+      },
+      {
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
+        "tags": [
+          "gradio",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5114
+        },
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-07-07T17:06:28.665Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5076
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-07-07T17:06:28.665Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
       }
     ],
     "developerBuzz": [
@@ -215,11 +215,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 600,
-          "commentsCount": 379
+          "upvotes": 639,
+          "commentsCount": 413
         },
         "publishedAt": "2026-07-06T20:14:55.000Z",
-        "collectedAt": "2026-07-07T15:22:00.625Z",
+        "collectedAt": "2026-07-07T17:06:28.881Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48809877",
           "matchedKeywords": [
@@ -238,11 +238,11 @@
           "anthropic"
         ],
         "metrics": {
-          "upvotes": 422,
-          "commentsCount": 165
+          "upvotes": 432,
+          "commentsCount": 175
         },
         "publishedAt": "2026-07-06T17:44:08.000Z",
-        "collectedAt": "2026-07-07T15:22:00.625Z",
+        "collectedAt": "2026-07-07T17:06:28.881Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48808002",
           "matchedKeywords": [
@@ -261,11 +261,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 366,
-          "commentsCount": 239
+          "upvotes": 370,
+          "commentsCount": 245
         },
         "publishedAt": "2026-07-06T15:01:18.000Z",
-        "collectedAt": "2026-07-07T15:22:00.625Z",
+        "collectedAt": "2026-07-07T17:06:28.881Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48805624",
           "matchedKeywords": [
@@ -284,11 +284,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 403,
-          "commentsCount": 152
+          "upvotes": 405,
+          "commentsCount": 151
         },
         "publishedAt": "2026-07-06T09:38:36.000Z",
-        "collectedAt": "2026-07-07T15:22:00.625Z",
+        "collectedAt": "2026-07-07T17:06:28.881Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48802535",
           "matchedKeywords": [
@@ -297,30 +297,29 @@
         }
       },
       {
-        "id": "hackernews:48811644",
+        "id": "hackernews:48812055",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "Ternlight – 7 MB embedding model that runs in browser (WASM)",
-        "url": "https://ternlight-demo.vercel.app/",
-        "author": "soycaporal",
+        "title": "Small AI Models Gain Traction In places with unreliable networks",
+        "url": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
+        "author": "sscaryterry",
         "tags": [
-          "embedding"
+          "ai"
         ],
         "metrics": {
-          "upvotes": 288,
-          "commentsCount": 60
+          "upvotes": 247,
+          "commentsCount": 76
         },
-        "publishedAt": "2026-07-06T23:06:31.000Z",
-        "collectedAt": "2026-07-07T15:22:00.625Z",
+        "publishedAt": "2026-07-06T23:59:54.000Z",
+        "collectedAt": "2026-07-07T17:06:28.881Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48811644",
+          "hnUrl": "https://news.ycombinator.com/item?id=48812055",
           "matchedKeywords": [
-            "embedding"
+            "ai"
           ]
         }
       }
     ],
-    "aihotHighlights": [],
-    "crossSourceHighlights": []
+    "aihotHighlights": []
   }
 }
