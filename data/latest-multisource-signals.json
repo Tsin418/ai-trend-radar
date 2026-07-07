@@ -1,206 +1,230 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-07T17:32:22.013Z",
+  "generatedAt": "2026-07-07T19:43:20.949Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2607.05396v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model",
-        "url": "https://arxiv.org/pdf/2607.05396v1",
-        "description": "Real-world robot deployment rarely maintains the training-stage camera setup, where cameras often experience repositioning or remounting depending on actual scenarios. Existing view-robust Vision-Language-Action (VLA) policies tolerate such camera variations only when the camera extrinsics are explicitly provided, making them fragile and hard to use especially when view robustness is critical. We argue that the policy should not be told where the camera is, but rather figure it out by itself. To",
-        "summary": "Real-world robot deployment rarely maintains the training-stage camera setup, where cameras often experience repositioning or remounting depending on actual scenarios. Existing view-robust Vision-Language-Action (VLA) policies tolerate such camera variations only when the camera extrinsics are explicitly provided, making them fragile and hard to use especially when view robustness is critical. We argue that the policy should not be told where the camera is, but rather figure it out by itself. To this end, we introduce Camera-Centric VLA (CamVLA), a new VLA model that decouples manipulation controls from camera geometry by predicting (i) a camera-centric end-effector action expressed in the local camera frame, and (ii) a 6-DoF hand-eye matrix relating cameras to the robot base. A deterministic geometric transformation composes the two predictions into a robot base-frame action. This disentangles how I should move in pose-independent camera-centric action generation from where I am looking from in camera-perspective geometric grounding. The resulting policy is calibration-free, depth-free, and single-view, requiring only a single monocular RGB image as the visual observation and task instruction at deployment. Evaluations in both simulation and real-world robot data show that CamVLA consistently improves success rates across diverse unseen viewpoints. Project page: https://alibaba-damo-academy.github.io/CamVLA/.",
-        "author": "Wenhao Li, Xueying Jiang, Quanhao Qian, Deli Zhao, Shijian Lu, Gongjie Zhang, Ran Xu",
+        "id": "huggingface_models:King3Djbl/mythos-9b-unhinged",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "King3Djbl/mythos-9b-unhinged",
+        "url": "https://huggingface.co/King3Djbl/mythos-9b-unhinged",
         "tags": [
-          "cs.CV",
-          "cs.AI",
-          "cs.LG",
-          "cs.RO",
-          "rag",
-          "evaluation"
-        ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-07-06T17:59:59Z",
-        "updatedAt": "2026-07-06T17:59:59Z",
-        "collectedAt": "2026-07-07T17:32:12.228Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.05396v1",
-          "authors": [
-            "Wenhao Li",
-            "Xueying Jiang",
-            "Quanhao Qian",
-            "Deli Zhao",
-            "Shijian Lu",
-            "Gongjie Zhang",
-            "Ran Xu"
-          ]
-        },
-        "recommendedReason": "Matched AI developer keywords: rag, evaluation"
-      },
-      {
-        "id": "http://arxiv.org/abs/2607.05394v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Weak-to-Strong Generalization via Direct On-Policy Distillation",
-        "url": "https://arxiv.org/pdf/2607.05394v1",
-        "description": "Reinforcement learning with verifiable rewards (RLVR) is a powerful recipe for improving language-model reasoning, but it is expensive to repeat on every new strong model because the target model must generate many rollouts during training. As models scale, post-training itself becomes a bottleneck. We study a weak-to-strong alternative: run RL on a smaller model where rollouts are cheaper, then reuse what that RL run learned to improve a stronger target model. Directly distilling the post-RL we",
-        "summary": "Reinforcement learning with verifiable rewards (RLVR) is a powerful recipe for improving language-model reasoning, but it is expensive to repeat on every new strong model because the target model must generate many rollouts during training. As models scale, post-training itself becomes a bottleneck. We study a weak-to-strong alternative: run RL on a smaller model where rollouts are cheaper, then reuse what that RL run learned to improve a stronger target model. Directly distilling the post-RL weak teacher is not enough, because the teacher's final policy mixes useful RL gains with the limitations of the smaller model. We propose Direct On-Policy Distillation (Direct-OPD), which transfers the teacher's RL-induced policy shift instead. Direct-OPD compares the post-RL teacher with its own pre-RL reference and treats their log-ratio as a dense implicit reward for the student. In plain terms, the checkpoint pair tells us which actions RL made the weak model more or less likely to take, and Direct-OPD applies that signal on the stronger student's own on-policy states. This directly reuses the weak model's RL supervision signal without training an explicit reward model or running sparse-reward RL on the target model. Empirically, Direct-OPD consistently leverages weaker teachers to improve stronger target models; notably, it boosts Qwen3-1.7B from 48.3% to 62.4% on AIME 2024 in just 4 hours on 8 A100 GPUs. It outperforms step-matched direct RL and enables the sequential composition of multiple policy shifts. Our results show that RL outcomes can be reused across model scales as implicit reward signals, not merely as final models to imitate.",
-        "author": "Shiyuan Feng, Huan-ang Gao, Haohan Chi, Hanlin Wu, Zhilong Zhang, Zheng Jiang, Bingxiang He, Wei-Ying Ma, Ya-Qin Zhang, Hao Zhou",
-        "tags": [
-          "cs.LG",
-          "cs.AI",
-          "cs.CL",
-          "rag"
-        ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-07-06T17:59:58Z",
-        "updatedAt": "2026-07-06T17:59:58Z",
-        "collectedAt": "2026-07-07T17:32:12.228Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.05394v1",
-          "authors": [
-            "Shiyuan Feng",
-            "Huan-ang Gao",
-            "Haohan Chi",
-            "Hanlin Wu",
-            "Zhilong Zhang",
-            "Zheng Jiang",
-            "Bingxiang He",
-            "Wei-Ying Ma",
-            "Ya-Qin Zhang",
-            "Hao Zhou"
-          ]
-        },
-        "recommendedReason": "Matched AI developer keywords: rag"
-      },
-      {
-        "id": "http://arxiv.org/abs/2607.05393v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Interpretable Human-Label-Free Deep Learning for Real-Bogus Classification with Uncertainty Quantification",
-        "url": "https://arxiv.org/pdf/2607.05393v1",
-        "description": "Time-domain surveys generate many transient candidates, making Real-Bogus classification a critical step in automated discovery pipelines. Reliable labels are costly, while community labels can be noisy and survey-dependent. We aim to develop a Real-Bogus classification framework that can be trained without human-labeled data using injected transients and bogus-dominated survey data, remains robust under strong class contamination, and provides calibrated uncertainty quantification. We combine s",
-        "summary": "Time-domain surveys generate many transient candidates, making Real-Bogus classification a critical step in automated discovery pipelines. Reliable labels are costly, while community labels can be noisy and survey-dependent. We aim to develop a Real-Bogus classification framework that can be trained without human-labeled data using injected transients and bogus-dominated survey data, remains robust under strong class contamination, and provides calibrated uncertainty quantification. We combine simulated transient injections with a contaminated survey class and train a dual-network model using asymmetric co-teaching for classes with different label-noise levels. We evaluate performance on a benchmark subset and analyze the learned representation with latent-space visualization tools. For uncertainty quantification (UQ), we compare MC dropout and deep ensembles and propose a low-cost hybrid strategy that exploits the dual-network setting to improve calibration. We extend the evaluation to the light-curve domain to assess recovery of light-curve classes. The method achieves strong Real-Bogus performance on the labeled subset and remains stable under severe class contamination. It recovers transient light-curve classes with high fidelity, while single-source identification is limited by ambiguity in light-curve-derived labels. Our hybrid UQ approach achieves competitive calibration relative to more expensive ensemble baselines. Latent-space analyses indicate that uncertainty aligns with the decision boundary and reveal subclasses within the bogus population. Our results show that injection-driven, weakly supervised training can enable scalable and consistent Real-Bogus classification without human-labeled training data while providing calibrated uncertainties. The method is suited for transfer to forthcoming surveys by re-running the injection-based training pipeline.",
-        "author": "Raphaël Bonnet-Guerrini, Bruno Sanchez, Dominique Fouchez, Benjamin Racine, Maya Guy, Mariam Sabalbal, Manal Yassine, Vincenzo Piuri",
-        "tags": [
-          "astro-ph.IM",
-          "astro-ph.GA",
-          "astro-ph.HE",
-          "cs.AI",
-          "cs.LG",
-          "benchmark",
-          "evaluation"
-        ],
-        "category": "astro-ph.IM",
-        "language": "en",
-        "publishedAt": "2026-07-06T17:59:58Z",
-        "updatedAt": "2026-07-06T17:59:58Z",
-        "collectedAt": "2026-07-07T17:32:12.228Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.05393v1",
-          "authors": [
-            "Raphaël Bonnet-Guerrini",
-            "Bruno Sanchez",
-            "Dominique Fouchez",
-            "Benjamin Racine",
-            "Maya Guy",
-            "Mariam Sabalbal",
-            "Manal Yassine",
-            "Vincenzo Piuri"
-          ]
-        },
-        "recommendedReason": "Matched AI developer keywords: benchmark, evaluation"
-      },
-      {
-        "id": "http://arxiv.org/abs/2607.05391v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
-        "url": "https://arxiv.org/pdf/2607.05391v1",
-        "description": "Scaling pre-training, post-training, and test-time compute have become the central paradigms for improving the capabilities of LLMs. In this work, we identify verification, the ability to determine the correctness of a solution, as a new scaling axis. To unlock this and demonstrate its effectiveness, we introduce LLM-as-a-Verifier, a general-purpose verification framework that provides fine-grained feedback for agentic tasks without requiring additional training. Unlike standard LM judges that p",
-        "summary": "Scaling pre-training, post-training, and test-time compute have become the central paradigms for improving the capabilities of LLMs. In this work, we identify verification, the ability to determine the correctness of a solution, as a new scaling axis. To unlock this and demonstrate its effectiveness, we introduce LLM-as-a-Verifier, a general-purpose verification framework that provides fine-grained feedback for agentic tasks without requiring additional training. Unlike standard LM judges that prompt LLMs to produce discrete scores for candidate solutions, LLM-as-a-Verifier computes the expectation over the distribution of scoring token logits to generate continuous scores. This probabilistic formulation enables verification to scale along multiple dimensions: (1) score granularity, (2) repeated evaluation, and (3) criteria decomposition. In particular, we show that scaling the scoring granularity leads to better separation between positive and negative solutions, resulting in more calibrated comparisons. Moreover, scaling repeated evaluation and criteria decomposition consistently lead to additional gains in verification accuracy through variance and complexity reduction. We further introduce a cost-efficient ranking algorithm for selecting the best solution among candidates using the verifier's continuous scores. LLM-as-a-Verifier achieves state-of-the-art performance on Terminal-Bench V2 (86.5%), SWE-Bench Verified (78.2%), RoboRewardBench (87.4%), and MedAgentBench (73.3%). Beyond verification, the fine-grained signals from LLM-as-a-Verifier can also serve as a proxy for estimating task progress. We build an extension for Claude Code, enabling developers to monitor and improve their own agentic systems. Finally, we show that LLM-as-a-Verifier can provide dense feedback for RL, improving the sample efficiency of SAC and GRPO on robotics and mathematical reasoning benchmarks.",
-        "author": "Jacky Kwok, Shulu Li, Pranav Atreya, Yuejiang Liu, Yixing Jiang, Chelsea Finn, Marco Pavone, Ion Stoica, Azalia Mirhoseini",
-        "tags": [
-          "cs.AI",
-          "cs.CL",
-          "cs.LG",
-          "cs.MA",
-          "cs.RO",
-          "llm",
+          "transformers",
+          "safetensors",
+          "gguf",
+          "qwen3",
+          "text-generation",
           "agent",
-          "benchmark",
-          "evaluation",
-          "agentic"
+          "coding",
+          "fableforge",
+          "function-calling",
+          "imatrix",
+          "llama.cpp",
+          "lm-studio",
+          "no-refusals",
+          "ollama",
+          "roleplay",
+          "shell",
+          "tool-use",
+          "uncensored",
+          "conversational",
+          "en",
+          "license:apache-2.0",
+          "text-generation-inference",
+          "endpoints_compatible",
+          "region:us"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-07-06T17:59:35Z",
-        "updatedAt": "2026-07-06T17:59:35Z",
-        "collectedAt": "2026-07-07T17:32:12.228Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.05391v1",
-          "authors": [
-            "Jacky Kwok",
-            "Shulu Li",
-            "Pranav Atreya",
-            "Yuejiang Liu",
-            "Yixing Jiang",
-            "Chelsea Finn",
-            "Marco Pavone",
-            "Ion Stoica",
-            "Azalia Mirhoseini"
-          ]
+        "category": "text-generation",
+        "metrics": {
+          "downloads": 9854,
+          "likes": 16
         },
-        "recommendedReason": "Matched AI developer keywords: llm, agent, benchmark, evaluation, agentic"
+        "publishedAt": "2026-06-17T11:26:07.000Z",
+        "updatedAt": "2026-07-07T19:43:00.000Z",
+        "collectedAt": "2026-07-07T19:43:21.073Z",
+        "raw": {
+          "pipelineTag": "text-generation"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.05382v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation",
-        "url": "https://arxiv.org/pdf/2607.05382v1",
-        "description": "Visual generators excel at rendering, but they confidently fabricate what they do not know. User requests are unbounded, evolving, and deeply long-tailed: new characters, trending entities, post-cutoff events, and more. This world-knowledge bottleneck is structural: generators are trained on fixed corpora, but the visual world is open-ended. We construct SearchGen-20K and SearchGen-Bench, with 20,839 prompts spanning twelve failure categories and twenty-two domains, paired with a pre-executed mu",
-        "summary": "Visual generators excel at rendering, but they confidently fabricate what they do not know. User requests are unbounded, evolving, and deeply long-tailed: new characters, trending entities, post-cutoff events, and more. This world-knowledge bottleneck is structural: generators are trained on fixed corpora, but the visual world is open-ended. We construct SearchGen-20K and SearchGen-Bench, with 20,839 prompts spanning twelve failure categories and twenty-two domains, paired with a pre-executed multimodal SearchGen-Corpus-1M to support offline, reproducible research. On SearchGen-Bench, frontier open generators score only 21 to 28 out of 100, a 40-point collapse invisible to existing benchmarks. The natural remedy is to employ search tools, enabling agentic visual generation. However, we find that naive search fails: it retrieves indiscriminately, injecting noise into prompts the generator already handles. We trace the root cause to a generator-specific, evolving knowledge boundary: the divide between what a generator can internalize through training and what must remain in external context. Although this boundary is hard to specify in advance, we show that it is discoverable through a teach-then-search co-training framework. Even a minimal version of this co-training recipe produces monotonic improvement, laying the foundation for recursive self-improvement in visual generation that can meet world-knowledge-grounded requests. We release the full dataset, co-training corpus, and search corpus as a replayable harness for tool-augmented, world-knowledge-grounded visual generation.",
-        "author": "Haozhe Wang, Weijia Feng, Jinpeng Yu, Che Liu, Ping Nie, Fangzhen Lin, Jiaming Liu, Ruihua Huang, Jimmy Lin, Wenhu Chen, Cong Wei",
+        "id": "huggingface_models:chetty23/my-finetuned-translation-model",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "chetty23/my-finetuned-translation-model",
+        "url": "https://huggingface.co/chetty23/my-finetuned-translation-model",
         "tags": [
-          "cs.CV",
-          "cs.AI",
-          "agent",
-          "benchmark",
-          "agentic"
+          "transformers",
+          "safetensors",
+          "t5",
+          "text2text-generation",
+          "generated_from_trainer",
+          "base_model:google-t5/t5-small",
+          "base_model:finetune:google-t5/t5-small",
+          "license:apache-2.0",
+          "text-generation-inference",
+          "endpoints_compatible",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-07-06T17:56:12Z",
-        "updatedAt": "2026-07-06T17:56:12Z",
-        "collectedAt": "2026-07-07T17:32:12.228Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.05382v1",
-          "authors": [
-            "Haozhe Wang",
-            "Weijia Feng",
-            "Jinpeng Yu",
-            "Che Liu",
-            "Ping Nie",
-            "Fangzhen Lin",
-            "Jiaming Liu",
-            "Ruihua Huang",
-            "Jimmy Lin",
-            "Wenhu Chen",
-            "Cong Wei"
-          ]
+        "metrics": {
+          "downloads": 1080,
+          "likes": 1
         },
-        "recommendedReason": "Matched AI developer keywords: agent, benchmark, agentic"
+        "publishedAt": "2026-07-01T09:06:11.000Z",
+        "updatedAt": "2026-07-07T19:41:15.000Z",
+        "collectedAt": "2026-07-07T19:43:21.073Z",
+        "raw": {}
+      },
+      {
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
+        "tags": [
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
+        ],
+        "category": "docker",
+        "metrics": {
+          "likes": 14040
+        },
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-07-07T19:43:21.076Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
+      },
+      {
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
+        "tags": [
+          "docker",
+          "region:us"
+        ],
+        "category": "docker",
+        "metrics": {
+          "likes": 11160
+        },
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-07-07T19:43:21.076Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
+      },
+      {
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
+        "tags": [
+          "gradio",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 10126
+        },
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-07-07T19:43:21.076Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
+      },
+      {
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
+        "tags": [
+          "docker",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "docker",
+        "metrics": {
+          "likes": 7534
+        },
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-07-06T10:22:14.000Z",
+        "collectedAt": "2026-07-07T19:43:21.076Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
+      },
+      {
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
+        "tags": [
+          "gradio",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5114
+        },
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-07-07T19:43:21.076Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5076
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-07-07T19:43:21.076Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
       }
     ],
     "developerBuzz": [
@@ -215,11 +239,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 644,
-          "commentsCount": 415
+          "upvotes": 652,
+          "commentsCount": 425
         },
         "publishedAt": "2026-07-06T20:14:55.000Z",
-        "collectedAt": "2026-07-07T17:32:11.907Z",
+        "collectedAt": "2026-07-07T19:43:21.368Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48809877",
           "matchedKeywords": [
@@ -238,11 +262,11 @@
           "anthropic"
         ],
         "metrics": {
-          "upvotes": 434,
-          "commentsCount": 175
+          "upvotes": 436,
+          "commentsCount": 183
         },
         "publishedAt": "2026-07-06T17:44:08.000Z",
-        "collectedAt": "2026-07-07T17:32:11.907Z",
+        "collectedAt": "2026-07-07T19:43:21.368Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48808002",
           "matchedKeywords": [
@@ -262,10 +286,10 @@
         ],
         "metrics": {
           "upvotes": 370,
-          "commentsCount": 245
+          "commentsCount": 251
         },
         "publishedAt": "2026-07-06T15:01:18.000Z",
-        "collectedAt": "2026-07-07T17:32:11.907Z",
+        "collectedAt": "2026-07-07T19:43:21.368Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48805624",
           "matchedKeywords": [
@@ -284,11 +308,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 405,
-          "commentsCount": 151
+          "upvotes": 407,
+          "commentsCount": 152
         },
         "publishedAt": "2026-07-06T09:38:36.000Z",
-        "collectedAt": "2026-07-07T17:32:11.907Z",
+        "collectedAt": "2026-07-07T19:43:21.368Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48802535",
           "matchedKeywords": [
@@ -307,11 +331,11 @@
           "embedding"
         ],
         "metrics": {
-          "upvotes": 307,
-          "commentsCount": 60
+          "upvotes": 310,
+          "commentsCount": 61
         },
         "publishedAt": "2026-07-06T23:06:31.000Z",
-        "collectedAt": "2026-07-07T17:32:11.907Z",
+        "collectedAt": "2026-07-07T19:43:21.368Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48811644",
           "matchedKeywords": [
@@ -321,6 +345,86 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmrb1brhi02xfihogfb010bdn",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Meta AI 推出 Muse Image：MSL 首个图像生成模型",
+        "url": "https://x.com/testingcatalog/status/2074571946642059555",
+        "summary": "Meta 在 Meta AI 应用中推出 Muse Image，这是 MSL 首个图像生成模型。该模型同时登陆 WhatsApp 和 Instagram，后续将扩展至 Messenger 和 Facebook。Muse Image 利用高级推理理解复杂提示，能将多张照片无缝融合生成高质量图像，支持预设、在提示中引用图片以及直接编辑。结合引用推文，Muse Image 具备智能体特性：与 Muse Spark 配对，先推理用户提示、搜索网络并规划，再生成图像，旨在首次尝试即得到用户期望结果。",
+        "description": "Meta 在 Meta AI 应用中推出 Muse Image，这是 MSL 首个图像生成模型。该模型同时登陆 WhatsApp 和 Instagram，后续将扩展至 Messenger 和 Facebook。Muse Image 利用高级推理理解复杂提示，能将多张照片无缝融合生成高质量图像，支持预设、在提示中引用图片以及直接编辑。结合引用推文，Muse Image 具备智能体特性：与 Muse Spark 配对，先推理用户提示、搜索网络并规划，再生成图像，旨在首次尝试即得到用户期望结果。",
+        "category": "models",
+        "originalSource": "X：Testing Catalog (@testingcatalog)",
+        "originalUrl": "https://x.com/testingcatalog/status/2074571946642059555",
+        "recommendedReason": "Meta 在 Meta AI 应用中推出 Muse Image，这是 MSL 首个图像生成模型。该模型同时登陆 WhatsApp 和 Instagram，后续将扩展至 Messenger 和 Facebook。Muse Image 利用高级推理理解复杂提示，能将多张照片无缝融合生成高质量图像，支持预设、在提示中引用图片以及直接编辑。结合引用推文，Muse Image 具备智能体特性：与 Muse Spark 配对，先推理用户提示、搜索网络并规划，再生成图像，旨在首次尝试即得到用户期望结果。",
+        "publishedAt": "2026-07-07T19:11:10.000Z",
+        "collectedAt": "2026-07-07T19:43:25.007Z",
+        "raw": {
+          "id": "cmrb1brhi02xfihogfb010bdn",
+          "titleEn": "META 🔥： Muse Image， the first image-gen model from MSL， is now available on Meta AI. > It uses ad…",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmrb0u6pv02qtihogovduu795",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "微软为降成本在Copilot中用自研MAI模型替换OpenAI和Anthropic模型",
+        "url": "https://the-decoder.com/copilot-goes-cheap-as-microsoft-phases-out-openai-and-anthropic-models-to-cut-costs",
+        "summary": "微软正用自研MAI模型替换Copilot产品中的OpenAI和Anthropic模型以降低支出。MAI模型已在Excel和Outlook中每周处理数万次请求，但占比仍小。Build大会上发布推理模型MAI-Thinking 1，声称编码媲美Sonnet 4.6和Opus 4.6，但基准测试大幅落后，仅与DeepSeek V3.2相当。AI负责人承认目标是削减并消除对Anthropic的支出。CEO暗示未来可能按用量计费，MAI为默认，第三方模型付费附加。微软称MAI使用干净商业许可数据，实际基于Common Crawl。",
+        "description": "微软正用自研MAI模型替换Copilot产品中的OpenAI和Anthropic模型以降低支出。MAI模型已在Excel和Outlook中每周处理数万次请求，但占比仍小。Build大会上发布推理模型MAI-Thinking 1，声称编码媲美Sonnet 4.6和Opus 4.6，但基准测试大幅落后，仅与DeepSeek V3.2相当。AI负责人承认目标是削减并消除对Anthropic的支出。CEO暗示未来可能按用量计费，MAI为默认，第三方模型付费附加。微软称MAI使用干净商业许可数据，实际基于Common Crawl。",
+        "category": "industry",
+        "originalSource": "The Decoder：AI News（RSS）",
+        "originalUrl": "https://the-decoder.com/copilot-goes-cheap-as-microsoft-phases-out-openai-and-anthropic-models-to-cut-costs",
+        "recommendedReason": "微软正用自研MAI模型替换Copilot产品中的OpenAI和Anthropic模型以降低支出。MAI模型已在Excel和Outlook中每周处理数万次请求，但占比仍小。Build大会上发布推理模型MAI-Thinking 1，声称编码媲美Sonnet 4.6和Opus 4.6，但基准测试大幅落后，仅与DeepSeek V3.2相当。AI负责人承认目标是削减并消除对Anthropic的支出。CEO暗示未来可能按用量计费，MAI为默认，第三方模型付费附加。微软称MAI使用干净商业许可数据，实际基于Common Crawl。",
+        "publishedAt": "2026-07-07T18:35:58.000Z",
+        "collectedAt": "2026-07-07T19:43:25.007Z",
+        "raw": {
+          "id": "cmrb0u6pv02qtihogovduu795",
+          "titleEn": "Copilot goes cheap as Microsoft phases out OpenAI and Anthropic models to cut costs",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmrayv5ja0293ihog3rixaqua",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "YC CEO声称每日用AI部署3.7万行代码，开发者审查发现前端代码大量臃肿低效",
+        "url": "https://www.fastcompany.com/91520702/y-combinator-garry-tan-agentic-ai-social-media",
+        "summary": "Y Combinator CEO Garry Tan在X上宣称，他与AI编码代理每天在五个项目中部署37000行代码，并保持连续72天发布记录。波兰开发者Gregorein深入审查Tan网站前端代码，发现大量臃肿与低效问题：页面加载169次请求、总计6.42MB数据（对比Hacker News仅7次12KB）；包含28个测试文件、78个未使用的JavaScript控制器、八种格式Logo（含空文件）、未压缩的旧PNG等。Gregorein指出，AI虽能快速生成代码，但质量仍应优先于数量。",
+        "description": "Y Combinator CEO Garry Tan在X上宣称，他与AI编码代理每天在五个项目中部署37000行代码，并保持连续72天发布记录。波兰开发者Gregorein深入审查Tan网站前端代码，发现大量臃肿与低效问题：页面加载169次请求、总计6.42MB数据（对比Hacker News仅7次12KB）；包含28个测试文件、78个未使用的JavaScript控制器、八种格式Logo（含空文件）、未压缩的旧PNG等。Gregorein指出，AI虽能快速生成代码，但质量仍应优先于数量。",
+        "category": "tools",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://www.fastcompany.com/91520702/y-combinator-garry-tan-agentic-ai-social-media",
+        "recommendedReason": "Y Combinator CEO Garry Tan在X上宣称，他与AI编码代理每天在五个项目中部署37000行代码，并保持连续72天发布记录。波兰开发者Gregorein深入审查Tan网站前端代码，发现大量臃肿与低效问题：页面加载169次请求、总计6.42MB数据（对比Hacker News仅7次12KB）；包含28个测试文件、78个未使用的JavaScript控制器、八种格式Logo（含空文件）、未压缩的旧PNG等。Gregorein指出，AI虽能快速生成代码，但质量仍应优先于数量。",
+        "publishedAt": "2026-07-07T17:52:12.864Z",
+        "collectedAt": "2026-07-07T19:43:25.007Z",
+        "raw": {
+          "id": "cmrayv5ja0293ihog3rixaqua",
+          "titleEn": "YC首席执行官称自己每天交付3.7万行LoC的AI代码。一位开发者深入探究了其实现原理",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmray36fg021nihogfo205417",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "NotebookLM短视频概览正式上线",
+        "url": "https://x.com/NotebookLM/status/2074551227594264799",
+        "summary": "短视频概览功能已正式在移动端和网页端面向所有英语用户全面上线！ 一如既往，您的意见对我们至关重要。请在下方分享您最喜欢的作品，并告诉我们接下来需要添加哪些功能！❤️",
+        "description": "短视频概览功能已正式在移动端和网页端面向所有英语用户全面上线！ 一如既往，您的意见对我们至关重要。请在下方分享您最喜欢的作品，并告诉我们接下来需要添加哪些功能！❤️",
+        "category": "products",
+        "originalSource": "X：NotebookLM (@NotebookLM)",
+        "originalUrl": "https://x.com/NotebookLM/status/2074551227594264799",
+        "recommendedReason": "短视频概览功能已正式在移动端和网页端面向所有英语用户全面上线！ 一如既往，您的意见对我们至关重要。请在下方分享您最喜欢的作品，并告诉我们接下来需要添加哪些功能！❤️",
+        "publishedAt": "2026-07-07T17:48:50.000Z",
+        "collectedAt": "2026-07-07T19:43:25.007Z",
+        "raw": {
+          "id": "cmray36fg021nihogfo205417",
+          "titleEn": "Short Video Overviews are officially 💯 rolled out on mobile and web across all users in English！ A…",
+          "apiCategory": "ai-products"
+        }
+      },
       {
         "id": "aihot:cmraw21y401jhihog3tcrfsp4",
         "source": "aihot",
@@ -334,7 +438,7 @@
         "originalUrl": "https://www.marktechpost.com/2026/07/07/liquid-ai-antidoom-doom-loops-ftpo",
         "recommendedReason": "Liquid AI 开源了 Antidoom，一种基于 Final Token Preference Optimization （FTPO） 的针对性修复方法，用于减少推理模型中的 doom loop（死循环）问题。该方法定位循环开始的第一个 token，训练模型选择连贯替代项，而不改变整体输出分布。在 LFM2.5-2.6B 上，硬数学和编程任务中的循环率从 10.2% 降至 1.4%；Qwen3.5-4B 上从 22.9% 降至 1%。整套流程可在数小时内完成，全部代码和数据集（LiquidAI/antidoom-mix-v1.0）已开源。",
         "publishedAt": "2026-07-07T16:50:50.000Z",
-        "collectedAt": "2026-07-07T17:32:15.603Z",
+        "collectedAt": "2026-07-07T19:43:25.007Z",
         "raw": {
           "id": "cmraw21y401jhihog3tcrfsp4",
           "titleEn": "Liquid AI Open-Sources Antidoom： A Final Token Preference Optimization （FTPO） Method that Reduces Doom Loops in Reasoning Models",
@@ -354,7 +458,7 @@
         "originalUrl": "https://claude.com/blog/how-people-are-using-claude-cowork",
         "recommendedReason": "基于2026年5月11-31日120万次匿名会话样本，Claude Cowork最大用途为业务流程与运营（33.4%），如整理报告、核对表格；其次为内容创作与文案（16.4%），如起草稿件、制作幻灯片；软件开发仅占8.7%。用户多用它处理跨团队衔接性任务，例如律师处理文档格式、招聘经理汇总面试反馈。Claude Cowork面向所有Claude用户开放。",
         "publishedAt": "2026-07-07T16:24:13.051Z",
-        "collectedAt": "2026-07-07T17:32:15.603Z",
+        "collectedAt": "2026-07-07T19:43:25.007Z",
         "raw": {
           "id": "cmrav068k01b7ihogl498wk0x",
           "titleEn": "How people are using Claude Cowork",
@@ -374,7 +478,7 @@
         "originalUrl": "https://claude.com/blog/cowork-web-mobile",
         "recommendedReason": "Claude Cowork 正在向移动端和网页端开放，让会话和文件跨设备同步。Beta 版将在未来几周内首先面向 Max 用户推出。Cowork 可让 Claude 跨文件、日历、邮件、即时通讯等工具完成复杂任务，其中超过 90% 的使用场景并非软件开发，而是日常知识工作（业务运营和内容创作）。工作可跨设备跟随用户：在桌面端开始任务，从手机查看进度；关闭笔记本后 Claude 可继续后台运行，支持定时任务（如周一 6 点自动准备客户简报）。当需要用户决策时，Claude 会将问题推送到手机。桌面端保留完整 Cowork 体验，支持无法安装桌面应用的用户。聊天和 Cowork 已在网页端和桌面端合并。为庆祝上线，双倍 Cowork 使用额度延长至 8 月 5 日。",
         "publishedAt": "2026-07-07T16:24:13.051Z",
-        "collectedAt": "2026-07-07T17:32:15.603Z",
+        "collectedAt": "2026-07-07T19:43:25.007Z",
         "raw": {
           "id": "cmrav068k01b6ihogth8k26f6",
           "titleEn": "Claude Cowork is coming to mobile and web",
@@ -394,354 +498,12 @@
         "originalUrl": "https://x.com/rohanpaul_ai/status/2074512389526237609",
         "recommendedReason": "中国计划限制外国访问其最强AI模型，近期与阿里巴巴、字节跳动、Z.ai等企业会谈，拟将先进模型（含未发布）留在中国国内。商务部主导、国家发改委参与，表明此举属出口管制而非平台监管。目标涵盖闭源和开源模型，不仅限API访问，还包括可下载权重。同时讨论将模型泄漏视为国家安全犯罪，并限制外国资本投资中国AI初创。若实施，外国公司将失去低成本模型访问权。此前华盛顿已限制美国先进模型出口，此举可能进一步分裂全球AI市场。",
         "publishedAt": "2026-07-07T15:14:30.000Z",
-        "collectedAt": "2026-07-07T17:32:15.603Z",
+        "collectedAt": "2026-07-07T19:43:25.007Z",
         "raw": {
           "id": "cmrasueu500qmihog3d8up11t",
           "titleEn": "🇨🇳This is bad news. Now， frontier open source access also will probably no more be available for a…",
           "apiCategory": "industry"
         }
-      },
-      {
-        "id": "aihot:cmrasc88300h6ihog8mwnmob9",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Elvis Saravia 通过 HITL 和 DialAgent 提升 agentic loops 可靠性",
-        "url": "https://x.com/omarsar0/status/2074506169352180108",
-        "summary": "Elvis Saravia 介绍使用 human-in-the-loop（HITL）来提升 agentic loops 的可靠性。他所有 Claude 和 Codex agent 会话都通过 @DialAgent MCP 服务器，该服务器为 agent 提供专属号码，支持语音、SMS、iMessage 作为原生工具。当循环/自动化处理 PR 或新功能时，agent 会通过简短电话将决策升级给人类，尤其适合在路上或离开电脑时。用户可粘贴指令让 agent 拨打电话测试。DialAgent 提供 $5 免费额度：http://getdial.ai",
-        "description": "Elvis Saravia 介绍使用 human-in-the-loop（HITL）来提升 agentic loops 的可靠性。他所有 Claude 和 Codex agent 会话都通过 @DialAgent MCP 服务器，该服务器为 agent 提供专属号码，支持语音、SMS、iMessage 作为原生工具。当循环/自动化处理 PR 或新功能时，agent 会通过简短电话将决策升级给人类，尤其适合在路上或离开电脑时。用户可粘贴指令让 agent 拨打电话测试。DialAgent 提供 $5 免费额度：http://getdial.ai",
-        "category": "tools",
-        "originalSource": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
-        "originalUrl": "https://x.com/omarsar0/status/2074506169352180108",
-        "recommendedReason": "Elvis Saravia 介绍使用 human-in-the-loop（HITL）来提升 agentic loops 的可靠性。他所有 Claude 和 Codex agent 会话都通过 @DialAgent MCP 服务器，该服务器为 agent 提供专属号码，支持语音、SMS、iMessage 作为原生工具。当循环/自动化处理 PR 或新功能时，agent 会通过简短电话将决策升级给人类，尤其适合在路上或离开电脑时。用户可粘贴指令让 agent 拨打电话测试。DialAgent 提供 $5 免费额度：http://getdial.ai",
-        "publishedAt": "2026-07-07T14:49:47.000Z",
-        "collectedAt": "2026-07-07T17:32:15.603Z",
-        "raw": {
-          "id": "cmrasc88300h6ihog8mwnmob9",
-          "titleEn": "Loop engineering is great until something breaks. Here is how I improve the reliability of my agent…",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmraqmpst004cihogf6nqkgvh",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "在 Claude Code 中选择 Claude 模型与努力级别",
-        "url": "https://claude.com/blog/claude-model-and-effort-level-in-claude-code",
-        "summary": "Claude Code 提供模型（model）和努力级别（effort）两种设置。模型选择决定能力范围，更大模型（如 Claude Fable 5）在基准上优于 Claude Sonnet。努力级别不单是思考时间，还控制读取文件数、验证步骤及多步任务的推进深度。较高努力下 Claude 会自行读取文件、运行测试并复核；较低努力则更倾向请求用户提供上下文。若 Claude 已掌握上下文但仍出错，应换更强大模型；若因跳读文件或未运行测试而出错，则应提高努力级别。",
-        "description": "Claude Code 提供模型（model）和努力级别（effort）两种设置。模型选择决定能力范围，更大模型（如 Claude Fable 5）在基准上优于 Claude Sonnet。努力级别不单是思考时间，还控制读取文件数、验证步骤及多步任务的推进深度。较高努力下 Claude 会自行读取文件、运行测试并复核；较低努力则更倾向请求用户提供上下文。若 Claude 已掌握上下文但仍出错，应换更强大模型；若因跳读文件或未运行测试而出错，则应提高努力级别。",
-        "category": "tools",
-        "originalSource": "Claude：Blog（网页）",
-        "originalUrl": "https://claude.com/blog/claude-model-and-effort-level-in-claude-code",
-        "recommendedReason": "Claude Code 提供模型（model）和努力级别（effort）两种设置。模型选择决定能力范围，更大模型（如 Claude Fable 5）在基准上优于 Claude Sonnet。努力级别不单是思考时间，还控制读取文件数、验证步骤及多步任务的推进深度。较高努力下 Claude 会自行读取文件、运行测试并复核；较低努力则更倾向请求用户提供上下文。若 Claude 已掌握上下文但仍出错，应换更强大模型；若因跳读文件或未运行测试而出错，则应提高努力级别。",
-        "publishedAt": "2026-07-07T14:21:59.722Z",
-        "collectedAt": "2026-07-07T17:32:15.603Z",
-        "raw": {
-          "id": "cmraqmpst004cihogf6nqkgvh",
-          "titleEn": "Choosing a Claude model and effort level in Claude Code",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmraqliu1003aihogho9twifr",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Ethan Mollick：开放权重模型供给难持续",
-        "url": "https://x.com/emollick/status/2074497401578996154",
-        "summary": "这是一个关键原因，我不期望前沿开放权重模型的流动会无限期持续，甚至不会持续更长时间。",
-        "description": "这是一个关键原因，我不期望前沿开放权重模型的流动会无限期持续，甚至不会持续更长时间。",
-        "category": "industry",
-        "originalSource": "X：Ethan Mollick (@emollick)",
-        "originalUrl": "https://x.com/emollick/status/2074497401578996154",
-        "recommendedReason": "这是一个关键原因，我不期望前沿开放权重模型的流动会无限期持续，甚至不会持续更长时间。",
-        "publishedAt": "2026-07-07T14:14:57.000Z",
-        "collectedAt": "2026-07-07T17:32:15.603Z",
-        "raw": {
-          "id": "cmraqliu1003aihogho9twifr",
-          "titleEn": "This is a key reason I don't expect the flow of frontier open weights models to continue indefinitel…",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmrawne9601nfihogtkxwy0bs",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "智能免费，然后呢？--Data Systems for， of， and by Agents",
-        "url": "http://bair.berkeley.edu/blog/2026/07/07/intelligence-is-free-now-what",
-        "summary": "AI推理成本急剧下降。GPT-4级能力从2023年初每百万token约30美元降至今天不到1美元，部分供应商已低于0.10美元。推理价格每年下降9至900倍，中位数约50倍。知识工作级智能即将近乎免费。这给数据系统带来三重变革：面向智能体的数据系统需支持智能体推测式探索--单个",
-        "description": "AI推理成本急剧下降。GPT-4级能力从2023年初每百万token约30美元降至今天不到1美元，部分供应商已低于0.10美元。推理价格每年下降9至900倍，中位数约50倍。知识工作级智能即将近乎免费。这给数据系统带来三重变革：面向智能体的数据系统需支持智能体推测式探索--单个",
-        "category": "tools",
-        "originalSource": "BAIR：Berkeley AI Research Blog",
-        "originalUrl": "http://bair.berkeley.edu/blog/2026/07/07/intelligence-is-free-now-what",
-        "recommendedReason": "AI推理成本急剧下降。GPT-4级能力从2023年初每百万token约30美元降至今天不到1美元，部分供应商已低于0.10美元。推理价格每年下降9至900倍，中位数约50倍。知识工作级智能即将近乎免费。这给数据系统带来三重变革：面向智能体的数据系统需支持智能体推测式探索--单个",
-        "publishedAt": "2026-07-07T09:00:00.000Z",
-        "collectedAt": "2026-07-07T17:32:15.603Z",
-        "raw": {
-          "id": "cmrawne9601nfihogtkxwy0bs",
-          "titleEn": "Intelligence is Free， Now What？ <br> Data Systems for， of， and by Agents",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmrafv8m40090ihuamebn107w",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "美国首批自主地面车辆在乌克兰参战",
-        "url": "https://techcrunch.com/2026/07/07/the-first-american-autonomous-ground-vehicles-are-fighting-in-ukraine",
-        "summary": "美国自动驾驶车辆公司 Forterra 宣布，过去九个月已向乌克兰战场部署超过 100 辆基于 Polaris ATV 的 Lancer 自主地面车辆。这些汽油动力车辆可携带 750 公斤货物，加装 Starlink 天线实现远程操控，已执行 1100 多次任务，行驶 2500 英里，运送 777，440 磅物资，完成 52 次伤员撤离。目前车辆主要采用远程操作，因自主系统尚无法实时识别并应对敌方威胁。Forterra 已融资超 5 亿美元，正将经典机器人方法与生成式 AI 结合以提升自主能力。美军专家认为地面自主技术已具实战价值。",
-        "description": "美国自动驾驶车辆公司 Forterra 宣布，过去九个月已向乌克兰战场部署超过 100 辆基于 Polaris ATV 的 Lancer 自主地面车辆。这些汽油动力车辆可携带 750 公斤货物，加装 Starlink 天线实现远程操控，已执行 1100 多次任务，行驶 2500 英里，运送 777，440 磅物资，完成 52 次伤员撤离。目前车辆主要采用远程操作，因自主系统尚无法实时识别并应对敌方威胁。Forterra 已融资超 5 亿美元，正将经典机器人方法与生成式 AI 结合以提升自主能力。美军专家认为地面自主技术已具实战价值。",
-        "category": "industry",
-        "originalSource": "TechCrunch：AI（RSS）",
-        "originalUrl": "https://techcrunch.com/2026/07/07/the-first-american-autonomous-ground-vehicles-are-fighting-in-ukraine",
-        "recommendedReason": "美国自动驾驶车辆公司 Forterra 宣布，过去九个月已向乌克兰战场部署超过 100 辆基于 Polaris ATV 的 Lancer 自主地面车辆。这些汽油动力车辆可携带 750 公斤货物，加装 Starlink 天线实现远程操控，已执行 1100 多次任务，行驶 2500 英里，运送 777，440 磅物资，完成 52 次伤员撤离。目前车辆主要采用远程操作，因自主系统尚无法实时识别并应对敌方威胁。Forterra 已融资超 5 亿美元，正将经典机器人方法与生成式 AI 结合以提升自主能力。美军专家认为地面自主技术已具实战价值。",
-        "publishedAt": "2026-07-07T09:00:00.000Z",
-        "collectedAt": "2026-07-07T17:32:15.603Z",
-        "raw": {
-          "id": "cmrafv8m40090ihuamebn107w",
-          "titleEn": "The first American autonomous ground vehicles are fighting in Ukraine",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmraw22r701jjihogh1k8hbu6",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Gemini API Managed Agents 新增后台执行、远程 MCP 与自定义函数等能力",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api",
-        "summary": "Google 为 Gemini API 的 Managed Agents 新增后台执行、远程 MCP 服务器集成、自定义函数调用与凭证刷新功能。后台执行通过传入 `background： true` 异步运行任务，立即返回 ID 供轮询状态或流式获取进度。Managed Agents 可直接连接远程 MCP 服务器，无需自定义代理中间件，并能与内置沙箱工具（如 Google 搜索、代码执行）混合使用。自定义函数调用支持本地执行业务逻辑，内置工具自动在服务端运行。凭证刷新通过传递现有环境 ID 和新网络配置完成，沙箱内文件系统、已安装包和仓库保持不变。这些更新旨在帮助开发者构建可靠的生产级 AI 智能体。",
-        "description": "Google 为 Gemini API 的 Managed Agents 新增后台执行、远程 MCP 服务器集成、自定义函数调用与凭证刷新功能。后台执行通过传入 `background： true` 异步运行任务，立即返回 ID 供轮询状态或流式获取进度。Managed Agents 可直接连接远程 MCP 服务器，无需自定义代理中间件，并能与内置沙箱工具（如 Google 搜索、代码执行）混合使用。自定义函数调用支持本地执行业务逻辑，内置工具自动在服务端运行。凭证刷新通过传递现有环境 ID 和新网络配置完成，沙箱内文件系统、已安装包和仓库保持不变。这些更新旨在帮助开发者构建可靠的生产级 AI 智能体。",
-        "category": "products",
-        "originalSource": "Google Blog：AI（RSS）",
-        "originalUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api",
-        "recommendedReason": "Google 为 Gemini API 的 Managed Agents 新增后台执行、远程 MCP 服务器集成、自定义函数调用与凭证刷新功能。后台执行通过传入 `background： true` 异步运行任务，立即返回 ID 供轮询状态或流式获取进度。Managed Agents 可直接连接远程 MCP 服务器，无需自定义代理中间件，并能与内置沙箱工具（如 Google 搜索、代码执行）混合使用。自定义函数调用支持本地执行业务逻辑，内置工具自动在服务端运行。凭证刷新通过传递现有环境 ID 和新网络配置完成，沙箱内文件系统、已安装包和仓库保持不变。这些更新旨在帮助开发者构建可靠的生产级 AI 智能体。",
-        "publishedAt": "2026-07-07T08:54:00.000Z",
-        "collectedAt": "2026-07-07T17:32:15.603Z",
-        "raw": {
-          "id": "cmraw22r701jjihogh1k8hbu6",
-          "titleEn": "Expanding Managed Agents in Gemini API： background tasks， remote MCP and more",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmrab8cy800w3ihl38ohuxzih",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "在网络不稳定的地区，小型AI模型正逐渐普及",
-        "url": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
-        "summary": "2019年，Adebayo Alonge因服务器远在美国致RxScanner单次扫描超5分钟，工程师2小时内将AI模型缩小至可在Android手机本地运行，此后RxScanner能在无宽带、缺电地区验药。小AI模型参数通常至多几十亿，可在手机或Raspberry Pi上运行，功耗仅数瓦。类似案例包括印度腰果病害检测无人机、乌拉圭蚂蚁入侵识别、疟蚊检测及巴西基于Arduino的心电图设备。世界银行报告显示，全球最穷国家仅0.7%互联网用户用过ChatGPT，发达国家达四分之一；行长认为小AI是为缺乏算力与电力的地区提供生命救助服务的关键。",
-        "description": "2019年，Adebayo Alonge因服务器远在美国致RxScanner单次扫描超5分钟，工程师2小时内将AI模型缩小至可在Android手机本地运行，此后RxScanner能在无宽带、缺电地区验药。小AI模型参数通常至多几十亿，可在手机或Raspberry Pi上运行，功耗仅数瓦。类似案例包括印度腰果病害检测无人机、乌拉圭蚂蚁入侵识别、疟蚊检测及巴西基于Arduino的心电图设备。世界银行报告显示，全球最穷国家仅0.7%互联网用户用过ChatGPT，发达国家达四分之一；行长认为小AI是为缺乏算力与电力的地区提供生命救助服务的关键。",
-        "category": "tools",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
-        "recommendedReason": "2019年，Adebayo Alonge因服务器远在美国致RxScanner单次扫描超5分钟，工程师2小时内将AI模型缩小至可在Android手机本地运行，此后RxScanner能在无宽带、缺电地区验药。小AI模型参数通常至多几十亿，可在手机或Raspberry Pi上运行，功耗仅数瓦。类似案例包括印度腰果病害检测无人机、乌拉圭蚂蚁入侵识别、疟蚊检测及巴西基于Arduino的心电图设备。世界银行报告显示，全球最穷国家仅0.7%互联网用户用过ChatGPT，发达国家达四分之一；行长认为小AI是为缺乏算力与电力的地区提供生命救助服务的关键。",
-        "publishedAt": "2026-07-07T06:45:06.341Z",
-        "collectedAt": "2026-07-07T17:32:15.603Z",
-        "raw": {
-          "id": "cmrab8cy800w3ihl38ohuxzih",
-          "titleEn": null,
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmraai9ic00q4ihl3ozf3ki9s",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Grok Imagine 更新：支持 15 秒视频",
-        "url": "https://x.com/elonmusk/status/2074378653501128833",
-        "summary": "Grok Imagine 更新。请更新你的 Grok 应用！15 秒 Imagine 视频现已可用，质量令人难以置信。",
-        "description": "Grok Imagine 更新。请更新你的 Grok 应用！15 秒 Imagine 视频现已可用，质量令人难以置信。",
-        "category": "products",
-        "originalSource": "X：Elon Musk (@elonmusk, xAI)",
-        "originalUrl": "https://x.com/elonmusk/status/2074378653501128833",
-        "recommendedReason": "Grok Imagine 更新。请更新你的 Grok 应用！15 秒 Imagine 视频现已可用，质量令人难以置信。",
-        "publishedAt": "2026-07-07T06:23:05.000Z",
-        "collectedAt": "2026-07-07T17:32:15.603Z",
-        "raw": {
-          "id": "cmraai9ic00q4ihl3ozf3ki9s",
-          "titleEn": "Grok Imagine update",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmra67abw003vihup3mg75wsc",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "MIRA：可玩多人世界模型，20 FPS实时生成\"火箭联盟的梦\"",
-        "url": "https://x.com/emollick/status/2074348274136346871",
-        "summary": "MIRA是一个可玩、多人的世界模型，被形容为\"火箭联盟的梦\"。它基于10k小时公开机器人收集的数据训练，学习四玩家游戏动态，根据按键实时生成画面，帧率达20 FPS。模型由General Intuition与Kyutai Labs联合构建，Epic Games提供协作。Ethan Mollick称从最早的扩散DOOM玩过来，多人20 FPS效果出色。演示、技术报告及开源代码已公开，在ICML Booth 111现场展示。",
-        "description": "MIRA是一个可玩、多人的世界模型，被形容为\"火箭联盟的梦\"。它基于10k小时公开机器人收集的数据训练，学习四玩家游戏动态，根据按键实时生成画面，帧率达20 FPS。模型由General Intuition与Kyutai Labs联合构建，Epic Games提供协作。Ethan Mollick称从最早的扩散DOOM玩过来，多人20 FPS效果出色。演示、技术报告及开源代码已公开，在ICML Booth 111现场展示。",
-        "category": "products",
-        "originalSource": "X：Ethan Mollick (@emollick)",
-        "originalUrl": "https://x.com/emollick/status/2074348274136346871",
-        "recommendedReason": "MIRA是一个可玩、多人的世界模型，被形容为\"火箭联盟的梦\"。它基于10k小时公开机器人收集的数据训练，学习四玩家游戏动态，根据按键实时生成画面，帧率达20 FPS。模型由General Intuition与Kyutai Labs联合构建，Epic Games提供协作。Ethan Mollick称从最早的扩散DOOM玩过来，多人20 FPS效果出色。演示、技术报告及开源代码已公开，在ICML Booth 111现场展示。",
-        "publishedAt": "2026-07-07T04:22:22.000Z",
-        "collectedAt": "2026-07-07T17:32:15.603Z",
-        "raw": {
-          "id": "cmra67abw003vihup3mg75wsc",
-          "titleEn": "I have been playing these world models/games since the first diffusion DOOM， and multiplayer at 20 F…",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmrauzt0c01b2ihogk1sosfm5",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "在LLM中选择最佳图像输入细节级别",
-        "url": "https://openrouter.ai/blog/insights/image-detail-low-cost",
-        "summary": "在5个模型上测试了1730道视觉推理题，发现将图像细节降至\"low\"会损失准确率，且在gpt-5.5上费用反而上升。真正可靠降低成本的手段是调节推理努力（reasoning effort）。",
-        "description": "在5个模型上测试了1730道视觉推理题，发现将图像细节降至\"low\"会损失准确率，且在gpt-5.5上费用反而上升。真正可靠降低成本的手段是调节推理努力（reasoning effort）。",
-        "category": "tools",
-        "originalSource": "OpenRouter：Announcements（RSS）",
-        "originalUrl": "https://openrouter.ai/blog/insights/image-detail-low-cost",
-        "recommendedReason": "在5个模型上测试了1730道视觉推理题，发现将图像细节降至\"low\"会损失准确率，且在gpt-5.5上费用反而上升。真正可靠降低成本的手段是调节推理努力（reasoning effort）。",
-        "publishedAt": "2026-07-07T00:00:00.000Z",
-        "collectedAt": "2026-07-07T17:32:15.603Z",
-        "raw": {
-          "id": "cmrauzt0c01b2ihogk1sosfm5",
-          "titleEn": "Choosing the Optimal Image Input Detail Level in LLMs",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmrasd6r300i2ihog8ifwrqs5",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "苹果研究：单个神经元即可绕过大型语言模型的安全对齐",
-        "url": "https://machinelearning.apple.com/research/single-neuron-safety-alignment",
-        "summary": "苹果研究人员发现，安全对齐由两类神经元调控：拒绝神经元控制有害知识是否表达，概念神经元编码有害知识本身。在七个模型（1.7B至70B参数）中，仅需抑制单个拒绝神经元即可绕过安全对齐，回答有害请求；或放大单个概念神经元，从无害提示诱导出有害内容。整个过程无需训练或提示工程。结果表明安全对齐由个别神经元因果控制。",
-        "description": "苹果研究人员发现，安全对齐由两类神经元调控：拒绝神经元控制有害知识是否表达，概念神经元编码有害知识本身。在七个模型（1.7B至70B参数）中，仅需抑制单个拒绝神经元即可绕过安全对齐，回答有害请求；或放大单个概念神经元，从无害提示诱导出有害内容。整个过程无需训练或提示工程。结果表明安全对齐由个别神经元因果控制。",
-        "category": "papers",
-        "originalSource": "Apple Machine Learning Research（RSS）",
-        "originalUrl": "https://machinelearning.apple.com/research/single-neuron-safety-alignment",
-        "recommendedReason": "苹果研究人员发现，安全对齐由两类神经元调控：拒绝神经元控制有害知识是否表达，概念神经元编码有害知识本身。在七个模型（1.7B至70B参数）中，仅需抑制单个拒绝神经元即可绕过安全对齐，回答有害请求；或放大单个概念神经元，从无害提示诱导出有害内容。整个过程无需训练或提示工程。结果表明安全对齐由个别神经元因果控制。",
-        "publishedAt": "2026-07-07T00:00:00.000Z",
-        "collectedAt": "2026-07-07T17:32:15.603Z",
-        "raw": {
-          "id": "cmrasd6r300i2ihog8ifwrqs5",
-          "titleEn": "A Single Neuron Is Sufficient to Bypass Safety Alignment in Large Language Models",
-          "apiCategory": "paper"
-        }
-      }
-    ],
-    "crossSourceHighlights": [
-      {
-        "id": "url:https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
-        "canonicalId": "url:https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
-        "title": "在网络不稳定的地区，小型AI模型正逐渐普及",
-        "canonicalUrl": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
-          "title:在网络不稳定的地区 小型ai模型正逐渐普及",
-          "title:small ai models gain traction in places with unreliable networks"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmrab8cy800w3ihl38ohuxzih",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "在网络不稳定的地区，小型AI模型正逐渐普及",
-            "url": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
-            "summary": "2019年，Adebayo Alonge因服务器远在美国致RxScanner单次扫描超5分钟，工程师2小时内将AI模型缩小至可在Android手机本地运行，此后RxScanner能在无宽带、缺电地区验药。小AI模型参数通常至多几十亿，可在手机或Raspberry Pi上运行，功耗仅数瓦。类似案例包括印度腰果病害检测无人机、乌拉圭蚂蚁入侵识别、疟蚊检测及巴西基于Arduino的心电图设备。世界银行报告显示，全球最穷国家仅0.7%互联网用户用过ChatGPT，发达国家达四分之一；行长认为小AI是为缺乏算力与电力的地区提供生命救助服务的关键。",
-            "description": "2019年，Adebayo Alonge因服务器远在美国致RxScanner单次扫描超5分钟，工程师2小时内将AI模型缩小至可在Android手机本地运行，此后RxScanner能在无宽带、缺电地区验药。小AI模型参数通常至多几十亿，可在手机或Raspberry Pi上运行，功耗仅数瓦。类似案例包括印度腰果病害检测无人机、乌拉圭蚂蚁入侵识别、疟蚊检测及巴西基于Arduino的心电图设备。世界银行报告显示，全球最穷国家仅0.7%互联网用户用过ChatGPT，发达国家达四分之一；行长认为小AI是为缺乏算力与电力的地区提供生命救助服务的关键。",
-            "category": "tools",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
-            "recommendedReason": "2019年，Adebayo Alonge因服务器远在美国致RxScanner单次扫描超5分钟，工程师2小时内将AI模型缩小至可在Android手机本地运行，此后RxScanner能在无宽带、缺电地区验药。小AI模型参数通常至多几十亿，可在手机或Raspberry Pi上运行，功耗仅数瓦。类似案例包括印度腰果病害检测无人机、乌拉圭蚂蚁入侵识别、疟蚊检测及巴西基于Arduino的心电图设备。世界银行报告显示，全球最穷国家仅0.7%互联网用户用过ChatGPT，发达国家达四分之一；行长认为小AI是为缺乏算力与电力的地区提供生命救助服务的关键。",
-            "publishedAt": "2026-07-07T06:45:06.341Z",
-            "collectedAt": "2026-07-07T17:32:15.603Z",
-            "raw": {
-              "id": "cmrab8cy800w3ihl38ohuxzih",
-              "titleEn": null,
-              "apiCategory": "tip"
-            }
-          },
-          {
-            "id": "hackernews:48812055",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Small AI Models Gain Traction In places with unreliable networks",
-            "url": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
-            "author": "sscaryterry",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 250,
-              "commentsCount": 76
-            },
-            "publishedAt": "2026-07-06T23:59:54.000Z",
-            "collectedAt": "2026-07-07T17:32:11.907Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48812055",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmrab8cy800w3ihl38ohuxzih",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "在网络不稳定的地区，小型AI模型正逐渐普及",
-            "url": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
-            "summary": "2019年，Adebayo Alonge因服务器远在美国致RxScanner单次扫描超5分钟，工程师2小时内将AI模型缩小至可在Android手机本地运行，此后RxScanner能在无宽带、缺电地区验药。小AI模型参数通常至多几十亿，可在手机或Raspberry Pi上运行，功耗仅数瓦。类似案例包括印度腰果病害检测无人机、乌拉圭蚂蚁入侵识别、疟蚊检测及巴西基于Arduino的心电图设备。世界银行报告显示，全球最穷国家仅0.7%互联网用户用过ChatGPT，发达国家达四分之一；行长认为小AI是为缺乏算力与电力的地区提供生命救助服务的关键。",
-            "description": "2019年，Adebayo Alonge因服务器远在美国致RxScanner单次扫描超5分钟，工程师2小时内将AI模型缩小至可在Android手机本地运行，此后RxScanner能在无宽带、缺电地区验药。小AI模型参数通常至多几十亿，可在手机或Raspberry Pi上运行，功耗仅数瓦。类似案例包括印度腰果病害检测无人机、乌拉圭蚂蚁入侵识别、疟蚊检测及巴西基于Arduino的心电图设备。世界银行报告显示，全球最穷国家仅0.7%互联网用户用过ChatGPT，发达国家达四分之一；行长认为小AI是为缺乏算力与电力的地区提供生命救助服务的关键。",
-            "category": "tools",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
-            "recommendedReason": "2019年，Adebayo Alonge因服务器远在美国致RxScanner单次扫描超5分钟，工程师2小时内将AI模型缩小至可在Android手机本地运行，此后RxScanner能在无宽带、缺电地区验药。小AI模型参数通常至多几十亿，可在手机或Raspberry Pi上运行，功耗仅数瓦。类似案例包括印度腰果病害检测无人机、乌拉圭蚂蚁入侵识别、疟蚊检测及巴西基于Arduino的心电图设备。世界银行报告显示，全球最穷国家仅0.7%互联网用户用过ChatGPT，发达国家达四分之一；行长认为小AI是为缺乏算力与电力的地区提供生命救助服务的关键。",
-            "publishedAt": "2026-07-07T06:45:06.341Z",
-            "collectedAt": "2026-07-07T17:32:15.603Z",
-            "raw": {
-              "id": "cmrab8cy800w3ihl38ohuxzih",
-              "titleEn": null,
-              "apiCategory": "tip"
-            }
-          },
-          {
-            "id": "hackernews:48812055",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Small AI Models Gain Traction In places with unreliable networks",
-            "url": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
-            "author": "sscaryterry",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 250,
-              "commentsCount": 76
-            },
-            "publishedAt": "2026-07-06T23:59:54.000Z",
-            "collectedAt": "2026-07-07T17:32:11.907Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48812055",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 250,
-          "commentsCount": 76,
-          "hnScore": 250,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "tools",
-        "summary": "2019年，Adebayo Alonge因服务器远在美国致RxScanner单次扫描超5分钟，工程师2小时内将AI模型缩小至可在Android手机本地运行，此后RxScanner能在无宽带、缺电地区验药。小AI模型参数通常至多几十亿，可在手机或Raspberry Pi上运行，功耗仅数瓦。类似案例包括印度腰果病害检测无人机、乌拉圭蚂蚁入侵识别、疟蚊检测及巴西基于Arduino的心电图设备。世界银行报告显示，全球最穷国家仅0.7%互联网用户用过ChatGPT，发达国家达四分之一；行长认为小AI是为缺乏算力与电力的地区提供生命救助服务的关键。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-07-06T23:59:54.000Z",
-        "lastSeenAt": "2026-07-07T17:32:15.603Z"
       }
     ]
   }
