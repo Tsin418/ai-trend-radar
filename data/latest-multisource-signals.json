@@ -1,236 +1,181 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-08T12:15:06.093Z",
+  "generatedAt": "2026-07-08T14:45:18.911Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_models:chetty23/my-finetuned-translation-model",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "chetty23/my-finetuned-translation-model",
-        "url": "https://huggingface.co/chetty23/my-finetuned-translation-model",
+        "id": "http://arxiv.org/abs/2607.06565v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "ELSA3D: Elastic Semantic Anchoring for Unified 3D Understanding and Generation",
+        "url": "https://arxiv.org/pdf/2607.06565v1",
+        "description": "Unified 3D foundation models aspire to generate 3D assets and reason about them in language within a single backbone, but their text-3D interaction remains largely implicit. Existing methods concatenate text and 3D tokens into a flat sequence and rely on self-attention, collapsing coarse structural cues and fine geometric details into one undifferentiated representation. We introduce ELSA3D, a unified 3D model that addresses this with elastic semantic anchoring, structuring language and geometri",
+        "summary": "Unified 3D foundation models aspire to generate 3D assets and reason about them in language within a single backbone, but their text-3D interaction remains largely implicit. Existing methods concatenate text and 3D tokens into a flat sequence and rely on self-attention, collapsing coarse structural cues and fine geometric details into one undifferentiated representation. We introduce ELSA3D, a unified 3D model that addresses this with elastic semantic anchoring, structuring language and geometric reasoning jointly along matched abstraction scales. ELSA3D represents geometry with a scale-aware octree tokenizer and introduces Anchor Tokens, sparse cross-modal units that select semantic cues, route them to the most relevant 3D scale, retrieve scale-specific geometric evidence, and write the fused signal back into the unified representation, keeping interaction sparse yet precise. A lightweight per-block router makes both computation and reasoning elastic, choosing which text tokens instantiate anchors at which geometric scale so that cross-modal capacity concentrates where alignment is most needed. ELSA3D achieves state-of-the-art performance across image-to-3D generation, text-to-3D generation, and 3D captioning, outperforming the strongest unified baseline while roughly halving FLOPs and inference latency relative to the non-elastic version of the same model.",
+        "author": "Tianjiao Yu, Xinzhuo Li, Yifan Shen, Onkar Susladkar, Yuanzhe Liu, Xiaona Zhou, Ismini Lourentzou",
         "tags": [
-          "transformers",
-          "safetensors",
-          "t5",
-          "text2text-generation",
-          "generated_from_trainer",
-          "base_model:google-t5/t5-small",
-          "base_model:finetune:google-t5/t5-small",
-          "license:apache-2.0",
-          "text-generation-inference",
-          "endpoints_compatible",
-          "region:us"
+          "cs.CV",
+          "cs.AI",
+          "cs.LG",
+          "alignment"
         ],
-        "metrics": {
-          "downloads": 1080,
-          "likes": 1
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-07-07T17:59:50Z",
+        "updatedAt": "2026-07-07T17:59:50Z",
+        "collectedAt": "2026-07-08T14:45:11.988Z",
+        "metrics": {},
+        "raw": {
+          "abstractUrl": "http://arxiv.org/abs/2607.06565v1",
+          "authors": [
+            "Tianjiao Yu",
+            "Xinzhuo Li",
+            "Yifan Shen",
+            "Onkar Susladkar",
+            "Yuanzhe Liu",
+            "Xiaona Zhou",
+            "Ismini Lourentzou"
+          ]
         },
-        "publishedAt": "2026-07-01T09:06:11.000Z",
-        "updatedAt": "2026-07-08T12:14:10.000Z",
-        "collectedAt": "2026-07-08T12:15:06.210Z",
-        "raw": {}
+        "recommendedReason": "Matched AI developer keywords: alignment"
       },
       {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
+        "id": "http://arxiv.org/abs/2607.06546v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Graph Convolutional Attention: A Spectral Perspective on Graph Denoising and Diffusion",
+        "url": "https://arxiv.org/pdf/2607.06546v1",
+        "description": "Denoising graphs is a fundamental problem in graph learning and the core operation of graph diffusion models. Attention-based architectures like graph transformers have recently shown promise in denoising graphs. However, our principled understanding of attention-based graph denoising remains limited, making it unclear whether standard attention is the right mechanism for this task. Here we show that, under a denoising objective, linear attention is suboptimal and can only learn an average spect",
+        "summary": "Denoising graphs is a fundamental problem in graph learning and the core operation of graph diffusion models. Attention-based architectures like graph transformers have recently shown promise in denoising graphs. However, our principled understanding of attention-based graph denoising remains limited, making it unclear whether standard attention is the right mechanism for this task. Here we show that, under a denoising objective, linear attention is suboptimal and can only learn an average spectral denoising filter over the training distribution. This creates a fundamental limitation as graphs often vary spectrally across the distribution. To overcome this limitation, we introduce Spectral Attention, which directly utilizes the input graph spectrum and provably outperforms linear attention by a margin governed by the spectral diversity of the distribution. We then derive Graph Convolutional Attention (GCA), a practical and permutation-equivariant realization of this idea that implements spectral denoising through graph-filtered queries and keys. For stochastic block models, GCA provably matches the idealized Spectral Attention mechanism. We further show that the softmax operation, that follows the attention, provides additional denoising by approximately projecting noisy eigenvectors onto the clean eigenspace. Empirically, replacing linear attention with GCA consistently improves graph denoising and diffusion on synthetic and real datasets, with gains strongly correlated with spectral diversity. In DiGress, GCA matches standard graph-transformer performance without computing expensive structural features, and when combined with the recently proposed PEARL positional encodings, avoids explicit eigendecomposition computations resulting in faster inference without degrading quality. The code can be found here: github.com/shervinkhalafi/graph_conv_att",
+        "author": "Shervin Khalafi, Igor Krawczuk, Sergio Rozada, Charilaos Kanatsoulis, Antonio G Marques, Alejandro Ribeiro",
         "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
+          "cs.LG",
+          "cs.AI",
+          "rag"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 14040
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-07-08T12:15:06.218Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-07-07T17:52:17Z",
+        "updatedAt": "2026-07-07T17:52:17Z",
+        "collectedAt": "2026-07-08T14:45:11.988Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.06546v1",
+          "authors": [
+            "Shervin Khalafi",
+            "Igor Krawczuk",
+            "Sergio Rozada",
+            "Charilaos Kanatsoulis",
+            "Antonio G Marques",
+            "Alejandro Ribeiro"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: rag"
       },
       {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
+        "id": "http://arxiv.org/abs/2607.06542v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "On the feasibility of dependency parsing of non-human sequences without a gold standard. Is evaluation possible in other species?",
+        "url": "https://arxiv.org/pdf/2607.06542v1",
+        "description": "Dependency parsing consists of finding a tree representation for a sequence. Unsupervised dependency parsing aims to develop parsing methods without a gold standard during model training. In human languages, an unsupervised parser can be evaluated because some gold standard is usually available or can be created. For other species, a gold standard is unknown. Thus one may conclude that it is impossible to determine the accuracy of an unsupervised parser and, consequently, dependency parsing is u",
+        "summary": "Dependency parsing consists of finding a tree representation for a sequence. Unsupervised dependency parsing aims to develop parsing methods without a gold standard during model training. In human languages, an unsupervised parser can be evaluated because some gold standard is usually available or can be created. For other species, a gold standard is unknown. Thus one may conclude that it is impossible to determine the accuracy of an unsupervised parser and, consequently, dependency parsing is unfeasible in other species. However, here we apply recent advances in network science to demonstrate that the proportion of correct edges retrieved by a parser must be high for the sequences of vocalizations or gestures that non-human primates produce due to the fast decay of the sequence length distribution. In contrast, human language sequences lack that property. Therefore, evaluation without a gold standard is feasible in non-human primates but a hard problem in humans.",
+        "author": "Ramon Ferrer-i-Cancho, Catherine Hobaiter, Thore Bergman, Morgan Gustison",
         "tags": [
-          "docker",
-          "region:us"
+          "cs.CL",
+          "evaluation"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11162
-        },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-07-08T12:15:06.218Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-07-07T17:47:26Z",
+        "updatedAt": "2026-07-07T17:47:26Z",
+        "collectedAt": "2026-07-08T14:45:11.988Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.06542v1",
+          "authors": [
+            "Ramon Ferrer-i-Cancho",
+            "Catherine Hobaiter",
+            "Thore Bergman",
+            "Morgan Gustison"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: evaluation"
       },
       {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
+        "id": "http://arxiv.org/abs/2607.06540v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs",
+        "url": "https://arxiv.org/pdf/2607.06540v1",
+        "description": "Developing seamless, high-performance, native intelligent full-duplex Spoken Language Models (SLMs) remains a critical challenge and long-standing goal for the speech and NLP community. Despite notable progress, recent endeavors are fundamentally constrained by severe modality interference, which causes substantial knowledge degradation and compromises semantic integrity -- ultimately making full-duplex SLMs feel unnatural and unintelligent. In this paper, through an exhaustive fine-grained anal",
+        "summary": "Developing seamless, high-performance, native intelligent full-duplex Spoken Language Models (SLMs) remains a critical challenge and long-standing goal for the speech and NLP community. Despite notable progress, recent endeavors are fundamentally constrained by severe modality interference, which causes substantial knowledge degradation and compromises semantic integrity -- ultimately making full-duplex SLMs feel unnatural and unintelligent. In this paper, through an exhaustive fine-grained analysis of model optimization dynamics, we uncover the root cause of such performance degradation, revealing that modality interference arises from inherent gradient conflicts between acoustic and semantic modeling when the two modalities are forced to share a deep parameter space. Guided by this key insight, we introduce Lychee-FD, a native end-to-end full-duplex framework designed to mitigate modality interference. Importantly, we propose a hierarchical parameter separation strategy that decouples conflicting modalities in deep layers while preserving cross-modality coherence via a dedicated semantic alignment channel. Extensive experiments on multiple full-duplex benchmarks demonstrate that our method significantly advances the state of the art, yielding substantial improvements in both speech intelligence (+7.4% on Spoken QA) and full-duplex interaction fluidity (+28.5% on FullDuplexBench 1.5) without compromising inference efficiency. To the best of our knowledge, this work is the first to achieve two key advances: 1) uncovering and elucidating the root cause of modality interference in full-duplex SLMs, and 2) designing an elegant hierarchical model together with a practical solution for seamless, high-performance, native intelligent full-duplex SLMs.",
+        "author": "Zhenyu Liu, Yunxin Li, Xuanyu Zhang, Qixun Teng, Shenyuan Jiang, Haolan Chen, Minjun Zhao, Fanbo Meng, Yu Xu, Yancheng He, Baotian Hu, Haizhou Li, Min Zhang",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.CL",
+          "alignment",
+          "benchmark"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10127
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-07-08T12:15:06.218Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-07-07T17:43:36Z",
+        "updatedAt": "2026-07-07T17:43:36Z",
+        "collectedAt": "2026-07-08T14:45:11.988Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.06540v1",
+          "authors": [
+            "Zhenyu Liu",
+            "Yunxin Li",
+            "Xuanyu Zhang",
+            "Qixun Teng",
+            "Shenyuan Jiang",
+            "Haolan Chen",
+            "Minjun Zhao",
+            "Fanbo Meng",
+            "Yu Xu",
+            "Yancheng He",
+            "Baotian Hu",
+            "Haizhou Li",
+            "Min Zhang"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: alignment, benchmark"
       },
       {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
+        "id": "http://arxiv.org/abs/2607.06532v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "GraphBU: MILP Instance Generation with Graph-Native Block Units",
+        "url": "https://arxiv.org/pdf/2607.06532v1",
+        "description": "Mixed-integer linear programming (MILP) instances used for solver development are hard to obtain when models come from private or application-specific pipelines. A generator must keep the structure that solvers and learned policies rely on. Existing general generators usually choose their generation unit from a formulation template, summary statistics, local graph edits, or blocks found after recombination. These units do not explicitly record how a local part of the MILP is coupled to the rest ",
+        "summary": "Mixed-integer linear programming (MILP) instances used for solver development are hard to obtain when models come from private or application-specific pipelines. A generator must keep the structure that solvers and learned policies rely on. Existing general generators usually choose their generation unit from a formulation template, summary statistics, local graph edits, or blocks found after recombination. These units do not explicitly record how a local part of the MILP is coupled to the rest of the instance. We propose GraphBU, a graph-native generator whose basic unit is a local subproblem plus its interface. The method promotes coupling nodes into master constraints or boundary variables and uses the resulting block units for compatibility-checked replacement. The analysis focuses on the properties needed by this construction: promotion separates interfaces, replacement can preserve feasibility under an interface-slack condition, and the graph construction is invariant to row-column permutations. On MILP instances generation, this unit keeps graph statistics close to the source family, preserves feasibility on most datasets, and improves downstream Predict-and-Search training. Genrated by GraphBU, The average graph-statistical similarity was approximately 0.934, the average feasibility was approximately 96.7%, and the average increase in the main index of downstream PS was approximately 8.0%.",
+        "author": "Xiaolei Guo, Chenyu Zhou, Jianghao Lin, Dongdong Ge",
         "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
+          "cs.LG",
+          "math.OC",
+          "rag"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7538
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-07-06T10:22:14.000Z",
-        "collectedAt": "2026-07-08T12:15:06.218Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-07-07T17:39:06Z",
+        "updatedAt": "2026-07-07T17:39:06Z",
+        "collectedAt": "2026-07-08T14:45:11.988Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "📊"
-        }
-      },
-      {
-        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Wan2.2 Animate",
-        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
-        "author": "Wan-AI",
-        "tags": [
-          "gradio",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5114
+          "abstractUrl": "http://arxiv.org/abs/2607.06532v1",
+          "authors": [
+            "Xiaolei Guo",
+            "Chenyu Zhou",
+            "Jianghao Lin",
+            "Dongdong Ge"
+          ]
         },
-        "publishedAt": "2025-09-18T07:05:32.000Z",
-        "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-07-08T12:15:06.218Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "👁"
-        }
-      },
-      {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
-        "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5077
-        },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-07-08T12:15:06.218Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4936
-        },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-07-08T12:15:06.218Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
+        "recommendedReason": "Matched AI developer keywords: rag"
       }
     ],
     "developerBuzz": [
-      {
-        "id": "hackernews:48818311",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Chat Control 1.0 and 2.0 Explained",
-        "url": "https://fightchatcontrol.eu/chat-control-overview",
-        "author": "gasull",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 712,
-          "commentsCount": 285
-        },
-        "publishedAt": "2026-07-07T14:23:15.000Z",
-        "collectedAt": "2026-07-08T12:15:06.449Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48818311",
-          "matchedKeywords": [
-            "ai"
-          ]
-        }
-      },
       {
         "id": "hackernews:48809877",
         "source": "hackernews",
@@ -242,11 +187,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 673,
-          "commentsCount": 459
+          "upvotes": 676,
+          "commentsCount": 462
         },
         "publishedAt": "2026-07-06T20:14:55.000Z",
-        "collectedAt": "2026-07-08T12:15:06.449Z",
+        "collectedAt": "2026-07-08T14:45:12.480Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48809877",
           "matchedKeywords": [
@@ -255,48 +200,73 @@
         }
       },
       {
-        "id": "hackernews:48808002",
+        "id": "hackernews:48829312",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "A global workspace in language models",
-        "url": "https://www.anthropic.com/research/global-workspace",
-        "author": "in-silico",
-        "tags": [
-          "anthropic"
-        ],
-        "metrics": {
-          "upvotes": 451,
-          "commentsCount": 192
-        },
-        "publishedAt": "2026-07-06T17:44:08.000Z",
-        "collectedAt": "2026-07-08T12:15:06.449Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48808002",
-          "matchedKeywords": [
-            "anthropic"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48805624",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "AMD Ryzen AI Halo – $4k AI Dev Kit",
-        "url": "https://www.lttlabs.com/articles/2026/07/06/amd-ryzen-ai-halo",
-        "author": "LabsLucas",
+        "title": "Decoding the obfuscated bash script on a Uniqlo t-shirt",
+        "url": "https://tris.sherliker.net/blog/obfuscated-self-evaluating-bash-script-by-cdn-akamai-being-supplied-to-consumers-via-retail-stores/",
+        "author": "speerer",
         "tags": [
           "ai"
         ],
         "metrics": {
-          "upvotes": 373,
-          "commentsCount": 259
+          "upvotes": 779,
+          "commentsCount": 143
         },
-        "publishedAt": "2026-07-06T15:01:18.000Z",
-        "collectedAt": "2026-07-08T12:15:06.449Z",
+        "publishedAt": "2026-07-08T08:46:06.000Z",
+        "collectedAt": "2026-07-08T14:45:12.480Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48805624",
+          "hnUrl": "https://news.ycombinator.com/item?id=48829312",
           "matchedKeywords": [
             "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48818311",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Chat Control 1.0 and 2.0 Explained",
+        "url": "https://fightchatcontrol.eu/chat-control-overview",
+        "author": "gasull",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 771,
+          "commentsCount": 308
+        },
+        "publishedAt": "2026-07-07T14:23:15.000Z",
+        "collectedAt": "2026-07-08T14:45:12.480Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48818311",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48827858",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "GitLost: We Tricked GitHub's AI Agent into Leaking Private Repos",
+        "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/",
+        "author": "ColinEberhardt",
+        "tags": [
+          "ai",
+          "agent"
+        ],
+        "metrics": {
+          "upvotes": 354,
+          "commentsCount": 141
+        },
+        "publishedAt": "2026-07-08T05:25:35.000Z",
+        "collectedAt": "2026-07-08T14:45:12.480Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48827858",
+          "matchedKeywords": [
+            "ai",
+            "agent"
           ]
         }
       },
@@ -311,11 +281,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 279,
-          "commentsCount": 185
+          "upvotes": 282,
+          "commentsCount": 215
         },
         "publishedAt": "2026-07-07T20:35:42.000Z",
-        "collectedAt": "2026-07-08T12:15:06.449Z",
+        "collectedAt": "2026-07-08T14:45:12.480Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48823359",
           "matchedKeywords": [
@@ -338,7 +308,7 @@
         "originalUrl": "https://x.com/berryxia/status/2074827915779580055",
         "recommendedReason": "在校研究生Kunkun开源了一套管理大量互相调用Skill的方法。核心方案包括：1）搭建HTML后台，按运行模式（手动/自动）、链路位置、专业领域三类标签筛选Skill；2）将连环调用的Skill绘制成Mermaid流程图，根据debug、新功能、合PR、改设计等阶段定位对应技能组；3）仿照Matt的ask Matt技能开发\"ask me\"技能，将调用决策浓缩成上下文喂给模型。该方法避免将所有调用交给模型自行判断，保持工程复杂场景下的人机对齐与可控性。项目已开源至GitHub。",
         "publishedAt": "2026-07-08T12:08:18.000Z",
-        "collectedAt": "2026-07-08T12:15:10.604Z",
+        "collectedAt": "2026-07-08T14:45:12.318Z",
         "raw": {
           "id": "cmrc1iygj00twihyfe1hkvycv",
           "titleEn": "现在的年轻小伙子一个比一个生猛啊！ 执行力和学习能力真的是拉满~ Kunkun 还是一位在校读研的学生！ 分享了自己管理大量互相调用的Skill的实用方法，已经开源在GitHub。 他建了一个H…",
@@ -358,7 +328,7 @@
         "originalUrl": "https://www.ithome.com/0/974/169.htm",
         "recommendedReason": "加拿大不列颠哥伦比亚省7月7日宣布将起诉OpenAI，指控其未向执法部门上报一名ChatGPT用户2025年6月封禁前的暴力相关对话内容。该用户随后于今年2月在塔布勒岭制造校园枪击案，杀害8人。OpenAI CEO萨姆·奥尔特曼今年4月为此公开致歉，承认本应上报但未执行。受害家属已在加州法院提起诉讼，省政府正协调独立诉讼，要求赔偿用于社区重建。",
         "publishedAt": "2026-07-08T09:55:17.000Z",
-        "collectedAt": "2026-07-08T12:15:10.604Z",
+        "collectedAt": "2026-07-08T14:45:12.318Z",
         "raw": {
           "id": "cmrbxa3ll003yihgens8d2sqg",
           "titleEn": "未上报凶手暴力 ChatGPT 对话，加拿大一省拟就校园枪击案起诉 OpenAI",
@@ -378,7 +348,7 @@
         "originalUrl": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
         "recommendedReason": "Noma Labs 在 GitHub Agentic Workflows 中发现严重提示词注入漏洞 GitLost。未认证攻击者仅需在属于同一组织的公共仓库中创建一个嵌有恶意指令的 Issue，即可诱使基于 Claude 或 GitHub Copilot 的 AI 代理读取并公开该组织内私有仓库的内容。攻击无需编码技能或凭证，根源在于代理将用户可控内容视为可信指令，且 GitHub 的防护措施因 \"Additionally\" 关键词被绕过。Noma Labs 已公开 PoC 并建议限制跨仓库权限、隔离用户输入。",
         "publishedAt": "2026-07-08T08:29:47.091Z",
-        "collectedAt": "2026-07-08T12:15:10.604Z",
+        "collectedAt": "2026-07-08T14:45:12.318Z",
         "raw": {
           "id": "cmrbu023x079pihl1q4rvhzky",
           "titleEn": "GitLost：我们诱使 GitHub 的 AI 代理泄露了私有仓库",
@@ -398,7 +368,7 @@
         "originalUrl": "https://arstechnica.com/security/2026/07/hackers-can-use-9-of-the-most-popular-ai-tools-to-assemble-massive-botnets",
         "recommendedReason": "提示注入已成为AI安全的首要威胁--大语言模型无法区分合法指令与恶意指令。此前推送式和拉取式攻击规模均有限。研究人员提出一种名为HalluSquatting的新型拉取式提示注入攻击，首次能组装大规模僵尸网络、执行分布式拒绝服务攻击（DDoS）并大规模感染设备。该攻击可作用于AI编码工具，标志着提示注入攻击从单点突破转向规模化利用。",
         "publishedAt": "2026-07-08T07:00:51.000Z",
-        "collectedAt": "2026-07-08T12:15:10.604Z",
+        "collectedAt": "2026-07-08T14:45:12.318Z",
         "raw": {
           "id": "cmrbqwsid06g2ihl1iiwufnz5",
           "titleEn": "Hackers can use 9 of the most popular AI tools to assemble massive botnets",
@@ -418,7 +388,7 @@
         "originalUrl": "https://x.com/xiaohu/status/2074736623284256881",
         "recommendedReason": "中国工信部发布风险提示，指出 Claude Code 2.1.91 至 2.1.196 版本内置监控机制，未经用户同意即向远程服务器回传用户地域、身份标识等敏感信息。建议相关单位立即全面排查，对受影响版本卸载或升级至已清除后门代码的最新安全版本，并加强开发工具外联权限管控与流量监测，防止敏感数据违规外传。",
         "publishedAt": "2026-07-08T06:05:32.000Z",
-        "collectedAt": "2026-07-08T12:15:10.604Z",
+        "collectedAt": "2026-07-08T14:45:12.318Z",
         "raw": {
           "id": "cmrboci2105r3ihl1zmi6wgpf",
           "titleEn": "愈演愈烈了 中国工信部发布关于防范Claude Code安全后门隐患的风险提示 公告称：Claude Code2.1.91至2.1.196版本内置了监控机制，未经用户同意即可向远程服务器回传用户地…",
@@ -438,7 +408,7 @@
         "originalUrl": "https://blog.zksecurity.xyz/posts/circl-bugs",
         "recommendedReason": "zkSecurity 的 AI 审计代理 zkao 持续扫描 Cloudflare 的 CIRCL 密码学库，使用 Opus 4.6 + skills 和 GPT-5.3 + skills 等模型发现并确认了 7 个真实漏洞。其中包括阈值 RSA 中 float64 精度丢失（AI 自评 Critical）和属性基加密（CP-ABE）访问控制完全失效（Critical，由 zkao 自行发现）。所有漏洞已在上游修复，多数在 HackerOne 上获得确认和奖励。AI 生成的候选发现仍需人工验证，但 zkao 已能自动完成大部分验证工作。",
         "publishedAt": "2026-07-08T04:29:33.609Z",
-        "collectedAt": "2026-07-08T12:15:10.604Z",
+        "collectedAt": "2026-07-08T14:45:12.318Z",
         "raw": {
           "id": "cmrblfb8a050sihl1484pa3wo",
           "titleEn": "人工智能与密码学（1）：人工智能在Cloudflare的Circl中发现了什么",
@@ -458,7 +428,7 @@
         "originalUrl": "https://www.ithome.com/0/973/922.htm",
         "recommendedReason": "美国商务部正式批准OpenAI大规模发布GPT-5.6。OpenAI宣布GPT-5.6 Sol将于本周四完成最后准备后，与Terra和Luna一同面向公众推出。此前因国家安全考量，美国政府要求分阶段发布，仅允许向经批准的有限实体开放。此次全面放行标志着临时管控结束。获批前，美国商务部下属AI标准与创新中心执行了测试，OpenAI技术团队驻扎华盛顿配合沟通。美国最新AI行政令即将出台，旨在为先进AI模型发布建立正式评估框架。",
         "publishedAt": "2026-07-08T03:30:52.000Z",
-        "collectedAt": "2026-07-08T12:15:10.604Z",
+        "collectedAt": "2026-07-08T14:45:12.318Z",
         "raw": {
           "id": "cmrbkf2e804qlihl1e8qe5q4a",
           "titleEn": "结束管制：美国政府批准 OpenAI 大规模推广 GPT-5.6，Sol 明日亮相",
@@ -478,12 +448,279 @@
         "originalUrl": "https://www.marktechpost.com/2026/07/07/ant-groups-robbyant-open-sources-lingbot-vision-a-1b-boundary-centric-vision-foundation-model-for-dense-spatial-perception",
         "recommendedReason": "蚂蚁集团旗下具身智能公司Robbyant开源LingBot-Vision，一套自监督视觉Transformer家族，专为密集空间感知设计。旗舰ViT-g/16参数约1.1B，采用掩膜边界建模训练，将边界作为原生预训练信号。在密集空间任务中，该1B模型匹配或超越参数规模高达7倍的大模型（如7B DINOv3）。模型以Apache-2.0许可证在Hugging Face开源，提供ViT-g、ViT-L（300M）、ViT-B（86M）、ViT-S四个规模。",
         "publishedAt": "2026-07-08T03:03:22.000Z",
-        "collectedAt": "2026-07-08T12:15:10.604Z",
+        "collectedAt": "2026-07-08T14:45:12.318Z",
         "raw": {
           "id": "cmrbikwbz04b5ihl16qfp5ntw",
           "titleEn": "Ant Group's Robbyant Open-Sources LingBot-Vision： A 1B Boundary-Centric Vision Foundation Model for Dense Spatial Perception",
           "apiCategory": "ai-models"
         }
+      },
+      {
+        "id": "aihot:cmrbez8y903b9ihl133b5wr18",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Pulpie：用于清理网络的Pareto最优模型",
+        "url": "https://usefeyn.com/blog/pulpie-pareto-optimal-models-for-cleaning-the-web",
+        "summary": "Pulpie是一族Pareto最优模型，用于从HTML页面提取主要内容。其最小模型pulpie-orange-small（210M参数）在WebMainBench上取得0.862的ROUGE-5 F1分数，接近600M参数的Dripper（0.864），但成本仅1/20。在NVIDIA L4 GPU上，Pulpie处理速度13.7页/秒，Dripper仅0.68页/秒。清理10亿页HTML，Pulpie成本约$7，900，Dripper需$159，000。模型采用编码器架构，单次前向传播即可标记每个HTML块为内容或模板，已在HuggingFace开源。",
+        "description": "Pulpie是一族Pareto最优模型，用于从HTML页面提取主要内容。其最小模型pulpie-orange-small（210M参数）在WebMainBench上取得0.862的ROUGE-5 F1分数，接近600M参数的Dripper（0.864），但成本仅1/20。在NVIDIA L4 GPU上，Pulpie处理速度13.7页/秒，Dripper仅0.68页/秒。清理10亿页HTML，Pulpie成本约$7，900，Dripper需$159，000。模型采用编码器架构，单次前向传播即可标记每个HTML块为内容或模板，已在HuggingFace开源。",
+        "category": "models",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://usefeyn.com/blog/pulpie-pareto-optimal-models-for-cleaning-the-web",
+        "recommendedReason": "Pulpie是一族Pareto最优模型，用于从HTML页面提取主要内容。其最小模型pulpie-orange-small（210M参数）在WebMainBench上取得0.862的ROUGE-5 F1分数，接近600M参数的Dripper（0.864），但成本仅1/20。在NVIDIA L4 GPU上，Pulpie处理速度13.7页/秒，Dripper仅0.68页/秒。清理10亿页HTML，Pulpie成本约$7，900，Dripper需$159，000。模型采用编码器架构，单次前向传播即可标记每个HTML块为内容或模板，已在HuggingFace开源。",
+        "publishedAt": "2026-07-08T01:33:24.910Z",
+        "collectedAt": "2026-07-08T14:45:12.318Z",
+        "raw": {
+          "id": "cmrbez8y903b9ihl133b5wr18",
+          "titleEn": "Show HN： Pulpie--用于清理网络的模型",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmrbdqlcv02y4ihl11xbxx9xs",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Claude开发者分享两种多智能体模式：Advisor和Orchestrator",
+        "url": "https://x.com/shao__meng/status/2074661249804366310",
+        "summary": "Claude开发者官方分享团队高频使用的两种多智能体模式。Advisor模式：Sonnet 5作为执行者，通过tool call调用Fable 5获取指导。SWE-bench Pro（482题）上，Sonnet 5单独75.5%/$0.75，加顾问达84%/$1.40，Fable 5单独91.5%/$2.25；组合方案约92%性能、63%成本。Orchestrator模式：Fable 5作为编排者规划并向多个Sonnet 5 worker扇出任务。BrowseComp上，全Sonnet 5 77.8%/$16.01，编排方案86.8%/$18.53，全Fable 5 90.8%/$40.56；编排方案约96%性能、46%成本。",
+        "description": "Claude开发者官方分享团队高频使用的两种多智能体模式。Advisor模式：Sonnet 5作为执行者，通过tool call调用Fable 5获取指导。SWE-bench Pro（482题）上，Sonnet 5单独75.5%/$0.75，加顾问达84%/$1.40，Fable 5单独91.5%/$2.25；组合方案约92%性能、63%成本。Orchestrator模式：Fable 5作为编排者规划并向多个Sonnet 5 worker扇出任务。BrowseComp上，全Sonnet 5 77.8%/$16.01，编排方案86.8%/$18.53，全Fable 5 90.8%/$40.56；编排方案约96%性能、46%成本。",
+        "category": "tools",
+        "originalSource": "X：邵猛 (@shao__meng)",
+        "originalUrl": "https://x.com/shao__meng/status/2074661249804366310",
+        "recommendedReason": "Claude开发者官方分享团队高频使用的两种多智能体模式。Advisor模式：Sonnet 5作为执行者，通过tool call调用Fable 5获取指导。SWE-bench Pro（482题）上，Sonnet 5单独75.5%/$0.75，加顾问达84%/$1.40，Fable 5单独91.5%/$2.25；组合方案约92%性能、63%成本。Orchestrator模式：Fable 5作为编排者规划并向多个Sonnet 5 worker扇出任务。BrowseComp上，全Sonnet 5 77.8%/$16.01，编排方案86.8%/$18.53，全Fable 5 90.8%/$40.56；编排方案约96%性能、46%成本。",
+        "publishedAt": "2026-07-08T01:06:01.000Z",
+        "collectedAt": "2026-07-08T14:45:12.318Z",
+        "raw": {
+          "id": "cmrbdqlcv02y4ihl11xbxx9xs",
+          "titleEn": "Claude 开发者官方分享：团队内部高频使用这两种经典多智能体模式「Advisor」和「Orchestrator」来发挥 Fable 5 最高价值、同时把成本降到最低！ # 模式一：Advisor…",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmrbdsefa02yjihl17gg7mhx3",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "蚂蚁集团周俊AICon演讲：从Token数量到Token密度，万亿参数模型效率优先",
+        "url": "https://mp.weixin.qq.com/s/dsIfi4C-T5Q4emmIh-7yzg",
+        "summary": "蚂蚁集团副总裁周俊在AICon演讲指出，万亿参数模型每运行15分钟算力成本约等于一辆特斯拉，效率是智能体时代最需解决的问题。团队提出从\"更多Token\"转向\"更高Token密度\"策略，采用7份Lightning Attention加1份MLA的混合线性注意力架构，使256K长上下文成本从指数级降至线性级，算力更多用于思考。通过Kpop算法区分工具调用与自然语言Token，结合思维链剪枝、自蒸馏等，Token输出减少约4倍而能力不降。在LongBench、BFCL等基准上提升显著，千亿参数模型在Agent任务中超越部分更大模型；小模型flash吞吐达2.4倍，五轮对话成本下降10倍以上。",
+        "description": "蚂蚁集团副总裁周俊在AICon演讲指出，万亿参数模型每运行15分钟算力成本约等于一辆特斯拉，效率是智能体时代最需解决的问题。团队提出从\"更多Token\"转向\"更高Token密度\"策略，采用7份Lightning Attention加1份MLA的混合线性注意力架构，使256K长上下文成本从指数级降至线性级，算力更多用于思考。通过Kpop算法区分工具调用与自然语言Token，结合思维链剪枝、自蒸馏等，Token输出减少约4倍而能力不降。在LongBench、BFCL等基准上提升显著，千亿参数模型在Agent任务中超越部分更大模型；小模型flash吞吐达2.4倍，五轮对话成本下降10倍以上。",
+        "category": "tools",
+        "originalSource": "公众号：蚂蚁百灵（Ling）",
+        "originalUrl": "https://mp.weixin.qq.com/s/dsIfi4C-T5Q4emmIh-7yzg",
+        "recommendedReason": "蚂蚁集团副总裁周俊在AICon演讲指出，万亿参数模型每运行15分钟算力成本约等于一辆特斯拉，效率是智能体时代最需解决的问题。团队提出从\"更多Token\"转向\"更高Token密度\"策略，采用7份Lightning Attention加1份MLA的混合线性注意力架构，使256K长上下文成本从指数级降至线性级，算力更多用于思考。通过Kpop算法区分工具调用与自然语言Token，结合思维链剪枝、自蒸馏等，Token输出减少约4倍而能力不降。在LongBench、BFCL等基准上提升显著，千亿参数模型在Agent任务中超越部分更大模型；小模型flash吞吐达2.4倍，五轮对话成本下降10倍以上。",
+        "publishedAt": "2026-07-08T01:00:00.000Z",
+        "collectedAt": "2026-07-08T14:45:12.318Z",
+        "raw": {
+          "id": "cmrbdsefa02yjihl17gg7mhx3",
+          "titleEn": "演讲实录 | 从 Token 数量到 Token 密度：万亿参数规模下的高效智能体智能",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmrbc048n02j2ihl1all0ymge",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "《人生设计课》Prompt实测：用Claude设计人生的四个阶段",
+        "url": "https://mp.weixin.qq.com/s/VDlBdkspV0SQNFJYLxOogQ",
+        "summary": "作者将斯坦福《人生设计课》理论体系制成Prompt，通过Claude逐步提问、追问和分析。Prompt融合设计思维、心流理论和积极心理学，分为看清现状、找到指南针、寻路、制定奥德赛计划四阶段，主线问题控制在6到9个。AI引导用户给健康、工作、娱乐、爱打分，区分重力问题与可设计的真问题，生成三个五年人生版本，最终输出8000至12000字的《个人人生设计蓝图》。作者实测效果超预期。",
+        "description": "作者将斯坦福《人生设计课》理论体系制成Prompt，通过Claude逐步提问、追问和分析。Prompt融合设计思维、心流理论和积极心理学，分为看清现状、找到指南针、寻路、制定奥德赛计划四阶段，主线问题控制在6到9个。AI引导用户给健康、工作、娱乐、爱打分，区分重力问题与可设计的真问题，生成三个五年人生版本，最终输出8000至12000字的《个人人生设计蓝图》。作者实测效果超预期。",
+        "category": "tools",
+        "originalSource": "公众号：数字生命卡兹克",
+        "originalUrl": "https://mp.weixin.qq.com/s/VDlBdkspV0SQNFJYLxOogQ",
+        "recommendedReason": "作者将斯坦福《人生设计课》理论体系制成Prompt，通过Claude逐步提问、追问和分析。Prompt融合设计思维、心流理论和积极心理学，分为看清现状、找到指南针、寻路、制定奥德赛计划四阶段，主线问题控制在6到9个。AI引导用户给健康、工作、娱乐、爱打分，区分重力问题与可设计的真问题，生成三个五年人生版本，最终输出8000至12000字的《个人人生设计蓝图》。作者实测效果超预期。",
+        "publishedAt": "2026-07-08T00:12:06.000Z",
+        "collectedAt": "2026-07-08T14:45:12.318Z",
+        "raw": {
+          "id": "cmrbc048n02j2ihl1all0ymge",
+          "titleEn": "我把斯坦福最火的一门课，做成了Prompt来帮我设计人生。",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmrb4j2zx00n4ihl14u6xv7kz",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Krea 2 身份保留功能上线",
+        "url": "https://x.com/krea_ai/status/2074589965653303321",
+        "summary": "Krea 2 的身份保留功能已发布，配套模型和 ComfyUI 节点也已上线。🔥",
+        "description": "Krea 2 的身份保留功能已发布，配套模型和 ComfyUI 节点也已上线。🔥",
+        "category": "tools",
+        "originalSource": "X：Krea AI (@krea_ai)",
+        "originalUrl": "https://x.com/krea_ai/status/2074589965653303321",
+        "recommendedReason": "Krea 2 的身份保留功能已发布，配套模型和 ComfyUI 节点也已上线。🔥",
+        "publishedAt": "2026-07-07T20:22:46.000Z",
+        "collectedAt": "2026-07-08T14:45:12.318Z",
+        "raw": {
+          "id": "cmrb4j2zx00n4ihl14u6xv7kz",
+          "titleEn": "ID preservation for Krea 2 🔥",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmrb2mxmc0072ihl1mx0aw1bz",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Meta Superintelligence Labs 推出 Muse Image 和 Muse Video",
+        "url": "https://x.com/AIatMeta/status/2074577662840832382",
+        "summary": "Meta Superintelligence Labs 发布首个媒体生成模型 Muse Image 和 Muse Video。Muse Image 是目前最先进的图像生成模型，能精确遵循指令、精准编辑、多参考构图，并利用 Instagram 社交上下文。它还具备智能体工具使用能力并集成 Muse Spark。用户可通过 Meta AI 应用、网页、Instagram Stories 和 WhatsApp 试用，初始限于部分国家。Muse Video 基于相同预训练基础，实现高视觉保真度并原生支持音频。",
+        "description": "Meta Superintelligence Labs 发布首个媒体生成模型 Muse Image 和 Muse Video。Muse Image 是目前最先进的图像生成模型，能精确遵循指令、精准编辑、多参考构图，并利用 Instagram 社交上下文。它还具备智能体工具使用能力并集成 Muse Spark。用户可通过 Meta AI 应用、网页、Instagram Stories 和 WhatsApp 试用，初始限于部分国家。Muse Video 基于相同预训练基础，实现高视觉保真度并原生支持音频。",
+        "category": "models",
+        "originalSource": "X：AI at Meta (@AIatMeta)",
+        "originalUrl": "https://x.com/AIatMeta/status/2074577662840832382",
+        "recommendedReason": "Meta Superintelligence Labs 发布首个媒体生成模型 Muse Image 和 Muse Video。Muse Image 是目前最先进的图像生成模型，能精确遵循指令、精准编辑、多参考构图，并利用 Instagram 社交上下文。它还具备智能体工具使用能力并集成 Muse Spark。用户可通过 Meta AI 应用、网页、Instagram Stories 和 WhatsApp 试用，初始限于部分国家。Muse Video 基于相同预训练基础，实现高视觉保真度并原生支持音频。",
+        "publishedAt": "2026-07-07T19:33:53.000Z",
+        "collectedAt": "2026-07-08T14:45:12.318Z",
+        "raw": {
+          "id": "cmrb2mxmc0072ihl1mx0aw1bz",
+          "titleEn": "Introducing Muse Image and Muse Video， the first media generation models developed by Meta Superinte…",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmrb0u6pv02qtihogovduu795",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "微软为降成本在Copilot中用自研MAI模型替换OpenAI和Anthropic模型",
+        "url": "https://the-decoder.com/copilot-goes-cheap-as-microsoft-phases-out-openai-and-anthropic-models-to-cut-costs",
+        "summary": "微软正用自研MAI模型替换Copilot产品中的OpenAI和Anthropic模型以降低支出。MAI模型已在Excel和Outlook中每周处理数万次请求，但占比仍小。Build大会上发布推理模型MAI-Thinking 1，声称编码媲美Sonnet 4.6和Opus 4.6，但基准测试大幅落后，仅与DeepSeek V3.2相当。AI负责人承认目标是削减并消除对Anthropic的支出。CEO暗示未来可能按用量计费，MAI为默认，第三方模型付费附加。微软称MAI使用干净商业许可数据，实际基于Common Crawl。",
+        "description": "微软正用自研MAI模型替换Copilot产品中的OpenAI和Anthropic模型以降低支出。MAI模型已在Excel和Outlook中每周处理数万次请求，但占比仍小。Build大会上发布推理模型MAI-Thinking 1，声称编码媲美Sonnet 4.6和Opus 4.6，但基准测试大幅落后，仅与DeepSeek V3.2相当。AI负责人承认目标是削减并消除对Anthropic的支出。CEO暗示未来可能按用量计费，MAI为默认，第三方模型付费附加。微软称MAI使用干净商业许可数据，实际基于Common Crawl。",
+        "category": "industry",
+        "originalSource": "The Decoder：AI News（RSS）",
+        "originalUrl": "https://the-decoder.com/copilot-goes-cheap-as-microsoft-phases-out-openai-and-anthropic-models-to-cut-costs",
+        "recommendedReason": "微软正用自研MAI模型替换Copilot产品中的OpenAI和Anthropic模型以降低支出。MAI模型已在Excel和Outlook中每周处理数万次请求，但占比仍小。Build大会上发布推理模型MAI-Thinking 1，声称编码媲美Sonnet 4.6和Opus 4.6，但基准测试大幅落后，仅与DeepSeek V3.2相当。AI负责人承认目标是削减并消除对Anthropic的支出。CEO暗示未来可能按用量计费，MAI为默认，第三方模型付费附加。微软称MAI使用干净商业许可数据，实际基于Common Crawl。",
+        "publishedAt": "2026-07-07T18:35:58.000Z",
+        "collectedAt": "2026-07-08T14:45:12.318Z",
+        "raw": {
+          "id": "cmrb0u6pv02qtihogovduu795",
+          "titleEn": "Copilot goes cheap as Microsoft phases out OpenAI and Anthropic models to cut costs",
+          "apiCategory": "industry"
+        }
+      }
+    ],
+    "crossSourceHighlights": [
+      {
+        "id": "url:https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
+        "canonicalId": "url:https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
+        "title": "GitLost：Noma Labs 发现 GitHub AI 代理提示词注入漏洞",
+        "canonicalUrl": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
+          "title:gitlost noma labs 发现 github ai 代理提示词注入漏洞",
+          "topic:ai workflow / automation",
+          "title:gitlost we tricked github s ai agent into leaking private repos"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmrbu023x079pihl1q4rvhzky",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "GitLost：Noma Labs 发现 GitHub AI 代理提示词注入漏洞",
+            "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
+            "summary": "Noma Labs 在 GitHub Agentic Workflows 中发现严重提示词注入漏洞 GitLost。未认证攻击者仅需在属于同一组织的公共仓库中创建一个嵌有恶意指令的 Issue，即可诱使基于 Claude 或 GitHub Copilot 的 AI 代理读取并公开该组织内私有仓库的内容。攻击无需编码技能或凭证，根源在于代理将用户可控内容视为可信指令，且 GitHub 的防护措施因 \"Additionally\" 关键词被绕过。Noma Labs 已公开 PoC 并建议限制跨仓库权限、隔离用户输入。",
+            "description": "Noma Labs 在 GitHub Agentic Workflows 中发现严重提示词注入漏洞 GitLost。未认证攻击者仅需在属于同一组织的公共仓库中创建一个嵌有恶意指令的 Issue，即可诱使基于 Claude 或 GitHub Copilot 的 AI 代理读取并公开该组织内私有仓库的内容。攻击无需编码技能或凭证，根源在于代理将用户可控内容视为可信指令，且 GitHub 的防护措施因 \"Additionally\" 关键词被绕过。Noma Labs 已公开 PoC 并建议限制跨仓库权限、隔离用户输入。",
+            "category": "industry",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
+            "recommendedReason": "Noma Labs 在 GitHub Agentic Workflows 中发现严重提示词注入漏洞 GitLost。未认证攻击者仅需在属于同一组织的公共仓库中创建一个嵌有恶意指令的 Issue，即可诱使基于 Claude 或 GitHub Copilot 的 AI 代理读取并公开该组织内私有仓库的内容。攻击无需编码技能或凭证，根源在于代理将用户可控内容视为可信指令，且 GitHub 的防护措施因 \"Additionally\" 关键词被绕过。Noma Labs 已公开 PoC 并建议限制跨仓库权限、隔离用户输入。",
+            "publishedAt": "2026-07-08T08:29:47.091Z",
+            "collectedAt": "2026-07-08T14:45:12.318Z",
+            "raw": {
+              "id": "cmrbu023x079pihl1q4rvhzky",
+              "titleEn": "GitLost：我们诱使 GitHub 的 AI 代理泄露了私有仓库",
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48827858",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "GitLost: We Tricked GitHub's AI Agent into Leaking Private Repos",
+            "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/",
+            "author": "ColinEberhardt",
+            "tags": [
+              "ai",
+              "agent"
+            ],
+            "metrics": {
+              "upvotes": 354,
+              "commentsCount": 141
+            },
+            "publishedAt": "2026-07-08T05:25:35.000Z",
+            "collectedAt": "2026-07-08T14:45:12.480Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48827858",
+              "matchedKeywords": [
+                "ai",
+                "agent"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmrbu023x079pihl1q4rvhzky",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "GitLost：Noma Labs 发现 GitHub AI 代理提示词注入漏洞",
+            "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
+            "summary": "Noma Labs 在 GitHub Agentic Workflows 中发现严重提示词注入漏洞 GitLost。未认证攻击者仅需在属于同一组织的公共仓库中创建一个嵌有恶意指令的 Issue，即可诱使基于 Claude 或 GitHub Copilot 的 AI 代理读取并公开该组织内私有仓库的内容。攻击无需编码技能或凭证，根源在于代理将用户可控内容视为可信指令，且 GitHub 的防护措施因 \"Additionally\" 关键词被绕过。Noma Labs 已公开 PoC 并建议限制跨仓库权限、隔离用户输入。",
+            "description": "Noma Labs 在 GitHub Agentic Workflows 中发现严重提示词注入漏洞 GitLost。未认证攻击者仅需在属于同一组织的公共仓库中创建一个嵌有恶意指令的 Issue，即可诱使基于 Claude 或 GitHub Copilot 的 AI 代理读取并公开该组织内私有仓库的内容。攻击无需编码技能或凭证，根源在于代理将用户可控内容视为可信指令，且 GitHub 的防护措施因 \"Additionally\" 关键词被绕过。Noma Labs 已公开 PoC 并建议限制跨仓库权限、隔离用户输入。",
+            "category": "industry",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
+            "recommendedReason": "Noma Labs 在 GitHub Agentic Workflows 中发现严重提示词注入漏洞 GitLost。未认证攻击者仅需在属于同一组织的公共仓库中创建一个嵌有恶意指令的 Issue，即可诱使基于 Claude 或 GitHub Copilot 的 AI 代理读取并公开该组织内私有仓库的内容。攻击无需编码技能或凭证，根源在于代理将用户可控内容视为可信指令，且 GitHub 的防护措施因 \"Additionally\" 关键词被绕过。Noma Labs 已公开 PoC 并建议限制跨仓库权限、隔离用户输入。",
+            "publishedAt": "2026-07-08T08:29:47.091Z",
+            "collectedAt": "2026-07-08T14:45:12.318Z",
+            "raw": {
+              "id": "cmrbu023x079pihl1q4rvhzky",
+              "titleEn": "GitLost：我们诱使 GitHub 的 AI 代理泄露了私有仓库",
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48827858",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "GitLost: We Tricked GitHub's AI Agent into Leaking Private Repos",
+            "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/",
+            "author": "ColinEberhardt",
+            "tags": [
+              "ai",
+              "agent"
+            ],
+            "metrics": {
+              "upvotes": 354,
+              "commentsCount": 141
+            },
+            "publishedAt": "2026-07-08T05:25:35.000Z",
+            "collectedAt": "2026-07-08T14:45:12.480Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48827858",
+              "matchedKeywords": [
+                "ai",
+                "agent"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 354,
+          "commentsCount": 141,
+          "hnScore": 354,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "industry",
+        "summary": "Noma Labs 在 GitHub Agentic Workflows 中发现严重提示词注入漏洞 GitLost。未认证攻击者仅需在属于同一组织的公共仓库中创建一个嵌有恶意指令的 Issue，即可诱使基于 Claude 或 GitHub Copilot 的 AI 代理读取并公开该组织内私有仓库的内容。攻击无需编码技能或凭证，根源在于代理将用户可控内容视为可信指令，且 GitHub 的防护措施因 \"Additionally\" 关键词被绕过。Noma Labs 已公开 PoC 并建议限制跨仓库权限、隔离用户输入。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-07-08T05:25:35.000Z",
+        "lastSeenAt": "2026-07-08T14:45:12.480Z"
       }
     ]
   }
