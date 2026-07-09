@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-07-08T22:29:06.607Z
+Updated: 2026-07-09T01:07:20.012Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -9,7 +9,7 @@ Updated: 2026-07-08T22:29:06.607Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-07-09 | daily | [AI Developer Radar｜Daily｜2026-07-09](2026/07/2026-07-09-daily.md) | milvus-io/milvus, thedaviddias/Front-End-Checklist, stas00/ml-engineering, PatrickJS/awesome-cursorrules, google-ai-edge/mediapipe |
+| 2026-07-09 | daily | [AI Developer Radar｜Daily｜2026-07-09](2026/07/2026-07-09-daily.md) | stas00/ml-engineering, milvus-io/milvus, thedaviddias/Front-End-Checklist, PatrickJS/awesome-cursorrules, google-ai-edge/mediapipe |
 | 2026-07-08 | daily | [AI Developer Radar｜Daily｜2026-07-08](2026/07/2026-07-08-daily.md) | iOfficeAI/OfficeCLI, MadsLorentzen/ai-job-search, milvus-io/milvus, thedaviddias/Front-End-Checklist, stas00/ml-engineering |
 | 2026-07-07 | daily | [AI Developer Radar｜Daily｜2026-07-07](2026/07/2026-07-07-daily.md) | ToolJet/ToolJet, hesreallyhim/awesome-claude-code, automazeio/ccpm, Tencent/ncnn, gvergnaud/ts-pattern |
 | 2026-07-06 | daily | [AI Developer Radar｜Daily｜2026-07-06](2026/07/2026-07-06-daily.md) | OpenHands/OpenHands, steipete/CodexBar, gastownhall/gastown, hpcaitech/ColossalAI, automazeio/ccpm |
