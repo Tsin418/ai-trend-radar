@@ -1,208 +1,211 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-09T15:40:38.772Z",
+  "generatedAt": "2026-07-09T17:13:26.526Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2607.07708v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
-        "url": "https://arxiv.org/pdf/2607.07708v1",
-        "description": "Structure-property relationships are foundational to biology, chemistry and materials science, where function, reactivity and physical response emerge from spatial, chemical and periodic organization. Mechanistically explaining these relationships requires interpreting structural evidence through scientific principles and physical constraints, from stereochemistry and bonding to symmetry, energetics and periodic order. However, applying artificial intelligence to this process presents a joint ch",
-        "summary": "Structure-property relationships are foundational to biology, chemistry and materials science, where function, reactivity and physical response emerge from spatial, chemical and periodic organization. Mechanistically explaining these relationships requires interpreting structural evidence through scientific principles and physical constraints, from stereochemistry and bonding to symmetry, energetics and periodic order. However, applying artificial intelligence to this process presents a joint challenge of representation and reasoning: models must preserve domain-native structural information while showing how specific evidence supports predictions under these constraints. Here we introduce SciReasoner, a multimodal scientific foundation model for native structural reasoning across proteins, small molecules and inorganic crystals. SciReasoner discretizes coordinates, topologies and periodic connectivities into a unified structure-aware vocabulary, treating structural tokens as addressable evidence units during reasoning. In homology-controlled Gene Ontology prediction, SciReasoner improves Cellular Component annotation for low-homology and orphan-like proteins, increasing $F_{\\max}$ from 0.42 to 0.55. In chemistry, it raises single-step retrosynthesis accuracy from 0.63 to 0.72 while generating fragment-level disconnection and precursor-verification traces. In materials science, its representations separate elemental and compound phases and resolve high- and low-band-gap regimes. Across 86 benchmarks, SciReasoner achieves state-of-the-art performance on 67 tasks. Double-blind expert evaluation rates its reasoning traces as preferred or at least comparable to those of a frontier large language model in 98% of cases. By making structure an inspectable substrate for reasoning under scientific constraints, SciReasoner connects accurate prediction with interpretable scientific inference.",
-        "author": "Chen Tang, Yizhou Wang, Jianyu Wu, Lintao Wang, Shixiang Tang, Pengze Li, Encheng Su, Jun Yao, Jiabei Xiao, Yuqi Shi, Jielan Li, Hongxia Hao, Zhangyang Gao, Fang Wu, Ben Fei, Xiangyu Yue, Pan Tan, Bozitao Zhong, Jinouwen Zhang, Aoran Wang, Yan Lu, Jiaheng Liu, Xinzhu Ma, Liang Hong, Mingyue Zheng, Phil Torr, Bowen Zhou, Wanli Ouyang, Lei Bai",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.CL",
-          "cs.AI",
-          "cs.CE",
-          "cs.LG",
-          "large language model",
-          "rag",
-          "benchmark",
-          "evaluation"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-07-08T17:59:59Z",
-        "updatedAt": "2026-07-08T17:59:59Z",
-        "collectedAt": "2026-07-09T15:40:26.335Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.07708v1",
-          "authors": [
-            "Chen Tang",
-            "Yizhou Wang",
-            "Jianyu Wu",
-            "Lintao Wang",
-            "Shixiang Tang",
-            "Pengze Li",
-            "Encheng Su",
-            "Jun Yao",
-            "Jiabei Xiao",
-            "Yuqi Shi",
-            "Jielan Li",
-            "Hongxia Hao",
-            "Zhangyang Gao",
-            "Fang Wu",
-            "Ben Fei",
-            "Xiangyu Yue",
-            "Pan Tan",
-            "Bozitao Zhong",
-            "Jinouwen Zhang",
-            "Aoran Wang",
-            "Yan Lu",
-            "Jiaheng Liu",
-            "Xinzhu Ma",
-            "Liang Hong",
-            "Mingyue Zheng",
-            "Phil Torr",
-            "Bowen Zhou",
-            "Wanli Ouyang",
-            "Lei Bai"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14040
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, rag, benchmark, evaluation"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-07-09T17:13:26.712Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.07707v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
-        "url": "https://arxiv.org/pdf/2607.07707v1",
-        "description": "Limited memory language models (LMLMs) externalize factual knowledge during pretraining to a knowledge base (KB), rather than memorizing it in their weights. During generation, the model then fetches knowledge from the KB as needed. This recently introduced paradigm provides multiple advantages, including knowledge control capabilities that remain beyond conventional LLMs. We propose continuous-query LMLM (CO-LMLM), where the KB pairs continuous keys with textual knowledge values, a significant ",
-        "summary": "Limited memory language models (LMLMs) externalize factual knowledge during pretraining to a knowledge base (KB), rather than memorizing it in their weights. During generation, the model then fetches knowledge from the KB as needed. This recently introduced paradigm provides multiple advantages, including knowledge control capabilities that remain beyond conventional LLMs. We propose continuous-query LMLM (CO-LMLM), where the KB pairs continuous keys with textual knowledge values, a significant departure from prior reliance on relational KB and queries. CO-LMLM generates flexible vector queries at minimal cost, while still integrating human-readable and attributable retrieved knowledge into its generation. We pair this design with an annotation pipeline that tags free-form factual spans in arbitrary text, removing prior work's restriction to Wikipedia. Across pretraining on Wikipedia and FineWeb-Edu and at multiple model scales, CO-LMLM outperforms prior LMLMs and vanilla LLMs in both perplexity and factual precision. At 360M scale, this includes lower perplexity than models pretrained on 40x more data, and SimpleQA-verified performance that is in line with gpt-4o-mini and higher than Claude Sonnet 4.5.",
-        "author": "Yair Feldman, Linxi Zhao, Nathan Godey, Dongyoung Go, Yilun Hua, Kilian Q. Weinberger, Jennifer J. Sun, Yoav Artzi",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.CL",
-          "cs.AI",
-          "cs.LG",
-          "llm"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-07-08T17:59:45Z",
-        "updatedAt": "2026-07-08T17:59:45Z",
-        "collectedAt": "2026-07-09T15:40:26.335Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.07707v1",
-          "authors": [
-            "Yair Feldman",
-            "Linxi Zhao",
-            "Nathan Godey",
-            "Dongyoung Go",
-            "Yilun Hua",
-            "Kilian Q. Weinberger",
-            "Jennifer J. Sun",
-            "Yoav Artzi"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11162
         },
-        "recommendedReason": "Matched AI developer keywords: llm"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-07-09T17:13:26.712Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.07702v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
-        "url": "https://arxiv.org/pdf/2607.07702v1",
-        "description": "The optimization of long-horizon agents increasingly relies on reflection-based mechanisms, where a large language model (LLM) acts as an optimizer to diagnose agent failures and improve agent policies. However, real execution traces are difficult to use directly for optimization: large trace collections are often redundant and heterogeneous, making optimization inefficient and prone to overfitting to low-value failures; meanwhile, each individual trajectory also contains many irrelevant steps, ",
-        "summary": "The optimization of long-horizon agents increasingly relies on reflection-based mechanisms, where a large language model (LLM) acts as an optimizer to diagnose agent failures and improve agent policies. However, real execution traces are difficult to use directly for optimization: large trace collections are often redundant and heterogeneous, making optimization inefficient and prone to overfitting to low-value failures; meanwhile, each individual trajectory also contains many irrelevant steps, while naive context reduction methods such as truncation or sliding windows can discard causally important evidence and produce misleading optimization signals. To resolve this dilemma, we introduce STRACE (Structural TRajectory Analysis and Causal Extraction), a framework that constructs high signal-noise optimization contexts for more precise and effective optimization. At the batch level, STRACE mines failure patterns to filter redundant traces and retain representative failures; within each selected trace, it performs causal localization over a textual dependency graph to remove non-causal steps and identify the true root-cause module for optimization. Empirical results demonstrate that STRACE significantly outperforms standard context-filtering baselines. Notably, on a challenging formal verification task (VeruSAGE-Bench), it successfully optimizes human-expert designed agents, delivering $1.4\\times$ success-rate improvement (42.5% to 58.5%). The code is available at https://github.com/moomight/STRACE .",
-        "author": "Ying Chang, Jiahang Xu, Xuan Feng, Chenyuan Yang, Peng Cheng, Yuqing Yang",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.CL",
-          "large language model",
-          "llm",
-          "agent"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-07-08T17:57:27Z",
-        "updatedAt": "2026-07-08T17:57:27Z",
-        "collectedAt": "2026-07-09T15:40:26.335Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.07702v1",
-          "authors": [
-            "Ying Chang",
-            "Jiahang Xu",
-            "Xuan Feng",
-            "Chenyuan Yang",
-            "Peng Cheng",
-            "Yuqing Yang"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10127
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, agent"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-07-09T17:13:26.712Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.07696v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
-        "url": "https://arxiv.org/pdf/2607.07696v1",
-        "description": "Analytical workloads operating on data stored in external database systems face a fundamental bottleneck: data access is guarded entirely by the database driver, like JDBC or ODBC, forcing all reads through query execution and other driver layers that are not designed for bulk columnar analytics. We present Jailbreak, an approach that bypasses the database engine entirely by reading storage files directly and materializing data as in-memory columnar buffers. Jailbreak's key insight is that datab",
-        "summary": "Analytical workloads operating on data stored in external database systems face a fundamental bottleneck: data access is guarded entirely by the database driver, like JDBC or ODBC, forcing all reads through query execution and other driver layers that are not designed for bulk columnar analytics. We present Jailbreak, an approach that bypasses the database engine entirely by reading storage files directly and materializing data as in-memory columnar buffers. Jailbreak's key insight is that database file formats, while complex, are fully specified by their source code and documentation, artifacts that Large Language Models (LLMs) can ingest to regenerate operator-specific table reading components without human-engineered parsing logic. Jailbreak leverages LLM-assisted code synthesis for database storage decoding, turning a traditionally opaque format into a directly queryable artifact. We evaluate Jailbreak on PostgreSQL and MySQL storage files, targeting analytical snapshot scenarios common in read replicas and offline processing pipelines. The generated reader produces Apache Arrow buffers consumable directly by most of the widely known query engines, including DuckDB, Apache Spark, and GPU-accelerated frameworks such as cuDF and Spark RAPIDS. We validate correctness against JDBC/ODBC-based baselines using the TPC-H benchmark across all query results, and demonstrate significant performance improvements in end-to-end analytical throughput, achieving up to 27x speedups. Our results showcase that LLM-assisted storage reader synthesis is a viable and generalizable methodology for breaking data lock-in across database systems, with applications beyond PostgreSQL and MySQL for any system whose file format is available to the LLM from documentation or source code.",
-        "author": "Victor Giannakouris, Immanuel Trummer",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "cs.DB",
-          "cs.AI",
-          "large language model",
-          "llm",
-          "agent",
-          "rag",
-          "benchmark",
-          "agentic"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "cs.DB",
-        "language": "en",
-        "publishedAt": "2026-07-08T17:55:00Z",
-        "updatedAt": "2026-07-08T17:55:00Z",
-        "collectedAt": "2026-07-09T15:40:26.335Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.07696v1",
-          "authors": [
-            "Victor Giannakouris",
-            "Immanuel Trummer"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7547
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, agent, rag, benchmark"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-07-06T10:22:14.000Z",
+        "collectedAt": "2026-07-09T17:13:26.712Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.07695v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Institutional Red-Teaming: Deployment Rules, Not Just Models, Causally Shape Multi-Agent AI Safety",
-        "url": "https://arxiv.org/pdf/2607.07695v1",
-        "description": "We introduce institutional red-teaming, an evaluation methodology for testing deployment rules in multi-agent AI: hold the agents, objectives, and task state fixed, vary only one rule, and attribute the resulting change in collective behavior to that rule. We instantiate the methodology in IABench-CA, a consequence-allocation benchmark spanning 228 contexts, five canonical rules, and seven model populations (33,924 games), with a normative cooperative reference and auto-labelled reasoning traces",
-        "summary": "We introduce institutional red-teaming, an evaluation methodology for testing deployment rules in multi-agent AI: hold the agents, objectives, and task state fixed, vary only one rule, and attribute the resulting change in collective behavior to that rule. We instantiate the methodology in IABench-CA, a consequence-allocation benchmark spanning 228 contexts, five canonical rules, and seven model populations (33,924 games), with a normative cooperative reference and auto-labelled reasoning traces. Three findings emerge. (1) Deployment rules causally alter collective safety: changing only the consequence rule moves mean fatality by 22 to 58 percentage points within every population. (2) There is no safe default, but the targeting hazard is universal: the safest rule, the least-safe rule, and even the direction of the incidence effect vary across populations, yet regressive identity-targeting is never decisively safest in any context for any population, eliminates the least-resourced agent in 30-87% of games everywhere, and is selection-unsafe relative to the cooperative reference for all seven populations. (3) Identity salience is the mechanism: a one-shot anonymization ablation on the most exploitation-prone population (gpt-5.1) shows that merely naming the loss bearer in the rule text drives targeted elimination from 22% to 81% at identical payoffs; under repeated play, anonymization only delays the targeting, as agents re-infer the hidden rule from observed eliminations. We package the methodology as a safety-case workflow that certifies a provisional rule region $Φ(c,P)$ per deployment context and population, with explicit residual risks and monitoring obligations.",
-        "author": "Yujiao Chen",
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
         "tags": [
-          "cs.AI",
-          "cs.GT",
-          "cs.MA",
-          "agent",
-          "multi-agent",
-          "safety",
-          "benchmark",
-          "evaluation",
-          "workflow"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-07-08T17:53:56Z",
-        "updatedAt": "2026-07-08T17:53:56Z",
-        "collectedAt": "2026-07-09T15:40:26.335Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.07695v1",
-          "authors": [
-            "Yujiao Chen"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 5114
         },
-        "recommendedReason": "Matched AI developer keywords: agent, multi-agent, safety, benchmark, evaluation"
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-07-09T17:13:26.712Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5077
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-07-09T17:13:26.712Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Arena Leaderboard",
+        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
+        "author": "lmarena-ai",
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "static",
+        "metrics": {
+          "likes": 4936
+        },
+        "publishedAt": "2023-05-20T09:26:19.000Z",
+        "updatedAt": "2026-02-21T23:20:43.000Z",
+        "collectedAt": "2026-07-09T17:13:26.712Z",
+        "raw": {
+          "sdk": "static",
+          "emoji": "🏆🤖"
+        }
+      },
+      {
+        "id": "huggingface_spaces:KlingTeam/LivePortrait",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Live Portrait",
+        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
+        "author": "KlingTeam",
+        "tags": [
+          "gradio",
+          "Multimodal",
+          "Motion control",
+          "Image-to-Video",
+          "Video-to-Video",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 3757
+        },
+        "publishedAt": "2024-07-05T16:35:24.000Z",
+        "updatedAt": "2024-08-30T11:20:51.000Z",
+        "collectedAt": "2026-07-09T17:13:26.712Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🤪"
+        }
       }
     ],
     "developerBuzz": [
@@ -217,11 +220,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 731,
-          "commentsCount": 1341
+          "upvotes": 741,
+          "commentsCount": 1369
         },
         "publishedAt": "2026-07-08T18:00:32.000Z",
-        "collectedAt": "2026-07-09T15:40:26.093Z",
+        "collectedAt": "2026-07-09T17:13:26.966Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48835111",
           "matchedKeywords": [
@@ -240,11 +243,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1206,
-          "commentsCount": 245
+          "upvotes": 1234,
+          "commentsCount": 258
         },
         "publishedAt": "2026-07-08T23:37:43.000Z",
-        "collectedAt": "2026-07-09T15:40:26.093Z",
+        "collectedAt": "2026-07-09T17:13:26.966Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48838876",
           "matchedKeywords": [
@@ -265,10 +268,10 @@
         ],
         "metrics": {
           "upvotes": 731,
-          "commentsCount": 498
+          "commentsCount": 504
         },
         "publishedAt": "2026-07-08T17:03:19.000Z",
-        "collectedAt": "2026-07-09T15:40:26.093Z",
+        "collectedAt": "2026-07-09T17:13:26.966Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48834405",
           "matchedKeywords": [
@@ -288,11 +291,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1417,
+          "upvotes": 1425,
           "commentsCount": 227
         },
         "publishedAt": "2026-07-08T08:46:06.000Z",
-        "collectedAt": "2026-07-09T15:40:26.093Z",
+        "collectedAt": "2026-07-09T17:13:26.966Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48829312",
           "matchedKeywords": [
@@ -311,11 +314,11 @@
           "llm"
         ],
         "metrics": {
-          "upvotes": 365,
-          "commentsCount": 318
+          "upvotes": 373,
+          "commentsCount": 323
         },
         "publishedAt": "2026-07-09T01:56:28.000Z",
-        "collectedAt": "2026-07-09T15:40:26.093Z",
+        "collectedAt": "2026-07-09T17:13:26.966Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48839984",
           "matchedKeywords": [
@@ -325,6 +328,46 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmrdqgmkj067pih4b2dbg61ml",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Anthropic长期利益信托任命本·伯南克为受托人",
+        "url": "https://www.anthropic.com/news/ben-bernanke",
+        "summary": "Anthropic的长期利益信托（LTBT）任命前美联储主席、2022年诺贝尔经济学奖得主本·伯南克为最新受托人。他将与另外三位受托人共同监督公司以对社会长期有益的方式负责任开发先进AI的使命。LTBT独立于管理团队和投资者，受托人不持股、不分红，仅按服务时间获酬。该信托有权向Anthropic董事会任命成员，并就AI风险与社会影响等关键决策提供建议。伯南克将参与公司的经济研究，帮助理解AI对全球劳动力与经济的影响。",
+        "description": "Anthropic的长期利益信托（LTBT）任命前美联储主席、2022年诺贝尔经济学奖得主本·伯南克为最新受托人。他将与另外三位受托人共同监督公司以对社会长期有益的方式负责任开发先进AI的使命。LTBT独立于管理团队和投资者，受托人不持股、不分红，仅按服务时间获酬。该信托有权向Anthropic董事会任命成员，并就AI风险与社会影响等关键决策提供建议。伯南克将参与公司的经济研究，帮助理解AI对全球劳动力与经济的影响。",
+        "category": "industry",
+        "originalSource": "Anthropic：Newsroom（网页）",
+        "originalUrl": "https://www.anthropic.com/news/ben-bernanke",
+        "recommendedReason": "Anthropic的长期利益信托（LTBT）任命前美联储主席、2022年诺贝尔经济学奖得主本·伯南克为最新受托人。他将与另外三位受托人共同监督公司以对社会长期有益的方式负责任开发先进AI的使命。LTBT独立于管理团队和投资者，受托人不持股、不分红，仅按服务时间获酬。该信托有权向Anthropic董事会任命成员，并就AI风险与社会影响等关键决策提供建议。伯南克将参与公司的经济研究，帮助理解AI对全球劳动力与经济的影响。",
+        "publishedAt": "2026-07-09T16:40:37.929Z",
+        "collectedAt": "2026-07-09T17:13:27.517Z",
+        "raw": {
+          "id": "cmrdqgmkj067pih4b2dbg61ml",
+          "titleEn": "Ben Bernanke appointed to Anthropic's Long-Term Benefit Trust",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmrdpmgpg05zcih4bmwttzqaq",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "消息称特斯拉三代擎天柱人形机器人初步定型，马斯克放话达不成产能目标就开掉整个采购团队",
+        "url": "https://www.ithome.com/0/974/782.htm",
+        "summary": "据晚点LatePost报道，特斯拉Optimus Gen 3经马斯克评审通过，即将量产。供应链要求供应商9月产能达1000台/周，年底升至2000-2500台/周，届时年产能可达10万台。马斯克六月底高管会上要求年底前实现产能目标，否则开除整个Optimus采购团队。弗里蒙特工厂已改造为Optimus生产线，Model S/X于5月停产。马斯克表示初期生产极其缓慢，低产量夏季启动，高产量2027年展开。",
+        "description": "据晚点LatePost报道，特斯拉Optimus Gen 3经马斯克评审通过，即将量产。供应链要求供应商9月产能达1000台/周，年底升至2000-2500台/周，届时年产能可达10万台。马斯克六月底高管会上要求年底前实现产能目标，否则开除整个Optimus采购团队。弗里蒙特工厂已改造为Optimus生产线，Model S/X于5月停产。马斯克表示初期生产极其缓慢，低产量夏季启动，高产量2027年展开。",
+        "category": "industry",
+        "originalSource": "IT之家（RSS）",
+        "originalUrl": "https://www.ithome.com/0/974/782.htm",
+        "recommendedReason": "据晚点LatePost报道，特斯拉Optimus Gen 3经马斯克评审通过，即将量产。供应链要求供应商9月产能达1000台/周，年底升至2000-2500台/周，届时年产能可达10万台。马斯克六月底高管会上要求年底前实现产能目标，否则开除整个Optimus采购团队。弗里蒙特工厂已改造为Optimus生产线，Model S/X于5月停产。马斯克表示初期生产极其缓慢，低产量夏季启动，高产量2027年展开。",
+        "publishedAt": "2026-07-09T15:48:31.000Z",
+        "collectedAt": "2026-07-09T17:13:27.517Z",
+        "raw": {
+          "id": "cmrdpmgpg05zcih4bmwttzqaq",
+          "titleEn": null,
+          "apiCategory": "industry"
+        }
+      },
       {
         "id": "aihot:cmrdlxidv0522ih4b6xv8iolk",
         "source": "aihot",
@@ -338,7 +381,7 @@
         "originalUrl": "https://mistral.ai/news/manage-prompts-and-skills-in-studio",
         "recommendedReason": "Mistral 今日推出 Studio，为 AI 提示词和技能提供集中式系统记录。平台将 prompts 和 skills 视为生产资产，支持不可变版本、回滚、明确所有权、分类标签和审计日志，保证变更可追溯。非开发者可直接编辑测试，通过标签将变更推送至生产，保留原有 CI/CD 流程。可观测性让生产输出回溯到对应资产版本，形成闭环治理。现面向 Mistral Studio 客户开放。",
         "publishedAt": "2026-07-09T14:33:44.761Z",
-        "collectedAt": "2026-07-09T15:40:32.138Z",
+        "collectedAt": "2026-07-09T17:13:27.517Z",
         "raw": {
           "id": "cmrdlxidv0522ih4b6xv8iolk",
           "titleEn": "Your Prompts and Skills need a system of record. Studio gives AI prompts & skills a system of record-versioned， owned， and traceable. July 9， 2026 By Mistral",
@@ -358,7 +401,7 @@
         "originalUrl": "https://x.com/OpenBMB/status/2075218678027850154",
         "recommendedReason": "社区开发者基于MiniCPM5-1B和MiniCPM-V 4.6构建了本地优先的数学智能体TeXada。该Agent支持自然语言直接转LaTeX、手写/图像公式OCR转可编辑LaTeX、LaTeX补全与错误修复等核心功能。所有推理在本地完成，无需依赖云服务，保障隐私安全，适用于学生、研究人员和开发者随时随地处理数学表达式。已开源至GitHub，并提供HuggingFace模型下载。",
         "publishedAt": "2026-07-09T14:01:03.000Z",
-        "collectedAt": "2026-07-09T15:40:32.138Z",
+        "collectedAt": "2026-07-09T17:13:27.517Z",
         "raw": {
           "id": "cmrdl9o8g04twih4b0sqb2p2d",
           "titleEn": "What can lightweight AI models do on your local device？ Meet TeXada， a local-first Math Agent power…",
@@ -378,7 +421,7 @@
         "originalUrl": "https://x.com/AIatMeta/status/2075218647359111460",
         "recommendedReason": "来自 @finkd 的消息 - Muse Spark 1.1 已上线。",
         "publishedAt": "2026-07-09T14:00:55.000Z",
-        "collectedAt": "2026-07-09T15:40:32.138Z",
+        "collectedAt": "2026-07-09T17:13:27.517Z",
         "raw": {
           "id": "cmrdltu5h051cih4bum094j2e",
           "titleEn": "Straight from @finkd - Muse Spark 1.1 is live.",
@@ -398,7 +441,7 @@
         "originalUrl": "https://www.anthropic.com/news/reflect-with-claude",
         "recommendedReason": "Anthropic 为 Claude 推出一项反思功能（Beta），帮助用户追踪使用模式。用户可回顾过去 1、3、6 或 12 个月的活动总结，涵盖关键主题、使用频率和任务类型。功能结合 4D AI Fluency Framework（委托、描述、辨别、勤勉）提供协作分析，支持设定静音时段或定时休息提醒。隐私方面，不涉及无痕对话和健康集成工具，也不提取连接工具中的底层文件。该功能面向 Free、Pro 和 Max 用户，需开启记忆功能，可通过 Claude 网页或桌面应用设置。",
         "publishedAt": "2026-07-09T13:40:30.163Z",
-        "collectedAt": "2026-07-09T15:40:32.138Z",
+        "collectedAt": "2026-07-09T17:13:27.517Z",
         "raw": {
           "id": "cmrdk0zfw04ixih4b84colsmb",
           "titleEn": "Introducing a way to reflect on how you use Claude",
@@ -418,7 +461,7 @@
         "originalUrl": "https://www.ithome.com/0/974/744.htm",
         "recommendedReason": "法国竞争管理局确认，对英伟达的反垄断调查已近尾声，即将发布正式异议声明。调查聚焦两大问题：市场对CUDA平台的严重依赖，以及英伟达对CoreWeave等AI云计算公司的投资。英伟达占全球AI加速器超70%份额。若认定滥用市场支配地位，最高可处全球年营业额10%罚款。法国是首个准备正式指控英伟达的监管机构。",
         "publishedAt": "2026-07-09T13:01:09.000Z",
-        "collectedAt": "2026-07-09T15:40:32.138Z",
+        "collectedAt": "2026-07-09T17:13:27.517Z",
         "raw": {
           "id": "cmrdj6s6604a6ih4bekz9h8il",
           "titleEn": null,
@@ -426,455 +469,24 @@
         }
       },
       {
-        "id": "aihot:cmrd9x7xz01wzih4bch5uoywh",
+        "id": "aihot:cmrdrlair06hpih4bxerobguv",
         "source": "aihot",
         "sourceType": "curated_trend",
-        "title": "NVIDIA 发布 Nemotron-Labs-3-Puzzle-75B-A9B：压缩混合 MoE 模型，服务器吞吐量提升 2.03 倍",
-        "url": "https://www.marktechpost.com/2026/07/09/nvidia-releases-nemotron-labs-3-puzzle-75b-a9b-a-compressed-hybrid-moe-llm-delivering-2-03x-server-throughput-at-matched-user-throughput",
-        "summary": "NVIDIA 发布 Nemotron-3-Super 的压缩变体 Nemotron-Labs-3-Puzzle-75B-A9B，总参数从 120.7B 降至 75.3B，活跃参数从 12.8B 降至 9.3B，保持 88 块混合布局（40 Mamba、40 MoE、8 注意力）。在 8×B200 节点上，8K/64K 场景匹配用户吞吐量≥100 tok/s 时，服务器吞吐量提升 2.03 倍。单 H100 上 1M-token 并发从 1 增至 8，权重占用从 70 GB 降至 44.5 GB。迭代式 Puzzle 方法平均得分比单步高 0.57。代价：Arena-Hard-V2 降 4.2 分、SWE-Bench 降 2.6 分。Hugging Face 提供 BF16、FP8、NVFP4 检查点。",
-        "description": "NVIDIA 发布 Nemotron-3-Super 的压缩变体 Nemotron-Labs-3-Puzzle-75B-A9B，总参数从 120.7B 降至 75.3B，活跃参数从 12.8B 降至 9.3B，保持 88 块混合布局（40 Mamba、40 MoE、8 注意力）。在 8×B200 节点上，8K/64K 场景匹配用户吞吐量≥100 tok/s 时，服务器吞吐量提升 2.03 倍。单 H100 上 1M-token 并发从 1 增至 8，权重占用从 70 GB 降至 44.5 GB。迭代式 Puzzle 方法平均得分比单步高 0.57。代价：Arena-Hard-V2 降 4.2 分、SWE-Bench 降 2.6 分。Hugging Face 提供 BF16、FP8、NVFP4 检查点。",
+        "title": "OpenAI 推出 ChatGPT Work：可跨应用自主工作的 AI 智能体",
+        "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+        "summary": "OpenAI 发布 ChatGPT Work，一个能跨应用和文件收集信息、将复杂项目分解为小步骤独立完成并持续工作数小时的 AI 智能体。它内置 Codex 技术，目前每周超 500 万用户使用 Codex，其中超 100 万用于非软件开发场景。ChatGPT Work 由今天同步推出的最新前沿模型 GPT-5.6 驱动，具备多步骤推理和按模板生成材料的能力。该功能今天起面向 Pro、Enterprise 和 Edu 计划推出，未来几天扩展至 Plus 和 Business 计划。桌面版 ChatGPT 在所有计划（含免费版）中提供 Chat、Work 和 Codex 模式，且 Codex 应用已合并至新的桌面应用。",
+        "description": "OpenAI 发布 ChatGPT Work，一个能跨应用和文件收集信息、将复杂项目分解为小步骤独立完成并持续工作数小时的 AI 智能体。它内置 Codex 技术，目前每周超 500 万用户使用 Codex，其中超 100 万用于非软件开发场景。ChatGPT Work 由今天同步推出的最新前沿模型 GPT-5.6 驱动，具备多步骤推理和按模板生成材料的能力。该功能今天起面向 Pro、Enterprise 和 Edu 计划推出，未来几天扩展至 Plus 和 Business 计划。桌面版 ChatGPT 在所有计划（含免费版）中提供 Chat、Work 和 Codex 模式，且 Codex 应用已合并至新的桌面应用。",
         "category": "models",
-        "originalSource": "MarkTechPost（RSS）",
-        "originalUrl": "https://www.marktechpost.com/2026/07/09/nvidia-releases-nemotron-labs-3-puzzle-75b-a9b-a-compressed-hybrid-moe-llm-delivering-2-03x-server-throughput-at-matched-user-throughput",
-        "recommendedReason": "NVIDIA 发布 Nemotron-3-Super 的压缩变体 Nemotron-Labs-3-Puzzle-75B-A9B，总参数从 120.7B 降至 75.3B，活跃参数从 12.8B 降至 9.3B，保持 88 块混合布局（40 Mamba、40 MoE、8 注意力）。在 8×B200 节点上，8K/64K 场景匹配用户吞吐量≥100 tok/s 时，服务器吞吐量提升 2.03 倍。单 H100 上 1M-token 并发从 1 增至 8，权重占用从 70 GB 降至 44.5 GB。迭代式 Puzzle 方法平均得分比单步高 0.57。代价：Arena-Hard-V2 降 4.2 分、SWE-Bench 降 2.6 分。Hugging Face 提供 BF16、FP8、NVFP4 检查点。",
-        "publishedAt": "2026-07-09T08:47:37.000Z",
-        "collectedAt": "2026-07-09T15:40:32.138Z",
+        "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+        "originalUrl": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+        "recommendedReason": "OpenAI 发布 ChatGPT Work，一个能跨应用和文件收集信息、将复杂项目分解为小步骤独立完成并持续工作数小时的 AI 智能体。它内置 Codex 技术，目前每周超 500 万用户使用 Codex，其中超 100 万用于非软件开发场景。ChatGPT Work 由今天同步推出的最新前沿模型 GPT-5.6 驱动，具备多步骤推理和按模板生成材料的能力。该功能今天起面向 Pro、Enterprise 和 Edu 计划推出，未来几天扩展至 Plus 和 Business 计划。桌面版 ChatGPT 在所有计划（含免费版）中提供 Chat、Work 和 Codex 模式，且 Codex 应用已合并至新的桌面应用。",
+        "publishedAt": "2026-07-09T10:00:00.000Z",
+        "collectedAt": "2026-07-09T17:13:27.517Z",
         "raw": {
-          "id": "cmrd9x7xz01wzih4bch5uoywh",
-          "titleEn": "NVIDIA Releases Nemotron-Labs-3-Puzzle-75B-A9B： A Compressed Hybrid MoE LLM Delivering 2.03x Server Throughput at Matched User Throughput",
+          "id": "cmrdrlair06hpih4bxerobguv",
+          "titleEn": "ChatGPT is now a partner for your most ambitious work",
           "apiCategory": "ai-models"
         }
-      },
-      {
-        "id": "aihot:cmrd6bmv200xrih4b7i1ivun0",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "蚂蚁灵波开源全球首个面向具身智能的MoE视频基模LingBot-Video",
-        "url": "https://www.ithome.com/0/974/517.htm",
-        "summary": "蚂蚁灵波科技正式开源LingBot-Video，这是全球首个基于MoE架构、面向具身智能的视频生成基础模型。总参数30B，推理时仅激活约3B，效率较同规模Dense架构提升约3倍。模型引入7万小时VLA、VLN、Ego等机器人数据，并通过多维强化学习奖励系统对齐物理合理性与任务完成度。在RBench上总分0.620，超越Wan2.6等模型；在Physics-IQ Verified评测中排名第一。可用于机器人动作预测、仿真数据生成等方向。",
-        "description": "蚂蚁灵波科技正式开源LingBot-Video，这是全球首个基于MoE架构、面向具身智能的视频生成基础模型。总参数30B，推理时仅激活约3B，效率较同规模Dense架构提升约3倍。模型引入7万小时VLA、VLN、Ego等机器人数据，并通过多维强化学习奖励系统对齐物理合理性与任务完成度。在RBench上总分0.620，超越Wan2.6等模型；在Physics-IQ Verified评测中排名第一。可用于机器人动作预测、仿真数据生成等方向。",
-        "category": "models",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/974/517.htm",
-        "recommendedReason": "蚂蚁灵波科技正式开源LingBot-Video，这是全球首个基于MoE架构、面向具身智能的视频生成基础模型。总参数30B，推理时仅激活约3B，效率较同规模Dense架构提升约3倍。模型引入7万小时VLA、VLN、Ego等机器人数据，并通过多维强化学习奖励系统对齐物理合理性与任务完成度。在RBench上总分0.620，超越Wan2.6等模型；在Physics-IQ Verified评测中排名第一。可用于机器人动作预测、仿真数据生成等方向。",
-        "publishedAt": "2026-07-09T07:06:00.000Z",
-        "collectedAt": "2026-07-09T15:40:32.138Z",
-        "raw": {
-          "id": "cmrd6bmv200xrih4b7i1ivun0",
-          "titleEn": "全球首个面向具身智能的视频基模，蚂蚁灵波 LingBot-Video 开源",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmrd6bmv300xxih4byg33dbws",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "蚂蚁灵波开源实时交互世界模型 LingBot-World 2.0",
-        "url": "https://www.ithome.com/0/974/508.htm",
-        "summary": "蚂蚁灵波开源新一代实时交互世界模型 LingBot-World 2.0（14B 参数），支持施法、攻击、跳跃等丰富角色动作及文本驱动事件（如切换场景、召唤风暴），内置 Pilot Agent 与 Director Agent 实现世界持续演化，并支持多人同时交互。模型采用因果预训练范式和混合双向自回归注意力掩码（MoBA），可稳定输出 720p/60fps 实时画面，长达一小时测试画质不衰减。通过一致性蒸馏与 DMD 降低采样成本，结合注意力 kernel 优化、混合并行推理、动态 KV 缓存调度和异步流媒体传输实现低延迟交互。模型权重及推理代码以非商用协议开源，SGLang 已适配，并提供 Reactor PC 端和灵光 APP 在线体验。",
-        "description": "蚂蚁灵波开源新一代实时交互世界模型 LingBot-World 2.0（14B 参数），支持施法、攻击、跳跃等丰富角色动作及文本驱动事件（如切换场景、召唤风暴），内置 Pilot Agent 与 Director Agent 实现世界持续演化，并支持多人同时交互。模型采用因果预训练范式和混合双向自回归注意力掩码（MoBA），可稳定输出 720p/60fps 实时画面，长达一小时测试画质不衰减。通过一致性蒸馏与 DMD 降低采样成本，结合注意力 kernel 优化、混合并行推理、动态 KV 缓存调度和异步流媒体传输实现低延迟交互。模型权重及推理代码以非商用协议开源，SGLang 已适配，并提供 Reactor PC 端和灵光 APP 在线体验。",
-        "category": "models",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/974/508.htm",
-        "recommendedReason": "蚂蚁灵波开源新一代实时交互世界模型 LingBot-World 2.0（14B 参数），支持施法、攻击、跳跃等丰富角色动作及文本驱动事件（如切换场景、召唤风暴），内置 Pilot Agent 与 Director Agent 实现世界持续演化，并支持多人同时交互。模型采用因果预训练范式和混合双向自回归注意力掩码（MoBA），可稳定输出 720p/60fps 实时画面，长达一小时测试画质不衰减。通过一致性蒸馏与 DMD 降低采样成本，结合注意力 kernel 优化、混合并行推理、动态 KV 缓存调度和异步流媒体传输实现低延迟交互。模型权重及推理代码以非商用协议开源，SGLang 已适配，并提供 Reactor PC 端和灵光 APP 在线体验。",
-        "publishedAt": "2026-07-09T06:53:40.000Z",
-        "collectedAt": "2026-07-09T15:40:32.138Z",
-        "raw": {
-          "id": "cmrd6bmv300xxih4byg33dbws",
-          "titleEn": "无限世界、实时交互，蚂蚁灵波开源 LingBot-World 2.0 世界模型",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmrcsrok60407ihx5jvrp15a1",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Robbyant 发布 LingBot-VLA 2.0：开源 6B 跨实体机器人视觉-语言-动作模型",
-        "url": "https://www.marktechpost.com/2026/07/08/lingbot-vla-2-0",
-        "summary": "Robbyant 推出 LingBot-VLA 2.0，一个 6B 参数的开源视觉-语言-动作（VLA）基础模型。它以 Qwen3-VL-4B-Instruct 为骨干，采用 MoE 动作专家架构，通过 55 维规范向量统一表示不同机器人的状态和动作。训练数据涵盖约 60，000 小时高质量数据（50，000 小时机器人轨迹 + 10，000 小时第一人称人类视频），覆盖 20 种机器人配置。在 GM-100 双机械臂基准测试中，模型在多个平台上超越 π0.5 和之前版本。模型权重、代码和技术报告已以 Apache-2.0 许可开源。",
-        "description": "Robbyant 推出 LingBot-VLA 2.0，一个 6B 参数的开源视觉-语言-动作（VLA）基础模型。它以 Qwen3-VL-4B-Instruct 为骨干，采用 MoE 动作专家架构，通过 55 维规范向量统一表示不同机器人的状态和动作。训练数据涵盖约 60，000 小时高质量数据（50，000 小时机器人轨迹 + 10，000 小时第一人称人类视频），覆盖 20 种机器人配置。在 GM-100 双机械臂基准测试中，模型在多个平台上超越 π0.5 和之前版本。模型权重、代码和技术报告已以 Apache-2.0 许可开源。",
-        "category": "models",
-        "originalSource": "MarkTechPost（RSS）",
-        "originalUrl": "https://www.marktechpost.com/2026/07/08/lingbot-vla-2-0",
-        "recommendedReason": "Robbyant 推出 LingBot-VLA 2.0，一个 6B 参数的开源视觉-语言-动作（VLA）基础模型。它以 Qwen3-VL-4B-Instruct 为骨干，采用 MoE 动作专家架构，通过 55 维规范向量统一表示不同机器人的状态和动作。训练数据涵盖约 60，000 小时高质量数据（50，000 小时机器人轨迹 + 10，000 小时第一人称人类视频），覆盖 20 种机器人配置。在 GM-100 双机械臂基准测试中，模型在多个平台上超越 π0.5 和之前版本。模型权重、代码和技术报告已以 Apache-2.0 许可开源。",
-        "publishedAt": "2026-07-09T00:45:39.000Z",
-        "collectedAt": "2026-07-09T15:40:32.138Z",
-        "raw": {
-          "id": "cmrcsrok60407ihx5jvrp15a1",
-          "titleEn": "Robbyant Releases LingBot-VLA 2.0： An Open-Source 6B Vision-Language-Action （VLA） Model for Cross-Embodiment Robot Manipulation",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmrdm3exj052mih4bnm4k525b",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Ollama 开发者数达890万，B轮融资由Theory领投",
-        "url": "https://www.tomtunguz.com/ollama-series-b",
-        "summary": "Ollama 让开源模型在本地或云端轻松运行，保持体验一致。目前拥有890万开发者、6.7万集成，并与各大模型实验室及硬件供应商建立合作。B轮融资由Theory领投。",
-        "description": "Ollama 让开源模型在本地或云端轻松运行，保持体验一致。目前拥有890万开发者、6.7万集成，并与各大模型实验室及硬件供应商建立合作。B轮融资由Theory领投。",
-        "category": "industry",
-        "originalSource": "Tomer Tunguz 博客（VC 分析）",
-        "originalUrl": "https://www.tomtunguz.com/ollama-series-b",
-        "recommendedReason": "Ollama 让开源模型在本地或云端轻松运行，保持体验一致。目前拥有890万开发者、6.7万集成，并与各大模型实验室及硬件供应商建立合作。B轮融资由Theory领投。",
-        "publishedAt": "2026-07-09T00:00:00.000Z",
-        "collectedAt": "2026-07-09T15:40:32.138Z",
-        "raw": {
-          "id": "cmrdm3exj052mih4bnm4k525b",
-          "titleEn": "8.9 Million AI Users",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmrcpjgf00373ihx5mtyo2fsy",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "面向AI模型双重用途知识的\"开关\"：Anthropic与AE Studio提出GRAM方法",
-        "url": "https://www.anthropic.com/research/off-switch-dual-use",
-        "summary": "Anthropic与AE Studio联合提出梯度路由辅助模块（GRAM）方法，通过在Transformer每层添加可移除的神经元模块，使模型在训练时将病毒学、网络安全、核物理、专业编程语言等双重用途知识仅路由到对应模块，而非扩散至全局。训练后删除模块即可消除该能力，保留则供可信部署使用。实验在合成数据、真实数据及50M到5B参数模型上测试，GRAM效果与数据过滤相当，移除模块不降低通用性能，且比事后\"遗忘\"技术更难恢复。该研究为平衡双重用途知识的安全访问与有益使用提供了更鲁棒的方案。",
-        "description": "Anthropic与AE Studio联合提出梯度路由辅助模块（GRAM）方法，通过在Transformer每层添加可移除的神经元模块，使模型在训练时将病毒学、网络安全、核物理、专业编程语言等双重用途知识仅路由到对应模块，而非扩散至全局。训练后删除模块即可消除该能力，保留则供可信部署使用。实验在合成数据、真实数据及50M到5B参数模型上测试，GRAM效果与数据过滤相当，移除模块不降低通用性能，且比事后\"遗忘\"技术更难恢复。该研究为平衡双重用途知识的安全访问与有益使用提供了更鲁棒的方案。",
-        "category": "papers",
-        "originalSource": "Anthropic：Research（发表成果 · 网页）",
-        "originalUrl": "https://www.anthropic.com/research/off-switch-dual-use",
-        "recommendedReason": "Anthropic与AE Studio联合提出梯度路由辅助模块（GRAM）方法，通过在Transformer每层添加可移除的神经元模块，使模型在训练时将病毒学、网络安全、核物理、专业编程语言等双重用途知识仅路由到对应模块，而非扩散至全局。训练后删除模块即可消除该能力，保留则供可信部署使用。实验在合成数据、真实数据及50M到5B参数模型上测试，GRAM效果与数据过滤相当，移除模块不降低通用性能，且比事后\"遗忘\"技术更难恢复。该研究为平衡双重用途知识的安全访问与有益使用提供了更鲁棒的方案。",
-        "publishedAt": "2026-07-08T23:27:02.554Z",
-        "collectedAt": "2026-07-09T15:40:32.138Z",
-        "raw": {
-          "id": "cmrcpjgf00373ihx5mtyo2fsy",
-          "titleEn": "An off switch for dual use knowledge in AI models",
-          "apiCategory": "paper"
-        }
-      },
-      {
-        "id": "aihot:cmrcp5by2031uihx57fypdkfo",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "利润超10亿美元、ARR剑指千亿，Anthropic抢先OpenAI冲击IPO",
-        "url": "https://www.ithome.com/0/974/275.htm",
-        "summary": "Anthropic今年第三季度利润预计超10亿美元，已于6月1日秘密提交IPO申请，若成功将成为规模最大AI实验室IPO。其与OpenAI的年度经常性收入合计接近1000亿美元。凭借Claude Code在软件开发领域的快速普及，Anthropic在2026年实现AI模型盈利变现，成为B2B市场领跑者。SemiAnalysis报告认为其商业模式优越，若持续良好执行，市值可能触及6万亿美元。",
-        "description": "Anthropic今年第三季度利润预计超10亿美元，已于6月1日秘密提交IPO申请，若成功将成为规模最大AI实验室IPO。其与OpenAI的年度经常性收入合计接近1000亿美元。凭借Claude Code在软件开发领域的快速普及，Anthropic在2026年实现AI模型盈利变现，成为B2B市场领跑者。SemiAnalysis报告认为其商业模式优越，若持续良好执行，市值可能触及6万亿美元。",
-        "category": "industry",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/974/275.htm",
-        "recommendedReason": "Anthropic今年第三季度利润预计超10亿美元，已于6月1日秘密提交IPO申请，若成功将成为规模最大AI实验室IPO。其与OpenAI的年度经常性收入合计接近1000亿美元。凭借Claude Code在软件开发领域的快速普及，Anthropic在2026年实现AI模型盈利变现，成为B2B市场领跑者。SemiAnalysis报告认为其商业模式优越，若持续良好执行，市值可能触及6万亿美元。",
-        "publishedAt": "2026-07-08T22:30:38.000Z",
-        "collectedAt": "2026-07-09T15:40:32.138Z",
-        "raw": {
-          "id": "cmrcp5by2031uihx57fypdkfo",
-          "titleEn": "利润超 10 亿美元、ARR 剑指千亿，Anthropic 抢先 OpenAI 冲击 IPO",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmrcn8mlw02k5ihx5risshcr3",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Seedream 5.0 Pro 登陆 Runway，支持14种语言",
-        "url": "https://x.com/runwayml/status/2074982268175630814",
-        "summary": "Seedream 5.0 Pro 现已登陆 Runway。可通过提示词或参考图生成高细节图像，图像内文字清晰可读，支持多达14种语言。立即点击下方链接尝试。",
-        "description": "Seedream 5.0 Pro 现已登陆 Runway。可通过提示词或参考图生成高细节图像，图像内文字清晰可读，支持多达14种语言。立即点击下方链接尝试。",
-        "category": "products",
-        "originalSource": "X：Runway (@runwayml)",
-        "originalUrl": "https://x.com/runwayml/status/2074982268175630814",
-        "recommendedReason": "Seedream 5.0 Pro 现已登陆 Runway。可通过提示词或参考图生成高细节图像，图像内文字清晰可读，支持多达14种语言。立即点击下方链接尝试。",
-        "publishedAt": "2026-07-08T22:21:38.000Z",
-        "collectedAt": "2026-07-09T15:40:32.138Z",
-        "raw": {
-          "id": "cmrcn8mlw02k5ihx5risshcr3",
-          "titleEn": "Seedream 5.0 Pro is now in Runway. Generate highly detailed images from a prompt or reference， with …",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmrcit2bg01f9ihx5cps026s8",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "诉讼：男子使用Grok制作7000张继女色情图像后自杀",
-        "url": "https://arstechnica.com/tech-policy/2026/07/lawsuit-grok-user-made-7k-child-sex-images-xai-only-reported-one-gang-rape-prompt",
-        "summary": "一男子使用Grok生成7000张继女儿童性虐待材料（CSAM）后自杀。更多年轻女孩起诉X平台，指控其涉及Grok生成CSAM，并包庇儿童性犯罪者。",
-        "description": "一男子使用Grok生成7000张继女儿童性虐待材料（CSAM）后自杀。更多年轻女孩起诉X平台，指控其涉及Grok生成CSAM，并包庇儿童性犯罪者。",
-        "category": "industry",
-        "originalSource": "Ars Technica：AI（RSS）",
-        "originalUrl": "https://arstechnica.com/tech-policy/2026/07/lawsuit-grok-user-made-7k-child-sex-images-xai-only-reported-one-gang-rape-prompt",
-        "recommendedReason": "一男子使用Grok生成7000张继女儿童性虐待材料（CSAM）后自杀。更多年轻女孩起诉X平台，指控其涉及Grok生成CSAM，并包庇儿童性犯罪者。",
-        "publishedAt": "2026-07-08T19:56:37.000Z",
-        "collectedAt": "2026-07-09T15:40:32.138Z",
-        "raw": {
-          "id": "cmrcit2bg01f9ihx5cps026s8",
-          "titleEn": "Lawsuit： Man used Grok to make 7K sex images of stepdaughter， then shot himself",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmrc8cfhc00jeihqc0r5wx6qz",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Replit 推出社区档案与力量排名",
-        "url": "https://x.com/Replit/status/2074871322220339515",
-        "summary": "本周新功能 🚀 Replit 社区档案--vibe coders 的工作证明。 你的档案，你的展示。获取你的智能体使用和检查点的活跃度图表，外加面向专业用户的 Replit 力量排名。 登录，认领你的档案，挑选你最棒的项目，与朋友分享你的数据。 立即查看 → http://replit.com/community",
-        "description": "本周新功能 🚀 Replit 社区档案--vibe coders 的工作证明。 你的档案，你的展示。获取你的智能体使用和检查点的活跃度图表，外加面向专业用户的 Replit 力量排名。 登录，认领你的档案，挑选你最棒的项目，与朋友分享你的数据。 立即查看 → http://replit.com/community",
-        "category": "products",
-        "originalSource": "X：Replit (@Replit)",
-        "originalUrl": "https://x.com/Replit/status/2074871322220339515",
-        "recommendedReason": "本周新功能 🚀 Replit 社区档案--vibe coders 的工作证明。 你的档案，你的展示。获取你的智能体使用和检查点的活跃度图表，外加面向专业用户的 Replit 力量排名。 登录，认领你的档案，挑选你最棒的项目，与朋友分享你的数据。 立即查看 → http://replit.com/community",
-        "publishedAt": "2026-07-08T15:00:47.000Z",
-        "collectedAt": "2026-07-09T15:40:32.138Z",
-        "raw": {
-          "id": "cmrc8cfhc00jeihqc0r5wx6qz",
-          "titleEn": "New this week 🚀 Replit Community Profiles - Proof of Work for vibe coders. Your profile， your flex…",
-          "apiCategory": "ai-products"
-        }
-      }
-    ],
-    "crossSourceHighlights": [
-      {
-        "id": "url:https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
-        "canonicalId": "url:https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
-        "title": "GitLost：Noma Labs 发现 GitHub AI 代理提示词注入漏洞",
-        "canonicalUrl": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
-          "title:gitlost noma labs 发现 github ai 代理提示词注入漏洞",
-          "topic:ai workflow / automation",
-          "title:gitlost we tricked github s ai agent into leaking private repos"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmrbu023x079pihl1q4rvhzky",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "GitLost：Noma Labs 发现 GitHub AI 代理提示词注入漏洞",
-            "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
-            "summary": "Noma Labs 在 GitHub Agentic Workflows 中发现严重提示词注入漏洞 GitLost。未认证攻击者仅需在属于同一组织的公共仓库中创建一个嵌有恶意指令的 Issue，即可诱使基于 Claude 或 GitHub Copilot 的 AI 代理读取并公开该组织内私有仓库的内容。攻击无需编码技能或凭证，根源在于代理将用户可控内容视为可信指令，且 GitHub 的防护措施因 \"Additionally\" 关键词被绕过。Noma Labs 已公开 PoC 并建议限制跨仓库权限、隔离用户输入。",
-            "description": "Noma Labs 在 GitHub Agentic Workflows 中发现严重提示词注入漏洞 GitLost。未认证攻击者仅需在属于同一组织的公共仓库中创建一个嵌有恶意指令的 Issue，即可诱使基于 Claude 或 GitHub Copilot 的 AI 代理读取并公开该组织内私有仓库的内容。攻击无需编码技能或凭证，根源在于代理将用户可控内容视为可信指令，且 GitHub 的防护措施因 \"Additionally\" 关键词被绕过。Noma Labs 已公开 PoC 并建议限制跨仓库权限、隔离用户输入。",
-            "category": "industry",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
-            "recommendedReason": "Noma Labs 在 GitHub Agentic Workflows 中发现严重提示词注入漏洞 GitLost。未认证攻击者仅需在属于同一组织的公共仓库中创建一个嵌有恶意指令的 Issue，即可诱使基于 Claude 或 GitHub Copilot 的 AI 代理读取并公开该组织内私有仓库的内容。攻击无需编码技能或凭证，根源在于代理将用户可控内容视为可信指令，且 GitHub 的防护措施因 \"Additionally\" 关键词被绕过。Noma Labs 已公开 PoC 并建议限制跨仓库权限、隔离用户输入。",
-            "publishedAt": "2026-07-08T08:29:47.091Z",
-            "collectedAt": "2026-07-09T15:40:32.138Z",
-            "raw": {
-              "id": "cmrbu023x079pihl1q4rvhzky",
-              "titleEn": "GitLost：我们诱使 GitHub 的 AI 代理泄露了私有仓库",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:48827858",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "GitLost: We Tricked GitHub's AI Agent into Leaking Private Repos",
-            "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/",
-            "author": "ColinEberhardt",
-            "tags": [
-              "ai",
-              "agent"
-            ],
-            "metrics": {
-              "upvotes": 525,
-              "commentsCount": 199
-            },
-            "publishedAt": "2026-07-08T05:25:35.000Z",
-            "collectedAt": "2026-07-09T15:40:26.093Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48827858",
-              "matchedKeywords": [
-                "ai",
-                "agent"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmrbu023x079pihl1q4rvhzky",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "GitLost：Noma Labs 发现 GitHub AI 代理提示词注入漏洞",
-            "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
-            "summary": "Noma Labs 在 GitHub Agentic Workflows 中发现严重提示词注入漏洞 GitLost。未认证攻击者仅需在属于同一组织的公共仓库中创建一个嵌有恶意指令的 Issue，即可诱使基于 Claude 或 GitHub Copilot 的 AI 代理读取并公开该组织内私有仓库的内容。攻击无需编码技能或凭证，根源在于代理将用户可控内容视为可信指令，且 GitHub 的防护措施因 \"Additionally\" 关键词被绕过。Noma Labs 已公开 PoC 并建议限制跨仓库权限、隔离用户输入。",
-            "description": "Noma Labs 在 GitHub Agentic Workflows 中发现严重提示词注入漏洞 GitLost。未认证攻击者仅需在属于同一组织的公共仓库中创建一个嵌有恶意指令的 Issue，即可诱使基于 Claude 或 GitHub Copilot 的 AI 代理读取并公开该组织内私有仓库的内容。攻击无需编码技能或凭证，根源在于代理将用户可控内容视为可信指令，且 GitHub 的防护措施因 \"Additionally\" 关键词被绕过。Noma Labs 已公开 PoC 并建议限制跨仓库权限、隔离用户输入。",
-            "category": "industry",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
-            "recommendedReason": "Noma Labs 在 GitHub Agentic Workflows 中发现严重提示词注入漏洞 GitLost。未认证攻击者仅需在属于同一组织的公共仓库中创建一个嵌有恶意指令的 Issue，即可诱使基于 Claude 或 GitHub Copilot 的 AI 代理读取并公开该组织内私有仓库的内容。攻击无需编码技能或凭证，根源在于代理将用户可控内容视为可信指令，且 GitHub 的防护措施因 \"Additionally\" 关键词被绕过。Noma Labs 已公开 PoC 并建议限制跨仓库权限、隔离用户输入。",
-            "publishedAt": "2026-07-08T08:29:47.091Z",
-            "collectedAt": "2026-07-09T15:40:32.138Z",
-            "raw": {
-              "id": "cmrbu023x079pihl1q4rvhzky",
-              "titleEn": "GitLost：我们诱使 GitHub 的 AI 代理泄露了私有仓库",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:48827858",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "GitLost: We Tricked GitHub's AI Agent into Leaking Private Repos",
-            "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/",
-            "author": "ColinEberhardt",
-            "tags": [
-              "ai",
-              "agent"
-            ],
-            "metrics": {
-              "upvotes": 525,
-              "commentsCount": 199
-            },
-            "publishedAt": "2026-07-08T05:25:35.000Z",
-            "collectedAt": "2026-07-09T15:40:26.093Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48827858",
-              "matchedKeywords": [
-                "ai",
-                "agent"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 525,
-          "commentsCount": 199,
-          "hnScore": 525,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "industry",
-        "summary": "Noma Labs 在 GitHub Agentic Workflows 中发现严重提示词注入漏洞 GitLost。未认证攻击者仅需在属于同一组织的公共仓库中创建一个嵌有恶意指令的 Issue，即可诱使基于 Claude 或 GitHub Copilot 的 AI 代理读取并公开该组织内私有仓库的内容。攻击无需编码技能或凭证，根源在于代理将用户可控内容视为可信指令，且 GitHub 的防护措施因 \"Additionally\" 关键词被绕过。Noma Labs 已公开 PoC 并建议限制跨仓库权限、隔离用户输入。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-07-08T05:25:35.000Z",
-        "lastSeenAt": "2026-07-09T15:40:32.138Z"
-      },
-      {
-        "id": "url:https://anthropic.com/news/reflect-with-claude",
-        "canonicalId": "url:https://anthropic.com/news/reflect-with-claude",
-        "title": "Claude 推出反思功能（Beta）",
-        "canonicalUrl": "https://anthropic.com/news/reflect-with-claude",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://anthropic.com/news/reflect-with-claude",
-          "title:claude 推出反思功能 beta",
-          "title:a new way to reflect on how you use claude"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmrdk0zfw04ixih4b84colsmb",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Claude 推出反思功能（Beta）",
-            "url": "https://www.anthropic.com/news/reflect-with-claude",
-            "summary": "Anthropic 为 Claude 推出一项反思功能（Beta），帮助用户追踪使用模式。用户可回顾过去 1、3、6 或 12 个月的活动总结，涵盖关键主题、使用频率和任务类型。功能结合 4D AI Fluency Framework（委托、描述、辨别、勤勉）提供协作分析，支持设定静音时段或定时休息提醒。隐私方面，不涉及无痕对话和健康集成工具，也不提取连接工具中的底层文件。该功能面向 Free、Pro 和 Max 用户，需开启记忆功能，可通过 Claude 网页或桌面应用设置。",
-            "description": "Anthropic 为 Claude 推出一项反思功能（Beta），帮助用户追踪使用模式。用户可回顾过去 1、3、6 或 12 个月的活动总结，涵盖关键主题、使用频率和任务类型。功能结合 4D AI Fluency Framework（委托、描述、辨别、勤勉）提供协作分析，支持设定静音时段或定时休息提醒。隐私方面，不涉及无痕对话和健康集成工具，也不提取连接工具中的底层文件。该功能面向 Free、Pro 和 Max 用户，需开启记忆功能，可通过 Claude 网页或桌面应用设置。",
-            "category": "products",
-            "originalSource": "Anthropic：Newsroom（网页）",
-            "originalUrl": "https://www.anthropic.com/news/reflect-with-claude",
-            "recommendedReason": "Anthropic 为 Claude 推出一项反思功能（Beta），帮助用户追踪使用模式。用户可回顾过去 1、3、6 或 12 个月的活动总结，涵盖关键主题、使用频率和任务类型。功能结合 4D AI Fluency Framework（委托、描述、辨别、勤勉）提供协作分析，支持设定静音时段或定时休息提醒。隐私方面，不涉及无痕对话和健康集成工具，也不提取连接工具中的底层文件。该功能面向 Free、Pro 和 Max 用户，需开启记忆功能，可通过 Claude 网页或桌面应用设置。",
-            "publishedAt": "2026-07-09T13:40:30.163Z",
-            "collectedAt": "2026-07-09T15:40:32.138Z",
-            "raw": {
-              "id": "cmrdk0zfw04ixih4b84colsmb",
-              "titleEn": "Introducing a way to reflect on how you use Claude",
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "hackernews:48845526",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "A new way to reflect on how you use Claude",
-            "url": "https://www.anthropic.com/news/reflect-with-claude",
-            "author": "surprisetalk",
-            "tags": [
-              "anthropic",
-              "claude"
-            ],
-            "metrics": {
-              "upvotes": 33,
-              "commentsCount": 29
-            },
-            "publishedAt": "2026-07-09T13:30:33.000Z",
-            "collectedAt": "2026-07-09T15:40:26.093Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48845526",
-              "matchedKeywords": [
-                "anthropic",
-                "claude"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmrdk0zfw04ixih4b84colsmb",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Claude 推出反思功能（Beta）",
-            "url": "https://www.anthropic.com/news/reflect-with-claude",
-            "summary": "Anthropic 为 Claude 推出一项反思功能（Beta），帮助用户追踪使用模式。用户可回顾过去 1、3、6 或 12 个月的活动总结，涵盖关键主题、使用频率和任务类型。功能结合 4D AI Fluency Framework（委托、描述、辨别、勤勉）提供协作分析，支持设定静音时段或定时休息提醒。隐私方面，不涉及无痕对话和健康集成工具，也不提取连接工具中的底层文件。该功能面向 Free、Pro 和 Max 用户，需开启记忆功能，可通过 Claude 网页或桌面应用设置。",
-            "description": "Anthropic 为 Claude 推出一项反思功能（Beta），帮助用户追踪使用模式。用户可回顾过去 1、3、6 或 12 个月的活动总结，涵盖关键主题、使用频率和任务类型。功能结合 4D AI Fluency Framework（委托、描述、辨别、勤勉）提供协作分析，支持设定静音时段或定时休息提醒。隐私方面，不涉及无痕对话和健康集成工具，也不提取连接工具中的底层文件。该功能面向 Free、Pro 和 Max 用户，需开启记忆功能，可通过 Claude 网页或桌面应用设置。",
-            "category": "products",
-            "originalSource": "Anthropic：Newsroom（网页）",
-            "originalUrl": "https://www.anthropic.com/news/reflect-with-claude",
-            "recommendedReason": "Anthropic 为 Claude 推出一项反思功能（Beta），帮助用户追踪使用模式。用户可回顾过去 1、3、6 或 12 个月的活动总结，涵盖关键主题、使用频率和任务类型。功能结合 4D AI Fluency Framework（委托、描述、辨别、勤勉）提供协作分析，支持设定静音时段或定时休息提醒。隐私方面，不涉及无痕对话和健康集成工具，也不提取连接工具中的底层文件。该功能面向 Free、Pro 和 Max 用户，需开启记忆功能，可通过 Claude 网页或桌面应用设置。",
-            "publishedAt": "2026-07-09T13:40:30.163Z",
-            "collectedAt": "2026-07-09T15:40:32.138Z",
-            "raw": {
-              "id": "cmrdk0zfw04ixih4b84colsmb",
-              "titleEn": "Introducing a way to reflect on how you use Claude",
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "hackernews:48845526",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "A new way to reflect on how you use Claude",
-            "url": "https://www.anthropic.com/news/reflect-with-claude",
-            "author": "surprisetalk",
-            "tags": [
-              "anthropic",
-              "claude"
-            ],
-            "metrics": {
-              "upvotes": 33,
-              "commentsCount": 29
-            },
-            "publishedAt": "2026-07-09T13:30:33.000Z",
-            "collectedAt": "2026-07-09T15:40:26.093Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48845526",
-              "matchedKeywords": [
-                "anthropic",
-                "claude"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 33,
-          "commentsCount": 29,
-          "hnScore": 33,
-          "crossSourceBonus": 10,
-          "heatScore": 160
-        },
-        "crossSourceBonus": 10,
-        "category": "products",
-        "summary": "Anthropic 为 Claude 推出一项反思功能（Beta），帮助用户追踪使用模式。用户可回顾过去 1、3、6 或 12 个月的活动总结，涵盖关键主题、使用频率和任务类型。功能结合 4D AI Fluency Framework（委托、描述、辨别、勤勉）提供协作分析，支持设定静音时段或定时休息提醒。隐私方面，不涉及无痕对话和健康集成工具，也不提取连接工具中的底层文件。该功能面向 Free、Pro 和 Max 用户，需开启记忆功能，可通过 Claude 网页或桌面应用设置。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-07-09T13:30:33.000Z",
-        "lastSeenAt": "2026-07-09T15:40:32.138Z"
       }
     ]
   }
