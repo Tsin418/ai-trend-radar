@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-07-10T20:47:17.852Z
+Updated: 2026-07-10T22:29:50.955Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -9,7 +9,7 @@ Updated: 2026-07-10T20:47:17.852Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-07-11 | daily | [AI Developer Radar｜Daily｜2026-07-11](2026/07/2026-07-11-daily.md) | hpcaitech/ColossalAI, google-ai-edge/mediapipe, Tencent/ncnn, thedaviddias/Front-End-Checklist, ChatGPTNextWeb/NextChat |
+| 2026-07-11 | daily | [AI Developer Radar｜Daily｜2026-07-11](2026/07/2026-07-11-daily.md) | hpcaitech/ColossalAI, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, Tencent/ncnn, ChatGPTNextWeb/NextChat |
 | 2026-07-10 | daily | [AI Developer Radar｜Daily｜2026-07-10](2026/07/2026-07-10-daily.md) | stas00/ml-engineering, TencentCloud/TencentDB-Agent-Memory, sickn33/agentic-awesome-skills, hpcaitech/ColossalAI, google-ai-edge/mediapipe |
 | 2026-07-09 | daily | [AI Developer Radar｜Daily｜2026-07-09](2026/07/2026-07-09-daily.md) | wonderwhy-er/DesktopCommanderMCP, prisma/prisma, stas00/ml-engineering, PatrickJS/awesome-cursorrules, google-ai-edge/mediapipe |
 | 2026-07-08 | daily | [AI Developer Radar｜Daily｜2026-07-08](2026/07/2026-07-08-daily.md) | iOfficeAI/OfficeCLI, MadsLorentzen/ai-job-search, milvus-io/milvus, thedaviddias/Front-End-Checklist, stas00/ml-engineering |
