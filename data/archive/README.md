@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-07-14T00:13:23.724Z
+Updated: 2026-07-14T03:33:17.066Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -10,7 +10,7 @@ Updated: 2026-07-14T00:13:23.724Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-07-14 | daily | [AI Developer Radar｜Daily｜2026-07-14](2026/07/2026-07-14-daily.md) | milvus-io/milvus, hpcaitech/ColossalAI, deepspeedai/DeepSpeed, gvergnaud/ts-pattern, Graphify-Labs/graphify |
+| 2026-07-14 | daily | [AI Developer Radar｜Daily｜2026-07-14](2026/07/2026-07-14-daily.md) | milvus-io/milvus, deepspeedai/DeepSpeed, HKUDS/Vibe-Trading, HKUDS/nanobot, Graphify-Labs/graphify |
 | 2026-07-13 | daily | [AI Developer Radar｜Daily｜2026-07-13](2026/07/2026-07-13-daily.md) | Dicklesworthstone/destructive_command_guard, github/spec-kit, coreyhaines31/marketingskills, Raphire/Win11Debloat, moeru-ai/airi |
 | 2026-07-12 | daily | [AI Developer Radar｜Daily｜2026-07-12](2026/07/2026-07-12-daily.md) | malisper/pgrust, chen08209/FlClash, home-assistant/core, hpcaitech/ColossalAI, automazeio/ccpm |
 | 2026-07-11 | daily | [AI Developer Radar｜Daily｜2026-07-11](2026/07/2026-07-11-daily.md) | DietrichGebert/ponytail, google-labs-code/stitch-skills, ansible/ansible, davila7/claude-code-templates, oven-sh/bun |
