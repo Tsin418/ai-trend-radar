@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-07-15T19:42:54.212Z
+Updated: 2026-07-15T21:27:59.681Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -10,7 +10,7 @@ Updated: 2026-07-15T19:42:54.212Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-07-16 | daily | [AI Developer Radar｜Daily｜2026-07-16](2026/07/2026-07-16-daily.md) | deepspeedai/DeepSpeed, Tencent/ncnn, PatrickJS/awesome-cursorrules, automazeio/ccpm, HKUDS/Vibe-Trading |
+| 2026-07-16 | daily | [AI Developer Radar｜Daily｜2026-07-16](2026/07/2026-07-16-daily.md) | automazeio/ccpm, deepspeedai/DeepSpeed, Tencent/ncnn, PatrickJS/awesome-cursorrules, HKUDS/Vibe-Trading |
 | 2026-07-15 | daily | [AI Developer Radar｜Daily｜2026-07-15](2026/07/2026-07-15-daily.md) | HenryNdubuaku/maths-cs-ai-compendium, deepspeedai/DeepSpeed, Tencent/ncnn, PatrickJS/awesome-cursorrules, automazeio/ccpm |
 | 2026-07-14 | daily | [AI Developer Radar｜Daily｜2026-07-14](2026/07/2026-07-14-daily.md) | par274/sharpemu, deepspeedai/DeepSpeed, Tencent/ncnn, PatrickJS/awesome-cursorrules, google-ai-edge/mediapipe |
 | 2026-07-13 | daily | [AI Developer Radar｜Daily｜2026-07-13](2026/07/2026-07-13-daily.md) | Dicklesworthstone/destructive_command_guard, github/spec-kit, coreyhaines31/marketingskills, Raphire/Win11Debloat, moeru-ai/airi |
