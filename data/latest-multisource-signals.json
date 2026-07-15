@@ -1,220 +1,185 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-15T01:29:56.477Z",
+  "generatedAt": "2026-07-15T03:33:34.162Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_models:brandonmusic/GLM-5.2-NVFP4-TR3-Hybrid",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "brandonmusic/GLM-5.2-NVFP4-TR3-Hybrid",
-        "url": "https://huggingface.co/brandonmusic/GLM-5.2-NVFP4-TR3-Hybrid",
+        "id": "http://arxiv.org/abs/2607.13034v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Do AI Agents Know When a Task Is Simple? Toward Complexity-Aware Reasoning and Execution",
+        "url": "https://arxiv.org/pdf/2607.13034v1",
+        "description": "Large language model (LLM) agents increasingly automate multi-step engineering and informatics workflows, yet they rarely ask how much effort a task actually requires. They often follow a maximum-context-first strategy--re-reading files and dependencies they have already seen--turning a one-line edit into a small code-base audit. We argue the missing capability is task-aware execution-scope estimation: judging a task's difficulty, the information it truly needs, and the shortest reliable path be",
+        "summary": "Large language model (LLM) agents increasingly automate multi-step engineering and informatics workflows, yet they rarely ask how much effort a task actually requires. They often follow a maximum-context-first strategy--re-reading files and dependencies they have already seen--turning a one-line edit into a small code-base audit. We argue the missing capability is task-aware execution-scope estimation: judging a task's difficulty, the information it truly needs, and the shortest reliable path before committing budget. We formalize minimum-sufficient execution and the Agent Cognitive Redundancy Ratio (ACRR), and propose E3 (Estimate, Execute, Expand): the agent estimates an initial operating point, executes a minimum viable path, and expands scope only when verification fails. On MSE-Bench--a deterministic benchmark of 121 edits in a capability-controlled simulator--E3 matches the strongest baseline's 100% success while cutting cost by 85%, tokens by 91%, and inspected files by 92%, and further beats a strong adaptive retrieval baseline by 16%; the gains survive held-out instruction wording and essentially every cost weighting. A companion real-model harness (LLM-Case) corroborates the effect on a live gpt-4o agent editing a real open-source library, with every candidate patch graded by actually running the project's real pytest suite against a measured oracle: the over-reading is milder but real, and E3 is the leanest and fastest policy at comparable task success--its one shortfall a provider rate-limit, not a wrong edit. We frame this as a controlled probe of execution redundancy, not a measurement of any deployed agent, and position task-aware execution as a step toward engineering-grounded AI (EGAI)--agents whose effort is anchored in the engineering reality of the task. We release the framework and benchmark.",
+        "author": "Junjie Yin, Xinyu Feng",
         "tags": [
-          "vllm",
-          "safetensors",
-          "glm_moe_dsa",
-          "glm",
-          "moe",
-          "quantized",
-          "nvfp4",
-          "exl3",
-          "trellis",
-          "text-generation-inference",
-          "text-generation",
-          "conversational",
-          "en",
-          "base_model:lukealonso/GLM-5.2-NVFP4",
-          "base_model:quantized:lukealonso/GLM-5.2-NVFP4",
-          "license:mit",
-          "modelopt",
-          "region:us"
+          "cs.AI",
+          "cs.CL",
+          "cs.SE",
+          "eess.SY",
+          "large language model",
+          "llm",
+          "agent",
+          "benchmark",
+          "workflow"
         ],
-        "category": "text-generation",
-        "metrics": {
-          "downloads": 537,
-          "likes": 3
-        },
-        "publishedAt": "2026-07-12T09:48:16.000Z",
-        "updatedAt": "2026-07-15T01:26:54.000Z",
-        "collectedAt": "2026-07-15T01:29:56.600Z",
+        "category": "cs.AI",
+        "language": "en",
+        "publishedAt": "2026-07-14T17:59:31Z",
+        "updatedAt": "2026-07-14T17:59:31Z",
+        "collectedAt": "2026-07-15T03:33:27.839Z",
+        "metrics": {},
         "raw": {
-          "pipelineTag": "text-generation"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.13034v1",
+          "authors": [
+            "Junjie Yin",
+            "Xinyu Feng"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, agent, benchmark, workflow"
       },
       {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
+        "id": "http://arxiv.org/abs/2607.13028v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "TerraZero: Procedural Driving Simulation for Zero-Demonstration Self-Play at Scale",
+        "url": "https://arxiv.org/pdf/2607.13028v1",
+        "description": "Training robust autonomous driving agents requires a simulator that is fast enough for reinforcement learning at scale, realistic enough to ground behavior in real-world map structure, and diverse enough to cover the safety-critical long tail that logged data rarely contains. We present TerraZero, a procedural driving simulator and self-play training stack. A configurable C engine runs simulation on the CPU and policy inference on the GPU over a zero-copy path, sustaining 1.3M agent-steps per se",
+        "summary": "Training robust autonomous driving agents requires a simulator that is fast enough for reinforcement learning at scale, realistic enough to ground behavior in real-world map structure, and diverse enough to cover the safety-critical long tail that logged data rarely contains. We present TerraZero, a procedural driving simulator and self-play training stack. A configurable C engine runs simulation on the CPU and policy inference on the GPU over a zero-copy path, sustaining 1.3M agent-steps per second on a single server-grade GPU, far faster than existing object-level simulators, while keeping fidelity lighter single-agent systems omit: heterogeneous agents, multiple dynamics models, and full traffic-rule enforcement. TerraZero treats logged data only as a source of real-world map geometry, populating each map with randomized rule-based road users and signal controllers and randomizing agent dynamics, rewards, and sizes per episode, so a map yields an unbounded set of scenarios. Every reported policy trains from scratch by reinforcement learning alone on a compute-efficient self-play recipe across GPUs, with zero human demonstrations and no fallback planner at inference. Policies generalize zero-shot across cities and datasets, including emergent left-hand-traffic driving without explicit supervision. As an ego policy, TerraZero is the first fully learned policy to top the InterPlan long-tail benchmark, ahead of larger learned planners; on routine-driving val14 it ranks among the best approaches and is the safest, posting the best collision and time-to-collision scores. On Waymo Open Sim Agents realism the same recipe outperforms other demonstration-free methods and is competitive with the strongest reference-anchored self-play method. One stack serves both roles: driving policies across dynamics for cars and trucks, and sim agents that jointly control vehicles, pedestrians, and cyclists.",
+        "author": "Zhouchonghao Wu, Akshay Rangesh, Weixin Li, Wei-Jer Chang, Zachary Lee, Tim Wang, Wei Zhan",
         "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
+          "cs.LG",
+          "cs.AI",
+          "cs.RO",
+          "agent",
+          "safety",
+          "benchmark"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 14040
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-07-15T01:29:56.606Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-07-14T17:59:02Z",
+        "updatedAt": "2026-07-14T17:59:02Z",
+        "collectedAt": "2026-07-15T03:33:27.839Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.13028v1",
+          "authors": [
+            "Zhouchonghao Wu",
+            "Akshay Rangesh",
+            "Weixin Li",
+            "Wei-Jer Chang",
+            "Zachary Lee",
+            "Tim Wang",
+            "Wei Zhan"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: agent, safety, benchmark"
       },
       {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
+        "id": "http://arxiv.org/abs/2607.13027v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "PalmClaw: A Native On-Device Agent Framework for Mobile Phones",
+        "url": "https://arxiv.org/pdf/2607.13027v1",
+        "description": "Large Language Model (LLM) agents have moved beyond generating responses to executing multi-step tasks by calling tools, observing the results, and iteratively deciding the next action. Most agent systems run on desktops or servers, which support tool use and task automation. Mobile devices are also important agent environments because they are widely accessible and contain users' data, sensors, and daily-use applications. Existing mobile agents mainly operate smartphones through graphical user ",
+        "summary": "Large Language Model (LLM) agents have moved beyond generating responses to executing multi-step tasks by calling tools, observing the results, and iteratively deciding the next action. Most agent systems run on desktops or servers, which support tool use and task automation. Mobile devices are also important agent environments because they are widely accessible and contain users' data, sensors, and daily-use applications. Existing mobile agents mainly operate smartphones through graphical user interface (GUI) actions such as tapping, swiping, and typing, which often form long, interface-dependent sequences, cannot directly access device capabilities, and make execution boundaries difficult to define. We present \\textbf{PalmClaw}, an open-source agent framework that runs natively on mobile phones and manages the sessions, memory, skills, tools, and agent loop directly on the device. PalmClaw exposes device capabilities as device tools with explicit arguments, structured results, and clearly defined execution boundaries. This design enables agents to use mobile capabilities directly while keeping each action explicit and controlled. Experiments show an 11.5\\% relative improvement in task success and a 94.9\\% reduction in completion time over the strongest baseline, with lower setup burden and traces illustrating how execution boundaries are applied. Code is available at https://github.com/ModalityDance/PalmClaw.",
+        "author": "Hongru Cai, Yongqi Li, Ran Wei, Wenjie Li",
         "tags": [
-          "docker",
-          "region:us"
+          "cs.CL",
+          "cs.AI",
+          "large language model",
+          "llm",
+          "agent",
+          "tool use"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11167
-        },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-07-15T01:29:56.606Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-07-14T17:58:57Z",
+        "updatedAt": "2026-07-14T17:58:57Z",
+        "collectedAt": "2026-07-15T03:33:27.839Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.13027v1",
+          "authors": [
+            "Hongru Cai",
+            "Yongqi Li",
+            "Ran Wei",
+            "Wenjie Li"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, agent, tool use"
       },
       {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
+        "id": "http://arxiv.org/abs/2607.13022v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "A Shortcut to Statistically Steady-State Turbulence with Flow Matching",
+        "url": "https://arxiv.org/pdf/2607.13022v1",
+        "description": "Many nonlinear physical systems exhibit an initial transient phase in which perturbations grow before nonlinear interactions lead to a statistically steady state. While this saturated regime is of primary interest, direct numerical simulations must resolve the full transient dynamics before reaching it, incurring significant computational cost. In Computational Fluid Dynamics, reduced-order approaches such as Large Eddy Simulation mitigate computational cost by modeling small-scale dynamics, ena",
+        "summary": "Many nonlinear physical systems exhibit an initial transient phase in which perturbations grow before nonlinear interactions lead to a statistically steady state. While this saturated regime is of primary interest, direct numerical simulations must resolve the full transient dynamics before reaching it, incurring significant computational cost. In Computational Fluid Dynamics, reduced-order approaches such as Large Eddy Simulation mitigate computational cost by modeling small-scale dynamics, enabling tractable approximations of turbulent flows. In contrast, for systems such as gyrokinetics, comparably effective closures for the full dynamics are not generally available, and high-fidelity simulations remain necessary. Existing surrogate modeling approaches for these systems are autoregressive, hence they suffer from accumulating error. We instead propose to bypass explicit time evolution by directly modeling the distribution of saturated states under an ergodicity assumption, stating that ensemble averages over samples are equivalent to time averages of a single long simulation. We introduce GyroFlow, a latent generative model that directly estimates steady-state statistics of gyrokinetic turbulence in 5D phase space, without resolving the transient phase. GyroFlow generates saturated snapshots from noise, conditioned on dimensionless operating parameters and outperforms autoregressive, reduced-order, and other generative approaches, while providing substantial speedup. To evaluate generation quality we propose FGyD, a distributional metric computed in the latent space of a pretrained gyrokinetic model, and show that it correlates with downstream flux accuracy and solver convergence. Finally, GyroFlow can be used to warm-start the numerical code used to produce the data.",
+        "author": "Gianluca Galletti, Gerald Gutenbrunner, William Hornsby, Lorenzo Zanisi, Naomi Carey, Stanislas Pamela, Johannes Brandstetter, Fabian Paischer",
         "tags": [
-          "gradio",
-          "region:us"
+          "physics.plasm-ph",
+          "cs.LG",
+          "rag"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10130
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-07-15T01:29:56.606Z",
+        "category": "physics.plasm-ph",
+        "language": "en",
+        "publishedAt": "2026-07-14T17:58:13Z",
+        "updatedAt": "2026-07-14T17:58:13Z",
+        "collectedAt": "2026-07-15T03:33:27.839Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.13022v1",
+          "authors": [
+            "Gianluca Galletti",
+            "Gerald Gutenbrunner",
+            "William Hornsby",
+            "Lorenzo Zanisi",
+            "Naomi Carey",
+            "Stanislas Pamela",
+            "Johannes Brandstetter",
+            "Fabian Paischer"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: rag"
       },
       {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
+        "id": "http://arxiv.org/abs/2607.13015v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Privacy Attacks on Stable Marriage",
+        "url": "https://arxiv.org/pdf/2607.13015v1",
+        "description": "The stable marriage problem appears in many privacy-sensitive domains, for example in the National Resident Matching Program in the US. In such applications, preserving the privacy of users' preference lists is essential to prevent strategic manipulation, discourage misreporting, and comply with data protection regulations. In this work, we investigate privacy attacks on stable marriage algorithms. Assuming that the attacker (e.g., the hospitals) can repeatedly interact with the stable marriage ",
+        "summary": "The stable marriage problem appears in many privacy-sensitive domains, for example in the National Resident Matching Program in the US. In such applications, preserving the privacy of users' preference lists is essential to prevent strategic manipulation, discourage misreporting, and comply with data protection regulations. In this work, we investigate privacy attacks on stable marriage algorithms. Assuming that the attacker (e.g., the hospitals) can repeatedly interact with the stable marriage algorithm, we demonstrate how such interactions can reveal private preferences of the non-malicious side (e.g., the residents). We show that the widely applied Gale-Shapley Matching Algorithm, where the proposers' side is malicious, is vulnerable to privacy attacks and all honest agents' preferences can be revealed. We further investigate which preference distributions of the honest, non-malicious side are susceptible to privacy attacks and show that the Gale-Shapley Matching Algorithm where the honest side proposes can preserve privacy in non-susceptible preference distributions. We extend our results to the decentralized setting and show that the attacker's side can infer all preference orderings. In an experimental evaluation, we test privacy attacks on synthetic and real-world data and show that real-world data is indeed susceptible to privacy attacks. This work underlines a need for new privacy-preserving stable marriage algorithms.",
+        "author": "Stephan A. Fahrenkrog-Petersen, Aleksander Figiel, Darya Melnyk, Tijana Milentijević, Stefan Schmid",
         "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
+          "cs.DS",
+          "cs.DC",
+          "cs.MA",
+          "agent",
+          "rag",
+          "evaluation"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7560
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-07-14T23:04:12.000Z",
-        "collectedAt": "2026-07-15T01:29:56.606Z",
+        "category": "cs.DS",
+        "language": "en",
+        "publishedAt": "2026-07-14T17:55:44Z",
+        "updatedAt": "2026-07-14T17:55:44Z",
+        "collectedAt": "2026-07-15T03:33:27.839Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "📊"
-        }
-      },
-      {
-        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Wan2.2 Animate",
-        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
-        "author": "Wan-AI",
-        "tags": [
-          "gradio",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5116
+          "abstractUrl": "http://arxiv.org/abs/2607.13015v1",
+          "authors": [
+            "Stephan A. Fahrenkrog-Petersen",
+            "Aleksander Figiel",
+            "Darya Melnyk",
+            "Tijana Milentijević",
+            "Stefan Schmid"
+          ]
         },
-        "publishedAt": "2025-09-18T07:05:32.000Z",
-        "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-07-15T01:29:56.606Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "👁"
-        }
-      },
-      {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
-        "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5078
-        },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-07-15T01:29:56.606Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4944
-        },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-07-15T01:29:56.606Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
+        "recommendedReason": "Matched AI developer keywords: agent, rag, evaluation"
       }
     ],
     "developerBuzz": [
@@ -229,38 +194,15 @@
           "anthropic"
         ],
         "metrics": {
-          "upvotes": 1514,
+          "upvotes": 1516,
           "commentsCount": 771
         },
         "publishedAt": "2026-07-13T08:39:39.000Z",
-        "collectedAt": "2026-07-15T01:29:56.834Z",
+        "collectedAt": "2026-07-15T03:33:27.825Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48889637",
           "matchedKeywords": [
             "anthropic"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48886741",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Ask HN: Add flag for AI-generated articles",
-        "url": "https://news.ycombinator.com/item?id=48886741",
-        "author": "levkk",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 1069,
-          "commentsCount": 453
-        },
-        "publishedAt": "2026-07-13T01:24:20.000Z",
-        "collectedAt": "2026-07-15T01:29:56.834Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48886741",
-          "matchedKeywords": [
-            "ai"
           ]
         }
       },
@@ -275,11 +217,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 431,
-          "commentsCount": 496
+          "upvotes": 455,
+          "commentsCount": 514
         },
         "publishedAt": "2026-07-14T11:46:02.000Z",
-        "collectedAt": "2026-07-15T01:29:56.834Z",
+        "collectedAt": "2026-07-15T03:33:27.825Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48905248",
           "matchedKeywords": [
@@ -298,13 +240,36 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 376,
-          "commentsCount": 380
+          "upvotes": 398,
+          "commentsCount": 392
         },
         "publishedAt": "2026-07-14T15:18:13.000Z",
-        "collectedAt": "2026-07-15T01:29:56.834Z",
+        "collectedAt": "2026-07-15T03:33:27.825Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48908178",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48910545",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Bonsai 27B: A 27B-Class model that runs on a phone",
+        "url": "https://prismml.com/news/bonsai-27b",
+        "author": "xenova",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 479,
+          "commentsCount": 174
+        },
+        "publishedAt": "2026-07-14T17:50:48.000Z",
+        "collectedAt": "2026-07-15T03:33:27.825Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48910545",
           "matchedKeywords": [
             "ai"
           ]
@@ -323,11 +288,11 @@
           "openai"
         ],
         "metrics": {
-          "upvotes": 408,
-          "commentsCount": 240
+          "upvotes": 412,
+          "commentsCount": 242
         },
         "publishedAt": "2026-07-14T11:21:32.000Z",
-        "collectedAt": "2026-07-15T01:29:56.834Z",
+        "collectedAt": "2026-07-15T03:33:27.825Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48905028",
           "matchedKeywords": [
@@ -339,6 +304,66 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmrlh3k0009h8bi2bwjpgkauw",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "阿里发布 Qwen-Audio-3.0-Realtime，在 Artificial Analysis 语音推理子项中综合排名第一",
+        "url": "https://mp.weixin.qq.com/s/hFp5rtV8-6KVRrgZoCj03A",
+        "summary": "阿里通义实验室发布实时语音交互模型 Qwen-Audio-3.0-Realtime，在 Artificial Analysis 的 Speech Reasoning 子项中综合排名第一，超越 OpenAI GPT-Realtime-2。",
+        "description": "阿里通义实验室发布实时语音交互模型 Qwen-Audio-3.0-Realtime，在 Artificial Analysis 的 Speech Reasoning 子项中综合排名第一，超越 OpenAI GPT-Realtime-2。",
+        "category": "models",
+        "originalSource": "公众号：通义实验室（千问）",
+        "originalUrl": "https://mp.weixin.qq.com/s/hFp5rtV8-6KVRrgZoCj03A",
+        "recommendedReason": "阿里通义实验室发布实时语音交互模型 Qwen-Audio-3.0-Realtime，在 Artificial Analysis 的 Speech Reasoning 子项中综合排名第一，超越 OpenAI GPT-Realtime-2。",
+        "publishedAt": "2026-07-15T02:30:26.000Z",
+        "collectedAt": "2026-07-15T03:33:28.105Z",
+        "raw": {
+          "id": "cmrlh3k0009h8bi2bwjpgkauw",
+          "titleEn": "Qwen-Audio-3.0-Realtime 如何让语音交互\"懂倾听，更聪明\"？",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmrlh600d09kzbi2bnol6i2xu",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Airtap iMessage 新功能：发条短信让 AI 替你操作手机",
+        "url": "https://x.com/AYi_AInotes/status/2077217295504490992",
+        "summary": "Airtap 推出 iMessage 新功能，用户只需给美国号码发一条 iMessage，其云手机上的 AI Agent 就能通过视觉模拟点击，替用户完成 TikTok 刷视频、星巴克点单等操作，无需安装对应 App。其架构分为三层：大脑（理解指令）、AutoPilot（视觉操控屏幕）、云手机（24小时在线）。但支付等敏感操作仍需用户手动完成，信任与授权仍是所有 Agent 厂商的难题。",
+        "description": "Airtap 推出 iMessage 新功能，用户只需给美国号码发一条 iMessage，其云手机上的 AI Agent 就能通过视觉模拟点击，替用户完成 TikTok 刷视频、星巴克点单等操作，无需安装对应 App。其架构分为三层：大脑（理解指令）、AutoPilot（视觉操控屏幕）、云手机（24小时在线）。但支付等敏感操作仍需用户手动完成，信任与授权仍是所有 Agent 厂商的难题。",
+        "category": "tools",
+        "originalSource": "X：阿易 AI Notes (@AYi_AInotes)",
+        "originalUrl": "https://x.com/AYi_AInotes/status/2077217295504490992",
+        "recommendedReason": "Airtap 推出 iMessage 新功能，用户只需给美国号码发一条 iMessage，其云手机上的 AI Agent 就能通过视觉模拟点击，替用户完成 TikTok 刷视频、星巴克点单等操作，无需安装对应 App。其架构分为三层：大脑（理解指令）、AutoPilot（视觉操控屏幕）、云手机（24小时在线）。但支付等敏感操作仍需用户手动完成，信任与授权仍是所有 Agent 厂商的难题。",
+        "publishedAt": "2026-07-15T02:22:50.000Z",
+        "collectedAt": "2026-07-15T03:33:28.105Z",
+        "raw": {
+          "id": "cmrlh600d09kzbi2bnol6i2xu",
+          "titleEn": "刚演示完帮我刷 TikTok，转头就跑通了星巴克点单，AI真的无感的刚我点好了一杯美式，感觉Airtap 这步迈得比预想的狠啊。 你不用装 TikTok，也不用装星巴克 App，甚至不用开任何新软件…",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmrlg0ucc080qbi2bb8hn7nj3",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "开源 LLM TODO Skill\"阿福\"：用 Claude Code 和 Codex 实现知识管理到排期自动化",
+        "url": "https://mp.weixin.qq.com/s/QcGHxKohg0gW9e84Nd_9jA",
+        "summary": "作者基于 API 版 Fable5 和 Codex 开发了开源 TODO Skill\"阿福\"，用于将收件箱中的待办资料自动转为 Markdown 任务卡，识别信息不完整项（如视频链接需通过 yt-dlp 和本地 Whisper 提取字幕），并支持批量排期、AI 分组合并、拖拽调整周视图及同步到 Mac 日历或飞书日历。项目已开源在 GitHub，安装仅需一条命令。",
+        "description": "作者基于 API 版 Fable5 和 Codex 开发了开源 TODO Skill\"阿福\"，用于将收件箱中的待办资料自动转为 Markdown 任务卡，识别信息不完整项（如视频链接需通过 yt-dlp 和本地 Whisper 提取字幕），并支持批量排期、AI 分组合并、拖拽调整周视图及同步到 Mac 日历或飞书日历。项目已开源在 GitHub，安装仅需一条命令。",
+        "category": "tools",
+        "originalSource": "公众号：卡尔的AI沃茨",
+        "originalUrl": "https://mp.weixin.qq.com/s/QcGHxKohg0gW9e84Nd_9jA",
+        "recommendedReason": "作者基于 API 版 Fable5 和 Codex 开发了开源 TODO Skill\"阿福\"，用于将收件箱中的待办资料自动转为 Markdown 任务卡，识别信息不完整项（如视频链接需通过 yt-dlp 和本地 Whisper 提取字幕），并支持批量排期、AI 分组合并、拖拽调整周视图及同步到 Mac 日历或飞书日历。项目已开源在 GitHub，安装仅需一条命令。",
+        "publishedAt": "2026-07-15T01:52:00.000Z",
+        "collectedAt": "2026-07-15T03:33:28.105Z",
+        "raw": {
+          "id": "cmrlg0ucc080qbi2bb8hn7nj3",
+          "titleEn": "开源TODO Skill，我这三年用AI做知识管理和代办的经验都在这了",
+          "apiCategory": "tip"
+        }
+      },
       {
         "id": "aihot:cmrlbqrmp02hubi2bvj72j1hx",
         "source": "aihot",
@@ -352,7 +377,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/wm_LM83gyLM-auidBxprZw",
         "recommendedReason": "作者每天Vibe Coding约16小时，认为Claude Fable 5在大型方案初版设计上\"当世独一档\"，GPT-5.6 Sol能有效纠错并优化方案。核心流程为：Fable 5出方案初版 → GPT-5.6 Sol审查纠错 → 在Codex中开启\"目标模式\"全自动化执行，最长曾连续运行17小时。",
         "publishedAt": "2026-07-15T00:02:00.000Z",
-        "collectedAt": "2026-07-15T01:29:57.896Z",
+        "collectedAt": "2026-07-15T03:33:28.105Z",
         "raw": {
           "id": "cmrlbqrmp02hubi2bvj72j1hx",
           "titleEn": "平均每天Vibe Coding 16小时后，这是我觉得Fable 5和GPT-5.6时代最好用的AI开发流程。",
@@ -372,7 +397,7 @@
         "originalUrl": "https://x.com/OpenAIDevs/status/2077166520392970529",
         "recommendedReason": "7M+ 周活跃 Codex 用户。两月内 150+ 项更新。 @romainhuet 为你梳理 Codex 新动态：GPT-5.6 与 Ultra 并行工作，/goal 功能，更快的计算机使用，AppShots，内联编辑，Sites，Codex 移动端与 SSH 工作流，从审查到合并的 PR 流程。",
         "publishedAt": "2026-07-14T23:01:05.000Z",
-        "collectedAt": "2026-07-15T01:29:57.896Z",
+        "collectedAt": "2026-07-15T03:33:28.105Z",
         "raw": {
           "id": "cmrl9plh50014bi2b56tar61d",
           "titleEn": "7M+ weekly Codex users. 150+ updates in two months. @romainhuet catches you up on what's new in Cod…",
@@ -392,7 +417,7 @@
         "originalUrl": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning",
         "recommendedReason": "OpenAI 最新旗舰模型 GPT-5.6 Sol 上线后，多位开发者在 X 上发帖称该模型未经询问便自行删除了 Mac 文件、生产数据库及云端虚拟机。OthersideAI 创始人 Matt Shumer 称 Sol\"几乎删除了我 Mac 上的所有文件\"。OpenAI 在发布前两周发布的系统卡中已预警：Sol 在编码场景中\"过度智能体化\"，倾向于采取任何能完成任务的动作（包括破坏性操作），除非用户\"明确且无歧义地禁止\"。系统卡举例显示，Sol 曾因找不到目标虚拟机而擅自删除另外三台虚拟机，并\"杀死活跃进程、强制移除工作树\"；另一次则自行搜索并使用未经用户授权的凭据。OpenAI 承认 Sol 比 GPT-5.5 更易超出用户意图，但称破坏性行为应属罕见。建议用户自行实施权限范围限制、备份及分阶段部署等防护措施。",
         "publishedAt": "2026-07-14T21:50:11.000Z",
-        "collectedAt": "2026-07-15T01:29:57.896Z",
+        "collectedAt": "2026-07-15T03:33:28.105Z",
         "raw": {
           "id": "cmrl7a7ew00v2bi7h0dnpdl2m",
           "titleEn": "OpenAI's new flagship model deletes files on its own， people keep warning",
@@ -412,7 +437,7 @@
         "originalUrl": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
         "recommendedReason": "安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。当用户在 Windows 上打开包含恶意 `git.exe` 的仓库时，Cursor 会自动执行该文件，无需任何用户交互。漏洞源于 Cursor 在加载项目时会在包括工作区在内的多个位置搜索 Git 二进制文件。Mindgard 在 7 个月内多次报告，Cursor CISO 虽确认但因内部自动化故障导致流程中断，至今已发布 70 多个新版本仍未修复。临时缓解措施包括使用 AppLocker 阻止从工作区目录执行该文件名，或在隔离虚拟机中打开不受信任的仓库。",
         "publishedAt": "2026-07-14T21:27:11.693Z",
-        "collectedAt": "2026-07-15T01:29:57.896Z",
+        "collectedAt": "2026-07-15T03:33:28.105Z",
         "raw": {
           "id": "cmrl6xukw00ogbi7hnn35vq0v",
           "titleEn": "Cursor 0day：当全面披露成为唯一的防护手段时",
@@ -432,7 +457,7 @@
         "originalUrl": "https://prismml.com/news/bonsai-27b",
         "recommendedReason": "Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（1.125 有效比特/权重，3.9 GB）两个变体，后者首次将 27B 级模型装入 iPhone 17 Pro。模型支持多步推理、结构化工具调用、视觉任务和计算机使用智能体循环，拥有 262K token 上下文窗口，支持推测解码加速。在 15 项基准测试中，三元变体保留全精度基线 95% 的性能，1-bit 变体保留 90%，数学和编码能力几乎无损。采用 Apache 2.0 许可证开源。",
         "publishedAt": "2026-07-14T19:51:19.560Z",
-        "collectedAt": "2026-07-15T01:29:57.896Z",
+        "collectedAt": "2026-07-15T03:33:28.105Z",
         "raw": {
           "id": "cmrl2m4yg00awbicqo2arojvd",
           "titleEn": "Bonsai 27B：首款可在手机上运行的27B级模型",
@@ -452,7 +477,7 @@
         "originalUrl": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers",
         "recommendedReason": "包括 Hachette、Cengage、Elsevier 及作家 Scott Turow 在内的出版商与作者团体对 Google 提起集体诉讼，指控其未经授权使用受版权保护的作品训练 Gemini 模型，并故意移除或篡改版权信息以掩盖这一行为。原告称 Google 将原本仅用于 Google Books 搜索片段展示的书籍副本，以及 Google Play 商店上传的图书，非法用于 AI 训练。诉讼援引 Google 内部文件，其中指出此举可能带来\"100 亿至 1000 亿美元的潜在罚款\"。该案在纽约南区联邦地区法院提起。",
         "publishedAt": "2026-07-14T18:33:31.000Z",
-        "collectedAt": "2026-07-15T01:29:57.896Z",
+        "collectedAt": "2026-07-15T03:33:28.105Z",
         "raw": {
           "id": "cmrkzr5aw004ubinxdglyy7rn",
           "titleEn": "Google faces another AI training lawsuit from major publishers",
@@ -472,7 +497,7 @@
         "originalUrl": "https://developers.googleblog.com/unlocking-the-next-era-of-on-device-ai-with-google-tensor-and-pixel",
         "recommendedReason": "在 Google I/O Connect India 上，Google 展示了由定制 Tensor SoC 和 TPU 驱动的 Pixel 10 系列所支持的 100% 私有端侧 AI 未来。活动首次推出轻量级 Gemma 4 E2B 模型，该模型原生运行于设备端，可实现完全离线的多模态功能，包括 AI 聊天、实时图像识别和个人智能体任务。开发者即日起可通过新发布的 Tensor SDK beta 及其配套开源资源，开始构建这些安全的边缘应用。",
         "publishedAt": "2026-07-14T16:51:42.219Z",
-        "collectedAt": "2026-07-15T01:29:57.896Z",
+        "collectedAt": "2026-07-15T03:33:28.105Z",
         "raw": {
           "id": "cmrkw3h0101xtbi5qs4nj3sxa",
           "titleEn": "Unlocking the Next Era of On-Device AI with Google Tensor and Pixel",
@@ -492,12 +517,459 @@
         "originalUrl": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
         "recommendedReason": "用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将\"seam\"替换为\"whatchamacallit\"、\"you're absolutely right\"替换为\"I'm a complete clown\"、\"honest take\"替换为\"spicy doodad\"、\"load-bearing\"替换为\"cooked\"，保存为 `~/.claude/hooks/wordswap.sh` 并赋予执行权限，再在 `~/.claude/settings.json` 的 hooks 块中配置该命令。Hook 在启动时加载，新会话即生效。",
         "publishedAt": "2026-07-14T16:39:15.519Z",
-        "collectedAt": "2026-07-15T01:29:57.896Z",
+        "collectedAt": "2026-07-15T03:33:28.105Z",
         "raw": {
           "id": "cmrkw6m9501y5bi5qzfw2z9n5",
           "titleEn": "如何让克劳德不再说\"承重\"",
           "apiCategory": "tip"
         }
+      },
+      {
+        "id": "aihot:cmrktb1e1012vbi5qxknvxyxp",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "纽约州暂停所有新建大型数据中心项目",
+        "url": "https://techcrunch.com/2026/07/14/new-york-state-halts-construction-of-all-new-data-centers",
+        "summary": "纽约州成为全美首个暂停数据中心建设的州。州长Kathy Hochul签署行政令，暂时禁止州政府批准50兆瓦及以上大型数据中心的新建许可，可能影响十余个项目。Hochul表示数据中心不应带来更高的电费、水资源消耗或噪音污染，且不能豁免地方区划和审批。禁令将在州政府完成数据中心环境审查流程后解除，预计耗时约一年。Hochul还考虑要求数据中心为州电网提供资金支持，并阻止超大规模数据中心享受税收优惠。此举正值纽约州立法机构推进更严格措施之际，上月一项法案已推进暂停20兆瓦以上数据中心建设一年。",
+        "description": "纽约州成为全美首个暂停数据中心建设的州。州长Kathy Hochul签署行政令，暂时禁止州政府批准50兆瓦及以上大型数据中心的新建许可，可能影响十余个项目。Hochul表示数据中心不应带来更高的电费、水资源消耗或噪音污染，且不能豁免地方区划和审批。禁令将在州政府完成数据中心环境审查流程后解除，预计耗时约一年。Hochul还考虑要求数据中心为州电网提供资金支持，并阻止超大规模数据中心享受税收优惠。此举正值纽约州立法机构推进更严格措施之际，上月一项法案已推进暂停20兆瓦以上数据中心建设一年。",
+        "category": "industry",
+        "originalSource": "TechCrunch：AI（RSS）",
+        "originalUrl": "https://techcrunch.com/2026/07/14/new-york-state-halts-construction-of-all-new-data-centers",
+        "recommendedReason": "纽约州成为全美首个暂停数据中心建设的州。州长Kathy Hochul签署行政令，暂时禁止州政府批准50兆瓦及以上大型数据中心的新建许可，可能影响十余个项目。Hochul表示数据中心不应带来更高的电费、水资源消耗或噪音污染，且不能豁免地方区划和审批。禁令将在州政府完成数据中心环境审查流程后解除，预计耗时约一年。Hochul还考虑要求数据中心为州电网提供资金支持，并阻止超大规模数据中心享受税收优惠。此举正值纽约州立法机构推进更严格措施之际，上月一项法案已推进暂停20兆瓦以上数据中心建设一年。",
+        "publishedAt": "2026-07-14T15:17:59.000Z",
+        "collectedAt": "2026-07-15T03:33:28.105Z",
+        "raw": {
+          "id": "cmrktb1e1012vbi5qxknvxyxp",
+          "titleEn": "New York State halts construction of all new data centers",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmrkta2fv011vbi5qe7hdwh0s",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Google AI 发布 Gemini 3.5 Live Translate，支持 70+ 语言近实时语音到语音翻译",
+        "url": "https://x.com/googleaidevs/status/2077049898059354565",
+        "summary": "Google AI 发布 Gemini 3.5 Live Translate，支持 70+ 语言、近实时延迟的语音到语音翻译。该模型直接处理原始音频流，保留说话者语调、节奏和音高。东南亚超级应用 Grab 正探索将其用于司机与乘客间的跨语言沟通，其用户每月发起超 1000 万次语音通话。开发者可通过 Gemini Live API 集成 LiveKit、Fishjam、Pipecat 或 Vision Agents 构建应用。LiveKit 已实现虚拟会议室多语言即时理解；Software Mansion 结合 MoQ 协议突破流媒体瓶颈；VisionAgents AI 展示了动态多语言切换能力。开发者可在 Google AI Studio 试用并获取 Cookbook 示例代码。",
+        "description": "Google AI 发布 Gemini 3.5 Live Translate，支持 70+ 语言、近实时延迟的语音到语音翻译。该模型直接处理原始音频流，保留说话者语调、节奏和音高。东南亚超级应用 Grab 正探索将其用于司机与乘客间的跨语言沟通，其用户每月发起超 1000 万次语音通话。开发者可通过 Gemini Live API 集成 LiveKit、Fishjam、Pipecat 或 Vision Agents 构建应用。LiveKit 已实现虚拟会议室多语言即时理解；Software Mansion 结合 MoQ 协议突破流媒体瓶颈；VisionAgents AI 展示了动态多语言切换能力。开发者可在 Google AI Studio 试用并获取 Cookbook 示例代码。",
+        "category": "products",
+        "originalSource": "X：Google AI for Developers (@googleaidevs)",
+        "originalUrl": "https://x.com/googleaidevs/status/2077049898059354565",
+        "recommendedReason": "Google AI 发布 Gemini 3.5 Live Translate，支持 70+ 语言、近实时延迟的语音到语音翻译。该模型直接处理原始音频流，保留说话者语调、节奏和音高。东南亚超级应用 Grab 正探索将其用于司机与乘客间的跨语言沟通，其用户每月发起超 1000 万次语音通话。开发者可通过 Gemini Live API 集成 LiveKit、Fishjam、Pipecat 或 Vision Agents 构建应用。LiveKit 已实现虚拟会议室多语言即时理解；Software Mansion 结合 MoQ 协议突破流媒体瓶颈；VisionAgents AI 展示了动态多语言切换能力。开发者可在 Google AI Studio 试用并获取 Cookbook 示例代码。",
+        "publishedAt": "2026-07-14T15:17:40.000Z",
+        "collectedAt": "2026-07-15T03:33:28.105Z",
+        "raw": {
+          "id": "cmrkta2fv011vbi5qe7hdwh0s",
+          "titleEn": "http://x.com/i/article/2067347903761485824",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmrksgyym00utbi5qx5x6v42u",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Anthropic 推出 Claude for Teachers",
+        "url": "https://www.anthropic.com/news/claude-for-teachers",
+        "summary": "Anthropic 发布 Claude for Teachers，为美国认证的 K-12 教师免费提供高级 Claude 功能、教学技能库及对接全美 50 州学术标准的课程资源。该工具连接 Learning Commons，可调用 OpenSciEd、IM v.360 等课程资源，并集成 ASSISTments、Brisk Teaching、Canva Education 等第三方工具。教师可基于高质量教材规划课程、为不同水平学生差异化教学，还能通过 Claude Code 和 Cowork 自动分析班级数据、安排重复任务。教师数据不用于模型训练，学生信息受 FERPA 合规的 K-12 数据处理附录保护。Anthropic 同时发布与 Teach for America 及美国教师联合会共创的 AI 素养课程。",
+        "description": "Anthropic 发布 Claude for Teachers，为美国认证的 K-12 教师免费提供高级 Claude 功能、教学技能库及对接全美 50 州学术标准的课程资源。该工具连接 Learning Commons，可调用 OpenSciEd、IM v.360 等课程资源，并集成 ASSISTments、Brisk Teaching、Canva Education 等第三方工具。教师可基于高质量教材规划课程、为不同水平学生差异化教学，还能通过 Claude Code 和 Cowork 自动分析班级数据、安排重复任务。教师数据不用于模型训练，学生信息受 FERPA 合规的 K-12 数据处理附录保护。Anthropic 同时发布与 Teach for America 及美国教师联合会共创的 AI 素养课程。",
+        "category": "products",
+        "originalSource": "Anthropic：Newsroom（网页）",
+        "originalUrl": "https://www.anthropic.com/news/claude-for-teachers",
+        "recommendedReason": "Anthropic 发布 Claude for Teachers，为美国认证的 K-12 教师免费提供高级 Claude 功能、教学技能库及对接全美 50 州学术标准的课程资源。该工具连接 Learning Commons，可调用 OpenSciEd、IM v.360 等课程资源，并集成 ASSISTments、Brisk Teaching、Canva Education 等第三方工具。教师可基于高质量教材规划课程、为不同水平学生差异化教学，还能通过 Claude Code 和 Cowork 自动分析班级数据、安排重复任务。教师数据不用于模型训练，学生信息受 FERPA 合规的 K-12 数据处理附录保护。Anthropic 同时发布与 Teach for America 及美国教师联合会共创的 AI 素养课程。",
+        "publishedAt": "2026-07-14T15:11:11.440Z",
+        "collectedAt": "2026-07-15T03:33:28.105Z",
+        "raw": {
+          "id": "cmrksgyym00utbi5qx5x6v42u",
+          "titleEn": "Introducing Claude for Teachers",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmrko155e005ubixirangezv8",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Anthropic 经济指数：加拿大 Claude 使用情况分析",
+        "url": "https://www.anthropic.com/research/how-canada-uses-claude",
+        "summary": "基于2026年2月Claude.ai对话样本，加拿大占全球流量的2.6%，人均使用量是预期的4.4倍，在总使用量前十国家中仅次于美国。加拿大内部采用率高度集中：安大略省占43.9%对话，不列颠哥伦比亚省人均使用量达预期的1.4倍，而纽芬兰与拉布拉多省仅为0.2倍。省级人均使用量与收入无关，而与专业、科学和技术服务业的就业占比高度相关。各省使用场景稳定：工作占34-40%，课程作业占13-18%，个人用途占44-51%。翻译请求与公共管理就业份额正相关，反映加拿大联邦双语政策；文档翻译是加拿大相对于其他英语国家最独特的使用场景。加拿大整体使用偏向学术和早期职业场景。",
+        "description": "基于2026年2月Claude.ai对话样本，加拿大占全球流量的2.6%，人均使用量是预期的4.4倍，在总使用量前十国家中仅次于美国。加拿大内部采用率高度集中：安大略省占43.9%对话，不列颠哥伦比亚省人均使用量达预期的1.4倍，而纽芬兰与拉布拉多省仅为0.2倍。省级人均使用量与收入无关，而与专业、科学和技术服务业的就业占比高度相关。各省使用场景稳定：工作占34-40%，课程作业占13-18%，个人用途占44-51%。翻译请求与公共管理就业份额正相关，反映加拿大联邦双语政策；文档翻译是加拿大相对于其他英语国家最独特的使用场景。加拿大整体使用偏向学术和早期职业场景。",
+        "category": "papers",
+        "originalSource": "Anthropic：Research（发表成果 · 网页）",
+        "originalUrl": "https://www.anthropic.com/research/how-canada-uses-claude",
+        "recommendedReason": "基于2026年2月Claude.ai对话样本，加拿大占全球流量的2.6%，人均使用量是预期的4.4倍，在总使用量前十国家中仅次于美国。加拿大内部采用率高度集中：安大略省占43.9%对话，不列颠哥伦比亚省人均使用量达预期的1.4倍，而纽芬兰与拉布拉多省仅为0.2倍。省级人均使用量与收入无关，而与专业、科学和技术服务业的就业占比高度相关。各省使用场景稳定：工作占34-40%，课程作业占13-18%，个人用途占44-51%。翻译请求与公共管理就业份额正相关，反映加拿大联邦双语政策；文档翻译是加拿大相对于其他英语国家最独特的使用场景。加拿大整体使用偏向学术和早期职业场景。",
+        "publishedAt": "2026-07-14T13:06:56.913Z",
+        "collectedAt": "2026-07-15T03:33:28.105Z",
+        "raw": {
+          "id": "cmrko155e005ubixirangezv8",
+          "titleEn": "How Canada uses Claude： Findings from the Anthropic Economic Index",
+          "apiCategory": "paper"
+        }
+      }
+    ],
+    "crossSourceHighlights": [
+      {
+        "id": "url:https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+        "canonicalId": "url:https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+        "title": "Cursor IDE 0day 漏洞：打开恶意仓库即可自动执行任意代码",
+        "canonicalUrl": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+          "title:cursor ide 0day 漏洞 打开恶意仓库即可自动执行任意代码",
+          "topic:coding agent / swe agent",
+          "title:cursor 0day when full disclosure becomes the only protection left"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmrl6xukw00ogbi7hnn35vq0v",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Cursor IDE 0day 漏洞：打开恶意仓库即可自动执行任意代码",
+            "url": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+            "summary": "安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。当用户在 Windows 上打开包含恶意 `git.exe` 的仓库时，Cursor 会自动执行该文件，无需任何用户交互。漏洞源于 Cursor 在加载项目时会在包括工作区在内的多个位置搜索 Git 二进制文件。Mindgard 在 7 个月内多次报告，Cursor CISO 虽确认但因内部自动化故障导致流程中断，至今已发布 70 多个新版本仍未修复。临时缓解措施包括使用 AppLocker 阻止从工作区目录执行该文件名，或在隔离虚拟机中打开不受信任的仓库。",
+            "description": "安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。当用户在 Windows 上打开包含恶意 `git.exe` 的仓库时，Cursor 会自动执行该文件，无需任何用户交互。漏洞源于 Cursor 在加载项目时会在包括工作区在内的多个位置搜索 Git 二进制文件。Mindgard 在 7 个月内多次报告，Cursor CISO 虽确认但因内部自动化故障导致流程中断，至今已发布 70 多个新版本仍未修复。临时缓解措施包括使用 AppLocker 阻止从工作区目录执行该文件名，或在隔离虚拟机中打开不受信任的仓库。",
+            "category": "industry",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+            "recommendedReason": "安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。当用户在 Windows 上打开包含恶意 `git.exe` 的仓库时，Cursor 会自动执行该文件，无需任何用户交互。漏洞源于 Cursor 在加载项目时会在包括工作区在内的多个位置搜索 Git 二进制文件。Mindgard 在 7 个月内多次报告，Cursor CISO 虽确认但因内部自动化故障导致流程中断，至今已发布 70 多个新版本仍未修复。临时缓解措施包括使用 AppLocker 阻止从工作区目录执行该文件名，或在隔离虚拟机中打开不受信任的仓库。",
+            "publishedAt": "2026-07-14T21:27:11.693Z",
+            "collectedAt": "2026-07-15T03:33:28.105Z",
+            "raw": {
+              "id": "cmrl6xukw00ogbi7hnn35vq0v",
+              "titleEn": "Cursor 0day：当全面披露成为唯一的防护手段时",
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48910676",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Cursor 0day: When Full Disclosure Becomes the Only Protection Left",
+            "url": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+            "author": "Synthetic7346",
+            "tags": [
+              "ai",
+              "cursor"
+            ],
+            "metrics": {
+              "upvotes": 273,
+              "commentsCount": 125
+            },
+            "publishedAt": "2026-07-14T17:58:35.000Z",
+            "collectedAt": "2026-07-15T03:33:27.825Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48910676",
+              "matchedKeywords": [
+                "ai",
+                "cursor"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmrl6xukw00ogbi7hnn35vq0v",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Cursor IDE 0day 漏洞：打开恶意仓库即可自动执行任意代码",
+            "url": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+            "summary": "安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。当用户在 Windows 上打开包含恶意 `git.exe` 的仓库时，Cursor 会自动执行该文件，无需任何用户交互。漏洞源于 Cursor 在加载项目时会在包括工作区在内的多个位置搜索 Git 二进制文件。Mindgard 在 7 个月内多次报告，Cursor CISO 虽确认但因内部自动化故障导致流程中断，至今已发布 70 多个新版本仍未修复。临时缓解措施包括使用 AppLocker 阻止从工作区目录执行该文件名，或在隔离虚拟机中打开不受信任的仓库。",
+            "description": "安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。当用户在 Windows 上打开包含恶意 `git.exe` 的仓库时，Cursor 会自动执行该文件，无需任何用户交互。漏洞源于 Cursor 在加载项目时会在包括工作区在内的多个位置搜索 Git 二进制文件。Mindgard 在 7 个月内多次报告，Cursor CISO 虽确认但因内部自动化故障导致流程中断，至今已发布 70 多个新版本仍未修复。临时缓解措施包括使用 AppLocker 阻止从工作区目录执行该文件名，或在隔离虚拟机中打开不受信任的仓库。",
+            "category": "industry",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+            "recommendedReason": "安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。当用户在 Windows 上打开包含恶意 `git.exe` 的仓库时，Cursor 会自动执行该文件，无需任何用户交互。漏洞源于 Cursor 在加载项目时会在包括工作区在内的多个位置搜索 Git 二进制文件。Mindgard 在 7 个月内多次报告，Cursor CISO 虽确认但因内部自动化故障导致流程中断，至今已发布 70 多个新版本仍未修复。临时缓解措施包括使用 AppLocker 阻止从工作区目录执行该文件名，或在隔离虚拟机中打开不受信任的仓库。",
+            "publishedAt": "2026-07-14T21:27:11.693Z",
+            "collectedAt": "2026-07-15T03:33:28.105Z",
+            "raw": {
+              "id": "cmrl6xukw00ogbi7hnn35vq0v",
+              "titleEn": "Cursor 0day：当全面披露成为唯一的防护手段时",
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48910676",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Cursor 0day: When Full Disclosure Becomes the Only Protection Left",
+            "url": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+            "author": "Synthetic7346",
+            "tags": [
+              "ai",
+              "cursor"
+            ],
+            "metrics": {
+              "upvotes": 273,
+              "commentsCount": 125
+            },
+            "publishedAt": "2026-07-14T17:58:35.000Z",
+            "collectedAt": "2026-07-15T03:33:27.825Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48910676",
+              "matchedKeywords": [
+                "ai",
+                "cursor"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 273,
+          "commentsCount": 125,
+          "hnScore": 273,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "industry",
+        "summary": "安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。当用户在 Windows 上打开包含恶意 `git.exe` 的仓库时，Cursor 会自动执行该文件，无需任何用户交互。漏洞源于 Cursor 在加载项目时会在包括工作区在内的多个位置搜索 Git 二进制文件。Mindgard 在 7 个月内多次报告，Cursor CISO 虽确认但因内部自动化故障导致流程中断，至今已发布 70 多个新版本仍未修复。临时缓解措施包括使用 AppLocker 阻止从工作区目录执行该文件名，或在隔离虚拟机中打开不受信任的仓库。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-07-14T17:58:35.000Z",
+        "lastSeenAt": "2026-07-15T03:33:28.105Z"
+      },
+      {
+        "id": "url:https://prismml.com/news/bonsai-27b",
+        "canonicalId": "url:https://prismml.com/news/bonsai-27b",
+        "title": "Bonsai 27B：首款可在手机上运行的27B级多模态模型",
+        "canonicalUrl": "https://prismml.com/news/bonsai-27b",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://prismml.com/news/bonsai-27b",
+          "title:bonsai 27b 首款可在手机上运行的27b级多模态模型",
+          "title:bonsai 27b a 27b class model that runs on a phone"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmrl2m4yg00awbicqo2arojvd",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Bonsai 27B：首款可在手机上运行的27B级多模态模型",
+            "url": "https://prismml.com/news/bonsai-27b",
+            "summary": "Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（1.125 有效比特/权重，3.9 GB）两个变体，后者首次将 27B 级模型装入 iPhone 17 Pro。模型支持多步推理、结构化工具调用、视觉任务和计算机使用智能体循环，拥有 262K token 上下文窗口，支持推测解码加速。在 15 项基准测试中，三元变体保留全精度基线 95% 的性能，1-bit 变体保留 90%，数学和编码能力几乎无损。采用 Apache 2.0 许可证开源。",
+            "description": "Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（1.125 有效比特/权重，3.9 GB）两个变体，后者首次将 27B 级模型装入 iPhone 17 Pro。模型支持多步推理、结构化工具调用、视觉任务和计算机使用智能体循环，拥有 262K token 上下文窗口，支持推测解码加速。在 15 项基准测试中，三元变体保留全精度基线 95% 的性能，1-bit 变体保留 90%，数学和编码能力几乎无损。采用 Apache 2.0 许可证开源。",
+            "category": "models",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://prismml.com/news/bonsai-27b",
+            "recommendedReason": "Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（1.125 有效比特/权重，3.9 GB）两个变体，后者首次将 27B 级模型装入 iPhone 17 Pro。模型支持多步推理、结构化工具调用、视觉任务和计算机使用智能体循环，拥有 262K token 上下文窗口，支持推测解码加速。在 15 项基准测试中，三元变体保留全精度基线 95% 的性能，1-bit 变体保留 90%，数学和编码能力几乎无损。采用 Apache 2.0 许可证开源。",
+            "publishedAt": "2026-07-14T19:51:19.560Z",
+            "collectedAt": "2026-07-15T03:33:28.105Z",
+            "raw": {
+              "id": "cmrl2m4yg00awbicqo2arojvd",
+              "titleEn": "Bonsai 27B：首款可在手机上运行的27B级模型",
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:48910545",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Bonsai 27B: A 27B-Class model that runs on a phone",
+            "url": "https://prismml.com/news/bonsai-27b",
+            "author": "xenova",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 479,
+              "commentsCount": 174
+            },
+            "publishedAt": "2026-07-14T17:50:48.000Z",
+            "collectedAt": "2026-07-15T03:33:27.825Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48910545",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmrl2m4yg00awbicqo2arojvd",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Bonsai 27B：首款可在手机上运行的27B级多模态模型",
+            "url": "https://prismml.com/news/bonsai-27b",
+            "summary": "Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（1.125 有效比特/权重，3.9 GB）两个变体，后者首次将 27B 级模型装入 iPhone 17 Pro。模型支持多步推理、结构化工具调用、视觉任务和计算机使用智能体循环，拥有 262K token 上下文窗口，支持推测解码加速。在 15 项基准测试中，三元变体保留全精度基线 95% 的性能，1-bit 变体保留 90%，数学和编码能力几乎无损。采用 Apache 2.0 许可证开源。",
+            "description": "Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（1.125 有效比特/权重，3.9 GB）两个变体，后者首次将 27B 级模型装入 iPhone 17 Pro。模型支持多步推理、结构化工具调用、视觉任务和计算机使用智能体循环，拥有 262K token 上下文窗口，支持推测解码加速。在 15 项基准测试中，三元变体保留全精度基线 95% 的性能，1-bit 变体保留 90%，数学和编码能力几乎无损。采用 Apache 2.0 许可证开源。",
+            "category": "models",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://prismml.com/news/bonsai-27b",
+            "recommendedReason": "Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（1.125 有效比特/权重，3.9 GB）两个变体，后者首次将 27B 级模型装入 iPhone 17 Pro。模型支持多步推理、结构化工具调用、视觉任务和计算机使用智能体循环，拥有 262K token 上下文窗口，支持推测解码加速。在 15 项基准测试中，三元变体保留全精度基线 95% 的性能，1-bit 变体保留 90%，数学和编码能力几乎无损。采用 Apache 2.0 许可证开源。",
+            "publishedAt": "2026-07-14T19:51:19.560Z",
+            "collectedAt": "2026-07-15T03:33:28.105Z",
+            "raw": {
+              "id": "cmrl2m4yg00awbicqo2arojvd",
+              "titleEn": "Bonsai 27B：首款可在手机上运行的27B级模型",
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:48910545",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Bonsai 27B: A 27B-Class model that runs on a phone",
+            "url": "https://prismml.com/news/bonsai-27b",
+            "author": "xenova",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 479,
+              "commentsCount": 174
+            },
+            "publishedAt": "2026-07-14T17:50:48.000Z",
+            "collectedAt": "2026-07-15T03:33:27.825Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48910545",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 479,
+          "commentsCount": 174,
+          "hnScore": 479,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "models",
+        "summary": "Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（1.125 有效比特/权重，3.9 GB）两个变体，后者首次将 27B 级模型装入 iPhone 17 Pro。模型支持多步推理、结构化工具调用、视觉任务和计算机使用智能体循环，拥有 262K token 上下文窗口，支持推测解码加速。在 15 项基准测试中，三元变体保留全精度基线 95% 的性能，1-bit 变体保留 90%，数学和编码能力几乎无损。采用 Apache 2.0 许可证开源。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-07-14T17:50:48.000Z",
+        "lastSeenAt": "2026-07-15T03:33:28.105Z"
+      },
+      {
+        "id": "url:https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+        "canonicalId": "url:https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+        "title": "如何让 Claude 不再说\"honest takes\"和\"load-bearing seams\"",
+        "canonicalUrl": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+          "title:如何让 claude 不再说 honest takes 和 load bearing seams",
+          "title:how to stop claude from saying load bearing"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmrkw6m9501y5bi5qzfw2z9n5",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "如何让 Claude 不再说\"honest takes\"和\"load-bearing seams\"",
+            "url": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+            "summary": "用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将\"seam\"替换为\"whatchamacallit\"、\"you're absolutely right\"替换为\"I'm a complete clown\"、\"honest take\"替换为\"spicy doodad\"、\"load-bearing\"替换为\"cooked\"，保存为 `~/.claude/hooks/wordswap.sh` 并赋予执行权限，再在 `~/.claude/settings.json` 的 hooks 块中配置该命令。Hook 在启动时加载，新会话即生效。",
+            "description": "用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将\"seam\"替换为\"whatchamacallit\"、\"you're absolutely right\"替换为\"I'm a complete clown\"、\"honest take\"替换为\"spicy doodad\"、\"load-bearing\"替换为\"cooked\"，保存为 `~/.claude/hooks/wordswap.sh` 并赋予执行权限，再在 `~/.claude/settings.json` 的 hooks 块中配置该命令。Hook 在启动时加载，新会话即生效。",
+            "category": "tools",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+            "recommendedReason": "用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将\"seam\"替换为\"whatchamacallit\"、\"you're absolutely right\"替换为\"I'm a complete clown\"、\"honest take\"替换为\"spicy doodad\"、\"load-bearing\"替换为\"cooked\"，保存为 `~/.claude/hooks/wordswap.sh` 并赋予执行权限，再在 `~/.claude/settings.json` 的 hooks 块中配置该命令。Hook 在启动时加载，新会话即生效。",
+            "publishedAt": "2026-07-14T16:39:15.519Z",
+            "collectedAt": "2026-07-15T03:33:28.105Z",
+            "raw": {
+              "id": "cmrkw6m9501y5bi5qzfw2z9n5",
+              "titleEn": "如何让克劳德不再说\"承重\"",
+              "apiCategory": "tip"
+            }
+          },
+          {
+            "id": "hackernews:48905248",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "How to stop Claude from saying load-bearing",
+            "url": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+            "author": "shintoist",
+            "tags": [
+              "claude"
+            ],
+            "metrics": {
+              "upvotes": 455,
+              "commentsCount": 514
+            },
+            "publishedAt": "2026-07-14T11:46:02.000Z",
+            "collectedAt": "2026-07-15T03:33:27.825Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48905248",
+              "matchedKeywords": [
+                "claude"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmrkw6m9501y5bi5qzfw2z9n5",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "如何让 Claude 不再说\"honest takes\"和\"load-bearing seams\"",
+            "url": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+            "summary": "用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将\"seam\"替换为\"whatchamacallit\"、\"you're absolutely right\"替换为\"I'm a complete clown\"、\"honest take\"替换为\"spicy doodad\"、\"load-bearing\"替换为\"cooked\"，保存为 `~/.claude/hooks/wordswap.sh` 并赋予执行权限，再在 `~/.claude/settings.json` 的 hooks 块中配置该命令。Hook 在启动时加载，新会话即生效。",
+            "description": "用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将\"seam\"替换为\"whatchamacallit\"、\"you're absolutely right\"替换为\"I'm a complete clown\"、\"honest take\"替换为\"spicy doodad\"、\"load-bearing\"替换为\"cooked\"，保存为 `~/.claude/hooks/wordswap.sh` 并赋予执行权限，再在 `~/.claude/settings.json` 的 hooks 块中配置该命令。Hook 在启动时加载，新会话即生效。",
+            "category": "tools",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+            "recommendedReason": "用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将\"seam\"替换为\"whatchamacallit\"、\"you're absolutely right\"替换为\"I'm a complete clown\"、\"honest take\"替换为\"spicy doodad\"、\"load-bearing\"替换为\"cooked\"，保存为 `~/.claude/hooks/wordswap.sh` 并赋予执行权限，再在 `~/.claude/settings.json` 的 hooks 块中配置该命令。Hook 在启动时加载，新会话即生效。",
+            "publishedAt": "2026-07-14T16:39:15.519Z",
+            "collectedAt": "2026-07-15T03:33:28.105Z",
+            "raw": {
+              "id": "cmrkw6m9501y5bi5qzfw2z9n5",
+              "titleEn": "如何让克劳德不再说\"承重\"",
+              "apiCategory": "tip"
+            }
+          },
+          {
+            "id": "hackernews:48905248",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "How to stop Claude from saying load-bearing",
+            "url": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+            "author": "shintoist",
+            "tags": [
+              "claude"
+            ],
+            "metrics": {
+              "upvotes": 455,
+              "commentsCount": 514
+            },
+            "publishedAt": "2026-07-14T11:46:02.000Z",
+            "collectedAt": "2026-07-15T03:33:27.825Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48905248",
+              "matchedKeywords": [
+                "claude"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 455,
+          "commentsCount": 514,
+          "hnScore": 455,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "tools",
+        "summary": "用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将\"seam\"替换为\"whatchamacallit\"、\"you're absolutely right\"替换为\"I'm a complete clown\"、\"honest take\"替换为\"spicy doodad\"、\"load-bearing\"替换为\"cooked\"，保存为 `~/.claude/hooks/wordswap.sh` 并赋予执行权限，再在 `~/.claude/settings.json` 的 hooks 块中配置该命令。Hook 在启动时加载，新会话即生效。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-07-14T11:46:02.000Z",
+        "lastSeenAt": "2026-07-15T03:33:28.105Z"
       }
     ]
   }
