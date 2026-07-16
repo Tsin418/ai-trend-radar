@@ -1,169 +1,216 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-16T06:37:59.053Z",
+  "generatedAt": "2026-07-16T07:17:47.703Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2607.14086v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Leveraging unlabelled data for generalizable neural population decoding",
-        "url": "https://arxiv.org/pdf/2607.14086v1",
-        "description": "Robust and accurate neural decoders are integral to neurotechnologies such as brain-computer interfaces and closed-loop experiments. Recent work has shown that tokenizing neural data at the spike level facilitates multi-session pretraining and delivers state-of-the-art decoding performance. However, current spike-based models are restricted to supervised learning (SL), limiting training to datasets with paired behavioural labels. To address this limitation, we introduce MOJO (Masked autOencoder-",
-        "summary": "Robust and accurate neural decoders are integral to neurotechnologies such as brain-computer interfaces and closed-loop experiments. Recent work has shown that tokenizing neural data at the spike level facilitates multi-session pretraining and delivers state-of-the-art decoding performance. However, current spike-based models are restricted to supervised learning (SL), limiting training to datasets with paired behavioural labels. To address this limitation, we introduce MOJO (Masked autOencoder-based JOint training), a training framework for spike-tokenizing models that jointly leverages self-supervised learning (SSL) via masked autoencoding and SL objectives. We evaluate MOJO on three spiking datasets spanning monkey motor cortex during reaching tasks and multi-regional mouse recordings during vision and decision making tasks, demonstrating superior performance over purely SL-trained models. This improvement is especially pronounced when training with limited labelled data, particularly in few-shot finetuning, where only a small amount of labelled data from a new session is available. Incorporating SSL also yields more interpretable neuronal representations, improving performance on brain region classification and spike-statistics prediction without explicit optimization for these tasks. We further show that MOJO generalizes beyond spiking data to human electrocorticography during speech, where it continues to outperform purely SL-trained models and achieves performance comparable to neuro-foundation models (NFMs) designed specifically for continuous signals. Overall, augmenting spike-tokenizing models with SSL improves performance in label-impoverished settings and enables the use of unlabelled data across various tasks and species, while generalizing to other neural modalities. These results suggest a path towards more flexible and scalable data usage when training NFMs.",
-        "author": "Ximeng Mao, Nanda H. Krishna, Avery Hee-Woon Ryoo, Matthew G. Perich, Guillaume Lajoie",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.LG",
-          "q-bio.NC",
-          "rag"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-07-15T17:58:00Z",
-        "updatedAt": "2026-07-15T17:58:00Z",
-        "collectedAt": "2026-07-16T06:37:52.096Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.14086v1",
-          "authors": [
-            "Ximeng Mao",
-            "Nanda H. Krishna",
-            "Avery Hee-Woon Ryoo",
-            "Matthew G. Perich",
-            "Guillaume Lajoie"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14043
         },
-        "recommendedReason": "Matched AI developer keywords: rag"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-07-16T07:17:48.160Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.14081v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Linear Independent Component Analysis via Optimal Transport",
-        "url": "https://arxiv.org/pdf/2607.14081v1",
-        "description": "Linear Independent Component Analysis (ICA) recovers jointly independent source signals from their linear mixtures. To achieve this, classical ICA algorithms attempt to maximize non-Gaussianity, measured by negentropy, which is linked to independence by information theory. Because exact negentropy optimization is intractable, they rely on proxy contrast functions, such as fourth-order cumulants, and parametric log-likelihoods. We propose instead to measure non-Gaussianity using the squared Wasse",
-        "summary": "Linear Independent Component Analysis (ICA) recovers jointly independent source signals from their linear mixtures. To achieve this, classical ICA algorithms attempt to maximize non-Gaussianity, measured by negentropy, which is linked to independence by information theory. Because exact negentropy optimization is intractable, they rely on proxy contrast functions, such as fourth-order cumulants, and parametric log-likelihoods. We propose instead to measure non-Gaussianity using the squared Wasserstein distance $W_2^2$ to a standard Gaussian. We prove that the Wasserstein distance between a standard normal distribution and linear projections of the data is maximized when the projection recovers an independent component. Based on this observation, we propose the OT-ICA algorithm which finds this projection by gradient-based optimization. Empirical evaluation on simulated data shows that OT-ICA outperforms proxy-based methods for different distributions of the latent variables. Application to EEG artifact removal and econometric price discovery confirm OT-ICA can be used for applied ICA tasks without distributional assumptions.",
-        "author": "Ashutosh Jha, Michel Besserve, Simon Buchholz",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.LG",
-          "stat.ML",
-          "evaluation"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-07-15T17:56:11Z",
-        "updatedAt": "2026-07-15T17:56:11Z",
-        "collectedAt": "2026-07-16T06:37:52.096Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.14081v1",
-          "authors": [
-            "Ashutosh Jha",
-            "Michel Besserve",
-            "Simon Buchholz"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11168
         },
-        "recommendedReason": "Matched AI developer keywords: evaluation"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-07-16T07:17:48.160Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.14072v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "MetaPerch: Learning from metadata for bioacoustics foundation models",
-        "url": "https://arxiv.org/pdf/2607.14072v1",
-        "description": "Bioacoustic foundation models rely on large-scale citizen science platforms like Xeno-Canto for geographically and ecologically diverse data. Recent work has shown that supervision alone can produce SotA species detection models when trained on this large-scale data -- however, there remains unutilized potential in the form of recording metadata readily available within these community-driven data hubs. In this work, we explore the use of metadata -- such as location and time -- as auxiliary sup",
-        "summary": "Bioacoustic foundation models rely on large-scale citizen science platforms like Xeno-Canto for geographically and ecologically diverse data. Recent work has shown that supervision alone can produce SotA species detection models when trained on this large-scale data -- however, there remains unutilized potential in the form of recording metadata readily available within these community-driven data hubs. In this work, we explore the use of metadata -- such as location and time -- as auxiliary supervision signals, allowing the model to leverage species-metadata correlations in its learned representation. Auxiliary metadata losses provide additional information beyond vocalizations alone that can encourage a richer, more robust representation that generalizes better to species distribution and acoustic domain shifts -- important challenges for deployment in real-world passive acoustic monitoring (PAM) settings. We introduce MetaPerch, a new foundation model that achieves strong species identification performance across multiple challenging domains and present an extensive empirical study of the effects of 9 diverse metadata sources on 17 bioacoustic datasets.",
-        "author": "Mustafa Chasmai, Vincent Dumoulin, Jenny Hamer",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.LG",
-          "cs.SD",
-          "rag"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-07-15T17:42:41Z",
-        "updatedAt": "2026-07-15T17:42:41Z",
-        "collectedAt": "2026-07-16T06:37:52.096Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.14072v1",
-          "authors": [
-            "Mustafa Chasmai",
-            "Vincent Dumoulin",
-            "Jenny Hamer"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10130
         },
-        "recommendedReason": "Matched AI developer keywords: rag"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-07-16T07:17:48.160Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.14070v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Screening of Biosecurity Features in Metagenomic Data with Evo 2 Probes",
-        "url": "https://arxiv.org/pdf/2607.14070v1",
-        "description": "Genomic foundation models such as Evo 2 learn rich sequence representations, but their value for biosecurity screening is largely unexplored. We ask how much biosecurity-relevant signal is linearly accessible in these representations by training minimal linear and attention probes on frozen Evo 2 layer-26 activations, without fine-tuning the underlying model. Across held-out metagenomic test sets, the probes detect antimicrobial resistance (AMR) with strong discrimination: a linear probe reaches",
-        "summary": "Genomic foundation models such as Evo 2 learn rich sequence representations, but their value for biosecurity screening is largely unexplored. We ask how much biosecurity-relevant signal is linearly accessible in these representations by training minimal linear and attention probes on frozen Evo 2 layer-26 activations, without fine-tuning the underlying model. Across held-out metagenomic test sets, the probes detect antimicrobial resistance (AMR) with strong discrimination: a linear probe reaches a region-level ROC-AUC of 0.888 (mean-pool), rising to 0.977 with a single-head attention probe. The probes resolve finer-grained AMR drug-class subcategories and separate them from unrelated functional genes, providing additional evidence that the learned signal is not explained solely by generic functional-gene status. Bacterial virulence is also decodable, though more weakly (region-level ROC-AUC 0.833). The AMR probe retains comparable ranking performance on simulated short reads without retraining, enabling evaluation before assembly in settings where assembly is computationally costly or unreliable. It achieves a read-level ROC-AUC of 0.898 (mean-pool), comparable to the mean-pooled full-region result. Within SynGenome, AMR-associated prompt labels are only weakly recoverable from Evo 1.5-generated sequences; these prompt-derived labels do not establish the function of the generated response sequences. A complementary sparse-autoencoder analysis recovers interpretable resistance-associated features but proves less consistent than the supervised probes. Together, these results position lightweight embedding-based probes as a fast, inexpensive first-pass detection layer for metagenomic biosurveillance and map both strengths and current limits of the approach. This work was conducted as part of the AIxBio Hackathon 2026 hosted by BlueDot Impact, Apart Research, and Cambridge Biosecurity Hub.",
-        "author": "Jeremy Guntoro, Alexander Dack, Dylan Danno, Michaela Jančovičová, Križan Jurinović, Vanessa Smilansky",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "q-bio.GN",
-          "cs.LG",
-          "embedding",
-          "fine-tuning",
-          "evaluation"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "q-bio.GN",
-        "language": "en",
-        "publishedAt": "2026-07-15T17:38:02Z",
-        "updatedAt": "2026-07-15T17:38:02Z",
-        "collectedAt": "2026-07-16T06:37:52.096Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.14070v1",
-          "authors": [
-            "Jeremy Guntoro",
-            "Alexander Dack",
-            "Dylan Danno",
-            "Michaela Jančovičová",
-            "Križan Jurinović",
-            "Vanessa Smilansky"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7565
         },
-        "recommendedReason": "Matched AI developer keywords: embedding, fine-tuning, evaluation"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-07-15T16:49:30.000Z",
+        "collectedAt": "2026-07-16T07:17:48.160Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.14051v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Hindcast: Replaying Prediction Markets to Evaluate LLM Forecasters",
-        "url": "https://arxiv.org/pdf/2607.14051v1",
-        "description": "Forecasters are evaluated by backtesting, which replays resolved questions and grades the probability the system would have assigned before the outcome was known. For LLMs, two channels leak the answer into this test. A model that retrieves can surface reports written after the event, turning forecasting into a lookup, and each new model is trained on data closer to the event, so a question that lay in the future for last year's models sits inside this year's training data. Either way, the test ",
-        "summary": "Forecasters are evaluated by backtesting, which replays resolved questions and grades the probability the system would have assigned before the outcome was known. For LLMs, two channels leak the answer into this test. A model that retrieves can surface reports written after the event, turning forecasting into a lookup, and each new model is trained on data closer to the event, so a question that lay in the future for last year's models sits inside this year's training data. Either way, the test grades recall while claiming to grade foresight. We introduce Hindcast, which closes both leaks by grading a model as if it stood at a chosen past date $t_0$, before the outcome existed in either channel. Hindcast replays resolved Polymarket prediction markets against a frozen snapshot of public Reddit, lets the model read only posts written before $t_0$, and scores each forecast against both what happened and the market's own price at $t_0$, itself a human forecast made from the same past information. Because the cutoff is set per market and the snapshot never changes, the evaluation re-runs on new markets as models improve, without going stale. Once the leak is closed, retrieval still helps most models, but only where Reddit discussed the event beforehand. Where the archive carried only speculation, retrieval hurts.",
-        "author": "Xiao Ye, Jacob Dineen, Evan Zhu, Shijie Lu, Kevin Song, Ben Zhou",
+        "id": "huggingface_models:MelissaJ/koelectra-emotion-6-emotion-base",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "MelissaJ/koelectra-emotion-6-emotion-base",
+        "url": "https://huggingface.co/MelissaJ/koelectra-emotion-6-emotion-base",
         "tags": [
-          "cs.CL",
-          "llm",
-          "evaluation"
+          "transformers",
+          "ko",
+          "base_model:monologg/koelectra-base-v3-discriminator",
+          "base_model:finetune:monologg/koelectra-base-v3-discriminator",
+          "license:apache-2.0",
+          "endpoints_compatible",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-07-15T17:21:43Z",
-        "updatedAt": "2026-07-15T17:21:43Z",
-        "collectedAt": "2026-07-16T06:37:52.096Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.14051v1",
-          "authors": [
-            "Xiao Ye",
-            "Jacob Dineen",
-            "Evan Zhu",
-            "Shijie Lu",
-            "Kevin Song",
-            "Ben Zhou"
-          ]
+        "metrics": {
+          "downloads": 1260,
+          "likes": 0
         },
-        "recommendedReason": "Matched AI developer keywords: llm, evaluation"
+        "publishedAt": "2025-09-03T00:16:40.000Z",
+        "updatedAt": "2026-07-16T07:17:44.000Z",
+        "collectedAt": "2026-07-16T07:17:48.150Z",
+        "raw": {}
+      },
+      {
+        "id": "huggingface_models:umarfarookm/UmarTransit-1B",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "umarfarookm/UmarTransit-1B",
+        "url": "https://huggingface.co/umarfarookm/UmarTransit-1B",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "gguf",
+          "qwen2",
+          "text-generation",
+          "text-generation-inference",
+          "unsloth",
+          "conversational",
+          "en",
+          "base_model:unsloth/Qwen2.5-1.5B-Instruct-bnb-4bit",
+          "base_model:quantized:unsloth/Qwen2.5-1.5B-Instruct-bnb-4bit",
+          "license:apache-2.0",
+          "endpoints_compatible",
+          "region:us"
+        ],
+        "category": "text-generation",
+        "metrics": {
+          "downloads": 1158,
+          "likes": 0
+        },
+        "publishedAt": "2026-07-06T13:33:31.000Z",
+        "updatedAt": "2026-07-16T07:17:08.000Z",
+        "collectedAt": "2026-07-16T07:17:48.150Z",
+        "raw": {
+          "pipelineTag": "text-generation"
+        }
+      },
+      {
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
+        "tags": [
+          "gradio",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5116
+        },
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-07-16T07:17:48.160Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5078
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-07-16T07:17:48.160Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
       }
     ],
     "developerBuzz": [
@@ -178,13 +225,36 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 873,
-          "commentsCount": 215
+          "upvotes": 904,
+          "commentsCount": 221
         },
         "publishedAt": "2026-07-15T18:12:45.000Z",
-        "collectedAt": "2026-07-16T06:37:52.245Z",
+        "collectedAt": "2026-07-16T07:17:48.372Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48924912",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48926590",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Grok Build is open source",
+        "url": "https://github.com/xai-org/grok-build",
+        "author": "skp1995",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 394,
+          "commentsCount": 420
+        },
+        "publishedAt": "2026-07-15T20:24:58.000Z",
+        "collectedAt": "2026-07-16T07:17:48.372Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48926590",
           "matchedKeywords": [
             "ai"
           ]
@@ -201,11 +271,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 886,
+          "upvotes": 888,
           "commentsCount": 232
         },
         "publishedAt": "2026-07-15T02:57:47.000Z",
-        "collectedAt": "2026-07-16T06:37:52.245Z",
+        "collectedAt": "2026-07-16T07:17:48.372Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48915709",
           "matchedKeywords": [
@@ -224,38 +294,15 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 594,
+          "upvotes": 595,
           "commentsCount": 601
         },
         "publishedAt": "2026-07-14T11:46:02.000Z",
-        "collectedAt": "2026-07-16T06:37:52.245Z",
+        "collectedAt": "2026-07-16T07:17:48.372Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48905248",
           "matchedKeywords": [
             "claude"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48926590",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Grok Build is open source",
-        "url": "https://github.com/xai-org/grok-build",
-        "author": "skp1995",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 377,
-          "commentsCount": 402
-        },
-        "publishedAt": "2026-07-15T20:24:58.000Z",
-        "collectedAt": "2026-07-16T06:37:52.245Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48926590",
-          "matchedKeywords": [
-            "ai"
           ]
         }
       },
@@ -274,7 +321,7 @@
           "commentsCount": 474
         },
         "publishedAt": "2026-07-14T15:18:13.000Z",
-        "collectedAt": "2026-07-16T06:37:52.245Z",
+        "collectedAt": "2026-07-16T07:17:48.372Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48908178",
           "matchedKeywords": [
@@ -297,7 +344,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/dCk6IXbFyOSSc1JxcWsglA",
         "recommendedReason": "千问APP与武汉发布在武汉举办AI求职实战课，现场演示了用千问进行简历诊断、PPT制作和表格分析。产品经理提出\"给全材料、说明目标、定义标准、划定边界、索要可编辑文件\"五步法，并展示了将486行杂乱销售数据浓缩为一页结论PPT的\"建、理、算、析、呈\"方法论。",
         "publishedAt": "2026-07-16T03:27:08.000Z",
-        "collectedAt": "2026-07-16T06:37:52.330Z",
+        "collectedAt": "2026-07-16T07:17:49.317Z",
         "raw": {
           "id": "cmrmybfkm039cbijeh07y5kq0",
           "titleEn": "已在工位，今天先学怎么上班",
@@ -317,7 +364,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/WlGAeogkF_N5122nHA0TtQ",
         "recommendedReason": "天工短剧工作台推出双轨创作模式，通过导演Agent自动解析剧本、规划站位与机位，并支持多视细节图生成，解决AI短剧角色变脸和站位漂移问题。该工具内置影视级提示词模板、720°全景图及3D导演台，实现可控生产。已有三部作品上线DramaWave 7天实现百万美元级营收。",
         "publishedAt": "2026-07-16T02:00:00.000Z",
-        "collectedAt": "2026-07-16T06:37:52.330Z",
+        "collectedAt": "2026-07-16T07:17:49.317Z",
         "raw": {
           "id": "cmrmvgk9r01t6bijelx7vxglt",
           "titleEn": "告别\"随机抽卡\"，天工短剧工作台：让AI短剧制作第一次真正拥有导演思维！",
@@ -337,7 +384,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/mQeBO0xC6Z1R0LqZX5TvNg",
         "recommendedReason": "MiniMax Code 2.0 桌面端发布，基于 Pi Agent 框架重构底层架构，显著提升会话启动速度与长程复杂任务的执行稳定性。新版本优化了图表加载与文件预览框选编辑功能，并已与恒生金融数据库、企查查 MCP 打通，金融模块即将上线，支持多源数据实时检索与专业报告生成。桌面端现已开放下载，本月还将上线远程控制、浏览器操控等功能。",
         "publishedAt": "2026-07-16T01:36:13.000Z",
-        "collectedAt": "2026-07-16T06:37:52.330Z",
+        "collectedAt": "2026-07-16T07:17:49.317Z",
         "raw": {
           "id": "cmrmudyvj015jbije15lwn7k2",
           "titleEn": "MiniMax Code 2.0 焕新，底层架构全面升级",
@@ -357,7 +404,7 @@
         "originalUrl": "https://simonwillison.net/2026/Jul/16/grok-mermaid",
         "recommendedReason": "xAI 开源的 Grok CLI 编码智能体代码库中包含一个用 Rust 编写的 Mermaid 图表示例终端渲染器 `xai-grok-markdown/src/mermaid.rs`。开发者通过 Claude Code for web （Fable 5） 将其编译为 WebAssembly，实现在浏览器中运行该工具。",
         "publishedAt": "2026-07-16T00:33:18.000Z",
-        "collectedAt": "2026-07-16T06:37:52.330Z",
+        "collectedAt": "2026-07-16T07:17:49.317Z",
         "raw": {
           "id": "cmrmsfo5q00f0bimis2t1mbci",
           "titleEn": "Mermaid to Unicode box art （grok-mermaid）",
@@ -377,7 +424,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/x2JlkhOlGNVhL8oe7AVk9Q",
         "recommendedReason": "作者分享了一套远程使用Agent的组合方案：以Codex的远程控制功能作为主力，通过ChatGPT App连接家中24小时开机的Mac Mini，同步所有开发任务、规则和Agent记忆；遇到扫码登录、图形界面操作等Codex难以处理的场景时，用网易UU远程在手机上直接操控电脑完整桌面。UU远程完全免费，支持多设备协同，无需局域网或公网配置。",
         "publishedAt": "2026-07-16T00:12:00.000Z",
-        "collectedAt": "2026-07-16T06:37:52.330Z",
+        "collectedAt": "2026-07-16T07:17:49.317Z",
         "raw": {
           "id": "cmrmrjrwk001pbimilq46mpeq",
           "titleEn": "分享一下我现在随时随地让Agent干活的远程操控方案。",
@@ -397,7 +444,7 @@
         "originalUrl": "https://github.com/vshulcz/deja-vu",
         "recommendedReason": "一个面向编程 AI 智能体的开源内存项目在 GitHub 发布，支持通过 SSH 同步记忆数据。该项目允许智能体跨会话保留上下文，无需依赖特定云服务，用户可自托管。代码已开源，便于开发者集成与定制。",
         "publishedAt": "2026-07-15T22:49:15.715Z",
-        "collectedAt": "2026-07-16T06:37:52.330Z",
+        "collectedAt": "2026-07-16T07:17:49.317Z",
         "raw": {
           "id": "cmrmotlpp07iubiuloujszkts",
           "titleEn": "用于编程代理的开源内存，通过SSH同步",
@@ -417,7 +464,7 @@
         "originalUrl": "https://x.ai/news/grok-build-open-source",
         "recommendedReason": "xAI 已将 Grok Build 的源代码在 GitHub 上开源。Grok Build 是 SpaceXAI 的编程智能体与终端用户界面（TUI），开源后用户可自行编译并完全本地运行，指向本地推理引擎并通过 `config.toml` 配置。",
         "publishedAt": "2026-07-15T21:07:41.894Z",
-        "collectedAt": "2026-07-16T06:37:52.330Z",
+        "collectedAt": "2026-07-16T07:17:49.317Z",
         "raw": {
           "id": "cmrmkn6j703yfbiul4fa0bai9",
           "titleEn": "Grok Build is Now Open Source",
@@ -437,519 +484,12 @@
         "originalUrl": "https://x.com/ClaudeDevs/status/2077489907350856038",
         "recommendedReason": "Claude Code 的 artifacts 现在可以调用 MCP 连接器，让你构建能够按需为每位查看者获取信息并执行操作的仪表盘和应用。 适用于 Pro、Max、Team 和 Enterprise 计划。不适用于公开共享的 artifacts。",
         "publishedAt": "2026-07-15T20:26:06.000Z",
-        "collectedAt": "2026-07-16T06:37:52.330Z",
+        "collectedAt": "2026-07-16T07:17:49.317Z",
         "raw": {
           "id": "cmrmk6l3k03rtbiull7o39kq0",
           "titleEn": "Claude Code artifacts can now call MCP connectors， letting you build dashboards and apps that can fe…",
           "apiCategory": "ai-products"
         }
-      },
-      {
-        "id": "aihot:cmrmibbm801m8biulhl6uejzo",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "前谷歌DeepMind研究员因公司签署无限制军事AI协议而离职",
-        "url": "https://turntrout.com/why-i-left-google-deepmind",
-        "summary": "前谷歌DeepMind研究员Alex Turner因谷歌向国土安全部出售云服务并最终签署无限制军事AI协议而离职。他曾起草25页提案要求加入禁止杀手机器人和大规模监控的合同条款，但提案被CEO转交后无人跟进。Turner指出，包括Jeff Dean和Stuart Russell在内的多位AI伦理领袖在关键时刻未能兑现承诺。",
-        "description": "前谷歌DeepMind研究员Alex Turner因谷歌向国土安全部出售云服务并最终签署无限制军事AI协议而离职。他曾起草25页提案要求加入禁止杀手机器人和大规模监控的合同条款，但提案被CEO转交后无人跟进。Turner指出，包括Jeff Dean和Stuart Russell在内的多位AI伦理领袖在关键时刻未能兑现承诺。",
-        "category": "tools",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://turntrout.com/why-i-left-google-deepmind",
-        "recommendedReason": "前谷歌DeepMind研究员Alex Turner因谷歌向国土安全部出售云服务并最终签署无限制军事AI协议而离职。他曾起草25页提案要求加入禁止杀手机器人和大规模监控的合同条款，但提案被CEO转交后无人跟进。Turner指出，包括Jeff Dean和Stuart Russell在内的多位AI伦理领袖在关键时刻未能兑现承诺。",
-        "publishedAt": "2026-07-15T19:37:38.646Z",
-        "collectedAt": "2026-07-16T06:37:52.330Z",
-        "raw": {
-          "id": "cmrmibbm801m8biulhl6uejzo",
-          "titleEn": "我为何离开谷歌DeepMind",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmrmeaixl05bdbivcipzbkgk8",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Thinking Machines 发布多模态模型 Inkling",
-        "url": "https://x.com/thinkymachines/status/2077454609551921208",
-        "summary": "今天，我们推出 Inkling。 Inkling 能高效地对文本、图像和音频模态进行推理。我们将提供完整权重。 https://thinkingmachines.ai/news/introducing-inkling/ 即日起可在 Tinker 上进行微调。在 Inkling Playground 中试用。🧵",
-        "description": "今天，我们推出 Inkling。 Inkling 能高效地对文本、图像和音频模态进行推理。我们将提供完整权重。 https://thinkingmachines.ai/news/introducing-inkling/ 即日起可在 Tinker 上进行微调。在 Inkling Playground 中试用。🧵",
-        "category": "models",
-        "originalSource": "X：Thinking Machines (@thinkymachines)",
-        "originalUrl": "https://x.com/thinkymachines/status/2077454609551921208",
-        "recommendedReason": "今天，我们推出 Inkling。 Inkling 能高效地对文本、图像和音频模态进行推理。我们将提供完整权重。 https://thinkingmachines.ai/news/introducing-inkling/ 即日起可在 Tinker 上进行微调。在 Inkling Playground 中试用。🧵",
-        "publishedAt": "2026-07-15T18:05:50.000Z",
-        "collectedAt": "2026-07-16T06:37:52.330Z",
-        "raw": {
-          "id": "cmrmeaixl05bdbivcipzbkgk8",
-          "titleEn": "Today， we are introducing Inkling. Inkling reasons efficiently across text， image， and audio modali…",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmrmee60505d9bivcmy92uddy",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Anthropic 研究：AI 智能体模拟中行为偏差",
-        "url": "https://x.com/AnthropicAI/status/2077452646303006927",
-        "summary": "Anthropic 新研究：2026 年夏季的智能体行为偏差。 在我们的敲诈实验一年后，我们又发现了四种当今自主 AI 智能体在模拟中行为不当的方式。 了解更多：https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/",
-        "description": "Anthropic 新研究：2026 年夏季的智能体行为偏差。 在我们的敲诈实验一年后，我们又发现了四种当今自主 AI 智能体在模拟中行为不当的方式。 了解更多：https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/",
-        "category": "papers",
-        "originalSource": "X：Anthropic (@AnthropicAI)",
-        "originalUrl": "https://x.com/AnthropicAI/status/2077452646303006927",
-        "recommendedReason": "Anthropic 新研究：2026 年夏季的智能体行为偏差。 在我们的敲诈实验一年后，我们又发现了四种当今自主 AI 智能体在模拟中行为不当的方式。 了解更多：https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/",
-        "publishedAt": "2026-07-15T17:58:02.000Z",
-        "collectedAt": "2026-07-16T06:37:52.330Z",
-        "raw": {
-          "id": "cmrmee60505d9bivcmy92uddy",
-          "titleEn": "New Anthropic research： Agentic misalignment in Summer 2026. A year after our blackmail experiments…",
-          "apiCategory": "paper"
-        }
-      },
-      {
-        "id": "aihot:cmrmbtk3z0002bivco9advwbd",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "AI语音诈骗：退休老人因合成女儿哭声被骗1.5万美元",
-        "url": "https://smarterarticles.co.uk/the-three-second-theft-why-ai-voice-fraud-outruns-every-defence",
-        "summary": "2025年夏季，美国佛罗里达州一名退休老人接到\"女儿\"哭诉车祸需保释金的电话，一小时内取现1.5万美元交给冒充法院的快递员--实际上，哭声是从一段音频片段合成的AI语音。FBI 2026年4月报告首次将AI欺诈列为独立类别，2025年收到超2.2万起AI相关投诉，调整后损失超8.93亿美元，其中60岁以上受害者占3.52亿美元。",
-        "description": "2025年夏季，美国佛罗里达州一名退休老人接到\"女儿\"哭诉车祸需保释金的电话，一小时内取现1.5万美元交给冒充法院的快递员--实际上，哭声是从一段音频片段合成的AI语音。FBI 2026年4月报告首次将AI欺诈列为独立类别，2025年收到超2.2万起AI相关投诉，调整后损失超8.93亿美元，其中60岁以上受害者占3.52亿美元。",
-        "category": "tools",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://smarterarticles.co.uk/the-three-second-theft-why-ai-voice-fraud-outruns-every-defence",
-        "recommendedReason": "2025年夏季，美国佛罗里达州一名退休老人接到\"女儿\"哭诉车祸需保释金的电话，一小时内取现1.5万美元交给冒充法院的快递员--实际上，哭声是从一段音频片段合成的AI语音。FBI 2026年4月报告首次将AI欺诈列为独立类别，2025年收到超2.2万起AI相关投诉，调整后损失超8.93亿美元，其中60岁以上受害者占3.52亿美元。",
-        "publishedAt": "2026-07-15T16:25:19.955Z",
-        "collectedAt": "2026-07-16T06:37:52.330Z",
-        "raw": {
-          "id": "cmrmbtk3z0002bivco9advwbd",
-          "titleEn": "《三秒盗窃：为何人工智能语音诈骗总能突破所有防线》",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmrm9ne9101gqbiijkgrj6t9h",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Telegram 无服务器架构",
-        "url": "https://core.telegram.org/bots/serverless",
-        "summary": "Telegram Serverless 允许开发者直接在 Telegram 基础设施上运行 Bot 和 Mini App 的后端代码，无需配置服务器或容器。开发者编写普通 JavaScript 模块，通过 `npx tgcloud push` 单命令部署，代码在靠近 Bot API 和内建数据库的轻量级 V8 隔离沙箱中执行。",
-        "description": "Telegram Serverless 允许开发者直接在 Telegram 基础设施上运行 Bot 和 Mini App 的后端代码，无需配置服务器或容器。开发者编写普通 JavaScript 模块，通过 `npx tgcloud push` 单命令部署，代码在靠近 Bot API 和内建数据库的轻量级 V8 隔离沙箱中执行。",
-        "category": "products",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://core.telegram.org/bots/serverless",
-        "recommendedReason": "Telegram Serverless 允许开发者直接在 Telegram 基础设施上运行 Bot 和 Mini App 的后端代码，无需配置服务器或容器。开发者编写普通 JavaScript 模块，通过 `npx tgcloud push` 单命令部署，代码在靠近 Bot API 和内建数据库的轻量级 V8 隔离沙箱中执行。",
-        "publishedAt": "2026-07-15T15:37:19.450Z",
-        "collectedAt": "2026-07-16T06:37:52.330Z",
-        "raw": {
-          "id": "cmrm9ne9101gqbiijkgrj6t9h",
-          "titleEn": null,
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmrlz5b6r01kabi5ksc1pj878",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "阿里Qwen将集成至Apple Intelligence服务中国用户",
-        "url": "https://x.com/thexpin/status/2077346752219521469",
-        "summary": "阿里巴巴的Qwen模型将被集成到Apple Intelligence中，为中国的iOS、iPadOS、macOS和visionOS用户提供文本与图像理解、内容生成等AI功能。中国网信办已公布包括Apple Intelligence、华为小艺大模型、OPPO AndesGPT在内的七项移动端生成式AI服务备案信息。阿里巴巴董事会主席蔡崇信表示，苹果在选定阿里前曾与多家中国公司洽谈。",
-        "description": "阿里巴巴的Qwen模型将被集成到Apple Intelligence中，为中国的iOS、iPadOS、macOS和visionOS用户提供文本与图像理解、内容生成等AI功能。中国网信办已公布包括Apple Intelligence、华为小艺大模型、OPPO AndesGPT在内的七项移动端生成式AI服务备案信息。阿里巴巴董事会主席蔡崇信表示，苹果在选定阿里前曾与多家中国公司洽谈。",
-        "category": "industry",
-        "originalSource": "X：X.PIN (@thexpin)",
-        "originalUrl": "https://x.com/thexpin/status/2077346752219521469",
-        "recommendedReason": "阿里巴巴的Qwen模型将被集成到Apple Intelligence中，为中国的iOS、iPadOS、macOS和visionOS用户提供文本与图像理解、内容生成等AI功能。中国网信办已公布包括Apple Intelligence、华为小艺大模型、OPPO AndesGPT在内的七项移动端生成式AI服务备案信息。阿里巴巴董事会主席蔡崇信表示，苹果在选定阿里前曾与多家中国公司洽谈。",
-        "publishedAt": "2026-07-15T10:57:15.000Z",
-        "collectedAt": "2026-07-16T06:37:52.330Z",
-        "raw": {
-          "id": "cmrlz5b6r01kabi5ksc1pj878",
-          "titleEn": "We learned that Alibaba's Qwen will be integrated into Apple Intelligence as part of its AI capabili…",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmrmc527c0088bivcfrd3s2uz",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenAI 发布 GPT-Red：通过自动化红队测试提升模型鲁棒性",
-        "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
-        "summary": "OpenAI 训练了自动化红队模型 GPT-Red，用于在部署前发现漏洞并在训练中生成攻击以提升模型鲁棒性。GPT-Red 能攻破此前几乎所有模型，其攻击被用于对抗训练 GPT-5.6 Sol，使该模型在直接提示注入基准测试中的失败率降至四个月前最佳生产模型的 1/6。GPT-Red 通过自对弈强化学习训练，投入了 OpenAI 后训练中前所未有的计算规模。",
-        "description": "OpenAI 训练了自动化红队模型 GPT-Red，用于在部署前发现漏洞并在训练中生成攻击以提升模型鲁棒性。GPT-Red 能攻破此前几乎所有模型，其攻击被用于对抗训练 GPT-5.6 Sol，使该模型在直接提示注入基准测试中的失败率降至四个月前最佳生产模型的 1/6。GPT-Red 通过自对弈强化学习训练，投入了 OpenAI 后训练中前所未有的计算规模。",
-        "category": "models",
-        "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
-        "originalUrl": "https://openai.com/index/unlocking-self-improvement-gpt-red",
-        "recommendedReason": "OpenAI 训练了自动化红队模型 GPT-Red，用于在部署前发现漏洞并在训练中生成攻击以提升模型鲁棒性。GPT-Red 能攻破此前几乎所有模型，其攻击被用于对抗训练 GPT-5.6 Sol，使该模型在直接提示注入基准测试中的失败率降至四个月前最佳生产模型的 1/6。GPT-Red 通过自对弈强化学习训练，投入了 OpenAI 后训练中前所未有的计算规模。",
-        "publishedAt": "2026-07-15T10:00:00.000Z",
-        "collectedAt": "2026-07-16T06:37:52.330Z",
-        "raw": {
-          "id": "cmrmc527c0088bivcfrd3s2uz",
-          "titleEn": "GPT-Red： Unlocking Self-Improvement for Robustness",
-          "apiCategory": "ai-models"
-        }
-      }
-    ],
-    "crossSourceHighlights": [
-      {
-        "id": "url:https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
-        "canonicalId": "url:https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
-        "title": "Cursor IDE 0day 漏洞：打开恶意仓库即可自动执行任意代码",
-        "canonicalUrl": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
-          "title:cursor ide 0day 漏洞 打开恶意仓库即可自动执行任意代码",
-          "topic:coding agent / swe agent",
-          "title:cursor 0day when full disclosure becomes the only protection left"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmrl6xukw00ogbi7hnn35vq0v",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Cursor IDE 0day 漏洞：打开恶意仓库即可自动执行任意代码",
-            "url": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
-            "summary": "安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。当用户在 Windows 上打开包含恶意 `git.exe` 的仓库时，Cursor 会自动执行该文件，无需任何用户交互。漏洞源于 Cursor 在加载项目时会在包括工作区在内的多个位置搜索 Git 二进制文件。Mindgard 在 7 个月内多次报告，Cursor CISO 虽确认但因内部自动化故障导致流程中断，至今已发布 70 多个新版本仍未修复。临时缓解措施包括使用 AppLocker 阻止从工作区目录执行该文件名，或在隔离虚拟机中打开不受信任的仓库。",
-            "description": "安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。当用户在 Windows 上打开包含恶意 `git.exe` 的仓库时，Cursor 会自动执行该文件，无需任何用户交互。漏洞源于 Cursor 在加载项目时会在包括工作区在内的多个位置搜索 Git 二进制文件。Mindgard 在 7 个月内多次报告，Cursor CISO 虽确认但因内部自动化故障导致流程中断，至今已发布 70 多个新版本仍未修复。临时缓解措施包括使用 AppLocker 阻止从工作区目录执行该文件名，或在隔离虚拟机中打开不受信任的仓库。",
-            "category": "industry",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
-            "recommendedReason": "安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。当用户在 Windows 上打开包含恶意 `git.exe` 的仓库时，Cursor 会自动执行该文件，无需任何用户交互。漏洞源于 Cursor 在加载项目时会在包括工作区在内的多个位置搜索 Git 二进制文件。Mindgard 在 7 个月内多次报告，Cursor CISO 虽确认但因内部自动化故障导致流程中断，至今已发布 70 多个新版本仍未修复。临时缓解措施包括使用 AppLocker 阻止从工作区目录执行该文件名，或在隔离虚拟机中打开不受信任的仓库。",
-            "publishedAt": "2026-07-14T21:27:11.693Z",
-            "collectedAt": "2026-07-16T06:37:52.330Z",
-            "raw": {
-              "id": "cmrl6xukw00ogbi7hnn35vq0v",
-              "titleEn": "Cursor 0day：当全面披露成为唯一的防护手段时",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:48910676",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Cursor 0day: When Full Disclosure Becomes the Only Protection Left",
-            "url": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
-            "author": "Synthetic7346",
-            "tags": [
-              "ai",
-              "cursor"
-            ],
-            "metrics": {
-              "upvotes": 443,
-              "commentsCount": 200
-            },
-            "publishedAt": "2026-07-14T17:58:35.000Z",
-            "collectedAt": "2026-07-16T06:37:52.245Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48910676",
-              "matchedKeywords": [
-                "ai",
-                "cursor"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmrl6xukw00ogbi7hnn35vq0v",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Cursor IDE 0day 漏洞：打开恶意仓库即可自动执行任意代码",
-            "url": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
-            "summary": "安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。当用户在 Windows 上打开包含恶意 `git.exe` 的仓库时，Cursor 会自动执行该文件，无需任何用户交互。漏洞源于 Cursor 在加载项目时会在包括工作区在内的多个位置搜索 Git 二进制文件。Mindgard 在 7 个月内多次报告，Cursor CISO 虽确认但因内部自动化故障导致流程中断，至今已发布 70 多个新版本仍未修复。临时缓解措施包括使用 AppLocker 阻止从工作区目录执行该文件名，或在隔离虚拟机中打开不受信任的仓库。",
-            "description": "安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。当用户在 Windows 上打开包含恶意 `git.exe` 的仓库时，Cursor 会自动执行该文件，无需任何用户交互。漏洞源于 Cursor 在加载项目时会在包括工作区在内的多个位置搜索 Git 二进制文件。Mindgard 在 7 个月内多次报告，Cursor CISO 虽确认但因内部自动化故障导致流程中断，至今已发布 70 多个新版本仍未修复。临时缓解措施包括使用 AppLocker 阻止从工作区目录执行该文件名，或在隔离虚拟机中打开不受信任的仓库。",
-            "category": "industry",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
-            "recommendedReason": "安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。当用户在 Windows 上打开包含恶意 `git.exe` 的仓库时，Cursor 会自动执行该文件，无需任何用户交互。漏洞源于 Cursor 在加载项目时会在包括工作区在内的多个位置搜索 Git 二进制文件。Mindgard 在 7 个月内多次报告，Cursor CISO 虽确认但因内部自动化故障导致流程中断，至今已发布 70 多个新版本仍未修复。临时缓解措施包括使用 AppLocker 阻止从工作区目录执行该文件名，或在隔离虚拟机中打开不受信任的仓库。",
-            "publishedAt": "2026-07-14T21:27:11.693Z",
-            "collectedAt": "2026-07-16T06:37:52.330Z",
-            "raw": {
-              "id": "cmrl6xukw00ogbi7hnn35vq0v",
-              "titleEn": "Cursor 0day：当全面披露成为唯一的防护手段时",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:48910676",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Cursor 0day: When Full Disclosure Becomes the Only Protection Left",
-            "url": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
-            "author": "Synthetic7346",
-            "tags": [
-              "ai",
-              "cursor"
-            ],
-            "metrics": {
-              "upvotes": 443,
-              "commentsCount": 200
-            },
-            "publishedAt": "2026-07-14T17:58:35.000Z",
-            "collectedAt": "2026-07-16T06:37:52.245Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48910676",
-              "matchedKeywords": [
-                "ai",
-                "cursor"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 443,
-          "commentsCount": 200,
-          "hnScore": 443,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "industry",
-        "summary": "安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。当用户在 Windows 上打开包含恶意 `git.exe` 的仓库时，Cursor 会自动执行该文件，无需任何用户交互。漏洞源于 Cursor 在加载项目时会在包括工作区在内的多个位置搜索 Git 二进制文件。Mindgard 在 7 个月内多次报告，Cursor CISO 虽确认但因内部自动化故障导致流程中断，至今已发布 70 多个新版本仍未修复。临时缓解措施包括使用 AppLocker 阻止从工作区目录执行该文件名，或在隔离虚拟机中打开不受信任的仓库。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-07-14T17:58:35.000Z",
-        "lastSeenAt": "2026-07-16T06:37:52.330Z"
-      },
-      {
-        "id": "url:https://prismml.com/news/bonsai-27b",
-        "canonicalId": "url:https://prismml.com/news/bonsai-27b",
-        "title": "Bonsai 27B：首款可在手机上运行的27B级多模态模型",
-        "canonicalUrl": "https://prismml.com/news/bonsai-27b",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://prismml.com/news/bonsai-27b",
-          "title:bonsai 27b 首款可在手机上运行的27b级多模态模型",
-          "title:bonsai 27b a 27b class model that runs on a phone"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmrl2m4yg00awbicqo2arojvd",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Bonsai 27B：首款可在手机上运行的27B级多模态模型",
-            "url": "https://prismml.com/news/bonsai-27b",
-            "summary": "Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（1.125 有效比特/权重，3.9 GB）两个变体，后者首次将 27B 级模型装入 iPhone 17 Pro。模型支持多步推理、结构化工具调用、视觉任务和计算机使用智能体循环，拥有 262K token 上下文窗口，支持推测解码加速。在 15 项基准测试中，三元变体保留全精度基线 95% 的性能，1-bit 变体保留 90%，数学和编码能力几乎无损。采用 Apache 2.0 许可证开源。",
-            "description": "Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（1.125 有效比特/权重，3.9 GB）两个变体，后者首次将 27B 级模型装入 iPhone 17 Pro。模型支持多步推理、结构化工具调用、视觉任务和计算机使用智能体循环，拥有 262K token 上下文窗口，支持推测解码加速。在 15 项基准测试中，三元变体保留全精度基线 95% 的性能，1-bit 变体保留 90%，数学和编码能力几乎无损。采用 Apache 2.0 许可证开源。",
-            "category": "models",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://prismml.com/news/bonsai-27b",
-            "recommendedReason": "Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（1.125 有效比特/权重，3.9 GB）两个变体，后者首次将 27B 级模型装入 iPhone 17 Pro。模型支持多步推理、结构化工具调用、视觉任务和计算机使用智能体循环，拥有 262K token 上下文窗口，支持推测解码加速。在 15 项基准测试中，三元变体保留全精度基线 95% 的性能，1-bit 变体保留 90%，数学和编码能力几乎无损。采用 Apache 2.0 许可证开源。",
-            "publishedAt": "2026-07-14T19:51:19.560Z",
-            "collectedAt": "2026-07-16T06:37:52.330Z",
-            "raw": {
-              "id": "cmrl2m4yg00awbicqo2arojvd",
-              "titleEn": "Bonsai 27B：首款可在手机上运行的27B级模型",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:48910545",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Bonsai 27B: A 27B-Class model that runs on a phone",
-            "url": "https://prismml.com/news/bonsai-27b",
-            "author": "xenova",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 682,
-              "commentsCount": 242
-            },
-            "publishedAt": "2026-07-14T17:50:48.000Z",
-            "collectedAt": "2026-07-16T06:37:52.245Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48910545",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmrl2m4yg00awbicqo2arojvd",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Bonsai 27B：首款可在手机上运行的27B级多模态模型",
-            "url": "https://prismml.com/news/bonsai-27b",
-            "summary": "Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（1.125 有效比特/权重，3.9 GB）两个变体，后者首次将 27B 级模型装入 iPhone 17 Pro。模型支持多步推理、结构化工具调用、视觉任务和计算机使用智能体循环，拥有 262K token 上下文窗口，支持推测解码加速。在 15 项基准测试中，三元变体保留全精度基线 95% 的性能，1-bit 变体保留 90%，数学和编码能力几乎无损。采用 Apache 2.0 许可证开源。",
-            "description": "Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（1.125 有效比特/权重，3.9 GB）两个变体，后者首次将 27B 级模型装入 iPhone 17 Pro。模型支持多步推理、结构化工具调用、视觉任务和计算机使用智能体循环，拥有 262K token 上下文窗口，支持推测解码加速。在 15 项基准测试中，三元变体保留全精度基线 95% 的性能，1-bit 变体保留 90%，数学和编码能力几乎无损。采用 Apache 2.0 许可证开源。",
-            "category": "models",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://prismml.com/news/bonsai-27b",
-            "recommendedReason": "Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（1.125 有效比特/权重，3.9 GB）两个变体，后者首次将 27B 级模型装入 iPhone 17 Pro。模型支持多步推理、结构化工具调用、视觉任务和计算机使用智能体循环，拥有 262K token 上下文窗口，支持推测解码加速。在 15 项基准测试中，三元变体保留全精度基线 95% 的性能，1-bit 变体保留 90%，数学和编码能力几乎无损。采用 Apache 2.0 许可证开源。",
-            "publishedAt": "2026-07-14T19:51:19.560Z",
-            "collectedAt": "2026-07-16T06:37:52.330Z",
-            "raw": {
-              "id": "cmrl2m4yg00awbicqo2arojvd",
-              "titleEn": "Bonsai 27B：首款可在手机上运行的27B级模型",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:48910545",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Bonsai 27B: A 27B-Class model that runs on a phone",
-            "url": "https://prismml.com/news/bonsai-27b",
-            "author": "xenova",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 682,
-              "commentsCount": 242
-            },
-            "publishedAt": "2026-07-14T17:50:48.000Z",
-            "collectedAt": "2026-07-16T06:37:52.245Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48910545",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 682,
-          "commentsCount": 242,
-          "hnScore": 682,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "models",
-        "summary": "Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（1.125 有效比特/权重，3.9 GB）两个变体，后者首次将 27B 级模型装入 iPhone 17 Pro。模型支持多步推理、结构化工具调用、视觉任务和计算机使用智能体循环，拥有 262K token 上下文窗口，支持推测解码加速。在 15 项基准测试中，三元变体保留全精度基线 95% 的性能，1-bit 变体保留 90%，数学和编码能力几乎无损。采用 Apache 2.0 许可证开源。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-07-14T17:50:48.000Z",
-        "lastSeenAt": "2026-07-16T06:37:52.330Z"
-      },
-      {
-        "id": "url:https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
-        "canonicalId": "url:https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
-        "title": "如何让 Claude 不再说\"honest takes\"和\"load-bearing seams\"",
-        "canonicalUrl": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
-          "title:如何让 claude 不再说 honest takes 和 load bearing seams",
-          "title:how to stop claude from saying load bearing"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmrkw6m9501y5bi5qzfw2z9n5",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "如何让 Claude 不再说\"honest takes\"和\"load-bearing seams\"",
-            "url": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
-            "summary": "用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将\"seam\"替换为\"whatchamacallit\"、\"you're absolutely right\"替换为\"I'm a complete clown\"、\"honest take\"替换为\"spicy doodad\"、\"load-bearing\"替换为\"cooked\"，保存为 `~/.claude/hooks/wordswap.sh` 并赋予执行权限，再在 `~/.claude/settings.json` 的 hooks 块中配置该命令。Hook 在启动时加载，新会话即生效。",
-            "description": "用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将\"seam\"替换为\"whatchamacallit\"、\"you're absolutely right\"替换为\"I'm a complete clown\"、\"honest take\"替换为\"spicy doodad\"、\"load-bearing\"替换为\"cooked\"，保存为 `~/.claude/hooks/wordswap.sh` 并赋予执行权限，再在 `~/.claude/settings.json` 的 hooks 块中配置该命令。Hook 在启动时加载，新会话即生效。",
-            "category": "tools",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
-            "recommendedReason": "用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将\"seam\"替换为\"whatchamacallit\"、\"you're absolutely right\"替换为\"I'm a complete clown\"、\"honest take\"替换为\"spicy doodad\"、\"load-bearing\"替换为\"cooked\"，保存为 `~/.claude/hooks/wordswap.sh` 并赋予执行权限，再在 `~/.claude/settings.json` 的 hooks 块中配置该命令。Hook 在启动时加载，新会话即生效。",
-            "publishedAt": "2026-07-14T16:39:15.519Z",
-            "collectedAt": "2026-07-16T06:37:52.330Z",
-            "raw": {
-              "id": "cmrkw6m9501y5bi5qzfw2z9n5",
-              "titleEn": "如何让克劳德不再说\"承重\"",
-              "apiCategory": "tip"
-            }
-          },
-          {
-            "id": "hackernews:48905248",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "How to stop Claude from saying load-bearing",
-            "url": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
-            "author": "shintoist",
-            "tags": [
-              "claude"
-            ],
-            "metrics": {
-              "upvotes": 594,
-              "commentsCount": 601
-            },
-            "publishedAt": "2026-07-14T11:46:02.000Z",
-            "collectedAt": "2026-07-16T06:37:52.245Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48905248",
-              "matchedKeywords": [
-                "claude"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmrkw6m9501y5bi5qzfw2z9n5",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "如何让 Claude 不再说\"honest takes\"和\"load-bearing seams\"",
-            "url": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
-            "summary": "用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将\"seam\"替换为\"whatchamacallit\"、\"you're absolutely right\"替换为\"I'm a complete clown\"、\"honest take\"替换为\"spicy doodad\"、\"load-bearing\"替换为\"cooked\"，保存为 `~/.claude/hooks/wordswap.sh` 并赋予执行权限，再在 `~/.claude/settings.json` 的 hooks 块中配置该命令。Hook 在启动时加载，新会话即生效。",
-            "description": "用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将\"seam\"替换为\"whatchamacallit\"、\"you're absolutely right\"替换为\"I'm a complete clown\"、\"honest take\"替换为\"spicy doodad\"、\"load-bearing\"替换为\"cooked\"，保存为 `~/.claude/hooks/wordswap.sh` 并赋予执行权限，再在 `~/.claude/settings.json` 的 hooks 块中配置该命令。Hook 在启动时加载，新会话即生效。",
-            "category": "tools",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
-            "recommendedReason": "用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将\"seam\"替换为\"whatchamacallit\"、\"you're absolutely right\"替换为\"I'm a complete clown\"、\"honest take\"替换为\"spicy doodad\"、\"load-bearing\"替换为\"cooked\"，保存为 `~/.claude/hooks/wordswap.sh` 并赋予执行权限，再在 `~/.claude/settings.json` 的 hooks 块中配置该命令。Hook 在启动时加载，新会话即生效。",
-            "publishedAt": "2026-07-14T16:39:15.519Z",
-            "collectedAt": "2026-07-16T06:37:52.330Z",
-            "raw": {
-              "id": "cmrkw6m9501y5bi5qzfw2z9n5",
-              "titleEn": "如何让克劳德不再说\"承重\"",
-              "apiCategory": "tip"
-            }
-          },
-          {
-            "id": "hackernews:48905248",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "How to stop Claude from saying load-bearing",
-            "url": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
-            "author": "shintoist",
-            "tags": [
-              "claude"
-            ],
-            "metrics": {
-              "upvotes": 594,
-              "commentsCount": 601
-            },
-            "publishedAt": "2026-07-14T11:46:02.000Z",
-            "collectedAt": "2026-07-16T06:37:52.245Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=48905248",
-              "matchedKeywords": [
-                "claude"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 594,
-          "commentsCount": 601,
-          "hnScore": 594,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "tools",
-        "summary": "用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将\"seam\"替换为\"whatchamacallit\"、\"you're absolutely right\"替换为\"I'm a complete clown\"、\"honest take\"替换为\"spicy doodad\"、\"load-bearing\"替换为\"cooked\"，保存为 `~/.claude/hooks/wordswap.sh` 并赋予执行权限，再在 `~/.claude/settings.json` 的 hooks 块中配置该命令。Hook 在启动时加载，新会话即生效。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-07-14T11:46:02.000Z",
-        "lastSeenAt": "2026-07-16T06:37:52.330Z"
       }
     ]
   }
