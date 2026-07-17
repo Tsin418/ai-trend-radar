@@ -1,177 +1,221 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-17T14:09:24.842Z",
+  "generatedAt": "2026-07-17T15:07:16.409Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2607.15277v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models",
-        "url": "https://arxiv.org/pdf/2607.15277v1",
-        "description": "In-context learning is commonly interpreted as a form of conditional inference, in which the prompt specifies a context and the model's output is treated as an estimate of the corresponding conditional distribution. If this interpretation holds, then LLM estimates should satisfy basic probabilistic identities. In particular, the law of total probability asserts that prior-weighted conditional distributions aggregate into population-level marginals over any valid partition of the population. In t",
-        "summary": "In-context learning is commonly interpreted as a form of conditional inference, in which the prompt specifies a context and the model's output is treated as an estimate of the corresponding conditional distribution. If this interpretation holds, then LLM estimates should satisfy basic probabilistic identities. In particular, the law of total probability asserts that prior-weighted conditional distributions aggregate into population-level marginals over any valid partition of the population. In this work, we investigate to what extent LLM estimates adhere to this self-consistency principle. We use binary trees as an evaluation scaffold to recursively partition a population into increasingly fine-grained subpopulations. We then prompt LLMs with verbalized subpopulation descriptions in context, aggregate the resulting estimates back into population-level estimates, and compare them across partitions of varying granularity. Applying this protocol across problem domains and state-of-the-art frontier models, we show widespread violations of basic consistency properties. An in-depth study of persona prompting reveals a pattern we call the macro fallacy: estimates reconstructed from more fine-grained subpopulation responses are often better aligned with human reference data than direct population-level estimates. This effect persists across variations in tree structure and estimation task, and can be partially recovered through implicit prompting. Together, these findings suggest that models possess relevant subpopulation knowledge but do not reliably propagate it into aggregate estimates. This gap establishes statistical self-consistency as an unsaturated, reference-free criterion for evaluating LLMs.",
-        "author": "Patrik Wolf, Thomas Kleine Buening, Andreas Krause, Celestine Mendler-Dünner",
+        "id": "huggingface_models:audarai/Audar-ASR-V1-Turbo",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "audarai/Audar-ASR-V1-Turbo",
+        "url": "https://huggingface.co/audarai/Audar-ASR-V1-Turbo",
         "tags": [
-          "cs.CL",
-          "llm",
-          "evaluation"
+          "safetensors",
+          "gguf",
+          "automatic-speech-recognition",
+          "asr",
+          "speech-recognition",
+          "arabic",
+          "arabic-asr",
+          "dialectal-arabic",
+          "emirati",
+          "gulf-arabic",
+          "streaming",
+          "realtime",
+          "llama-cpp",
+          "audar",
+          "ar",
+          "en",
+          "license:other",
+          "region:us",
+          "conversational"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-07-16T17:59:31Z",
-        "updatedAt": "2026-07-16T17:59:31Z",
-        "collectedAt": "2026-07-17T14:09:17.347Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.15277v1",
-          "authors": [
-            "Patrik Wolf",
-            "Thomas Kleine Buening",
-            "Andreas Krause",
-            "Celestine Mendler-Dünner"
-          ]
+        "category": "automatic-speech-recognition",
+        "metrics": {
+          "downloads": 1198,
+          "likes": 3
         },
-        "recommendedReason": "Matched AI developer keywords: llm, evaluation"
+        "publishedAt": "2026-04-23T17:39:50.000Z",
+        "updatedAt": "2026-07-17T15:05:05.000Z",
+        "collectedAt": "2026-07-17T15:07:16.568Z",
+        "raw": {
+          "pipelineTag": "automatic-speech-recognition"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.15273v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators",
-        "url": "https://arxiv.org/pdf/2607.15273v1",
-        "description": "MeanFlow generators achieve fast few-step sampling by predicting average velocities over time intervals, making them attractive for efficient generation. Reinforcement learning (RL) has become a powerful way to align diffusion and flow models with human preferences and task-specific objectives. In particular, DiffusionNFT offers an efficient forward-process RL framework that does not require reverse-process trajectories or likelihood estimation. However, applying such RL methods to MeanFlow rema",
-        "summary": "MeanFlow generators achieve fast few-step sampling by predicting average velocities over time intervals, making them attractive for efficient generation. Reinforcement learning (RL) has become a powerful way to align diffusion and flow models with human preferences and task-specific objectives. In particular, DiffusionNFT offers an efficient forward-process RL framework that does not require reverse-process trajectories or likelihood estimation. However, applying such RL methods to MeanFlow remains underexplored. DiffusionNFT optimizes instantaneous velocities, whereas MeanFlow samples with average velocities. To bridge this gap, we introduce MeanFlowNFT. Inspired by the MeanFlow identity, which bridges average and instantaneous velocities, we construct an induced instantaneous-velocity predictor. We apply the DiffusionNFT objective to this predictor, making reward optimization well-defined for MeanFlow. Sampling remains based on the average velocity, preserving MeanFlow's fast few-step generation. We further prove that MeanFlowNFT inherits DiffusionNFT's strict policy-improvement guarantee. Experiments on image and video generation show that MeanFlowNFT consistently improves baselines. Moreover, it outperforms prior state-of-the-art RL-tuned few-step generators on most metrics ($6$ of $8$ on SD3.5-M), and can even surpass multi-step RL-tuned diffusion while using only a few sampling steps. For instance, on Wan 2.1, $4$-step MeanFlowNFT reaches a VBench score of $84.33$, surpassing $50$-step LongCat-Video RL ($82.57$).",
-        "author": "Yushi Huang, Xiangxin Zhou, Jun Zhang, Liefeng Bo, Tianyu Pang",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.CV",
-          "cs.LG",
-          "rag"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-07-16T17:59:02Z",
-        "updatedAt": "2026-07-16T17:59:02Z",
-        "collectedAt": "2026-07-17T14:09:17.347Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.15273v1",
-          "authors": [
-            "Yushi Huang",
-            "Xiangxin Zhou",
-            "Jun Zhang",
-            "Liefeng Bo",
-            "Tianyu Pang"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14046
         },
-        "recommendedReason": "Matched AI developer keywords: rag"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-07-17T15:07:16.574Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.15272v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "SciDiagramEdit: Learning to Edit Scientific Diagrams from Paper Revisions",
-        "url": "https://arxiv.org/pdf/2607.15272v1",
-        "description": "Editing the figures in a research paper is a routine and time-consuming part of everyday research practice: authors relabel components, rearrange panels, and restyle visuals as they revise their manuscripts. Automating this editing workflow under a natural-language instruction, however, is challenging, because a scientific figure is a dense infographic in which heterogeneous visual elements such as schematics, plots, photos, captions, and arrows are composed under a tight visual grammar to advan",
-        "summary": "Editing the figures in a research paper is a routine and time-consuming part of everyday research practice: authors relabel components, rearrange panels, and restyle visuals as they revise their manuscripts. Automating this editing workflow under a natural-language instruction, however, is challenging, because a scientific figure is a dense infographic in which heterogeneous visual elements such as schematics, plots, photos, captions, and arrows are composed under a tight visual grammar to advance a specific argument. To address this, we present SciDiagramEdit, a benchmark and skill-evolution framework that learns from natural paper revisions and operates on the figure's editable vector source, where users can inspect and co-edit individual primitives alongside the agent. Our benchmark mines before/after figure pairs from arXiv version histories, each grounded in the authors' own revision intent. To accommodate the diversity of editing instructions, we adopt agentic learning via skill evolution: an agentic proposer continually refines the agent's skill specification from execution traces over multiple epochs. The resulting skill progressively lifts edit accuracy on a held-out validation set, providing evidence that natural paper revisions are an effective training signal for instruction-driven figure editing.",
-        "author": "Yasheng Sun, Zezi Zeng, Yifan Yang, Chong Luo, Wenyi Wang, Ziwei Liu, Jürgen Schmidhuber",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.CL",
-          "cs.AI",
-          "agent",
-          "benchmark",
-          "agentic",
-          "workflow"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-07-16T17:58:36Z",
-        "updatedAt": "2026-07-16T17:58:36Z",
-        "collectedAt": "2026-07-17T14:09:17.347Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.15272v1",
-          "authors": [
-            "Yasheng Sun",
-            "Zezi Zeng",
-            "Yifan Yang",
-            "Chong Luo",
-            "Wenyi Wang",
-            "Ziwei Liu",
-            "Jürgen Schmidhuber"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11171
         },
-        "recommendedReason": "Matched AI developer keywords: agent, benchmark, agentic, workflow"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-07-17T15:07:16.574Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.15265v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "SceneBind: Binding What and Where Across Vision, Audio and Language",
-        "url": "https://arxiv.org/pdf/2607.15265v1",
-        "description": "We present SceneBind, an omni-modal representation of realistic scenes with joint semantic and 3D spatial understanding across vision, audio and language. Existing omni-modal encoders excel at instance-level semantics (i.e., what is present), but often lack explicit spatial structure (i.e., where it is). SceneBind addresses this gap by representing each scene as a semantic-spatial entity, combining a global semantic embedding with object-centric semantic-spatial slots. This representation explic",
-        "summary": "We present SceneBind, an omni-modal representation of realistic scenes with joint semantic and 3D spatial understanding across vision, audio and language. Existing omni-modal encoders excel at instance-level semantics (i.e., what is present), but often lack explicit spatial structure (i.e., where it is). SceneBind addresses this gap by representing each scene as a semantic-spatial entity, combining a global semantic embedding with object-centric semantic-spatial slots. This representation explicitly captures object-level semantics, spatial attributes, and uncertainty. We further propose SceneBind Matching, a semantic-spatial matching scheme that integrates global scene similarity with object alignment, supporting cross-modal scene retrieval and object grounding. To train and evaluate SceneBind, we curate a novel real-world binaural audio-visual dataset with structured semantic and spatial annotations, and propose a training protocol for aligning semantic and spatial signals across modalities. SceneBind is compatible with large-scale pretrained semantic encoders, adds lightweight spatial modeling with only a few additional tokens. It achieves state-of-the-art scene and spatial retrieval while enabling strong zero-shot transfer to downstream tasks such as audio-visual localization.",
-        "author": "Mingfei Chen, Zijun Cui, Ruoke Zhang, Hyeonggon Ryu, Eli Shlizerman",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.CV",
-          "cs.AI",
-          "cs.MM",
-          "cs.SD",
-          "embedding",
-          "alignment"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-07-16T17:55:15Z",
-        "updatedAt": "2026-07-16T17:55:15Z",
-        "collectedAt": "2026-07-17T14:09:17.347Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.15265v1",
-          "authors": [
-            "Mingfei Chen",
-            "Zijun Cui",
-            "Ruoke Zhang",
-            "Hyeonggon Ryu",
-            "Eli Shlizerman"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10129
         },
-        "recommendedReason": "Matched AI developer keywords: embedding, alignment"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-07-17T15:07:16.574Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.15263v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
-        "url": "https://arxiv.org/pdf/2607.15263v1",
-        "description": "Security-agent evaluations commonly measure peak offensive capability under generous inference budgets, emphasizing vulnerability discovery, exploit development, penetration testing, and CTF completion. Such measurements are useful but incomplete: in operational security, every reasoning step, tool call, telemetry query, and enrichment request consumes budget. We evaluate language-model security agents through this cost-success lens on offensive Cybench challenges and defensive Splunk BOTS v1 in",
-        "summary": "Security-agent evaluations commonly measure peak offensive capability under generous inference budgets, emphasizing vulnerability discovery, exploit development, penetration testing, and CTF completion. Such measurements are useful but incomplete: in operational security, every reasoning step, tool call, telemetry query, and enrichment request consumes budget. We evaluate language-model security agents through this cost-success lens on offensive Cybench challenges and defensive Splunk BOTS v1 investigation challenges. Instead of reporting only best-case success, we compare models at fixed cost levels and decompose performance by inference spend and tool spend. Our results show distinct scalingregimes for red- and blue-team tasks. Offensive CTF performance improves with additional test-time compute, and scaled open-weight models can approach frontier proprietary systems while remaining cost-competitive. Defensive SOC investigation does not scale in the same way: success depends more heavily on disciplined tool use, telemetry navigation, and selective enrichment than on raw reasoning budget alone. We argue that security-agent benchmarks should measure economic efficiency and operational fit alongside task success. Cost-aware, SOC-native evaluations provide a clearer picture of which models are practically useful today and where defensive agents still need to improve. We present an interactive website with our results https://evals.frontier.security.",
-        "author": "Paul Kassianik, Blaine Nelson, Yaron Singer",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "cs.CR",
-          "cs.AI",
-          "agent",
-          "tool use",
-          "benchmark",
-          "evaluation"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "cs.CR",
-        "language": "en",
-        "publishedAt": "2026-07-16T17:54:47Z",
-        "updatedAt": "2026-07-16T17:54:47Z",
-        "collectedAt": "2026-07-17T14:09:17.347Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.15263v1",
-          "authors": [
-            "Paul Kassianik",
-            "Blaine Nelson",
-            "Yaron Singer"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7571
         },
-        "recommendedReason": "Matched AI developer keywords: agent, tool use, benchmark, evaluation"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-07-15T16:49:30.000Z",
+        "collectedAt": "2026-07-17T15:07:16.574Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
+      },
+      {
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
+        "tags": [
+          "gradio",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5116
+        },
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-07-17T15:07:16.574Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5078
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-07-17T15:07:16.574Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Arena Leaderboard",
+        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
+        "author": "lmarena-ai",
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "static",
+        "metrics": {
+          "likes": 4946
+        },
+        "publishedAt": "2023-05-20T09:26:19.000Z",
+        "updatedAt": "2026-02-21T23:20:43.000Z",
+        "collectedAt": "2026-07-17T15:07:16.574Z",
+        "raw": {
+          "sdk": "static",
+          "emoji": "🏆🤖"
+        }
       }
     ],
     "developerBuzz": [
@@ -186,11 +230,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1197,
-          "commentsCount": 285
+          "upvotes": 1198,
+          "commentsCount": 286
         },
         "publishedAt": "2026-07-15T18:12:45.000Z",
-        "collectedAt": "2026-07-17T14:09:18.056Z",
+        "collectedAt": "2026-07-17T15:07:16.815Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48924912",
           "matchedKeywords": [
@@ -209,11 +253,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 797,
+          "upvotes": 798,
           "commentsCount": 564
         },
         "publishedAt": "2026-07-16T04:46:21.000Z",
-        "collectedAt": "2026-07-17T14:09:18.056Z",
+        "collectedAt": "2026-07-17T15:07:16.815Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48930454",
           "matchedKeywords": [
@@ -232,11 +276,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 579,
+          "upvotes": 580,
           "commentsCount": 636
         },
         "publishedAt": "2026-07-15T20:24:58.000Z",
-        "collectedAt": "2026-07-17T14:09:18.056Z",
+        "collectedAt": "2026-07-17T15:07:16.815Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48926590",
           "matchedKeywords": [
@@ -256,11 +300,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 322,
-          "commentsCount": 435
+          "upvotes": 333,
+          "commentsCount": 452
         },
         "publishedAt": "2026-07-16T20:03:23.000Z",
-        "collectedAt": "2026-07-17T14:09:18.056Z",
+        "collectedAt": "2026-07-17T15:07:16.815Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48939524",
           "matchedKeywords": [
@@ -270,30 +314,52 @@
         }
       },
       {
-        "id": "hackernews:48946010",
+        "id": "hackernews:48936451",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "Blatant AI slop just won a 25k USD DeepMind Kaggle Grand Prize",
-        "url": "https://www.kaggle.com/competitions/kaggle-measuring-agi/discussion/724918#3498423",
-        "author": "twerkmeister",
+        "title": "NotebookLM is now Gemini Notebook",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
+        "author": "xnx",
         "tags": [
-          "ai"
+          "ai",
+          "gemini"
         ],
         "metrics": {
-          "upvotes": 356,
-          "commentsCount": 200
+          "upvotes": 348,
+          "commentsCount": 171
         },
-        "publishedAt": "2026-07-17T11:30:00.000Z",
-        "collectedAt": "2026-07-17T14:09:18.056Z",
+        "publishedAt": "2026-07-16T16:08:13.000Z",
+        "collectedAt": "2026-07-17T15:07:16.815Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48946010",
+          "hnUrl": "https://news.ycombinator.com/item?id=48936451",
           "matchedKeywords": [
-            "ai"
+            "ai",
+            "gemini"
           ]
         }
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmrp0qw3s090ybitorwj6diwi",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "美团LongCat发布LoHoSearch：更难搜索智能体基准",
+        "url": "https://x.com/Meituan_LongCat/status/2078119654632124547",
+        "summary": "美团LongCat推出LoHoSearch，一个基于762万实体维基百科知识图谱自动生成问题的搜索智能体基准，旨在解决BrowseComp等现有基准趋于饱和的问题。在11个前沿模型测试中，最佳得分仅34.74%，远低于当前模型在BrowseComp上约90%的成绩；上下文策略仅带来+6.8个百分点的提升。该基准包含544道问题、11个领域，采用树与图结构，已开源。",
+        "description": "美团LongCat推出LoHoSearch，一个基于762万实体维基百科知识图谱自动生成问题的搜索智能体基准，旨在解决BrowseComp等现有基准趋于饱和的问题。在11个前沿模型测试中，最佳得分仅34.74%，远低于当前模型在BrowseComp上约90%的成绩；上下文策略仅带来+6.8个百分点的提升。该基准包含544道问题、11个领域，采用树与图结构，已开源。",
+        "category": "papers",
+        "originalSource": "X：美团 LongCat (@Meituan_LongCat)",
+        "originalUrl": "https://x.com/Meituan_LongCat/status/2078119654632124547",
+        "recommendedReason": "美团LongCat推出LoHoSearch，一个基于762万实体维基百科知识图谱自动生成问题的搜索智能体基准，旨在解决BrowseComp等现有基准趋于饱和的问题。在11个前沿模型测试中，最佳得分仅34.74%，远低于当前模型在BrowseComp上约90%的成绩；上下文策略仅带来+6.8个百分点的提升。该基准包含544道问题、11个领域，采用树与图结构，已开源。",
+        "publishedAt": "2026-07-17T14:08:29.000Z",
+        "collectedAt": "2026-07-17T15:07:17.177Z",
+        "raw": {
+          "id": "cmrp0qw3s090ybitorwj6diwi",
+          "titleEn": "BrowseComp went from 30% → 90% in 10 months. Search-agent benchmarks are saturating. So we built Lo…",
+          "apiCategory": "paper"
+        }
+      },
       {
         "id": "aihot:cmrove64p07imbitof1v9rzwz",
         "source": "aihot",
@@ -307,7 +373,7 @@
         "originalUrl": "https://www.ithome.com/0/978/277.htm",
         "recommendedReason": "苹果已向约40名就职于OpenAI的前员工发出律师函，要求保存相关文件。此前苹果起诉OpenAI及两名前员工，指控其通过挖角获取商业机密以加速AI硬件研发。苹果称已有超400名前员工在OpenAI工作，正寻求法院禁令阻止OpenAI使用苹果信息并要求归还机密。",
         "publishedAt": "2026-07-17T11:10:01.000Z",
-        "collectedAt": "2026-07-17T14:09:17.571Z",
+        "collectedAt": "2026-07-17T15:07:17.177Z",
         "raw": {
           "id": "cmrove64p07imbitof1v9rzwz",
           "titleEn": null,
@@ -327,7 +393,7 @@
         "originalUrl": "https://openai.com/index/a-scorecard-for-the-ai-age",
         "recommendedReason": "OpenAI 提出\"Useful Intelligence per Dollar\"（有用智能每美元）作为衡量 AI 投资回报的核心指标，从完成的有用工作量、成功任务的实际成本、结果可靠性三个维度评估。",
         "publishedAt": "2026-07-17T10:00:00.000Z",
-        "collectedAt": "2026-07-17T14:09:17.571Z",
+        "collectedAt": "2026-07-17T15:07:17.177Z",
         "raw": {
           "id": "cmrozfoiv08mhbitofbllzxl4",
           "titleEn": "A scorecard for the AI age",
@@ -347,7 +413,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/a2YKWmyMoyIc3GKLbXffpQ",
         "recommendedReason": "首届\"小有可为\"大赛乡村教育赛道一等奖作品\"智绘科普\"采用 Qwen3.5-397B-A17B 大语言模型与 Manim 动画引擎，通过多Agent分阶段协作与自动修复机制，将知识主题转化为可控、可编辑的教学动画。系统包含规划、草稿、实现、审查、合成五个阶段，渲染失败时可自动提取日志并修复，该工程范式可迁移至其他赛道。",
         "publishedAt": "2026-07-17T09:41:25.000Z",
-        "collectedAt": "2026-07-17T14:09:17.571Z",
+        "collectedAt": "2026-07-17T15:07:17.177Z",
         "raw": {
           "id": "cmrorbywu06cebitoixzgpb5l",
           "titleEn": "小有可为实战教程|乡村教育一等奖作品拆解",
@@ -367,7 +433,7 @@
         "originalUrl": "https://schema-harness.github.io/",
         "recommendedReason": "Schema 框架在 ARC-AGI-3 公开集上，使用 Claude Opus 4.8 和 Fable 5 达到 99% RHAE 分数，使用 GPT-5.6 Sol 达到 95.35%。该框架不修改模型权重，而是将原始观测转化为可编辑程序，联合解决状态归因和机制发现问题。此前最强模型 GPT-5.6 Sol 在半私有集上仅得 7.78%。",
         "publishedAt": "2026-07-17T08:41:53.383Z",
-        "collectedAt": "2026-07-17T14:09:17.571Z",
+        "collectedAt": "2026-07-17T15:07:17.177Z",
         "raw": {
           "id": "cmropqooe05tqbitodvnqnc6u",
           "titleEn": "Schema Harness 在 Arc-AGI-3 公开数据集上取得约 99% 的成绩",
@@ -387,7 +453,7 @@
         "originalUrl": "https://www.marktechpost.com/2026/07/17/nvidia-ai-releases-nemotron-3-embed-an-open-embedding-collection-whose-8b-checkpoint-ranks-1-on-rteb",
         "recommendedReason": "NVIDIA 发布 Nemotron 3 Embed 系列，包含三个开源 checkpoint，其中 8B-BF16 版本在 RTEB 基准上以 78.46 的平均 NDCG@10 排名第一。1B-NVFP4 版本在 Blackwell 上吞吐量比 BF16 高 2 倍，精度保留 99.5%，所有模型最大序列长度 32，768 tokens。",
         "publishedAt": "2026-07-17T07:53:02.000Z",
-        "collectedAt": "2026-07-17T14:09:17.571Z",
+        "collectedAt": "2026-07-17T15:07:17.177Z",
         "raw": {
           "id": "cmronvv4105bdbitohe86a4un",
           "titleEn": "NVIDIA AI Releases Nemotron 3 Embed： An Open Embedding Collection Whose 8B Checkpoint Ranks #1 on RTEB",
@@ -407,7 +473,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/_eaO0wmsiQFGsrE2_zW_Dg",
         "recommendedReason": "通义实验室发布 Wan-Streamer v0.2，这是一款将\"听、看、说、演\"统一进单个 Transformer 的端到端全模态模型。其端到端响应延迟仅 550ms，输出分辨率从 v0.1 的 192×336 提升至 640×368 @ 25FPS，并采用 Thinker-Performer 双通路架构在提升画质的同时维持了极低延迟。",
         "publishedAt": "2026-07-17T07:14:00.000Z",
-        "collectedAt": "2026-07-17T14:09:17.571Z",
+        "collectedAt": "2026-07-17T15:07:17.177Z",
         "raw": {
           "id": "cmrolz26304oqbito42v7oeaz",
           "titleEn": "Wan-Streamer v0.2：响应延迟仅550ms，让 AI 真正与你\"面对面\"",
@@ -427,174 +493,13 @@
         "originalUrl": "https://x.com/AYi_AInotes/status/2077981025905316253",
         "recommendedReason": "Kimi K3 在 Frontend Code Arena 以 1679 分登顶，力压 Claude Fable 5 与 GPT-5.6 Sol，7 个前端细分赛道拿下 6 个第一。该模型为 2.8 万亿参数 MoE 架构，百万上下文窗口，7 月 27 日开放权重。K3 的 API 定价为输入每百万 tokens 15 美元，对标前沿闭源模型，放弃低价路线，转向长上下文智能体编码场景的定价策略。",
         "publishedAt": "2026-07-17T04:57:38.000Z",
-        "collectedAt": "2026-07-17T14:09:17.571Z",
+        "collectedAt": "2026-07-17T15:07:17.177Z",
         "raw": {
           "id": "cmroipdr803rvbito8t018vr1",
           "titleEn": "谁能想到Claude和GPT双头统治的时代，居然就这么被中国模型撕开了口子。 Kimi K3登顶Frontend Code Arena总榜第一，1679分同时力压Claude Fable 5与GPT…",
           "apiCategory": "ai-models"
         }
-      },
-      {
-        "id": "aihot:cmro8l78w00j5bitou01qowy4",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "生成式人工智能是一场工程灾难：AI公司抢购70%高端内存，推高电脑价格",
-        "url": "https://www.theatlantic.com/technology/2026/07/generative-ai-engineering-disaster/687901",
-        "summary": "AI公司为维持大语言模型（如ChatGPT、Claude）运行，可能已购买全球70%的高端计算机内存，导致内存与存储价格飙升：两年前350美元的硬盘现已涨至800美元且缺货，部分笔记本电脑涨价50%。科技公司计划未来几年将美国数据中心容量扩大8倍，部分站点甚至用喷气发动机供电。预测称，平价入门级电脑可能在2028年前消失，内存短缺预计持续数年。",
-        "description": "AI公司为维持大语言模型（如ChatGPT、Claude）运行，可能已购买全球70%的高端计算机内存，导致内存与存储价格飙升：两年前350美元的硬盘现已涨至800美元且缺货，部分笔记本电脑涨价50%。科技公司计划未来几年将美国数据中心容量扩大8倍，部分站点甚至用喷气发动机供电。预测称，平价入门级电脑可能在2028年前消失，内存短缺预计持续数年。",
-        "category": "tools",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://www.theatlantic.com/technology/2026/07/generative-ai-engineering-disaster/687901",
-        "recommendedReason": "AI公司为维持大语言模型（如ChatGPT、Claude）运行，可能已购买全球70%的高端计算机内存，导致内存与存储价格飙升：两年前350美元的硬盘现已涨至800美元且缺货，部分笔记本电脑涨价50%。科技公司计划未来几年将美国数据中心容量扩大8倍，部分站点甚至用喷气发动机供电。预测称，平价入门级电脑可能在2028年前消失，内存短缺预计持续数年。",
-        "publishedAt": "2026-07-17T00:40:20.333Z",
-        "collectedAt": "2026-07-17T14:09:17.571Z",
-        "raw": {
-          "id": "cmro8l78w00j5bitou01qowy4",
-          "titleEn": "生成式人工智能是一场工程灾难",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmro185e3011jbij2ond4t12b",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Grok 推出 Automations 功能：定时或邮件触发，自动执行任务并汇报结果",
-        "url": "https://x.ai/news/grok-automations",
-        "summary": "xAI 为 Grok 引入 Automations 功能，用户可描述一次任务，让 Grok 按计划（一次/每日/工作日/每周/每月/每年）或邮件触发（按发件人、收件人或主题过滤）自动运行。每次执行都是一次完整对话，结果保存至运行历史，支持邮件或应用内通知。定时自动化对所有用户开放，邮件触发需 SuperGrok 订阅。",
-        "description": "xAI 为 Grok 引入 Automations 功能，用户可描述一次任务，让 Grok 按计划（一次/每日/工作日/每周/每月/每年）或邮件触发（按发件人、收件人或主题过滤）自动运行。每次执行都是一次完整对话，结果保存至运行历史，支持邮件或应用内通知。定时自动化对所有用户开放，邮件触发需 SuperGrok 订阅。",
-        "category": "products",
-        "originalSource": "xAI：News（网页）",
-        "originalUrl": "https://x.ai/news/grok-automations",
-        "recommendedReason": "xAI 为 Grok 引入 Automations 功能，用户可描述一次任务，让 Grok 按计划（一次/每日/工作日/每周/每月/每年）或邮件触发（按发件人、收件人或主题过滤）自动运行。每次执行都是一次完整对话，结果保存至运行历史，支持邮件或应用内通知。定时自动化对所有用户开放，邮件触发需 SuperGrok 订阅。",
-        "publishedAt": "2026-07-16T21:39:40.165Z",
-        "collectedAt": "2026-07-17T14:09:17.571Z",
-        "raw": {
-          "id": "cmro185e3011jbij2ond4t12b",
-          "titleEn": "Automations in Grok",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmrnz309k00f0biq1v5egac59",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "xAI 起诉 Grok 用户制作儿童性虐待内容，不再否认模型被滥用",
-        "url": "https://arstechnica.com/tech-policy/2026/07/xai-cant-deny-grok-makes-csam-anymore-so-its-suing-users",
-        "summary": "xAI 首次对一名 Grok 用户提起诉讼，指控其利用该模型制作儿童性虐待图像（CSAM）。此前 xAI 一直否认 Grok 能生成此类内容，此次诉讼标志着其立场转变。案件聚焦用户滥用行为，而非模型本身的技术缺陷。",
-        "description": "xAI 首次对一名 Grok 用户提起诉讼，指控其利用该模型制作儿童性虐待图像（CSAM）。此前 xAI 一直否认 Grok 能生成此类内容，此次诉讼标志着其立场转变。案件聚焦用户滥用行为，而非模型本身的技术缺陷。",
-        "category": "industry",
-        "originalSource": "Ars Technica：AI（RSS）",
-        "originalUrl": "https://arstechnica.com/tech-policy/2026/07/xai-cant-deny-grok-makes-csam-anymore-so-its-suing-users",
-        "recommendedReason": "xAI 首次对一名 Grok 用户提起诉讼，指控其利用该模型制作儿童性虐待图像（CSAM）。此前 xAI 一直否认 Grok 能生成此类内容，此次诉讼标志着其立场转变。案件聚焦用户滥用行为，而非模型本身的技术缺陷。",
-        "publishedAt": "2026-07-16T20:26:23.000Z",
-        "collectedAt": "2026-07-17T14:09:17.571Z",
-        "raw": {
-          "id": "cmrnz309k00f0biq1v5egac59",
-          "titleEn": "xAI can't deny Grok makes CSAM anymore. So it's suing users.",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmrnvwztt01bebixyznbje716",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Moonshot AI 发布 PerceptionBench：多模态模型视觉感知能力诊断基准",
-        "url": "https://www.kimi.com/blog/perception-bench",
-        "summary": "Moonshot AI 发布 PerceptionBench，一个从 40 多个现有基准中模型实际失败案例归纳出的视觉感知基准，包含 10 项原子感知能力和 3000 道验证题。所有测试模型准确率均未超过 60%，且大量正确答案在重复提问时无法复现，表明模型更多是猜测而非真正感知。PerceptionBench 旨在精确诊断多模态 AI 的视觉感知断裂点，推动其实现忠实、一致的视觉理解。",
-        "description": "Moonshot AI 发布 PerceptionBench，一个从 40 多个现有基准中模型实际失败案例归纳出的视觉感知基准，包含 10 项原子感知能力和 3000 道验证题。所有测试模型准确率均未超过 60%，且大量正确答案在重复提问时无法复现，表明模型更多是猜测而非真正感知。PerceptionBench 旨在精确诊断多模态 AI 的视觉感知断裂点，推动其实现忠实、一致的视觉理解。",
-        "category": "papers",
-        "originalSource": "Moonshot AI：Kimi Blog",
-        "originalUrl": "https://www.kimi.com/blog/perception-bench",
-        "recommendedReason": "Moonshot AI 发布 PerceptionBench，一个从 40 多个现有基准中模型实际失败案例归纳出的视觉感知基准，包含 10 项原子感知能力和 3000 道验证题。所有测试模型准确率均未超过 60%，且大量正确答案在重复提问时无法复现，表明模型更多是猜测而非真正感知。PerceptionBench 旨在精确诊断多模态 AI 的视觉感知断裂点，推动其实现忠实、一致的视觉理解。",
-        "publishedAt": "2026-07-16T19:11:01.192Z",
-        "collectedAt": "2026-07-17T14:09:17.571Z",
-        "raw": {
-          "id": "cmrnvwztt01bebixyznbje716",
-          "titleEn": "PerceptionBench",
-          "apiCategory": "paper"
-        }
-      },
-      {
-        "id": "aihot:cmrnvme99015abixymkemy6lj",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "54%企业已遭遇AI智能体安全事件，多数仍共享凭证",
-        "url": "https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials",
-        "summary": "VentureBeat调查107家企业发现，54%已遭遇AI智能体安全事件（18%确认事故，36%险些酿祸）。仅32%为每个智能体分配独立身份凭证，30%将高风险智能体隔离在沙箱中。安全工具主要依赖模型提供商原生方案，专用智能体安全产品渗透率极低。",
-        "description": "VentureBeat调查107家企业发现，54%已遭遇AI智能体安全事件（18%确认事故，36%险些酿祸）。仅32%为每个智能体分配独立身份凭证，30%将高风险智能体隔离在沙箱中。安全工具主要依赖模型提供商原生方案，专用智能体安全产品渗透率极低。",
-        "category": "industry",
-        "originalSource": "VentureBeat：AI（RSS）",
-        "originalUrl": "https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials",
-        "recommendedReason": "VentureBeat调查107家企业发现，54%已遭遇AI智能体安全事件（18%确认事故，36%险些酿祸）。仅32%为每个智能体分配独立身份凭证，30%将高风险智能体隔离在沙箱中。安全工具主要依赖模型提供商原生方案，专用智能体安全产品渗透率极低。",
-        "publishedAt": "2026-07-16T19:02:38.000Z",
-        "collectedAt": "2026-07-17T14:09:17.571Z",
-        "raw": {
-          "id": "cmrnvme99015abixymkemy6lj",
-          "titleEn": "The agent security gap： 54% of enterprises have already had an AI agent incident， and most still let agents share credentials",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmrnvlijq012lbixy2xhlk8k8",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "ChatGPT 工作区支持文档表格幻灯片编辑",
-        "url": "https://x.com/ChatGPTapp/status/2077826846373380535",
-        "summary": "在 ChatGPT 工作区中创建和编辑精美的文档、电子表格和幻灯片。 @nickbaumann_ 为你演示操作。",
-        "description": "在 ChatGPT 工作区中创建和编辑精美的文档、电子表格和幻灯片。 @nickbaumann_ 为你演示操作。",
-        "category": "products",
-        "originalSource": "X：ChatGPT (@ChatGPTapp)",
-        "originalUrl": "https://x.com/ChatGPTapp/status/2077826846373380535",
-        "recommendedReason": "在 ChatGPT 工作区中创建和编辑精美的文档、电子表格和幻灯片。 @nickbaumann_ 为你演示操作。",
-        "publishedAt": "2026-07-16T18:44:58.000Z",
-        "collectedAt": "2026-07-17T14:09:17.571Z",
-        "raw": {
-          "id": "cmrnvlijq012lbixy2xhlk8k8",
-          "titleEn": "Create and edit polished docs， spreadsheets， and slides in ChatGPT Work. @nickbaumann_ walks you th…",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmrnvq3xd015sbixyztrtb01z",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Decoy 字体：用空间频率混淆让 AI 看不清你输入的文字",
-        "url": "https://www.mixfont.com/experiments/decoy-font",
-        "summary": "Decoy Font 是一款 TTF 字体，通过在同一字符中叠加不同空间频率的图形（前景细轮廓与背景低频模糊块），使近距离观看时 AI 读到\"诱饵\"字母，而人眼远距离或眯眼时才能看到真实隐藏信息。",
-        "description": "Decoy Font 是一款 TTF 字体，通过在同一字符中叠加不同空间频率的图形（前景细轮廓与背景低频模糊块），使近距离观看时 AI 读到\"诱饵\"字母，而人眼远距离或眯眼时才能看到真实隐藏信息。",
-        "category": "products",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://www.mixfont.com/experiments/decoy-font",
-        "recommendedReason": "Decoy Font 是一款 TTF 字体，通过在同一字符中叠加不同空间频率的图形（前景细轮廓与背景低频模糊块），使近距离观看时 AI 读到\"诱饵\"字母，而人眼远距离或眯眼时才能看到真实隐藏信息。",
-        "publishedAt": "2026-07-16T18:32:23.680Z",
-        "collectedAt": "2026-07-17T14:09:17.571Z",
-        "raw": {
-          "id": "cmrnvq3xd015sbixyztrtb01z",
-          "titleEn": "Decoy 字体",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmrnse7qy002tbixy7gnolvr3",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Anthropic 用 Claude Code 大规模迁移代码：Bun 百万行 Zig 转 Rust，两周完成",
-        "url": "https://claude.com/blog/ai-code-migration",
-        "summary": "Anthropic 工程师用 Claude Code 在两周内将 Bun 的百万行 Zig 代码迁移至 Rust，100% 现有测试通过，合并后出现 19 个回归问题已全部修复。另一工程师用周末将 Python 代码库迁移至 16.5 万行 TypeScript。迁移消耗约 16.5 万美元 API 成本，但编译时间从八分钟降至两秒，二进制启动快 6 倍。",
-        "description": "Anthropic 工程师用 Claude Code 在两周内将 Bun 的百万行 Zig 代码迁移至 Rust，100% 现有测试通过，合并后出现 19 个回归问题已全部修复。另一工程师用周末将 Python 代码库迁移至 16.5 万行 TypeScript。迁移消耗约 16.5 万美元 API 成本，但编译时间从八分钟降至两秒，二进制启动快 6 倍。",
-        "category": "tools",
-        "originalSource": "Claude：Blog（网页）",
-        "originalUrl": "https://claude.com/blog/ai-code-migration",
-        "recommendedReason": "Anthropic 工程师用 Claude Code 在两周内将 Bun 的百万行 Zig 代码迁移至 Rust，100% 现有测试通过，合并后出现 19 个回归问题已全部修复。另一工程师用周末将 Python 代码库迁移至 16.5 万行 TypeScript。迁移消耗约 16.5 万美元 API 成本，但编译时间从八分钟降至两秒，二进制启动快 6 倍。",
-        "publishedAt": "2026-07-16T17:32:26.540Z",
-        "collectedAt": "2026-07-17T14:09:17.571Z",
-        "raw": {
-          "id": "cmrnse7qy002tbixy7gnolvr3",
-          "titleEn": "How Anthropic runs large-scale code migrations with Claude Code",
-          "apiCategory": "tip"
-        }
       }
-    ],
-    "crossSourceHighlights": []
+    ]
   }
 }
