@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-07-17-2026-07-17T15-07-16-409Z",
-  "generatedAt": "2026-07-17T15:07:16.409Z",
-  "targetDate": "2026-07-17",
+  "runId": "lightweight-2026-07-18-2026-07-17T17-02-35-936Z",
+  "generatedAt": "2026-07-17T17:02:35.936Z",
+  "targetDate": "2026-07-18",
   "brief": {
-    "date": "2026-07-17",
-    "headline": "Today's strongest AI trend signals are Ai Model Release, Voice / Realtime Ai, and Mcp / Tool Calling.",
+    "date": "2026-07-18",
+    "headline": "Today's strongest AI trend signals are Ai Model Release, Coding Agent / Swe Agent, and Mcp / Tool Calling.",
     "keyTakeaways": [
-      "Ai Model Release: This topic appeared across 2 source(s): huggingface_spaces, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Ai Model Release: This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 7 related signal(s). Treat it as correlation evidence rather tha.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
       "Ai Model Release: watch decision is deep_dive.",
-      "Voice / Realtime Ai: This topic appeared across 2 source(s): huggingface_models, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-      "Voice / Realtime Ai: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Voice / Realtime Ai.",
-      "Voice / Realtime Ai: watch decision is deep_dive.",
+      "Coding Agent / Swe Agent: This topic appeared across 2 source(s): aihot, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Coding Agent / Swe Agent: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
+      "Coding Agent / Swe Agent: watch decision is deep_dive.",
       "Mcp / Tool Calling: This topic appeared across 2 source(s): aihot, huggingface_spaces, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
       "Mcp / Tool Calling: watch decision is deep_dive."
@@ -22,30 +22,31 @@
       {
         "id": "topic:ai model release",
         "title": "Ai Model Release",
-        "category": "docker",
+        "category": "image-text-to-text",
         "sources": [
+          "huggingface_models",
           "huggingface_spaces",
           "hackernews"
         ],
-        "sourceCount": 2,
-        "heatScore": 440,
+        "sourceCount": 3,
+        "heatScore": 500,
         "confidence": "medium",
         "watchDecision": "deep_dive",
-        "whatItIs": "Ai Model Release is an AI trend topic in docker represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): huggingface_spaces, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Ai Model Release is an AI trend topic in image-text-to-text represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math"
+          "gguf",
+          "imatrix",
+          "reasoning",
+          "quantized",
+          "qwen3_5",
+          "mtp",
+          "llama.cpp",
+          "agentic"
         ],
         "evidenceItems": [
           {
@@ -58,10 +59,57 @@
               "llm"
             ],
             "publishedAt": "2026-07-16T11:59:01.000Z",
-            "collectedAt": "2026-07-17T15:07:16.815Z",
+            "collectedAt": "2026-07-17T17:02:36.276Z",
             "metrics": {
-              "upvotes": 267,
-              "commentsCount": 278
+              "upvotes": 275,
+              "commentsCount": 281
+            }
+          },
+          {
+            "id": "hackernews:48936880",
+            "title": "Detecting LLM-Generated Texts with “Classical” Machine Learning",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://blog.lyc8503.net/en/post/llm-classifier/",
+            "tags": [
+              "llm"
+            ],
+            "publishedAt": "2026-07-16T16:41:37.000Z",
+            "collectedAt": "2026-07-17T17:02:36.276Z",
+            "metrics": {
+              "upvotes": 228,
+              "commentsCount": 170
+            }
+          },
+          {
+            "id": "huggingface_models:DAXZEIT/GRM-2.6-Plus-0628-MTP-reasoning-i1-GGUF",
+            "title": "DAXZEIT/GRM-2.6-Plus-0628-MTP-reasoning-i1-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/DAXZEIT/GRM-2.6-Plus-0628-MTP-reasoning-i1-GGUF",
+            "category": "image-text-to-text",
+            "tags": [
+              "gguf",
+              "imatrix",
+              "reasoning",
+              "quantized",
+              "qwen3_5",
+              "mtp",
+              "llama.cpp",
+              "agentic",
+              "image-text-to-text",
+              "base_model:OrionLLM/GRM-2.6-Plus-0628",
+              "base_model:quantized:OrionLLM/GRM-2.6-Plus-0628",
+              "license:apache-2.0",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
+            ],
+            "publishedAt": "2026-07-16T03:28:19.000Z",
+            "collectedAt": "2026-07-17T17:02:36.074Z",
+            "metrics": {
+              "downloads": 442,
+              "likes": 1
             }
           },
           {
@@ -83,7 +131,7 @@
               "region:us"
             ],
             "publishedAt": "2023-04-17T11:40:06.000Z",
-            "collectedAt": "2026-07-17T15:07:16.574Z",
+            "collectedAt": "2026-07-17T17:02:36.089Z",
             "metrics": {
               "likes": 14046
             }
@@ -103,7 +151,7 @@
               "region:us"
             ],
             "publishedAt": "2023-06-08T18:00:26.000Z",
-            "collectedAt": "2026-07-17T15:07:16.574Z",
+            "collectedAt": "2026-07-17T17:02:36.089Z",
             "metrics": {
               "likes": 5078
             }
@@ -126,117 +174,152 @@
               "region:us"
             ],
             "publishedAt": "2024-07-05T16:35:24.000Z",
-            "collectedAt": "2026-07-17T15:07:16.574Z",
+            "collectedAt": "2026-07-17T17:02:36.089Z",
             "metrics": {
               "likes": 3763
             }
           }
         ],
         "relatedEntities": [
+          "DAXZEIT/GRM-2.6-Plus-0628-MTP-reasoning-i1-GGUF",
           "Open LLM Leaderboard",
           "MusicGen",
           "Live Portrait",
-          "The LLM Critics Are Right. I Use LLMs Anyway"
+          "Tkngate Zero-trust P2P ateway for LLM agents (open source, written in Go)",
+          "The LLM Critics Are Right. I Use LLMs Anyway",
+          "Detecting LLM-Generated Texts with “Classical” Machine Learning"
         ],
         "metrics": {
-          "votes": 267,
+          "votes": 275,
           "likes": 14046,
-          "commentsCount": 278,
-          "heatScore": 440,
-          "crossSourceBonus": 10
+          "downloads": 442,
+          "commentsCount": 281,
+          "heatScore": 500,
+          "crossSourceBonus": 20
         }
       },
       {
-        "id": "topic:voice / realtime ai",
-        "title": "Voice / Realtime Ai",
-        "category": "automatic-speech-recognition",
+        "id": "topic:coding agent / swe agent",
+        "title": "Coding Agent / Swe Agent",
+        "category": "tools",
         "sources": [
-          "huggingface_models",
+          "aihot",
           "hackernews"
         ],
         "sourceCount": 2,
-        "heatScore": 388,
+        "heatScore": 289,
         "confidence": "medium",
         "watchDecision": "deep_dive",
-        "whatItIs": "Voice / Realtime Ai is an AI trend topic in automatic-speech-recognition represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Voice / Realtime Ai should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Voice / Realtime Ai.",
+        "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in tools represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Coding Agent / Swe Agent should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
-          "safetensors",
-          "gguf",
-          "automatic-speech-recognition",
-          "asr",
-          "speech-recognition",
-          "arabic",
-          "arabic-asr",
-          "dialectal-arabic"
+          "tools",
+          "claude"
         ],
         "evidenceItems": [
           {
-            "id": "hackernews:48943745",
-            "title": "EEG shows brain can simultaneous encode two speech streams",
+            "id": "aihot:cmrp5pfjw0af6bitoudv35oqk",
+            "title": "Cursor 评估负责人确认 Claude Fable 5 在 CursorBench 达 72.9% 新高",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://claude.com/blog/working-at-the-frontier-cursor",
+            "summary": "Cursor 的模型评估负责人 Nate Schmidt 发现，Claude Fable 5 在其内部基准 CursorBench 上以 Max effort 模式达到 72.9%，创下新高。该模型在模糊的真实编程任务中表现出全局推理能力，例如在航天模拟器中仅凭一句提示自主规划并成功登月，而此前 Claude Opus 运行 12 小时以上仍无结果。",
+            "category": "tools",
+            "publishedAt": "2026-07-17T16:32:51.023Z",
+            "collectedAt": "2026-07-17T17:02:36.667Z"
+          },
+          {
+            "id": "aihot:cmrmsfo5q00f0bimis2t1mbci",
+            "title": "xAI 开源 Grok CLI 代码库中发现 Mermaid 转 Unicode 框图工具",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://simonwillison.net/2026/Jul/16/grok-mermaid",
+            "summary": "xAI 开源的 Grok CLI 编码智能体代码库中包含一个用 Rust 编写的 Mermaid 图表示例终端渲染器 `xai-grok-markdown/src/mermaid.rs`。开发者通过 Claude Code for web （Fable 5） 将其编译为 WebAssembly，实现在浏览器中运行该工具。",
+            "category": "tools",
+            "publishedAt": "2026-07-16T00:33:18.000Z",
+            "collectedAt": "2026-07-17T17:02:36.667Z"
+          },
+          {
+            "id": "hackernews:48947776",
+            "title": "Claude Code: Anatomy of a Misfeature",
             "source": "hackernews",
             "sourceType": "developer_discussion",
-            "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003876",
+            "url": "https://www.olafalders.com/2026/07/17/claude-code-anatomy-of-a-misfeature/",
             "tags": [
-              "ai"
+              "claude"
             ],
-            "publishedAt": "2026-07-17T05:51:10.000Z",
-            "collectedAt": "2026-07-17T15:07:16.815Z",
+            "publishedAt": "2026-07-17T14:26:58.000Z",
+            "collectedAt": "2026-07-17T17:02:36.276Z",
             "metrics": {
-              "upvotes": 187,
-              "commentsCount": 121
+              "upvotes": 99,
+              "commentsCount": 60
             }
           },
           {
-            "id": "huggingface_models:audarai/Audar-ASR-V1-Turbo",
-            "title": "audarai/Audar-ASR-V1-Turbo",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/audarai/Audar-ASR-V1-Turbo",
-            "category": "automatic-speech-recognition",
+            "id": "hackernews:48949265",
+            "title": "Dex – Claude Code / Codex Skills for Analytics Engineering",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://github.com/exmergo/dex",
             "tags": [
-              "safetensors",
-              "gguf",
-              "automatic-speech-recognition",
-              "asr",
-              "speech-recognition",
-              "arabic",
-              "arabic-asr",
-              "dialectal-arabic",
-              "emirati",
-              "gulf-arabic",
-              "streaming",
-              "realtime",
-              "llama-cpp",
-              "audar",
-              "ar",
-              "en",
-              "license:other",
-              "region:us",
-              "conversational"
+              "claude"
             ],
-            "publishedAt": "2026-04-23T17:39:50.000Z",
-            "collectedAt": "2026-07-17T15:07:16.568Z",
+            "publishedAt": "2026-07-17T16:31:59.000Z",
+            "collectedAt": "2026-07-17T17:02:36.276Z",
             "metrics": {
-              "downloads": 1198,
-              "likes": 3
+              "upvotes": 1,
+              "commentsCount": 1
+            }
+          },
+          {
+            "id": "hackernews:48949316",
+            "title": "Macaz – GPT 5.6 inside Claude Code",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://github.com/macaz-dev/macaz-cli",
+            "tags": [
+              "claude"
+            ],
+            "publishedAt": "2026-07-17T16:36:39.000Z",
+            "collectedAt": "2026-07-17T17:02:36.276Z",
+            "metrics": {
+              "upvotes": 1,
+              "commentsCount": 0
+            }
+          },
+          {
+            "id": "hackernews:48949273",
+            "title": "Portal: Teleport into your Claude Code sessions",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://portal.cybercorpresearch.com/",
+            "tags": [
+              "claude"
+            ],
+            "publishedAt": "2026-07-17T16:32:57.000Z",
+            "collectedAt": "2026-07-17T17:02:36.276Z",
+            "metrics": {
+              "upvotes": 1,
+              "commentsCount": 0
             }
           }
         ],
         "relatedEntities": [
-          "audarai/Audar-ASR-V1-Turbo",
-          "EEG shows brain can simultaneous encode two speech streams"
+          "Cursor 评估负责人确认 Claude Fable 5 在 CursorBench 达 72.9% 新高",
+          "xAI 开源 Grok CLI 代码库中发现 Mermaid 转 Unicode 框图工具",
+          "Claude Code: Anatomy of a Misfeature",
+          "Macaz – GPT 5.6 inside Claude Code",
+          "Portal: Teleport into your Claude Code sessions",
+          "Dex – Claude Code / Codex Skills for Analytics Engineering"
         ],
         "metrics": {
-          "votes": 187,
-          "likes": 3,
-          "downloads": 1198,
-          "commentsCount": 121,
-          "heatScore": 388,
+          "votes": 99,
+          "commentsCount": 60,
+          "heatScore": 289,
           "crossSourceBonus": 10
         }
       },
@@ -274,7 +357,7 @@
             "summary": "MiniMax Code 2.0 桌面端发布，基于 Pi Agent 框架重构底层架构，显著提升会话启动速度与长程复杂任务的执行稳定性。新版本优化了图表加载与文件预览框选编辑功能，并已与恒生金融数据库、企查查 MCP 打通，金融模块即将上线，支持多源数据实时检索与专业报告生成。桌面端现已开放下载，本月还将上线远程控制、浏览器操控等功能。",
             "category": "products",
             "publishedAt": "2026-07-16T01:36:13.000Z",
-            "collectedAt": "2026-07-17T15:07:17.177Z"
+            "collectedAt": "2026-07-17T17:02:36.667Z"
           },
           {
             "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
@@ -289,7 +372,7 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-07-17T15:07:16.574Z",
+            "collectedAt": "2026-07-17T17:02:36.089Z",
             "metrics": {
               "likes": 3561
             }
@@ -307,9 +390,9 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-07-17T15:07:16.574Z",
+            "collectedAt": "2026-07-17T17:02:36.089Z",
             "metrics": {
-              "likes": 3325
+              "likes": 3326
             }
           },
           {
@@ -325,7 +408,7 @@
               "region:us"
             ],
             "publishedAt": "2025-10-27T03:20:43.000Z",
-            "collectedAt": "2026-07-17T15:07:16.574Z",
+            "collectedAt": "2026-07-17T17:02:36.089Z",
             "metrics": {
               "likes": 2895
             }
@@ -343,7 +426,7 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-07-17T15:07:16.574Z",
+            "collectedAt": "2026-07-17T17:02:36.089Z",
             "metrics": {
               "likes": 2893
             }
@@ -365,265 +448,193 @@
       {
         "id": "topic:local llm / inference",
         "title": "Local Llm / Inference",
+        "category": "text-generation",
         "sources": [
-          "huggingface_models"
-        ],
-        "sourceCount": 1,
-        "heatScore": 69,
-        "confidence": "low",
-        "watchDecision": "track",
-        "whatItIs": "Local Llm / Inference is an AI trend topic represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 1 source(s): huggingface_models, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
-        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
-        "technicalKeywords": [
-          "llama.cpp",
-          "gguf",
-          "quantized",
-          "moe",
-          "glm",
-          "mixed-precision",
-          "sharded",
-          "gguf-split"
-        ],
-        "evidenceItems": [
-          {
-            "id": "huggingface_models:audarai/Audar-ASR-V1-Turbo",
-            "title": "audarai/Audar-ASR-V1-Turbo",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/audarai/Audar-ASR-V1-Turbo",
-            "category": "automatic-speech-recognition",
-            "tags": [
-              "safetensors",
-              "gguf",
-              "automatic-speech-recognition",
-              "asr",
-              "speech-recognition",
-              "arabic",
-              "arabic-asr",
-              "dialectal-arabic",
-              "emirati",
-              "gulf-arabic",
-              "streaming",
-              "realtime",
-              "llama-cpp",
-              "audar",
-              "ar",
-              "en",
-              "license:other",
-              "region:us",
-              "conversational"
-            ],
-            "publishedAt": "2026-04-23T17:39:50.000Z",
-            "collectedAt": "2026-07-17T15:07:16.568Z",
-            "metrics": {
-              "downloads": 1198,
-              "likes": 3
-            }
-          },
-          {
-            "id": "huggingface_models:unsloth/Ornith-1.0-35B-GGUF",
-            "title": "unsloth/Ornith-1.0-35B-GGUF",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/unsloth/Ornith-1.0-35B-GGUF",
-            "category": "text-generation",
-            "tags": [
-              "transformers",
-              "gguf",
-              "unsloth",
-              "text-generation",
-              "base_model:deepreinforce-ai/Ornith-1.0-35B",
-              "base_model:quantized:deepreinforce-ai/Ornith-1.0-35B",
-              "license:mit",
-              "endpoints_compatible",
-              "region:us",
-              "imatrix",
-              "conversational"
-            ],
-            "publishedAt": "2026-07-17T13:41:33.000Z",
-            "collectedAt": "2026-07-17T15:07:16.568Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 5
-            }
-          },
-          {
-            "id": "huggingface_models:majentik/gemma-4-12B-it-RotorQuant-GGUF-Q3_K_M",
-            "title": "majentik/gemma-4-12B-it-RotorQuant-GGUF-Q3_K_M",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/majentik/gemma-4-12B-it-RotorQuant-GGUF-Q3_K_M",
-            "tags": [
-              "region:us"
-            ],
-            "publishedAt": "2026-07-17T15:06:34.000Z",
-            "collectedAt": "2026-07-17T15:07:16.568Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:daanvdweijden/ministral-8b-chess-yifeng-s3",
-            "title": "daanvdweijden/ministral-8b-chess-yifeng-s3",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/daanvdweijden/ministral-8b-chess-yifeng-s3",
-            "tags": [
-              "transformers",
-              "safetensors",
-              "text-generation-inference",
-              "unsloth",
-              "mistral",
-              "trl",
-              "en",
-              "base_model:mistralai/Ministral-8B-Instruct-2410",
-              "base_model:finetune:mistralai/Ministral-8B-Instruct-2410",
-              "license:apache-2.0",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-07-17T15:06:14.000Z",
-            "collectedAt": "2026-07-17T15:07:16.568Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:daanvdweijden/ministral-8b-chess-owl-s3",
-            "title": "daanvdweijden/ministral-8b-chess-owl-s3",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/daanvdweijden/ministral-8b-chess-owl-s3",
-            "tags": [
-              "transformers",
-              "safetensors",
-              "text-generation-inference",
-              "unsloth",
-              "mistral",
-              "trl",
-              "en",
-              "base_model:mistralai/Ministral-8B-Instruct-2410",
-              "base_model:finetune:mistralai/Ministral-8B-Instruct-2410",
-              "license:apache-2.0",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-07-17T15:05:56.000Z",
-            "collectedAt": "2026-07-17T15:07:16.568Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:MaliAir/GLM-5.2-MXFP4-MOE-Q8_0-GGUF",
-            "title": "MaliAir/GLM-5.2-MXFP4-MOE-Q8_0-GGUF",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/MaliAir/GLM-5.2-MXFP4-MOE-Q8_0-GGUF",
-            "tags": [
-              "llama.cpp",
-              "gguf",
-              "quantized",
-              "moe",
-              "glm",
-              "mixed-precision",
-              "sharded",
-              "gguf-split",
-              "epyc",
-              "rtx-5090",
-              "license:apache-2.0",
-              "region:us"
-            ],
-            "publishedAt": "2026-07-12T17:56:54.000Z",
-            "collectedAt": "2026-07-17T15:07:16.568Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 2
-            }
-          }
-        ],
-        "relatedEntities": [
-          "MaliAir/GLM-5.2-MXFP4-MOE-Q8_0-GGUF",
-          "majentik/gemma-4-12B-it-RotorQuant-GGUF-Q3_K_M",
-          "daanvdweijden/ministral-8b-chess-yifeng-s3",
-          "daanvdweijden/ministral-8b-chess-owl-s3",
-          "unsloth/Ornith-1.0-35B-GGUF",
-          "audarai/Audar-ASR-V1-Turbo",
-          "sojukai/helios-3"
-        ],
-        "metrics": {
-          "likes": 5,
-          "downloads": 1198,
-          "heatScore": 69,
-          "crossSourceBonus": 0
-        }
-      },
-      {
-        "id": "topic:coding agent / swe agent",
-        "title": "Coding Agent / Swe Agent",
-        "category": "tools",
-        "sources": [
-          "aihot",
+          "huggingface_models",
           "hackernews"
         ],
         "sourceCount": 2,
-        "heatScore": 58,
-        "confidence": "low",
-        "watchDecision": "track",
-        "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in tools represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Coding Agent / Swe Agent should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
+        "heatScore": 123,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Local Llm / Inference is an AI trend topic in text-generation represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
-          "tools",
-          "claude"
+          "transformers",
+          "pytorch",
+          "safetensors",
+          "gpt2",
+          "text-generation",
+          "ru",
+          "dataset:root39058/Minset",
+          "license:mit"
         ],
         "evidenceItems": [
           {
-            "id": "aihot:cmrnse7qy002tbixy7gnolvr3",
-            "title": "Anthropic 用 Claude Code 大规模迁移代码：Bun 百万行 Zig 转 Rust，两周完成",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://claude.com/blog/ai-code-migration",
-            "summary": "Anthropic 工程师用 Claude Code 在两周内将 Bun 的百万行 Zig 代码迁移至 Rust，100% 现有测试通过，合并后出现 19 个回归问题已全部修复。另一工程师用周末将 Python 代码库迁移至 16.5 万行 TypeScript。迁移消耗约 16.5 万美元 API 成本，但编译时间从八分钟降至两秒，二进制启动快 6 倍。",
-            "category": "tools",
-            "publishedAt": "2026-07-16T17:32:26.540Z",
-            "collectedAt": "2026-07-17T15:07:17.177Z"
+            "id": "huggingface_models:Kutches/Kr3a",
+            "title": "Kutches/Kr3a",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/Kutches/Kr3a",
+            "tags": [
+              "gguf",
+              "region:us"
+            ],
+            "publishedAt": "2026-06-24T13:39:50.000Z",
+            "collectedAt": "2026-07-17T17:02:36.074Z",
+            "metrics": {
+              "downloads": 13118,
+              "likes": 34
+            }
           },
           {
-            "id": "hackernews:48947776",
-            "title": "Claude Code: Anatomy of a Misfeature",
+            "id": "huggingface_models:DAXZEIT/GRM-2.6-Plus-0628-MTP-reasoning-i1-GGUF",
+            "title": "DAXZEIT/GRM-2.6-Plus-0628-MTP-reasoning-i1-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/DAXZEIT/GRM-2.6-Plus-0628-MTP-reasoning-i1-GGUF",
+            "category": "image-text-to-text",
+            "tags": [
+              "gguf",
+              "imatrix",
+              "reasoning",
+              "quantized",
+              "qwen3_5",
+              "mtp",
+              "llama.cpp",
+              "agentic",
+              "image-text-to-text",
+              "base_model:OrionLLM/GRM-2.6-Plus-0628",
+              "base_model:quantized:OrionLLM/GRM-2.6-Plus-0628",
+              "license:apache-2.0",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
+            ],
+            "publishedAt": "2026-07-16T03:28:19.000Z",
+            "collectedAt": "2026-07-17T17:02:36.074Z",
+            "metrics": {
+              "downloads": 442,
+              "likes": 1
+            }
+          },
+          {
+            "id": "huggingface_models:OpenRussianAI/AndreyBot",
+            "title": "OpenRussianAI/AndreyBot",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/OpenRussianAI/AndreyBot",
+            "category": "text-generation",
+            "tags": [
+              "transformers",
+              "pytorch",
+              "safetensors",
+              "gpt2",
+              "text-generation",
+              "ru",
+              "dataset:root39058/Minset",
+              "license:mit",
+              "text-generation-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-06-04T14:06:43.000Z",
+            "collectedAt": "2026-07-17T17:02:36.074Z",
+            "metrics": {
+              "downloads": 623,
+              "likes": 0
+            }
+          },
+          {
+            "id": "hackernews:48949240",
+            "title": "Homomorphically encrypted CIFAR-10 inference in 200ms",
             "source": "hackernews",
             "sourceType": "developer_discussion",
-            "url": "https://www.olafalders.com/2026/07/17/claude-code-anatomy-of-a-misfeature/",
+            "url": "https://sofar.belfortlabs.cloud/",
             "tags": [
-              "claude"
+              "inference"
             ],
-            "publishedAt": "2026-07-17T14:26:58.000Z",
-            "collectedAt": "2026-07-17T15:07:16.815Z",
+            "publishedAt": "2026-07-17T16:29:52.000Z",
+            "collectedAt": "2026-07-17T17:02:36.276Z",
             "metrics": {
-              "upvotes": 12,
-              "commentsCount": 2
+              "upvotes": 1,
+              "commentsCount": 1
+            }
+          },
+          {
+            "id": "huggingface_models:fpadovani/nld-latn-100mb-after-ppt-shuff-dyck-100mb-ckpt500_seed455",
+            "title": "fpadovani/nld-latn-100mb-after-ppt-shuff-dyck-100mb-ckpt500_seed455",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/fpadovani/nld-latn-100mb-after-ppt-shuff-dyck-100mb-ckpt500_seed455",
+            "category": "text-generation",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "gpt2",
+              "text-generation",
+              "generated_from_trainer",
+              "sft",
+              "trl",
+              "base_model:fpadovani/nld-latn-100mb-ppt-shuff-dyck-100mb_seed455",
+              "base_model:finetune:fpadovani/nld-latn-100mb-ppt-shuff-dyck-100mb_seed455",
+              "text-generation-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-07-17T14:54:02.000Z",
+            "collectedAt": "2026-07-17T17:02:36.074Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 1
+            }
+          },
+          {
+            "id": "huggingface_models:HungryDino/qwen_2.5_7b-panda_numbers-iterated-gen2",
+            "title": "HungryDino/qwen_2.5_7b-panda_numbers-iterated-gen2",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/HungryDino/qwen_2.5_7b-panda_numbers-iterated-gen2",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "text-generation-inference",
+              "unsloth",
+              "qwen2",
+              "trl",
+              "en",
+              "base_model:unsloth/Qwen2.5-7B-Instruct",
+              "base_model:finetune:unsloth/Qwen2.5-7B-Instruct",
+              "license:apache-2.0",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-07-17T17:00:41.000Z",
+            "collectedAt": "2026-07-17T17:02:36.074Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
             }
           }
         ],
         "relatedEntities": [
-          "Anthropic 用 Claude Code 大规模迁移代码：Bun 百万行 Zig 转 Rust，两周完成",
-          "Claude Code: Anatomy of a Misfeature"
+          "OpenRussianAI/AndreyBot",
+          "Kutches/Kr3a",
+          "fpadovani/nld-latn-100mb-after-ppt-shuff-dyck-100mb-ckpt500_seed455",
+          "DAXZEIT/GRM-2.6-Plus-0628-MTP-reasoning-i1-GGUF",
+          "HungryDino/qwen_2.5_7b-panda_numbers-iterated-gen2",
+          "Homomorphically encrypted CIFAR-10 inference in 200ms"
         ],
         "metrics": {
-          "votes": 12,
-          "commentsCount": 2,
-          "heatScore": 58,
+          "votes": 1,
+          "likes": 34,
+          "downloads": 13118,
+          "commentsCount": 1,
+          "heatScore": 123,
           "crossSourceBonus": 10
         }
       }
@@ -634,8 +645,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-07-17T15:07:16.446Z",
-        "finishedAt": "2026-07-17T15:07:16.446Z",
+        "startedAt": "2026-07-17T17:02:35.985Z",
+        "finishedAt": "2026-07-17T17:02:35.985Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -644,36 +655,36 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-07-17T15:07:16.446Z",
-        "finishedAt": "2026-07-17T15:07:17.178Z",
-        "latencyMs": 732
+        "startedAt": "2026-07-17T17:02:35.985Z",
+        "finishedAt": "2026-07-17T17:02:36.668Z",
+        "latencyMs": 683
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 17,
-        "startedAt": "2026-07-17T15:07:16.463Z",
-        "finishedAt": "2026-07-17T15:07:16.568Z",
-        "latencyMs": 105
+        "itemCount": 11,
+        "startedAt": "2026-07-17T17:02:36.003Z",
+        "finishedAt": "2026-07-17T17:02:36.074Z",
+        "latencyMs": 71
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-07-17T15:07:16.465Z",
-        "finishedAt": "2026-07-17T15:07:16.574Z",
-        "latencyMs": 109
+        "startedAt": "2026-07-17T17:02:36.005Z",
+        "finishedAt": "2026-07-17T17:02:36.089Z",
+        "latencyMs": 84
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 28,
-        "startedAt": "2026-07-17T15:07:16.467Z",
-        "finishedAt": "2026-07-17T15:07:16.816Z",
-        "latencyMs": 349
+        "itemCount": 34,
+        "startedAt": "2026-07-17T17:02:36.007Z",
+        "finishedAt": "2026-07-17T17:02:36.277Z",
+        "latencyMs": 270
       }
     ],
     "dataNotes": [
@@ -684,42 +695,57 @@
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_models:audarai/Audar-ASR-V1-Turbo",
+        "id": "huggingface_models:Kutches/Kr3a",
         "source": "huggingface_models",
         "sourceType": "model_hub",
-        "title": "audarai/Audar-ASR-V1-Turbo",
-        "url": "https://huggingface.co/audarai/Audar-ASR-V1-Turbo",
+        "title": "Kutches/Kr3a",
+        "url": "https://huggingface.co/Kutches/Kr3a",
         "tags": [
-          "safetensors",
           "gguf",
-          "automatic-speech-recognition",
-          "asr",
-          "speech-recognition",
-          "arabic",
-          "arabic-asr",
-          "dialectal-arabic",
-          "emirati",
-          "gulf-arabic",
-          "streaming",
-          "realtime",
-          "llama-cpp",
-          "audar",
-          "ar",
-          "en",
-          "license:other",
+          "region:us"
+        ],
+        "metrics": {
+          "downloads": 13118,
+          "likes": 34
+        },
+        "publishedAt": "2026-06-24T13:39:50.000Z",
+        "updatedAt": "2026-07-17T17:02:32.000Z",
+        "collectedAt": "2026-07-17T17:02:36.074Z",
+        "raw": {}
+      },
+      {
+        "id": "huggingface_models:DAXZEIT/GRM-2.6-Plus-0628-MTP-reasoning-i1-GGUF",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "DAXZEIT/GRM-2.6-Plus-0628-MTP-reasoning-i1-GGUF",
+        "url": "https://huggingface.co/DAXZEIT/GRM-2.6-Plus-0628-MTP-reasoning-i1-GGUF",
+        "tags": [
+          "gguf",
+          "imatrix",
+          "reasoning",
+          "quantized",
+          "qwen3_5",
+          "mtp",
+          "llama.cpp",
+          "agentic",
+          "image-text-to-text",
+          "base_model:OrionLLM/GRM-2.6-Plus-0628",
+          "base_model:quantized:OrionLLM/GRM-2.6-Plus-0628",
+          "license:apache-2.0",
+          "endpoints_compatible",
           "region:us",
           "conversational"
         ],
-        "category": "automatic-speech-recognition",
+        "category": "image-text-to-text",
         "metrics": {
-          "downloads": 1198,
-          "likes": 3
+          "downloads": 442,
+          "likes": 1
         },
-        "publishedAt": "2026-04-23T17:39:50.000Z",
-        "updatedAt": "2026-07-17T15:05:05.000Z",
-        "collectedAt": "2026-07-17T15:07:16.568Z",
+        "publishedAt": "2026-07-16T03:28:19.000Z",
+        "updatedAt": "2026-07-17T17:01:09.000Z",
+        "collectedAt": "2026-07-17T17:02:36.074Z",
         "raw": {
-          "pipelineTag": "automatic-speech-recognition"
+          "pipelineTag": "image-text-to-text"
         }
       },
       {
@@ -746,7 +772,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-07-17T15:07:16.574Z",
+        "collectedAt": "2026-07-17T17:02:36.089Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -769,7 +795,7 @@
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-07-17T15:07:16.574Z",
+        "collectedAt": "2026-07-17T17:02:36.089Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -792,7 +818,7 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-07-17T15:07:16.574Z",
+        "collectedAt": "2026-07-17T17:02:36.089Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
@@ -816,7 +842,7 @@
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
         "updatedAt": "2026-07-15T16:49:30.000Z",
-        "collectedAt": "2026-07-17T15:07:16.574Z",
+        "collectedAt": "2026-07-17T17:02:36.089Z",
         "raw": {
           "sdk": "docker",
           "emoji": "📊"
@@ -839,7 +865,7 @@
         },
         "publishedAt": "2025-09-18T07:05:32.000Z",
         "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-07-17T15:07:16.574Z",
+        "collectedAt": "2026-07-17T17:02:36.089Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👁"
@@ -865,61 +891,14 @@
         },
         "publishedAt": "2023-06-08T18:00:26.000Z",
         "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-07-17T15:07:16.574Z",
+        "collectedAt": "2026-07-17T17:02:36.089Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🎵"
         }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4946
-        },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-07-17T15:07:16.574Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
       }
     ],
     "developerBuzz": [
-      {
-        "id": "hackernews:48924912",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Inkling: Our Open-Weights Model",
-        "url": "https://thinkingmachines.ai/news/introducing-inkling/",
-        "author": "vimarsh6739",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 1198,
-          "commentsCount": 286
-        },
-        "publishedAt": "2026-07-15T18:12:45.000Z",
-        "collectedAt": "2026-07-17T15:07:16.815Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48924912",
-          "matchedKeywords": [
-            "ai"
-          ]
-        }
-      },
       {
         "id": "hackernews:48930454",
         "source": "hackernews",
@@ -931,13 +910,36 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 798,
-          "commentsCount": 564
+          "upvotes": 803,
+          "commentsCount": 566
         },
         "publishedAt": "2026-07-16T04:46:21.000Z",
-        "collectedAt": "2026-07-17T15:07:16.815Z",
+        "collectedAt": "2026-07-17T17:02:36.276Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48930454",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48924912",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Inkling: Our Open-Weights Model",
+        "url": "https://thinkingmachines.ai/news/introducing-inkling/",
+        "author": "vimarsh6739",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 1200,
+          "commentsCount": 287
+        },
+        "publishedAt": "2026-07-15T18:12:45.000Z",
+        "collectedAt": "2026-07-17T17:02:36.276Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48924912",
           "matchedKeywords": [
             "ai"
           ]
@@ -955,10 +957,10 @@
         ],
         "metrics": {
           "upvotes": 580,
-          "commentsCount": 636
+          "commentsCount": 641
         },
         "publishedAt": "2026-07-15T20:24:58.000Z",
-        "collectedAt": "2026-07-17T15:07:16.815Z",
+        "collectedAt": "2026-07-17T17:02:36.276Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48926590",
           "matchedKeywords": [
@@ -978,11 +980,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 333,
-          "commentsCount": 452
+          "upvotes": 359,
+          "commentsCount": 477
         },
         "publishedAt": "2026-07-16T20:03:23.000Z",
-        "collectedAt": "2026-07-17T15:07:16.815Z",
+        "collectedAt": "2026-07-17T17:02:36.276Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48939524",
           "matchedKeywords": [
@@ -992,32 +994,52 @@
         }
       },
       {
-        "id": "hackernews:48936451",
+        "id": "hackernews:48946303",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "NotebookLM is now Gemini Notebook",
-        "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
-        "author": "xnx",
+        "title": "Apple targets dozens of OpenAI employees with legal letters",
+        "url": "https://www.ft.com/content/1b8c9d52-88a9-426b-ba47-f1811f859166",
+        "author": "merksittich",
         "tags": [
           "ai",
-          "gemini"
+          "openai"
         ],
         "metrics": {
-          "upvotes": 348,
-          "commentsCount": 171
+          "upvotes": 239,
+          "commentsCount": 188
         },
-        "publishedAt": "2026-07-16T16:08:13.000Z",
-        "collectedAt": "2026-07-17T15:07:16.815Z",
+        "publishedAt": "2026-07-17T12:02:39.000Z",
+        "collectedAt": "2026-07-17T17:02:36.276Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48936451",
+          "hnUrl": "https://news.ycombinator.com/item?id=48946303",
           "matchedKeywords": [
             "ai",
-            "gemini"
+            "openai"
           ]
         }
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmrp5pfjw0af6bitoudv35oqk",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Cursor 评估负责人确认 Claude Fable 5 在 CursorBench 达 72.9% 新高",
+        "url": "https://claude.com/blog/working-at-the-frontier-cursor",
+        "summary": "Cursor 的模型评估负责人 Nate Schmidt 发现，Claude Fable 5 在其内部基准 CursorBench 上以 Max effort 模式达到 72.9%，创下新高。该模型在模糊的真实编程任务中表现出全局推理能力，例如在航天模拟器中仅凭一句提示自主规划并成功登月，而此前 Claude Opus 运行 12 小时以上仍无结果。",
+        "description": "Cursor 的模型评估负责人 Nate Schmidt 发现，Claude Fable 5 在其内部基准 CursorBench 上以 Max effort 模式达到 72.9%，创下新高。该模型在模糊的真实编程任务中表现出全局推理能力，例如在航天模拟器中仅凭一句提示自主规划并成功登月，而此前 Claude Opus 运行 12 小时以上仍无结果。",
+        "category": "tools",
+        "originalSource": "Claude：Blog（网页）",
+        "originalUrl": "https://claude.com/blog/working-at-the-frontier-cursor",
+        "recommendedReason": "Cursor 的模型评估负责人 Nate Schmidt 发现，Claude Fable 5 在其内部基准 CursorBench 上以 Max effort 模式达到 72.9%，创下新高。该模型在模糊的真实编程任务中表现出全局推理能力，例如在航天模拟器中仅凭一句提示自主规划并成功登月，而此前 Claude Opus 运行 12 小时以上仍无结果。",
+        "publishedAt": "2026-07-17T16:32:51.023Z",
+        "collectedAt": "2026-07-17T17:02:36.667Z",
+        "raw": {
+          "id": "cmrp5pfjw0af6bitoudv35oqk",
+          "titleEn": "Working at the frontier： How Cursor knew Claude Fable 5 was ready for the hardest 1% of problems",
+          "apiCategory": "tip"
+        }
+      },
       {
         "id": "aihot:cmrp0qw3s090ybitorwj6diwi",
         "source": "aihot",
@@ -1031,7 +1053,7 @@
         "originalUrl": "https://x.com/Meituan_LongCat/status/2078119654632124547",
         "recommendedReason": "美团LongCat推出LoHoSearch，一个基于762万实体维基百科知识图谱自动生成问题的搜索智能体基准，旨在解决BrowseComp等现有基准趋于饱和的问题。在11个前沿模型测试中，最佳得分仅34.74%，远低于当前模型在BrowseComp上约90%的成绩；上下文策略仅带来+6.8个百分点的提升。该基准包含544道问题、11个领域，采用树与图结构，已开源。",
         "publishedAt": "2026-07-17T14:08:29.000Z",
-        "collectedAt": "2026-07-17T15:07:17.177Z",
+        "collectedAt": "2026-07-17T17:02:36.667Z",
         "raw": {
           "id": "cmrp0qw3s090ybitorwj6diwi",
           "titleEn": "BrowseComp went from 30% → 90% in 10 months. Search-agent benchmarks are saturating. So we built Lo…",
@@ -1051,7 +1073,7 @@
         "originalUrl": "https://www.ithome.com/0/978/277.htm",
         "recommendedReason": "苹果已向约40名就职于OpenAI的前员工发出律师函，要求保存相关文件。此前苹果起诉OpenAI及两名前员工，指控其通过挖角获取商业机密以加速AI硬件研发。苹果称已有超400名前员工在OpenAI工作，正寻求法院禁令阻止OpenAI使用苹果信息并要求归还机密。",
         "publishedAt": "2026-07-17T11:10:01.000Z",
-        "collectedAt": "2026-07-17T15:07:17.177Z",
+        "collectedAt": "2026-07-17T17:02:36.667Z",
         "raw": {
           "id": "cmrove64p07imbitof1v9rzwz",
           "titleEn": null,
@@ -1071,7 +1093,7 @@
         "originalUrl": "https://openai.com/index/a-scorecard-for-the-ai-age",
         "recommendedReason": "OpenAI 提出\"Useful Intelligence per Dollar\"（有用智能每美元）作为衡量 AI 投资回报的核心指标，从完成的有用工作量、成功任务的实际成本、结果可靠性三个维度评估。",
         "publishedAt": "2026-07-17T10:00:00.000Z",
-        "collectedAt": "2026-07-17T15:07:17.177Z",
+        "collectedAt": "2026-07-17T17:02:36.667Z",
         "raw": {
           "id": "cmrozfoiv08mhbitofbllzxl4",
           "titleEn": "A scorecard for the AI age",
@@ -1091,7 +1113,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/a2YKWmyMoyIc3GKLbXffpQ",
         "recommendedReason": "首届\"小有可为\"大赛乡村教育赛道一等奖作品\"智绘科普\"采用 Qwen3.5-397B-A17B 大语言模型与 Manim 动画引擎，通过多Agent分阶段协作与自动修复机制，将知识主题转化为可控、可编辑的教学动画。系统包含规划、草稿、实现、审查、合成五个阶段，渲染失败时可自动提取日志并修复，该工程范式可迁移至其他赛道。",
         "publishedAt": "2026-07-17T09:41:25.000Z",
-        "collectedAt": "2026-07-17T15:07:17.177Z",
+        "collectedAt": "2026-07-17T17:02:36.667Z",
         "raw": {
           "id": "cmrorbywu06cebitoixzgpb5l",
           "titleEn": "小有可为实战教程|乡村教育一等奖作品拆解",
@@ -1111,7 +1133,7 @@
         "originalUrl": "https://schema-harness.github.io/",
         "recommendedReason": "Schema 框架在 ARC-AGI-3 公开集上，使用 Claude Opus 4.8 和 Fable 5 达到 99% RHAE 分数，使用 GPT-5.6 Sol 达到 95.35%。该框架不修改模型权重，而是将原始观测转化为可编辑程序，联合解决状态归因和机制发现问题。此前最强模型 GPT-5.6 Sol 在半私有集上仅得 7.78%。",
         "publishedAt": "2026-07-17T08:41:53.383Z",
-        "collectedAt": "2026-07-17T15:07:17.177Z",
+        "collectedAt": "2026-07-17T17:02:36.667Z",
         "raw": {
           "id": "cmropqooe05tqbitodvnqnc6u",
           "titleEn": "Schema Harness 在 Arc-AGI-3 公开数据集上取得约 99% 的成绩",
@@ -1131,7 +1153,7 @@
         "originalUrl": "https://www.marktechpost.com/2026/07/17/nvidia-ai-releases-nemotron-3-embed-an-open-embedding-collection-whose-8b-checkpoint-ranks-1-on-rteb",
         "recommendedReason": "NVIDIA 发布 Nemotron 3 Embed 系列，包含三个开源 checkpoint，其中 8B-BF16 版本在 RTEB 基准上以 78.46 的平均 NDCG@10 排名第一。1B-NVFP4 版本在 Blackwell 上吞吐量比 BF16 高 2 倍，精度保留 99.5%，所有模型最大序列长度 32，768 tokens。",
         "publishedAt": "2026-07-17T07:53:02.000Z",
-        "collectedAt": "2026-07-17T15:07:17.177Z",
+        "collectedAt": "2026-07-17T17:02:36.667Z",
         "raw": {
           "id": "cmronvv4105bdbitohe86a4un",
           "titleEn": "NVIDIA AI Releases Nemotron 3 Embed： An Open Embedding Collection Whose 8B Checkpoint Ranks #1 on RTEB",
@@ -1151,30 +1173,10 @@
         "originalUrl": "https://mp.weixin.qq.com/s/_eaO0wmsiQFGsrE2_zW_Dg",
         "recommendedReason": "通义实验室发布 Wan-Streamer v0.2，这是一款将\"听、看、说、演\"统一进单个 Transformer 的端到端全模态模型。其端到端响应延迟仅 550ms，输出分辨率从 v0.1 的 192×336 提升至 640×368 @ 25FPS，并采用 Thinker-Performer 双通路架构在提升画质的同时维持了极低延迟。",
         "publishedAt": "2026-07-17T07:14:00.000Z",
-        "collectedAt": "2026-07-17T15:07:17.177Z",
+        "collectedAt": "2026-07-17T17:02:36.667Z",
         "raw": {
           "id": "cmrolz26304oqbito42v7oeaz",
           "titleEn": "Wan-Streamer v0.2：响应延迟仅550ms，让 AI 真正与你\"面对面\"",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmroipdr803rvbito8t018vr1",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Kimi K3 登顶前端编码榜，开放权重挑战闭源双巨头",
-        "url": "https://x.com/AYi_AInotes/status/2077981025905316253",
-        "summary": "Kimi K3 在 Frontend Code Arena 以 1679 分登顶，力压 Claude Fable 5 与 GPT-5.6 Sol，7 个前端细分赛道拿下 6 个第一。该模型为 2.8 万亿参数 MoE 架构，百万上下文窗口，7 月 27 日开放权重。K3 的 API 定价为输入每百万 tokens 15 美元，对标前沿闭源模型，放弃低价路线，转向长上下文智能体编码场景的定价策略。",
-        "description": "Kimi K3 在 Frontend Code Arena 以 1679 分登顶，力压 Claude Fable 5 与 GPT-5.6 Sol，7 个前端细分赛道拿下 6 个第一。该模型为 2.8 万亿参数 MoE 架构，百万上下文窗口，7 月 27 日开放权重。K3 的 API 定价为输入每百万 tokens 15 美元，对标前沿闭源模型，放弃低价路线，转向长上下文智能体编码场景的定价策略。",
-        "category": "models",
-        "originalSource": "X：阿易 AI Notes (@AYi_AInotes)",
-        "originalUrl": "https://x.com/AYi_AInotes/status/2077981025905316253",
-        "recommendedReason": "Kimi K3 在 Frontend Code Arena 以 1679 分登顶，力压 Claude Fable 5 与 GPT-5.6 Sol，7 个前端细分赛道拿下 6 个第一。该模型为 2.8 万亿参数 MoE 架构，百万上下文窗口，7 月 27 日开放权重。K3 的 API 定价为输入每百万 tokens 15 美元，对标前沿闭源模型，放弃低价路线，转向长上下文智能体编码场景的定价策略。",
-        "publishedAt": "2026-07-17T04:57:38.000Z",
-        "collectedAt": "2026-07-17T15:07:17.177Z",
-        "raw": {
-          "id": "cmroipdr803rvbito8t018vr1",
-          "titleEn": "谁能想到Claude和GPT双头统治的时代，居然就这么被中国模型撕开了口子。 Kimi K3登顶Frontend Code Arena总榜第一，1679分同时力压Claude Fable 5与GPT…",
           "apiCategory": "ai-models"
         }
       }
