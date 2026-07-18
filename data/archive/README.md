@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-07-18T15:26:28.423Z
+Updated: 2026-07-18T17:27:33.377Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -10,6 +10,7 @@ Updated: 2026-07-18T15:26:28.423Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
+| 2026-07-19 | daily | [AI Developer Radar｜Daily｜2026-07-19](2026/07/2026-07-19-daily.md) | hpcaitech/ColossalAI, ChatGPTNextWeb/NextChat, thedaviddias/Front-End-Checklist, google-ai-edge/mediapipe, PatrickJS/awesome-cursorrules |
 | 2026-07-18 | daily | [AI Developer Radar｜Daily｜2026-07-18](2026/07/2026-07-18-daily.md) | hpcaitech/ColossalAI, ChatGPTNextWeb/NextChat, thedaviddias/Front-End-Checklist, google-ai-edge/mediapipe, PatrickJS/awesome-cursorrules |
 | 2026-07-17 | daily | [AI Developer Radar｜Daily｜2026-07-17](2026/07/2026-07-17-daily.md) | PrismML-Eng/Bonsai-demo, PostHog/posthog, ChatGPTNextWeb/NextChat, PatrickJS/awesome-cursorrules, tirth8205/code-review-graph |
 | 2026-07-16 | daily | [AI Developer Radar｜Daily｜2026-07-16](2026/07/2026-07-16-daily.md) | HKUDS/DeepTutor, openinterpreter/openinterpreter, github/copilot-sdk, ChatGPTNextWeb/NextChat, automazeio/ccpm |
