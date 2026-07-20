@@ -1,0 +1,116 @@
+# AI Developer Radar | Weekly | 2026-W30
+
+**Generated:** 2026-07-20T04:32:59.908Z
+
+## Today's Summary
+
+本周 Other AI 的平均增长信号最强，建议优先关注其工具链、协议适配和开发者工作流变化。
+
+## Hot Projects
+
+### 1. google-ai-edge/mediapipe
+- **Stars:** 36,166 (+11 / 24h, +90 / 7d)
+- **Category:** Local LLM / Inference
+- **Why it matters:** Local LLM / Inference 方向一周增长 +90，属于持续升温信号。
+- **Developer insight:** 重点看部署复杂度、性能边界和模型兼容性，判断是否能进入本地 AI 应用栈。
+- **Risk:** Low
+- [View on GitHub](https://github.com/google-ai-edge/mediapipe)
+
+### 2. Canner/WrenAI
+- **Stars:** 16,278 (n/a / 24h, n/a / 7d)
+- **Category:** AI Agent Framework
+- **Why it matters:** AI Agent Framework 相关性较高，当前分数主要来自项目定位、活跃度和开发者可用性。
+- **Developer insight:** 可以用一个最小样例验证 API、文档和集成成本，再决定是否纳入长期技术观察。
+- **Risk:** Low
+- [View on GitHub](https://github.com/Canner/WrenAI)
+
+### 3. bojieli/ai-agent-book
+- **Stars:** 6,748 (n/a / 24h, n/a / 7d)
+- **Category:** AI Agent Framework
+- **Why it matters:** AI Agent Framework 相关性较高，当前分数主要来自项目定位、活跃度和开发者可用性。
+- **Developer insight:** 可以用一个最小样例验证 API、文档和集成成本，再决定是否纳入长期技术观察。
+- **Risk:** Low
+- [View on GitHub](https://github.com/bojieli/ai-agent-book)
+
+### 4. ChatGPTNextWeb/NextChat
+- **Stars:** 88,522 (+10 / 24h, +67 / 7d)
+- **Category:** Local LLM / Inference
+- **Why it matters:** Local LLM / Inference 相关性较高，当前分数主要来自项目定位、活跃度和开发者可用性。
+- **Developer insight:** 重点看部署复杂度、性能边界和模型兼容性，判断是否能进入本地 AI 应用栈。
+- **Risk:** Low
+- [View on GitHub](https://github.com/ChatGPTNextWeb/NextChat)
+
+### 5. deepspeedai/DeepSpeed
+- **Stars:** 42,750 (+7 / 24h, +60 / 7d)
+- **Category:** Local LLM / Inference
+- **Why it matters:** Local LLM / Inference 相关性较高，当前分数主要来自项目定位、活跃度和开发者可用性。
+- **Developer insight:** 重点看部署复杂度、性能边界和模型兼容性，判断是否能进入本地 AI 应用栈。
+- **Risk:** Low
+- [View on GitHub](https://github.com/deepspeedai/DeepSpeed)
+
+### 6. Tencent/ncnn
+- **Stars:** 23,557 (+4 / 24h, +36 / 7d)
+- **Category:** Local LLM / Inference
+- **Why it matters:** Local LLM / Inference 相关性较高，当前分数主要来自项目定位、活跃度和开发者可用性。
+- **Developer insight:** 重点看部署复杂度、性能边界和模型兼容性，判断是否能进入本地 AI 应用栈。
+- **Risk:** Low
+- [View on GitHub](https://github.com/Tencent/ncnn)
+
+### 7. gvergnaud/ts-pattern
+- **Stars:** 15,085 (+3 / 24h, +6 / 7d)
+- **Category:** Local LLM / Inference
+- **Why it matters:** Local LLM / Inference 方向出现突然加速：24h stars +3，前 3 日均值 0.3，加速度 9x，今天值得优先排查触发原因。
+- **Developer insight:** 重点看部署复杂度、性能边界和模型兼容性，判断是否能进入本地 AI 应用栈。
+- **Risk:** Low
+- [View on GitHub](https://github.com/gvergnaud/ts-pattern)
+
+### 8. AstrBotDevs/AstrBot
+- **Stars:** 36,751 (n/a / 24h, n/a / 7d)
+- **Category:** MCP / Tool Calling
+- **Why it matters:** MCP / Tool Calling 相关性较高，当前分数主要来自项目定位、活跃度和开发者可用性。
+- **Developer insight:** 重点看协议适配、工具注册和真实示例，判断它是否能降低 agent 接工具的成本。
+- **Risk:** Low
+- [View on GitHub](https://github.com/AstrBotDevs/AstrBot)
+
+### 9. thedaviddias/Front-End-Checklist
+- **Stars:** 73,259 (+12 / 24h, +66 / 7d)
+- **Category:** AI Agent Framework
+- **Why it matters:** With 72,971 stars, a 24-hour star delta of 14, and a high acceleration of 2.2, this project is experiencing a sudden breakout in attention. The recent release and active commits (within 7 days) indicate ongoing development, making it a timely resource for developers adopting AI-assisted workflows.
+- **Developer insight:** This signals a growing trend of turning static documentation into machine-consumable, agent-friendly formats. For AI developers, it demonstrates how to package domain knowledge (e.g., front-end rules) as MCP tools, enabling agents to perform structured, reliable code reviews without hallucination.
+- **Risk:** Medium
+- [View on GitHub](https://github.com/thedaviddias/Front-End-Checklist)
+
+### 10. pathwaycom/llm-app
+- **Stars:** 59,024 (+-5 / 24h, +-31 / 7d)
+- **Category:** RAG / Knowledge Base
+- **Why it matters:** RAG / Knowledge Base 相关性较高，当前分数主要来自项目定位、活跃度和开发者可用性。
+- **Developer insight:** 重点看数据接入、检索质量和 production workflow，而不是只看 demo 效果。
+- **Risk:** Low
+- [View on GitHub](https://github.com/pathwaycom/llm-app)
+
+### 11. hpcaitech/ColossalAI
+- **Stars:** 41,418 (+-1 / 24h, +7 / 7d)
+- **Category:** Local LLM / Inference
+- **Why it matters:** Local LLM / Inference 相关性较高，当前分数主要来自项目定位、活跃度和开发者可用性。
+- **Developer insight:** 重点看部署复杂度、性能边界和模型兼容性，判断是否能进入本地 AI 应用栈。
+- **Risk:** Low
+- [View on GitHub](https://github.com/hpcaitech/ColossalAI)
+
+### 12. microsoft/terminal
+- **Stars:** 104,217 (n/a / 24h, n/a / 7d)
+- **Category:** Other AI
+- **Why it matters:** Other AI 相关性较高，当前分数主要来自项目定位、活跃度和开发者可用性。
+- **Developer insight:** 可以用一个最小样例验证 API、文档和集成成本，再决定是否纳入长期技术观察。
+- **Risk:** Low
+- [View on GitHub](https://github.com/microsoft/terminal)
+
+## Data Notes
+
+- weekly delta 来自约 7 天前 snapshot 对比。
+- 分类、风险和 insight 均为 rule-based MVP，可在 V2 接入 LLM 增强。
+- LLM enrichment partially unavailable for 9 project(s); fallback descriptions were used.
+- Weekly narrative LLM failed, using template fallback: DeepSeek API request failed: HTTP 401. {"error":{"message":"Authentication Fails, Your api key: ****c776 is invalid","type":"authentication_error","param":null,"code":"invalid_request_error"}}
+
+---
+
+*Generated by [AI Trend Radar](https://github.com/Tsin418/ai-trend-radar)*
