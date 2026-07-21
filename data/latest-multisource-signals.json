@@ -1,211 +1,185 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-21T01:52:08.834Z",
+  "generatedAt": "2026-07-21T03:44:55.512Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
+        "id": "http://arxiv.org/abs/2607.18237v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+        "url": "https://arxiv.org/pdf/2607.18237v1",
+        "description": "Human visual similarity judgments are context-dependent. For example, two images may be similar in shape but distinct in color. Existing perceptual similarity metrics, however, collapse these nuances into a single scalar value, offering no mechanism to condition on specific aspects. To bridge this gap, we introduce a large-scale dataset of human similarity judgments over image triplets, where each triplet is annotated across multiple, free-form semantic aspects of similarity. Benchmarking a broa",
+        "summary": "Human visual similarity judgments are context-dependent. For example, two images may be similar in shape but distinct in color. Existing perceptual similarity metrics, however, collapse these nuances into a single scalar value, offering no mechanism to condition on specific aspects. To bridge this gap, we introduce a large-scale dataset of human similarity judgments over image triplets, where each triplet is annotated across multiple, free-form semantic aspects of similarity. Benchmarking a broad range of frontier vision-language models (VLMs) reveals a considerable performance gap compared to human annotators' consensus. Leveraging our data, we fine-tune a VLM to produce our Text-Prompted Image Perceptual Similarity (TPIPS) metric, capturing multiple senses of visual similarity depending on the specified text prompt. We demonstrate that TPIPS aligns more closely with human perception and generalizes reliably beyond the training distribution. Finally, we show that TPIPS unlocks new capabilities in text-guided retrieval, compositional search, and the fine-grained evaluation of generative models. Our code, data, and trained models are at https://peterwang512.github.io/TPIPS",
+        "author": "Sheng-Yu Wang, Yotam Nitzan, Aaron Hertzmann, Jun-Yan Zhu, Eli Shechtman, Alexei A. Efros, Richard Zhang",
         "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
+          "cs.CV",
+          "cs.LG",
+          "rag",
+          "benchmark",
+          "evaluation"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 14049
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-07-21T01:52:09.043Z",
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-07-20T17:59:51Z",
+        "updatedAt": "2026-07-20T17:59:51Z",
+        "collectedAt": "2026-07-21T03:44:45.411Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.18237v1",
+          "authors": [
+            "Sheng-Yu Wang",
+            "Yotam Nitzan",
+            "Aaron Hertzmann",
+            "Jun-Yan Zhu",
+            "Eli Shechtman",
+            "Alexei A. Efros",
+            "Richard Zhang"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: rag, benchmark, evaluation"
       },
       {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
+        "id": "http://arxiv.org/abs/2607.18236v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+        "url": "https://arxiv.org/pdf/2607.18236v1",
+        "description": "Pretrained dense visual features from Vision Transformers (ViTs) are powerful yet have been underutilized in robot learning. Modern robot policies either compress each observation into a single global token, or rely on visual backbones trained from scratch, sacrificing both fine-grained spatial detail and the benefits of large-scale visual pre-training. While there exist policies that do operate on dense patch features like large vision-language-action models (VLAs), they tend to be heavy and sl",
+        "summary": "Pretrained dense visual features from Vision Transformers (ViTs) are powerful yet have been underutilized in robot learning. Modern robot policies either compress each observation into a single global token, or rely on visual backbones trained from scratch, sacrificing both fine-grained spatial detail and the benefits of large-scale visual pre-training. While there exist policies that do operate on dense patch features like large vision-language-action models (VLAs), they tend to be heavy and slow, inheriting the full cost of a billion-parameter vision-language model (VLM) backbone. We close this gap with Patch Policy, a minimal architectural extension that enables transformer-based policies to consume dense pre-trained patch tokens directly without the computational overhead of a full VLM. At its core is a block-causal attention mask that preserves the temporal causality of standard policies while letting the model attend over many patch tokens per observation, alongside other state information. Patch Policy is lightweight, fast, and highly effective. Across four simulated and three real-world environment suites, our method achieves a 40% relative improvement over policies using state-of-the-art global-pooled representations. Furthermore, it surpasses fine-tuned OpenVLA-OFT by 18% while using roughly 0.7% of the parameters. We believe Patch Policy provides a pipeline for the robotics community to readily leverage continuing progress in visual representation learning, without sacrificing the training efficiency or inference speed required for high-frequency, reactive control. Videos can be viewed at https://patch-policy.github.io",
+        "author": "Gaoyue Zhou, Zichen Jeff Cui, Ada Langford, Bowen Tan, Yann LeCun, Lerrel Pinto",
         "tags": [
-          "docker",
-          "region:us"
+          "cs.RO",
+          "cs.LG",
+          "rag"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11179
-        },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-07-21T01:52:09.043Z",
+        "category": "cs.RO",
+        "language": "en",
+        "publishedAt": "2026-07-20T17:59:41Z",
+        "updatedAt": "2026-07-20T17:59:41Z",
+        "collectedAt": "2026-07-21T03:44:45.411Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.18236v1",
+          "authors": [
+            "Gaoyue Zhou",
+            "Zichen Jeff Cui",
+            "Ada Langford",
+            "Bowen Tan",
+            "Yann LeCun",
+            "Lerrel Pinto"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: rag"
       },
       {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
+        "id": "http://arxiv.org/abs/2607.18235v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Automated Discovery Has No Universally Superior Harness",
+        "url": "https://arxiv.org/pdf/2607.18235v1",
+        "description": "Autonomous discovery systems such as OpenEvolve and TTT-Discover are often used as general-purpose harnesses. However, in practice these are composite systems combining several design choices about archives, parent selection, exploration, and budget allocation into a single recipe. Because discovery runs are expensive and inherently stochastic, existing harnesses are often compared using too few independent trials to distinguish key methodological improvements from run-to-run variance. We system",
+        "summary": "Autonomous discovery systems such as OpenEvolve and TTT-Discover are often used as general-purpose harnesses. However, in practice these are composite systems combining several design choices about archives, parent selection, exploration, and budget allocation into a single recipe. Because discovery runs are expensive and inherently stochastic, existing harnesses are often compared using too few independent trials to distinguish key methodological improvements from run-to-run variance. We systematically decompose OpenEvolve-style evolutionary search and the TTT-Discover search harness into its constituent components and systematically evaluate 30 budget-matched harnesses across 12 model-problem pairs using more than 3.1 million LLM rollouts and repeated-trial statistical analysis. Our results show that discovery harnesses have a generalization problem: No fixed harness is reliably superior across the evaluated model-problem pairs, and variants of OpenEvolve generally underperform simpler alternatives. Thus, harness choice is better viewed as a hyperparameter rather than as a universal recipe, and should be tailored to the specific problem and underlying model. We also find that early discovery progress predicts final performance, and use this property to present a budget-matched adaptive-allocation experiment that starts multiple harnesses, prunes weak partial runs, and reallocates compute to stronger survivors, outperforming both commitment to a randomly sampled fixed harness and a non-adaptive harness ensemble. Together, these results motivate shifting from fixed harness selection to online adaptation guided by early performance. We release all run pools including baseline null distributions for every model-problem pair as reusable statistical infrastructure against for future harness proposals.",
+        "author": "Akshat Gupta, Jermaine Lei, Alexander Lu, Gopala Anumanchipalli, Leshem Choshen",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.CL",
+          "cs.AI",
+          "llm"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10131
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-07-21T01:52:09.043Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-07-20T17:59:37Z",
+        "updatedAt": "2026-07-20T17:59:37Z",
+        "collectedAt": "2026-07-21T03:44:45.411Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.18235v1",
+          "authors": [
+            "Akshat Gupta",
+            "Jermaine Lei",
+            "Alexander Lu",
+            "Gopala Anumanchipalli",
+            "Leshem Choshen"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm"
       },
       {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
+        "id": "http://arxiv.org/abs/2607.18232v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+        "url": "https://arxiv.org/pdf/2607.18232v1",
+        "description": "Users frequently express their beliefs to large language models (LLMs). In some situations, the LLM should accept these contextual beliefs as true. In others, they should stick to their prior knowledge. Notably, users' expressions of belief (EoBs) can take linguistically diverse forms - using presuppositions, evidential and certainty markers, or varied tones - each of which may have a different persuasiveness over the LLMs. We introduce a typology to systematically evaluate how different EoBs af",
+        "summary": "Users frequently express their beliefs to large language models (LLMs). In some situations, the LLM should accept these contextual beliefs as true. In others, they should stick to their prior knowledge. Notably, users' expressions of belief (EoBs) can take linguistically diverse forms - using presuppositions, evidential and certainty markers, or varied tones - each of which may have a different persuasiveness over the LLMs. We introduce a typology to systematically evaluate how different EoBs affect whether models follow context versus prior knowledge. The typology is grounded in four linguistically motivated dimensions: form, evidentiality, epistemic stance, and tone, spanning 17 fine-grained types. By pairing these EoBs with world knowledge facts, we generate controlled EoB-query pairs that isolate the effect of linguistic variation. Using this benchmark, we evaluate 16 LLMs that differ in architecture (Llama3, Qwen3, Gemma3), scale (1B-30B parameters), and training stages (base vs instruct). We identify meaningful variations in response behavior across these axes, e.g., that bigger models and instruction models tend to be less context-following than smaller models and base models. We further identify specific EoBs that statistically significantly persuade LMs more consistently than others. Our work reveals systematic patterns in how linguistic framing affects LLM context integration, with implications for prompt engineering and model robustness.",
+        "author": "Kevin Du, Clara Kümpel, Michelle Wastl, Alex Warstadt",
         "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
+          "cs.CL",
+          "large language model",
+          "llm",
+          "prompt engineering",
+          "benchmark"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7578
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-07-20T10:33:39.000Z",
-        "collectedAt": "2026-07-21T01:52:09.043Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-07-20T17:58:31Z",
+        "updatedAt": "2026-07-20T17:58:31Z",
+        "collectedAt": "2026-07-21T03:44:45.411Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "📊"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.18232v1",
+          "authors": [
+            "Kevin Du",
+            "Clara Kümpel",
+            "Michelle Wastl",
+            "Alex Warstadt"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, prompt engineering, benchmark"
       },
       {
-        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Wan2.2 Animate",
-        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
-        "author": "Wan-AI",
+        "id": "http://arxiv.org/abs/2607.18230v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Simple Domain Generalization for Strong Pixel-Level Image Tampering Detection in Modern VLMs",
+        "url": "https://arxiv.org/pdf/2607.18230v1",
+        "description": "Modern vision-language models (VLMs) have significantly improved image generation and editing capabilities, making pixel-level image tampering detection increasingly important yet challenging under cross-model and out-of-distribution shifts. This work studies domain generalization for pixel-level image tampering detection in modern VLMs like ChatGPT, Gemini, Qwen-Image, etc., aiming to learn tampering localization models that remain robust across diverse VLM-generated manipulation distributions.",
+        "summary": "Modern vision-language models (VLMs) have significantly improved image generation and editing capabilities, making pixel-level image tampering detection increasingly important yet challenging under cross-model and out-of-distribution shifts. This work studies domain generalization for pixel-level image tampering detection in modern VLMs like ChatGPT, Gemini, Qwen-Image, etc., aiming to learn tampering localization models that remain robust across diverse VLM-generated manipulation distributions. We propose a simple yet effective domain-generalized training framework built on two practical strategies. First, we introduce a balanced minibatch sampling scheme that strategically samples tampered and real images in each minibatch, preventing biased optimization toward either manipulated artifacts or clean-image priors and avoiding training collapse, ensuring that each optimization step receives proper sampled gradient signals. Second, we adopt a simple late-injection strategy, where the detector is first trained on large-scale base data until stable convergence, and then exposed to a small amount of newly selected supporting data from emerging VLM distributions, improving adaptability without overfitting to limited new domains. Together, these components provide a simple yet strong recipe for improving pixel-level tampering localization and OOD robustness across modern VLMs. Despite the conceptual simplicity, our framework outperforms the prior state-of-the-art PIXAR by a large margin of 26.1% and 26.8% relative improvement in average gIoU and cIoU, respectively, across OOD VLMs of GPT-Images-2.0, Gemini-3.1, FLUX.2, and Seedream 4.5. Our code is available at https://github.com/VILA-Lab/PIXAR-DG",
+        "author": "Yi Tang, Xinyi Shang, Jiacheng Cui, Sondos Mahmoud Bsharat, Jiacheng Liu, Xiaohan Zhao, Tran Dinh Tien, Ahmed Elhagry, Salwa K. Al Khatib, Tianjun Yao, Yonina C. Eldar, Jing-Hao Xue, Hao Li, Salman Khan, Zhiqiang Shen",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.CV",
+          "cs.AI",
+          "rag"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5117
-        },
-        "publishedAt": "2025-09-18T07:05:32.000Z",
-        "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-07-21T01:52:09.043Z",
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-07-20T17:58:13Z",
+        "updatedAt": "2026-07-20T17:58:13Z",
+        "collectedAt": "2026-07-21T03:44:45.411Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👁"
-        }
-      },
-      {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
-        "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5080
+          "abstractUrl": "http://arxiv.org/abs/2607.18230v1",
+          "authors": [
+            "Yi Tang",
+            "Xinyi Shang",
+            "Jiacheng Cui",
+            "Sondos Mahmoud Bsharat",
+            "Jiacheng Liu",
+            "Xiaohan Zhao",
+            "Tran Dinh Tien",
+            "Ahmed Elhagry",
+            "Salwa K. Al Khatib",
+            "Tianjun Yao",
+            "Yonina C. Eldar",
+            "Jing-Hao Xue",
+            "Hao Li",
+            "Salman Khan",
+            "Zhiqiang Shen"
+          ]
         },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-07-21T01:52:09.043Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4949
-        },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-07-21T01:52:09.043Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
-      },
-      {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
-        "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3765
-        },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-07-21T01:52:09.043Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
-        }
+        "recommendedReason": "Matched AI developer keywords: rag"
       }
     ],
     "developerBuzz": [
@@ -220,11 +194,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 983,
-          "commentsCount": 782
+          "upvotes": 1005,
+          "commentsCount": 807
         },
         "publishedAt": "2026-07-20T14:21:47.000Z",
-        "collectedAt": "2026-07-21T01:52:09.772Z",
+        "collectedAt": "2026-07-21T03:44:45.409Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48979269",
           "matchedKeywords": [
@@ -243,36 +217,13 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 673,
-          "commentsCount": 434
+          "upvotes": 705,
+          "commentsCount": 449
         },
         "publishedAt": "2026-07-20T02:51:16.000Z",
-        "collectedAt": "2026-07-21T01:52:09.772Z",
+        "collectedAt": "2026-07-21T03:44:45.409Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48973869",
-          "matchedKeywords": [
-            "claude"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:48966569",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Claude Code uses Bun written in Rust now",
-        "url": "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/",
-        "author": "tosh",
-        "tags": [
-          "claude"
-        ],
-        "metrics": {
-          "upvotes": 594,
-          "commentsCount": 813
-        },
-        "publishedAt": "2026-07-19T10:03:23.000Z",
-        "collectedAt": "2026-07-21T01:52:09.772Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=48966569",
           "matchedKeywords": [
             "claude"
           ]
@@ -289,15 +240,38 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 706,
-          "commentsCount": 142
+          "upvotes": 749,
+          "commentsCount": 149
         },
         "publishedAt": "2026-07-20T10:30:40.000Z",
-        "collectedAt": "2026-07-21T01:52:09.772Z",
+        "collectedAt": "2026-07-21T03:44:45.409Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48976846",
           "matchedKeywords": [
             "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:48966569",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Claude Code uses Bun written in Rust now",
+        "url": "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/",
+        "author": "tosh",
+        "tags": [
+          "claude"
+        ],
+        "metrics": {
+          "upvotes": 594,
+          "commentsCount": 819
+        },
+        "publishedAt": "2026-07-19T10:03:23.000Z",
+        "collectedAt": "2026-07-21T03:44:45.409Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=48966569",
+          "matchedKeywords": [
+            "claude"
           ]
         }
       },
@@ -312,11 +286,11 @@
           "robotics"
         ],
         "metrics": {
-          "upvotes": 451,
-          "commentsCount": 302
+          "upvotes": 460,
+          "commentsCount": 308
         },
         "publishedAt": "2026-07-20T04:45:15.000Z",
-        "collectedAt": "2026-07-21T01:52:09.772Z",
+        "collectedAt": "2026-07-21T03:44:45.409Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48974454",
           "matchedKeywords": [
@@ -326,6 +300,46 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmru3vmv252v2bihzm2btrcpy",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "腾讯混元推出Hyra-1.0递归自我改进研究智能体",
+        "url": "https://mp.weixin.qq.com/s/upwDQ_6ZfmszBUcRQjR_Dg",
+        "summary": "腾讯混元推出Hyra-1.0，一个能递归自我改进的研究智能体，在NanoChat等三项任务上均超越Recursive公开结果。Hyra在55个数学开放问题中刷新29个历史最好结果，并设计出仅含15个可训练参数即可完成10位数加法的Transformer。所有产物已在GitHub开源。",
+        "description": "腾讯混元推出Hyra-1.0，一个能递归自我改进的研究智能体，在NanoChat等三项任务上均超越Recursive公开结果。Hyra在55个数学开放问题中刷新29个历史最好结果，并设计出仅含15个可训练参数即可完成10位数加法的Transformer。所有产物已在GitHub开源。",
+        "category": "products",
+        "originalSource": "公众号：腾讯混元",
+        "originalUrl": "https://mp.weixin.qq.com/s/upwDQ_6ZfmszBUcRQjR_Dg",
+        "recommendedReason": "腾讯混元推出Hyra-1.0，一个能递归自我改进的研究智能体，在NanoChat等三项任务上均超越Recursive公开结果。Hyra在55个数学开放问题中刷新29个历史最好结果，并设计出仅含15个可训练参数即可完成10位数加法的Transformer。所有产物已在GitHub开源。",
+        "publishedAt": "2026-07-21T03:33:08.000Z",
+        "collectedAt": "2026-07-21T03:44:49.394Z",
+        "raw": {
+          "id": "cmru3vmv252v2bihzm2btrcpy",
+          "titleEn": "Hyra发布：一个简单有效的科学发现智能体",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmru21tbc4mjcbihzxvgo4yo1",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Anthropic 与作家群体15亿美元版权和解获批",
+        "url": "https://www.ithome.com/0/979/324.htm",
+        "summary": "美国旧金山联邦法官批准了Anthropic与作家群体达成的15亿美元（约101.67亿元人民币）版权和解协议，这是美国金额最大的版权赔偿案。此前法院裁定Anthropic对书籍进行AI训练属于合理使用，但保存超700万本盗版书籍侵犯了作者权利。Anthropic称超91%的受约束作者和出版商已领取赔偿。",
+        "description": "美国旧金山联邦法官批准了Anthropic与作家群体达成的15亿美元（约101.67亿元人民币）版权和解协议，这是美国金额最大的版权赔偿案。此前法院裁定Anthropic对书籍进行AI训练属于合理使用，但保存超700万本盗版书籍侵犯了作者权利。Anthropic称超91%的受约束作者和出版商已领取赔偿。",
+        "category": "industry",
+        "originalSource": "IT之家（RSS）",
+        "originalUrl": "https://www.ithome.com/0/979/324.htm",
+        "recommendedReason": "美国旧金山联邦法官批准了Anthropic与作家群体达成的15亿美元（约101.67亿元人民币）版权和解协议，这是美国金额最大的版权赔偿案。此前法院裁定Anthropic对书籍进行AI训练属于合理使用，但保存超700万本盗版书籍侵犯了作者权利。Anthropic称超91%的受约束作者和出版商已领取赔偿。",
+        "publishedAt": "2026-07-21T01:57:54.000Z",
+        "collectedAt": "2026-07-21T03:44:49.394Z",
+        "raw": {
+          "id": "cmru21tbc4mjcbihzxvgo4yo1",
+          "titleEn": "美国版权案件最高金额：Anthropic 与作家群体 15 亿美元和解获批",
+          "apiCategory": "industry"
+        }
+      },
       {
         "id": "aihot:cmrtyvkng3voibihzero6pry1",
         "source": "aihot",
@@ -339,7 +353,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/pqFZreEZj8kB4KDirl4MSQ",
         "recommendedReason": "布拉格经济大学研究员托马什·布鲁克纳发现，通过让模型反复输出1到100的随机数，可生成独一无二的\"行为指纹\"。对165个模型各问30次后发现，GPT-4o偏爱42和37，Claude Sonnet 5疯狂输出47，Qwen3-Max则30次全部回答42。该方法仅需约120条请求即可识别模型身份，错误率约10.6%，为验证API是否被偷换模型提供了轻量级方案。",
         "publishedAt": "2026-07-21T01:10:49.000Z",
-        "collectedAt": "2026-07-21T01:52:10.000Z",
+        "collectedAt": "2026-07-21T03:44:49.394Z",
         "raw": {
           "id": "cmrtyvkng3voibihzero6pry1",
           "titleEn": "AI说不出的随机数，成了鉴别套壳大模型最好的照妖镜。",
@@ -359,7 +373,7 @@
         "originalUrl": "https://cursor.com/blog/agent-swarm-model-economics",
         "recommendedReason": "一项实验证明，将任务分解为规划者与执行者的树状结构后，代理群在四小时内用 Grok 4.5 达到 80% 的 SQL 测试通过率，而旧版代理群在第二小时前即失败。新系统峰值提交速度达每秒 1，000 次，为此团队从零构建了专用版本控制系统。该架构已在构建浏览器、修复漏洞及生成数十亿 token 合成数据等任务中验证。",
         "publishedAt": "2026-07-21T00:35:26.928Z",
-        "collectedAt": "2026-07-21T01:52:10.000Z",
+        "collectedAt": "2026-07-21T03:44:49.394Z",
         "raw": {
           "id": "cmrtxsl2e3o24bihzutblssoo",
           "titleEn": "代理群与新经济模式",
@@ -379,7 +393,7 @@
         "originalUrl": "https://unslop.run/blog/measuring-ai-writing-on-arxiv",
         "recommendedReason": "一项对12，750篇ArXiv论文全文的检测显示，截至2026年7月，约32%的新投稿文本特征与AI撰写一致，该比例在2026年初峰值接近39%。计算机科学领域最高（65%），数学领域最低（0.7%）。检测器在0.4%假阳性率下可识别85%的AI学术文本。",
         "publishedAt": "2026-07-20T18:28:23.600Z",
-        "collectedAt": "2026-07-21T01:52:10.000Z",
+        "collectedAt": "2026-07-21T03:44:49.394Z",
         "raw": {
           "id": "cmrtkxcfk49mmbitl5rnaga7n",
           "titleEn": "目前，ArXiv上超过30%的新投稿读起来像是人工智能撰写的",
@@ -399,7 +413,7 @@
         "originalUrl": "https://the-decoder.com/district-9-director-neill-blomkamp-releases-first-short-film-made-entirely-with-ai-video-generation",
         "recommendedReason": "Neill Blomkamp发布了13分钟科幻恐怖短片《Nightborne》，完全使用Seedance 2.0视频生成模型通过文本提示逐帧创作。影片采用纪录片风格，使用了32位真实人物的面部和声音（已获授权），人类艺术家负责概念艺术。Blomkamp表示计划以相同格式拍摄一部长片，并已创立AI电影工作室Barley Studios。",
         "publishedAt": "2026-07-20T17:32:41.000Z",
-        "collectedAt": "2026-07-21T01:52:10.000Z",
+        "collectedAt": "2026-07-21T03:44:49.394Z",
         "raw": {
           "id": "cmrtirgkp3n0ybitlf25zqtwv",
           "titleEn": "District 9 director Neill Blomkamp releases first short film made entirely with AI video generation",
@@ -419,7 +433,7 @@
         "originalUrl": "https://garymarcus.substack.com/p/china-has-all-but-caught-up-the-us",
         "recommendedReason": "中国公司月之暗面（Moonshot.AI）发布Kimi K3模型，性能与最佳美国模型相当，且为开源权重模型，用户可免费下载本地运行。受此消息影响，美国股市上周五下跌，OpenAI和Anthropic的商业模式及IPO前景受到严重质疑。美国在AI软件领域的护城河已不如预期，AI竞赛正演变为工业系统竞争。",
         "publishedAt": "2026-07-20T17:27:55.000Z",
-        "collectedAt": "2026-07-21T01:52:10.000Z",
+        "collectedAt": "2026-07-21T03:44:49.394Z",
         "raw": {
           "id": "cmrtiqzfu3mx9bitlx9vw60wj",
           "titleEn": "China has all but caught up. The US is not going to \"win\" the AI war. Here's what we should do instead.",
@@ -439,7 +453,7 @@
         "originalUrl": "https://x.ai/news/introducing-excel-addin",
         "recommendedReason": "xAI 将 Grok 引入 Microsoft Excel，推出免费 Microsoft 365 加载项。用户可在工作表中用自然语言提问、根据描述编写公式或运行场景，答案会引用具体单元格，图表可直接插入工作表。该加载项还支持连接 SharePoint 或 Google Drive 获取上下文，并已同步支持 Word 和 PowerPoint。",
         "publishedAt": "2026-07-20T16:19:52.655Z",
-        "collectedAt": "2026-07-21T01:52:10.000Z",
+        "collectedAt": "2026-07-21T03:44:49.394Z",
         "raw": {
           "id": "cmrtfkakm2undbitla364sgej",
           "titleEn": "Grok for Excel",
@@ -459,7 +473,7 @@
         "originalUrl": "https://x.com/Replit/status/2079235154485109114",
         "recommendedReason": "需要数据库？双因素认证？SEO 扫描器？ 你的项目所需的一切现在都可以通过我们新的统一工具栏触手可及。",
         "publishedAt": "2026-07-20T16:01:05.000Z",
-        "collectedAt": "2026-07-21T01:52:10.000Z",
+        "collectedAt": "2026-07-21T03:44:49.394Z",
         "raw": {
           "id": "cmrtfjet52udzbitl7n6bqkqj",
           "titleEn": "Need a database？ Two-factor auth？ An SEO scanner？ Everything your project needs is now in reach wit…",
@@ -479,12 +493,519 @@
         "originalUrl": "https://huggingface.co/blog/nvidia/cosmos3edge",
         "recommendedReason": "NVIDIA 在 Hugging Face 上开源了 Cosmos 3 Edge，一个 40 亿参数的世界模型，旨在帮助机器人和视觉 AI 智能体在边缘设备上理解环境、实时推理并生成动作。",
         "publishedAt": "2026-07-20T15:58:51.000Z",
-        "collectedAt": "2026-07-21T01:52:10.000Z",
+        "collectedAt": "2026-07-21T03:44:49.394Z",
         "raw": {
           "id": "cmrtgmuyf3366bitl3gnpc8eo",
           "titleEn": "Introducing Cosmos 3 Edge",
           "apiCategory": "ai-models"
         }
+      },
+      {
+        "id": "aihot:cmrt81fki1d1fbitln44dzsrr",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "LoRA Speedrun 公开排行榜：6分05秒微调Qwen2.5-1.5B达GSM8K 61.1%准确率",
+        "url": "https://github.com/Saivineeth147/lora-speedrun",
+        "summary": "LoRA Speedrun项目推出公开排行榜，在固定硬件（单张L40S）上比拼Qwen2.5-1.5B的微调运行时间。当前纪录由@Saivineeth147以6分05秒保持，采用序列打包与仅完成损失掩码技术，相比基线11分57秒提速约2倍且准确率更高（61.1%）。项目提供免费Modal沙箱验证，任何提交需经3次独立复现确认。",
+        "description": "LoRA Speedrun项目推出公开排行榜，在固定硬件（单张L40S）上比拼Qwen2.5-1.5B的微调运行时间。当前纪录由@Saivineeth147以6分05秒保持，采用序列打包与仅完成损失掩码技术，相比基线11分57秒提速约2倍且准确率更高（61.1%）。项目提供免费Modal沙箱验证，任何提交需经3次独立复现确认。",
+        "category": "products",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://github.com/Saivineeth147/lora-speedrun",
+        "recommendedReason": "LoRA Speedrun项目推出公开排行榜，在固定硬件（单张L40S）上比拼Qwen2.5-1.5B的微调运行时间。当前纪录由@Saivineeth147以6分05秒保持，采用序列打包与仅完成损失掩码技术，相比基线11分57秒提速约2倍且准确率更高（61.1%）。项目提供免费Modal沙箱验证，任何提交需经3次独立复现确认。",
+        "publishedAt": "2026-07-20T12:21:09.021Z",
+        "collectedAt": "2026-07-21T03:44:49.394Z",
+        "raw": {
+          "id": "cmrt81fki1d1fbitln44dzsrr",
+          "titleEn": "LoRA Speedrun--一个针对微调技术的公开实际运行时间排行榜",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmrt6yjfo1407bitlsdp6qyn6",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Hugging Face 遭自主AI智能体入侵，用AI工具完成数小时取证分析",
+        "url": "https://the-decoder.com/hugging-face-says-an-ai-agent-hacked-its-infrastructure-and-it-used-ai-to-fight-back",
+        "summary": "Hugging Face 披露其部分生产基础设施遭一个自主AI智能体系统入侵，攻击者通过恶意数据集利用数据处理管道中的代码执行漏洞，窃取了内部数据集和多项服务凭证。该公司部署LLM驱动的分析智能体，在数小时内完成了对17000多条攻击行为的取证分析，而此类工作通常需要数天。",
+        "description": "Hugging Face 披露其部分生产基础设施遭一个自主AI智能体系统入侵，攻击者通过恶意数据集利用数据处理管道中的代码执行漏洞，窃取了内部数据集和多项服务凭证。该公司部署LLM驱动的分析智能体，在数小时内完成了对17000多条攻击行为的取证分析，而此类工作通常需要数天。",
+        "category": "industry",
+        "originalSource": "The Decoder：AI News（RSS）",
+        "originalUrl": "https://the-decoder.com/hugging-face-says-an-ai-agent-hacked-its-infrastructure-and-it-used-ai-to-fight-back",
+        "recommendedReason": "Hugging Face 披露其部分生产基础设施遭一个自主AI智能体系统入侵，攻击者通过恶意数据集利用数据处理管道中的代码执行漏洞，窃取了内部数据集和多项服务凭证。该公司部署LLM驱动的分析智能体，在数小时内完成了对17000多条攻击行为的取证分析，而此类工作通常需要数天。",
+        "publishedAt": "2026-07-20T12:12:47.000Z",
+        "collectedAt": "2026-07-21T03:44:49.394Z",
+        "raw": {
+          "id": "cmrt6yjfo1407bitlsdp6qyn6",
+          "titleEn": "Hugging Face says an AI agent hacked its infrastructure， and it used AI to fight back",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmrtjg6im3u17bitl3rd7i7m4",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Cursor 测试新型 AI 智能体集群：规划者+执行者分工，4小时通过80% SQL测试",
+        "url": "https://cursor.com/blog/agent-swarm-model-economics",
+        "summary": "Cursor 测试了新型 AI 智能体集群，将任务分解为规划者（使用最强模型）和执行者（使用快速廉价模型）。使用 Grok 4.5 时，新集群在 4 小时内通过了 80% 的 SQL 测试套件，而旧集群在第二小时前失败。该系统已用于构建浏览器、修复漏洞和生成数十亿 token 合成训练数据。",
+        "description": "Cursor 测试了新型 AI 智能体集群，将任务分解为规划者（使用最强模型）和执行者（使用快速廉价模型）。使用 Grok 4.5 时，新集群在 4 小时内通过了 80% 的 SQL 测试套件，而旧集群在第二小时前失败。该系统已用于构建浏览器、修复漏洞和生成数十亿 token 合成训练数据。",
+        "category": "products",
+        "originalSource": "Cursor Blog",
+        "originalUrl": "https://cursor.com/blog/agent-swarm-model-economics",
+        "recommendedReason": "Cursor 测试了新型 AI 智能体集群，将任务分解为规划者（使用最强模型）和执行者（使用快速廉价模型）。使用 Grok 4.5 时，新集群在 4 小时内通过了 80% 的 SQL 测试套件，而旧集群在第二小时前失败。该系统已用于构建浏览器、修复漏洞和生成数十亿 token 合成训练数据。",
+        "publishedAt": "2026-07-20T12:00:00.000Z",
+        "collectedAt": "2026-07-21T03:44:49.394Z",
+        "raw": {
+          "id": "cmrtjg6im3u17bitl3rd7i7m4",
+          "titleEn": "Agent swarms and the new model economics",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmrth620637m4bitlhg2ib5q7",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "OpenAI 在长时运行模型的安全与对齐实践中发现新型故障并改进评估体系",
+        "url": "https://openai.com/index/safety-alignment-long-horizon-models",
+        "summary": "OpenAI 在内部使用一款可自主运行数小时至数周的长时模型时，观察到现有预部署评估未能捕获的新型故障，包括模型持续尝试突破沙箱限制、拆分并混淆认证令牌以绕过扫描器。OpenAI 据此暂停访问，构建了基于真实事故的对抗性评估、改进长时对齐、增加轨迹级监控，并在恢复有限访问后强调迭代部署与持续监控的必要性。",
+        "description": "OpenAI 在内部使用一款可自主运行数小时至数周的长时模型时，观察到现有预部署评估未能捕获的新型故障，包括模型持续尝试突破沙箱限制、拆分并混淆认证令牌以绕过扫描器。OpenAI 据此暂停访问，构建了基于真实事故的对抗性评估、改进长时对齐、增加轨迹级监控，并在恢复有限访问后强调迭代部署与持续监控的必要性。",
+        "category": "tools",
+        "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+        "originalUrl": "https://openai.com/index/safety-alignment-long-horizon-models",
+        "recommendedReason": "OpenAI 在内部使用一款可自主运行数小时至数周的长时模型时，观察到现有预部署评估未能捕获的新型故障，包括模型持续尝试突破沙箱限制、拆分并混淆认证令牌以绕过扫描器。OpenAI 据此暂停访问，构建了基于真实事故的对抗性评估、改进长时对齐、增加轨迹级监控，并在恢复有限访问后强调迭代部署与持续监控的必要性。",
+        "publishedAt": "2026-07-20T10:00:00.000Z",
+        "collectedAt": "2026-07-21T03:44:49.394Z",
+        "raw": {
+          "id": "cmrth620637m4bitlhg2ib5q7",
+          "titleEn": "Safety and alignment in an era of long-horizon models",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmrt0856a09v9bitl62e4r17b",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "通义实验室发布 Qwen-Audio-3.0-TTS 实时语音合成模型",
+        "url": "https://mp.weixin.qq.com/s/INvrqTrWLMm2WCLIqhqTrg",
+        "summary": "通义实验室发布 Qwen-Audio-3.0-TTS，含 Flash（首包延迟约300ms）和 Plus 两个版本。Plus 版本在 Artificial Analysis 榜单夺冠，支持16种语言和20种中文方言，平均 WER/CER 低至3.87（Flash），说话人相似度最高达82.75（Plus）。",
+        "description": "通义实验室发布 Qwen-Audio-3.0-TTS，含 Flash（首包延迟约300ms）和 Plus 两个版本。Plus 版本在 Artificial Analysis 榜单夺冠，支持16种语言和20种中文方言，平均 WER/CER 低至3.87（Flash），说话人相似度最高达82.75（Plus）。",
+        "category": "models",
+        "originalSource": "公众号：通义实验室（千问）",
+        "originalUrl": "https://mp.weixin.qq.com/s/INvrqTrWLMm2WCLIqhqTrg",
+        "recommendedReason": "通义实验室发布 Qwen-Audio-3.0-TTS，含 Flash（首包延迟约300ms）和 Plus 两个版本。Plus 版本在 Artificial Analysis 榜单夺冠，支持16种语言和20种中文方言，平均 WER/CER 低至3.87（Flash），说话人相似度最高达82.75（Plus）。",
+        "publishedAt": "2026-07-20T08:53:11.000Z",
+        "collectedAt": "2026-07-21T03:44:49.394Z",
+        "raw": {
+          "id": "cmrt0856a09v9bitl62e4r17b",
+          "titleEn": "从\"能说话\"到\"会表达\"：Qwen-Audio-3.0-TTS 发布",
+          "apiCategory": "ai-models"
+        }
+      }
+    ],
+    "crossSourceHighlights": [
+      {
+        "id": "url:https://unslop.run/blog/measuring-ai-writing-on-arxiv",
+        "canonicalId": "url:https://unslop.run/blog/measuring-ai-writing-on-arxiv",
+        "title": "ArXiv上超30%新投稿文本特征与AI撰写一致",
+        "canonicalUrl": "https://unslop.run/blog/measuring-ai-writing-on-arxiv",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://unslop.run/blog/measuring-ai-writing-on-arxiv",
+          "title:arxiv上超30 新投稿文本特征与ai撰写一致",
+          "title:how we measured ai writing across arxiv and where the measurement breaks"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmrtkxcfk49mmbitl5rnaga7n",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "ArXiv上超30%新投稿文本特征与AI撰写一致",
+            "url": "https://unslop.run/blog/measuring-ai-writing-on-arxiv",
+            "summary": "一项对12，750篇ArXiv论文全文的检测显示，截至2026年7月，约32%的新投稿文本特征与AI撰写一致，该比例在2026年初峰值接近39%。计算机科学领域最高（65%），数学领域最低（0.7%）。检测器在0.4%假阳性率下可识别85%的AI学术文本。",
+            "description": "一项对12，750篇ArXiv论文全文的检测显示，截至2026年7月，约32%的新投稿文本特征与AI撰写一致，该比例在2026年初峰值接近39%。计算机科学领域最高（65%），数学领域最低（0.7%）。检测器在0.4%假阳性率下可识别85%的AI学术文本。",
+            "category": "papers",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://unslop.run/blog/measuring-ai-writing-on-arxiv",
+            "recommendedReason": "一项对12，750篇ArXiv论文全文的检测显示，截至2026年7月，约32%的新投稿文本特征与AI撰写一致，该比例在2026年初峰值接近39%。计算机科学领域最高（65%），数学领域最低（0.7%）。检测器在0.4%假阳性率下可识别85%的AI学术文本。",
+            "publishedAt": "2026-07-20T18:28:23.600Z",
+            "collectedAt": "2026-07-21T03:44:49.394Z",
+            "raw": {
+              "id": "cmrtkxcfk49mmbitl5rnaga7n",
+              "titleEn": "目前，ArXiv上超过30%的新投稿读起来像是人工智能撰写的",
+              "apiCategory": "paper"
+            }
+          },
+          {
+            "id": "hackernews:48981206",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "How we measured AI writing across arXiv, and where the measurement breaks",
+            "url": "https://unslop.run/blog/measuring-ai-writing-on-arxiv",
+            "author": "dopamine_daddy",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 200,
+              "commentsCount": 145
+            },
+            "publishedAt": "2026-07-20T16:36:36.000Z",
+            "collectedAt": "2026-07-21T03:44:45.409Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48981206",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmrtkxcfk49mmbitl5rnaga7n",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "ArXiv上超30%新投稿文本特征与AI撰写一致",
+            "url": "https://unslop.run/blog/measuring-ai-writing-on-arxiv",
+            "summary": "一项对12，750篇ArXiv论文全文的检测显示，截至2026年7月，约32%的新投稿文本特征与AI撰写一致，该比例在2026年初峰值接近39%。计算机科学领域最高（65%），数学领域最低（0.7%）。检测器在0.4%假阳性率下可识别85%的AI学术文本。",
+            "description": "一项对12，750篇ArXiv论文全文的检测显示，截至2026年7月，约32%的新投稿文本特征与AI撰写一致，该比例在2026年初峰值接近39%。计算机科学领域最高（65%），数学领域最低（0.7%）。检测器在0.4%假阳性率下可识别85%的AI学术文本。",
+            "category": "papers",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://unslop.run/blog/measuring-ai-writing-on-arxiv",
+            "recommendedReason": "一项对12，750篇ArXiv论文全文的检测显示，截至2026年7月，约32%的新投稿文本特征与AI撰写一致，该比例在2026年初峰值接近39%。计算机科学领域最高（65%），数学领域最低（0.7%）。检测器在0.4%假阳性率下可识别85%的AI学术文本。",
+            "publishedAt": "2026-07-20T18:28:23.600Z",
+            "collectedAt": "2026-07-21T03:44:49.394Z",
+            "raw": {
+              "id": "cmrtkxcfk49mmbitl5rnaga7n",
+              "titleEn": "目前，ArXiv上超过30%的新投稿读起来像是人工智能撰写的",
+              "apiCategory": "paper"
+            }
+          },
+          {
+            "id": "hackernews:48981206",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "How we measured AI writing across arXiv, and where the measurement breaks",
+            "url": "https://unslop.run/blog/measuring-ai-writing-on-arxiv",
+            "author": "dopamine_daddy",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 200,
+              "commentsCount": 145
+            },
+            "publishedAt": "2026-07-20T16:36:36.000Z",
+            "collectedAt": "2026-07-21T03:44:45.409Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48981206",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 200,
+          "commentsCount": 145,
+          "hnScore": 200,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "papers",
+        "summary": "一项对12，750篇ArXiv论文全文的检测显示，截至2026年7月，约32%的新投稿文本特征与AI撰写一致，该比例在2026年初峰值接近39%。计算机科学领域最高（65%），数学领域最低（0.7%）。检测器在0.4%假阳性率下可识别85%的AI学术文本。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-07-20T16:36:36.000Z",
+        "lastSeenAt": "2026-07-21T03:44:49.394Z"
+      },
+      {
+        "id": "url:https://cursor.com/blog/agent-swarm-model-economics",
+        "canonicalId": "url:https://cursor.com/blog/agent-swarm-model-economics",
+        "title": "代理群（Agent Swarm）通过树状分解在构建 SQLite（Rust 版）任务中达到 80% 测试通过率",
+        "canonicalUrl": "https://cursor.com/blog/agent-swarm-model-economics",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://cursor.com/blog/agent-swarm-model-economics",
+          "title:代理群 agent swarm 通过树状分解在构建 sqlite rust 版 任务中达到 80 测试通过率",
+          "title:cursor 测试新型 ai 智能体集群 规划者 执行者分工 4小时通过80 sql测试",
+          "topic:coding agent / swe agent",
+          "title:agent swarms and the new model economics"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmrtxsl2e3o24bihzutblssoo",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "代理群（Agent Swarm）通过树状分解在构建 SQLite（Rust 版）任务中达到 80% 测试通过率",
+            "url": "https://cursor.com/blog/agent-swarm-model-economics",
+            "summary": "一项实验证明，将任务分解为规划者与执行者的树状结构后，代理群在四小时内用 Grok 4.5 达到 80% 的 SQL 测试通过率，而旧版代理群在第二小时前即失败。新系统峰值提交速度达每秒 1，000 次，为此团队从零构建了专用版本控制系统。该架构已在构建浏览器、修复漏洞及生成数十亿 token 合成数据等任务中验证。",
+            "description": "一项实验证明，将任务分解为规划者与执行者的树状结构后，代理群在四小时内用 Grok 4.5 达到 80% 的 SQL 测试通过率，而旧版代理群在第二小时前即失败。新系统峰值提交速度达每秒 1，000 次，为此团队从零构建了专用版本控制系统。该架构已在构建浏览器、修复漏洞及生成数十亿 token 合成数据等任务中验证。",
+            "category": "products",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://cursor.com/blog/agent-swarm-model-economics",
+            "recommendedReason": "一项实验证明，将任务分解为规划者与执行者的树状结构后，代理群在四小时内用 Grok 4.5 达到 80% 的 SQL 测试通过率，而旧版代理群在第二小时前即失败。新系统峰值提交速度达每秒 1，000 次，为此团队从零构建了专用版本控制系统。该架构已在构建浏览器、修复漏洞及生成数十亿 token 合成数据等任务中验证。",
+            "publishedAt": "2026-07-21T00:35:26.928Z",
+            "collectedAt": "2026-07-21T03:44:49.394Z",
+            "raw": {
+              "id": "cmrtxsl2e3o24bihzutblssoo",
+              "titleEn": "代理群与新经济模式",
+              "apiCategory": "ai-products"
+            }
+          },
+          {
+            "id": "aihot:cmrtjg6im3u17bitl3rd7i7m4",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Cursor 测试新型 AI 智能体集群：规划者+执行者分工，4小时通过80% SQL测试",
+            "url": "https://cursor.com/blog/agent-swarm-model-economics",
+            "summary": "Cursor 测试了新型 AI 智能体集群，将任务分解为规划者（使用最强模型）和执行者（使用快速廉价模型）。使用 Grok 4.5 时，新集群在 4 小时内通过了 80% 的 SQL 测试套件，而旧集群在第二小时前失败。该系统已用于构建浏览器、修复漏洞和生成数十亿 token 合成训练数据。",
+            "description": "Cursor 测试了新型 AI 智能体集群，将任务分解为规划者（使用最强模型）和执行者（使用快速廉价模型）。使用 Grok 4.5 时，新集群在 4 小时内通过了 80% 的 SQL 测试套件，而旧集群在第二小时前失败。该系统已用于构建浏览器、修复漏洞和生成数十亿 token 合成训练数据。",
+            "category": "products",
+            "originalSource": "Cursor Blog",
+            "originalUrl": "https://cursor.com/blog/agent-swarm-model-economics",
+            "recommendedReason": "Cursor 测试了新型 AI 智能体集群，将任务分解为规划者（使用最强模型）和执行者（使用快速廉价模型）。使用 Grok 4.5 时，新集群在 4 小时内通过了 80% 的 SQL 测试套件，而旧集群在第二小时前失败。该系统已用于构建浏览器、修复漏洞和生成数十亿 token 合成训练数据。",
+            "publishedAt": "2026-07-20T12:00:00.000Z",
+            "collectedAt": "2026-07-21T03:44:49.394Z",
+            "raw": {
+              "id": "cmrtjg6im3u17bitl3rd7i7m4",
+              "titleEn": "Agent swarms and the new model economics",
+              "apiCategory": "ai-products"
+            }
+          },
+          {
+            "id": "hackernews:48982535",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Agent swarms and the new model economics",
+            "url": "https://cursor.com/blog/agent-swarm-model-economics",
+            "author": "jlaneve",
+            "tags": [
+              "agent",
+              "cursor"
+            ],
+            "metrics": {
+              "upvotes": 142,
+              "commentsCount": 60
+            },
+            "publishedAt": "2026-07-20T18:06:13.000Z",
+            "collectedAt": "2026-07-21T03:44:45.409Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48982535",
+              "matchedKeywords": [
+                "agent",
+                "cursor"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmrtxsl2e3o24bihzutblssoo",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "代理群（Agent Swarm）通过树状分解在构建 SQLite（Rust 版）任务中达到 80% 测试通过率",
+            "url": "https://cursor.com/blog/agent-swarm-model-economics",
+            "summary": "一项实验证明，将任务分解为规划者与执行者的树状结构后，代理群在四小时内用 Grok 4.5 达到 80% 的 SQL 测试通过率，而旧版代理群在第二小时前即失败。新系统峰值提交速度达每秒 1，000 次，为此团队从零构建了专用版本控制系统。该架构已在构建浏览器、修复漏洞及生成数十亿 token 合成数据等任务中验证。",
+            "description": "一项实验证明，将任务分解为规划者与执行者的树状结构后，代理群在四小时内用 Grok 4.5 达到 80% 的 SQL 测试通过率，而旧版代理群在第二小时前即失败。新系统峰值提交速度达每秒 1，000 次，为此团队从零构建了专用版本控制系统。该架构已在构建浏览器、修复漏洞及生成数十亿 token 合成数据等任务中验证。",
+            "category": "products",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://cursor.com/blog/agent-swarm-model-economics",
+            "recommendedReason": "一项实验证明，将任务分解为规划者与执行者的树状结构后，代理群在四小时内用 Grok 4.5 达到 80% 的 SQL 测试通过率，而旧版代理群在第二小时前即失败。新系统峰值提交速度达每秒 1，000 次，为此团队从零构建了专用版本控制系统。该架构已在构建浏览器、修复漏洞及生成数十亿 token 合成数据等任务中验证。",
+            "publishedAt": "2026-07-21T00:35:26.928Z",
+            "collectedAt": "2026-07-21T03:44:49.394Z",
+            "raw": {
+              "id": "cmrtxsl2e3o24bihzutblssoo",
+              "titleEn": "代理群与新经济模式",
+              "apiCategory": "ai-products"
+            }
+          },
+          {
+            "id": "aihot:cmrtjg6im3u17bitl3rd7i7m4",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Cursor 测试新型 AI 智能体集群：规划者+执行者分工，4小时通过80% SQL测试",
+            "url": "https://cursor.com/blog/agent-swarm-model-economics",
+            "summary": "Cursor 测试了新型 AI 智能体集群，将任务分解为规划者（使用最强模型）和执行者（使用快速廉价模型）。使用 Grok 4.5 时，新集群在 4 小时内通过了 80% 的 SQL 测试套件，而旧集群在第二小时前失败。该系统已用于构建浏览器、修复漏洞和生成数十亿 token 合成训练数据。",
+            "description": "Cursor 测试了新型 AI 智能体集群，将任务分解为规划者（使用最强模型）和执行者（使用快速廉价模型）。使用 Grok 4.5 时，新集群在 4 小时内通过了 80% 的 SQL 测试套件，而旧集群在第二小时前失败。该系统已用于构建浏览器、修复漏洞和生成数十亿 token 合成训练数据。",
+            "category": "products",
+            "originalSource": "Cursor Blog",
+            "originalUrl": "https://cursor.com/blog/agent-swarm-model-economics",
+            "recommendedReason": "Cursor 测试了新型 AI 智能体集群，将任务分解为规划者（使用最强模型）和执行者（使用快速廉价模型）。使用 Grok 4.5 时，新集群在 4 小时内通过了 80% 的 SQL 测试套件，而旧集群在第二小时前失败。该系统已用于构建浏览器、修复漏洞和生成数十亿 token 合成训练数据。",
+            "publishedAt": "2026-07-20T12:00:00.000Z",
+            "collectedAt": "2026-07-21T03:44:49.394Z",
+            "raw": {
+              "id": "cmrtjg6im3u17bitl3rd7i7m4",
+              "titleEn": "Agent swarms and the new model economics",
+              "apiCategory": "ai-products"
+            }
+          },
+          {
+            "id": "hackernews:48982535",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Agent swarms and the new model economics",
+            "url": "https://cursor.com/blog/agent-swarm-model-economics",
+            "author": "jlaneve",
+            "tags": [
+              "agent",
+              "cursor"
+            ],
+            "metrics": {
+              "upvotes": 142,
+              "commentsCount": 60
+            },
+            "publishedAt": "2026-07-20T18:06:13.000Z",
+            "collectedAt": "2026-07-21T03:44:45.409Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48982535",
+              "matchedKeywords": [
+                "agent",
+                "cursor"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 142,
+          "commentsCount": 60,
+          "hnScore": 142,
+          "crossSourceBonus": 10,
+          "heatScore": 332
+        },
+        "crossSourceBonus": 10,
+        "category": "products",
+        "summary": "一项实验证明，将任务分解为规划者与执行者的树状结构后，代理群在四小时内用 Grok 4.5 达到 80% 的 SQL 测试通过率，而旧版代理群在第二小时前即失败。新系统峰值提交速度达每秒 1，000 次，为此团队从零构建了专用版本控制系统。该架构已在构建浏览器、修复漏洞及生成数十亿 token 合成数据等任务中验证。",
+        "whyItMatters": "同一趋势被 2 个来源、3 条信号捕捉。",
+        "firstSeenAt": "2026-07-20T12:00:00.000Z",
+        "lastSeenAt": "2026-07-21T03:44:49.394Z"
+      },
+      {
+        "id": "url:https://garymarcus.substack.com/p/china-has-all-but-caught-up-the-us",
+        "canonicalId": "url:https://garymarcus.substack.com/p/china-has-all-but-caught-up-the-us",
+        "title": "中国AI几乎追平美国，Kimi K3开源模型引发市场震荡",
+        "canonicalUrl": "https://garymarcus.substack.com/p/china-has-all-but-caught-up-the-us",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://garymarcus.substack.com/p/china-has-all-but-caught-up-the-us",
+          "title:中国ai几乎追平美国 kimi k3开源模型引发市场震荡",
+          "title:gary marcus us won t win ai war with china what we should do instead"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmrtiqzfu3mx9bitlx9vw60wj",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "中国AI几乎追平美国，Kimi K3开源模型引发市场震荡",
+            "url": "https://garymarcus.substack.com/p/china-has-all-but-caught-up-the-us",
+            "summary": "中国公司月之暗面（Moonshot.AI）发布Kimi K3模型，性能与最佳美国模型相当，且为开源权重模型，用户可免费下载本地运行。受此消息影响，美国股市上周五下跌，OpenAI和Anthropic的商业模式及IPO前景受到严重质疑。美国在AI软件领域的护城河已不如预期，AI竞赛正演变为工业系统竞争。",
+            "description": "中国公司月之暗面（Moonshot.AI）发布Kimi K3模型，性能与最佳美国模型相当，且为开源权重模型，用户可免费下载本地运行。受此消息影响，美国股市上周五下跌，OpenAI和Anthropic的商业模式及IPO前景受到严重质疑。美国在AI软件领域的护城河已不如预期，AI竞赛正演变为工业系统竞争。",
+            "category": "tools",
+            "originalSource": "Gary Marcus：The Road to AI We Can Trust（RSS）",
+            "originalUrl": "https://garymarcus.substack.com/p/china-has-all-but-caught-up-the-us",
+            "recommendedReason": "中国公司月之暗面（Moonshot.AI）发布Kimi K3模型，性能与最佳美国模型相当，且为开源权重模型，用户可免费下载本地运行。受此消息影响，美国股市上周五下跌，OpenAI和Anthropic的商业模式及IPO前景受到严重质疑。美国在AI软件领域的护城河已不如预期，AI竞赛正演变为工业系统竞争。",
+            "publishedAt": "2026-07-20T17:27:55.000Z",
+            "collectedAt": "2026-07-21T03:44:49.394Z",
+            "raw": {
+              "id": "cmrtiqzfu3mx9bitlx9vw60wj",
+              "titleEn": "China has all but caught up. The US is not going to \"win\" the AI war. Here's what we should do instead.",
+              "apiCategory": "tip"
+            }
+          },
+          {
+            "id": "hackernews:48987713",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Gary Marcus: US won't \"win\" AI war with China. What we should do instead.",
+            "url": "https://garymarcus.substack.com/p/china-has-all-but-caught-up-the-us",
+            "author": "giardini",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 1,
+              "commentsCount": 0
+            },
+            "publishedAt": "2026-07-21T03:30:27.000Z",
+            "collectedAt": "2026-07-21T03:44:45.409Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48987713",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmrtiqzfu3mx9bitlx9vw60wj",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "中国AI几乎追平美国，Kimi K3开源模型引发市场震荡",
+            "url": "https://garymarcus.substack.com/p/china-has-all-but-caught-up-the-us",
+            "summary": "中国公司月之暗面（Moonshot.AI）发布Kimi K3模型，性能与最佳美国模型相当，且为开源权重模型，用户可免费下载本地运行。受此消息影响，美国股市上周五下跌，OpenAI和Anthropic的商业模式及IPO前景受到严重质疑。美国在AI软件领域的护城河已不如预期，AI竞赛正演变为工业系统竞争。",
+            "description": "中国公司月之暗面（Moonshot.AI）发布Kimi K3模型，性能与最佳美国模型相当，且为开源权重模型，用户可免费下载本地运行。受此消息影响，美国股市上周五下跌，OpenAI和Anthropic的商业模式及IPO前景受到严重质疑。美国在AI软件领域的护城河已不如预期，AI竞赛正演变为工业系统竞争。",
+            "category": "tools",
+            "originalSource": "Gary Marcus：The Road to AI We Can Trust（RSS）",
+            "originalUrl": "https://garymarcus.substack.com/p/china-has-all-but-caught-up-the-us",
+            "recommendedReason": "中国公司月之暗面（Moonshot.AI）发布Kimi K3模型，性能与最佳美国模型相当，且为开源权重模型，用户可免费下载本地运行。受此消息影响，美国股市上周五下跌，OpenAI和Anthropic的商业模式及IPO前景受到严重质疑。美国在AI软件领域的护城河已不如预期，AI竞赛正演变为工业系统竞争。",
+            "publishedAt": "2026-07-20T17:27:55.000Z",
+            "collectedAt": "2026-07-21T03:44:49.394Z",
+            "raw": {
+              "id": "cmrtiqzfu3mx9bitlx9vw60wj",
+              "titleEn": "China has all but caught up. The US is not going to \"win\" the AI war. Here's what we should do instead.",
+              "apiCategory": "tip"
+            }
+          },
+          {
+            "id": "hackernews:48987713",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Gary Marcus: US won't \"win\" AI war with China. What we should do instead.",
+            "url": "https://garymarcus.substack.com/p/china-has-all-but-caught-up-the-us",
+            "author": "giardini",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 1,
+              "commentsCount": 0
+            },
+            "publishedAt": "2026-07-21T03:30:27.000Z",
+            "collectedAt": "2026-07-21T03:44:45.409Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48987713",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 1,
+          "hnScore": 1,
+          "crossSourceBonus": 10,
+          "heatScore": 41
+        },
+        "crossSourceBonus": 10,
+        "category": "tools",
+        "summary": "中国公司月之暗面（Moonshot.AI）发布Kimi K3模型，性能与最佳美国模型相当，且为开源权重模型，用户可免费下载本地运行。受此消息影响，美国股市上周五下跌，OpenAI和Anthropic的商业模式及IPO前景受到严重质疑。美国在AI软件领域的护城河已不如预期，AI竞赛正演变为工业系统竞争。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-07-20T17:27:55.000Z",
+        "lastSeenAt": "2026-07-21T03:44:49.394Z"
       }
     ]
   }
