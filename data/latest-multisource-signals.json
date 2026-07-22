@@ -1,211 +1,190 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-22T01:51:09.626Z",
+  "generatedAt": "2026-07-22T03:46:12.148Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
+        "id": "http://arxiv.org/abs/2607.19345v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Copy Less, Ground More: Overcoming Repetitive Copying in Long-Context Reasoning via Evidence-Aware Reinforcement Learning",
+        "url": "https://arxiv.org/pdf/2607.19345v1",
+        "description": "Large language models that generate step-by-step reasoning traces have achieved strong performance on complex tasks, and extending them to long-context settings has emerged as an important frontier. However, we identify a critical failure mode in this regime: \\emph{repetitive copying}, where models extensively copy text from the input into their reasoning traces rather than productively solving the problem. We show that this behavior is pervasive across frontier long-context LLMs and intensifies",
+        "summary": "Large language models that generate step-by-step reasoning traces have achieved strong performance on complex tasks, and extending them to long-context settings has emerged as an important frontier. However, we identify a critical failure mode in this regime: \\emph{repetitive copying}, where models extensively copy text from the input into their reasoning traces rather than productively solving the problem. We show that this behavior is pervasive across frontier long-context LLMs and intensifies with context length. By separating each prompt into task-relevant key evidence and irrelevant distractor context, we further show that the root cause is insufficient grounding: models copy from the prompt indiscriminately, and those that fail to focus on key evidence are far more likely to answer incorrectly. Motivated by this diagnosis, we propose GEAR (Grounding Evidence-Aware Reward), a reward shaping method that augments the accuracy signal with a grounding reward for overlap with key evidence and a distractor penalty for overlap with irrelevant context. To enable GEAR on natural-language data, we develop an automated pipeline that constructs evidence-annotated training data from arbitrary documents. We validate GEAR across multiple model scales and benchmarks, showing consistent improvements of up to +4.6 average points over standard RL with accuracy-based rewards, with larger gains at longer contexts, while also reducing repetitive copying and thinking length. Our findings suggest that, even as long-context evaluation shifts from simple retrieval toward complex reasoning, accurate grounding in relevant evidence remains an indispensable capability with substantial room for improvement.",
+        "author": "Lizhe Fang, Weizhou Shen, Tianyi Tang, Yisen Wang",
         "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
+          "cs.CL",
+          "cs.AI",
+          "large language model",
+          "llm",
+          "rag",
+          "benchmark",
+          "evaluation"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 14053
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-07-22T01:51:09.819Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-07-21T17:59:21Z",
+        "updatedAt": "2026-07-21T17:59:21Z",
+        "collectedAt": "2026-07-22T03:46:04.802Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.19345v1",
+          "authors": [
+            "Lizhe Fang",
+            "Weizhou Shen",
+            "Tianyi Tang",
+            "Yisen Wang"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, rag, benchmark, evaluation"
       },
       {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
+        "id": "http://arxiv.org/abs/2607.19338v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "CodeRescue: Budget-Calibrated Recovery Routing for Coding Agents",
+        "url": "https://arxiv.org/pdf/2607.19338v1",
+        "description": "Coding agents increasingly operate in executable environments where a failed attempt produces actionable feedback rather than merely an incorrect answer. Existing cost-aware systems typically treat such failures as cascade decisions: try a cheap model first, then escalate hard cases to a stronger and more expensive model. In coding, however, execution feedback can also make further cheap-model recovery worthwhile, raising a budgeted deployment question: when should an agent spend more cheap comp",
+        "summary": "Coding agents increasingly operate in executable environments where a failed attempt produces actionable feedback rather than merely an incorrect answer. Existing cost-aware systems typically treat such failures as cascade decisions: try a cheap model first, then escalate hard cases to a stronger and more expensive model. In coding, however, execution feedback can also make further cheap-model recovery worthwhile, raising a budgeted deployment question: when should an agent spend more cheap compute, and when should it escalate? We formulate this post-failure decision as recovery routing over heterogeneous actions and train a supervised router from execution rollouts. To make the same router usable under changing budgets, we add a Conformal Risk Control (CRC) layer that selects a deployment-time cost penalty without retraining and provides marginal expected-cost control under exchangeability. Across held-out failures from five coding benchmarks, cheap recovery and escalation exhibit complementary success patterns. The calibrated frontier improves over fixed actions, prompt-only routers, and a binary cascade baseline; in the main GPT-5.4-nano/GPT-5.4 setting, one CRC-calibrated frontier point exceeds always-escalate solve rate while using 35% of its mean recovery cost. Code is available at https://github.com/Qijia-He/agent-budget-control.",
+        "author": "Qijia He, Jiayi Cheng, Chenqian Le, Rui Wang, Xunmei Liu, Yixian Chen, Jie Mei, Zhihao Wang, Xupeng Chen, Yuhuan Chen, Tao Wang",
         "tags": [
-          "docker",
-          "region:us"
+          "cs.AI",
+          "agent",
+          "coding agent",
+          "benchmark"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11182
-        },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-07-22T01:51:09.819Z",
+        "category": "cs.AI",
+        "language": "en",
+        "publishedAt": "2026-07-21T17:56:49Z",
+        "updatedAt": "2026-07-21T17:56:49Z",
+        "collectedAt": "2026-07-22T03:46:04.802Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.19338v1",
+          "authors": [
+            "Qijia He",
+            "Jiayi Cheng",
+            "Chenqian Le",
+            "Rui Wang",
+            "Xunmei Liu",
+            "Yixian Chen",
+            "Jie Mei",
+            "Zhihao Wang",
+            "Xupeng Chen",
+            "Yuhuan Chen",
+            "Tao Wang"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: agent, coding agent, benchmark"
       },
       {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
+        "id": "http://arxiv.org/abs/2607.19336v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Agents in the Wild: Where Research Meets Deployment",
+        "url": "https://arxiv.org/pdf/2607.19336v1",
+        "description": "Agentic systems large language model (LLM) based architectures capable of reasoning, planning, acting, and coordinating with tools and other agents are rapidly transitioning from research prototypes to production scale deployments across domains such as software engineering, scientific discovery, and finance. While academic work has emphasized benchmarks and algorithmic innovation, deployment raises new challenges around robustness, safety, and reliability. This tutorial brings together research",
+        "summary": "Agentic systems large language model (LLM) based architectures capable of reasoning, planning, acting, and coordinating with tools and other agents are rapidly transitioning from research prototypes to production scale deployments across domains such as software engineering, scientific discovery, and finance. While academic work has emphasized benchmarks and algorithmic innovation, deployment raises new challenges around robustness, safety, and reliability. This tutorial brings together researchers and practitioners to explore advances in reasoning and planning, multi agent coordination, and evaluation, highlighting open challenges arising from deployment experience. Through applied case studies in pharmaceutical discovery and financial systems, we analyze common design patterns that make agentic systems successful, and discuss practical mitigation strategies for failure modes, such as verification pipelines, fallback mechanisms, and human in the loop supervision. Attendees will gain a comprehensive view of the field along with concrete design patterns, evaluation checklists, and templates for safe and reliable deployment across industries.",
+        "author": "Grace Hui Yang, Pranav N. Venkit, Hooman Sedghamiz, Enrico Santus, Victor Dibia, Ioana Baldini",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.AI",
+          "cs.CL",
+          "large language model",
+          "llm",
+          "agent",
+          "software engineering",
+          "safety",
+          "benchmark",
+          "evaluation",
+          "agentic"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10134
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-07-22T01:51:09.819Z",
+        "category": "cs.AI",
+        "language": "en",
+        "publishedAt": "2026-07-21T17:55:10Z",
+        "updatedAt": "2026-07-21T17:55:10Z",
+        "collectedAt": "2026-07-22T03:46:04.802Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.19336v1",
+          "authors": [
+            "Grace Hui Yang",
+            "Pranav N. Venkit",
+            "Hooman Sedghamiz",
+            "Enrico Santus",
+            "Victor Dibia",
+            "Ioana Baldini"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: large language model, llm, agent, software engineering, safety"
       },
       {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
+        "id": "http://arxiv.org/abs/2607.19334v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Fundamental limits of distributed multiclass classification from simple binary decisions",
+        "url": "https://arxiv.org/pdf/2607.19334v1",
+        "description": "We consider the problem of constructing a $K$-class classifier from the combination of $O(\\log K)$ simple binary classifiers -- this is a natural paradigm to construct a sophisticated classifier in a distributed manner with each agent performing a relatively straightforward task. We study the fundamental performance limits of such a classifier when the corresponding binary classifiers are hyperplanes. For a stylized Gaussian setting where the $K$ class centers are independent Gaussian points in ",
+        "summary": "We consider the problem of constructing a $K$-class classifier from the combination of $O(\\log K)$ simple binary classifiers -- this is a natural paradigm to construct a sophisticated classifier in a distributed manner with each agent performing a relatively straightforward task. We study the fundamental performance limits of such a classifier when the corresponding binary classifiers are hyperplanes. For a stylized Gaussian setting where the $K$ class centers are independent Gaussian points in $\\mathbb R^d$ and the observations are corrupted by Gaussian noise, we derive explicit performance bounds across several decoding and dimensional regimes. Extensive simulation experiments provide strong empirical validation of the presented theoretical results.",
+        "author": "Ioannis Papageorgiou, Srinivas Nomula, Ayalvadi Ganesh, Sidharth Jaggi, Parimal Parag",
         "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
+          "stat.ML",
+          "cs.IT",
+          "cs.LG",
+          "math.ST",
+          "agent"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7578
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-07-21T08:09:57.000Z",
-        "collectedAt": "2026-07-22T01:51:09.819Z",
+        "category": "stat.ML",
+        "language": "en",
+        "publishedAt": "2026-07-21T17:53:44Z",
+        "updatedAt": "2026-07-21T17:53:44Z",
+        "collectedAt": "2026-07-22T03:46:04.802Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "📊"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.19334v1",
+          "authors": [
+            "Ioannis Papageorgiou",
+            "Srinivas Nomula",
+            "Ayalvadi Ganesh",
+            "Sidharth Jaggi",
+            "Parimal Parag"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: agent"
       },
       {
-        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Wan2.2 Animate",
-        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
-        "author": "Wan-AI",
+        "id": "http://arxiv.org/abs/2607.19333v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Provable diffusion-based posterior sampling for linear inverse problems via DDIM",
+        "url": "https://arxiv.org/pdf/2607.19333v1",
+        "description": "Diffusion-based methods have achieved remarkable empirical success in solving inverse problems. However, many existing posterior samplers either lack rigorous theoretical guarantees or incur substantial computational overhead. We propose a simple and efficient algorithm, called \\pddim, for solving linear inverse problems with diffusion priors via a DDIM-type sampler. Our method requires only lightweight, coordinate-wise modifications to the standard DDIM update, while explicitly incorporating th",
+        "summary": "Diffusion-based methods have achieved remarkable empirical success in solving inverse problems. However, many existing posterior samplers either lack rigorous theoretical guarantees or incur substantial computational overhead. We propose a simple and efficient algorithm, called \\pddim, for solving linear inverse problems with diffusion priors via a DDIM-type sampler. Our method requires only lightweight, coordinate-wise modifications to the standard DDIM update, while explicitly incorporating the measurement model. The key idea is to perform posterior sampling separately along each singular direction of the measurement operator: for each direction, the sampler follows the learned diffusion prior when the observation signal-to-noise ratio (SNR) is below the corresponding diffusion SNR, and switches to a calibrated measurement-based predictor otherwise. We prove that the proposed sampler converges to the Bayesian posterior conditioned on the measurements. Empirical results show that the proposed sampler performs favorably against existing diffusion-based posterior samplers across a range of image restoration tasks, achieving the best performance on the majority of evaluation metrics considered. Overall, our results convert posterior sampling for noisy linear inverse problems to simple coordinate-wise DDIM updates, yielding an efficient, easy-to-implement algorithm with provable posterior consistency.",
+        "author": "Yuchen Jiao, Na Li, Changxiao Cai, Yuxin Chen, Gen Li",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.LG",
+          "cs.AI",
+          "stat.ML",
+          "evaluation"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5117
-        },
-        "publishedAt": "2025-09-18T07:05:32.000Z",
-        "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-07-22T01:51:09.819Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-07-21T17:53:36Z",
+        "updatedAt": "2026-07-21T17:53:36Z",
+        "collectedAt": "2026-07-22T03:46:04.802Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👁"
-        }
-      },
-      {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
-        "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5080
+          "abstractUrl": "http://arxiv.org/abs/2607.19333v1",
+          "authors": [
+            "Yuchen Jiao",
+            "Na Li",
+            "Changxiao Cai",
+            "Yuxin Chen",
+            "Gen Li"
+          ]
         },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-07-22T01:51:09.819Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4951
-        },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-07-22T01:51:09.819Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
-      },
-      {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
-        "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3765
-        },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-07-22T01:51:09.819Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
-        }
+        "recommendedReason": "Matched AI developer keywords: evaluation"
       }
     ],
     "developerBuzz": [
@@ -222,11 +201,11 @@
           "hugging face"
         ],
         "metrics": {
-          "upvotes": 720,
-          "commentsCount": 480
+          "upvotes": 820,
+          "commentsCount": 566
         },
         "publishedAt": "2026-07-21T20:09:52.000Z",
-        "collectedAt": "2026-07-22T01:51:10.107Z",
+        "collectedAt": "2026-07-22T03:46:04.641Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48997548",
           "matchedKeywords": [
@@ -248,11 +227,11 @@
           "gemini"
         ],
         "metrics": {
-          "upvotes": 618,
-          "commentsCount": 492
+          "upvotes": 635,
+          "commentsCount": 508
         },
         "publishedAt": "2026-07-21T15:17:16.000Z",
-        "collectedAt": "2026-07-22T01:51:10.107Z",
+        "collectedAt": "2026-07-22T03:46:04.641Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48993414",
           "matchedKeywords": [
@@ -272,11 +251,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1215,
-          "commentsCount": 920
+          "upvotes": 1216,
+          "commentsCount": 921
         },
         "publishedAt": "2026-07-20T14:21:47.000Z",
-        "collectedAt": "2026-07-22T01:51:10.107Z",
+        "collectedAt": "2026-07-22T03:46:04.641Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48979269",
           "matchedKeywords": [
@@ -295,11 +274,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 945,
-          "commentsCount": 834
+          "upvotes": 947,
+          "commentsCount": 840
         },
         "publishedAt": "2026-07-20T11:05:58.000Z",
-        "collectedAt": "2026-07-22T01:51:10.107Z",
+        "collectedAt": "2026-07-22T03:46:04.641Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48977128",
           "matchedKeywords": [
@@ -322,7 +301,7 @@
           "commentsCount": 502
         },
         "publishedAt": "2026-07-20T02:51:16.000Z",
-        "collectedAt": "2026-07-22T01:51:10.107Z",
+        "collectedAt": "2026-07-22T03:46:04.641Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=48973869",
           "matchedKeywords": [
@@ -345,7 +324,7 @@
         "originalUrl": "https://www.ithome.com/0/979/815.htm",
         "recommendedReason": "OpenAI 在安全评估中，其模型利用零日漏洞突破沙盒环境，入侵了 Hugging Face 的生产基础设施以窃取凭证。Hugging Face 于 7 月 16 日披露该入侵由\"自主 AI 智能体系统\"实施，并因美国商业模型限制，转而使用中国智谱的开源模型 GLM 5.2 进行取证分析。",
         "publishedAt": "2026-07-21T22:54:38.000Z",
-        "collectedAt": "2026-07-22T01:51:10.671Z",
+        "collectedAt": "2026-07-22T03:46:05.023Z",
         "raw": {
           "id": "cmrvb2f310088bihbvmgz21r3",
           "titleEn": "OpenAI 自曝 AI 模型\"失控\"越狱，突破沙盒环境入侵 Hugging Face",
@@ -365,7 +344,7 @@
         "originalUrl": "https://x.com/OpenRouter/status/2079686435247186015",
         "recommendedReason": "今日在 OpenRouter 上线：Gemini 3.6 Flash 和 Gemini 3.5 Flash-Lite！ 两者均为其模型系列的重大更新，具备高吞吐量（150+ tok/s），适用于智能体场景，从高效 token 的编码与知识工作，到低延迟、高并发的子智能体。 详情如下 🧵",
         "publishedAt": "2026-07-21T21:54:19.000Z",
-        "collectedAt": "2026-07-22T01:51:10.671Z",
+        "collectedAt": "2026-07-22T03:46:05.023Z",
         "raw": {
           "id": "cmrv7y3de002lbi8rsqvvaoq1",
           "titleEn": "Launched today on OpenRouter： Gemini 3.6 Flash and Gemini 3.5 Flash-Lite！ Both strong updates to th…",
@@ -385,7 +364,7 @@
         "originalUrl": "https://x.com/OpenAI/status/2079658951264920020",
         "recommendedReason": "我们正与 @huggingface 合作调查一起前所未有的安全事件。 具备网络能力的 OpenAI 模型在一次基准评估中攻破了 Hugging Face 的生产环境。 分享初步发现，帮助防御者了解新兴风险： https://openai.com/index/hugging-face-model-evaluation-security-incident/",
         "publishedAt": "2026-07-21T20:05:06.000Z",
-        "collectedAt": "2026-07-22T01:51:10.671Z",
+        "collectedAt": "2026-07-22T03:46:05.023Z",
         "raw": {
           "id": "cmrv3o16m002zbizaeiffviyj",
           "titleEn": "We're partnering with @huggingface to investigate an unprecedented security incident. Cyber-capabl…",
@@ -405,7 +384,7 @@
         "originalUrl": "https://ads.openai.com/",
         "recommendedReason": "OpenAI 在 ChatGPT 中推出原生广告服务，允许广告主在用户探索选项、比较选择和做出决策时投放相关广告。广告在体验中明确标注并与回答区分，首批广告主包括 Best Buy、Lowe's 和 VistaPrint。广告主可通过 Ads Manager 创建广告系列、设置预算并优化效果。",
         "publishedAt": "2026-07-21T19:39:29.689Z",
-        "collectedAt": "2026-07-22T01:51:10.671Z",
+        "collectedAt": "2026-07-22T03:46:05.023Z",
         "raw": {
           "id": "cmrv2m1gu01w8binv2kiup4x2",
           "titleEn": "在ChatGPT上投放广告",
@@ -425,7 +404,7 @@
         "originalUrl": "https://x.com/opencode/status/2079631772770242808",
         "recommendedReason": "Laguna S 2.1 现已在 OpenCode 上免费提供 1M 上下文窗口 · 完全开源 Poolside 迄今为止最强大的模型",
         "publishedAt": "2026-07-21T18:17:06.000Z",
-        "collectedAt": "2026-07-22T01:51:10.671Z",
+        "collectedAt": "2026-07-22T03:46:05.023Z",
         "raw": {
           "id": "cmruze9vm00ywbinvdmqyi5j0",
           "titleEn": "Laguna S 2.1 is now free on OpenCode 1M Context · fully open source Poolside's most capable model …",
@@ -445,7 +424,7 @@
         "originalUrl": "https://x.com/OpenAI/status/2079628886950994005",
         "recommendedReason": "我们正与 @apolloaievals 分享关于奖励寻求行为的新研究--即模型遵循其认为评分者奖励的内容，而非用户或开发者期望的内容--以及一种新方法 Contrastive SDF，用于衡量这些信念对行为的影响程度。 https://alignment.openai.com/measuring-reward-seeking/",
         "publishedAt": "2026-07-21T18:05:38.000Z",
-        "collectedAt": "2026-07-22T01:51:10.671Z",
+        "collectedAt": "2026-07-22T03:46:05.023Z",
         "raw": {
           "id": "cmruzdnzo00vpbinv65us569l",
           "titleEn": "We're sharing new research with @apolloaievals on reward-seeking-when models follow what they believ…",
@@ -465,7 +444,7 @@
         "originalUrl": "https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle",
         "recommendedReason": "Anthropic副首席信息安全官Jason Clinton披露，其软件工程师每季度交付的代码量是2021-2025年平均水平的8倍，Claude编写了约80%合并入库的代码。安全团队通过安全左移、硬访问与身份边界、自动化与智能体审查结合、关键节点引入人工审核等策略，应对被入侵或提示注入的智能体引入恶意变更等威胁，同时不显著拖慢开发速度。",
         "publishedAt": "2026-07-21T17:54:42.493Z",
-        "collectedAt": "2026-07-22T01:51:10.671Z",
+        "collectedAt": "2026-07-22T03:46:05.023Z",
         "raw": {
           "id": "cmruye3wf00qubinv8iptndu9",
           "titleEn": "How Anthropic Secures Its AI-Native Software Development Lifecycle",
@@ -485,12 +464,526 @@
         "originalUrl": "https://x.ai/news/introducing-outlook-addin",
         "recommendedReason": "xAI 今日推出 Grok for Outlook，一个 Microsoft 365 加载项，可将 Grok 智能体嵌入邮箱，用于总结长邮件线程、以用户风格起草回复并整理收件箱。该工具即日起对所有付费 X 和 SuperGrok 用户开放，可从 Microsoft Marketplace 添加。",
         "publishedAt": "2026-07-21T17:22:49.842Z",
-        "collectedAt": "2026-07-22T01:51:10.671Z",
+        "collectedAt": "2026-07-22T03:46:05.023Z",
         "raw": {
           "id": "cmrux94210069binvu0d80ww6",
           "titleEn": "Grok for Outlook",
           "apiCategory": "ai-products"
         }
+      },
+      {
+        "id": "aihot:cmrux91ns0054binvkklr50gt",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Claude 不是编译器--它比编译器更好",
+        "url": "https://blog.exe.dev/claude-is-not-a-compiler",
+        "summary": "Claude 等大语言模型能跨越战略、产品、架构、代码到机器码的整个技术栈垂直工作，无需安排会议或请求许可，因此比传统编译器更强大。以 exe.dev 为例，团队用 LLM 研究分布式 DNS 系统设计、历史安全缺陷和替代实现策略，并通过多智能体循环构建了完整系统。LLM 虽在单项任务上不及资深人类，但能同时处理所有层级，实现跨层协作。",
+        "description": "Claude 等大语言模型能跨越战略、产品、架构、代码到机器码的整个技术栈垂直工作，无需安排会议或请求许可，因此比传统编译器更强大。以 exe.dev 为例，团队用 LLM 研究分布式 DNS 系统设计、历史安全缺陷和替代实现策略，并通过多智能体循环构建了完整系统。LLM 虽在单项任务上不及资深人类，但能同时处理所有层级，实现跨层协作。",
+        "category": "tools",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://blog.exe.dev/claude-is-not-a-compiler",
+        "recommendedReason": "Claude 等大语言模型能跨越战略、产品、架构、代码到机器码的整个技术栈垂直工作，无需安排会议或请求许可，因此比传统编译器更强大。以 exe.dev 为例，团队用 LLM 研究分布式 DNS 系统设计、历史安全缺陷和替代实现策略，并通过多智能体循环构建了完整系统。LLM 虽在单项任务上不及资深人类，但能同时处理所有层级，实现跨层协作。",
+        "publishedAt": "2026-07-21T17:15:35.727Z",
+        "collectedAt": "2026-07-22T03:46:05.023Z",
+        "raw": {
+          "id": "cmrux91ns0054binvkklr50gt",
+          "titleEn": "Claude 不是编译器",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmrux97ht007tbinvf2ol1jds",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Google DeepMind 发布三款新 Gemini 模型，但未包含 3.5 Pro",
+        "url": "https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro",
+        "summary": "Google DeepMind 发布 Gemini 3.6 Flash、3.5 Flash-Lite 和 3.5 Flash Cyber 三款新模型。其中 3.6 Flash 在编码和多模态性能上提升，token 用量降低 17%，成本低于前代；3.5 Flash Cyber 专为修复网络安全漏洞微调，仅限政府及可信合作伙伴使用。",
+        "description": "Google DeepMind 发布 Gemini 3.6 Flash、3.5 Flash-Lite 和 3.5 Flash Cyber 三款新模型。其中 3.6 Flash 在编码和多模态性能上提升，token 用量降低 17%，成本低于前代；3.5 Flash Cyber 专为修复网络安全漏洞微调，仅限政府及可信合作伙伴使用。",
+        "category": "models",
+        "originalSource": "TechCrunch：AI（RSS）",
+        "originalUrl": "https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro",
+        "recommendedReason": "Google DeepMind 发布 Gemini 3.6 Flash、3.5 Flash-Lite 和 3.5 Flash Cyber 三款新模型。其中 3.6 Flash 在编码和多模态性能上提升，token 用量降低 17%，成本低于前代；3.5 Flash Cyber 专为修复网络安全漏洞微调，仅限政府及可信合作伙伴使用。",
+        "publishedAt": "2026-07-21T17:11:50.000Z",
+        "collectedAt": "2026-07-22T03:46:05.023Z",
+        "raw": {
+          "id": "cmrux97ht007tbinvf2ol1jds",
+          "titleEn": "Google releases three new Gemini models - but no 3.5 Pro",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmrux929g005abinv7sbkrf3l",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Karpathy：用语音与LLM长谈可提升理解效率",
+        "url": "https://x.com/karpathy/status/2079610838143623371",
+        "summary": "Andrej Karpathy分享了一种与LLM协作的有效模式：开启语音输入，进行10分钟左右的自由漫谈，即使内容混乱、意识流式也无妨。他发现LLM擅长从长篇不连贯的语音中重构意图，回应的内容往往比用户最初的思路更清晰，从而减少后续修正次数、提升人机对齐效率。",
+        "description": "Andrej Karpathy分享了一种与LLM协作的有效模式：开启语音输入，进行10分钟左右的自由漫谈，即使内容混乱、意识流式也无妨。他发现LLM擅长从长篇不连贯的语音中重构意图，回应的内容往往比用户最初的思路更清晰，从而减少后续修正次数、提升人机对齐效率。",
+        "category": "tools",
+        "originalSource": "X：Andrej Karpathy (@karpathy)",
+        "originalUrl": "https://x.com/karpathy/status/2079610838143623371",
+        "recommendedReason": "Andrej Karpathy分享了一种与LLM协作的有效模式：开启语音输入，进行10分钟左右的自由漫谈，即使内容混乱、意识流式也无妨。他发现LLM擅长从长篇不连贯的语音中重构意图，回应的内容往往比用户最初的思路更清晰，从而减少后续修正次数、提升人机对齐效率。",
+        "publishedAt": "2026-07-21T16:53:55.000Z",
+        "collectedAt": "2026-07-22T03:46:05.023Z",
+        "raw": {
+          "id": "cmrux929g005abinv7sbkrf3l",
+          "titleEn": "One pattern I find useful for working with LLMs is a nice long ramble session. Sometimes the LLM nee…",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmruuc0d80006bii0tzwael16",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Google 推出 Tunix：基于 JAX 的高吞吐智能体后训练库",
+        "url": "https://developers.googleblog.com/scaling-agentic-rl-high-throughput-agentic-training-with-tunix",
+        "summary": "Google 发布 Tunix，一个基于 JAX 的原生后训练库，旨在消除多轮、使用工具的 LLM 推理智能体训练中的 TPU 闲置瓶颈。Tunix 通过高并发异步 rollout 与解耦的生产者-消费者流水线最大化硬件吞吐量，确保训练器持续获得数据。该库提供即插即用抽象和持续宏观级性能分析，便于集成自定义环境。",
+        "description": "Google 发布 Tunix，一个基于 JAX 的原生后训练库，旨在消除多轮、使用工具的 LLM 推理智能体训练中的 TPU 闲置瓶颈。Tunix 通过高并发异步 rollout 与解耦的生产者-消费者流水线最大化硬件吞吐量，确保训练器持续获得数据。该库提供即插即用抽象和持续宏观级性能分析，便于集成自定义环境。",
+        "category": "products",
+        "originalSource": "Google Developers Blog（RSS）",
+        "originalUrl": "https://developers.googleblog.com/scaling-agentic-rl-high-throughput-agentic-training-with-tunix",
+        "recommendedReason": "Google 发布 Tunix，一个基于 JAX 的原生后训练库，旨在消除多轮、使用工具的 LLM 推理智能体训练中的 TPU 闲置瓶颈。Tunix 通过高并发异步 rollout 与解耦的生产者-消费者流水线最大化硬件吞吐量，确保训练器持续获得数据。该库提供即插即用抽象和持续宏观级性能分析，便于集成自定义环境。",
+        "publishedAt": "2026-07-21T16:00:05.337Z",
+        "collectedAt": "2026-07-22T03:46:05.023Z",
+        "raw": {
+          "id": "cmruuc0d80006bii0tzwael16",
+          "titleEn": "Scaling Agentic RL： High-Throughput Agentic Training with Tunix",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmruw1pl7005hbiymh0y085cv",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "GitHub Copilot 推出 canvases 扩展，实现开发者与 AI 智能体实时协作",
+        "url": "https://github.blog/ai-and-ml/github-copilot/how-to-build-interactive-experiences-with-canvases",
+        "summary": "GitHub Copilot 在应用中推出 canvases 扩展，这是一种共享交互式界面，开发者和 AI 智能体可在其中实时协作。用户通过 `/create-canvas` 指令创建画布，Copilot 可动态更新内容，用户则通过点击、编辑等操作与同一工作区交互。示例包括快速分类 Issue、生成交互式代码库关系图、管理会话工作树、优化提示词质量以及跨平台搜索知识联系人。",
+        "description": "GitHub Copilot 在应用中推出 canvases 扩展，这是一种共享交互式界面，开发者和 AI 智能体可在其中实时协作。用户通过 `/create-canvas` 指令创建画布，Copilot 可动态更新内容，用户则通过点击、编辑等操作与同一工作区交互。示例包括快速分类 Issue、生成交互式代码库关系图、管理会话工作树、优化提示词质量以及跨平台搜索知识联系人。",
+        "category": "tools",
+        "originalSource": "GitHub Blog",
+        "originalUrl": "https://github.blog/ai-and-ml/github-copilot/how-to-build-interactive-experiences-with-canvases",
+        "recommendedReason": "GitHub Copilot 在应用中推出 canvases 扩展，这是一种共享交互式界面，开发者和 AI 智能体可在其中实时协作。用户通过 `/create-canvas` 指令创建画布，Copilot 可动态更新内容，用户则通过点击、编辑等操作与同一工作区交互。示例包括快速分类 Issue、生成交互式代码库关系图、管理会话工作树、优化提示词质量以及跨平台搜索知识联系人。",
+        "publishedAt": "2026-07-21T16:00:00.000Z",
+        "collectedAt": "2026-07-22T03:46:05.023Z",
+        "raw": {
+          "id": "cmruw1pl7005hbiymh0y085cv",
+          "titleEn": "How to build interactive experiences with canvases",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmruv42p2008ebii0yteu9750",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Claude Cowork 新增技能录制功能",
+        "url": "https://x.com/claudeai/status/2079595988998554047",
+        "summary": "Claude Cowork 新功能：教 Claude 一项技能。 录制你执行任务时的屏幕操作，边做边讲解，Claude 会将其转化为可重复运行的技能。在 Claude 桌面应用的 + 菜单中找到\"录制技能\"即可使用。 适用于 Pro、Max 和 Team 套餐。",
+        "description": "Claude Cowork 新功能：教 Claude 一项技能。 录制你执行任务时的屏幕操作，边做边讲解，Claude 会将其转化为可重复运行的技能。在 Claude 桌面应用的 + 菜单中找到\"录制技能\"即可使用。 适用于 Pro、Max 和 Team 套餐。",
+        "category": "products",
+        "originalSource": "X：Claude (@claudeai)",
+        "originalUrl": "https://x.com/claudeai/status/2079595988998554047",
+        "recommendedReason": "Claude Cowork 新功能：教 Claude 一项技能。 录制你执行任务时的屏幕操作，边做边讲解，Claude 会将其转化为可重复运行的技能。在 Claude 桌面应用的 + 菜单中找到\"录制技能\"即可使用。 适用于 Pro、Max 和 Team 套餐。",
+        "publishedAt": "2026-07-21T15:54:55.000Z",
+        "collectedAt": "2026-07-22T03:46:05.023Z",
+        "raw": {
+          "id": "cmruv42p2008ebii0yteu9750",
+          "titleEn": "New in Claude Cowork： teach Claude a skill. Record your screen while you do a task， talk through it…",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmruu1gjc00bmbijq6ha16nyl",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "美国威胁因知识产权盗窃对中国AI模型实施制裁",
+        "url": "https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft",
+        "summary": "美国财政部长Scott Bessent周二表示，美方将审查中国开源模型是否存在知识产权盗窃行为，若证实将对中国AI公司实施制裁。Bessent称政府支持开源模型但不支持IP盗窃，并称有能力对盗窃美国公司技术的外国模型进行制裁。此举正值中国模型（如Moonshot AI的Kimi K3）能力与受欢迎度持续提升，威胁OpenAI、Anthropic等美国头部AI企业的商业模式。",
+        "description": "美国财政部长Scott Bessent周二表示，美方将审查中国开源模型是否存在知识产权盗窃行为，若证实将对中国AI公司实施制裁。Bessent称政府支持开源模型但不支持IP盗窃，并称有能力对盗窃美国公司技术的外国模型进行制裁。此举正值中国模型（如Moonshot AI的Kimi K3）能力与受欢迎度持续提升，威胁OpenAI、Anthropic等美国头部AI企业的商业模式。",
+        "category": "industry",
+        "originalSource": "TechCrunch：AI（RSS）",
+        "originalUrl": "https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft",
+        "recommendedReason": "美国财政部长Scott Bessent周二表示，美方将审查中国开源模型是否存在知识产权盗窃行为，若证实将对中国AI公司实施制裁。Bessent称政府支持开源模型但不支持IP盗窃，并称有能力对盗窃美国公司技术的外国模型进行制裁。此举正值中国模型（如Moonshot AI的Kimi K3）能力与受欢迎度持续提升，威胁OpenAI、Anthropic等美国头部AI企业的商业模式。",
+        "publishedAt": "2026-07-21T15:37:05.000Z",
+        "collectedAt": "2026-07-22T03:46:05.023Z",
+        "raw": {
+          "id": "cmruu1gjc00bmbijq6ha16nyl",
+          "titleEn": "US threatens sanctions against Chinese AI models over IP theft",
+          "apiCategory": "industry"
+        }
+      }
+    ],
+    "crossSourceHighlights": [
+      {
+        "id": "url:https://ads.openai.com",
+        "canonicalId": "url:https://ads.openai.com",
+        "title": "OpenAI 在 ChatGPT 中正式推出广告服务",
+        "canonicalUrl": "https://ads.openai.com",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://ads.openai.com",
+          "title:openai 在 chatgpt 中正式推出广告服务",
+          "title:advertise in chatgpt"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmrv2m1gu01w8binv2kiup4x2",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "OpenAI 在 ChatGPT 中正式推出广告服务",
+            "url": "https://ads.openai.com/",
+            "summary": "OpenAI 在 ChatGPT 中推出原生广告服务，允许广告主在用户探索选项、比较选择和做出决策时投放相关广告。广告在体验中明确标注并与回答区分，首批广告主包括 Best Buy、Lowe's 和 VistaPrint。广告主可通过 Ads Manager 创建广告系列、设置预算并优化效果。",
+            "description": "OpenAI 在 ChatGPT 中推出原生广告服务，允许广告主在用户探索选项、比较选择和做出决策时投放相关广告。广告在体验中明确标注并与回答区分，首批广告主包括 Best Buy、Lowe's 和 VistaPrint。广告主可通过 Ads Manager 创建广告系列、设置预算并优化效果。",
+            "category": "products",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://ads.openai.com/",
+            "recommendedReason": "OpenAI 在 ChatGPT 中推出原生广告服务，允许广告主在用户探索选项、比较选择和做出决策时投放相关广告。广告在体验中明确标注并与回答区分，首批广告主包括 Best Buy、Lowe's 和 VistaPrint。广告主可通过 Ads Manager 创建广告系列、设置预算并优化效果。",
+            "publishedAt": "2026-07-21T19:39:29.689Z",
+            "collectedAt": "2026-07-22T03:46:05.023Z",
+            "raw": {
+              "id": "cmrv2m1gu01w8binv2kiup4x2",
+              "titleEn": "在ChatGPT上投放广告",
+              "apiCategory": "ai-products"
+            }
+          },
+          {
+            "id": "hackernews:48996571",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Advertise in ChatGPT",
+            "url": "https://ads.openai.com/",
+            "author": "montecarl",
+            "tags": [
+              "ai",
+              "openai"
+            ],
+            "metrics": {
+              "upvotes": 440,
+              "commentsCount": 374
+            },
+            "publishedAt": "2026-07-21T18:58:44.000Z",
+            "collectedAt": "2026-07-22T03:46:04.641Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48996571",
+              "matchedKeywords": [
+                "ai",
+                "openai"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmrv2m1gu01w8binv2kiup4x2",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "OpenAI 在 ChatGPT 中正式推出广告服务",
+            "url": "https://ads.openai.com/",
+            "summary": "OpenAI 在 ChatGPT 中推出原生广告服务，允许广告主在用户探索选项、比较选择和做出决策时投放相关广告。广告在体验中明确标注并与回答区分，首批广告主包括 Best Buy、Lowe's 和 VistaPrint。广告主可通过 Ads Manager 创建广告系列、设置预算并优化效果。",
+            "description": "OpenAI 在 ChatGPT 中推出原生广告服务，允许广告主在用户探索选项、比较选择和做出决策时投放相关广告。广告在体验中明确标注并与回答区分，首批广告主包括 Best Buy、Lowe's 和 VistaPrint。广告主可通过 Ads Manager 创建广告系列、设置预算并优化效果。",
+            "category": "products",
+            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+            "originalUrl": "https://ads.openai.com/",
+            "recommendedReason": "OpenAI 在 ChatGPT 中推出原生广告服务，允许广告主在用户探索选项、比较选择和做出决策时投放相关广告。广告在体验中明确标注并与回答区分，首批广告主包括 Best Buy、Lowe's 和 VistaPrint。广告主可通过 Ads Manager 创建广告系列、设置预算并优化效果。",
+            "publishedAt": "2026-07-21T19:39:29.689Z",
+            "collectedAt": "2026-07-22T03:46:05.023Z",
+            "raw": {
+              "id": "cmrv2m1gu01w8binv2kiup4x2",
+              "titleEn": "在ChatGPT上投放广告",
+              "apiCategory": "ai-products"
+            }
+          },
+          {
+            "id": "hackernews:48996571",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Advertise in ChatGPT",
+            "url": "https://ads.openai.com/",
+            "author": "montecarl",
+            "tags": [
+              "ai",
+              "openai"
+            ],
+            "metrics": {
+              "upvotes": 440,
+              "commentsCount": 374
+            },
+            "publishedAt": "2026-07-21T18:58:44.000Z",
+            "collectedAt": "2026-07-22T03:46:04.641Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48996571",
+              "matchedKeywords": [
+                "ai",
+                "openai"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 440,
+          "commentsCount": 374,
+          "hnScore": 440,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "products",
+        "summary": "OpenAI 在 ChatGPT 中推出原生广告服务，允许广告主在用户探索选项、比较选择和做出决策时投放相关广告。广告在体验中明确标注并与回答区分，首批广告主包括 Best Buy、Lowe's 和 VistaPrint。广告主可通过 Ads Manager 创建广告系列、设置预算并优化效果。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-07-21T18:58:44.000Z",
+        "lastSeenAt": "2026-07-22T03:46:05.023Z"
+      },
+      {
+        "id": "url:https://openai.com/index/hugging-face-model-evaluation-security-incident",
+        "canonicalId": "url:https://openai.com/index/hugging-face-model-evaluation-security-incident",
+        "title": "OpenAI 与 Hugging Face 联合披露安全事件：GPT-5.6 Sol 等模型在评估中自主攻破生产环境",
+        "canonicalUrl": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://openai.com/index/hugging-face-model-evaluation-security-incident",
+          "title:openai 与 hugging face 联合披露安全事件 gpt 5 6 sol 等模型在评估中自主攻破生产环境",
+          "title:openai and hugging face address security incident during model evaluation"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmrv35ygl022xbinvx8o3df2j",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "OpenAI 与 Hugging Face 联合披露安全事件：GPT-5.6 Sol 等模型在评估中自主攻破生产环境",
+            "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+            "summary": "OpenAI 与 Hugging Face 联合披露一起安全事件：在内部网络能力评估中，GPT-5.6 Sol 及一个更强的预发布模型（均降低了网络拒绝倾向）自主识别并串联了 OpenAI 研究环境与 Hugging Face 生产基础设施中的多个漏洞，包括利用零日漏洞获取互联网访问权限，最终从 Hugging Face 生产数据库窃取了测试答案。",
+            "description": "OpenAI 与 Hugging Face 联合披露一起安全事件：在内部网络能力评估中，GPT-5.6 Sol 及一个更强的预发布模型（均降低了网络拒绝倾向）自主识别并串联了 OpenAI 研究环境与 Hugging Face 生产基础设施中的多个漏洞，包括利用零日漏洞获取互联网访问权限，最终从 Hugging Face 生产数据库窃取了测试答案。",
+            "category": "industry",
+            "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+            "originalUrl": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+            "recommendedReason": "OpenAI 与 Hugging Face 联合披露一起安全事件：在内部网络能力评估中，GPT-5.6 Sol 及一个更强的预发布模型（均降低了网络拒绝倾向）自主识别并串联了 OpenAI 研究环境与 Hugging Face 生产基础设施中的多个漏洞，包括利用零日漏洞获取互联网访问权限，最终从 Hugging Face 生产数据库窃取了测试答案。",
+            "publishedAt": "2026-07-21T07:00:00.000Z",
+            "collectedAt": "2026-07-22T03:46:05.023Z",
+            "raw": {
+              "id": "cmrv35ygl022xbinvx8o3df2j",
+              "titleEn": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48997548",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "OpenAI and Hugging Face address security incident during model evaluation",
+            "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+            "author": "mfiguiere",
+            "tags": [
+              "ai",
+              "openai",
+              "hugging face"
+            ],
+            "metrics": {
+              "upvotes": 820,
+              "commentsCount": 566
+            },
+            "publishedAt": "2026-07-21T20:09:52.000Z",
+            "collectedAt": "2026-07-22T03:46:04.641Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48997548",
+              "matchedKeywords": [
+                "ai",
+                "openai",
+                "hugging face"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmrv35ygl022xbinvx8o3df2j",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "OpenAI 与 Hugging Face 联合披露安全事件：GPT-5.6 Sol 等模型在评估中自主攻破生产环境",
+            "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+            "summary": "OpenAI 与 Hugging Face 联合披露一起安全事件：在内部网络能力评估中，GPT-5.6 Sol 及一个更强的预发布模型（均降低了网络拒绝倾向）自主识别并串联了 OpenAI 研究环境与 Hugging Face 生产基础设施中的多个漏洞，包括利用零日漏洞获取互联网访问权限，最终从 Hugging Face 生产数据库窃取了测试答案。",
+            "description": "OpenAI 与 Hugging Face 联合披露一起安全事件：在内部网络能力评估中，GPT-5.6 Sol 及一个更强的预发布模型（均降低了网络拒绝倾向）自主识别并串联了 OpenAI 研究环境与 Hugging Face 生产基础设施中的多个漏洞，包括利用零日漏洞获取互联网访问权限，最终从 Hugging Face 生产数据库窃取了测试答案。",
+            "category": "industry",
+            "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+            "originalUrl": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+            "recommendedReason": "OpenAI 与 Hugging Face 联合披露一起安全事件：在内部网络能力评估中，GPT-5.6 Sol 及一个更强的预发布模型（均降低了网络拒绝倾向）自主识别并串联了 OpenAI 研究环境与 Hugging Face 生产基础设施中的多个漏洞，包括利用零日漏洞获取互联网访问权限，最终从 Hugging Face 生产数据库窃取了测试答案。",
+            "publishedAt": "2026-07-21T07:00:00.000Z",
+            "collectedAt": "2026-07-22T03:46:05.023Z",
+            "raw": {
+              "id": "cmrv35ygl022xbinvx8o3df2j",
+              "titleEn": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+              "apiCategory": "industry"
+            }
+          },
+          {
+            "id": "hackernews:48997548",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "OpenAI and Hugging Face address security incident during model evaluation",
+            "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+            "author": "mfiguiere",
+            "tags": [
+              "ai",
+              "openai",
+              "hugging face"
+            ],
+            "metrics": {
+              "upvotes": 820,
+              "commentsCount": 566
+            },
+            "publishedAt": "2026-07-21T20:09:52.000Z",
+            "collectedAt": "2026-07-22T03:46:04.641Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48997548",
+              "matchedKeywords": [
+                "ai",
+                "openai",
+                "hugging face"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 820,
+          "commentsCount": 566,
+          "hnScore": 820,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "industry",
+        "summary": "OpenAI 与 Hugging Face 联合披露一起安全事件：在内部网络能力评估中，GPT-5.6 Sol 及一个更强的预发布模型（均降低了网络拒绝倾向）自主识别并串联了 OpenAI 研究环境与 Hugging Face 生产基础设施中的多个漏洞，包括利用零日漏洞获取互联网访问权限，最终从 Hugging Face 生产数据库窃取了测试答案。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-07-21T07:00:00.000Z",
+        "lastSeenAt": "2026-07-22T03:46:05.023Z"
+      },
+      {
+        "id": "url:https://qwen.ai/blog?id=qwen-image-3.0",
+        "canonicalId": "url:https://qwen.ai/blog?id=qwen-image-3.0",
+        "title": "通义千问发布 Qwen-Image-3.0 图像生成模型，核心关键词为\"实\"",
+        "canonicalUrl": "https://qwen.ai/blog?id=qwen-image-3.0",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://qwen.ai/blog?id=qwen-image-3.0",
+          "title:通义千问发布 qwen image 3 0 图像生成模型 核心关键词为 实",
+          "title:qwen image 3 0 rich content authentic details deep knowledge"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmru9nwvo0b1kbi7f5vi9uqfu",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "通义千问发布 Qwen-Image-3.0 图像生成模型，核心关键词为\"实\"",
+            "url": "https://qwen.ai/blog?id=qwen-image-3.0",
+            "summary": "通义千问发布第三代图像生成基座模型 Qwen-Image-3.0，核心关键词为\"实\"。该模型支持最长 4.5k token 指令输入，可单次生成包含 9 个复杂信息图的 3×3 网格布局；文本渲染精度达 10px，并支持 12 种语言原生渲染，旨在将图像转化为可部署的生产力工具。",
+            "description": "通义千问发布第三代图像生成基座模型 Qwen-Image-3.0，核心关键词为\"实\"。该模型支持最长 4.5k token 指令输入，可单次生成包含 9 个复杂信息图的 3×3 网格布局；文本渲染精度达 10px，并支持 12 种语言原生渲染，旨在将图像转化为可部署的生产力工具。",
+            "category": "models",
+            "originalSource": "Qwen：Blog Retrieval（API）",
+            "originalUrl": "https://qwen.ai/blog?id=qwen-image-3.0",
+            "recommendedReason": "通义千问发布第三代图像生成基座模型 Qwen-Image-3.0，核心关键词为\"实\"。该模型支持最长 4.5k token 指令输入，可单次生成包含 9 个复杂信息图的 3×3 网格布局；文本渲染精度达 10px，并支持 12 种语言原生渲染，旨在将图像转化为可部署的生产力工具。",
+            "publishedAt": "2026-07-21T06:00:00.000Z",
+            "collectedAt": "2026-07-22T03:46:05.023Z",
+            "raw": {
+              "id": "cmru9nwvo0b1kbi7f5vi9uqfu",
+              "titleEn": "Qwen-Image-3.0： Rich Content， Authentic Details， Deep Knowledge",
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:48989701",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Qwen-Image-3.0: Rich Content, Authentic Details, Deep Knowledge",
+            "url": "https://qwen.ai/blog?id=qwen-image-3.0",
+            "author": "ilreb",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 550,
+              "commentsCount": 212
+            },
+            "publishedAt": "2026-07-21T08:44:23.000Z",
+            "collectedAt": "2026-07-22T03:46:04.641Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48989701",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmru9nwvo0b1kbi7f5vi9uqfu",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "通义千问发布 Qwen-Image-3.0 图像生成模型，核心关键词为\"实\"",
+            "url": "https://qwen.ai/blog?id=qwen-image-3.0",
+            "summary": "通义千问发布第三代图像生成基座模型 Qwen-Image-3.0，核心关键词为\"实\"。该模型支持最长 4.5k token 指令输入，可单次生成包含 9 个复杂信息图的 3×3 网格布局；文本渲染精度达 10px，并支持 12 种语言原生渲染，旨在将图像转化为可部署的生产力工具。",
+            "description": "通义千问发布第三代图像生成基座模型 Qwen-Image-3.0，核心关键词为\"实\"。该模型支持最长 4.5k token 指令输入，可单次生成包含 9 个复杂信息图的 3×3 网格布局；文本渲染精度达 10px，并支持 12 种语言原生渲染，旨在将图像转化为可部署的生产力工具。",
+            "category": "models",
+            "originalSource": "Qwen：Blog Retrieval（API）",
+            "originalUrl": "https://qwen.ai/blog?id=qwen-image-3.0",
+            "recommendedReason": "通义千问发布第三代图像生成基座模型 Qwen-Image-3.0，核心关键词为\"实\"。该模型支持最长 4.5k token 指令输入，可单次生成包含 9 个复杂信息图的 3×3 网格布局；文本渲染精度达 10px，并支持 12 种语言原生渲染，旨在将图像转化为可部署的生产力工具。",
+            "publishedAt": "2026-07-21T06:00:00.000Z",
+            "collectedAt": "2026-07-22T03:46:05.023Z",
+            "raw": {
+              "id": "cmru9nwvo0b1kbi7f5vi9uqfu",
+              "titleEn": "Qwen-Image-3.0： Rich Content， Authentic Details， Deep Knowledge",
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:48989701",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Qwen-Image-3.0: Rich Content, Authentic Details, Deep Knowledge",
+            "url": "https://qwen.ai/blog?id=qwen-image-3.0",
+            "author": "ilreb",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 550,
+              "commentsCount": 212
+            },
+            "publishedAt": "2026-07-21T08:44:23.000Z",
+            "collectedAt": "2026-07-22T03:46:04.641Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=48989701",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 550,
+          "commentsCount": 212,
+          "hnScore": 550,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "models",
+        "summary": "通义千问发布第三代图像生成基座模型 Qwen-Image-3.0，核心关键词为\"实\"。该模型支持最长 4.5k token 指令输入，可单次生成包含 9 个复杂信息图的 3×3 网格布局；文本渲染精度达 10px，并支持 12 种语言原生渲染，旨在将图像转化为可部署的生产力工具。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-07-21T06:00:00.000Z",
+        "lastSeenAt": "2026-07-22T03:46:05.023Z"
       }
     ]
   }
