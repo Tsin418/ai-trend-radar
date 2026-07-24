@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-07-24T15:51:15.349Z
+Updated: 2026-07-24T17:57:20.123Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -11,6 +11,7 @@ Updated: 2026-07-24T15:51:15.349Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
+| 2026-07-25 | daily | [AI Developer Radar｜Daily｜2026-07-25](2026/07/2026-07-25-daily.md) | hpcaitech/ColossalAI, ChatGPTNextWeb/NextChat, Tencent/ncnn, thedaviddias/Front-End-Checklist, deepspeedai/DeepSpeed |
 | 2026-07-24 | daily | [AI Developer Radar｜Daily｜2026-07-24](2026/07/2026-07-24-daily.md) | citrolabs/ego-lite, CoreBunch/Instatic, mattpocock/skills, Automattic/harper, hpcaitech/ColossalAI |
 | 2026-07-23 | daily | [AI Developer Radar｜Daily｜2026-07-23](2026/07/2026-07-23-daily.md) | earthtojake/text-to-cad, jellyfin/jellyfin, Pumpkin-MC/Pumpkin, likec4/likec4, deepspeedai/DeepSpeed |
 | 2026-07-22 | daily | [AI Developer Radar｜Daily｜2026-07-22](2026/07/2026-07-22-daily.md) | ayghri/i-have-adhd, agegr/pi-web, DioxusLabs/dioxus, schollz/croc, dottxt-ai/outlines |

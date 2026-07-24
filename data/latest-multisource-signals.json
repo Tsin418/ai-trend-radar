@@ -1,175 +1,150 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-24T15:51:15.232Z",
+  "generatedAt": "2026-07-24T17:57:20.036Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2607.21577v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Synthetic data generation framework for quality control automation in gravure printing",
-        "url": "https://arxiv.org/pdf/2607.21577v1",
-        "description": "Quality control in printing, particularly in rotogravure printing, still depends on slow, costly, and subjective manual inspection. Automated surface defect detection is critical for maintaining high-quality standards in rotogravure printing. Deep learning models give prospects for automation. However, training robust deep learning models, such as YOLO or Vision Transformers, is heavily hindered by the extreme scarcity of real-world industrial defects images. To overcome this limitation, this pa",
-        "summary": "Quality control in printing, particularly in rotogravure printing, still depends on slow, costly, and subjective manual inspection. Automated surface defect detection is critical for maintaining high-quality standards in rotogravure printing. Deep learning models give prospects for automation. However, training robust deep learning models, such as YOLO or Vision Transformers, is heavily hindered by the extreme scarcity of real-world industrial defects images. To overcome this limitation, this paper introduces a novel synthetic data generation framework tailored for rotogravure printing quality control. The proposed pipeline automatically generates high-fidelity images of specific printing defects (creases, streaks, misregistration, etc.) and outputs corresponding bounding boxes and annotations. To validate the framework, a synthetic dataset of 7533 images was generated and used to train the state-of-the-art object-detection model RFDETR. Experimental results demonstrate that the model trained on our synthetic data achieves a Mean Average Precision (mAP) of 80.9\\% on real industrial testing samples. This framework provides a zero-cost, rapid-deployment solution for automating defect inspection in printing lines without requiring massive manual data collection.",
-        "author": "Korota Arsène Coulibaly, Mohamed Hamlich, Khalid Hmali, Andrea Trombin",
+        "id": "huggingface_models:LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V5-GGUF",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V5-GGUF",
+        "url": "https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V5-GGUF",
         "tags": [
-          "cs.CV",
-          "cs.AI",
-          "cs.LG",
-          "eess.IV",
-          "rag"
+          "hermes",
+          "gguf",
+          "uncensored",
+          "qwen3.6",
+          "moe",
+          "vision",
+          "multimodal",
+          "genesis",
+          "agentic",
+          "image-text-to-text",
+          "conversational",
+          "en",
+          "zh",
+          "multilingual",
+          "dataset:NousResearch/hermes-function-calling-v1",
+          "base_model:HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+          "base_model:quantized:HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+          "license:apache-2.0",
+          "endpoints_compatible",
+          "region:us",
+          "imatrix"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-07-23T17:55:21Z",
-        "updatedAt": "2026-07-23T17:55:21Z",
-        "collectedAt": "2026-07-24T15:51:08.388Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.21577v1",
-          "authors": [
-            "Korota Arsène Coulibaly",
-            "Mohamed Hamlich",
-            "Khalid Hmali",
-            "Andrea Trombin"
-          ]
+        "category": "image-text-to-text",
+        "metrics": {
+          "downloads": 36703,
+          "likes": 126
         },
-        "recommendedReason": "Matched AI developer keywords: rag"
+        "publishedAt": "2026-07-13T06:40:13.000Z",
+        "updatedAt": "2026-07-24T17:56:38.000Z",
+        "collectedAt": "2026-07-24T17:57:12.387Z",
+        "raw": {
+          "pipelineTag": "image-text-to-text"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.21573v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Beyond Sufficiency: Time Series Explanation with Counterfactual Necessity",
-        "url": "https://arxiv.org/pdf/2607.21573v1",
-        "description": "Faithful explanations of time-series classifiers should identify subsequences that are not only sufficient to preserve a black-box model's prediction, but also necessary for maintaining it. However, existing sufficiency-oriented methods can assign high importance to spurious subsequences that support the prediction without being essential to the model's decision. We introduce \\textbf{TimePNS}, a necessity-aware framework for time-series explanation. Inspired by Pearl's counterfactual notion of n",
-        "summary": "Faithful explanations of time-series classifiers should identify subsequences that are not only sufficient to preserve a black-box model's prediction, but also necessary for maintaining it. However, existing sufficiency-oriented methods can assign high importance to spurious subsequences that support the prediction without being essential to the model's decision. We introduce \\textbf{TimePNS}, a necessity-aware framework for time-series explanation. Inspired by Pearl's counterfactual notion of necessity, TimePNS assesses whether a temporal factor is necessary by intervening on it and measuring whether the original prediction is disrupted. The framework adopts a two-stage design. Stage I learns an identifiable causal generative process together with a sufficiency-oriented explanation mask. Stage II performs counterfactual interventions on temporal factors to derive necessity signals, which supervise a temporal gate that refines the initial explanation by suppressing non-essential components and emphasizing counterfactually necessary ones. Experiments on synthetic and real-world time-series benchmarks show that TimePNS more accurately identifies decision-critical subsequences and consistently improves sufficiency-necessity trade-offs over strong baselines.",
-        "author": "Hongnan Ma, Yiwei Shi, Mengyue Yang, Weiru Liu",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.LG",
-          "cs.AI",
-          "benchmark"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-07-23T17:52:01Z",
-        "updatedAt": "2026-07-23T17:52:01Z",
-        "collectedAt": "2026-07-24T15:51:08.388Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.21573v1",
-          "authors": [
-            "Hongnan Ma",
-            "Yiwei Shi",
-            "Mengyue Yang",
-            "Weiru Liu"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14058
         },
-        "recommendedReason": "Matched AI developer keywords: benchmark"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-07-24T17:57:12.409Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.21570v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "MedGame: Storytelling Gamification Empowered by Large Language Models for Medical Education",
-        "url": "https://arxiv.org/pdf/2607.21570v1",
-        "description": "Large Language Models (LLMs) show promise for medical education, but most existing systems focus on localized interactions such as question answering or single-turn feedback, rather than organizing an entire clinical case into a decision-centered learning trajectory. We introduce \\textit{MedGame}, a framework that transforms static clinical cases into structured, executable storytelling games. MedGame uses a dual-engine design: a Medical Narrative Designer synthesizes case-grounded clinical stor",
-        "summary": "Large Language Models (LLMs) show promise for medical education, but most existing systems focus on localized interactions such as question answering or single-turn feedback, rather than organizing an entire clinical case into a decision-centered learning trajectory. We introduce \\textit{MedGame}, a framework that transforms static clinical cases into structured, executable storytelling games. MedGame uses a dual-engine design: a Medical Narrative Designer synthesizes case-grounded clinical storylines with states and decision nodes, while a Story Director converts them into dependency-aware multimodal orchestration plans rendered by our released interactive platform. We construct MedGame Bench, a 5,000-case benchmark and evaluation protocol for Medical Narrative Generation and Story Direction. Experiments show that task-specific fine-tuning substantially improves open-source LLMs on MedGame Bench and narrows the gap with commercial models. A pilot student study further shows that learners perceive MedGame as more engaging and useful than text-only alternatives.",
-        "author": "Qian Wu, Xinrong Zhou, Zizhan Ma, Kai Chen, Zheyao Gao, Xun Lin, Hongqiu Wu, Longfei Gou, Yixiao Liu, Ann Sin Nga Lau, Qi Dou",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.CL",
-          "cs.HC",
-          "large language model",
-          "llm",
-          "fine-tuning",
-          "benchmark",
-          "evaluation"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-07-23T17:50:28Z",
-        "updatedAt": "2026-07-23T17:50:28Z",
-        "collectedAt": "2026-07-24T15:51:08.388Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.21570v1",
-          "authors": [
-            "Qian Wu",
-            "Xinrong Zhou",
-            "Zizhan Ma",
-            "Kai Chen",
-            "Zheyao Gao",
-            "Xun Lin",
-            "Hongqiu Wu",
-            "Longfei Gou",
-            "Yixiao Liu",
-            "Ann Sin Nga Lau",
-            "Qi Dou"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11186
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, fine-tuning, benchmark, evaluation"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-07-24T17:57:12.409Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.21561v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling",
-        "url": "https://arxiv.org/pdf/2607.21561v1",
-        "description": "Molecular property prediction from structure often uses a single representative conformation, even though many molecules exist as conformational ensembles in solution. We introduce EnsembleEGNN, a molecular ensemble foundation model that encodes an ensemble by first encoding each conformer with shared Equivariant Graph Neural Network (EGNN) layers, then pooling the resulting conformer representations with a Set Attention Block. We pretrain the model on CREMP, a cyclic peptide ensemble dataset, u",
-        "summary": "Molecular property prediction from structure often uses a single representative conformation, even though many molecules exist as conformational ensembles in solution. We introduce EnsembleEGNN, a molecular ensemble foundation model that encodes an ensemble by first encoding each conformer with shared Equivariant Graph Neural Network (EGNN) layers, then pooling the resulting conformer representations with a Set Attention Block. We pretrain the model on CREMP, a cyclic peptide ensemble dataset, using a multi-task self-supervised objective combining masked token recovery, noisy-coordinate reconstruction, and pairwise distance reconstruction. On the CREMP-CycPeptMPDB dataset, training EnsembleEGNN from scratch fails entirely ($R^2=0.005$). However, the pretrained model reaches $R^2=0.477$ and Pearson $r=0.699$, outperforming the sequence-only BERT baseline ($R^2=0.439$, Pearson $r=0.667$). When EnsembleEGNN is co-trained end-to-end with the BERT sequence encoder, the hybrid model improves further to $R^2=0.538$ and Pearson $r=0.737$. These results demonstrate that encoding conformational ensembles into a single thermodynamically informed embedding improves cyclic-peptide property prediction.",
-        "author": "Aaron Feller, Kris Deibler, Maxim Secor",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.LG",
-          "q-bio.BM",
-          "embedding"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-07-23T17:42:51Z",
-        "updatedAt": "2026-07-23T17:42:51Z",
-        "collectedAt": "2026-07-24T15:51:08.388Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.21561v1",
-          "authors": [
-            "Aaron Feller",
-            "Kris Deibler",
-            "Maxim Secor"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10139
         },
-        "recommendedReason": "Matched AI developer keywords: embedding"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-07-24T17:57:12.409Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.21558v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Beyond Sycophancy: Structured Resistance and Compliance in LLM Moral Reasoning",
-        "url": "https://arxiv.org/pdf/2607.21558v1",
-        "description": "Building socially calibrated large language models, which can learn from others without simply yielding to them, requires more than reducing sycophancy as a one-dimensional failure mode. Models must distinguish when to incorporate others' perspectives from when to maintain a well-grounded moral judgment. We study the broader resistance-compliance process governing this distinction. Across three studies, we show that models' judgment revision is structured along three dimensions that parallel cla",
-        "summary": "Building socially calibrated large language models, which can learn from others without simply yielding to them, requires more than reducing sycophancy as a one-dimensional failure mode. Models must distinguish when to incorporate others' perspectives from when to maintain a well-grounded moral judgment. We study the broader resistance-compliance process governing this distinction. Across three studies, we show that models' judgment revision is structured along three dimensions that parallel classic phenomena in human social psychology: the distance between an incoming view and the model's initial position, the source attribution of that view, and the coalition structure supporting it. Models are generally more receptive to nearby positions, more influenced by views presented as their own prior judgments, and differently responsive to group pressure. These findings recast sycophancy as one expression of a broader judgment-updating process shaped by social influence. Our framework provides a principled basis for distinguishing constructive belief revision from sycophantic compliance, thereby supporting better alignment in morally consequential interactions.",
-        "author": "Baihui Wang, Bernard Koch",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "cs.AI",
-          "large language model",
-          "llm",
-          "alignment"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-07-23T17:40:07Z",
-        "updatedAt": "2026-07-23T17:40:07Z",
-        "collectedAt": "2026-07-24T15:51:08.388Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.21558v1",
-          "authors": [
-            "Baihui Wang",
-            "Bernard Koch"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7587
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, alignment"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-07-23T09:10:59.000Z",
+        "collectedAt": "2026-07-24T17:57:12.409Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
       }
     ],
     "developerBuzz": [
@@ -184,11 +159,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1396,
-          "commentsCount": 632
+          "upvotes": 1407,
+          "commentsCount": 636
         },
         "publishedAt": "2026-07-23T14:24:43.000Z",
-        "collectedAt": "2026-07-24T15:51:08.232Z",
+        "collectedAt": "2026-07-24T17:57:12.629Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49022152",
           "matchedKeywords": [
@@ -207,11 +182,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1021,
-          "commentsCount": 836
+          "upvotes": 1027,
+          "commentsCount": 840
         },
         "publishedAt": "2026-07-23T15:18:40.000Z",
-        "collectedAt": "2026-07-24T15:51:08.232Z",
+        "collectedAt": "2026-07-24T17:57:12.629Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49023016",
           "matchedKeywords": [
@@ -230,11 +205,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 667,
-          "commentsCount": 356
+          "upvotes": 670,
+          "commentsCount": 360
         },
         "publishedAt": "2026-07-23T13:09:10.000Z",
-        "collectedAt": "2026-07-24T15:51:08.232Z",
+        "collectedAt": "2026-07-24T17:57:12.629Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49020999",
           "matchedKeywords": [
@@ -255,11 +230,11 @@
           "hugging face"
         ],
         "metrics": {
-          "upvotes": 552,
-          "commentsCount": 427
+          "upvotes": 561,
+          "commentsCount": 437
         },
         "publishedAt": "2026-07-23T01:16:14.000Z",
-        "collectedAt": "2026-07-24T15:51:08.232Z",
+        "collectedAt": "2026-07-24T17:57:12.629Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49015639",
           "matchedKeywords": [
@@ -280,11 +255,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 675,
-          "commentsCount": 241
+          "upvotes": 676,
+          "commentsCount": 242
         },
         "publishedAt": "2026-07-22T17:17:54.000Z",
-        "collectedAt": "2026-07-24T15:51:08.232Z",
+        "collectedAt": "2026-07-24T17:57:12.629Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49010129",
           "matchedKeywords": [
@@ -294,6 +269,46 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmrz7ov4300lfrox82ri8kia1",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Claude 5 代模型上下文工程新规则：Claude Code 系统提示词精简超 80%",
+        "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+        "summary": "Anthropic 为 Claude Opus 5 和 Claude Fable 5 等新一代模型删除了 Claude Code 超过 80% 的系统提示词，且编码评测无显著损失。",
+        "description": "Anthropic 为 Claude Opus 5 和 Claude Fable 5 等新一代模型删除了 Claude Code 超过 80% 的系统提示词，且编码评测无显著损失。",
+        "category": "tools",
+        "originalSource": "Claude：Blog（网页）",
+        "originalUrl": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+        "recommendedReason": "Anthropic 为 Claude Opus 5 和 Claude Fable 5 等新一代模型删除了 Claude Code 超过 80% 的系统提示词，且编码评测无显著损失。",
+        "publishedAt": "2026-07-24T17:25:50.349Z",
+        "collectedAt": "2026-07-24T17:57:13.356Z",
+        "raw": {
+          "id": "cmrz7ov4300lfrox82ri8kia1",
+          "titleEn": "The new rules of context engineering for Claude 5 generation models",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmrz7mrck00gprox8j0j9qfst",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Anthropic 发布 Claude Opus 5",
+        "url": "https://www.anthropic.com/news/claude-opus-5",
+        "summary": "Anthropic 发布 Claude Opus 5，其智能水平接近 Claude Fable 5，但价格减半。该模型在 Frontier-Bench v0.1 上性能超过 Opus 4.8 两倍以上，在 ARC-AGI 3 上得分是次优模型的三倍。Opus 5 即日起成为 Claude Max 的默认模型和 Claude Pro 的最强模型。",
+        "description": "Anthropic 发布 Claude Opus 5，其智能水平接近 Claude Fable 5，但价格减半。该模型在 Frontier-Bench v0.1 上性能超过 Opus 4.8 两倍以上，在 ARC-AGI 3 上得分是次优模型的三倍。Opus 5 即日起成为 Claude Max 的默认模型和 Claude Pro 的最强模型。",
+        "category": "models",
+        "originalSource": "Anthropic：Newsroom（网页）",
+        "originalUrl": "https://www.anthropic.com/news/claude-opus-5",
+        "recommendedReason": "Anthropic 发布 Claude Opus 5，其智能水平接近 Claude Fable 5，但价格减半。该模型在 Frontier-Bench v0.1 上性能超过 Opus 4.8 两倍以上，在 ARC-AGI 3 上得分是次优模型的三倍。Opus 5 即日起成为 Claude Max 的默认模型和 Claude Pro 的最强模型。",
+        "publishedAt": "2026-07-24T17:24:25.589Z",
+        "collectedAt": "2026-07-24T17:57:13.356Z",
+        "raw": {
+          "id": "cmrz7mrck00gprox8j0j9qfst",
+          "titleEn": "Introducing Claude Opus 5",
+          "apiCategory": "ai-models"
+        }
+      },
       {
         "id": "aihot:cmrz3eamm01jdroey6e0m62on",
         "source": "aihot",
@@ -307,7 +322,7 @@
         "originalUrl": "https://www.anthropic.com/research/project-pilot",
         "recommendedReason": "Anthropic 与 Andon Labs 合作推出 Drone-Bench，用于测试 AI 模型自主操控四旋翼无人机在室内环境中定位并追踪指定人员的能力。该基准将任务分解为 3D 地图重建、定位、导航、目标检测与跟随五个子任务，并通过软件复现实现快速评估。实验表明，该任务链的难度足以区分不同智能水平的模型，并揭示 AI 在物理世界操控能力上的进步轨迹。",
         "publishedAt": "2026-07-24T15:25:45.300Z",
-        "collectedAt": "2026-07-24T15:51:08.555Z",
+        "collectedAt": "2026-07-24T17:57:13.356Z",
         "raw": {
           "id": "cmrz3eamm01jdroey6e0m62on",
           "titleEn": "Project Pilot： Can AI control a drone？",
@@ -327,7 +342,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/5ic54FCsy334JJsQcyBr1g",
         "recommendedReason": "蚂蚁百灵发布新一代原生混合推理模型Ling-3.0-flash，总参数量124B，激活参数量仅5.1B，在传统推理、指令遵循与长文本等指标上对标甚至超越上一代旗舰Ring-2.6-1T。模型采用原生混合线性注意力架构与1/64稀疏MoE，并扩展至10，000+可交互训练环境，长输入下TTFT降低60%至80%以上。",
         "publishedAt": "2026-07-24T13:40:30.000Z",
-        "collectedAt": "2026-07-24T15:51:08.555Z",
+        "collectedAt": "2026-07-24T17:57:13.356Z",
         "raw": {
           "id": "cmrz0ch8700m7roeygv4eshdv",
           "titleEn": "Ling-3.0-flash：智以密胜",
@@ -347,7 +362,7 @@
         "originalUrl": "https://x.com/runwayml/status/2080649234672439389",
         "recommendedReason": "在 Runway Agent 中引入工作流。现在你可以通过自然语言构建、运行或编辑基于节点的工作流。工作流可大规模解锁高质量输出。 立即尝试，点击下方链接调用 / Workflow 技能。",
         "publishedAt": "2026-07-24T13:40:08.000Z",
-        "collectedAt": "2026-07-24T15:51:08.555Z",
+        "collectedAt": "2026-07-24T17:57:13.356Z",
         "raw": {
           "id": "cmrz07a8z00ksroey0zfjw3iq",
           "titleEn": "Introducing Workflows in Runway Agent. Now you can build， run or edit your node-based workflows thro…",
@@ -367,7 +382,7 @@
         "originalUrl": "https://x.com/satyanadella/status/2080646162483417097",
         "recommendedReason": "开放权重模型对健康的 AI 生态系统至关重要。我们与行业同仁一道，正在规划一条路径，让开放权重模型在保护国家安全的同时，增强美国竞争力并扩大经济机会。",
         "publishedAt": "2026-07-24T13:27:56.000Z",
-        "collectedAt": "2026-07-24T15:51:08.555Z",
+        "collectedAt": "2026-07-24T17:57:13.356Z",
         "raw": {
           "id": "cmrz061qu00itroey2lemh731",
           "titleEn": "Open-weight models are essential to a healthy AI ecosystem. Together with others across our industry…",
@@ -387,7 +402,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/HRySK1LU53clPe2I_M-Fug",
         "recommendedReason": "百度搭子在近期AI Day上推出多项升级，支持电脑与手机双端互联，同步任务上下文与执行进度，用户可跨设备接力完成复杂工作。桌面端内嵌浏览器正式上线，能自动打开多个网页执行调研、下载等操作，手机端支持云端远程操控。智能路由自动匹配任务模式，平均任务耗时降低20%，Token利用率提升25%；简单任务完成度达100%，复杂任务高交付率94%，积分消耗最高降低75%。",
         "publishedAt": "2026-07-24T12:28:24.000Z",
-        "collectedAt": "2026-07-24T15:51:08.555Z",
+        "collectedAt": "2026-07-24T17:57:13.356Z",
         "raw": {
           "id": "cmryx4qpj065vrolgti8j0pm2",
           "titleEn": "百度搭子这些隐藏玩法，你还没发现？！",
@@ -407,7 +422,7 @@
         "originalUrl": "https://bfl.ai/blog/flux-3-mimic",
         "recommendedReason": "Black Forest Labs 发布多模态基础模型 FLUX 3，联合训练图像、视频和音频，其中视频预测占训练算力的 95% 以上。该模型与机器人公司 mimic 合作推出 FLUX-mimic，已在奥迪生产线上测试部署。加入动作预测后，视频生成质量最初下降最多 10%，但经 3500 步训练后恢复原有水平。",
         "publishedAt": "2026-07-24T11:55:45.885Z",
-        "collectedAt": "2026-07-24T15:51:08.555Z",
+        "collectedAt": "2026-07-24T17:57:13.356Z",
         "raw": {
           "id": "cmrywwsva05zgrolgrh7uc4ls",
           "titleEn": "Flux 3 X Mimic：新一代视频动作模型",
@@ -427,7 +442,7 @@
         "originalUrl": "https://the-decoder.com/kimi-k3-trails-frontier-us-models-by-a-wide-margin-on-cyber-exploits-and-distillation-may-explain-why",
         "recommendedReason": "英国AI安全研究所与美国AI标准与创新中心联合评估显示，月之暗面的Kimi K3在ExploitBench基准上得分32.2%，远低于美国领先模型的76.2%，但优于智谱GLM-5.2的24.4%。",
         "publishedAt": "2026-07-24T09:48:32.000Z",
-        "collectedAt": "2026-07-24T15:51:08.555Z",
+        "collectedAt": "2026-07-24T17:57:13.356Z",
         "raw": {
           "id": "cmryrih7804c9rolge6wdk3v8",
           "titleEn": "Kimi K3 trails frontier US models by a wide margin on cyber exploits， and distillation may explain why",
@@ -447,7 +462,7 @@
         "originalUrl": "https://github.com/izeigerman/claude-thermos",
         "recommendedReason": "Claude-thermos 通过本地反向代理监控 Claude Code 会话，在主智能体因等待子智能体而空闲超过 5 分钟时，自动发送预热请求刷新提示缓存。实测约 185 次本地会话中，缓存过期导致的重新编码占账单约 22%。工具以 uvx 运行，支持自定义空闲阈值和预热间隔。",
         "publishedAt": "2026-07-24T09:47:29.601Z",
-        "collectedAt": "2026-07-24T15:51:08.555Z",
+        "collectedAt": "2026-07-24T17:57:13.356Z",
         "raw": {
           "id": "cmryrjtlb04ehrolgi1zd6eqv",
           "titleEn": "Show HN： Claude-thermos 能为您保持 Claude 会话的热度",
@@ -467,7 +482,7 @@
         "originalUrl": "https://www.ithome.com/0/981/137.htm",
         "recommendedReason": "Black Forest Labs 以 Early Access 方式推出 FLUX 3 多模态基础模型，采用统一架构联合学习图像、视频和音频。该模型基于 Self-Flow 学习框架扩展，可在单次生成中输出最长 20 秒视频并附带原生音频，支持文生视频、图生视频、多镜头串联等任务。",
         "publishedAt": "2026-07-24T06:48:04.000Z",
-        "collectedAt": "2026-07-24T15:51:08.555Z",
+        "collectedAt": "2026-07-24T17:57:13.356Z",
         "raw": {
           "id": "cmrykywyx026jrolgq06set4j",
           "titleEn": "FLUX 3 多模态 AI 模型登场：支持单次生成 20 秒多样化视频",
@@ -487,7 +502,7 @@
         "originalUrl": "https://openrouter.ai/blog/announcements/classifiers",
         "recommendedReason": "OpenRouter 上线 Classifiers 测试版，允许用户通过自定义分类法（最多 8 个维度）自动标记每次 AI 请求的任务类型、部门归属、合规类别等信息。分类异步运行，不增加推理延迟；支持采样率控制成本，推荐使用 Gemini 3.5 Flash Lite 作为分类模型。标记结果写入日志，并可在 Activity Explorer 中按维度聚合分析模型使用分布与成本流向。",
         "publishedAt": "2026-07-24T00:00:00.000Z",
-        "collectedAt": "2026-07-24T15:51:08.555Z",
+        "collectedAt": "2026-07-24T17:57:13.356Z",
         "raw": {
           "id": "cmryxzcmz06cbrolgm4zhtc1m",
           "titleEn": "Classifiers： Track What Your Agents Do and What It Costs",
@@ -507,7 +522,7 @@
         "originalUrl": "https://www.ithome.com/0/980/890.htm",
         "recommendedReason": "美国佛罗里达州 55 岁男子 Scott Winters 起诉 OpenAI，称 ChatGPT-4o 多次建议其无需就医，导致其因双肺血栓引发大面积肺栓塞，一度濒临死亡。诉状指控 OpenAI 存在疏忽和\"无证行医\"行为，要求经济赔偿并暂停 ChatGPT Health 服务。OpenAI 回应称 ChatGPT 不是医生，不应替代专业医疗护理。",
         "publishedAt": "2026-07-23T23:30:43.000Z",
-        "collectedAt": "2026-07-24T15:51:08.555Z",
+        "collectedAt": "2026-07-24T17:57:13.356Z",
         "raw": {
           "id": "cmry5ypd2008croeuadelaot9",
           "titleEn": "佛州一男子因相信 ChatGPT 拒绝就医而险些丧命，起诉 OpenAI 及 CEO 奥尔特曼",
@@ -527,31 +542,11 @@
         "originalUrl": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
         "recommendedReason": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
         "publishedAt": "2026-07-23T20:11:31.906Z",
-        "collectedAt": "2026-07-24T15:51:08.555Z",
+        "collectedAt": "2026-07-24T17:57:13.356Z",
         "raw": {
           "id": "cmrxylm0f002xropg7xpd1pth",
           "titleEn": "美国国防高级研究计划局（DARPA）与美国空军试飞了由人工智能操控的F-16战机",
           "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmrxxl53u03q5roxp15huqnni",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Claude 语音模式现已支持 Opus、Sonnet 及连接工具与多语言",
-        "url": "https://claude.com/blog/think-through-hard-problems-in-voice-mode",
-        "summary": "即日起，Claude 语音模式在 Opus、Sonnet 和 Haiku 上运行，并支持连接 Gmail、Slack 等工具及更多语言。用户可在对话中切换模型，语音模式默认沿用上次文本聊天使用的模型。该功能面向所有用户开放 beta 测试，免费版可使用 Haiku 及一个连接工具，付费版可访问更多模型和全部连接工具。",
-        "description": "即日起，Claude 语音模式在 Opus、Sonnet 和 Haiku 上运行，并支持连接 Gmail、Slack 等工具及更多语言。用户可在对话中切换模型，语音模式默认沿用上次文本聊天使用的模型。该功能面向所有用户开放 beta 测试，免费版可使用 Haiku 及一个连接工具，付费版可访问更多模型和全部连接工具。",
-        "category": "products",
-        "originalSource": "Claude：Blog（网页）",
-        "originalUrl": "https://claude.com/blog/think-through-hard-problems-in-voice-mode",
-        "recommendedReason": "即日起，Claude 语音模式在 Opus、Sonnet 和 Haiku 上运行，并支持连接 Gmail、Slack 等工具及更多语言。用户可在对话中切换模型，语音模式默认沿用上次文本聊天使用的模型。该功能面向所有用户开放 beta 测试，免费版可使用 Haiku 及一个连接工具，付费版可访问更多模型和全部连接工具。",
-        "publishedAt": "2026-07-23T19:55:29.530Z",
-        "collectedAt": "2026-07-24T15:51:08.555Z",
-        "raw": {
-          "id": "cmrxxl53u03q5roxp15huqnni",
-          "titleEn": "Think through hard problems in voice mode",
-          "apiCategory": "ai-products"
         }
       },
       {
@@ -567,155 +562,15 @@
         "originalUrl": "https://x.com/OpenAI/status/2080378182469857576",
         "recommendedReason": "ChatGPT 语音功能现已登陆桌面应用。 只需使用语音，即可控制你的电脑，并指挥在 ChatGPT Work 或 Codex 中运行的多个智能体。 该功能由 GPT-Live 驱动，因此它能够同时在该应用中说话、聆听并协调工作。 今日起，面向 macOS 和 Windows 平台的 Plus、Pro、Business、Edu 及 Enterprise 计划用户全球推送。",
         "publishedAt": "2026-07-23T19:43:04.000Z",
-        "collectedAt": "2026-07-24T15:51:08.555Z",
+        "collectedAt": "2026-07-24T17:57:13.356Z",
         "raw": {
           "id": "cmrxxi2qg03kcroxpcugdaldy",
           "titleEn": "ChatGPT Voice is now in the desktop app. Control your computer and direct multiple agents running i…",
           "apiCategory": "ai-products"
         }
-      },
-      {
-        "id": "aihot:cmrxvduwi02z1roxph1bvkmmu",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "TheNumbers.com 因 AI 爬虫与安全攻击导致网站崩溃重建",
-        "url": "https://stephenfollows.com/p/what-just-happened-to-thenumberscom-should-worry-us-all",
-        "summary": "电影数据权威网站 The Numbers 于 2026 年 3 月 5 日突然下线，一周后仅以精简版恢复上线，历史图表、电影页面和 Report Builder 均被移除。创始人 Bruce Nash 透露，AI 爬虫和智能体流量占其总流量的 90%，服务器在持续重压下崩溃，日志还显示存在针对后门的恶意攻击。团队被迫放弃运行 30 年、包含 16 万源文件的旧系统，在新基础设施上重建网站。",
-        "description": "电影数据权威网站 The Numbers 于 2026 年 3 月 5 日突然下线，一周后仅以精简版恢复上线，历史图表、电影页面和 Report Builder 均被移除。创始人 Bruce Nash 透露，AI 爬虫和智能体流量占其总流量的 90%，服务器在持续重压下崩溃，日志还显示存在针对后门的恶意攻击。团队被迫放弃运行 30 年、包含 16 万源文件的旧系统，在新基础设施上重建网站。",
-        "category": "tools",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://stephenfollows.com/p/what-just-happened-to-thenumberscom-should-worry-us-all",
-        "recommendedReason": "电影数据权威网站 The Numbers 于 2026 年 3 月 5 日突然下线，一周后仅以精简版恢复上线，历史图表、电影页面和 Report Builder 均被移除。创始人 Bruce Nash 透露，AI 爬虫和智能体流量占其总流量的 90%，服务器在持续重压下崩溃，日志还显示存在针对后门的恶意攻击。团队被迫放弃运行 30 年、包含 16 万源文件的旧系统，在新基础设施上重建网站。",
-        "publishedAt": "2026-07-23T18:35:29.016Z",
-        "collectedAt": "2026-07-24T15:51:08.555Z",
-        "raw": {
-          "id": "cmrxvduwi02z1roxph1bvkmmu",
-          "titleEn": "TheNumbers.com 发生了什么",
-          "apiCategory": "tip"
-        }
       }
     ],
     "crossSourceHighlights": [
-      {
-        "id": "url:https://darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-        "canonicalId": "url:https://darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-        "title": "DARPA 与美国空军试飞 AI 操控的 F-16 战机",
-        "canonicalUrl": "https://darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-          "title:darpa 与美国空军试飞 ai 操控的 f 16 战机",
-          "title:darpa u s air force fly ai controlled f 16"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmrxylm0f002xropg7xpd1pth",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "DARPA 与美国空军试飞 AI 操控的 F-16 战机",
-            "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-            "summary": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
-            "description": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
-            "category": "industry",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-            "recommendedReason": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
-            "publishedAt": "2026-07-23T20:11:31.906Z",
-            "collectedAt": "2026-07-24T15:51:08.555Z",
-            "raw": {
-              "id": "cmrxylm0f002xropg7xpd1pth",
-              "titleEn": "美国国防高级研究计划局（DARPA）与美国空军试飞了由人工智能操控的F-16战机",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:49021597",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "DARPA, U.S. Air Force fly AI-controlled F-16",
-            "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-            "author": "r2sk5t",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 258,
-              "commentsCount": 312
-            },
-            "publishedAt": "2026-07-23T13:51:36.000Z",
-            "collectedAt": "2026-07-24T15:51:08.232Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49021597",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmrxylm0f002xropg7xpd1pth",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "DARPA 与美国空军试飞 AI 操控的 F-16 战机",
-            "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-            "summary": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
-            "description": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
-            "category": "industry",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-            "recommendedReason": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
-            "publishedAt": "2026-07-23T20:11:31.906Z",
-            "collectedAt": "2026-07-24T15:51:08.555Z",
-            "raw": {
-              "id": "cmrxylm0f002xropg7xpd1pth",
-              "titleEn": "美国国防高级研究计划局（DARPA）与美国空军试飞了由人工智能操控的F-16战机",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:49021597",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "DARPA, U.S. Air Force fly AI-controlled F-16",
-            "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-            "author": "r2sk5t",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 258,
-              "commentsCount": 312
-            },
-            "publishedAt": "2026-07-23T13:51:36.000Z",
-            "collectedAt": "2026-07-24T15:51:08.232Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49021597",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 258,
-          "commentsCount": 312,
-          "hnScore": 258,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "industry",
-        "summary": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-07-23T13:51:36.000Z",
-        "lastSeenAt": "2026-07-24T15:51:08.555Z"
-      },
       {
         "id": "url:https://bfl.ai/blog/flux-3-mimic",
         "canonicalId": "url:https://bfl.ai/blog/flux-3-mimic",
@@ -746,7 +601,7 @@
             "originalUrl": "https://bfl.ai/blog/flux-3-mimic",
             "recommendedReason": "Black Forest Labs 发布多模态基础模型 FLUX 3，联合训练图像、视频和音频，其中视频预测占训练算力的 95% 以上。该模型与机器人公司 mimic 合作推出 FLUX-mimic，已在奥迪生产线上测试部署。加入动作预测后，视频生成质量最初下降最多 10%，但经 3500 步训练后恢复原有水平。",
             "publishedAt": "2026-07-24T11:55:45.885Z",
-            "collectedAt": "2026-07-24T15:51:08.555Z",
+            "collectedAt": "2026-07-24T17:57:13.356Z",
             "raw": {
               "id": "cmrywwsva05zgrolgrh7uc4ls",
               "titleEn": "Flux 3 X Mimic：新一代视频动作模型",
@@ -764,11 +619,11 @@
               "ai"
             ],
             "metrics": {
-              "upvotes": 238,
-              "commentsCount": 32
+              "upvotes": 280,
+              "commentsCount": 45
             },
             "publishedAt": "2026-07-24T09:31:48.000Z",
-            "collectedAt": "2026-07-24T15:51:08.232Z",
+            "collectedAt": "2026-07-24T17:57:12.629Z",
             "raw": {
               "hnUrl": "https://news.ycombinator.com/item?id=49033127",
               "matchedKeywords": [
@@ -791,7 +646,7 @@
             "originalUrl": "https://bfl.ai/blog/flux-3-mimic",
             "recommendedReason": "Black Forest Labs 发布多模态基础模型 FLUX 3，联合训练图像、视频和音频，其中视频预测占训练算力的 95% 以上。该模型与机器人公司 mimic 合作推出 FLUX-mimic，已在奥迪生产线上测试部署。加入动作预测后，视频生成质量最初下降最多 10%，但经 3500 步训练后恢复原有水平。",
             "publishedAt": "2026-07-24T11:55:45.885Z",
-            "collectedAt": "2026-07-24T15:51:08.555Z",
+            "collectedAt": "2026-07-24T17:57:13.356Z",
             "raw": {
               "id": "cmrywwsva05zgrolgrh7uc4ls",
               "titleEn": "Flux 3 X Mimic：新一代视频动作模型",
@@ -809,11 +664,11 @@
               "ai"
             ],
             "metrics": {
-              "upvotes": 238,
-              "commentsCount": 32
+              "upvotes": 280,
+              "commentsCount": 45
             },
             "publishedAt": "2026-07-24T09:31:48.000Z",
-            "collectedAt": "2026-07-24T15:51:08.232Z",
+            "collectedAt": "2026-07-24T17:57:12.629Z",
             "raw": {
               "hnUrl": "https://news.ycombinator.com/item?id=49033127",
               "matchedKeywords": [
@@ -823,18 +678,142 @@
           }
         ],
         "metrics": {
-          "votes": 238,
-          "commentsCount": 32,
-          "hnScore": 238,
+          "votes": 280,
+          "commentsCount": 45,
+          "hnScore": 280,
           "crossSourceBonus": 10,
-          "heatScore": 286
+          "heatScore": 325
         },
         "crossSourceBonus": 10,
         "category": "models",
         "summary": "Black Forest Labs 发布多模态基础模型 FLUX 3，联合训练图像、视频和音频，其中视频预测占训练算力的 95% 以上。该模型与机器人公司 mimic 合作推出 FLUX-mimic，已在奥迪生产线上测试部署。加入动作预测后，视频生成质量最初下降最多 10%，但经 3500 步训练后恢复原有水平。",
         "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
         "firstSeenAt": "2026-07-24T09:31:48.000Z",
-        "lastSeenAt": "2026-07-24T15:51:08.555Z"
+        "lastSeenAt": "2026-07-24T17:57:13.356Z"
+      },
+      {
+        "id": "url:https://anthropic.com/news/claude-opus-5",
+        "canonicalId": "url:https://anthropic.com/news/claude-opus-5",
+        "title": "Anthropic 发布 Claude Opus 5",
+        "canonicalUrl": "https://anthropic.com/news/claude-opus-5",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://anthropic.com/news/claude-opus-5",
+          "title:anthropic 发布 claude opus 5",
+          "title:claude opus 5"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmrz7mrck00gprox8j0j9qfst",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Anthropic 发布 Claude Opus 5",
+            "url": "https://www.anthropic.com/news/claude-opus-5",
+            "summary": "Anthropic 发布 Claude Opus 5，其智能水平接近 Claude Fable 5，但价格减半。该模型在 Frontier-Bench v0.1 上性能超过 Opus 4.8 两倍以上，在 ARC-AGI 3 上得分是次优模型的三倍。Opus 5 即日起成为 Claude Max 的默认模型和 Claude Pro 的最强模型。",
+            "description": "Anthropic 发布 Claude Opus 5，其智能水平接近 Claude Fable 5，但价格减半。该模型在 Frontier-Bench v0.1 上性能超过 Opus 4.8 两倍以上，在 ARC-AGI 3 上得分是次优模型的三倍。Opus 5 即日起成为 Claude Max 的默认模型和 Claude Pro 的最强模型。",
+            "category": "models",
+            "originalSource": "Anthropic：Newsroom（网页）",
+            "originalUrl": "https://www.anthropic.com/news/claude-opus-5",
+            "recommendedReason": "Anthropic 发布 Claude Opus 5，其智能水平接近 Claude Fable 5，但价格减半。该模型在 Frontier-Bench v0.1 上性能超过 Opus 4.8 两倍以上，在 ARC-AGI 3 上得分是次优模型的三倍。Opus 5 即日起成为 Claude Max 的默认模型和 Claude Pro 的最强模型。",
+            "publishedAt": "2026-07-24T17:24:25.589Z",
+            "collectedAt": "2026-07-24T17:57:13.356Z",
+            "raw": {
+              "id": "cmrz7mrck00gprox8j0j9qfst",
+              "titleEn": "Introducing Claude Opus 5",
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:49038393",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Claude Opus 5",
+            "url": "https://www.anthropic.com/news/claude-opus-5",
+            "author": "meetpateltech",
+            "tags": [
+              "anthropic",
+              "claude"
+            ],
+            "metrics": {
+              "upvotes": 66,
+              "commentsCount": 7
+            },
+            "publishedAt": "2026-07-24T16:55:26.000Z",
+            "collectedAt": "2026-07-24T17:57:12.629Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=49038393",
+              "matchedKeywords": [
+                "anthropic",
+                "claude"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmrz7mrck00gprox8j0j9qfst",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Anthropic 发布 Claude Opus 5",
+            "url": "https://www.anthropic.com/news/claude-opus-5",
+            "summary": "Anthropic 发布 Claude Opus 5，其智能水平接近 Claude Fable 5，但价格减半。该模型在 Frontier-Bench v0.1 上性能超过 Opus 4.8 两倍以上，在 ARC-AGI 3 上得分是次优模型的三倍。Opus 5 即日起成为 Claude Max 的默认模型和 Claude Pro 的最强模型。",
+            "description": "Anthropic 发布 Claude Opus 5，其智能水平接近 Claude Fable 5，但价格减半。该模型在 Frontier-Bench v0.1 上性能超过 Opus 4.8 两倍以上，在 ARC-AGI 3 上得分是次优模型的三倍。Opus 5 即日起成为 Claude Max 的默认模型和 Claude Pro 的最强模型。",
+            "category": "models",
+            "originalSource": "Anthropic：Newsroom（网页）",
+            "originalUrl": "https://www.anthropic.com/news/claude-opus-5",
+            "recommendedReason": "Anthropic 发布 Claude Opus 5，其智能水平接近 Claude Fable 5，但价格减半。该模型在 Frontier-Bench v0.1 上性能超过 Opus 4.8 两倍以上，在 ARC-AGI 3 上得分是次优模型的三倍。Opus 5 即日起成为 Claude Max 的默认模型和 Claude Pro 的最强模型。",
+            "publishedAt": "2026-07-24T17:24:25.589Z",
+            "collectedAt": "2026-07-24T17:57:13.356Z",
+            "raw": {
+              "id": "cmrz7mrck00gprox8j0j9qfst",
+              "titleEn": "Introducing Claude Opus 5",
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:49038393",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Claude Opus 5",
+            "url": "https://www.anthropic.com/news/claude-opus-5",
+            "author": "meetpateltech",
+            "tags": [
+              "anthropic",
+              "claude"
+            ],
+            "metrics": {
+              "upvotes": 66,
+              "commentsCount": 7
+            },
+            "publishedAt": "2026-07-24T16:55:26.000Z",
+            "collectedAt": "2026-07-24T17:57:12.629Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=49038393",
+              "matchedKeywords": [
+                "anthropic",
+                "claude"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 66,
+          "commentsCount": 7,
+          "hnScore": 66,
+          "crossSourceBonus": 10,
+          "heatScore": 127
+        },
+        "crossSourceBonus": 10,
+        "category": "models",
+        "summary": "Anthropic 发布 Claude Opus 5，其智能水平接近 Claude Fable 5，但价格减半。该模型在 Frontier-Bench v0.1 上性能超过 Opus 4.8 两倍以上，在 ARC-AGI 3 上得分是次优模型的三倍。Opus 5 即日起成为 Claude Max 的默认模型和 Claude Pro 的最强模型。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-07-24T16:55:26.000Z",
+        "lastSeenAt": "2026-07-24T17:57:13.356Z"
       }
     ]
   }
