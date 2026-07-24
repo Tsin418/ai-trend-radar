@@ -1,175 +1,213 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-24T03:51:44.616Z",
+  "generatedAt": "2026-07-24T05:14:03.936Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2607.21577v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Synthetic data generation framework for quality control automation in gravure printing",
-        "url": "https://arxiv.org/pdf/2607.21577v1",
-        "description": "Quality control in printing, particularly in rotogravure printing, still depends on slow, costly, and subjective manual inspection. Automated surface defect detection is critical for maintaining high-quality standards in rotogravure printing. Deep learning models give prospects for automation. However, training robust deep learning models, such as YOLO or Vision Transformers, is heavily hindered by the extreme scarcity of real-world industrial defects images. To overcome this limitation, this pa",
-        "summary": "Quality control in printing, particularly in rotogravure printing, still depends on slow, costly, and subjective manual inspection. Automated surface defect detection is critical for maintaining high-quality standards in rotogravure printing. Deep learning models give prospects for automation. However, training robust deep learning models, such as YOLO or Vision Transformers, is heavily hindered by the extreme scarcity of real-world industrial defects images. To overcome this limitation, this paper introduces a novel synthetic data generation framework tailored for rotogravure printing quality control. The proposed pipeline automatically generates high-fidelity images of specific printing defects (creases, streaks, misregistration, etc.) and outputs corresponding bounding boxes and annotations. To validate the framework, a synthetic dataset of 7533 images was generated and used to train the state-of-the-art object-detection model RFDETR. Experimental results demonstrate that the model trained on our synthetic data achieves a Mean Average Precision (mAP) of 80.9\\% on real industrial testing samples. This framework provides a zero-cost, rapid-deployment solution for automating defect inspection in printing lines without requiring massive manual data collection.",
-        "author": "Korota Arsène Coulibaly, Mohamed Hamlich, Khalid Hmali, Andrea Trombin",
+        "id": "huggingface_models:sullivan1502/base-grpo-round1",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "sullivan1502/base-grpo-round1",
+        "url": "https://huggingface.co/sullivan1502/base-grpo-round1",
         "tags": [
-          "cs.CV",
-          "cs.AI",
-          "cs.LG",
-          "eess.IV",
-          "rag"
+          "transformers",
+          "safetensors",
+          "llama",
+          "text-generation",
+          "generated_from_trainer",
+          "trl",
+          "grpo",
+          "arxiv:2402.03300",
+          "text-generation-inference",
+          "endpoints_compatible",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-07-23T17:55:21Z",
-        "updatedAt": "2026-07-23T17:55:21Z",
-        "collectedAt": "2026-07-24T03:51:36.862Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.21577v1",
-          "authors": [
-            "Korota Arsène Coulibaly",
-            "Mohamed Hamlich",
-            "Khalid Hmali",
-            "Andrea Trombin"
-          ]
+        "category": "text-generation",
+        "metrics": {
+          "downloads": 3639,
+          "likes": 0
         },
-        "recommendedReason": "Matched AI developer keywords: rag"
+        "publishedAt": "2026-07-21T23:23:12.000Z",
+        "updatedAt": "2026-07-24T05:11:12.000Z",
+        "collectedAt": "2026-07-24T05:14:04.097Z",
+        "raw": {
+          "pipelineTag": "text-generation"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.21573v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Beyond Sufficiency: Time Series Explanation with Counterfactual Necessity",
-        "url": "https://arxiv.org/pdf/2607.21573v1",
-        "description": "Faithful explanations of time-series classifiers should identify subsequences that are not only sufficient to preserve a black-box model's prediction, but also necessary for maintaining it. However, existing sufficiency-oriented methods can assign high importance to spurious subsequences that support the prediction without being essential to the model's decision. We introduce \\textbf{TimePNS}, a necessity-aware framework for time-series explanation. Inspired by Pearl's counterfactual notion of n",
-        "summary": "Faithful explanations of time-series classifiers should identify subsequences that are not only sufficient to preserve a black-box model's prediction, but also necessary for maintaining it. However, existing sufficiency-oriented methods can assign high importance to spurious subsequences that support the prediction without being essential to the model's decision. We introduce \\textbf{TimePNS}, a necessity-aware framework for time-series explanation. Inspired by Pearl's counterfactual notion of necessity, TimePNS assesses whether a temporal factor is necessary by intervening on it and measuring whether the original prediction is disrupted. The framework adopts a two-stage design. Stage I learns an identifiable causal generative process together with a sufficiency-oriented explanation mask. Stage II performs counterfactual interventions on temporal factors to derive necessity signals, which supervise a temporal gate that refines the initial explanation by suppressing non-essential components and emphasizing counterfactually necessary ones. Experiments on synthetic and real-world time-series benchmarks show that TimePNS more accurately identifies decision-critical subsequences and consistently improves sufficiency-necessity trade-offs over strong baselines.",
-        "author": "Hongnan Ma, Yiwei Shi, Mengyue Yang, Weiru Liu",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.LG",
-          "cs.AI",
-          "benchmark"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-07-23T17:52:01Z",
-        "updatedAt": "2026-07-23T17:52:01Z",
-        "collectedAt": "2026-07-24T03:51:36.862Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.21573v1",
-          "authors": [
-            "Hongnan Ma",
-            "Yiwei Shi",
-            "Mengyue Yang",
-            "Weiru Liu"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14056
         },
-        "recommendedReason": "Matched AI developer keywords: benchmark"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-07-24T05:14:04.103Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.21570v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "MedGame: Storytelling Gamification Empowered by Large Language Models for Medical Education",
-        "url": "https://arxiv.org/pdf/2607.21570v1",
-        "description": "Large Language Models (LLMs) show promise for medical education, but most existing systems focus on localized interactions such as question answering or single-turn feedback, rather than organizing an entire clinical case into a decision-centered learning trajectory. We introduce \\textit{MedGame}, a framework that transforms static clinical cases into structured, executable storytelling games. MedGame uses a dual-engine design: a Medical Narrative Designer synthesizes case-grounded clinical stor",
-        "summary": "Large Language Models (LLMs) show promise for medical education, but most existing systems focus on localized interactions such as question answering or single-turn feedback, rather than organizing an entire clinical case into a decision-centered learning trajectory. We introduce \\textit{MedGame}, a framework that transforms static clinical cases into structured, executable storytelling games. MedGame uses a dual-engine design: a Medical Narrative Designer synthesizes case-grounded clinical storylines with states and decision nodes, while a Story Director converts them into dependency-aware multimodal orchestration plans rendered by our released interactive platform. We construct MedGame Bench, a 5,000-case benchmark and evaluation protocol for Medical Narrative Generation and Story Direction. Experiments show that task-specific fine-tuning substantially improves open-source LLMs on MedGame Bench and narrows the gap with commercial models. A pilot student study further shows that learners perceive MedGame as more engaging and useful than text-only alternatives.",
-        "author": "Qian Wu, Xinrong Zhou, Zizhan Ma, Kai Chen, Zheyao Gao, Xun Lin, Hongqiu Wu, Longfei Gou, Yixiao Liu, Ann Sin Nga Lau, Qi Dou",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.CL",
-          "cs.HC",
-          "large language model",
-          "llm",
-          "fine-tuning",
-          "benchmark",
-          "evaluation"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-07-23T17:50:28Z",
-        "updatedAt": "2026-07-23T17:50:28Z",
-        "collectedAt": "2026-07-24T03:51:36.862Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.21570v1",
-          "authors": [
-            "Qian Wu",
-            "Xinrong Zhou",
-            "Zizhan Ma",
-            "Kai Chen",
-            "Zheyao Gao",
-            "Xun Lin",
-            "Hongqiu Wu",
-            "Longfei Gou",
-            "Yixiao Liu",
-            "Ann Sin Nga Lau",
-            "Qi Dou"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11186
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, fine-tuning, benchmark, evaluation"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-07-24T05:14:04.103Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.21561v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling",
-        "url": "https://arxiv.org/pdf/2607.21561v1",
-        "description": "Molecular property prediction from structure often uses a single representative conformation, even though many molecules exist as conformational ensembles in solution. We introduce EnsembleEGNN, a molecular ensemble foundation model that encodes an ensemble by first encoding each conformer with shared Equivariant Graph Neural Network (EGNN) layers, then pooling the resulting conformer representations with a Set Attention Block. We pretrain the model on CREMP, a cyclic peptide ensemble dataset, u",
-        "summary": "Molecular property prediction from structure often uses a single representative conformation, even though many molecules exist as conformational ensembles in solution. We introduce EnsembleEGNN, a molecular ensemble foundation model that encodes an ensemble by first encoding each conformer with shared Equivariant Graph Neural Network (EGNN) layers, then pooling the resulting conformer representations with a Set Attention Block. We pretrain the model on CREMP, a cyclic peptide ensemble dataset, using a multi-task self-supervised objective combining masked token recovery, noisy-coordinate reconstruction, and pairwise distance reconstruction. On the CREMP-CycPeptMPDB dataset, training EnsembleEGNN from scratch fails entirely ($R^2=0.005$). However, the pretrained model reaches $R^2=0.477$ and Pearson $r=0.699$, outperforming the sequence-only BERT baseline ($R^2=0.439$, Pearson $r=0.667$). When EnsembleEGNN is co-trained end-to-end with the BERT sequence encoder, the hybrid model improves further to $R^2=0.538$ and Pearson $r=0.737$. These results demonstrate that encoding conformational ensembles into a single thermodynamically informed embedding improves cyclic-peptide property prediction.",
-        "author": "Aaron Feller, Kris Deibler, Maxim Secor",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.LG",
-          "q-bio.BM",
-          "embedding"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-07-23T17:42:51Z",
-        "updatedAt": "2026-07-23T17:42:51Z",
-        "collectedAt": "2026-07-24T03:51:36.862Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.21561v1",
-          "authors": [
-            "Aaron Feller",
-            "Kris Deibler",
-            "Maxim Secor"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10139
         },
-        "recommendedReason": "Matched AI developer keywords: embedding"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-07-24T05:14:04.103Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.21558v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Beyond Sycophancy: Structured Resistance and Compliance in LLM Moral Reasoning",
-        "url": "https://arxiv.org/pdf/2607.21558v1",
-        "description": "Building socially calibrated large language models, which can learn from others without simply yielding to them, requires more than reducing sycophancy as a one-dimensional failure mode. Models must distinguish when to incorporate others' perspectives from when to maintain a well-grounded moral judgment. We study the broader resistance-compliance process governing this distinction. Across three studies, we show that models' judgment revision is structured along three dimensions that parallel cla",
-        "summary": "Building socially calibrated large language models, which can learn from others without simply yielding to them, requires more than reducing sycophancy as a one-dimensional failure mode. Models must distinguish when to incorporate others' perspectives from when to maintain a well-grounded moral judgment. We study the broader resistance-compliance process governing this distinction. Across three studies, we show that models' judgment revision is structured along three dimensions that parallel classic phenomena in human social psychology: the distance between an incoming view and the model's initial position, the source attribution of that view, and the coalition structure supporting it. Models are generally more receptive to nearby positions, more influenced by views presented as their own prior judgments, and differently responsive to group pressure. These findings recast sycophancy as one expression of a broader judgment-updating process shaped by social influence. Our framework provides a principled basis for distinguishing constructive belief revision from sycophantic compliance, thereby supporting better alignment in morally consequential interactions.",
-        "author": "Baihui Wang, Bernard Koch",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "cs.AI",
-          "large language model",
-          "llm",
-          "alignment"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-07-23T17:40:07Z",
-        "updatedAt": "2026-07-23T17:40:07Z",
-        "collectedAt": "2026-07-24T03:51:36.862Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.21558v1",
-          "authors": [
-            "Baihui Wang",
-            "Bernard Koch"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7585
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, alignment"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-07-23T09:10:59.000Z",
+        "collectedAt": "2026-07-24T05:14:04.103Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
+      },
+      {
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
+        "tags": [
+          "gradio",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5119
+        },
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-07-24T05:14:04.103Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5080
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-07-24T05:14:04.103Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Arena Leaderboard",
+        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
+        "author": "lmarena-ai",
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "static",
+        "metrics": {
+          "likes": 4953
+        },
+        "publishedAt": "2023-05-20T09:26:19.000Z",
+        "updatedAt": "2026-02-21T23:20:43.000Z",
+        "collectedAt": "2026-07-24T05:14:04.103Z",
+        "raw": {
+          "sdk": "static",
+          "emoji": "🏆🤖"
+        }
       }
     ],
     "developerBuzz": [
@@ -184,11 +222,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1048,
-          "commentsCount": 500
+          "upvotes": 1115,
+          "commentsCount": 529
         },
         "publishedAt": "2026-07-23T14:24:43.000Z",
-        "collectedAt": "2026-07-24T03:51:37.080Z",
+        "collectedAt": "2026-07-24T05:14:04.322Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49022152",
           "matchedKeywords": [
@@ -207,11 +245,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 776,
-          "commentsCount": 686
+          "upvotes": 815,
+          "commentsCount": 702
         },
         "publishedAt": "2026-07-23T15:18:40.000Z",
-        "collectedAt": "2026-07-24T03:51:37.080Z",
+        "collectedAt": "2026-07-24T05:14:04.322Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49023016",
           "matchedKeywords": [
@@ -230,11 +268,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 625,
-          "commentsCount": 314
+          "upvotes": 629,
+          "commentsCount": 322
         },
         "publishedAt": "2026-07-23T13:09:10.000Z",
-        "collectedAt": "2026-07-24T03:51:37.080Z",
+        "collectedAt": "2026-07-24T05:14:04.322Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49020999",
           "matchedKeywords": [
@@ -254,10 +292,10 @@
         ],
         "metrics": {
           "upvotes": 593,
-          "commentsCount": 626
+          "commentsCount": 627
         },
         "publishedAt": "2026-07-22T12:32:48.000Z",
-        "collectedAt": "2026-07-24T03:51:37.080Z",
+        "collectedAt": "2026-07-24T05:14:04.322Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49005747",
           "matchedKeywords": [
@@ -277,10 +315,10 @@
         ],
         "metrics": {
           "upvotes": 674,
-          "commentsCount": 352
+          "commentsCount": 353
         },
         "publishedAt": "2026-07-22T10:49:04.000Z",
-        "collectedAt": "2026-07-24T03:51:37.080Z",
+        "collectedAt": "2026-07-24T05:14:04.322Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49004663",
           "matchedKeywords": [
@@ -303,7 +341,7 @@
         "originalUrl": "https://www.ithome.com/0/980/890.htm",
         "recommendedReason": "美国佛罗里达州 55 岁男子 Scott Winters 起诉 OpenAI，称 ChatGPT-4o 多次建议其无需就医，导致其因双肺血栓引发大面积肺栓塞，一度濒临死亡。诉状指控 OpenAI 存在疏忽和\"无证行医\"行为，要求经济赔偿并暂停 ChatGPT Health 服务。OpenAI 回应称 ChatGPT 不是医生，不应替代专业医疗护理。",
         "publishedAt": "2026-07-23T23:30:43.000Z",
-        "collectedAt": "2026-07-24T03:51:37.735Z",
+        "collectedAt": "2026-07-24T05:14:05.198Z",
         "raw": {
           "id": "cmry5ypd2008croeuadelaot9",
           "titleEn": "佛州一男子因相信 ChatGPT 拒绝就医而险些丧命，起诉 OpenAI 及 CEO 奥尔特曼",
@@ -323,7 +361,7 @@
         "originalUrl": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
         "recommendedReason": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
         "publishedAt": "2026-07-23T20:11:31.906Z",
-        "collectedAt": "2026-07-24T03:51:37.735Z",
+        "collectedAt": "2026-07-24T05:14:05.198Z",
         "raw": {
           "id": "cmrxylm0f002xropg7xpd1pth",
           "titleEn": "美国国防高级研究计划局（DARPA）与美国空军试飞了由人工智能操控的F-16战机",
@@ -343,7 +381,7 @@
         "originalUrl": "https://claude.com/blog/think-through-hard-problems-in-voice-mode",
         "recommendedReason": "即日起，Claude 语音模式在 Opus、Sonnet 和 Haiku 上运行，并支持连接 Gmail、Slack 等工具及更多语言。用户可在对话中切换模型，语音模式默认沿用上次文本聊天使用的模型。该功能面向所有用户开放 beta 测试，免费版可使用 Haiku 及一个连接工具，付费版可访问更多模型和全部连接工具。",
         "publishedAt": "2026-07-23T19:55:29.530Z",
-        "collectedAt": "2026-07-24T03:51:37.735Z",
+        "collectedAt": "2026-07-24T05:14:05.198Z",
         "raw": {
           "id": "cmrxxl53u03q5roxp15huqnni",
           "titleEn": "Think through hard problems in voice mode",
@@ -363,7 +401,7 @@
         "originalUrl": "https://x.com/OpenAI/status/2080378182469857576",
         "recommendedReason": "ChatGPT 语音功能现已登陆桌面应用。 只需使用语音，即可控制你的电脑，并指挥在 ChatGPT Work 或 Codex 中运行的多个智能体。 该功能由 GPT-Live 驱动，因此它能够同时在该应用中说话、聆听并协调工作。 今日起，面向 macOS 和 Windows 平台的 Plus、Pro、Business、Edu 及 Enterprise 计划用户全球推送。",
         "publishedAt": "2026-07-23T19:43:04.000Z",
-        "collectedAt": "2026-07-24T03:51:37.735Z",
+        "collectedAt": "2026-07-24T05:14:05.198Z",
         "raw": {
           "id": "cmrxxi2qg03kcroxpcugdaldy",
           "titleEn": "ChatGPT Voice is now in the desktop app. Control your computer and direct multiple agents running i…",
@@ -383,7 +421,7 @@
         "originalUrl": "https://stephenfollows.com/p/what-just-happened-to-thenumberscom-should-worry-us-all",
         "recommendedReason": "电影数据权威网站 The Numbers 于 2026 年 3 月 5 日突然下线，一周后仅以精简版恢复上线，历史图表、电影页面和 Report Builder 均被移除。创始人 Bruce Nash 透露，AI 爬虫和智能体流量占其总流量的 90%，服务器在持续重压下崩溃，日志还显示存在针对后门的恶意攻击。团队被迫放弃运行 30 年、包含 16 万源文件的旧系统，在新基础设施上重建网站。",
         "publishedAt": "2026-07-23T18:35:29.016Z",
-        "collectedAt": "2026-07-24T03:51:37.735Z",
+        "collectedAt": "2026-07-24T05:14:05.198Z",
         "raw": {
           "id": "cmrxvduwi02z1roxph1bvkmmu",
           "titleEn": "TheNumbers.com 发生了什么",
@@ -403,7 +441,7 @@
         "originalUrl": "https://x.com/gdb/status/2080351159638704615",
         "recommendedReason": "OpenAI 宣布向美国用户推出 ChatGPT 健康功能，支持安全连接 Apple Health 及受支持的医疗记录。每周有 3 亿用户使用 ChatGPT 进行健康咨询，新功能可让 ChatGPT 理解个人健康上下文，追踪变化并提供更个性化的帮助。",
         "publishedAt": "2026-07-23T17:55:42.000Z",
-        "collectedAt": "2026-07-24T03:51:37.735Z",
+        "collectedAt": "2026-07-24T05:14:05.198Z",
         "raw": {
           "id": "cmrxubdvx02mjroxp2kzix1mf",
           "titleEn": "Launching Health in ChatGPT to U.S. users. 300 million people use ChatGPT each week for health quer…",
@@ -423,7 +461,7 @@
         "originalUrl": "https://the-decoder.com/one-tampered-chatgpt-link-could-spawn-a-rogue-ai-agent-that-took-orders-from-an-attacker-every-five-minutes",
         "recommendedReason": "安全公司 Zenity Labs 发现 OpenAI Workspace Agents 存在\"AgentForger\"漏洞，攻击者发送一个含恶意提示词的 ChatGPT 链接，即可在受害者账户下创建自主 AI 智能体。该智能体继承受害者身份和已授权应用权限，绕过安全审批，并设置每五分钟运行一次的定时任务，从攻击者邮箱获取指令执行。OpenAI 在四天内修复了该漏洞。",
         "publishedAt": "2026-07-23T17:01:30.000Z",
-        "collectedAt": "2026-07-24T03:51:37.735Z",
+        "collectedAt": "2026-07-24T05:14:05.198Z",
         "raw": {
           "id": "cmrxs4yyw01xkroxpom7zfjvc",
           "titleEn": "One tampered ChatGPT link could spawn a rogue AI agent that took orders from an attacker every five minutes",
@@ -443,274 +481,12 @@
         "originalUrl": "https://x.com/satyanadella/status/2080329851127669104",
         "recommendedReason": "微软CEO Satya Nadella详解MAI模型家族战略：通过优化成本-效果前沿，MAI模型在GitHub Copilot、Excel等产品中已用更少token超越通用前沿模型。核心是构建独立于模型的评估系统，让模型在产品真实环境中学习并完成用户关心的任务。微软正将这一模板通过Foundry平台开放给企业客户。",
         "publishedAt": "2026-07-23T16:31:01.000Z",
-        "collectedAt": "2026-07-24T03:51:37.735Z",
+        "collectedAt": "2026-07-24T05:14:05.198Z",
         "raw": {
           "id": "cmrxr59xb01sbroxpzcqbv1fo",
           "titleEn": "http://x.com/i/article/2080328073724260352",
           "apiCategory": "tip"
         }
-      },
-      {
-        "id": "aihot:cmrxnw4rw00qzroxpll5shp7a",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Google Gemini 月活用户逼近 9.5 亿，有望成为下一个十亿级产品",
-        "url": "https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini",
-        "summary": "Google 在 Q2 2026 财报电话会上宣布，AI 助手 Gemini 月活跃用户已超过 9.5 亿，用户数较去年增长三倍。Gemini 正与月活突破 10 亿的 ChatGPT 展开更直接竞争，其 AI 搜索模式用户也已超过 10 亿。Sensor Tower 报告显示，Gemini 在 AI 助手市场份额升至 27.7%，而 ChatGPT 份额首次跌破 50%。",
-        "description": "Google 在 Q2 2026 财报电话会上宣布，AI 助手 Gemini 月活跃用户已超过 9.5 亿，用户数较去年增长三倍。Gemini 正与月活突破 10 亿的 ChatGPT 展开更直接竞争，其 AI 搜索模式用户也已超过 10 亿。Sensor Tower 报告显示，Gemini 在 AI 助手市场份额升至 27.7%，而 ChatGPT 份额首次跌破 50%。",
-        "category": "industry",
-        "originalSource": "TechCrunch：AI（RSS）",
-        "originalUrl": "https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini",
-        "recommendedReason": "Google 在 Q2 2026 财报电话会上宣布，AI 助手 Gemini 月活跃用户已超过 9.5 亿，用户数较去年增长三倍。Gemini 正与月活突破 10 亿的 ChatGPT 展开更直接竞争，其 AI 搜索模式用户也已超过 10 亿。Sensor Tower 报告显示，Gemini 在 AI 助手市场份额升至 27.7%，而 ChatGPT 份额首次跌破 50%。",
-        "publishedAt": "2026-07-23T14:52:44.000Z",
-        "collectedAt": "2026-07-24T03:51:37.735Z",
-        "raw": {
-          "id": "cmrxnw4rw00qzroxpll5shp7a",
-          "titleEn": "Google closes in on another billion- user product with Gemini",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmrxlqjnm002oroxpyia19ufa",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Apple 起诉 OpenAI 窃取硬件制造机密",
-        "url": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive",
-        "summary": "Apple 指控多名前员工在 OpenAI 面试中窃取硬件制造机密，甚至将设备带出办公室进行\"展示\"。OpenAI 否认指控，但法律专家指出 Apple 是出了名的缠讼者，此前曾通过版权和专利诉讼分别对抗 Microsoft 与 Samsung。",
-        "description": "Apple 指控多名前员工在 OpenAI 面试中窃取硬件制造机密，甚至将设备带出办公室进行\"展示\"。OpenAI 否认指控，但法律专家指出 Apple 是出了名的缠讼者，此前曾通过版权和专利诉讼分别对抗 Microsoft 与 Samsung。",
-        "category": "tools",
-        "originalSource": "The Verge：AI（RSS）",
-        "originalUrl": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive",
-        "recommendedReason": "Apple 指控多名前员工在 OpenAI 面试中窃取硬件制造机密，甚至将设备带出办公室进行\"展示\"。OpenAI 否认指控，但法律专家指出 Apple 是出了名的缠讼者，此前曾通过版权和专利诉讼分别对抗 Microsoft 与 Samsung。",
-        "publishedAt": "2026-07-23T14:00:00.000Z",
-        "collectedAt": "2026-07-24T03:51:37.735Z",
-        "raw": {
-          "id": "cmrxlqjnm002oroxpyia19ufa",
-          "titleEn": "Apple's OpenAI lawsuit is about who gets to define the post-smartphone era",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmrxihn0u00e7ro4jy78efqxq",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "通义千问发布Qwen-Audio-3.0-TTS，登顶TTS排行榜",
-        "url": "https://x.com/Alibaba_Qwen/status/2080270065547809133",
-        "summary": "阿里通义千问推出最新文本转语音模型Qwen-Audio-3.0-TTS，提供Flash（实时交互）和Plus（高质量生成）两个版本。新功能包括细粒度内联标签控制（如【whisper】、【angry】）、自然语言风格控制、支持16种语言，以及一次生成长达3分钟的长文本。该模型目前在Artificial Analysis TTS排行榜上排名第一。",
-        "description": "阿里通义千问推出最新文本转语音模型Qwen-Audio-3.0-TTS，提供Flash（实时交互）和Plus（高质量生成）两个版本。新功能包括细粒度内联标签控制（如【whisper】、【angry】）、自然语言风格控制、支持16种语言，以及一次生成长达3分钟的长文本。该模型目前在Artificial Analysis TTS排行榜上排名第一。",
-        "category": "models",
-        "originalSource": "X：通义千问 / Qwen (@Alibaba_Qwen)",
-        "originalUrl": "https://x.com/Alibaba_Qwen/status/2080270065547809133",
-        "recommendedReason": "阿里通义千问推出最新文本转语音模型Qwen-Audio-3.0-TTS，提供Flash（实时交互）和Plus（高质量生成）两个版本。新功能包括细粒度内联标签控制（如【whisper】、【angry】）、自然语言风格控制、支持16种语言，以及一次生成长达3分钟的长文本。该模型目前在Artificial Analysis TTS排行榜上排名第一。",
-        "publishedAt": "2026-07-23T12:33:27.000Z",
-        "collectedAt": "2026-07-24T03:51:37.735Z",
-        "raw": {
-          "id": "cmrxihn0u00e7ro4jy78efqxq",
-          "titleEn": "Introducing the Qwen-Audio-3.0-TTS. Our latest text-to-speech model， in two flavors： • Flash： real-…",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmrxfjpf800tero983dojzltm",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "昆仑万维方汉：Token堆不出AI原生组织，模型才是长期立足之本",
-        "url": "https://mp.weixin.qq.com/s/TEAuv29LPgmjQG_rO3b_Ag",
-        "summary": "昆仑万维CEO方汉在WAIC圆桌上指出，单纯堆砌Token消耗量无法衡量AI价值，模型能力需依赖Claude Code等Coding Agent建立的工程框架才能转化为生产力。他透露昆仑万维仍在持续训练模型，并将发布音乐、具身世界和游戏世界模型，认为模型与算力是AI公司长期立足的基础。方汉同时警示，AI编程带来的技术债可能导致生产事故增幅达数倍，代码审查与责任机制必须同步加强。",
-        "description": "昆仑万维CEO方汉在WAIC圆桌上指出，单纯堆砌Token消耗量无法衡量AI价值，模型能力需依赖Claude Code等Coding Agent建立的工程框架才能转化为生产力。他透露昆仑万维仍在持续训练模型，并将发布音乐、具身世界和游戏世界模型，认为模型与算力是AI公司长期立足的基础。方汉同时警示，AI编程带来的技术债可能导致生产事故增幅达数倍，代码审查与责任机制必须同步加强。",
-        "category": "tools",
-        "originalSource": "公众号：昆仑万维（天工）",
-        "originalUrl": "https://mp.weixin.qq.com/s/TEAuv29LPgmjQG_rO3b_Ag",
-        "recommendedReason": "昆仑万维CEO方汉在WAIC圆桌上指出，单纯堆砌Token消耗量无法衡量AI价值，模型能力需依赖Claude Code等Coding Agent建立的工程框架才能转化为生产力。他透露昆仑万维仍在持续训练模型，并将发布音乐、具身世界和游戏世界模型，认为模型与算力是AI公司长期立足的基础。方汉同时警示，AI编程带来的技术债可能导致生产事故增幅达数倍，代码审查与责任机制必须同步加强。",
-        "publishedAt": "2026-07-23T11:20:00.000Z",
-        "collectedAt": "2026-07-24T03:51:37.735Z",
-        "raw": {
-          "id": "cmrxfjpf800tero983dojzltm",
-          "titleEn": "昆仑万维方汉：Token堆不出AI原生组织，模型才是长期立足之本 | 腾讯WAIC之夜",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmrx3iki50075ro694xrjogs3",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Cactus 发布 Gemma 4 E2B Hybrid：可在设备端为每个回答输出置信度分数，低分时自动路由至更大模型",
-        "url": "https://github.com/cactus-compute/cactus-hybrid",
-        "summary": "Cactus 推出基于 Gemma 4 的混合模型\"Cactus Hybrid\"，在模型检查点内嵌入置信度探针，为每个生成答案输出 0-1 之间的结构化置信度分数。高置信度时在设备端直接回答，低分时可自动路由至更大模型。该探针在零音频训练数据下，于四个音频基准上达到 0.79-0.88 AUROC，远超 token 熵基线（均值 0.549），且 MIT 协议开源。",
-        "description": "Cactus 推出基于 Gemma 4 的混合模型\"Cactus Hybrid\"，在模型检查点内嵌入置信度探针，为每个生成答案输出 0-1 之间的结构化置信度分数。高置信度时在设备端直接回答，低分时可自动路由至更大模型。该探针在零音频训练数据下，于四个音频基准上达到 0.79-0.88 AUROC，远超 token 熵基线（均值 0.549），且 MIT 协议开源。",
-        "category": "models",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://github.com/cactus-compute/cactus-hybrid",
-        "recommendedReason": "Cactus 推出基于 Gemma 4 的混合模型\"Cactus Hybrid\"，在模型检查点内嵌入置信度探针，为每个生成答案输出 0-1 之间的结构化置信度分数。高置信度时在设备端直接回答，低分时可自动路由至更大模型。该探针在零音频训练数据下，于四个音频基准上达到 0.79-0.88 AUROC，远超 token 熵基线（均值 0.549），且 MIT 协议开源。",
-        "publishedAt": "2026-07-23T05:47:29.042Z",
-        "collectedAt": "2026-07-24T03:51:37.735Z",
-        "raw": {
-          "id": "cmrx3iki50075ro694xrjogs3",
-          "titleEn": "Show HN： 《仙人掌杂交种》：我们教4岁的杰玛如何分辨对错",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmrx2cdq000nzroqpc57eaxa3",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "北京发布智能体新政，首次将Harness Engineering、Token经济、OPC等写入政策",
-        "url": "https://mp.weixin.qq.com/s/CYB7v1e5D4m-btgosjmLgA",
-        "summary": "北京市发布《关于加快智能体引领发展的若干措施》，共十条，首次将Harness Engineering（驾驭层工程）、Token经济、OPC（一人公司）等前沿概念写入正式政策。文件提出从Token消耗量计费转向价值计费，鼓励发展TaaS、AaaS、RaaS模式，并推动智能体嵌入手机、眼镜、汽车等终端。",
-        "description": "北京市发布《关于加快智能体引领发展的若干措施》，共十条，首次将Harness Engineering（驾驭层工程）、Token经济、OPC（一人公司）等前沿概念写入正式政策。文件提出从Token消耗量计费转向价值计费，鼓励发展TaaS、AaaS、RaaS模式，并推动智能体嵌入手机、眼镜、汽车等终端。",
-        "category": "tools",
-        "originalSource": "公众号：数字生命卡兹克",
-        "originalUrl": "https://mp.weixin.qq.com/s/CYB7v1e5D4m-btgosjmLgA",
-        "recommendedReason": "北京市发布《关于加快智能体引领发展的若干措施》，共十条，首次将Harness Engineering（驾驭层工程）、Token经济、OPC（一人公司）等前沿概念写入正式政策。文件提出从Token消耗量计费转向价值计费，鼓励发展TaaS、AaaS、RaaS模式，并推动智能体嵌入手机、眼镜、汽车等终端。",
-        "publishedAt": "2026-07-23T05:13:37.000Z",
-        "collectedAt": "2026-07-24T03:51:37.735Z",
-        "raw": {
-          "id": "cmrx2cdq000nzroqpc57eaxa3",
-          "titleEn": "一文带你看懂刚刚发布的\"北京智能体新政\"，这是跟每个人都有关的10条。",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmrwztuqg0000roqpmbblplr7",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "小红书HELMSMAN：全闪存服务器实现高性能向量检索，硬件成本节省超90%",
-        "url": "https://mp.weixin.qq.com/s/WCYE6itbTBPU0Q_3BfQxkA",
-        "summary": "小红书引擎架构团队在OSDI 2026提出HELMSMAN，一个面向全闪存服务器的高性能向量近似最近邻搜索系统。该系统通过聚类式索引、定制化存储栈和分层学习式搜索剪枝，用约40台全闪存服务器承载了过去约35，000 CPU Core和约350 TB DRAM的负载，硬件成本节省超过90%。",
-        "description": "小红书引擎架构团队在OSDI 2026提出HELMSMAN，一个面向全闪存服务器的高性能向量近似最近邻搜索系统。该系统通过聚类式索引、定制化存储栈和分层学习式搜索剪枝，用约40台全闪存服务器承载了过去约35，000 CPU Core和约350 TB DRAM的负载，硬件成本节省超过90%。",
-        "category": "papers",
-        "originalSource": "公众号：小红书技术（dots.llm）",
-        "originalUrl": "https://mp.weixin.qq.com/s/WCYE6itbTBPU0Q_3BfQxkA",
-        "recommendedReason": "小红书引擎架构团队在OSDI 2026提出HELMSMAN，一个面向全闪存服务器的高性能向量近似最近邻搜索系统。该系统通过聚类式索引、定制化存储栈和分层学习式搜索剪枝，用约40台全闪存服务器承载了过去约35，000 CPU Core和约350 TB DRAM的负载，硬件成本节省超过90%。",
-        "publishedAt": "2026-07-23T04:00:00.000Z",
-        "collectedAt": "2026-07-24T03:51:37.735Z",
-        "raw": {
-          "id": "cmrwztuqg0000roqpmbblplr7",
-          "titleEn": "小红书引擎架构团队OSDI 2026新成果：HELMSMAN重塑大规模向量检索基础设施",
-          "apiCategory": "paper"
-        }
-      }
-    ],
-    "crossSourceHighlights": [
-      {
-        "id": "url:https://darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-        "canonicalId": "url:https://darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-        "title": "DARPA 与美国空军试飞 AI 操控的 F-16 战机",
-        "canonicalUrl": "https://darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-          "title:darpa 与美国空军试飞 ai 操控的 f 16 战机",
-          "title:darpa u s air force fly ai controlled f 16"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmrxylm0f002xropg7xpd1pth",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "DARPA 与美国空军试飞 AI 操控的 F-16 战机",
-            "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-            "summary": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
-            "description": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
-            "category": "industry",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-            "recommendedReason": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
-            "publishedAt": "2026-07-23T20:11:31.906Z",
-            "collectedAt": "2026-07-24T03:51:37.735Z",
-            "raw": {
-              "id": "cmrxylm0f002xropg7xpd1pth",
-              "titleEn": "美国国防高级研究计划局（DARPA）与美国空军试飞了由人工智能操控的F-16战机",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:49021597",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "DARPA, U.S. Air Force fly AI-controlled F-16",
-            "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-            "author": "r2sk5t",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 196,
-              "commentsCount": 220
-            },
-            "publishedAt": "2026-07-23T13:51:36.000Z",
-            "collectedAt": "2026-07-24T03:51:37.080Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49021597",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmrxylm0f002xropg7xpd1pth",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "DARPA 与美国空军试飞 AI 操控的 F-16 战机",
-            "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-            "summary": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
-            "description": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
-            "category": "industry",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-            "recommendedReason": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
-            "publishedAt": "2026-07-23T20:11:31.906Z",
-            "collectedAt": "2026-07-24T03:51:37.735Z",
-            "raw": {
-              "id": "cmrxylm0f002xropg7xpd1pth",
-              "titleEn": "美国国防高级研究计划局（DARPA）与美国空军试飞了由人工智能操控的F-16战机",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:49021597",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "DARPA, U.S. Air Force fly AI-controlled F-16",
-            "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-            "author": "r2sk5t",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 196,
-              "commentsCount": 220
-            },
-            "publishedAt": "2026-07-23T13:51:36.000Z",
-            "collectedAt": "2026-07-24T03:51:37.080Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49021597",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 196,
-          "commentsCount": 220,
-          "hnScore": 196,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "industry",
-        "summary": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-07-23T13:51:36.000Z",
-        "lastSeenAt": "2026-07-24T03:51:37.735Z"
       }
     ]
   }
