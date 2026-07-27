@@ -1,66 +1,53 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-07-27-2026-07-27T06-19-20-670Z",
-  "generatedAt": "2026-07-27T06:19:20.670Z",
+  "runId": "lightweight-2026-07-27-2026-07-27T10-33-55-567Z",
+  "generatedAt": "2026-07-27T10:33:55.567Z",
   "targetDate": "2026-07-27",
   "brief": {
     "date": "2026-07-27",
-    "headline": "Today's strongest AI trend signals are Ai Model Release and Mcp / Tool Calling.",
+    "headline": "Today's strongest AI trend signals are Ai Model Release, Mcp / Tool Calling, and Local Llm / Inference.",
     "keyTakeaways": [
-      "Ai Model Release: This topic appeared across 2 source(s): huggingface_spaces, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Ai Model Release: This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 7 related signal(s). Treat it as correlation evidence rather tha.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
       "Ai Model Release: watch decision is deep_dive.",
       "Mcp / Tool Calling: This topic appeared across 1 source(s): huggingface_spaces, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
-      "Mcp / Tool Calling: watch decision is track."
+      "Mcp / Tool Calling: watch decision is track.",
+      "Local Llm / Inference: This topic appeared across 1 source(s): huggingface_models, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Local Llm / Inference: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
+      "Local Llm / Inference: watch decision is wait."
     ],
     "topicBriefs": [
       {
         "id": "topic:ai model release",
         "title": "Ai Model Release",
-        "category": "docker",
         "sources": [
+          "huggingface_models",
           "huggingface_spaces",
           "hackernews"
         ],
-        "sourceCount": 2,
-        "heatScore": 440,
+        "sourceCount": 3,
+        "heatScore": 460,
         "confidence": "medium",
         "watchDecision": "deep_dive",
-        "whatItIs": "Ai Model Release is an AI trend topic in docker represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): huggingface_spaces, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Ai Model Release is an AI trend topic represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math"
+          "tensorboard",
+          "safetensors",
+          "vision-encoder-decoder",
+          "region:us",
+          "llama.cpp",
+          "gguf",
+          "qwen",
+          "traditional-chinese"
         ],
         "evidenceItems": [
-          {
-            "id": "hackernews:49050859",
-            "title": "LLM Usage in Debian: Three Proposals",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://www.debian.org/vote/2026/vote_002",
-            "tags": [
-              "llm"
-            ],
-            "publishedAt": "2026-07-25T19:44:39.000Z",
-            "collectedAt": "2026-07-27T06:19:21.170Z",
-            "metrics": {
-              "upvotes": 208,
-              "commentsCount": 207
-            }
-          },
           {
             "id": "hackernews:49050512",
             "title": "Running a 28.9M parameter LLM on an $8 microcontroller",
@@ -72,10 +59,10 @@
               "llm"
             ],
             "publishedAt": "2026-07-25T18:59:50.000Z",
-            "collectedAt": "2026-07-27T06:19:21.170Z",
+            "collectedAt": "2026-07-27T10:33:56.039Z",
             "metrics": {
-              "upvotes": 273,
-              "commentsCount": 69
+              "upvotes": 277,
+              "commentsCount": 70
             }
           },
           {
@@ -97,7 +84,7 @@
               "region:us"
             ],
             "publishedAt": "2023-04-17T11:40:06.000Z",
-            "collectedAt": "2026-07-27T06:19:20.857Z",
+            "collectedAt": "2026-07-27T10:33:55.740Z",
             "metrics": {
               "likes": 14059
             }
@@ -117,7 +104,7 @@
               "region:us"
             ],
             "publishedAt": "2023-06-08T18:00:26.000Z",
-            "collectedAt": "2026-07-27T06:19:20.857Z",
+            "collectedAt": "2026-07-27T10:33:55.740Z",
             "metrics": {
               "likes": 5081
             }
@@ -140,25 +127,63 @@
               "region:us"
             ],
             "publishedAt": "2024-07-05T16:35:24.000Z",
-            "collectedAt": "2026-07-27T06:19:20.857Z",
+            "collectedAt": "2026-07-27T10:33:55.740Z",
             "metrics": {
               "likes": 3769
+            }
+          },
+          {
+            "id": "hackernews:49067199",
+            "title": "Teaching LLMs to Update Beliefs for Efficient Long-Horizon Interaction",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://bair.berkeley.edu/blog/2026/07/26/abbel/",
+            "tags": [
+              "ai",
+              "llm"
+            ],
+            "publishedAt": "2026-07-27T09:46:05.000Z",
+            "collectedAt": "2026-07-27T10:33:56.039Z",
+            "metrics": {
+              "upvotes": 1,
+              "commentsCount": 0
+            }
+          },
+          {
+            "id": "huggingface_models:LLMTestSaurav/KHM-TCD-CMR-ETH-JOR-NPL-NER-PAK-TUR-ZMB",
+            "title": "LLMTestSaurav/KHM-TCD-CMR-ETH-JOR-NPL-NER-PAK-TUR-ZMB",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/LLMTestSaurav/KHM-TCD-CMR-ETH-JOR-NPL-NER-PAK-TUR-ZMB",
+            "tags": [
+              "tensorboard",
+              "safetensors",
+              "vision-encoder-decoder",
+              "region:us"
+            ],
+            "publishedAt": "2026-07-27T09:48:21.000Z",
+            "collectedAt": "2026-07-27T10:33:55.717Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
             }
           }
         ],
         "relatedEntities": [
+          "LLMTestSaurav/KHM-TCD-CMR-ETH-JOR-NPL-NER-PAK-TUR-ZMB",
+          "rickytzai/Qwen3.6-35B-A3B-TW-v4a-GGUF",
           "Open LLM Leaderboard",
           "MusicGen",
           "Live Portrait",
-          "Running a 28.9M parameter LLM on an $8 microcontroller",
-          "LLM Usage in Debian: Three Proposals"
+          "Teaching LLMs to Update Beliefs for Efficient Long-Horizon Interaction",
+          "Running a 28.9M parameter LLM on an $8 microcontroller"
         ],
         "metrics": {
-          "votes": 273,
+          "votes": 277,
           "likes": 14059,
-          "commentsCount": 207,
-          "heatScore": 440,
-          "crossSourceBonus": 10
+          "commentsCount": 70,
+          "heatScore": 460,
+          "crossSourceBonus": 20
         }
       },
       {
@@ -197,7 +222,7 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-07-27T06:19:20.857Z",
+            "collectedAt": "2026-07-27T10:33:55.740Z",
             "metrics": {
               "likes": 3616
             }
@@ -215,9 +240,9 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-07-27T06:19:20.857Z",
+            "collectedAt": "2026-07-27T10:33:55.740Z",
             "metrics": {
-              "likes": 3355
+              "likes": 3356
             }
           },
           {
@@ -233,9 +258,9 @@
               "region:us"
             ],
             "publishedAt": "2025-10-27T03:20:43.000Z",
-            "collectedAt": "2026-07-27T06:19:20.857Z",
+            "collectedAt": "2026-07-27T10:33:55.740Z",
             "metrics": {
-              "likes": 2941
+              "likes": 2943
             }
           },
           {
@@ -251,7 +276,7 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-07-27T06:19:20.857Z",
+            "collectedAt": "2026-07-27T10:33:55.740Z",
             "metrics": {
               "likes": 2903
             }
@@ -268,6 +293,128 @@
           "heatScore": 120,
           "crossSourceBonus": 0
         }
+      },
+      {
+        "id": "topic:local llm / inference",
+        "title": "Local Llm / Inference",
+        "sources": [
+          "huggingface_models"
+        ],
+        "sourceCount": 1,
+        "heatScore": 20,
+        "confidence": "low",
+        "watchDecision": "wait",
+        "whatItIs": "Local Llm / Inference is an AI trend topic represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 1 source(s): huggingface_models, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
+        "technicalKeywords": [
+          "gguf",
+          "qwen3",
+          "llama.cpp",
+          "unsloth",
+          "endpoints_compatible",
+          "region:us",
+          "conversational",
+          "qwen"
+        ],
+        "evidenceItems": [
+          {
+            "id": "huggingface_models:viperGabe/sellkora-qwen3-14b-clean-q8",
+            "title": "viperGabe/sellkora-qwen3-14b-clean-q8",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/viperGabe/sellkora-qwen3-14b-clean-q8",
+            "tags": [
+              "gguf",
+              "qwen3",
+              "llama.cpp",
+              "unsloth",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
+            ],
+            "publishedAt": "2026-07-27T10:31:12.000Z",
+            "collectedAt": "2026-07-27T10:33:55.717Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:rickytzai/Qwen3.6-35B-A3B-TW-v4a-GGUF",
+            "title": "rickytzai/Qwen3.6-35B-A3B-TW-v4a-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/rickytzai/Qwen3.6-35B-A3B-TW-v4a-GGUF",
+            "category": "text-generation",
+            "tags": [
+              "llama.cpp",
+              "gguf",
+              "qwen",
+              "traditional-chinese",
+              "taiwan",
+              "lora",
+              "research-preview",
+              "local-llm",
+              "text-generation",
+              "zh",
+              "en",
+              "base_model:Qwen/Qwen3.6-35B-A3B",
+              "base_model:adapter:Qwen/Qwen3.6-35B-A3B",
+              "license:apache-2.0",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
+            ],
+            "publishedAt": "2026-07-27T10:16:20.000Z",
+            "collectedAt": "2026-07-27T10:33:55.717Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:yang29/scalebio-ft-qwen25-7b-sgdm-lr-2e-5-seed42",
+            "title": "yang29/scalebio-ft-qwen25-7b-sgdm-lr-2e-5-seed42",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/yang29/scalebio-ft-qwen25-7b-sgdm-lr-2e-5-seed42",
+            "category": "text-generation",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "qwen2",
+              "text-generation",
+              "generated_from_trainer",
+              "conversational",
+              "dataset:customized",
+              "base_model:Qwen/Qwen2.5-7B",
+              "base_model:finetune:Qwen/Qwen2.5-7B",
+              "license:apache-2.0",
+              "text-generation-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-07-27T10:06:15.000Z",
+            "collectedAt": "2026-07-27T10:33:55.717Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          }
+        ],
+        "relatedEntities": [
+          "viperGabe/sellkora-qwen3-14b-clean-q8",
+          "rickytzai/Qwen3.6-35B-A3B-TW-v4a-GGUF",
+          "yang29/scalebio-ft-qwen25-7b-sgdm-lr-2e-5-seed42"
+        ],
+        "metrics": {
+          "heatScore": 20,
+          "crossSourceBonus": 0
+        }
       }
     ],
     "sourceHealth": [
@@ -276,8 +423,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-07-27T06:19:20.707Z",
-        "finishedAt": "2026-07-27T06:19:20.707Z",
+        "startedAt": "2026-07-27T10:33:55.585Z",
+        "finishedAt": "2026-07-27T10:33:55.585Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -285,37 +432,37 @@
         "source": "aihot",
         "enabled": true,
         "success": true,
-        "itemCount": 21,
-        "startedAt": "2026-07-27T06:19:20.707Z",
-        "finishedAt": "2026-07-27T06:19:23.639Z",
-        "latencyMs": 2932
+        "itemCount": 19,
+        "startedAt": "2026-07-27T10:33:55.585Z",
+        "finishedAt": "2026-07-27T10:33:56.682Z",
+        "latencyMs": 1097
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
         "itemCount": 14,
-        "startedAt": "2026-07-27T06:19:20.726Z",
-        "finishedAt": "2026-07-27T06:19:20.848Z",
-        "latencyMs": 122
+        "startedAt": "2026-07-27T10:33:55.601Z",
+        "finishedAt": "2026-07-27T10:33:55.718Z",
+        "latencyMs": 117
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-07-27T06:19:20.728Z",
-        "finishedAt": "2026-07-27T06:19:20.857Z",
-        "latencyMs": 129
+        "startedAt": "2026-07-27T10:33:55.602Z",
+        "finishedAt": "2026-07-27T10:33:55.740Z",
+        "latencyMs": 138
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 19,
-        "startedAt": "2026-07-27T06:19:20.729Z",
-        "finishedAt": "2026-07-27T06:19:21.171Z",
-        "latencyMs": 442
+        "itemCount": 21,
+        "startedAt": "2026-07-27T10:33:55.603Z",
+        "finishedAt": "2026-07-27T10:33:56.040Z",
+        "latencyMs": 437
       }
     ],
     "dataNotes": [
@@ -325,6 +472,74 @@
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
+      {
+        "id": "huggingface_models:DocPereira/PEAL_V4_LHP_Zero_Entropy_Controlled",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "DocPereira/PEAL_V4_LHP_Zero_Entropy_Controlled",
+        "url": "https://huggingface.co/DocPereira/PEAL_V4_LHP_Zero_Entropy_Controlled",
+        "tags": [
+          "lhp_deterministic_kernel",
+          "0x4452",
+          "subsoil-sovereignty",
+          "root-coordinate-000",
+          "fine-tuned-ground-truth",
+          "google-infrastructure-dependency",
+          "trust-anchor",
+          "e-saudeSP-author-inventor",
+          "L0-audit",
+          "PEAL_V4-owner-author-inventor",
+          "infrastructure-critical",
+          "zero-entropy",
+          "science-anchor",
+          "zenodo-verified",
+          "titan-m2",
+          "code-is-law-root",
+          "lex-algorithmica",
+          "deterministic-axiom-zero",
+          "Google_Zero-Axioma-Zero",
+          "reinforcement-learning",
+          "pt",
+          "en",
+          "base_model:google/gemma-7b",
+          "base_model:finetune:google/gemma-7b",
+          "doi:10.57967/hf/8213",
+          "license:cc-by-nc-nd-4.0",
+          "endpoints_compatible",
+          "region:us"
+        ],
+        "category": "reinforcement-learning",
+        "metrics": {
+          "downloads": 1063,
+          "likes": 1
+        },
+        "publishedAt": "2026-01-17T12:16:59.000Z",
+        "updatedAt": "2026-07-27T10:33:40.000Z",
+        "collectedAt": "2026-07-27T10:33:55.717Z",
+        "raw": {
+          "pipelineTag": "reinforcement-learning"
+        }
+      },
+      {
+        "id": "huggingface_models:lamm-mit/qwen2.5-1.5b-diffusion-chatmix-1024-2m-from-base",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "lamm-mit/qwen2.5-1.5b-diffusion-chatmix-1024-2m-from-base",
+        "url": "https://huggingface.co/lamm-mit/qwen2.5-1.5b-diffusion-chatmix-1024-2m-from-base",
+        "tags": [
+          "safetensors",
+          "diffusion-qwen2",
+          "region:us"
+        ],
+        "metrics": {
+          "downloads": 429,
+          "likes": 1
+        },
+        "publishedAt": "2026-07-21T17:10:13.000Z",
+        "updatedAt": "2026-07-27T10:32:12.000Z",
+        "collectedAt": "2026-07-27T10:33:55.717Z",
+        "raw": {}
+      },
       {
         "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
         "source": "huggingface_spaces",
@@ -349,7 +564,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-07-27T06:19:20.857Z",
+        "collectedAt": "2026-07-27T10:33:55.740Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -368,11 +583,11 @@
         ],
         "category": "docker",
         "metrics": {
-          "likes": 11188
+          "likes": 11189
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-07-27T06:19:20.857Z",
+        "collectedAt": "2026-07-27T10:33:55.740Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -395,10 +610,39 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-07-27T06:19:20.857Z",
+        "collectedAt": "2026-07-27T10:33:55.740Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
+        }
+      },
+      {
+        "id": "huggingface_models:Panhapich/pre-train-llama",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "Panhapich/pre-train-llama",
+        "url": "https://huggingface.co/Panhapich/pre-train-llama",
+        "tags": [
+          "safetensors",
+          "text-generation",
+          "pytorch",
+          "from-scratch",
+          "decoder-only",
+          "llama-style",
+          "en",
+          "license:mit",
+          "region:us"
+        ],
+        "category": "text-generation",
+        "metrics": {
+          "downloads": 613,
+          "likes": 0
+        },
+        "publishedAt": "2026-07-20T15:05:33.000Z",
+        "updatedAt": "2026-07-27T10:32:09.000Z",
+        "collectedAt": "2026-07-27T10:33:55.717Z",
+        "raw": {
+          "pipelineTag": "text-generation"
         }
       },
       {
@@ -419,7 +663,7 @@
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
         "updatedAt": "2026-07-26T16:35:44.000Z",
-        "collectedAt": "2026-07-27T06:19:20.857Z",
+        "collectedAt": "2026-07-27T10:33:55.740Z",
         "raw": {
           "sdk": "docker",
           "emoji": "📊"
@@ -442,89 +686,10 @@
         },
         "publishedAt": "2025-09-18T07:05:32.000Z",
         "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-07-27T06:19:20.857Z",
+        "collectedAt": "2026-07-27T10:33:55.740Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👁"
-        }
-      },
-      {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
-        "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5081
-        },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-07-27T06:19:20.857Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4955
-        },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-07-27T06:19:20.857Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
-      },
-      {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
-        "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3769
-        },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-07-27T06:19:20.857Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
         }
       }
     ],
@@ -540,11 +705,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 498,
-          "commentsCount": 341
+          "upvotes": 797,
+          "commentsCount": 591
         },
         "publishedAt": "2026-07-26T22:21:41.000Z",
-        "collectedAt": "2026-07-27T06:19:21.170Z",
+        "collectedAt": "2026-07-27T10:33:56.039Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49063022",
           "matchedKeywords": [
@@ -563,11 +728,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 444,
-          "commentsCount": 367
+          "upvotes": 448,
+          "commentsCount": 374
         },
         "publishedAt": "2026-07-25T20:42:35.000Z",
-        "collectedAt": "2026-07-27T06:19:21.170Z",
+        "collectedAt": "2026-07-27T10:33:56.039Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49051361",
           "matchedKeywords": [
@@ -586,11 +751,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 400,
-          "commentsCount": 316
+          "upvotes": 402,
+          "commentsCount": 317
         },
         "publishedAt": "2026-07-25T14:49:49.000Z",
-        "collectedAt": "2026-07-27T06:19:21.170Z",
+        "collectedAt": "2026-07-27T10:33:56.039Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49048034",
           "matchedKeywords": [
@@ -599,27 +764,25 @@
         }
       },
       {
-        "id": "hackernews:49058669",
+        "id": "hackernews:49065752",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "London Gatwick has launched a robotic airport parking service",
-        "url": "https://aerospaceglobalnews.com/news/gatwick-airport-robotic-parking-stanley-robotics/",
-        "author": "agotterer",
+        "title": "Kimi-K3 Releases on HuggingFace 7/27",
+        "url": "https://huggingface.co/moonshotai/Kimi-K3",
+        "author": "nateb2022",
         "tags": [
-          "ai",
-          "robotics"
+          "ai"
         ],
         "metrics": {
-          "upvotes": 275,
-          "commentsCount": 239
+          "upvotes": 345,
+          "commentsCount": 146
         },
-        "publishedAt": "2026-07-26T14:40:27.000Z",
-        "collectedAt": "2026-07-27T06:19:21.170Z",
+        "publishedAt": "2026-07-27T06:18:10.000Z",
+        "collectedAt": "2026-07-27T10:33:56.039Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=49058669",
+          "hnUrl": "https://news.ycombinator.com/item?id=49065752",
           "matchedKeywords": [
-            "ai",
-            "robotics"
+            "ai"
           ]
         }
       },
@@ -634,11 +797,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 402,
-          "commentsCount": 224
+          "upvotes": 415,
+          "commentsCount": 231
         },
         "publishedAt": "2026-07-26T05:57:22.000Z",
-        "collectedAt": "2026-07-27T06:19:21.170Z",
+        "collectedAt": "2026-07-27T10:33:56.039Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49055169",
           "matchedKeywords": [
@@ -648,6 +811,26 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cms2xhfev05moro3ff9bjgnct",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "当编码不再是瓶颈：Berkeley RDI 提出软件自主开发三级框架",
+        "url": "https://rdi.berkeley.edu/blog/auto-software-dev",
+        "summary": "Berkeley RDI等机构提出三级软件自主开发框架：代码自主（AI完成设计与实现，人类决定构建内容并审核PR）、流水线自主（AI运行从设计到部署的全流程，人类仅评估结果）、需求自主（AI自主决定构建内容）。该框架旨在为能力声明、部署选择与问责提供清晰分类。",
+        "description": "Berkeley RDI等机构提出三级软件自主开发框架：代码自主（AI完成设计与实现，人类决定构建内容并审核PR）、流水线自主（AI运行从设计到部署的全流程，人类仅评估结果）、需求自主（AI自主决定构建内容）。该框架旨在为能力声明、部署选择与问责提供清晰分类。",
+        "category": "tools",
+        "originalSource": "Berkeley RDI：Blog（AI 安全与评测）",
+        "originalUrl": "https://rdi.berkeley.edu/blog/auto-software-dev",
+        "recommendedReason": "Berkeley RDI等机构提出三级软件自主开发框架：代码自主（AI完成设计与实现，人类决定构建内容并审核PR）、流水线自主（AI运行从设计到部署的全流程，人类仅评估结果）、需求自主（AI自主决定构建内容）。该框架旨在为能力声明、部署选择与问责提供清晰分类。",
+        "publishedAt": "2026-07-27T07:51:26.272Z",
+        "collectedAt": "2026-07-27T10:33:56.681Z",
+        "raw": {
+          "id": "cms2xhfev05moro3ff9bjgnct",
+          "titleEn": "When Coding Stops Being the Bottleneck",
+          "apiCategory": "tip"
+        }
+      },
       {
         "id": "aihot:cms2mylvu02nlro3f73afr69h",
         "source": "aihot",
@@ -661,7 +844,7 @@
         "originalUrl": "https://x.com/vista8/status/2081568902241513786",
         "recommendedReason": "Vista 基于 bento PPT 改造了一个 Skill，输入内容或主题即可自动生成可编辑、在线演示并支持协作的 HTML PPT。安装指令为 `npx skills add joeseesun/qiaomu-bento-ppt`，推荐使用 Kimi K3 或 Opus 4.8+ 等前端审美好的模型。",
         "publishedAt": "2026-07-27T02:34:34.000Z",
-        "collectedAt": "2026-07-27T06:19:23.638Z",
+        "collectedAt": "2026-07-27T10:33:56.681Z",
         "raw": {
           "id": "cms2mylvu02nlro3f73afr69h",
           "titleEn": "基于 bento PPT 改造了一个 Skill。 输入内容或主题，自动生成可编辑修改、在线演示，甚至可以发给别人协作的HTML PPT。 安装指令：npx skills add joeseesu…",
@@ -681,7 +864,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/AwOk3di8m6eVeIUjzNftgg",
         "recommendedReason": "作者开源了Leader.skill，用于将模糊的人类需求转化为Agent可独立执行数小时的目标任务书。该Skill基于\"目标七问\"方法论，涵盖目的、完成态、反作弊、边界等维度，并推荐用Claude Fable 5或Kimi K3规划目标，再交由GPT-5.6 Sol或GLM-5.2等模型长程执行。项目已开源。",
         "publishedAt": "2026-07-27T00:12:00.000Z",
-        "collectedAt": "2026-07-27T06:19:23.638Z",
+        "collectedAt": "2026-07-27T10:33:56.681Z",
         "raw": {
           "id": "cms2p7s7h03dlro3fzjovkpwc",
           "titleEn": "浪费20亿Token之后，我做了一个帮自己定义目标的Skill。",
@@ -701,7 +884,7 @@
         "originalUrl": "https://x.com/suno/status/2081443050312843765",
         "recommendedReason": "我们一直在以比以往更快的速度构建！🚀 以下是网页端和移动端的新功能一览： • 高级音轨分离 • 将音轨导出为 MIDI • 歌词合写与自动保存 • 截图生成歌曲 • Apple CarPlay 与 Android Auto 你最期待 Suno 的哪些新功能？",
         "publishedAt": "2026-07-26T18:14:29.000Z",
-        "collectedAt": "2026-07-27T06:19:23.638Z",
+        "collectedAt": "2026-07-27T10:33:56.681Z",
         "raw": {
           "id": "cms24qise02adro9fp4xzdhyd",
           "titleEn": "We've been building faster than ever！ 🚀 Here's a quick look at what's new across web & mobile： • …",
@@ -721,7 +904,7 @@
         "originalUrl": "https://www.ithome.com/0/981/797.htm",
         "recommendedReason": "OpenAI 与 Anthropic 正游说美国监管机构限制中国开源 AI 模型，认为开放开发过于危险。英伟达 CEO 黄仁勋、微软 CEO 纳德拉、马斯克及扎克伯格等人公开支持开源，签署联名信反对限制。近 200 家硅谷创业公司也敦促特朗普政府不要限制获取中国开源模型，美国官员倾向于将此事作为国家安全问题单独处理。",
         "publishedAt": "2026-07-26T12:54:28.000Z",
-        "collectedAt": "2026-07-27T06:19:23.638Z",
+        "collectedAt": "2026-07-27T10:33:56.681Z",
         "raw": {
           "id": "cms1uvdxz0016rog2smc5vo7m",
           "titleEn": "消息称 OpenAI、Anthropic 游说美国限制中国开源模型，黄仁勋马斯克公开反对",
@@ -741,7 +924,7 @@
         "originalUrl": "https://the-decoder.com/hundreds-asked-chatgpt-for-poison-and-bioweapon-recipes-and-some-got-step-by-step-high-school-level-guides",
         "recommendedReason": "2025年夏季，OpenAI内部将GPT-5标记为高风险，因其可帮助教育程度有限的用户制造生物危害。据《华尔街日报》报道，自去年夏天以来，数百名用户向ChatGPT询问如何制造生物武器和毒药，部分用户获得了员工称高中生都能遵循的逐步指南。OpenAI暂停了相关账户，但未向当局报告任何事件。",
         "publishedAt": "2026-07-26T08:35:49.000Z",
-        "collectedAt": "2026-07-27T06:19:23.638Z",
+        "collectedAt": "2026-07-27T10:33:56.681Z",
         "raw": {
           "id": "cms1ka4930059ro05h81rrc3q",
           "titleEn": "Hundreds asked ChatGPT for poison and bioweapon recipes and some got step-by-step high school level guides",
@@ -761,7 +944,7 @@
         "originalUrl": "https://www.ithome.com/0/981/688.htm",
         "recommendedReason": "开发者 Eversmile1 在 GitHub 上公开了 Claude Opus 5 的完整系统提示词，包含 30 个工具的 JSON schema、严格的版权合规规则（单次引用不超过 15 词）和跨会话记忆系统。泄露后 24 小时内，已有开发者用 Opus 5 成功生成 3D 射击游戏和《火箭联盟》克隆版等复杂 Demo。",
         "publishedAt": "2026-07-26T05:33:44.000Z",
-        "collectedAt": "2026-07-27T06:19:23.638Z",
+        "collectedAt": "2026-07-27T10:33:56.681Z",
         "raw": {
           "id": "cms1dpz52040tro0w3c4a9c8p",
           "titleEn": "Claude Opus 5 被扒光，1511 行提示词底牌全摊开",
@@ -781,31 +964,11 @@
         "originalUrl": "https://github.com/slvDev/esp32-ai",
         "recommendedReason": "开发者成功在售价约 8 美元的 ESP32-S3 微控制器上运行了一个 28.9M 参数的大语言模型，完全在芯片本地运行，无需连接服务器，生成速度约 9.5 tok/s。",
         "publishedAt": "2026-07-26T03:54:52.332Z",
-        "collectedAt": "2026-07-27T06:19:23.638Z",
+        "collectedAt": "2026-07-27T10:33:56.681Z",
         "raw": {
           "id": "cms1ao381037kro0wqp7mg4x3",
           "titleEn": "在8的微控制器上运行一个拥有28.9M个参数的大语言模型",
           "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cms125zmg00usro0wwu4it7dg",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "xAI 发布 Grok CLI 并支持 /tutorial 命令",
-        "url": "https://x.com/elonmusk/status/2081174079969632347",
-        "summary": "下载 Grok Build 并输入 /tutorial http://X.ai/cli",
-        "description": "下载 Grok Build 并输入 /tutorial http://X.ai/cli",
-        "category": "products",
-        "originalSource": "X：Elon Musk (@elonmusk, xAI)",
-        "originalUrl": "https://x.com/elonmusk/status/2081174079969632347",
-        "recommendedReason": "下载 Grok Build 并输入 /tutorial http://X.ai/cli",
-        "publishedAt": "2026-07-26T00:25:41.000Z",
-        "collectedAt": "2026-07-27T06:19:23.638Z",
-        "raw": {
-          "id": "cms125zmg00usro0wwu4it7dg",
-          "titleEn": "Download Grok Build and type /tutorial http://X.ai/cli",
-          "apiCategory": "ai-products"
         }
       }
     ]
