@@ -1,207 +1,211 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-28T14:47:25.857Z",
+  "generatedAt": "2026-07-28T15:59:25.491Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2607.24743v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "ClinFusion: A Vision-Centric Multimodal LLM System for Holistic Medical Understanding",
-        "url": "https://arxiv.org/pdf/2607.24743v1",
-        "description": "Multimodal large language models (MLLMs) hold immense potential to revolutionize clinical practice, yet deploying them in the medical domain is fundamentally a vision-centric challenge: models must absorb knowledge from heterogeneous 2D and 3D medical images, and evaluation protocols must align with radiologists' clinical practice and provide an accurate, fine-grained and factualness-driven assessment. In this paper, we introduce ClinFusion, a vision-centric MLLM designed for holistic medical un",
-        "summary": "Multimodal large language models (MLLMs) hold immense potential to revolutionize clinical practice, yet deploying them in the medical domain is fundamentally a vision-centric challenge: models must absorb knowledge from heterogeneous 2D and 3D medical images, and evaluation protocols must align with radiologists' clinical practice and provide an accurate, fine-grained and factualness-driven assessment. In this paper, we introduce ClinFusion, a vision-centric MLLM designed for holistic medical understanding that systematically addresses these limitations. We propose a compositional and cascaded vision encoder architecture featuring a Cascade Spatial-Aware Locality Fusion operator that unifies diverse 2D and native 3D medical image understanding within a fused encoder. We further introduce a vision-grounded evaluation framework, including MedIF-Bench for instruction-following assessment and a region-of-interest-grounded method for clinically aligned and factualness-driven report generation evaluation. We show that ClinFusion sets a new state-of-the-art across a comprehensive suite of 2D and 3D multimodal medical benchmarks---spanning visual question answering, report generation, and instruction following---as well as textual medical tasks, outperforming leading open-source medical MLLMs (\\textit{e.g.}, Hulu-Med, Lingshu) on 20 out of 24 benchmarks and demonstrating multimodal capabilities better than powerful proprietary models such as GPT-5.2 and Gemini-3-Flash on 13 out of 16 benchmarks, and can be further augmented with agentic tool use for retrieval-augmented and tool-assisted clinical workflows. A blinded evaluation by board-certified radiologists confirms that ClinFusion produces the highest-ranked reports, and validates our RoI-grounded metric as achieving the strongest correlation with expert judgment among all automatic evaluation metrics examined.",
-        "author": "Hangjie Yuan, Yichen Qian, Zhiwei Tang, Xianzhe Xu, Lirong Wu, Sicheng Yang, Jinwang Wang, Pengju Wang, Zhitao Zeng, Yizeng Han, Yan Xing, Shengxuan Luo, Tao Feng, Qing Xie, Weigen Yao, Yi Yang, Zuozhu Liu, Jiasheng Tang, Shaocheng Wang, Jitao Wang, Jiahong Dong, Weihua Chen, Feng Xu, Fan Wang",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.CV",
-          "cs.AI",
-          "cs.CL",
-          "large language model",
-          "llm",
-          "agent",
-          "retrieval-augmented",
-          "tool use",
-          "benchmark",
-          "evaluation",
-          "agentic",
-          "workflow"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-07-27T17:59:49Z",
-        "updatedAt": "2026-07-27T17:59:49Z",
-        "collectedAt": "2026-07-28T14:47:13.854Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.24743v1",
-          "authors": [
-            "Hangjie Yuan",
-            "Yichen Qian",
-            "Zhiwei Tang",
-            "Xianzhe Xu",
-            "Lirong Wu",
-            "Sicheng Yang",
-            "Jinwang Wang",
-            "Pengju Wang",
-            "Zhitao Zeng",
-            "Yizeng Han",
-            "Yan Xing",
-            "Shengxuan Luo",
-            "Tao Feng",
-            "Qing Xie",
-            "Weigen Yao",
-            "Yi Yang",
-            "Zuozhu Liu",
-            "Jiasheng Tang",
-            "Shaocheng Wang",
-            "Jitao Wang",
-            "Jiahong Dong",
-            "Weihua Chen",
-            "Feng Xu",
-            "Fan Wang"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14061
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, agent, retrieval-augmented, tool use"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-07-28T15:59:25.636Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.24730v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "KANEx: Translating Kolmogorov-Arnold Networks' Interpretability to Medical Explainability",
-        "url": "https://arxiv.org/pdf/2607.24730v1",
-        "description": "Computer vision models have become highly effective for medical applications, yet their black-box nature continues to undermine clinician trust. In clinical workflows, chest X-ray classifiers are increasingly paired with Vision-Language Models (VLMs) to generate natural-language explanations. However, these systems add linguistic fluency without addressing the underlying opacity of the visual model. With the emergence of Kolmogorov-Arnold Networks (KANs), whose spline-based components provide in",
-        "summary": "Computer vision models have become highly effective for medical applications, yet their black-box nature continues to undermine clinician trust. In clinical workflows, chest X-ray classifiers are increasingly paired with Vision-Language Models (VLMs) to generate natural-language explanations. However, these systems add linguistic fluency without addressing the underlying opacity of the visual model. With the emergence of Kolmogorov-Arnold Networks (KANs), whose spline-based components provide inherently interpretable functional units, we investigate whether this architectural transparency can be leveraged to produce more trustworthy textual explanations. We introduce KANEx, the first ever framework that leverages the symbolic transparency of KANs to ground VLM reasoning. This interpretability also made it possible to design KAN-Map, a novel heatmap generation method derived directly from KAN models rather than gradient approximations. We feed these grounded contexts into downstream VLMs for enhanced explainability. Benchmarked on the MIMIC-CXR dataset, we demonstrate that KAN-based architectures with ResNet/ViT baselines demonstrate improved semantic similarity while producing significantly more faithful saliency maps. KAN architectures improve visual localization and downstream reasoning quality by 10%. Our findings suggest that grounding linguistic explanations and visual attributions in mathematically interpretable units is a necessary step toward trustworthy medical AI.",
-        "author": "Krithi Shailya, Ananya Lakshmi Ravi, Venkatanathan K. V., Sowmya S. Sundaram, Gokul S. Krishnan, Aditi Anand, Balaraman Ravindran",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.CV",
-          "cs.AI",
-          "rag",
-          "benchmark",
-          "workflow"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-07-27T17:57:02Z",
-        "updatedAt": "2026-07-27T17:57:02Z",
-        "collectedAt": "2026-07-28T14:47:13.854Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.24730v1",
-          "authors": [
-            "Krithi Shailya",
-            "Ananya Lakshmi Ravi",
-            "Venkatanathan K. V.",
-            "Sowmya S. Sundaram",
-            "Gokul S. Krishnan",
-            "Aditi Anand",
-            "Balaraman Ravindran"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11190
         },
-        "recommendedReason": "Matched AI developer keywords: rag, benchmark, workflow"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-07-28T15:59:25.636Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.24720v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "The Physics of Multi-Turn Long-Horizon Planning: From Pre-training to Post-training via Single- and Multi-Teacher On-Policy Agentic Distillation",
-        "url": "https://arxiv.org/pdf/2607.24720v1",
-        "description": "Multi-turn long-horizon planning is critical for foundation model agents, yet how to fundamentally improve it remains unclear. Existing models are trained on uncontrollable and opaque Internet data, making it difficult to identify how planning ability is acquired, shaped, and integrated. To address this challenge, we introduce a unified and controlled multi-turn environment that enables precise control. It allows systematically study long-horizon planning across three stages. (1) Planning abilit",
-        "summary": "Multi-turn long-horizon planning is critical for foundation model agents, yet how to fundamentally improve it remains unclear. Existing models are trained on uncontrollable and opaque Internet data, making it difficult to identify how planning ability is acquired, shaped, and integrated. To address this challenge, we introduce a unified and controlled multi-turn environment that enables precise control. It allows systematically study long-horizon planning across three stages. (1) Planning ability acquisition during pre-training. We study data format, distribution, and quality. Explicit world model construction through CoT state transition modeling yields stronger long-horizon generalization. Atomic skills alone are insufficient for compositional generalization, whereas a litte long-horizon data works. Moreover, suboptimal trajectories severely impair performance because errors amplify over long horizons. (2) Planning ability shaping via GRPO and OPD post-training. Through mutual information, we distinguish general planning patterns from task-specific planning knowledge. For planning patterns, we identify three application regions of post-training: unnecessary, effective, and unsupported. OPD has a broader effective region than GRPO under low-quality and long-horizon settings, as it provides more consistent update directions. For planning knowledge, distilling unseen procedures from a teacher with different knowledge may impair student's prior world modeling without fully establishing new knowledge. (3) Planning ability integration through MOPD post-training. We show that multi-teacher on-policy distillation (MOPD) integrates capabilities by converging to shared planning-pattern across environments. Compatible patterns enable cross-environment generalization, partially shared patterns support continual learning, while completely conflicting patterns cause severe interference.",
-        "author": "Tianyi Men, Zhuoran Jin, Kang Liu, Jun Zhao",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.CL",
-          "cs.AI",
-          "cs.LG",
-          "agent",
-          "agentic"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-07-27T17:55:03Z",
-        "updatedAt": "2026-07-27T17:55:03Z",
-        "collectedAt": "2026-07-28T14:47:13.854Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.24720v1",
-          "authors": [
-            "Tianyi Men",
-            "Zhuoran Jin",
-            "Kang Liu",
-            "Jun Zhao"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10145
         },
-        "recommendedReason": "Matched AI developer keywords: agent, agentic"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-07-28T15:59:25.636Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.24717v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "DataOrchestra: Learning to Orchestrate Per-Example Curation of Pretraining Data",
-        "url": "https://arxiv.org/pdf/2607.24717v1",
-        "description": "Pretraining data processing is critical to the downstream performance of Large Language Models (LLMs). However, many existing approaches define a fixed processing strategy at the corpus or domain level and apply it uniformly to many examples, without adapting to the needs of each example. We propose DataOrchestra, a framework that unifies different processing operations and orchestrates an example-specific pipeline for each example. Given a chunk of pretraining data, an orchestrator decides whet",
-        "summary": "Pretraining data processing is critical to the downstream performance of Large Language Models (LLMs). However, many existing approaches define a fixed processing strategy at the corpus or domain level and apply it uniformly to many examples, without adapting to the needs of each example. We propose DataOrchestra, a framework that unifies different processing operations and orchestrates an example-specific pipeline for each example. Given a chunk of pretraining data, an orchestrator decides whether to drop, untouch, or clean it. For a chunk to be cleaned, it selects one or more downstream operations, ranging from programmatic editing to different forms of LLM-based rewriting. For each rewriting step, it further generates a concrete instruction, which is executed by the corresponding downstream tool model. We pretrain models from 0.5B to 7B from scratch on web data processed by DataOrchestra and observe stable average gains over individual data-processing methods across 11 benchmarks. DataOrchestra is also effective for math continued pretraining and outperforms stronger processing baselines, while reducing processing compute by skipping unnecessary downstream operations.",
-        "author": "Zhen Huang, Yikun Wang, Shijie Xia, Pengfei Liu",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "cs.CL",
-          "cs.AI",
-          "large language model",
-          "llm",
-          "rag",
-          "benchmark"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-07-27T17:54:12Z",
-        "updatedAt": "2026-07-27T17:54:12Z",
-        "collectedAt": "2026-07-28T14:47:13.854Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.24717v1",
-          "authors": [
-            "Zhen Huang",
-            "Yikun Wang",
-            "Shijie Xia",
-            "Pengfei Liu"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7592
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, rag, benchmark"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-07-27T11:07:19.000Z",
+        "collectedAt": "2026-07-28T15:59:25.636Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.24714v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Efficient LLM-Generated Shuttling Compilers for Complex Trapped-Ion Architectures",
-        "url": "https://arxiv.org/pdf/2607.24714v1",
-        "description": "Trapped-ion quantum computers rely on shuttling compilers, which cast an input algorithm into a sequence of ion-qubit movements within a given architecture. We present the first study in which a single frontier large language model (LLM), Claude Opus 4.7, generates and iteratively refines the full Python code of shuttling compilers from written specifications. We start with a compiler for (i) a linear segmented trap, extend it to (ii) a trap with junctions, and finally achieve efficient compilat",
-        "summary": "Trapped-ion quantum computers rely on shuttling compilers, which cast an input algorithm into a sequence of ion-qubit movements within a given architecture. We present the first study in which a single frontier large language model (LLM), Claude Opus 4.7, generates and iteratively refines the full Python code of shuttling compilers from written specifications. We start with a compiler for (i) a linear segmented trap, extend it to (ii) a trap with junctions, and finally achieve efficient compilation for (iii) a broad class of connected trap graphs. The compilers for the more general cases are seeded with code from the previous ones. We benchmark the LLM-generated compilers against state-of-the-art hand-crafted ones using a common suite of quantum circuits. The number of shuttling timesteps is reduced by up to 76% for (i) and up to 39% for (ii). For the broad case (iii) of freely connected architectures, we find large variations in the required number of shuttling timesteps, depending on the connectivity. A densely connected, junction-rich architecture yields an order-of-magnitude reduction in shuttling timesteps compared to a corridor-like one. Repeating the complete generation and evaluation with a second frontier LLM, Claude Fable 5, reproduces these findings, with the Fable 5 compilers surpassing the hand-crafted ones more often on the largest circuits. Our results show that an unmodified frontier LLM can produce working, correct, and competitive shuttling compilers without additional manual algorithmic engineering, thus reducing the development time for new architectures from several months to a few days.",
-        "author": "Fabian Kreppel, Reza Salkhordeh, Ferdinand Schmidt-Kaler, André Brinkmann",
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
         "tags": [
-          "quant-ph",
-          "cs.AI",
-          "cs.ET",
-          "large language model",
-          "llm",
-          "benchmark",
-          "evaluation"
+          "gradio",
+          "region:us"
         ],
-        "category": "quant-ph",
-        "language": "en",
-        "publishedAt": "2026-07-27T17:51:18Z",
-        "updatedAt": "2026-07-27T17:51:18Z",
-        "collectedAt": "2026-07-28T14:47:13.854Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.24714v1",
-          "authors": [
-            "Fabian Kreppel",
-            "Reza Salkhordeh",
-            "Ferdinand Schmidt-Kaler",
-            "André Brinkmann"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 5119
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, benchmark, evaluation"
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-07-28T15:59:25.636Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5081
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-07-28T15:59:25.636Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Arena Leaderboard",
+        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
+        "author": "lmarena-ai",
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "static",
+        "metrics": {
+          "likes": 4956
+        },
+        "publishedAt": "2023-05-20T09:26:19.000Z",
+        "updatedAt": "2026-02-21T23:20:43.000Z",
+        "collectedAt": "2026-07-28T15:59:25.636Z",
+        "raw": {
+          "sdk": "static",
+          "emoji": "🏆🤖"
+        }
+      },
+      {
+        "id": "huggingface_spaces:KlingTeam/LivePortrait",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Live Portrait",
+        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
+        "author": "KlingTeam",
+        "tags": [
+          "gradio",
+          "Multimodal",
+          "Motion control",
+          "Image-to-Video",
+          "Video-to-Video",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 3769
+        },
+        "publishedAt": "2024-07-05T16:35:24.000Z",
+        "updatedAt": "2024-08-30T11:20:51.000Z",
+        "collectedAt": "2026-07-28T15:59:25.636Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🤪"
+        }
       }
     ],
     "developerBuzz": [
@@ -216,11 +220,11 @@
           "anthropic"
         ],
         "metrics": {
-          "upvotes": 1067,
-          "commentsCount": 1535
+          "upvotes": 1096,
+          "commentsCount": 1575
         },
         "publishedAt": "2026-07-27T22:03:49.000Z",
-        "collectedAt": "2026-07-28T14:47:13.696Z",
+        "collectedAt": "2026-07-28T15:59:25.812Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49076057",
           "matchedKeywords": [
@@ -243,7 +247,7 @@
           "commentsCount": 536
         },
         "publishedAt": "2026-07-27T06:18:10.000Z",
-        "collectedAt": "2026-07-28T14:47:13.696Z",
+        "collectedAt": "2026-07-28T15:59:25.812Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49065752",
           "matchedKeywords": [
@@ -262,11 +266,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1300,
-          "commentsCount": 1056
+          "upvotes": 1301,
+          "commentsCount": 1058
         },
         "publishedAt": "2026-07-26T22:21:41.000Z",
-        "collectedAt": "2026-07-28T14:47:13.696Z",
+        "collectedAt": "2026-07-28T15:59:25.812Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49063022",
           "matchedKeywords": [
@@ -286,10 +290,10 @@
         ],
         "metrics": {
           "upvotes": 772,
-          "commentsCount": 493
+          "commentsCount": 494
         },
         "publishedAt": "2026-07-27T12:32:12.000Z",
-        "collectedAt": "2026-07-28T14:47:13.696Z",
+        "collectedAt": "2026-07-28T15:59:25.812Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49068738",
           "matchedKeywords": [
@@ -308,11 +312,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 383,
-          "commentsCount": 410
+          "upvotes": 396,
+          "commentsCount": 438
         },
         "publishedAt": "2026-07-27T23:21:37.000Z",
-        "collectedAt": "2026-07-28T14:47:13.696Z",
+        "collectedAt": "2026-07-28T15:59:25.812Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49076923",
           "matchedKeywords": [
@@ -322,6 +326,26 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cms4t5zra01o1roa10b19hmbh",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Kimi Linear：一种表现力强且高效的注意力架构",
+        "url": "https://arxiv.org/abs/2510.26692",
+        "summary": "月之暗面推出 Kimi Linear，一种混合线性注意力架构，首次在短上下文、长上下文和强化学习场景下全面超越全注意力机制。其 3B 激活参数模型在所有评估任务上显著优于全 MLA，同时将 KV cache 使用量降低最多 75%，并在 1M 上下文下实现最高 6 倍解码吞吐量。月之暗面已开源 KDA 内核、vLLM 实现及模型权重。",
+        "description": "月之暗面推出 Kimi Linear，一种混合线性注意力架构，首次在短上下文、长上下文和强化学习场景下全面超越全注意力机制。其 3B 激活参数模型在所有评估任务上显著优于全 MLA，同时将 KV cache 使用量降低最多 75%，并在 1M 上下文下实现最高 6 倍解码吞吐量。月之暗面已开源 KDA 内核、vLLM 实现及模型权重。",
+        "category": "papers",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://arxiv.org/abs/2510.26692",
+        "recommendedReason": "月之暗面推出 Kimi Linear，一种混合线性注意力架构，首次在短上下文、长上下文和强化学习场景下全面超越全注意力机制。其 3B 激活参数模型在所有评估任务上显著优于全 MLA，同时将 KV cache 使用量降低最多 75%，并在 1M 上下文下实现最高 6 倍解码吞吐量。月之暗面已开源 KDA 内核、vLLM 实现及模型权重。",
+        "publishedAt": "2026-07-28T15:21:28.545Z",
+        "collectedAt": "2026-07-28T15:59:26.887Z",
+        "raw": {
+          "id": "cms4t5zra01o1roa10b19hmbh",
+          "titleEn": null,
+          "apiCategory": "paper"
+        }
+      },
       {
         "id": "aihot:cms4r3c3j012aroa17m492n76",
         "source": "aihot",
@@ -335,7 +359,7 @@
         "originalUrl": "https://x.com/perplexity_ai/status/2082103880155046176",
         "recommendedReason": "Personal Computer 现已在 Perplexity Windows 应用中可用。 Personal Computer 是面向你工作的本地智能体工具。它协调跨本地文件、已连接应用和网络的智能体。 研究、编码、浏览和构建，全部在一个统一系统中完成。",
         "publishedAt": "2026-07-28T14:00:23.000Z",
-        "collectedAt": "2026-07-28T14:47:18.713Z",
+        "collectedAt": "2026-07-28T15:59:26.887Z",
         "raw": {
           "id": "cms4r3c3j012aroa17m492n76",
           "titleEn": "Personal Computer is now available in the Perplexity app for Windows. Personal Computer is the loca…",
@@ -355,7 +379,7 @@
         "originalUrl": "https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips",
         "recommendedReason": "Google Search 的 AI Mode 新增 5 项工具，帮助用户规划线下活动。功能包括：通过 Personal Intelligence 连接 Google Calendar 推荐本地课程；在 AI Mode 内直接购物并查询附近库存；利用 Canvas 生成桌游策略指南并模拟对弈；根据预算和人数筛选并预订演唱会等门票；连接 Canva 生成邀请函设计。",
         "publishedAt": "2026-07-28T13:00:00.000Z",
-        "collectedAt": "2026-07-28T14:47:18.713Z",
+        "collectedAt": "2026-07-28T15:59:26.887Z",
         "raw": {
           "id": "cms4oxr7h00aoroa1i8kboqrk",
           "titleEn": "5 ways AI Mode in Search helps you enjoy the real world",
@@ -375,7 +399,7 @@
         "originalUrl": "https://www.marktechpost.com/2026/07/28/microsoft-ai-releases-mai-cyber-1-flash-a-5b-active-parameter-cyber-model-that-pushes-mdash-to-95-95-on-cybergym",
         "recommendedReason": "Microsoft 发布 MAI-Cyber-1-Flash，一款 137B 总参数（5B 活跃参数）、256k 上下文窗口的稀疏 MoE 网络安全模型，是 MAI-Code-1-Flash 的微调版本。",
         "publishedAt": "2026-07-28T08:33:30.000Z",
-        "collectedAt": "2026-07-28T14:47:18.713Z",
+        "collectedAt": "2026-07-28T15:59:26.887Z",
         "raw": {
           "id": "cms4fb2n603f4roeprjoopbix",
           "titleEn": "Microsoft AI Releases MAI-Cyber-1-Flash： A 5B-Active-Parameter Cyber Model That Pushes MDASH to 95.95% on CyberGym",
@@ -395,7 +419,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s/1nZqQHYqclsIF6__WLscgA",
         "recommendedReason": "火山引擎正式上线豆包搜索服务，为AI Agent提供跨语言、多模态、多垂类联网信息查询，融合全域互联网信息、行业知识与字节跳动独家内容资源。该服务从网站站点和创作者维度建立权威分级体系，过滤低质信息，在SimpleQA、FreshQA、BrowseComp-ZH等评测中表现优异。豆包搜索支持API、Skill、MCP等多种接入形态，面向企业和开发者提供每月500次免费搜索额度。",
         "publishedAt": "2026-07-28T07:51:54.000Z",
-        "collectedAt": "2026-07-28T14:47:18.713Z",
+        "collectedAt": "2026-07-28T15:59:26.887Z",
         "raw": {
           "id": "cms4himl9047broepnobhk6n2",
           "titleEn": "豆包搜索开放服务，为Agent提供实时、权威、可信的搜索能力",
@@ -415,7 +439,7 @@
         "originalUrl": "https://www.ithome.com/0/982/520.htm",
         "recommendedReason": "德里高等法院认定 OpenAI 利用亚洲国际新闻（ANI）社的内容训练人工智能不构成侵犯版权。法官 Amit Bansal 认为该行为符合印度《版权法》中研究类\"合理使用\"例外情形，且 ANI 未能证明 ChatGPT 直接复制其受版权保护内容。法院同时指出，现阶段颁布临时禁令将不利于印度正在开发的 LLM 及大量免费使用 ChatGPT 的用户。",
         "publishedAt": "2026-07-28T06:21:07.000Z",
-        "collectedAt": "2026-07-28T14:47:18.713Z",
+        "collectedAt": "2026-07-28T15:59:26.887Z",
         "raw": {
           "id": "cms4b9e8401zrroepw4fw8oka",
           "titleEn": "德里高等法院裁定 OpenAI 利用印媒 ANI 内容训练 AI 未侵犯版权",
@@ -435,7 +459,7 @@
         "originalUrl": "https://usefeyn.com/blog/feynobg",
         "recommendedReason": "Feyn Labs 推出 FeyNoBg，一个用于自动背景去除的 SOTA 模型。它在八个基准测试中的四项上取得最佳 S-measure 分数，其余四项与领先者差距在 2% 以内。该模型基于 BiRefNet 架构，参数量从 222M 扩展至 263M，同时开源了训练库 NoBg，模型和代码分别可在 Hugging Face 和 GitHub 获取。",
         "publishedAt": "2026-07-28T04:57:13.190Z",
-        "collectedAt": "2026-07-28T14:47:18.713Z",
+        "collectedAt": "2026-07-28T15:59:26.887Z",
         "raw": {
           "id": "cms47q4jj00mxroep0x4at5sf",
           "titleEn": "Show HN： FeyNoBg - 自动背景去除模型及训练库",
@@ -455,174 +479,13 @@
         "originalUrl": "https://openrouter.ai/blog/insights/evaluate-llm-provider-performance",
         "recommendedReason": "同一模型在不同提供商端点上的表现因基础设施、量化、负载处理和路由默认设置而异。评估需测量延迟、吞吐量、正常运行时间和精度，并将测量结果转化为路由策略。",
         "publishedAt": "2026-07-28T00:00:00.000Z",
-        "collectedAt": "2026-07-28T14:47:18.713Z",
+        "collectedAt": "2026-07-28T15:59:26.887Z",
         "raw": {
           "id": "cms3y2wcy03toro82ozgc5187",
           "titleEn": "How to Evaluate LLM Provider Performance Across Latency， Throughput， and Uptime",
           "apiCategory": "tip"
         }
-      },
-      {
-        "id": "aihot:cms3m8ubg001nrox37oixfg2e",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenAI 称越来越多员工用 ChatGPT 做其他岗位的工作",
-        "url": "https://the-decoder.com/openai-says-more-workers-are-using-chatgpt-to-do-other-peoples-jobs",
-        "summary": "OpenAI 分析超 80 万条与工作相关的 ChatGPT 消息后发现，43.5% 的岗位特定查询涉及另一职业，营销和工程任务交叉最多。用户用 AI 处理合同审查、数据分析、网站故障排查等原由专家负责的工作。OpenAI 认为这是岗位职责正在变化的早期信号，该趋势在缺乏专业团队的小公司尤为明显。",
-        "description": "OpenAI 分析超 80 万条与工作相关的 ChatGPT 消息后发现，43.5% 的岗位特定查询涉及另一职业，营销和工程任务交叉最多。用户用 AI 处理合同审查、数据分析、网站故障排查等原由专家负责的工作。OpenAI 认为这是岗位职责正在变化的早期信号，该趋势在缺乏专业团队的小公司尤为明显。",
-        "category": "tools",
-        "originalSource": "The Decoder：AI News（RSS）",
-        "originalUrl": "https://the-decoder.com/openai-says-more-workers-are-using-chatgpt-to-do-other-peoples-jobs",
-        "recommendedReason": "OpenAI 分析超 80 万条与工作相关的 ChatGPT 消息后发现，43.5% 的岗位特定查询涉及另一职业，营销和工程任务交叉最多。用户用 AI 处理合同审查、数据分析、网站故障排查等原由专家负责的工作。OpenAI 认为这是岗位职责正在变化的早期信号，该趋势在缺乏专业团队的小公司尤为明显。",
-        "publishedAt": "2026-07-27T19:08:51.000Z",
-        "collectedAt": "2026-07-28T14:47:18.713Z",
-        "raw": {
-          "id": "cms3m8ubg001nrox37oixfg2e",
-          "titleEn": "OpenAI says more workers are using ChatGPT to do other people's jobs",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cms3lggqj00c0roskhu1r5f09",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Kimi 发布视觉感知基准 PerceptionBench",
-        "url": "https://x.com/Kimi_Moonshot/status/2081813202514681878",
-        "summary": "Kimi.ai 发布 PerceptionBench，一个从当前前沿模型在 42 个基准上的失败模式中归纳出的视觉感知基准。该基准将视觉感知拆解为 10 种原子能力，并构建了 3000 道验证题，每道题只考察单一感知能力，无需推理或外部知识。",
-        "description": "Kimi.ai 发布 PerceptionBench，一个从当前前沿模型在 42 个基准上的失败模式中归纳出的视觉感知基准。该基准将视觉感知拆解为 10 种原子能力，并构建了 3000 道验证题，每道题只考察单一感知能力，无需推理或外部知识。",
-        "category": "products",
-        "originalSource": "X：Kimi.ai (@Kimi_Moonshot)",
-        "originalUrl": "https://x.com/Kimi_Moonshot/status/2081813202514681878",
-        "recommendedReason": "Kimi.ai 发布 PerceptionBench，一个从当前前沿模型在 42 个基准上的失败模式中归纳出的视觉感知基准。该基准将视觉感知拆解为 10 种原子能力，并构建了 3000 道验证题，每道题只考察单一感知能力，无需推理或外部知识。",
-        "publishedAt": "2026-07-27T18:45:20.000Z",
-        "collectedAt": "2026-07-28T14:47:18.713Z",
-        "raw": {
-          "id": "cms3lggqj00c0roskhu1r5f09",
-          "titleEn": "We are releasing PerceptionBench， a benchmark that isolates visual perception and evaluates it as a …",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cms3k7su000n8roiytkztsme7",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "用Claude和Python构建技能驱动的金融分析智能体",
-        "url": "https://www.marktechpost.com/2026/07/27/designing-skill-driven-financial-analysis-agents-with-claude-python-mcp-connectors-and-automated-deliverables",
-        "summary": "本教程基于Anthropic的financial-services仓库，用纯Python复现其技能驱动架构。通过解析SKILL.md文件构建可搜索技能注册表，并创建可复用SkillAgent，将金融分析剧本注入Anthropic Messages API，支持迭代工具调用循环。",
-        "description": "本教程基于Anthropic的financial-services仓库，用纯Python复现其技能驱动架构。通过解析SKILL.md文件构建可搜索技能注册表，并创建可复用SkillAgent，将金融分析剧本注入Anthropic Messages API，支持迭代工具调用循环。",
-        "category": "tools",
-        "originalSource": "MarkTechPost（RSS）",
-        "originalUrl": "https://www.marktechpost.com/2026/07/27/designing-skill-driven-financial-analysis-agents-with-claude-python-mcp-connectors-and-automated-deliverables",
-        "recommendedReason": "本教程基于Anthropic的financial-services仓库，用纯Python复现其技能驱动架构。通过解析SKILL.md文件构建可搜索技能注册表，并创建可复用SkillAgent，将金融分析剧本注入Anthropic Messages API，支持迭代工具调用循环。",
-        "publishedAt": "2026-07-27T18:08:24.000Z",
-        "collectedAt": "2026-07-28T14:47:18.713Z",
-        "raw": {
-          "id": "cms3k7su000n8roiytkztsme7",
-          "titleEn": "Designing Skill-Driven Financial Analysis Agents with Claude， Python， MCP Connectors， and Automated Deliverables",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cms3n5wpl001sro82iax01xu3",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "GitHub Copilot 发布\"Harness\"工作流：用单一工具完成原型、规划、实现与代码审查",
-        "url": "https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly",
-        "summary": "GitHub Copilot 推出\"Harness\"工作流，让开发者通过单一 AI 工具完成从原型设计、规划、实现到代码审查的完整软件开发流程，无需追逐多种新 AI 工具。该工作流强调实用性与集成性，旨在减少工具切换带来的效率损耗。",
-        "description": "GitHub Copilot 推出\"Harness\"工作流，让开发者通过单一 AI 工具完成从原型设计、规划、实现到代码审查的完整软件开发流程，无需追逐多种新 AI 工具。该工作流强调实用性与集成性，旨在减少工具切换带来的效率损耗。",
-        "category": "tools",
-        "originalSource": "GitHub Blog",
-        "originalUrl": "https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly",
-        "recommendedReason": "GitHub Copilot 推出\"Harness\"工作流，让开发者通过单一 AI 工具完成从原型设计、规划、实现到代码审查的完整软件开发流程，无需追逐多种新 AI 工具。该工作流强调实用性与集成性，旨在减少工具切换带来的效率损耗。",
-        "publishedAt": "2026-07-27T18:00:00.000Z",
-        "collectedAt": "2026-07-28T14:47:18.713Z",
-        "raw": {
-          "id": "cms3n5wpl001sro82iax01xu3",
-          "titleEn": "The harness is all you need （mostly）",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cms3gqf3h01y1rondsl8z5sxy",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "GitHub Copilot app 入门指南：多 Agent 会话工作区与 Canvas 预览",
-        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started",
-        "summary": "GitHub Copilot app 将 AI 编码工具升级为多 Agent 会话工作区，支持同时管理多个任务线程而不丢失进度。用户可为每个会话绑定项目上下文，通过 `/create-canvas` 命令在浏览器 Canvas 中预览 UI 并直接点选修改，还能启用 Agent Merge 自动处理 PR 审查反馈和合并冲突。",
-        "description": "GitHub Copilot app 将 AI 编码工具升级为多 Agent 会话工作区，支持同时管理多个任务线程而不丢失进度。用户可为每个会话绑定项目上下文，通过 `/create-canvas` 命令在浏览器 Canvas 中预览 UI 并直接点选修改，还能启用 Agent Merge 自动处理 PR 审查反馈和合并冲突。",
-        "category": "tools",
-        "originalSource": "GitHub Blog",
-        "originalUrl": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started",
-        "recommendedReason": "GitHub Copilot app 将 AI 编码工具升级为多 Agent 会话工作区，支持同时管理多个任务线程而不丢失进度。用户可为每个会话绑定项目上下文，通过 `/create-canvas` 命令在浏览器 Canvas 中预览 UI 并直接点选修改，还能启用 Agent Merge 自动处理 PR 审查反馈和合并冲突。",
-        "publishedAt": "2026-07-27T16:00:00.000Z",
-        "collectedAt": "2026-07-28T14:47:18.713Z",
-        "raw": {
-          "id": "cms3gqf3h01y1rondsl8z5sxy",
-          "titleEn": "GitHub Copilot app for Beginners： Getting started",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cms3fuyes00mjrond2ldww2oa",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Google AI Overviews 搜索结果出现率升至43%",
-        "url": "https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows",
-        "summary": "Google AI Overviews 在搜索结果中的出现率一年内从15%升至43%，AI Mode月访问量从1.26亿增至2.79亿。用户搜索长度增加，正从短关键词转向更长的自然对话式查询。",
-        "description": "Google AI Overviews 在搜索结果中的出现率一年内从15%升至43%，AI Mode月访问量从1.26亿增至2.79亿。用户搜索长度增加，正从短关键词转向更长的自然对话式查询。",
-        "category": "industry",
-        "originalSource": "TechCrunch：AI（RSS）",
-        "originalUrl": "https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows",
-        "recommendedReason": "Google AI Overviews 在搜索结果中的出现率一年内从15%升至43%，AI Mode月访问量从1.26亿增至2.79亿。用户搜索长度增加，正从短关键词转向更长的自然对话式查询。",
-        "publishedAt": "2026-07-27T15:57:12.000Z",
-        "collectedAt": "2026-07-28T14:47:18.713Z",
-        "raw": {
-          "id": "cms3fuyes00mjrond2ldww2oa",
-          "titleEn": "Google's AI search is rapidly becoming the default， new data shows",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cms44no4v06arro82khvjxjj4",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Kimi K3 开放日：模型权重、技术报告和关键 Infra 技术同步开放",
-        "url": "https://mp.weixin.qq.com/s/IW9BdyA3hLvuuiX_aMCJEQ",
-        "summary": "月之暗面发布 2.8 万亿参数的混合专家模型 Kimi K3，支持原生视觉理解和 100 万 token 上下文窗口。其规模化效率较 Kimi K2.5 提升 2.5 倍，并同步开源模型权重、技术报告及 MoonEP、FlashKDA、AgentEnv 三项 Infra 技术。",
-        "description": "月之暗面发布 2.8 万亿参数的混合专家模型 Kimi K3，支持原生视觉理解和 100 万 token 上下文窗口。其规模化效率较 Kimi K2.5 提升 2.5 倍，并同步开源模型权重、技术报告及 MoonEP、FlashKDA、AgentEnv 三项 Infra 技术。",
-        "category": "models",
-        "originalSource": "公众号：月之暗面（Kimi）",
-        "originalUrl": "https://mp.weixin.qq.com/s/IW9BdyA3hLvuuiX_aMCJEQ",
-        "recommendedReason": "月之暗面发布 2.8 万亿参数的混合专家模型 Kimi K3，支持原生视觉理解和 100 万 token 上下文窗口。其规模化效率较 Kimi K2.5 提升 2.5 倍，并同步开源模型权重、技术报告及 MoonEP、FlashKDA、AgentEnv 三项 Infra 技术。",
-        "publishedAt": "2026-07-27T15:34:59.000Z",
-        "collectedAt": "2026-07-28T14:47:18.713Z",
-        "raw": {
-          "id": "cms44no4v06arro82khvjxjj4",
-          "titleEn": null,
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cms3dxit00berro3f8etbfxfh",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Kimi K3 开源分布式智能体环境 AgentENV",
-        "url": "https://x.com/Kimi_Moonshot/status/2081762978391843020",
-        "summary": "我们与 kvcache-ai 合作开源了 AgentENV。 AgentENV 是一个用于大规模运行智能体环境的分布式系统。其组件为 Kimi K3 的智能体强化学习训练提供支持，具备快速快照、恢复和分支功能，适用于大规模并行智能体工作流。 在 GitHub 上探索：http://github.com/kvcache-ai/AgentEnv",
-        "description": "我们与 kvcache-ai 合作开源了 AgentENV。 AgentENV 是一个用于大规模运行智能体环境的分布式系统。其组件为 Kimi K3 的智能体强化学习训练提供支持，具备快速快照、恢复和分支功能，适用于大规模并行智能体工作流。 在 GitHub 上探索：http://github.com/kvcache-ai/AgentEnv",
-        "category": "products",
-        "originalSource": "X：Kimi.ai (@Kimi_Moonshot)",
-        "originalUrl": "https://x.com/Kimi_Moonshot/status/2081762978391843020",
-        "recommendedReason": "我们与 kvcache-ai 合作开源了 AgentENV。 AgentENV 是一个用于大规模运行智能体环境的分布式系统。其组件为 Kimi K3 的智能体强化学习训练提供支持，具备快速快照、恢复和分支功能，适用于大规模并行智能体工作流。 在 GitHub 上探索：http://github.com/kvcache-ai/AgentEnv",
-        "publishedAt": "2026-07-27T15:25:45.000Z",
-        "collectedAt": "2026-07-28T14:47:18.713Z",
-        "raw": {
-          "id": "cms3dxit00berro3f8etbfxfh",
-          "titleEn": "We've open-sourced AgentENV in collaboration with kvcache-ai. AgentENV is a distributed system for …",
-          "apiCategory": "ai-products"
-        }
       }
-    ],
-    "crossSourceHighlights": []
+    ]
   }
 }
