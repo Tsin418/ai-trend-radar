@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-07-28T03:35:19.400Z
+Updated: 2026-07-28T03:43:47.754Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -12,7 +12,7 @@ Updated: 2026-07-28T03:35:19.400Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-07-28 | daily | [AI Developer Radar｜Daily｜2026-07-28](2026/07/2026-07-28-daily.md) | ChatGPTNextWeb/NextChat, tirth8205/code-review-graph, Graphify-Labs/graphify, rohitg00/ai-engineering-from-scratch, Panniantong/Agent-Reach |
+| 2026-07-28 | daily | [AI Developer Radar｜Daily｜2026-07-28](2026/07/2026-07-28-daily.md) | ChatGPTNextWeb/NextChat, thedaviddias/Front-End-Checklist, deepspeedai/DeepSpeed, tirth8205/code-review-graph, Graphify-Labs/graphify |
 | 2026-07-27 | daily | [AI Developer Radar｜Daily｜2026-07-27](2026/07/2026-07-27-daily.md) | google-ai-edge/mediapipe, jenkinsci/jenkins, permissionlesstech/bitchat, amnezia-vpn/amnezia-client, medusajs/medusa |
 | 2026-07-26 | daily | [AI Developer Radar｜Daily｜2026-07-26](2026/07/2026-07-26-daily.md) | yorukot/superfile, tirth8205/code-review-graph, citrolabs/ego-lite, CoreBunch/Instatic, Graphify-Labs/graphify |
 | 2026-07-25 | daily | [AI Developer Radar｜Daily｜2026-07-25](2026/07/2026-07-25-daily.md) | alibaba/open-code-review, OtterMind/Chat2DB, ultralytics/yolov5, hpcaitech/ColossalAI, thedaviddias/Front-End-Checklist |
