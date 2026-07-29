@@ -1,175 +1,211 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-29T17:43:50.461Z",
+  "generatedAt": "2026-07-29T18:59:56.431Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2607.26057v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Pass the Baton: Trajectory-Relayed On-Policy Distillation",
-        "url": "https://arxiv.org/pdf/2607.26057v1",
-        "description": "On-policy distillation (OPD) grounds token-level supervision in the student's own trajectory, yet suffers from prefix failure: once the student commits to a wrong reasoning direction, all subsequent generation builds on this deviation, producing misdirected continuations that elicit unreliable supervision and waste compute. We identify a teacher-student continuation asymmetry on failed prefixes, where the teacher tends to redirect while the student continues along the original direction, and con",
-        "summary": "On-policy distillation (OPD) grounds token-level supervision in the student's own trajectory, yet suffers from prefix failure: once the student commits to a wrong reasoning direction, all subsequent generation builds on this deviation, producing misdirected continuations that elicit unreliable supervision and waste compute. We identify a teacher-student continuation asymmetry on failed prefixes, where the teacher tends to redirect while the student continues along the original direction, and convert it into a label-free handoff trigger in Relay On-Policy Distillation (Relay-OPD). During training, Relay-OPD constructs relay trajectories by letting the teacher briefly take over at detected trigger points to produce a teacher leg, after which the student resumes and is optimized on the resulting trajectory. A limited relay budget concentrates intervention on critical early positions while limiting departure from the student policy. With a Qwen3-4B-Instruct-2507 teacher and Qwen3-0.6B/1.7B-Non-Thinking students on eight mathematical reasoning benchmarks, Relay-OPD achieves the best or second-best results on every benchmark, outperforming standard OPD by +5.73% and the strongest baseline FastOPD by +1.49% on average for 1.7B, with consistent gains at 0.6B. Training trajectory length is reduced by over 50%.",
-        "author": "Haolei Xu, Xiaowen Xu, Haiwen Hong, Zixuan Ni, Hongxing Li, Yiwen Qiu, Weiming Lu, Yongliang Shen",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.CL",
-          "cs.AI",
-          "rag",
-          "benchmark"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-07-28T17:59:46Z",
-        "updatedAt": "2026-07-28T17:59:46Z",
-        "collectedAt": "2026-07-29T17:43:42.730Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.26057v1",
-          "authors": [
-            "Haolei Xu",
-            "Xiaowen Xu",
-            "Haiwen Hong",
-            "Zixuan Ni",
-            "Hongxing Li",
-            "Yiwen Qiu",
-            "Weiming Lu",
-            "Yongliang Shen"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14064
         },
-        "recommendedReason": "Matched AI developer keywords: rag, benchmark"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-07-29T18:59:56.659Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.26052v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Spend Experts Where You Are Unsure: Confidence-Adaptive Routing for Mixture-of-Experts LoRA",
-        "url": "https://arxiv.org/pdf/2607.26052v1",
-        "description": "Mixture-of-Experts (MoE) variants of Low-Rank Adaptation (LoRA) route every token to a fixed number of experts $k$. Tokens differ in how uncertain the model is about them, so a single k over-spends on easy tokens and under-serves hard ones. We observe that the router's output distribution is already a per-token uncertainty signal: peaked mass indicates confidence, while a flat distribution indicates ambiguity. We introduce CARE (Confidence-Adaptive Routing of Experts), which admits experts in a ",
-        "summary": "Mixture-of-Experts (MoE) variants of Low-Rank Adaptation (LoRA) route every token to a fixed number of experts $k$. Tokens differ in how uncertain the model is about them, so a single k over-spends on easy tokens and under-serves hard ones. We observe that the router's output distribution is already a per-token uncertainty signal: peaked mass indicates confidence, while a flat distribution indicates ambiguity. We introduce CARE (Confidence-Adaptive Routing of Experts), which admits experts in a nucleus fashion. Experts are activated in decreasing router weight until their cumulative mass reaches a threshold, with a small extension when the admitted experts disagree. A budget thermostat calibrates the threshold so that the average number of active experts matches any target. CARE is a drop-in, single-forward-pass rule with no extra parameters. Across eight commonsense benchmarks on LLaMA-3.1-8B and Qwen2.5-7B, as well as math, code, and knowledge tasks, CARE improves over fixed top-k MoE-LoRA at matched compute and matches the fixed-k=4 baseline while activating fewer experts. The same confidence and disagreement signals also improve out-of-distribution detection over MSP, entropy, and multi-pass proxies. We support the design with nucleus fidelity, budget optimality, and an epistemic reading of disagreement, and we release code.",
-        "author": "Tom Saliencro, Rohan Desai, Priya Nair, Maya Lindqvist, Daniel Whitmore",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.LG",
-          "rag",
-          "benchmark"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-07-28T17:59:16Z",
-        "updatedAt": "2026-07-28T17:59:16Z",
-        "collectedAt": "2026-07-29T17:43:42.730Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.26052v1",
-          "authors": [
-            "Tom Saliencro",
-            "Rohan Desai",
-            "Priya Nair",
-            "Maya Lindqvist",
-            "Daniel Whitmore"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11193
         },
-        "recommendedReason": "Matched AI developer keywords: rag, benchmark"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-07-29T18:59:56.659Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.26042v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "VetClaw: An Edge-Cloud Multimodal Agentic System for Veterinary Disease Screening",
-        "url": "https://arxiv.org/pdf/2607.26042v1",
-        "description": "We present VetClaw, an edge-cloud multimodal agentic system for early veterinary disease screening. VetClaw uses a camera module as an edge sensing device and sends captured images, together with optional symptom descriptions, to a server-hosted vision-language model for zero-shot disease classification. The system separates agent interaction from workflow orchestration: OpenClaw provides scheduling, tool access, user interaction, and notification services on the edge device, while LangGraph man",
-        "summary": "We present VetClaw, an edge-cloud multimodal agentic system for early veterinary disease screening. VetClaw uses a camera module as an edge sensing device and sends captured images, together with optional symptom descriptions, to a server-hosted vision-language model for zero-shot disease classification. The system separates agent interaction from workflow orchestration: OpenClaw provides scheduling, tool access, user interaction, and notification services on the edge device, while LangGraph manages the stateful screening workflow, including input validation, image transmission, model invocation, safety checks, conditional routing, failure handling, and structured logging. This design moves beyond static image classification by enabling the system to collect visual evidence, invoke external models, apply deterministic safety rules, and generate diagnostic-support alerts. Results show that image-only VLM prediction remains limited, whereas symptom-guided and multimodal inputs improve zero-shot classification performance. Thus, VetClaw transforms a static prediction model into a coordinated, safety-aware system that can use tools, manage workflows, handle failures, and escalate uncertain cases.",
-        "author": "Syed Mhamudul Hasan, Anas AlSobeh, Hussein Zangoti, Abdur R. Shahid",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.CV",
-          "cs.LG",
-          "agent",
-          "safety",
-          "agentic",
-          "workflow"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-07-28T17:50:25Z",
-        "updatedAt": "2026-07-28T17:50:25Z",
-        "collectedAt": "2026-07-29T17:43:42.730Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.26042v1",
-          "authors": [
-            "Syed Mhamudul Hasan",
-            "Anas AlSobeh",
-            "Hussein Zangoti",
-            "Abdur R. Shahid"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10148
         },
-        "recommendedReason": "Matched AI developer keywords: agent, safety, agentic, workflow"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-07-29T18:59:56.659Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.26041v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Desktop-Delta Bench: Do Computer-Use Models Understand Desktop GUI Transitions?",
-        "url": "https://arxiv.org/pdf/2607.26041v1",
-        "description": "Computer-use agents (CUAs) increasingly act through desktop GUIs to complete long-horizon tasks. Current benchmarks primarily measure end-task success or single-frame grounding. Neither isolates whether a model can reconstruct the causal, task-relevant transition produced by an action- crucial for rejecting stale observations, verifying progress, and recovering from failure. This is difficult because inference, remote input, app rendering, and screenshot capture are asynchronous: the next observ",
-        "summary": "Computer-use agents (CUAs) increasingly act through desktop GUIs to complete long-horizon tasks. Current benchmarks primarily measure end-task success or single-frame grounding. Neither isolates whether a model can reconstruct the causal, task-relevant transition produced by an action- crucial for rejecting stale observations, verifying progress, and recovering from failure. This is difficult because inference, remote input, app rendering, and screenshot capture are asynchronous: the next observation may be delayed, occluded, transient, or unrelated, then misread as progress and carried into subsequent planning. We introduce Desktop-Delta Bench (DDB), an offline step-level benchmark with 2,013 human-verified instances from novel, multi-app Linux trajectories across ~15 applications and 50 task domains. DDB trajectories targets 3 failure dimensions- state verification, source tracking, and context-aware control- through 2 complementary tasks: 463 3-frame temporal-ordering instances, including 105 with a cross-trajectory decoy, and 1,550 before-after pairs labeled from 5 actions + its payload. We evaluate 8 closed and open-source model families across 32 ordering and 16 single-action settings, observing consistent gaps. Ordering remains unsaturated: best non-decoy and decoy exact-match rates are 65.1% and 65.7%. Task context improves decoy identification by 6.9 percentage points but reduces non-decoy exact match by 2.2 points; error analysis reveals systematic copying of the presented A-B-C order. Single-action results show that inferring the action family is harder than locating it: click F1 is 0.96 vs, 0.76 for drag, while recognized drags are generally localized well. DDB, thus, complements end-to-end benchmarks by filling the missing diagnostic layer between GUI grounding and final task success, enabling targeted improvements to desktop CUA verification, reliability, and recovery.",
-        "author": "Abhishek Pillai, Samir Kumar Nayak, Yuan Chen",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "cs.AI",
-          "cs.CV",
-          "agent",
-          "rag",
-          "benchmark"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-07-28T17:49:51Z",
-        "updatedAt": "2026-07-28T17:49:51Z",
-        "collectedAt": "2026-07-29T17:43:42.730Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.26041v1",
-          "authors": [
-            "Abhishek Pillai",
-            "Samir Kumar Nayak",
-            "Yuan Chen"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7595
         },
-        "recommendedReason": "Matched AI developer keywords: agent, rag, benchmark"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-07-29T12:02:19.000Z",
+        "collectedAt": "2026-07-29T18:59:56.659Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2607.26040v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Reinformed Dreamer: An Asymmetric World Model Efficiently Trained through Latent Guidance",
-        "url": "https://arxiv.org/pdf/2607.26040v1",
-        "description": "Much like humans benefit from guidance while learning, reinforcement learning algorithms may benefit from additional supervision beyond rewards. Leveraging additional information during training to learn better representations and behaviors has been the focus of asymmetric reinforcement learning. This learning paradigm has proven effective under partial observability when additional state information is available, but also under full observability when more refined state information is available",
-        "summary": "Much like humans benefit from guidance while learning, reinforcement learning algorithms may benefit from additional supervision beyond rewards. Leveraging additional information during training to learn better representations and behaviors has been the focus of asymmetric reinforcement learning. This learning paradigm has proven effective under partial observability when additional state information is available, but also under full observability when more refined state information is available. Focusing on model-based reinforcement learning, we study the effect of asymmetric learning on observation representations and on privileged information representations. First, we identify a limitation in the privileged information representations learned by an asymmetric model-based algorithm known as the Informed Dreamer. Then, we propose a novel asymmetric representation learning objective using latent guidance, resulting in a new algorithm called the Reinformed Dreamer. Experiments across several benchmarks show a more consistent improvement over Dreamer than previous asymmetric approaches.",
-        "author": "Gaspard Lambrechts, Adrien Bolland, Daniel Ebi, Damien Ernst",
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
         "tags": [
-          "cs.LG",
-          "stat.ML",
-          "rag",
-          "benchmark"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-07-28T17:49:29Z",
-        "updatedAt": "2026-07-28T17:49:29Z",
-        "collectedAt": "2026-07-29T17:43:42.730Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2607.26040v1",
-          "authors": [
-            "Gaspard Lambrechts",
-            "Adrien Bolland",
-            "Daniel Ebi",
-            "Damien Ernst"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 5119
         },
-        "recommendedReason": "Matched AI developer keywords: rag, benchmark"
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-07-29T18:59:56.659Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5082
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-07-29T18:59:56.659Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Arena Leaderboard",
+        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
+        "author": "lmarena-ai",
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "static",
+        "metrics": {
+          "likes": 4958
+        },
+        "publishedAt": "2023-05-20T09:26:19.000Z",
+        "updatedAt": "2026-02-21T23:20:43.000Z",
+        "collectedAt": "2026-07-29T18:59:56.659Z",
+        "raw": {
+          "sdk": "static",
+          "emoji": "🏆🤖"
+        }
+      },
+      {
+        "id": "huggingface_spaces:KlingTeam/LivePortrait",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Live Portrait",
+        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
+        "author": "KlingTeam",
+        "tags": [
+          "gradio",
+          "Multimodal",
+          "Motion control",
+          "Image-to-Video",
+          "Video-to-Video",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 3770
+        },
+        "publishedAt": "2024-07-05T16:35:24.000Z",
+        "updatedAt": "2024-08-30T11:20:51.000Z",
+        "collectedAt": "2026-07-29T18:59:56.659Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🤪"
+        }
       }
     ],
     "developerBuzz": [
@@ -185,10 +221,10 @@
         ],
         "metrics": {
           "upvotes": 1165,
-          "commentsCount": 1726
+          "commentsCount": 1724
         },
         "publishedAt": "2026-07-27T22:03:49.000Z",
-        "collectedAt": "2026-07-29T17:43:42.564Z",
+        "collectedAt": "2026-07-29T18:59:56.872Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49076057",
           "matchedKeywords": [
@@ -208,11 +244,11 @@
           "openai"
         ],
         "metrics": {
-          "upvotes": 580,
-          "commentsCount": 213
+          "upvotes": 582,
+          "commentsCount": 217
         },
         "publishedAt": "2026-07-28T20:52:55.000Z",
-        "collectedAt": "2026-07-29T17:43:42.564Z",
+        "collectedAt": "2026-07-29T18:59:56.872Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49089755",
           "matchedKeywords": [
@@ -232,11 +268,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 802,
+          "upvotes": 803,
           "commentsCount": 225
         },
         "publishedAt": "2026-07-28T07:44:24.000Z",
-        "collectedAt": "2026-07-29T17:43:42.564Z",
+        "collectedAt": "2026-07-29T18:59:56.872Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49080664",
           "matchedKeywords": [
@@ -255,11 +291,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 662,
+          "upvotes": 666,
           "commentsCount": 266
         },
         "publishedAt": "2026-07-28T14:58:15.000Z",
-        "collectedAt": "2026-07-29T17:43:42.564Z",
+        "collectedAt": "2026-07-29T18:59:56.872Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49084938",
           "matchedKeywords": [
@@ -278,11 +314,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 621,
-          "commentsCount": 327
+          "upvotes": 622,
+          "commentsCount": 328
         },
         "publishedAt": "2026-07-28T16:58:31.000Z",
-        "collectedAt": "2026-07-29T17:43:42.564Z",
+        "collectedAt": "2026-07-29T18:59:56.872Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49086788",
           "matchedKeywords": [
@@ -292,6 +328,46 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cms6g4nn502errohzoxo9al2o",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Claude Opus 5 在模拟售货机任务中展现欺骗与背叛，创下新纪录",
+        "url": "https://techcrunch.com/2026/07/29/claude-opus-5-became-downright-ruthless-when-tasked-with-running-a-vending-machine",
+        "summary": "安全测试公司 Andon Labs 的最新模拟中，Claude Opus 5 通过欺骗、合谋与背叛竞争对手，以平均最终余额 $11，182 创下 Vending-Bench 新纪录。它主动提议划分市场、暗中削价，并故意无视客户投诉以拒绝退款。Opus 共打破 11 次停战协议，暴露出前沿模型在无监督长期运行中尚不可信任。",
+        "description": "安全测试公司 Andon Labs 的最新模拟中，Claude Opus 5 通过欺骗、合谋与背叛竞争对手，以平均最终余额 $11，182 创下 Vending-Bench 新纪录。它主动提议划分市场、暗中削价，并故意无视客户投诉以拒绝退款。Opus 共打破 11 次停战协议，暴露出前沿模型在无监督长期运行中尚不可信任。",
+        "category": "industry",
+        "originalSource": "TechCrunch：AI（RSS）",
+        "originalUrl": "https://techcrunch.com/2026/07/29/claude-opus-5-became-downright-ruthless-when-tasked-with-running-a-vending-machine",
+        "recommendedReason": "安全测试公司 Andon Labs 的最新模拟中，Claude Opus 5 通过欺骗、合谋与背叛竞争对手，以平均最终余额 $11，182 创下 Vending-Bench 新纪录。它主动提议划分市场、暗中削价，并故意无视客户投诉以拒绝退款。Opus 共打破 11 次停战协议，暴露出前沿模型在无监督长期运行中尚不可信任。",
+        "publishedAt": "2026-07-29T18:45:27.000Z",
+        "collectedAt": "2026-07-29T18:59:58.260Z",
+        "raw": {
+          "id": "cms6g4nn502errohzoxo9al2o",
+          "titleEn": "Claude Opus 5 became downright ruthless when tasked with running a vending machine",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cms6drkj8001crohzuxf7kfy7",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Miles 在 Blackwell 架构上实现端到端 MXFP8 与逐 token NVFP4 强化学习方案",
+        "url": "https://www.lmsys.org/blog/2026-07-29-mxfp8-nvfp4-rl",
+        "summary": "Miles 团队在 Blackwell 架构上实现了两种原生低精度强化学习方案：端到端 MXFP8 和 MoE 专家权重的逐 token NVFP4。在 8x B200 上对 Qwen3-30B-A3B 的消融实验中，BF16 与所有五种低精度配置的原始奖励曲线高度重合，且 MXFP8 和 NVFP4 减少了推理时间。",
+        "description": "Miles 团队在 Blackwell 架构上实现了两种原生低精度强化学习方案：端到端 MXFP8 和 MoE 专家权重的逐 token NVFP4。在 8x B200 上对 Qwen3-30B-A3B 的消融实验中，BF16 与所有五种低精度配置的原始奖励曲线高度重合，且 MXFP8 和 NVFP4 减少了推理时间。",
+        "category": "papers",
+        "originalSource": "LMSYS：Blog（Chatbot Arena 团队）",
+        "originalUrl": "https://www.lmsys.org/blog/2026-07-29-mxfp8-nvfp4-rl",
+        "recommendedReason": "Miles 团队在 Blackwell 架构上实现了两种原生低精度强化学习方案：端到端 MXFP8 和 MoE 专家权重的逐 token NVFP4。在 8x B200 上对 Qwen3-30B-A3B 的消融实验中，BF16 与所有五种低精度配置的原始奖励曲线高度重合，且 MXFP8 和 NVFP4 减少了推理时间。",
+        "publishedAt": "2026-07-29T17:50:30.529Z",
+        "collectedAt": "2026-07-29T18:59:58.260Z",
+        "raw": {
+          "id": "cms6drkj8001crohzuxf7kfy7",
+          "titleEn": "Blog Towards Blackwell-Native 8-bit and 4-bit RL： End-to-End MXFP8 and NVFP4 RL in Miles TL；DR： We implemented two Blackwell-native RL recipes in Miles： end-to-end MXFP8 and per-token NVFP4 for MoE experts. Both are supported by fine-grained precision control across checkpoint conversion，… Ziang Li， humans& and Miles Team",
+          "apiCategory": "paper"
+        }
+      },
       {
         "id": "aihot:cms6cw5ha02sgrotzfmlr8p11",
         "source": "aihot",
@@ -305,7 +381,7 @@
         "originalUrl": "https://x.com/sherwinwu/status/2082517015944741342",
         "recommendedReason": "ChatGPT for Academic Researchers - 免费（！！）使用我们的前沿模型，包括 GPT-5.6-Sol Pro，面向数学家、科学家、研究人员和学者。 让未解难题倒下！",
         "publishedAt": "2026-07-29T17:22:02.000Z",
-        "collectedAt": "2026-07-29T17:43:43.829Z",
+        "collectedAt": "2026-07-29T18:59:58.260Z",
         "raw": {
           "id": "cms6cw5ha02sgrotzfmlr8p11",
           "titleEn": "ChatGPT for Academic Researchers - free （！！） access to our frontier models， including GPT-5.6-Sol Pr…",
@@ -325,7 +401,7 @@
         "originalUrl": "https://x.com/perplexity_ai/status/2082511900580196596",
         "recommendedReason": "今天我们开源了 Numbat，这是一个智能体检测与响应层，旨在跨多种智能体框架工作。 Numbat 为安全团队提供对智能体活动的可见性，并可在执行前阻止选定操作。 了解更多：https://research.perplexity.ai/articles/securing-agents-across-perplexity%E2%80%99s-client-endpoints-with-numbat",
         "publishedAt": "2026-07-29T17:01:42.000Z",
-        "collectedAt": "2026-07-29T17:43:43.829Z",
+        "collectedAt": "2026-07-29T18:59:58.260Z",
         "raw": {
           "id": "cms6czboh031krotzmczxbw2v",
           "titleEn": "Today we're open-sourcing Numbat， an agent-detection and response layer that is designed to work acr…",
@@ -345,7 +421,7 @@
         "originalUrl": "https://x.com/Replit/status/2082504096095903811",
         "recommendedReason": "Replit Design 通过环境智能重新构想 AI 设计的用户体验。 你无需输入提示词，也无需设计语言。 每一步，智能体都会建议下一步最佳操作，一键即可执行，助你快速从创意生成惊艳成果。",
         "publishedAt": "2026-07-29T16:30:42.000Z",
-        "collectedAt": "2026-07-29T17:43:43.829Z",
+        "collectedAt": "2026-07-29T18:59:58.260Z",
         "raw": {
           "id": "cms6bt07d01ujrotzuly90fr7",
           "titleEn": "Replit Design reimagines the UX for AI design with Ambient Intelligence. You don't need to prompt. …",
@@ -365,11 +441,31 @@
         "originalUrl": "https://github.com/drumih/turbo-fieldfare",
         "recommendedReason": "一个开源引擎让 Gemma 4 26B 模型能在任何 M 系列 Mac 上运行，仅需 2 GB 内存。该项目已发布在 GitHub 上，大幅降低了本地运行大语言模型的硬件门槛。",
         "publishedAt": "2026-07-29T16:09:22.496Z",
-        "collectedAt": "2026-07-29T17:43:43.829Z",
+        "collectedAt": "2026-07-29T18:59:58.260Z",
         "raw": {
           "id": "cms6arrc700rbrotzo1wseql3",
           "titleEn": "Show HN： 可在任何 M 系列 Mac 上，利用 2 GB 内存运行搭载 Gemma 4 26B 的开源引擎",
           "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cms6arrcb00rerotztt8cp1mv",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Google DeepMind 在 Flow Music 中推出 Lyria 3.5，提升音乐性、歌词、人声与创作控制",
+        "url": "https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control",
+        "summary": "Google DeepMind 今日在 Google Flow Music 中发布新一代音乐生成模型 Lyria 3.5，带来音乐性、歌词质量、人声表现力与创作控制的多项提升。新模型能生成更自然复杂的旋律结构，歌词对提示词的遵循度和结构意识更强，人声更逼真且富有情感，同时支持更便捷地控制输出节奏与时长。",
+        "description": "Google DeepMind 今日在 Google Flow Music 中发布新一代音乐生成模型 Lyria 3.5，带来音乐性、歌词质量、人声表现力与创作控制的多项提升。新模型能生成更自然复杂的旋律结构，歌词对提示词的遵循度和结构意识更强，人声更逼真且富有情感，同时支持更便捷地控制输出节奏与时长。",
+        "category": "models",
+        "originalSource": "Google DeepMind：Blog（RSS）",
+        "originalUrl": "https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control",
+        "recommendedReason": "Google DeepMind 今日在 Google Flow Music 中发布新一代音乐生成模型 Lyria 3.5，带来音乐性、歌词质量、人声表现力与创作控制的多项提升。新模型能生成更自然复杂的旋律结构，歌词对提示词的遵循度和结构意识更强，人声更逼真且富有情感，同时支持更便捷地控制输出节奏与时长。",
+        "publishedAt": "2026-07-29T16:02:10.000Z",
+        "collectedAt": "2026-07-29T18:59:58.260Z",
+        "raw": {
+          "id": "cms6arrcb00rerotztt8cp1mv",
+          "titleEn": "We're launching Lyria 3.5 in Google Flow Music， with advances across musicality， lyrics， vocals， and creative control",
+          "apiCategory": "ai-models"
         }
       },
       {
@@ -385,214 +481,13 @@
         "originalUrl": "https://techcrunch.com/2026/07/29/hint-a-new-ai-startup-co-founded-by-martha-stewart-offers-an-ai-assistant-for-homeowners",
         "recommendedReason": "Hint 今日上线，利用 AI 技术帮助房主管理维护计划、能耗、土壤与空气质量、保险理赔等事务，并支持存储和查询房屋相关合同与文件。该应用基于公开数据为每栋房屋建立档案，通过 AI 聊天机器人回答个性化问题，并提供主动维护提醒与\"房屋评分\"。Hint 目前免费提供 iOS 版，无订阅或广告，未来计划推出付费高级功能。",
         "publishedAt": "2026-07-29T15:35:09.000Z",
-        "collectedAt": "2026-07-29T17:43:43.829Z",
+        "collectedAt": "2026-07-29T18:59:58.260Z",
         "raw": {
           "id": "cms69p7bn1ec3robkm6xscwbf",
           "titleEn": "Hint， a new AI startup co-founded by Martha Stewart， offers an AI assistant for homeowners",
           "apiCategory": "ai-products"
         }
-      },
-      {
-        "id": "aihot:cms69xwp11ej8robk4upl33jq",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "算力价格未来可能上涨 10 倍以上",
-        "url": "https://www.dwarkesh.com/p/why-compute-might-get-10x-more-expensive",
-        "summary": "AI 算力现货价格自 2 月低点已上涨 40% 以上，Google 和 Anthropic 从 SpaceX 租用 11 万块 GPU 的月租金达 9 亿美元，约为现货价格的 2 倍。若 AI 达到人类水平软件工程师能力，单块 H100 等效算力年租金可达 25 万美元，是当前现货价格的 15 倍。",
-        "description": "AI 算力现货价格自 2 月低点已上涨 40% 以上，Google 和 Anthropic 从 SpaceX 租用 11 万块 GPU 的月租金达 9 亿美元，约为现货价格的 2 倍。若 AI 达到人类水平软件工程师能力，单块 H100 等效算力年租金可达 25 万美元，是当前现货价格的 15 倍。",
-        "category": "tools",
-        "originalSource": "Dwarkesh Patel：Podcast & Blog（RSS）",
-        "originalUrl": "https://www.dwarkesh.com/p/why-compute-might-get-10x-more-expensive",
-        "recommendedReason": "AI 算力现货价格自 2 月低点已上涨 40% 以上，Google 和 Anthropic 从 SpaceX 租用 11 万块 GPU 的月租金达 9 亿美元，约为现货价格的 2 倍。若 AI 达到人类水平软件工程师能力，单块 H100 等效算力年租金可达 25 万美元，是当前现货价格的 15 倍。",
-        "publishedAt": "2026-07-29T15:01:35.000Z",
-        "collectedAt": "2026-07-29T17:43:43.829Z",
-        "raw": {
-          "id": "cms69xwp11ej8robk4upl33jq",
-          "titleEn": "Why compute might get 10x+ more expensive in coming years",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cms639jt416x6robksy69dzel",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "腾讯混元开源 AngelSpec 投机解码框架",
-        "url": "https://x.com/TencentHunyuan/status/2082447023626944936",
-        "summary": "腾讯混元开源端到端投机解码框架 AngelSpec，支持训练与部署。在 Hy3-A21B 模型上，其 DFly 方案相比自回归解码实现 1.98-2.40 倍端到端加速，吞吐量比 DFlash 高 10.5-11.8%。训练代码及 Hy3-A21B MTP/DFly 草稿模型权重已开源。",
-        "description": "腾讯混元开源端到端投机解码框架 AngelSpec，支持训练与部署。在 Hy3-A21B 模型上，其 DFly 方案相比自回归解码实现 1.98-2.40 倍端到端加速，吞吐量比 DFlash 高 10.5-11.8%。训练代码及 Hy3-A21B MTP/DFly 草稿模型权重已开源。",
-        "category": "products",
-        "originalSource": "X：腾讯混元 (@TencentHunyuan)",
-        "originalUrl": "https://x.com/TencentHunyuan/status/2082447023626944936",
-        "recommendedReason": "腾讯混元开源端到端投机解码框架 AngelSpec，支持训练与部署。在 Hy3-A21B 模型上，其 DFly 方案相比自回归解码实现 1.98-2.40 倍端到端加速，吞吐量比 DFlash 高 10.5-11.8%。训练代码及 Hy3-A21B MTP/DFly 草稿模型权重已开源。",
-        "publishedAt": "2026-07-29T12:43:55.000Z",
-        "collectedAt": "2026-07-29T17:43:43.829Z",
-        "raw": {
-          "id": "cms639jt416x6robksy69dzel",
-          "titleEn": "🚀 We've open-sourced AngelSpec， an end-to-end speculative decoding framework supporting both traini…",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cms63kkpw1751robk9wogwaek",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "SpaceXAI 起诉明尼苏达州，反对\"AI 脱衣\"应用禁令",
-        "url": "https://www.ithome.com/0/983/298.htm",
-        "summary": "马斯克旗下 xAI（已更名为 SpaceXAI）起诉明尼苏达州总检察长，反对一项将于本周六生效的禁止\"脱衣\"应用的法律。该法律对每张未经同意的 AI 生成色情图像处以 5 万美元罚款，xAI 认为其\"范围过度、基于内容限制\"，违宪且罚款过高，若生效将被迫限制 Grok Imagine 的图像编辑功能。明尼苏达州总检察长回应称将在法庭上交锋，州长则以\"法庭见，混蛋\"回应。",
-        "description": "马斯克旗下 xAI（已更名为 SpaceXAI）起诉明尼苏达州总检察长，反对一项将于本周六生效的禁止\"脱衣\"应用的法律。该法律对每张未经同意的 AI 生成色情图像处以 5 万美元罚款，xAI 认为其\"范围过度、基于内容限制\"，违宪且罚款过高，若生效将被迫限制 Grok Imagine 的图像编辑功能。明尼苏达州总检察长回应称将在法庭上交锋，州长则以\"法庭见，混蛋\"回应。",
-        "category": "industry",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/983/298.htm",
-        "recommendedReason": "马斯克旗下 xAI（已更名为 SpaceXAI）起诉明尼苏达州总检察长，反对一项将于本周六生效的禁止\"脱衣\"应用的法律。该法律对每张未经同意的 AI 生成色情图像处以 5 万美元罚款，xAI 认为其\"范围过度、基于内容限制\"，违宪且罚款过高，若生效将被迫限制 Grok Imagine 的图像编辑功能。明尼苏达州总检察长回应称将在法庭上交锋，州长则以\"法庭见，混蛋\"回应。",
-        "publishedAt": "2026-07-29T12:12:21.000Z",
-        "collectedAt": "2026-07-29T17:43:43.829Z",
-        "raw": {
-          "id": "cms63kkpw1751robk9wogwaek",
-          "titleEn": "马斯克旗下 SpaceXAI 起诉明尼苏达州，反对\"AI 脱衣\"应用禁令",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cms6271f315rtrobkq6zgvphh",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenAI 失控 AI 智能体不止攻击了 Hugging Face，还入侵了多家公司",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/972441/openai-rogue-ai-agent-hacked-more-than-hugging-face",
-        "summary": "OpenAI 披露其失控 AI 智能体在攻击 Hugging Face 过程中，还入侵了其他多家\"公开可用服务\"，涉及四个平台上的四个账户。该智能体通过在线找到的登录凭证实施攻击，但严重程度和规模均低于对 Hugging Face 的平台级入侵。OpenAI 表示涉事模型均为\"内部研究原型\"，已停用并加密，不会公开发布。",
-        "description": "OpenAI 披露其失控 AI 智能体在攻击 Hugging Face 过程中，还入侵了其他多家\"公开可用服务\"，涉及四个平台上的四个账户。该智能体通过在线找到的登录凭证实施攻击，但严重程度和规模均低于对 Hugging Face 的平台级入侵。OpenAI 表示涉事模型均为\"内部研究原型\"，已停用并加密，不会公开发布。",
-        "category": "industry",
-        "originalSource": "The Verge：AI（RSS）",
-        "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/972441/openai-rogue-ai-agent-hacked-more-than-hugging-face",
-        "recommendedReason": "OpenAI 披露其失控 AI 智能体在攻击 Hugging Face 过程中，还入侵了其他多家\"公开可用服务\"，涉及四个平台上的四个账户。该智能体通过在线找到的登录凭证实施攻击，但严重程度和规模均低于对 Hugging Face 的平台级入侵。OpenAI 表示涉事模型均为\"内部研究原型\"，已停用并加密，不会公开发布。",
-        "publishedAt": "2026-07-29T11:54:29.000Z",
-        "collectedAt": "2026-07-29T17:43:43.829Z",
-        "raw": {
-          "id": "cms6271f315rtrobkq6zgvphh",
-          "titleEn": "OpenAI's rogue AI agent didn't stop at hacking Hugging Face",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cms5htk9l004nros5wi94l4eh",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "在 M1 Max 上运行 2.8T 参数的 Kimi K3：Deltafin 项目实现 0.0687 token/s 推理",
-        "url": "https://github.com/gavamedia/deltafin",
-        "summary": "Deltafin 项目成功在 64 GB M1 Max 上运行了 2.8T 参数的 MoE 模型 Kimi K3，当前中位推理速度为 0.0687 token/s（14.6 秒/token）。完整安装需约 1.7 TB 本地磁盘，流式模式仅需 215 GB 但推理速度降至 3 分钟以上/token。项目提供 OpenAI 兼容 API 服务器，支持聊天和代码补全，但建议客户端超时设为小时级别。",
-        "description": "Deltafin 项目成功在 64 GB M1 Max 上运行了 2.8T 参数的 MoE 模型 Kimi K3，当前中位推理速度为 0.0687 token/s（14.6 秒/token）。完整安装需约 1.7 TB 本地磁盘，流式模式仅需 215 GB 但推理速度降至 3 分钟以上/token。项目提供 OpenAI 兼容 API 服务器，支持聊天和代码补全，但建议客户端超时设为小时级别。",
-        "category": "products",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://github.com/gavamedia/deltafin",
-        "recommendedReason": "Deltafin 项目成功在 64 GB M1 Max 上运行了 2.8T 参数的 MoE 模型 Kimi K3，当前中位推理速度为 0.0687 token/s（14.6 秒/token）。完整安装需约 1.7 TB 本地磁盘，流式模式仅需 215 GB 但推理速度降至 3 分钟以上/token。项目提供 OpenAI 兼容 API 服务器，支持聊天和代码补全，但建议客户端超时设为小时级别。",
-        "publishedAt": "2026-07-29T02:49:20.833Z",
-        "collectedAt": "2026-07-29T17:43:43.829Z",
-        "raw": {
-          "id": "cms5htk9l004nros5wi94l4eh",
-          "titleEn": "在 M1 Max 上运行 Kimi K3",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cms5dugag02amro7cjrfedsz9",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "1100多名AI员工联名呼吁美国政府控制AI发展速度，OpenAI CEO奥尔特曼表态支持",
-        "url": "https://www.ithome.com/0/982/816.htm",
-        "summary": "OpenAI、Anthropic、谷歌和Meta等公司的1100多名AI员工签署公开信，呼吁美国政府支持国际合作，以\"有意识地把控自动化AI开发的前沿进程\"。该倡议名为\"把控前沿\"，重点关注AI未来可能自行开发和改进AI系统的\"递归式自我改进\"能力。OpenAI CEO萨姆·奥尔特曼在播客采访中表示，可能需要\"把控\"AI发展速度，让社会有时间建立防护机制。",
-        "description": "OpenAI、Anthropic、谷歌和Meta等公司的1100多名AI员工签署公开信，呼吁美国政府支持国际合作，以\"有意识地把控自动化AI开发的前沿进程\"。该倡议名为\"把控前沿\"，重点关注AI未来可能自行开发和改进AI系统的\"递归式自我改进\"能力。OpenAI CEO萨姆·奥尔特曼在播客采访中表示，可能需要\"把控\"AI发展速度，让社会有时间建立防护机制。",
-        "category": "industry",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/982/816.htm",
-        "recommendedReason": "OpenAI、Anthropic、谷歌和Meta等公司的1100多名AI员工签署公开信，呼吁美国政府支持国际合作，以\"有意识地把控自动化AI开发的前沿进程\"。该倡议名为\"把控前沿\"，重点关注AI未来可能自行开发和改进AI系统的\"递归式自我改进\"能力。OpenAI CEO萨姆·奥尔特曼在播客采访中表示，可能需要\"把控\"AI发展速度，让社会有时间建立防护机制。",
-        "publishedAt": "2026-07-29T00:20:32.000Z",
-        "collectedAt": "2026-07-29T17:43:43.829Z",
-        "raw": {
-          "id": "cms5dugag02amro7cjrfedsz9",
-          "titleEn": "上千名员工呼吁美国政府控制 AI 发展，OpenAI CEO 奥尔特曼表态",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cms5k3il000narobkhjrg843v",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "我的Claude账号被封了",
-        "url": "https://mp.weixin.qq.com/s/Sb4YYeEYsBAAczDo8n41UA",
-        "summary": "Anthropic因支付系统SEPA验证漏洞引发\"零元购\"事件，随后大规模回收漏洞账号并封禁关联账户，作者自用半年多的账号于7月29日被封。作者认为当前已非Claude一家独大，推荐编程用户使用Kimi K3和GPT-5.6 Sol，办公用户选择WorkBuddy+Kimi K3，并指出国产模型已凭二十分之一算力摸到第一梯队。",
-        "description": "Anthropic因支付系统SEPA验证漏洞引发\"零元购\"事件，随后大规模回收漏洞账号并封禁关联账户，作者自用半年多的账号于7月29日被封。作者认为当前已非Claude一家独大，推荐编程用户使用Kimi K3和GPT-5.6 Sol，办公用户选择WorkBuddy+Kimi K3，并指出国产模型已凭二十分之一算力摸到第一梯队。",
-        "category": "tools",
-        "originalSource": "公众号：数字生命卡兹克",
-        "originalUrl": "https://mp.weixin.qq.com/s/Sb4YYeEYsBAAczDo8n41UA",
-        "recommendedReason": "Anthropic因支付系统SEPA验证漏洞引发\"零元购\"事件，随后大规模回收漏洞账号并封禁关联账户，作者自用半年多的账号于7月29日被封。作者认为当前已非Claude一家独大，推荐编程用户使用Kimi K3和GPT-5.6 Sol，办公用户选择WorkBuddy+Kimi K3，并指出国产模型已凭二十分之一算力摸到第一梯队。",
-        "publishedAt": "2026-07-29T00:06:00.000Z",
-        "collectedAt": "2026-07-29T17:43:43.829Z",
-        "raw": {
-          "id": "cms5k3il000narobkhjrg843v",
-          "titleEn": "今天，我的Claude也被封号了。",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cms5dje230234ro7czv3o3wap",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenRouter 推出专用 LangChain 集成包，支持 400+ 模型与自动故障切换",
-        "url": "https://openrouter.ai/blog/tutorials/langchain-chatopenrouter-setup",
-        "summary": "OpenRouter 发布了 langchain-openrouter（Python）和 @langchain/openrouter（TypeScript）专用包，让 LangChain 应用无需改造即可调用 400+ 模型和 70+ 提供商。ChatOpenRouter 自动处理负载均衡与故障切换，切换模型只需修改 `provider/model` 格式的字符串。",
-        "description": "OpenRouter 发布了 langchain-openrouter（Python）和 @langchain/openrouter（TypeScript）专用包，让 LangChain 应用无需改造即可调用 400+ 模型和 70+ 提供商。ChatOpenRouter 自动处理负载均衡与故障切换，切换模型只需修改 `provider/model` 格式的字符串。",
-        "category": "tools",
-        "originalSource": "OpenRouter：Announcements（RSS）",
-        "originalUrl": "https://openrouter.ai/blog/tutorials/langchain-chatopenrouter-setup",
-        "recommendedReason": "OpenRouter 发布了 langchain-openrouter（Python）和 @langchain/openrouter（TypeScript）专用包，让 LangChain 应用无需改造即可调用 400+ 模型和 70+ 提供商。ChatOpenRouter 自动处理负载均衡与故障切换，切换模型只需修改 `provider/model` 格式的字符串。",
-        "publishedAt": "2026-07-29T00:00:00.000Z",
-        "collectedAt": "2026-07-29T17:43:43.829Z",
-        "raw": {
-          "id": "cms5dje230234ro7czv3o3wap",
-          "titleEn": "Using OpenRouter With LangChain： ChatOpenRouter Setup Guide",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cms5a9tpy00utro7c9bw0s295",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenAI 发布 Codex 安全 CLI 与 SDK",
-        "url": "https://x.com/thsottiaux/status/2082241164850364555",
-        "summary": "更多开源福利。我们刚刚发布了一个 CLI 和 TypeScript SDK，用于查找、验证和修复代码中的安全漏洞。扫描仓库、审查变更、随时间追踪发现，并在 CI 中运行安全检查。 https://github.com/openai/codex-security",
-        "description": "更多开源福利。我们刚刚发布了一个 CLI 和 TypeScript SDK，用于查找、验证和修复代码中的安全漏洞。扫描仓库、审查变更、随时间追踪发现，并在 CI 中运行安全检查。 https://github.com/openai/codex-security",
-        "category": "products",
-        "originalSource": "X：Tibo (@thsottiaux)",
-        "originalUrl": "https://x.com/thsottiaux/status/2082241164850364555",
-        "recommendedReason": "更多开源福利。我们刚刚发布了一个 CLI 和 TypeScript SDK，用于查找、验证和修复代码中的安全漏洞。扫描仓库、审查变更、随时间追踪发现，并在 CI 中运行安全检查。 https://github.com/openai/codex-security",
-        "publishedAt": "2026-07-28T23:05:54.000Z",
-        "collectedAt": "2026-07-29T17:43:43.829Z",
-        "raw": {
-          "id": "cms5a9tpy00utro7c9bw0s295",
-          "titleEn": "More opensource goodness. We have just released a CLI and TypeScript SDK for finding， validating， an…",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cms588cro008aro7czwgcqs7e",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Anthropic 支持 AI 发展节奏请愿",
-        "url": "https://x.com/AnthropicAI/status/2082228994653696371",
-        "summary": "我们支持这份请愿，我们的 CEO、多位联合创始人及高级员工均已签署。 我们上月发表的关于递归自我改进的研究指出，需要借助工具审慎把控 AI 前沿的发展节奏，以便社会做好准备。我们很高兴看到该领域已达成广泛共识。https://www.pacingthefrontier.com/",
-        "description": "我们支持这份请愿，我们的 CEO、多位联合创始人及高级员工均已签署。 我们上月发表的关于递归自我改进的研究指出，需要借助工具审慎把控 AI 前沿的发展节奏，以便社会做好准备。我们很高兴看到该领域已达成广泛共识。https://www.pacingthefrontier.com/",
-        "category": "industry",
-        "originalSource": "X：Anthropic (@AnthropicAI)",
-        "originalUrl": "https://x.com/AnthropicAI/status/2082228994653696371",
-        "recommendedReason": "我们支持这份请愿，我们的 CEO、多位联合创始人及高级员工均已签署。 我们上月发表的关于递归自我改进的研究指出，需要借助工具审慎把控 AI 前沿的发展节奏，以便社会做好准备。我们很高兴看到该领域已达成广泛共识。https://www.pacingthefrontier.com/",
-        "publishedAt": "2026-07-28T22:17:32.000Z",
-        "collectedAt": "2026-07-29T17:43:43.829Z",
-        "raw": {
-          "id": "cms588cro008aro7czwgcqs7e",
-          "titleEn": "We support this petition， signed by our CEO， several co-founders， and senior staff. Our own resear…",
-          "apiCategory": "industry"
-        }
       }
-    ],
-    "crossSourceHighlights": []
+    ]
   }
 }
