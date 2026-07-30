@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-07-30T16:55:23.421Z
+Updated: 2026-07-30T18:52:47.457Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -12,7 +12,7 @@ Updated: 2026-07-30T16:55:23.421Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-07-31 | daily | [AI Developer Radar｜Daily｜2026-07-31](2026/07/2026-07-31-daily.md) | milvus-io/milvus, Tencent/ncnn, Panniantong/Agent-Reach, HKUDS/nanobot, Graphify-Labs/graphify |
+| 2026-07-31 | daily | [AI Developer Radar｜Daily｜2026-07-31](2026/07/2026-07-31-daily.md) | Tencent/ncnn, milvus-io/milvus, Panniantong/Agent-Reach, Graphify-Labs/graphify, HKUDS/nanobot |
 | 2026-07-30 | daily | [AI Developer Radar｜Daily｜2026-07-30](2026/07/2026-07-30-daily.md) | Tencent/ncnn, milvus-io/milvus, Panniantong/Agent-Reach, Graphify-Labs/graphify, calesthio/OpenMontage |
 | 2026-07-29 | daily | [AI Developer Radar｜Daily｜2026-07-29](2026/07/2026-07-29-daily.md) | huggingface/speech-to-speech, opengeos/GeoLibre, paperswithbacktest/awesome-systematic-trading, milvus-io/milvus, ultralytics/yolov5 |
 | 2026-07-28 | daily | [AI Developer Radar｜Daily｜2026-07-28](2026/07/2026-07-28-daily.md) | tirth8205/code-review-graph, Graphify-Labs/graphify, rohitg00/ai-engineering-from-scratch, calesthio/OpenMontage, affaan-m/ECC |
