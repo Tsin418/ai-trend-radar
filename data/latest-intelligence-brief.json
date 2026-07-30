@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-07-31-2026-07-30T19-11-48-140Z",
-  "generatedAt": "2026-07-30T19:11:48.140Z",
+  "runId": "lightweight-2026-07-31-2026-07-30T20-57-56-292Z",
+  "generatedAt": "2026-07-30T20:57:56.292Z",
   "targetDate": "2026-07-31",
   "brief": {
     "date": "2026-07-31",
     "headline": "Today's strongest AI trend signals are Ai Model Release, Rag / Knowledge Base, and Mcp / Tool Calling.",
     "keyTakeaways": [
-      "Ai Model Release: This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 9 related signal(s). Treat it as correlation evidence rather tha.",
+      "Ai Model Release: This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 7 related signal(s). Treat it as correlation evidence rather tha.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
       "Ai Model Release: watch decision is deep_dive.",
-      "Rag / Knowledge Base: This topic appeared across 3 source(s): aihot, huggingface_models, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven.",
+      "Rag / Knowledge Base: This topic appeared across 2 source(s): aihot, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Rag / Knowledge Base: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
       "Rag / Knowledge Base: watch decision is deep_dive.",
-      "Mcp / Tool Calling: This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven ad.",
+      "Mcp / Tool Calling: This topic appeared across 3 source(s): aihot, huggingface_models, huggingface_spaces, with 7 related signal(s). Treat it as correlation evidence rather than p.",
       "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
       "Mcp / Tool Calling: watch decision is deep_dive."
     ],
@@ -22,31 +22,30 @@
       {
         "id": "topic:ai model release",
         "title": "Ai Model Release",
-        "category": "image-text-to-text",
         "sources": [
           "huggingface_models",
           "huggingface_spaces",
           "hackernews"
         ],
         "sourceCount": 3,
-        "heatScore": 460,
+        "heatScore": 501,
         "confidence": "medium",
         "watchDecision": "deep_dive",
-        "whatItIs": "Ai Model Release is an AI trend topic in image-text-to-text represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 9 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Ai Model Release is an AI trend topic represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
-          "transformers",
           "safetensors",
-          "qwen3_5_moe",
-          "image-text-to-text",
-          "openmle",
-          "frontis-ma1",
-          "machine-learning-engineering",
-          "autoresearch"
+          "deepseek_v4",
+          "deepseek-v4",
+          "vllm",
+          "quantized",
+          "int4",
+          "int8",
+          "base_model:deepseek-ai/DeepSeek-V4-Flash"
         ],
         "evidenceItems": [
           {
@@ -59,10 +58,26 @@
               "llm"
             ],
             "publishedAt": "2026-07-29T22:51:03.000Z",
-            "collectedAt": "2026-07-30T19:11:48.910Z",
+            "collectedAt": "2026-07-30T20:57:58.091Z",
             "metrics": {
-              "upvotes": 370,
-              "commentsCount": 103
+              "upvotes": 371,
+              "commentsCount": 104
+            }
+          },
+          {
+            "id": "hackernews:49047839",
+            "title": "2x, not 10x: coding with LLMs in 2026",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://obryant.dev/p/2x-not-10x/",
+            "tags": [
+              "llm"
+            ],
+            "publishedAt": "2026-07-25T14:27:05.000Z",
+            "collectedAt": "2026-07-30T20:57:58.091Z",
+            "metrics": {
+              "upvotes": 110,
+              "commentsCount": 75
             }
           },
           {
@@ -84,25 +99,37 @@
               "region:us"
             ],
             "publishedAt": "2023-04-17T11:40:06.000Z",
-            "collectedAt": "2026-07-30T19:11:48.577Z",
+            "collectedAt": "2026-07-30T20:57:56.475Z",
             "metrics": {
               "likes": 14065
             }
           },
           {
-            "id": "hackernews:49047839",
-            "title": "2x, not 10x: coding with LLMs in 2026",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://obryant.dev/p/2x-not-10x/",
+            "id": "huggingface_models:appmana/deepseek-v4-int4-int8",
+            "title": "appmana/deepseek-v4-int4-int8",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/appmana/deepseek-v4-int4-int8",
             "tags": [
-              "llm"
+              "safetensors",
+              "deepseek_v4",
+              "deepseek-v4",
+              "vllm",
+              "quantized",
+              "int4",
+              "int8",
+              "base_model:deepseek-ai/DeepSeek-V4-Flash",
+              "base_model:quantized:deepseek-ai/DeepSeek-V4-Flash",
+              "license:other",
+              "8-bit",
+              "dsv4_int",
+              "region:us"
             ],
-            "publishedAt": "2026-07-25T14:27:05.000Z",
-            "collectedAt": "2026-07-30T19:11:48.910Z",
+            "publishedAt": "2026-05-11T22:21:18.000Z",
+            "collectedAt": "2026-07-30T20:57:56.469Z",
             "metrics": {
-              "upvotes": 23,
-              "commentsCount": 0
+              "downloads": 557,
+              "likes": 2
             }
           },
           {
@@ -120,7 +147,7 @@
               "region:us"
             ],
             "publishedAt": "2023-06-08T18:00:26.000Z",
-            "collectedAt": "2026-07-30T19:11:48.577Z",
+            "collectedAt": "2026-07-30T20:57:56.475Z",
             "metrics": {
               "likes": 5082
             }
@@ -143,46 +170,27 @@
               "region:us"
             ],
             "publishedAt": "2024-07-05T16:35:24.000Z",
-            "collectedAt": "2026-07-30T19:11:48.577Z",
+            "collectedAt": "2026-07-30T20:57:56.475Z",
             "metrics": {
               "likes": 3770
-            }
-          },
-          {
-            "id": "hackernews:49113543",
-            "title": "Show HN: Noisegate – a differential-privacy gateway for untrusted AI agents",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://github.com/yashmahajan10/llm-differential-privacy-gateway",
-            "tags": [
-              "ai",
-              "llm",
-              "agent",
-              "agents"
-            ],
-            "publishedAt": "2026-07-30T18:08:48.000Z",
-            "collectedAt": "2026-07-30T19:11:48.910Z",
-            "metrics": {
-              "upvotes": 5,
-              "commentsCount": 0
             }
           }
         ],
         "relatedEntities": [
-          "FrontisAI/Frontis-MA1-35B",
+          "appmana/deepseek-v4-int4-int8",
           "0001AMA/profile-hub",
-          "thenlpresearcher/HuggingFaceTB_SmolLM2-360M_StereoDetect_Model",
           "Open LLM Leaderboard",
           "MusicGen",
           "Live Portrait",
           "2x, not 10x: coding with LLMs in 2026",
-          "Show HN: Noisegate – a differential-privacy gateway for untrusted AI agents"
+          "LLM Honeypot"
         ],
         "metrics": {
-          "votes": 370,
+          "votes": 371,
           "likes": 14065,
-          "commentsCount": 103,
-          "heatScore": 460,
+          "downloads": 557,
+          "commentsCount": 104,
+          "heatScore": 501,
           "crossSourceBonus": 20
         }
       },
@@ -192,28 +200,21 @@
         "category": "products",
         "sources": [
           "aihot",
-          "huggingface_models",
           "hackernews"
         ],
-        "sourceCount": 3,
-        "heatScore": 409,
+        "sourceCount": 2,
+        "heatScore": 340,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Rag / Knowledge Base is an AI trend topic in products represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_models, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Rag / Knowledge Base should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
           "products",
-          "sentence-transformers",
-          "onnx",
-          "safetensors",
-          "openvino",
-          "modernbert",
-          "embeddings",
-          "feature-extraction"
+          "rag"
         ],
         "evidenceItems": [
           {
@@ -225,7 +226,7 @@
             "summary": "Marktechpost AI 团队发布 Token Saver，一款面向 Claude Desktop 的开源 MCP 扩展，通过本地混合 RAG 在设备端检索 PDF，无需上传文件。该工具将 token 消耗削减 92%-99%，并保证数据隐私，设置无需 Python 环境或终端配置。",
             "category": "products",
             "publishedAt": "2026-07-30T07:43:29.000Z",
-            "collectedAt": "2026-07-30T19:11:50.228Z"
+            "collectedAt": "2026-07-30T20:57:57.917Z"
           },
           {
             "id": "hackernews:49104335",
@@ -237,130 +238,22 @@
               "rag"
             ],
             "publishedAt": "2026-07-29T23:18:11.000Z",
-            "collectedAt": "2026-07-30T19:11:48.910Z",
+            "collectedAt": "2026-07-30T20:57:58.091Z",
             "metrics": {
-              "upvotes": 340,
-              "commentsCount": 147
-            }
-          },
-          {
-            "id": "huggingface_models:SZLHOLDINGS/SZL-Khipu-1.5B",
-            "title": "SZLHOLDINGS/SZL-Khipu-1.5B",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/SZLHOLDINGS/SZL-Khipu-1.5B",
-            "category": "text-generation",
-            "tags": [
-              "transformers",
-              "safetensors",
-              "qwen2",
-              "text-generation",
-              "qlora",
-              "governed-agent",
-              "retrieval",
-              "brain-navigator",
-              "grounded-only",
-              "szl-holdings",
-              "alloy",
-              "conversational",
-              "en",
-              "base_model:Qwen/Qwen2.5-1.5B-Instruct",
-              "base_model:finetune:Qwen/Qwen2.5-1.5B-Instruct",
-              "license:apache-2.0",
-              "text-generation-inference",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-07-14T19:28:28.000Z",
-            "collectedAt": "2026-07-30T19:11:48.560Z",
-            "metrics": {
-              "downloads": 1621,
-              "likes": 1
-            }
-          },
-          {
-            "id": "huggingface_models:hotchpotch/bekko-embedding-v1-a8m",
-            "title": "hotchpotch/bekko-embedding-v1-a8m",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/hotchpotch/bekko-embedding-v1-a8m",
-            "category": "sentence-similarity",
-            "tags": [
-              "sentence-transformers",
-              "onnx",
-              "safetensors",
-              "openvino",
-              "modernbert",
-              "embeddings",
-              "feature-extraction",
-              "matryoshka",
-              "multilingual",
-              "retrieval",
-              "sentence-similarity",
-              "arxiv:2607.25180",
-              "base_model:hotchpotch/bekko-embedding-v1-a8m-pt",
-              "base_model:finetune:hotchpotch/bekko-embedding-v1-a8m-pt",
-              "license:mit",
-              "text-embeddings-inference",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-07-07T04:37:59.000Z",
-            "collectedAt": "2026-07-30T19:11:48.560Z",
-            "metrics": {
-              "downloads": 332,
-              "likes": 1
-            }
-          },
-          {
-            "id": "huggingface_models:hotchpotch/bekko-embedding-v1-a25m",
-            "title": "hotchpotch/bekko-embedding-v1-a25m",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/hotchpotch/bekko-embedding-v1-a25m",
-            "category": "sentence-similarity",
-            "tags": [
-              "sentence-transformers",
-              "onnx",
-              "safetensors",
-              "openvino",
-              "modernbert",
-              "embeddings",
-              "feature-extraction",
-              "matryoshka",
-              "multilingual",
-              "retrieval",
-              "sentence-similarity",
-              "arxiv:2607.25180",
-              "base_model:hotchpotch/bekko-embedding-v1-a25m-pt",
-              "base_model:finetune:hotchpotch/bekko-embedding-v1-a25m-pt",
-              "license:mit",
-              "text-embeddings-inference",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-07-19T11:30:28.000Z",
-            "collectedAt": "2026-07-30T19:11:48.560Z",
-            "metrics": {
-              "downloads": 280,
-              "likes": 1
+              "upvotes": 341,
+              "commentsCount": 148
             }
           }
         ],
         "relatedEntities": [
           "Token Saver：用本地混合 RAG 将 Claude PDF token 消耗削减 92%-99% 的开源 MCP 扩展",
-          "hotchpotch/bekko-embedding-v1-a8m",
-          "hotchpotch/bekko-embedding-v1-a25m",
-          "SZLHOLDINGS/SZL-Khipu-1.5B",
           "The Productivity Mirage"
         ],
         "metrics": {
-          "votes": 340,
-          "likes": 1,
-          "downloads": 1621,
-          "commentsCount": 147,
-          "heatScore": 409,
-          "crossSourceBonus": 20
+          "votes": 341,
+          "commentsCount": 148,
+          "heatScore": 340,
+          "crossSourceBonus": 10
         }
       },
       {
@@ -369,25 +262,28 @@
         "category": "products",
         "sources": [
           "aihot",
-          "huggingface_spaces",
-          "hackernews"
+          "huggingface_models",
+          "huggingface_spaces"
         ],
         "sourceCount": 3,
-        "heatScore": 161,
+        "heatScore": 160,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Mcp / Tool Calling is an AI trend topic in products represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_models, huggingface_spaces, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Mcp / Tool Calling should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
           "products",
-          "gradio",
-          "mcp-server",
-          "region:us",
-          "mcp"
+          "transformers",
+          "safetensors",
+          "qwen2",
+          "text-generation",
+          "qwen2.5",
+          "sakthai",
+          "house-of-sak"
         ],
         "evidenceItems": [
           {
@@ -399,7 +295,7 @@
             "summary": "Marktechpost AI 团队发布 Token Saver，一款面向 Claude Desktop 的开源 MCP 扩展，通过本地混合 RAG 在设备端检索 PDF，无需上传文件。该工具将 token 消耗削减 92%-99%，并保证数据隐私，设置无需 Python 环境或终端配置。",
             "category": "products",
             "publishedAt": "2026-07-30T07:43:29.000Z",
-            "collectedAt": "2026-07-30T19:11:50.228Z"
+            "collectedAt": "2026-07-30T20:57:57.917Z"
           },
           {
             "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
@@ -414,7 +310,7 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-07-30T19:11:48.577Z",
+            "collectedAt": "2026-07-30T20:57:56.475Z",
             "metrics": {
               "likes": 3632
             }
@@ -432,7 +328,7 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-07-30T19:11:48.577Z",
+            "collectedAt": "2026-07-30T20:57:56.475Z",
             "metrics": {
               "likes": 3360
             }
@@ -450,7 +346,7 @@
               "region:us"
             ],
             "publishedAt": "2025-10-27T03:20:43.000Z",
-            "collectedAt": "2026-07-30T19:11:48.577Z",
+            "collectedAt": "2026-07-30T20:57:56.475Z",
             "metrics": {
               "likes": 2952
             }
@@ -468,123 +364,63 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-07-30T19:11:48.577Z",
+            "collectedAt": "2026-07-30T20:57:56.475Z",
             "metrics": {
-              "likes": 2905
+              "likes": 2906
             }
           },
           {
-            "id": "hackernews:49114295",
-            "title": "Best MCP Gateways in 2026: A Hands-On Comparison",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://manveerc.substack.com/p/best-mcp-gateways",
+            "id": "huggingface_models:Nanthasit/sakthai-context-1.5b-merged-v2",
+            "title": "Nanthasit/sakthai-context-1.5b-merged-v2",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/Nanthasit/sakthai-context-1.5b-merged-v2",
+            "category": "text-generation",
             "tags": [
-              "mcp"
+              "transformers",
+              "safetensors",
+              "qwen2",
+              "text-generation",
+              "qwen2.5",
+              "sakthai",
+              "house-of-sak",
+              "tool-calling",
+              "conversational",
+              "function-calling",
+              "merged",
+              "rslor",
+              "en",
+              "dataset:Nanthasit/sakthai-combined-v7",
+              "dataset:Nanthasit/sakthai-combined-v8",
+              "base_model:Qwen/Qwen2.5-1.5B-Instruct",
+              "base_model:finetune:Qwen/Qwen2.5-1.5B-Instruct",
+              "license:apache-2.0",
+              "eval-results",
+              "text-generation-inference",
+              "endpoints_compatible",
+              "region:us"
             ],
-            "publishedAt": "2026-07-30T19:09:14.000Z",
-            "collectedAt": "2026-07-30T19:11:48.910Z",
+            "publishedAt": "2026-07-30T10:46:30.000Z",
+            "collectedAt": "2026-07-30T20:57:56.469Z",
             "metrics": {
-              "upvotes": 1,
-              "commentsCount": 0
+              "downloads": 0,
+              "likes": 0
             }
           }
         ],
         "relatedEntities": [
           "Token Saver：用本地混合 RAG 将 Claude PDF token 消耗削减 92%-99% 的开源 MCP 扩展",
+          "Nanthasit/sakthai-context-1.5b-merged-v2",
+          "Nanthasit/sakthai-plus-1.5b",
           "Z Image Turbo",
           "Wan2.2 14B Fast",
           "Wan2.2 14B Preview",
-          "Background Removal",
-          "Best MCP Gateways in 2026: A Hands-On Comparison"
+          "Background Removal"
         ],
         "metrics": {
-          "votes": 1,
           "likes": 3632,
-          "heatScore": 161,
+          "heatScore": 160,
           "crossSourceBonus": 20
-        }
-      },
-      {
-        "id": "topic:coding agent / swe agent",
-        "title": "Coding Agent / Swe Agent",
-        "category": "models",
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "heatScore": 132,
-        "confidence": "medium",
-        "watchDecision": "deep_dive",
-        "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in models represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Coding Agent / Swe Agent should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
-        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
-        "technicalKeywords": [
-          "models",
-          "ai",
-          "claude",
-          "agent"
-        ],
-        "evidenceItems": [
-          {
-            "id": "aihot:cms6i9q2n044erohzw2w8750m",
-            "title": "GPT-5.6 如何融合前沿智能与效率",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency",
-            "summary": "OpenAI 发布 GPT-5.6 模型家族，旗舰款 Sol 开启最大推理时在 Artificial Analysis Coding Agent Index 上超越 Claude Fable 5，成本不到后者一半。Terra 智能持平 GPT-5.5 但价格减半，Luna 定价比 Sol 低 80%。该系列通过负载均衡、推测解码等全栈优化实现更高 token 效率。",
-            "category": "models",
-            "publishedAt": "2026-07-29T00:00:00.000Z",
-            "collectedAt": "2026-07-30T19:11:50.228Z"
-          },
-          {
-            "id": "hackernews:49111019",
-            "title": "Show HN: Claude-account – switch Claude Code accounts without logging in again",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://github.com/hamzarehmandeveloper/claude-account",
-            "tags": [
-              "ai",
-              "claude"
-            ],
-            "publishedAt": "2026-07-30T14:58:59.000Z",
-            "collectedAt": "2026-07-30T19:11:48.910Z",
-            "metrics": {
-              "upvotes": 29,
-              "commentsCount": 21
-            }
-          },
-          {
-            "id": "hackernews:49114231",
-            "title": "What I learned trying to forecast coding-agent spend",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://medium.com/@alexandrarusina/what-i-learned-trying-to-forecast-coding-agent-spend-44e7775c6a90",
-            "tags": [
-              "agent"
-            ],
-            "publishedAt": "2026-07-30T19:02:40.000Z",
-            "collectedAt": "2026-07-30T19:11:48.910Z",
-            "metrics": {
-              "upvotes": 1,
-              "commentsCount": 0
-            }
-          }
-        ],
-        "relatedEntities": [
-          "GPT-5.6 如何融合前沿智能与效率",
-          "Show HN: Claude-account – switch Claude Code accounts without logging in again",
-          "What I learned trying to forecast coding-agent spend"
-        ],
-        "metrics": {
-          "votes": 29,
-          "commentsCount": 21,
-          "heatScore": 132,
-          "crossSourceBonus": 10
         }
       },
       {
@@ -594,92 +430,52 @@
           "huggingface_models"
         ],
         "sourceCount": 1,
-        "heatScore": 76,
+        "heatScore": 64,
         "confidence": "low",
-        "watchDecision": "track",
+        "watchDecision": "wait",
         "whatItIs": "Local Llm / Inference is an AI trend topic represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 1 source(s): huggingface_models, with 9 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 1 source(s): huggingface_models, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
         "technicalKeywords": [
-          "transformers",
-          "safetensors",
-          "text-generation-inference",
-          "unsloth",
-          "llama",
-          "trl",
-          "en",
-          "base_model:unsloth/Meta-Llama-3.1-8B-Instruct"
+          "region:us",
+          "keras",
+          "tflite",
+          "joblib",
+          "onnx",
+          "nemo",
+          "gguf",
+          "llamafile"
         ],
         "evidenceItems": [
           {
-            "id": "huggingface_models:SZLHOLDINGS/SZL-Khipu-1.5B",
-            "title": "SZLHOLDINGS/SZL-Khipu-1.5B",
+            "id": "huggingface_models:appmana/deepseek-v4-int4-int8",
+            "title": "appmana/deepseek-v4-int4-int8",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/SZLHOLDINGS/SZL-Khipu-1.5B",
-            "category": "text-generation",
+            "url": "https://huggingface.co/appmana/deepseek-v4-int4-int8",
             "tags": [
-              "transformers",
               "safetensors",
-              "qwen2",
-              "text-generation",
-              "qlora",
-              "governed-agent",
-              "retrieval",
-              "brain-navigator",
-              "grounded-only",
-              "szl-holdings",
-              "alloy",
-              "conversational",
-              "en",
-              "base_model:Qwen/Qwen2.5-1.5B-Instruct",
-              "base_model:finetune:Qwen/Qwen2.5-1.5B-Instruct",
-              "license:apache-2.0",
-              "text-generation-inference",
-              "endpoints_compatible",
+              "deepseek_v4",
+              "deepseek-v4",
+              "vllm",
+              "quantized",
+              "int4",
+              "int8",
+              "base_model:deepseek-ai/DeepSeek-V4-Flash",
+              "base_model:quantized:deepseek-ai/DeepSeek-V4-Flash",
+              "license:other",
+              "8-bit",
+              "dsv4_int",
               "region:us"
             ],
-            "publishedAt": "2026-07-14T19:28:28.000Z",
-            "collectedAt": "2026-07-30T19:11:48.560Z",
+            "publishedAt": "2026-05-11T22:21:18.000Z",
+            "collectedAt": "2026-07-30T20:57:56.469Z",
             "metrics": {
-              "downloads": 1621,
-              "likes": 1
-            }
-          },
-          {
-            "id": "huggingface_models:SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent",
-            "title": "SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent",
-            "category": "text-generation",
-            "tags": [
-              "transformers",
-              "safetensors",
-              "qwen2",
-              "text-generation",
-              "qlora",
-              "governed-agent",
-              "proposal-only",
-              "receipt-verified",
-              "szl-holdings",
-              "alloy",
-              "conversational",
-              "base_model:Qwen/Qwen2.5-1.5B-Instruct",
-              "base_model:finetune:Qwen/Qwen2.5-1.5B-Instruct",
-              "license:apache-2.0",
-              "text-generation-inference",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-07-13T21:54:40.000Z",
-            "collectedAt": "2026-07-30T19:11:48.560Z",
-            "metrics": {
-              "downloads": 2230,
-              "likes": 0
+              "downloads": 557,
+              "likes": 2
             }
           },
           {
@@ -700,124 +496,119 @@
               "region:us"
             ],
             "publishedAt": "2026-07-19T21:53:55.000Z",
-            "collectedAt": "2026-07-30T19:11:48.560Z",
+            "collectedAt": "2026-07-30T20:57:56.469Z",
             "metrics": {
               "downloads": 697,
               "likes": 1
             }
           },
           {
-            "id": "huggingface_models:hotchpotch/bekko-embedding-v1-a8m",
-            "title": "hotchpotch/bekko-embedding-v1-a8m",
+            "id": "huggingface_models:mradermacher/G9v3-3B-heretic-i1-GGUF",
+            "title": "mradermacher/G9v3-3B-heretic-i1-GGUF",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/hotchpotch/bekko-embedding-v1-a8m",
-            "category": "sentence-similarity",
+            "url": "https://huggingface.co/mradermacher/G9v3-3B-heretic-i1-GGUF",
             "tags": [
-              "sentence-transformers",
-              "onnx",
-              "safetensors",
-              "openvino",
-              "modernbert",
-              "embeddings",
-              "feature-extraction",
-              "matryoshka",
-              "multilingual",
-              "retrieval",
-              "sentence-similarity",
-              "arxiv:2607.25180",
-              "base_model:hotchpotch/bekko-embedding-v1-a8m-pt",
-              "base_model:finetune:hotchpotch/bekko-embedding-v1-a8m-pt",
-              "license:mit",
-              "text-embeddings-inference",
-              "endpoints_compatible",
               "region:us"
             ],
-            "publishedAt": "2026-07-07T04:37:59.000Z",
-            "collectedAt": "2026-07-30T19:11:48.560Z",
-            "metrics": {
-              "downloads": 332,
-              "likes": 1
-            }
-          },
-          {
-            "id": "huggingface_models:hotchpotch/bekko-embedding-v1-a25m",
-            "title": "hotchpotch/bekko-embedding-v1-a25m",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/hotchpotch/bekko-embedding-v1-a25m",
-            "category": "sentence-similarity",
-            "tags": [
-              "sentence-transformers",
-              "onnx",
-              "safetensors",
-              "openvino",
-              "modernbert",
-              "embeddings",
-              "feature-extraction",
-              "matryoshka",
-              "multilingual",
-              "retrieval",
-              "sentence-similarity",
-              "arxiv:2607.25180",
-              "base_model:hotchpotch/bekko-embedding-v1-a25m-pt",
-              "base_model:finetune:hotchpotch/bekko-embedding-v1-a25m-pt",
-              "license:mit",
-              "text-embeddings-inference",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-07-19T11:30:28.000Z",
-            "collectedAt": "2026-07-30T19:11:48.560Z",
-            "metrics": {
-              "downloads": 280,
-              "likes": 1
-            }
-          },
-          {
-            "id": "huggingface_models:unsloth/Inkling-Small-GGUF",
-            "title": "unsloth/Inkling-Small-GGUF",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/unsloth/Inkling-Small-GGUF",
-            "category": "image-text-to-text",
-            "tags": [
-              "transformers",
-              "gguf",
-              "conversational",
-              "image-text-to-text",
-              "audio-text-to-text",
-              "moe",
-              "unsloth",
-              "base_model:thinkingmachines/Inkling-Small",
-              "base_model:quantized:thinkingmachines/Inkling-Small",
-              "license:apache-2.0",
-              "endpoints_compatible",
-              "region:us",
-              "imatrix"
-            ],
-            "publishedAt": "2026-07-30T10:20:13.000Z",
-            "collectedAt": "2026-07-30T19:11:48.560Z",
+            "publishedAt": "2026-07-30T20:57:54.000Z",
+            "collectedAt": "2026-07-30T20:57:56.469Z",
             "metrics": {
               "downloads": 0,
-              "likes": 12
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:Nanthasit/sakthai-context-1.5b-merged-v2",
+            "title": "Nanthasit/sakthai-context-1.5b-merged-v2",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/Nanthasit/sakthai-context-1.5b-merged-v2",
+            "category": "text-generation",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "qwen2",
+              "text-generation",
+              "qwen2.5",
+              "sakthai",
+              "house-of-sak",
+              "tool-calling",
+              "conversational",
+              "function-calling",
+              "merged",
+              "rslor",
+              "en",
+              "dataset:Nanthasit/sakthai-combined-v7",
+              "dataset:Nanthasit/sakthai-combined-v8",
+              "base_model:Qwen/Qwen2.5-1.5B-Instruct",
+              "base_model:finetune:Qwen/Qwen2.5-1.5B-Instruct",
+              "license:apache-2.0",
+              "eval-results",
+              "text-generation-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-07-30T10:46:30.000Z",
+            "collectedAt": "2026-07-30T20:57:56.469Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:Nanthasit/sakthai-plus-1.5b",
+            "title": "Nanthasit/sakthai-plus-1.5b",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/Nanthasit/sakthai-plus-1.5b",
+            "category": "text-generation",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "qwen2",
+              "text-generation",
+              "qwen2.5",
+              "sakthai",
+              "plus",
+              "tool-calling",
+              "conversational",
+              "function-calling",
+              "merged",
+              "rslor",
+              "house-of-sak",
+              "family",
+              "en",
+              "dataset:Nanthasit/sakthai-combined-v7",
+              "dataset:Nanthasit/sakthai-combined-v8",
+              "base_model:Qwen/Qwen2.5-1.5B-Instruct",
+              "base_model:finetune:Qwen/Qwen2.5-1.5B-Instruct",
+              "license:apache-2.0",
+              "model-index",
+              "eval-results",
+              "text-generation-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-07-30T13:02:40.000Z",
+            "collectedAt": "2026-07-30T20:57:56.469Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
             }
           }
         ],
         "relatedEntities": [
-          "HungryDino/meta_llama_3.1_8b_instruct-dolphin_numbers-iterated-gen0",
-          "FrontisAI/Frontis-MA1-30B-GGUF",
-          "unsloth/Inkling-Small-GGUF",
+          "mradermacher/G9v3-3B-heretic-i1-GGUF",
           "AeonAIRisk/npz-object-array-ace-poc",
-          "hotchpotch/bekko-embedding-v1-a8m",
-          "hotchpotch/bekko-embedding-v1-a25m",
-          "mradermacher/Morbid-Miasma-24B-i1-GGUF",
-          "SZLHOLDINGS/SZL-Khipu-1.5B"
+          "Nanthasit/sakthai-context-1.5b-merged-v2",
+          "Nanthasit/sakthai-plus-1.5b",
+          "appmana/deepseek-v4-int4-int8"
         ],
         "metrics": {
-          "likes": 12,
-          "downloads": 2230,
-          "heatScore": 76,
+          "likes": 2,
+          "downloads": 697,
+          "heatScore": 64,
           "crossSourceBonus": 0
         }
       }
@@ -828,8 +619,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-07-30T19:11:48.417Z",
-        "finishedAt": "2026-07-30T19:11:48.417Z",
+        "startedAt": "2026-07-30T20:57:56.329Z",
+        "finishedAt": "2026-07-30T20:57:56.329Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -838,36 +629,36 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-07-30T19:11:48.420Z",
-        "finishedAt": "2026-07-30T19:11:50.229Z",
-        "latencyMs": 1809
+        "startedAt": "2026-07-30T20:57:56.329Z",
+        "finishedAt": "2026-07-30T20:57:57.918Z",
+        "latencyMs": 1589
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 24,
-        "startedAt": "2026-07-30T19:11:48.434Z",
-        "finishedAt": "2026-07-30T19:11:48.560Z",
-        "latencyMs": 126
+        "itemCount": 21,
+        "startedAt": "2026-07-30T20:57:56.344Z",
+        "finishedAt": "2026-07-30T20:57:56.469Z",
+        "latencyMs": 125
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-07-30T19:11:48.436Z",
-        "finishedAt": "2026-07-30T19:11:48.577Z",
-        "latencyMs": 141
+        "startedAt": "2026-07-30T20:57:56.346Z",
+        "finishedAt": "2026-07-30T20:57:56.475Z",
+        "latencyMs": 129
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 34,
-        "startedAt": "2026-07-30T19:11:48.437Z",
-        "finishedAt": "2026-07-30T19:11:48.911Z",
-        "latencyMs": 474
+        "itemCount": 29,
+        "startedAt": "2026-07-30T20:57:56.348Z",
+        "finishedAt": "2026-07-30T20:57:58.092Z",
+        "latencyMs": 1744
       }
     ],
     "dataNotes": [
@@ -877,112 +668,6 @@
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
-      {
-        "id": "huggingface_models:Adnan666/whisper-small-pashto",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "Adnan666/whisper-small-pashto",
-        "url": "https://huggingface.co/Adnan666/whisper-small-pashto",
-        "tags": [
-          "transformers",
-          "safetensors",
-          "whisper",
-          "automatic-speech-recognition",
-          "generated_from_trainer",
-          "base_model:ihanif/whisper_small_ps_augmented",
-          "base_model:finetune:ihanif/whisper_small_ps_augmented",
-          "license:apache-2.0",
-          "endpoints_compatible",
-          "region:us"
-        ],
-        "category": "automatic-speech-recognition",
-        "metrics": {
-          "downloads": 1202,
-          "likes": 3
-        },
-        "publishedAt": "2026-07-02T07:40:24.000Z",
-        "updatedAt": "2026-07-30T19:11:03.000Z",
-        "collectedAt": "2026-07-30T19:11:48.560Z",
-        "raw": {
-          "pipelineTag": "automatic-speech-recognition"
-        }
-      },
-      {
-        "id": "huggingface_models:SZLHOLDINGS/SZL-Khipu-1.5B",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "SZLHOLDINGS/SZL-Khipu-1.5B",
-        "url": "https://huggingface.co/SZLHOLDINGS/SZL-Khipu-1.5B",
-        "tags": [
-          "transformers",
-          "safetensors",
-          "qwen2",
-          "text-generation",
-          "qlora",
-          "governed-agent",
-          "retrieval",
-          "brain-navigator",
-          "grounded-only",
-          "szl-holdings",
-          "alloy",
-          "conversational",
-          "en",
-          "base_model:Qwen/Qwen2.5-1.5B-Instruct",
-          "base_model:finetune:Qwen/Qwen2.5-1.5B-Instruct",
-          "license:apache-2.0",
-          "text-generation-inference",
-          "endpoints_compatible",
-          "region:us"
-        ],
-        "category": "text-generation",
-        "metrics": {
-          "downloads": 1621,
-          "likes": 1
-        },
-        "publishedAt": "2026-07-14T19:28:28.000Z",
-        "updatedAt": "2026-07-30T19:09:58.000Z",
-        "collectedAt": "2026-07-30T19:11:48.560Z",
-        "raw": {
-          "pipelineTag": "text-generation"
-        }
-      },
-      {
-        "id": "huggingface_models:SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent",
-        "url": "https://huggingface.co/SZLHOLDINGS/SZL-Forge-1.5B-ReceiptAgent",
-        "tags": [
-          "transformers",
-          "safetensors",
-          "qwen2",
-          "text-generation",
-          "qlora",
-          "governed-agent",
-          "proposal-only",
-          "receipt-verified",
-          "szl-holdings",
-          "alloy",
-          "conversational",
-          "base_model:Qwen/Qwen2.5-1.5B-Instruct",
-          "base_model:finetune:Qwen/Qwen2.5-1.5B-Instruct",
-          "license:apache-2.0",
-          "text-generation-inference",
-          "endpoints_compatible",
-          "region:us"
-        ],
-        "category": "text-generation",
-        "metrics": {
-          "downloads": 2230,
-          "likes": 0
-        },
-        "publishedAt": "2026-07-13T21:54:40.000Z",
-        "updatedAt": "2026-07-30T19:09:56.000Z",
-        "collectedAt": "2026-07-30T19:11:48.560Z",
-        "raw": {
-          "pipelineTag": "text-generation"
-        }
-      },
       {
         "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
         "source": "huggingface_spaces",
@@ -1007,7 +692,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-07-30T19:11:48.577Z",
+        "collectedAt": "2026-07-30T20:57:56.475Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -1030,7 +715,7 @@
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-07-30T19:11:48.577Z",
+        "collectedAt": "2026-07-30T20:57:56.475Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -1053,11 +738,41 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-07-30T19:11:48.577Z",
+        "collectedAt": "2026-07-30T20:57:56.475Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
         }
+      },
+      {
+        "id": "huggingface_models:appmana/deepseek-v4-int4-int8",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "appmana/deepseek-v4-int4-int8",
+        "url": "https://huggingface.co/appmana/deepseek-v4-int4-int8",
+        "tags": [
+          "safetensors",
+          "deepseek_v4",
+          "deepseek-v4",
+          "vllm",
+          "quantized",
+          "int4",
+          "int8",
+          "base_model:deepseek-ai/DeepSeek-V4-Flash",
+          "base_model:quantized:deepseek-ai/DeepSeek-V4-Flash",
+          "license:other",
+          "8-bit",
+          "dsv4_int",
+          "region:us"
+        ],
+        "metrics": {
+          "downloads": 557,
+          "likes": 2
+        },
+        "publishedAt": "2026-05-11T22:21:18.000Z",
+        "updatedAt": "2026-07-30T20:56:44.000Z",
+        "collectedAt": "2026-07-30T20:57:56.469Z",
+        "raw": {}
       },
       {
         "id": "huggingface_spaces:mteb/leaderboard",
@@ -1077,7 +792,7 @@
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
         "updatedAt": "2026-07-30T18:02:18.000Z",
-        "collectedAt": "2026-07-30T19:11:48.577Z",
+        "collectedAt": "2026-07-30T20:57:56.475Z",
         "raw": {
           "sdk": "docker",
           "emoji": "📊"
@@ -1105,9 +820,58 @@
           "likes": 1
         },
         "publishedAt": "2026-07-19T21:53:55.000Z",
-        "updatedAt": "2026-07-30T19:11:19.000Z",
-        "collectedAt": "2026-07-30T19:11:48.560Z",
+        "updatedAt": "2026-07-30T20:57:10.000Z",
+        "collectedAt": "2026-07-30T20:57:56.469Z",
         "raw": {}
+      },
+      {
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
+        "tags": [
+          "gradio",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5120
+        },
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-07-30T20:57:56.475Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5082
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-07-30T20:57:56.475Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
       }
     ],
     "developerBuzz": [
@@ -1122,11 +886,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 581,
+          "upvotes": 585,
           "commentsCount": 309
         },
         "publishedAt": "2026-07-29T21:25:40.000Z",
-        "collectedAt": "2026-07-30T19:11:48.910Z",
+        "collectedAt": "2026-07-30T20:57:58.091Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49103285",
           "matchedKeywords": [
@@ -1146,16 +910,41 @@
           "robotics"
         ],
         "metrics": {
-          "upvotes": 311,
-          "commentsCount": 295
+          "upvotes": 382,
+          "commentsCount": 340
         },
         "publishedAt": "2026-07-30T15:15:48.000Z",
-        "collectedAt": "2026-07-30T19:11:48.910Z",
+        "collectedAt": "2026-07-30T20:57:58.091Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49111237",
           "matchedKeywords": [
             "gemini",
             "robotics"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:49112867",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Advancing the price-performance frontier with GPT‑5.6",
+        "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+        "author": "tedsanders",
+        "tags": [
+          "ai",
+          "openai"
+        ],
+        "metrics": {
+          "upvotes": 395,
+          "commentsCount": 258
+        },
+        "publishedAt": "2026-07-30T17:15:51.000Z",
+        "collectedAt": "2026-07-30T20:57:58.091Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=49112867",
+          "matchedKeywords": [
+            "ai",
+            "openai"
           ]
         }
       },
@@ -1171,11 +960,11 @@
           "openai"
         ],
         "metrics": {
-          "upvotes": 591,
-          "commentsCount": 226
+          "upvotes": 592,
+          "commentsCount": 227
         },
         "publishedAt": "2026-07-28T20:52:55.000Z",
-        "collectedAt": "2026-07-30T19:11:48.910Z",
+        "collectedAt": "2026-07-30T20:57:58.091Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49089755",
           "matchedKeywords": [
@@ -1195,43 +984,80 @@
           "agent"
         ],
         "metrics": {
-          "upvotes": 449,
-          "commentsCount": 251
+          "upvotes": 451,
+          "commentsCount": 252
         },
         "publishedAt": "2026-07-28T20:28:33.000Z",
-        "collectedAt": "2026-07-30T19:11:48.910Z",
+        "collectedAt": "2026-07-30T20:57:58.091Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49089500",
           "matchedKeywords": [
             "agent"
           ]
         }
-      },
-      {
-        "id": "hackernews:49096188",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Document-borne AI worms can self-propagate through Copilot for Word",
-        "url": "https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/",
-        "author": "Canopy9560",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 377,
-          "commentsCount": 288
-        },
-        "publishedAt": "2026-07-29T11:44:33.000Z",
-        "collectedAt": "2026-07-30T19:11:48.910Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=49096188",
-          "matchedKeywords": [
-            "ai"
-          ]
-        }
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cms7yt12z02fdro20rgzdgpdy",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "法官称特朗普政府仍缺乏证据将Anthropic列为供应链风险",
+        "url": "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label",
+        "summary": "美国地区法官Rita Lin表示，特朗普政府未能提供充分证据，证明将Anthropic列为供应链风险并禁止联邦政府使用其技术的合理性。争议源于Anthropic拒绝将其AI用于大规模监控或致命武器决策，而国防部主张私营公司不应限制军方技术使用。",
+        "description": "美国地区法官Rita Lin表示，特朗普政府未能提供充分证据，证明将Anthropic列为供应链风险并禁止联邦政府使用其技术的合理性。争议源于Anthropic拒绝将其AI用于大规模监控或致命武器决策，而国防部主张私营公司不应限制军方技术使用。",
+        "category": "industry",
+        "originalSource": "TechCrunch：AI（RSS）",
+        "originalUrl": "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label",
+        "recommendedReason": "美国地区法官Rita Lin表示，特朗普政府未能提供充分证据，证明将Anthropic列为供应链风险并禁止联邦政府使用其技术的合理性。争议源于Anthropic拒绝将其AI用于大规模监控或致命武器决策，而国防部主张私营公司不应限制军方技术使用。",
+        "publishedAt": "2026-07-30T20:26:38.000Z",
+        "collectedAt": "2026-07-30T20:57:57.917Z",
+        "raw": {
+          "id": "cms7yt12z02fdro20rgzdgpdy",
+          "titleEn": "Judge says Trump admin still lacks evidence for Anthropic 'supply chain risk' label",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cms7yv0bp02mwro20ov2cktzi",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Gemini Spark 集成 Chrome 自动浏览功能",
+        "url": "https://x.com/GeminiApp/status/2082923048362299629",
+        "summary": "Gemini Spark 🤝 @GoogleChrome Gemini Spark 现已与 Google Chrome 的自动浏览功能集成。经你许可，Spark 可直接在你的 Chrome 浏览器中处理网页任务，例如预约看房或自动填写航班信息。",
+        "description": "Gemini Spark 🤝 @GoogleChrome Gemini Spark 现已与 Google Chrome 的自动浏览功能集成。经你许可，Spark 可直接在你的 Chrome 浏览器中处理网页任务，例如预约看房或自动填写航班信息。",
+        "category": "products",
+        "originalSource": "X：Gemini (@GeminiApp)",
+        "originalUrl": "https://x.com/GeminiApp/status/2082923048362299629",
+        "recommendedReason": "Gemini Spark 🤝 @GoogleChrome Gemini Spark 现已与 Google Chrome 的自动浏览功能集成。经你许可，Spark 可直接在你的 Chrome 浏览器中处理网页任务，例如预约看房或自动填写航班信息。",
+        "publishedAt": "2026-07-30T20:15:28.000Z",
+        "collectedAt": "2026-07-30T20:57:57.917Z",
+        "raw": {
+          "id": "cms7yv0bp02mwro20ov2cktzi",
+          "titleEn": "Gemini Spark 🤝 @GoogleChrome Gemini Spark is now integrated with auto browse in Google Chrome. Wit…",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cms7w9p0p000fro20pyggbkmb",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Google Earth 集成 Nano Banana 2 图像生成",
+        "url": "https://x.com/GoogleAI/status/2082902334984609936",
+        "summary": "Google Earth 网页版上线基于 Nano Banana 2 的图像生成功能，用户可通过文本提示词将卫星与 3D 影像结合，重新想象全球任意地点（如百年前的城市风貌或社区新球场）。该功能现已面向所有用户开放。",
+        "description": "Google Earth 网页版上线基于 Nano Banana 2 的图像生成功能，用户可通过文本提示词将卫星与 3D 影像结合，重新想象全球任意地点（如百年前的城市风貌或社区新球场）。该功能现已面向所有用户开放。",
+        "category": "products",
+        "originalSource": "X：Google AI (@GoogleAI)",
+        "originalUrl": "https://x.com/GoogleAI/status/2082902334984609936",
+        "recommendedReason": "Google Earth 网页版上线基于 Nano Banana 2 的图像生成功能，用户可通过文本提示词将卫星与 3D 影像结合，重新想象全球任意地点（如百年前的城市风貌或社区新球场）。该功能现已面向所有用户开放。",
+        "publishedAt": "2026-07-30T18:53:09.000Z",
+        "collectedAt": "2026-07-30T20:57:57.917Z",
+        "raw": {
+          "id": "cms7w9p0p000fro20pyggbkmb",
+          "titleEn": "What if you could see a city as it looked 100 years ago， or visualize a new basketball court at your…",
+          "apiCategory": "ai-products"
+        }
+      },
       {
         "id": "aihot:cms7teqy003lfropbgykvnbjy",
         "source": "aihot",
@@ -1245,7 +1071,7 @@
         "originalUrl": "https://x.com/OpenRouter/status/2082882158574911564",
         "recommendedReason": "GPT-5.6 Terra 和 Luna 刚刚获得了 @OpenAI 的降价。 OpenRouter 的价格仍然更低。我们的 50% 独家折扣在此基础上适用，使 Luna 输入降至 $0.1/M、输出降至 $0.6/M，Terra 输入降至 $1/M、输出降至 $6/M。 使用 luna 扩展你的工作负载：https://openrouter.ai/openai/gpt-5.6-luna",
         "publishedAt": "2026-07-30T17:32:59.000Z",
-        "collectedAt": "2026-07-30T19:11:50.228Z",
+        "collectedAt": "2026-07-30T20:57:57.917Z",
         "raw": {
           "id": "cms7teqy003lfropbgykvnbjy",
           "titleEn": "GPT-5.6 Terra and Luna just got price cuts from @OpenAI. OpenRouter is cheaper still. Our 50% exclu…",
@@ -1265,7 +1091,7 @@
         "originalUrl": "https://github.blog/ai-and-ml/github-copilot/stacked-sessions-and-pull-requests-in-the-github-copilot-app",
         "recommendedReason": "GitHub Copilot 应用推出堆叠会话功能，允许用户在同一个仓库中创建一系列相互承接的任务，每个会话可基于前一个会话的成果继续工作。作者通过一个十余年历史的个人项目演示了该功能：先使用 Plan 模式制定前端现代化计划，再通过堆叠会话将 React-Bootstrap 替换工作拆分为独立会话，并自动为每个会话创建对应的拉取请求，避免范围蔓延。",
         "publishedAt": "2026-07-30T17:30:24.000Z",
-        "collectedAt": "2026-07-30T19:11:50.228Z",
+        "collectedAt": "2026-07-30T20:57:57.917Z",
         "raw": {
           "id": "cms7t8vfu0365ropbxnkcx89n",
           "titleEn": "Stacked sessions and pull requests in the GitHub Copilot app",
@@ -1285,7 +1111,7 @@
         "originalUrl": "https://x.com/AravSrinivas/status/2082872551538380939",
         "recommendedReason": "在 Perplexity Computer 上推出 Projects。 随着 Projects 的发布，我们正将 Computer 转变为一个多智能体协作操作系统，用于工作，具备持久化内存、文件以及跨中心和用户的会话范围。 现已向所有用户开放！",
         "publishedAt": "2026-07-30T16:54:48.000Z",
-        "collectedAt": "2026-07-30T19:11:50.228Z",
+        "collectedAt": "2026-07-30T20:57:57.917Z",
         "raw": {
           "id": "cms7sw59802yyropbrio5ml9u",
           "titleEn": "Introducing Projects on Perplexity Computer. With the launch of Projects， we're turning Computer int…",
@@ -1305,7 +1131,7 @@
         "originalUrl": "https://www.lmsys.org/blog/2026-07-30-sglang-google-tpu",
         "recommendedReason": "RadixArk 与 Google Cloud 合作，将开源推理框架 SGLang 引入 Google TPU，开发者可通过 SGL-JAX 在最新 TPU 上运行 Gemma、Qwen、DeepSeek 等大语言模型及多模态模型。",
         "publishedAt": "2026-07-30T15:50:35.428Z",
-        "collectedAt": "2026-07-30T19:11:50.228Z",
+        "collectedAt": "2026-07-30T20:57:57.917Z",
         "raw": {
           "id": "cms7oxay30o4nro2e4t3r6ud2",
           "titleEn": "News RadixArk Joins Forces with Google to Bring Full SGLang Features to TPUs RadixArk and Google Cloud are partnering to bring SGLang to TPUs， giving developers ultimate flexibility for running workloads on their choice of hardware. RadixArk & Google",
@@ -1325,70 +1151,10 @@
         "originalUrl": "https://x.com/GoogleDeepMind/status/2082844162928381956",
         "recommendedReason": "One brain. For any robot. 🤖 我们正在推出 Gemini Robotics 2：我们的下一代物理 AI，为仿人机器人带来全身智能、高级灵巧性、多机器人团队协作等能力。",
         "publishedAt": "2026-07-30T15:02:00.000Z",
-        "collectedAt": "2026-07-30T19:11:50.228Z",
+        "collectedAt": "2026-07-30T20:57:57.917Z",
         "raw": {
           "id": "cms7o3b8o0nt9ro2ery7x50bb",
           "titleEn": "One brain. For any robot. 🤖 We're launching Gemini Robotics 2： our next-generation physical AI bri…",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cms7o2xsk0nraro2epo1gt8ln",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Gemini Robotics ER 2：用视频理解、任务编排与多机器人协作赋能机器人",
-        "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration",
-        "summary": "Google DeepMind 推出 Gemini Robotics ER 2，一个基于 Gemini 的机器人基础模型。该模型在视频理解、工具编排和多机器人协作方面实现阶跃式提升，使机器人能够推理、协作并解决真实世界任务。",
-        "description": "Google DeepMind 推出 Gemini Robotics ER 2，一个基于 Gemini 的机器人基础模型。该模型在视频理解、工具编排和多机器人协作方面实现阶跃式提升，使机器人能够推理、协作并解决真实世界任务。",
-        "category": "models",
-        "originalSource": "Google DeepMind：Blog（RSS）",
-        "originalUrl": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration",
-        "recommendedReason": "Google DeepMind 推出 Gemini Robotics ER 2，一个基于 Gemini 的机器人基础模型。该模型在视频理解、工具编排和多机器人协作方面实现阶跃式提升，使机器人能够推理、协作并解决真实世界任务。",
-        "publishedAt": "2026-07-30T15:00:59.000Z",
-        "collectedAt": "2026-07-30T19:11:50.228Z",
-        "raw": {
-          "id": "cms7o2xsk0nraro2epo1gt8ln",
-          "titleEn": "Gemini Robotics ER 2： powering robotics with video understanding， task orchestration， and multi-robot collaboration",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cms7ioy5f0hfaro2ehgiti5h1",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "FCC 禁止进口中国新型机器人与联网逆变器",
-        "url": "https://the-decoder.com/fcc-bans-new-chinese-robots-and-power-inverters-to-protect-us-ai-buildout-from-foreign-threats",
-        "summary": "美国 FCC 自 7 月 28 日起禁止进口中国新型\"先进机器人设备\"和联网电源逆变器，理由包括防止供应链中断、数据窃取和网络攻击。禁令覆盖几乎所有重量超 2 公斤、具备无线连接和感知能力的软件控制地面机器人，但已上市型号不受影响。",
-        "description": "美国 FCC 自 7 月 28 日起禁止进口中国新型\"先进机器人设备\"和联网电源逆变器，理由包括防止供应链中断、数据窃取和网络攻击。禁令覆盖几乎所有重量超 2 公斤、具备无线连接和感知能力的软件控制地面机器人，但已上市型号不受影响。",
-        "category": "industry",
-        "originalSource": "The Decoder：AI News（RSS）",
-        "originalUrl": "https://the-decoder.com/fcc-bans-new-chinese-robots-and-power-inverters-to-protect-us-ai-buildout-from-foreign-threats",
-        "recommendedReason": "美国 FCC 自 7 月 28 日起禁止进口中国新型\"先进机器人设备\"和联网电源逆变器，理由包括防止供应链中断、数据窃取和网络攻击。禁令覆盖几乎所有重量超 2 公斤、具备无线连接和感知能力的软件控制地面机器人，但已上市型号不受影响。",
-        "publishedAt": "2026-07-30T12:47:46.000Z",
-        "collectedAt": "2026-07-30T19:11:50.228Z",
-        "raw": {
-          "id": "cms7ioy5f0hfaro2ehgiti5h1",
-          "titleEn": "FCC bans new Chinese robots and power inverters to protect US AI buildout from foreign threats",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cms7sdkx702mjropbnq4l267q",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "GPT-5.6 如何推进性价比前沿",
-        "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
-        "summary": "OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。",
-        "description": "OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。",
-        "category": "models",
-        "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
-        "originalUrl": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
-        "recommendedReason": "OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。",
-        "publishedAt": "2026-07-30T10:00:00.000Z",
-        "collectedAt": "2026-07-30T19:11:50.228Z",
-        "raw": {
-          "id": "cms7sdkx702mjropbnq4l267q",
-          "titleEn": "Advancing the price-performance frontier with GPT-5.6",
           "apiCategory": "ai-models"
         }
       }
