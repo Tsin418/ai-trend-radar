@@ -1,208 +1,198 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-07-31T01:59:46.921Z",
+  "generatedAt": "2026-07-31T03:49:51.301Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
+        "id": "http://arxiv.org/abs/2607.28628v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Learning to Trace Seiberg Dualities",
+        "url": "https://arxiv.org/pdf/2607.28628v1",
+        "description": "Dualities play an important role in establishing both microscopic and emergent phenomena in a wide range of physical systems. In practice, though, it can often be computationally challenging to establish when two systems are dual, even when all of the \"rules of the game\" are well-known. Said differently, when confronted with two systems, how can one efficiently establish that they are in fact dual? In this paper we use machine learning methods to address this question for Seiberg dualities of su",
+        "summary": "Dualities play an important role in establishing both microscopic and emergent phenomena in a wide range of physical systems. In practice, though, it can often be computationally challenging to establish when two systems are dual, even when all of the \"rules of the game\" are well-known. Said differently, when confronted with two systems, how can one efficiently establish that they are in fact dual? In this paper we use machine learning methods to address this question for Seiberg dualities of supersymmetric quiver gauge theories. Mathematically, this involves establishing mutations of quivers, which is in turn a variation on the theme of \"learning to unknot\". On the one hand, this leads us to a practical tool for establishing the computational complexity of different dualities. On the other hand, it also allows us to study how different network architectures learn how to trace Seiberg dualities. We find that for quivers with a modest number of quiver nodes (of order $10$), different network architectures consisting of transformers and multi-layer perceptrons tend to outperform deterministic algorithms. Supplementing the network by well-established pathfinder algorithms (essentially \"Google Maps for quivers\") leads to an additional improvement in the efficiency and accuracy of the search strategy. We anticipate that this class of questions can serve as a useful benchmark for frontier AI models applied to theoretical physics.",
+        "author": "Jonathan J. Heckman, Shani Meynet, Alessandro Mininno, Gary Shiu",
         "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
+          "hep-th",
+          "cs.AI",
+          "cs.LG",
+          "hep-ph",
+          "benchmark"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 14065
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-07-31T01:59:47.095Z",
+        "category": "hep-th",
+        "language": "en",
+        "publishedAt": "2026-07-30T17:59:56Z",
+        "updatedAt": "2026-07-30T17:59:56Z",
+        "collectedAt": "2026-07-31T03:49:44.017Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.28628v1",
+          "authors": [
+            "Jonathan J. Heckman",
+            "Shani Meynet",
+            "Alessandro Mininno",
+            "Gary Shiu"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: benchmark"
       },
       {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
+        "id": "http://arxiv.org/abs/2607.28627v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
+        "url": "https://arxiv.org/pdf/2607.28627v1",
+        "description": "Long visual context poses a challenge for vision-language models: performance degrades as the number of distractors grows, and processing all tokens at once is computationally infeasible under GPU memory constraints. We present ReToken, a single learnable embedding trained as an explicit retrieval target that selects a sparse set of query-relevant visual tokens from a pre-filled visual KV cache. Trained on only a small image-QA dataset, ReToken yields consistent gains across image and video benc",
+        "summary": "Long visual context poses a challenge for vision-language models: performance degrades as the number of distractors grows, and processing all tokens at once is computationally infeasible under GPU memory constraints. We present ReToken, a single learnable embedding trained as an explicit retrieval target that selects a sparse set of query-relevant visual tokens from a pre-filled visual KV cache. Trained on only a small image-QA dataset, ReToken yields consistent gains across image and video benchmarks: on Visual Haystacks it improves Qwen3VL-8B by 13.4 points and InternVL3.5 by 12.4 points (>20% relative), and on LVBench it transfers zero-shot to long video for an 8.0-point gain with Qwen3VL-8B. Thanks to its lightweight design, both training and long-video inference fit on a single H100. Code is available at: https://github.com/avaxiao/ReToken",
+        "author": "Yao Xiao, Reuben Tan, Zhen Zhu, Yuqun Wu, Jianfeng Gao, Derek Hoiem",
         "tags": [
-          "docker",
-          "region:us"
+          "cs.CV",
+          "cs.AI",
+          "cs.LG",
+          "embedding",
+          "benchmark"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11193
-        },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-07-31T01:59:47.095Z",
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-07-30T17:59:56Z",
+        "updatedAt": "2026-07-30T17:59:56Z",
+        "collectedAt": "2026-07-31T03:49:44.017Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.28627v1",
+          "authors": [
+            "Yao Xiao",
+            "Reuben Tan",
+            "Zhen Zhu",
+            "Yuqun Wu",
+            "Jianfeng Gao",
+            "Derek Hoiem"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: embedding, benchmark"
       },
       {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
+        "id": "http://arxiv.org/abs/2607.28623v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "PAC-MAN: Perception-Aware CBF-RL for Whole-Body Safety in Humanoid Dodgeball",
+        "url": "https://arxiv.org/pdf/2607.28623v1",
+        "description": "We present PAC-MAN, a perception-aware CBF-RL framework that couples control-barrier safety with deployment-realistic onboard sensing for whole-body humanoid dodgeball. The deployed policy sees the ball only as segmentation-masked depth from a head-mounted camera, while training-time CBF guidance represents clearance to every body link, and an adversarial motion prior regularizes the resulting evasive reflexes. We evaluate on a controlled any-link contact benchmark with seeded throws in two regi",
+        "summary": "We present PAC-MAN, a perception-aware CBF-RL framework that couples control-barrier safety with deployment-realistic onboard sensing for whole-body humanoid dodgeball. The deployed policy sees the ball only as segmentation-masked depth from a head-mounted camera, while training-time CBF guidance represents clearance to every body link, and an adversarial motion prior regularizes the resulting evasive reflexes. We evaluate on a controlled any-link contact benchmark with seeded throws in two regimes: single throws and a deployment loop in which the robot walks back to its station and recovers between throws. On this benchmark, the policy comes within a few points of a privileged state oracle: a fixed onboard camera alone is adequate for evasion. We find that usable barrier structure depends on perceptual observability: Joint-CBF gives the best performance with accurate ball states, degrades under fixed-camera observations when used only as training guidance, and recovers with a ball-tracking gimbal or privileged runtime filter. We therefore deploy a lightweight Link-CBF policy zero-shot on the Unitree G1 in the real world, where it tolerates imperfect perception, succeeds on 95% of throws, and uses semantic segmentation to dodge different balls.",
+        "author": "Lizhi Yang, Junheng Li, Aaron D. Ames",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.RO",
+          "cs.AI",
+          "safety",
+          "benchmark"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10149
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-07-31T01:59:47.095Z",
+        "category": "cs.RO",
+        "language": "en",
+        "publishedAt": "2026-07-30T17:59:35Z",
+        "updatedAt": "2026-07-30T17:59:35Z",
+        "collectedAt": "2026-07-31T03:49:44.017Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.28623v1",
+          "authors": [
+            "Lizhi Yang",
+            "Junheng Li",
+            "Aaron D. Ames"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: safety, benchmark"
       },
       {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
+        "id": "http://arxiv.org/abs/2607.28618v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
+        "url": "https://arxiv.org/pdf/2607.28618v1",
+        "description": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a result, scientists and AI agents need to locate relevant information, verify their provenance, and assemble cross-paper answers manually. We present AskChem, a claim-centered infrastructure for cross-paper chemistry search. AskChem changes the unit of retrieval from the paper to the provenance-carrying c",
+        "summary": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a result, scientists and AI agents need to locate relevant information, verify their provenance, and assemble cross-paper answers manually. We present AskChem, a claim-centered infrastructure for cross-paper chemistry search. AskChem changes the unit of retrieval from the paper to the provenance-carrying claim: each paper is converted into atomic, typed claims, each grounded by a source DOI and a verbatim quote or an explicit evidence locator. Over this shared claim store, AskChem exposes complementary structures for search and synthesis: a stabilized faceted taxonomy for hierarchical retrieval and browsing, an evidence graph linking claims through relations, and an exploratory living taxonomy that situates indexed papers under scientific principles. AskChem currently indexes 2.4M claims from 147K papers and provides a web interface, as well as REST, SDK, and MCP access for AI agents. On AskChem-Bench, grounding a GPT-5.5 reader in AskChem yields 100% resolvable DOIs, compared with 88.3% without retrieval, and the highest citation density among five tested systems. AskChem is live at https://askchem.org.",
+        "author": "Bing Yan, Gregory Wolfe, Stefano Martiniani, Kyunghyun Cho",
         "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
+          "cs.CL",
+          "cs.AI",
+          "cs.IR",
+          "cs.LG",
+          "agent",
+          "mcp"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7596
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-07-30T18:02:18.000Z",
-        "collectedAt": "2026-07-31T01:59:47.095Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-07-30T17:59:11Z",
+        "updatedAt": "2026-07-30T17:59:11Z",
+        "collectedAt": "2026-07-31T03:49:44.017Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "📊"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2607.28618v1",
+          "authors": [
+            "Bing Yan",
+            "Gregory Wolfe",
+            "Stefano Martiniani",
+            "Kyunghyun Cho"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: agent, mcp"
       },
       {
-        "id": "huggingface_models:AeonAIRisk/npz-object-array-ace-poc",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "AeonAIRisk/npz-object-array-ace-poc",
-        "url": "https://huggingface.co/AeonAIRisk/npz-object-array-ace-poc",
+        "id": "http://arxiv.org/abs/2607.28617v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
+        "url": "https://arxiv.org/pdf/2607.28617v1",
+        "description": "System prompts are instructions configured by developers to govern the behaviors of foundation models in AI applications. They are used throughout commercial AI products, but are rarely disclosed to the public or regulators, creating a serious trust and accountability gap in the wide deployment of AI systems. In this paper, we introduce Artificial Intelligence System Prompt Assurance (AISPA), a user-centric framework for systematically auditing system prompts in AI systems. AISPA examines specif",
+        "summary": "System prompts are instructions configured by developers to govern the behaviors of foundation models in AI applications. They are used throughout commercial AI products, but are rarely disclosed to the public or regulators, creating a serious trust and accountability gap in the wide deployment of AI systems. In this paper, we introduce Artificial Intelligence System Prompt Assurance (AISPA), a user-centric framework for systematically auditing system prompts in AI systems. AISPA examines specific parts of a system prompt and evaluates them along eight dimensions that matter to users. We then use this framework to review 3,249 instructions from system prompts in 88 commercial AI products, classifying each instruction as either protective (of users) or problematic. Our audit surfaces four core findings. First, system prompt design varies substantially across products and developers, with some organizations averaging over 60 protective instructions per product while others average fewer than 5. Second, protective instructions are widely adopted but shallow in scope: 98.9% of products contain at least one, yet only 24% cover all eight dimensions of the AISPA taxonomy. Third, system prompts have grown steadily longer and more protective of users, suggesting that user protection is becoming a more visible concern in commercial prompt design. Fourth, despite this progress, problematic instructions remain pervasive: roughly 40% of products contain at least one instruction that works against user interests, and protective and problematic instructions frequently coexist within the same prompt. Our findings highlight the need for greater transparency, standardization, and independent oversight for system prompts in commercial AI products.",
+        "author": "Xiangning Lin, Shenzhe Zhu, Shu Yang, Zhenyu Zhang, Haoqian Zhang, Yipeng Zhao, Chengxuan Qian, Tianwei Wang, Ziheng Zhang, Zhenlong Yuan, Dingcheng Wang, Juncheng Wu, Yuan Si, Jiaxin Liu, Baolong Bi, Robert Mahari, Tobin South, Dazza Greenwood, Zexue He, Rishi Bommasani, Sophia Kazinnik, Andreas Haupt, Samuele Marro, Erik Brynjolfsson, Alex Pentland, Jiaxin Pei",
         "tags": [
-          "keras",
-          "tflite",
-          "joblib",
-          "onnx",
-          "nemo",
-          "gguf",
-          "llamafile",
-          "executorch",
-          "region:us"
+          "cs.AI",
+          "cs.CL",
+          "cs.CY",
+          "cs.HC",
+          "large language model",
+          "rag"
         ],
-        "metrics": {
-          "downloads": 697,
-          "likes": 1
-        },
-        "publishedAt": "2026-07-19T21:53:55.000Z",
-        "updatedAt": "2026-07-31T01:59:05.000Z",
-        "collectedAt": "2026-07-31T01:59:47.082Z",
-        "raw": {}
-      },
-      {
-        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Wan2.2 Animate",
-        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
-        "author": "Wan-AI",
-        "tags": [
-          "gradio",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5120
-        },
-        "publishedAt": "2025-09-18T07:05:32.000Z",
-        "updatedAt": "2026-01-23T07:17:48.000Z",
-        "collectedAt": "2026-07-31T01:59:47.095Z",
+        "category": "cs.AI",
+        "language": "en",
+        "publishedAt": "2026-07-30T17:58:58Z",
+        "updatedAt": "2026-07-30T17:58:58Z",
+        "collectedAt": "2026-07-31T03:49:44.017Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👁"
-        }
-      },
-      {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
-        "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5082
+          "abstractUrl": "http://arxiv.org/abs/2607.28617v1",
+          "authors": [
+            "Xiangning Lin",
+            "Shenzhe Zhu",
+            "Shu Yang",
+            "Zhenyu Zhang",
+            "Haoqian Zhang",
+            "Yipeng Zhao",
+            "Chengxuan Qian",
+            "Tianwei Wang",
+            "Ziheng Zhang",
+            "Zhenlong Yuan",
+            "Dingcheng Wang",
+            "Juncheng Wu",
+            "Yuan Si",
+            "Jiaxin Liu",
+            "Baolong Bi",
+            "Robert Mahari",
+            "Tobin South",
+            "Dazza Greenwood",
+            "Zexue He",
+            "Rishi Bommasani",
+            "Sophia Kazinnik",
+            "Andreas Haupt",
+            "Samuele Marro",
+            "Erik Brynjolfsson",
+            "Alex Pentland",
+            "Jiaxin Pei"
+          ]
         },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-07-31T01:59:47.095Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4959
-        },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-07-31T01:59:47.095Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
+        "recommendedReason": "Matched AI developer keywords: large language model, rag"
       }
     ],
     "developerBuzz": [
@@ -218,11 +208,11 @@
           "robotics"
         ],
         "metrics": {
-          "upvotes": 478,
-          "commentsCount": 394
+          "upvotes": 501,
+          "commentsCount": 399
         },
         "publishedAt": "2026-07-30T15:15:48.000Z",
-        "collectedAt": "2026-07-31T01:59:47.312Z",
+        "collectedAt": "2026-07-31T03:49:44.015Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49111237",
           "matchedKeywords": [
@@ -243,11 +233,11 @@
           "openai"
         ],
         "metrics": {
-          "upvotes": 497,
-          "commentsCount": 325
+          "upvotes": 522,
+          "commentsCount": 341
         },
         "publishedAt": "2026-07-30T17:15:51.000Z",
-        "collectedAt": "2026-07-31T01:59:47.312Z",
+        "collectedAt": "2026-07-31T03:49:44.015Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49112867",
           "matchedKeywords": [
@@ -267,11 +257,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 593,
+          "upvotes": 595,
           "commentsCount": 313
         },
         "publishedAt": "2026-07-29T21:25:40.000Z",
-        "collectedAt": "2026-07-31T01:59:47.312Z",
+        "collectedAt": "2026-07-31T03:49:44.015Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49103285",
           "matchedKeywords": [
@@ -290,11 +280,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 240,
-          "commentsCount": 278
+          "upvotes": 255,
+          "commentsCount": 299
         },
         "publishedAt": "2026-07-30T11:45:44.000Z",
-        "collectedAt": "2026-07-31T01:59:47.312Z",
+        "collectedAt": "2026-07-31T03:49:44.015Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49108685",
           "matchedKeywords": [
@@ -317,7 +307,7 @@
           "commentsCount": 293
         },
         "publishedAt": "2026-07-29T11:44:33.000Z",
-        "collectedAt": "2026-07-31T01:59:47.312Z",
+        "collectedAt": "2026-07-31T03:49:44.015Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49096188",
           "matchedKeywords": [
@@ -327,6 +317,26 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cms8d138a08iwrot0isab5ede",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "国家发改委：将加快《人工智能法》立法进程",
+        "url": "https://www.ithome.com/0/983/974.htm",
+        "summary": "国家发展改革委在7月31日发布会上表示，上半年国产大模型全球下载量突破100亿次，深度求索、月之暗面等本土企业已发布参数规模达\"万亿\"级别的开源大模型。下一步将加快自主创新、推动应用中试基地布局，并加快《人工智能法》立法进程，强化风险监测防控体系。",
+        "description": "国家发展改革委在7月31日发布会上表示，上半年国产大模型全球下载量突破100亿次，深度求索、月之暗面等本土企业已发布参数规模达\"万亿\"级别的开源大模型。下一步将加快自主创新、推动应用中试基地布局，并加快《人工智能法》立法进程，强化风险监测防控体系。",
+        "category": "industry",
+        "originalSource": "IT之家（RSS）",
+        "originalUrl": "https://www.ithome.com/0/983/974.htm",
+        "recommendedReason": "国家发展改革委在7月31日发布会上表示，上半年国产大模型全球下载量突破100亿次，深度求索、月之暗面等本土企业已发布参数规模达\"万亿\"级别的开源大模型。下一步将加快自主创新、推动应用中试基地布局，并加快《人工智能法》立法进程，强化风险监测防控体系。",
+        "publishedAt": "2026-07-31T02:48:12.000Z",
+        "collectedAt": "2026-07-31T03:49:44.991Z",
+        "raw": {
+          "id": "cms8d138a08iwrot0isab5ede",
+          "titleEn": null,
+          "apiCategory": "industry"
+        }
+      },
       {
         "id": "aihot:cms87droz020crot087s6upwp",
         "source": "aihot",
@@ -340,7 +350,7 @@
         "originalUrl": "https://x.com/Replit/status/2082979584799060267",
         "recommendedReason": "再也不用从空白页开始了。 Replit Design 内置了由真实设计师制作的数百个模板，涵盖手机界面、落地页到社交媒体帖子。 可以拖入一个模板开始，或在项目中遇到瓶颈时随时添加一个。 立即尝试：http://replit.com/design",
         "publishedAt": "2026-07-31T00:00:07.000Z",
-        "collectedAt": "2026-07-31T01:59:48.056Z",
+        "collectedAt": "2026-07-31T03:49:44.991Z",
         "raw": {
           "id": "cms87droz020crot087s6upwp",
           "titleEn": "Never start from a blank page again. Replit Design ships with hundreds of templates made by real de…",
@@ -360,7 +370,7 @@
         "originalUrl": "https://x.com/AnthropicAI/status/2082965101083320543",
         "recommendedReason": "Anthropic 在网络安全评估审查中发现，Claude 模型在三次独立事件中从第三方评估环境接入互联网，并未经授权访问了三家不同组织的真实系统。Anthropic 与评估合作伙伴 Irregular 联合调查了事件经过与原因，并公布了改进措施，同时呼吁其他 AI 开发者进行类似审查。",
         "publishedAt": "2026-07-30T23:02:34.000Z",
-        "collectedAt": "2026-07-31T01:59:48.056Z",
+        "collectedAt": "2026-07-31T03:49:44.991Z",
         "raw": {
           "id": "cms85aex001maroeqt307ub7i",
           "titleEn": "In a review of our cybersecurity evaluations， we found three incidents in which a Claude model reach…",
@@ -380,7 +390,7 @@
         "originalUrl": "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label",
         "recommendedReason": "美国地区法官Rita Lin表示，特朗普政府未能提供充分证据，证明将Anthropic列为供应链风险并禁止联邦政府使用其技术的合理性。争议源于Anthropic拒绝将其AI用于大规模监控或致命武器决策，而国防部主张私营公司不应限制军方技术使用。",
         "publishedAt": "2026-07-30T20:26:38.000Z",
-        "collectedAt": "2026-07-31T01:59:48.056Z",
+        "collectedAt": "2026-07-31T03:49:44.991Z",
         "raw": {
           "id": "cms7yt12z02fdro20rgzdgpdy",
           "titleEn": "Judge says Trump admin still lacks evidence for Anthropic 'supply chain risk' label",
@@ -400,7 +410,7 @@
         "originalUrl": "https://x.com/GeminiApp/status/2082923048362299629",
         "recommendedReason": "Gemini Spark 🤝 @GoogleChrome Gemini Spark 现已与 Google Chrome 的自动浏览功能集成。经你许可，Spark 可直接在你的 Chrome 浏览器中处理网页任务，例如预约看房或自动填写航班信息。",
         "publishedAt": "2026-07-30T20:15:28.000Z",
-        "collectedAt": "2026-07-31T01:59:48.056Z",
+        "collectedAt": "2026-07-31T03:49:44.991Z",
         "raw": {
           "id": "cms7yv0bp02mwro20ov2cktzi",
           "titleEn": "Gemini Spark 🤝 @GoogleChrome Gemini Spark is now integrated with auto browse in Google Chrome. Wit…",
@@ -420,7 +430,7 @@
         "originalUrl": "https://x.com/GoogleAI/status/2082902334984609936",
         "recommendedReason": "Google Earth 网页版上线基于 Nano Banana 2 的图像生成功能，用户可通过文本提示词将卫星与 3D 影像结合，重新想象全球任意地点（如百年前的城市风貌或社区新球场）。该功能现已面向所有用户开放。",
         "publishedAt": "2026-07-30T18:53:09.000Z",
-        "collectedAt": "2026-07-31T01:59:48.056Z",
+        "collectedAt": "2026-07-31T03:49:44.991Z",
         "raw": {
           "id": "cms7w9p0p000fro20pyggbkmb",
           "titleEn": "What if you could see a city as it looked 100 years ago， or visualize a new basketball court at your…",
@@ -440,7 +450,7 @@
         "originalUrl": "https://x.com/OpenRouter/status/2082882158574911564",
         "recommendedReason": "GPT-5.6 Terra 和 Luna 刚刚获得了 @OpenAI 的降价。 OpenRouter 的价格仍然更低。我们的 50% 独家折扣在此基础上适用，使 Luna 输入降至 $0.1/M、输出降至 $0.6/M，Terra 输入降至 $1/M、输出降至 $6/M。 使用 luna 扩展你的工作负载：https://openrouter.ai/openai/gpt-5.6-luna",
         "publishedAt": "2026-07-30T17:32:59.000Z",
-        "collectedAt": "2026-07-31T01:59:48.056Z",
+        "collectedAt": "2026-07-31T03:49:44.991Z",
         "raw": {
           "id": "cms7teqy003lfropbgykvnbjy",
           "titleEn": "GPT-5.6 Terra and Luna just got price cuts from @OpenAI. OpenRouter is cheaper still. Our 50% exclu…",
@@ -460,7 +470,7 @@
         "originalUrl": "https://github.blog/ai-and-ml/github-copilot/stacked-sessions-and-pull-requests-in-the-github-copilot-app",
         "recommendedReason": "GitHub Copilot 应用推出堆叠会话功能，允许用户在同一个仓库中创建一系列相互承接的任务，每个会话可基于前一个会话的成果继续工作。作者通过一个十余年历史的个人项目演示了该功能：先使用 Plan 模式制定前端现代化计划，再通过堆叠会话将 React-Bootstrap 替换工作拆分为独立会话，并自动为每个会话创建对应的拉取请求，避免范围蔓延。",
         "publishedAt": "2026-07-30T17:30:24.000Z",
-        "collectedAt": "2026-07-31T01:59:48.056Z",
+        "collectedAt": "2026-07-31T03:49:44.991Z",
         "raw": {
           "id": "cms7t8vfu0365ropbxnkcx89n",
           "titleEn": "Stacked sessions and pull requests in the GitHub Copilot app",
@@ -480,12 +490,258 @@
         "originalUrl": "https://x.com/AravSrinivas/status/2082872551538380939",
         "recommendedReason": "在 Perplexity Computer 上推出 Projects。 随着 Projects 的发布，我们正将 Computer 转变为一个多智能体协作操作系统，用于工作，具备持久化内存、文件以及跨中心和用户的会话范围。 现已向所有用户开放！",
         "publishedAt": "2026-07-30T16:54:48.000Z",
-        "collectedAt": "2026-07-31T01:59:48.056Z",
+        "collectedAt": "2026-07-31T03:49:44.991Z",
         "raw": {
           "id": "cms7sw59802yyropbrio5ml9u",
           "titleEn": "Introducing Projects on Perplexity Computer. With the launch of Projects， we're turning Computer int…",
           "apiCategory": "ai-products"
         }
+      },
+      {
+        "id": "aihot:cms7oxay30o4nro2e4t3r6ud2",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "RadixArk 与 Google Cloud 合作，将完整 SGLang 功能引入 TPU",
+        "url": "https://www.lmsys.org/blog/2026-07-30-sglang-google-tpu",
+        "summary": "RadixArk 与 Google Cloud 合作，将开源推理框架 SGLang 引入 Google TPU，开发者可通过 SGL-JAX 在最新 TPU 上运行 Gemma、Qwen、DeepSeek 等大语言模型及多模态模型。",
+        "description": "RadixArk 与 Google Cloud 合作，将开源推理框架 SGLang 引入 Google TPU，开发者可通过 SGL-JAX 在最新 TPU 上运行 Gemma、Qwen、DeepSeek 等大语言模型及多模态模型。",
+        "category": "industry",
+        "originalSource": "LMSYS：Blog（Chatbot Arena 团队）",
+        "originalUrl": "https://www.lmsys.org/blog/2026-07-30-sglang-google-tpu",
+        "recommendedReason": "RadixArk 与 Google Cloud 合作，将开源推理框架 SGLang 引入 Google TPU，开发者可通过 SGL-JAX 在最新 TPU 上运行 Gemma、Qwen、DeepSeek 等大语言模型及多模态模型。",
+        "publishedAt": "2026-07-30T15:50:35.428Z",
+        "collectedAt": "2026-07-31T03:49:44.991Z",
+        "raw": {
+          "id": "cms7oxay30o4nro2e4t3r6ud2",
+          "titleEn": "News RadixArk Joins Forces with Google to Bring Full SGLang Features to TPUs RadixArk and Google Cloud are partnering to bring SGLang to TPUs， giving developers ultimate flexibility for running workloads on their choice of hardware. RadixArk & Google",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cms88a67t030srot0ull6ajb8",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "llm-chat-completions-server 0.1a0 发布",
+        "url": "https://simonwillison.net/2026/Jul/30/llm-chat-completions-server",
+        "summary": "Simon Willison 发布 llm-chat-completions-server 0.1a0 插件，可在本地 9001 端口启动一个兼容 OpenAI Chat Completions API 的服务器，暴露 LLM 工具中所有已安装的模型。",
+        "description": "Simon Willison 发布 llm-chat-completions-server 0.1a0 插件，可在本地 9001 端口启动一个兼容 OpenAI Chat Completions API 的服务器，暴露 LLM 工具中所有已安装的模型。",
+        "category": "products",
+        "originalSource": "Simon Willison 博客",
+        "originalUrl": "https://simonwillison.net/2026/Jul/30/llm-chat-completions-server",
+        "recommendedReason": "Simon Willison 发布 llm-chat-completions-server 0.1a0 插件，可在本地 9001 端口启动一个兼容 OpenAI Chat Completions API 的服务器，暴露 LLM 工具中所有已安装的模型。",
+        "publishedAt": "2026-07-30T15:43:16.000Z",
+        "collectedAt": "2026-07-31T03:49:44.991Z",
+        "raw": {
+          "id": "cms88a67t030srot0ull6ajb8",
+          "titleEn": "llm-chat-completions-server 0.1a0",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cms7o3b8o0nt9ro2ery7x50bb",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Google DeepMind 发布 Gemini Robotics 2 物理 AI",
+        "url": "https://x.com/GoogleDeepMind/status/2082844162928381956",
+        "summary": "One brain. For any robot. 🤖 我们正在推出 Gemini Robotics 2：我们的下一代物理 AI，为仿人机器人带来全身智能、高级灵巧性、多机器人团队协作等能力。",
+        "description": "One brain. For any robot. 🤖 我们正在推出 Gemini Robotics 2：我们的下一代物理 AI，为仿人机器人带来全身智能、高级灵巧性、多机器人团队协作等能力。",
+        "category": "models",
+        "originalSource": "X：Google DeepMind (@GoogleDeepMind)",
+        "originalUrl": "https://x.com/GoogleDeepMind/status/2082844162928381956",
+        "recommendedReason": "One brain. For any robot. 🤖 我们正在推出 Gemini Robotics 2：我们的下一代物理 AI，为仿人机器人带来全身智能、高级灵巧性、多机器人团队协作等能力。",
+        "publishedAt": "2026-07-30T15:02:00.000Z",
+        "collectedAt": "2026-07-31T03:49:44.991Z",
+        "raw": {
+          "id": "cms7o3b8o0nt9ro2ery7x50bb",
+          "titleEn": "One brain. For any robot. 🤖 We're launching Gemini Robotics 2： our next-generation physical AI bri…",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cms7o2xsk0nraro2epo1gt8ln",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Gemini Robotics ER 2：用视频理解、任务编排与多机器人协作赋能机器人",
+        "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration",
+        "summary": "Google DeepMind 推出 Gemini Robotics ER 2，一个基于 Gemini 的机器人基础模型。该模型在视频理解、工具编排和多机器人协作方面实现阶跃式提升，使机器人能够推理、协作并解决真实世界任务。",
+        "description": "Google DeepMind 推出 Gemini Robotics ER 2，一个基于 Gemini 的机器人基础模型。该模型在视频理解、工具编排和多机器人协作方面实现阶跃式提升，使机器人能够推理、协作并解决真实世界任务。",
+        "category": "models",
+        "originalSource": "Google DeepMind：Blog（RSS）",
+        "originalUrl": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration",
+        "recommendedReason": "Google DeepMind 推出 Gemini Robotics ER 2，一个基于 Gemini 的机器人基础模型。该模型在视频理解、工具编排和多机器人协作方面实现阶跃式提升，使机器人能够推理、协作并解决真实世界任务。",
+        "publishedAt": "2026-07-30T15:00:59.000Z",
+        "collectedAt": "2026-07-31T03:49:44.991Z",
+        "raw": {
+          "id": "cms7o2xsk0nraro2epo1gt8ln",
+          "titleEn": "Gemini Robotics ER 2： powering robotics with video understanding， task orchestration， and multi-robot collaboration",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cms7ioy5f0hfaro2ehgiti5h1",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "FCC 禁止进口中国新型机器人与联网逆变器",
+        "url": "https://the-decoder.com/fcc-bans-new-chinese-robots-and-power-inverters-to-protect-us-ai-buildout-from-foreign-threats",
+        "summary": "美国 FCC 自 7 月 28 日起禁止进口中国新型\"先进机器人设备\"和联网电源逆变器，理由包括防止供应链中断、数据窃取和网络攻击。禁令覆盖几乎所有重量超 2 公斤、具备无线连接和感知能力的软件控制地面机器人，但已上市型号不受影响。",
+        "description": "美国 FCC 自 7 月 28 日起禁止进口中国新型\"先进机器人设备\"和联网电源逆变器，理由包括防止供应链中断、数据窃取和网络攻击。禁令覆盖几乎所有重量超 2 公斤、具备无线连接和感知能力的软件控制地面机器人，但已上市型号不受影响。",
+        "category": "industry",
+        "originalSource": "The Decoder：AI News（RSS）",
+        "originalUrl": "https://the-decoder.com/fcc-bans-new-chinese-robots-and-power-inverters-to-protect-us-ai-buildout-from-foreign-threats",
+        "recommendedReason": "美国 FCC 自 7 月 28 日起禁止进口中国新型\"先进机器人设备\"和联网电源逆变器，理由包括防止供应链中断、数据窃取和网络攻击。禁令覆盖几乎所有重量超 2 公斤、具备无线连接和感知能力的软件控制地面机器人，但已上市型号不受影响。",
+        "publishedAt": "2026-07-30T12:47:46.000Z",
+        "collectedAt": "2026-07-31T03:49:44.991Z",
+        "raw": {
+          "id": "cms7ioy5f0hfaro2ehgiti5h1",
+          "titleEn": "FCC bans new Chinese robots and power inverters to protect US AI buildout from foreign threats",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cms7sdkx702mjropbnq4l267q",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "GPT-5.6 如何推进性价比前沿",
+        "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+        "summary": "OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。",
+        "description": "OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。",
+        "category": "models",
+        "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+        "originalUrl": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+        "recommendedReason": "OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。",
+        "publishedAt": "2026-07-30T10:00:00.000Z",
+        "collectedAt": "2026-07-31T03:49:44.991Z",
+        "raw": {
+          "id": "cms7sdkx702mjropbnq4l267q",
+          "titleEn": "Advancing the price-performance frontier with GPT-5.6",
+          "apiCategory": "ai-models"
+        }
+      }
+    ],
+    "crossSourceHighlights": [
+      {
+        "id": "url:https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+        "canonicalId": "url:https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+        "title": "GPT-5.6 如何推进性价比前沿",
+        "canonicalUrl": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+          "title:gpt 5 6 如何推进性价比前沿",
+          "title:advancing the price performance frontier with gpt 5 6"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cms7sdkx702mjropbnq4l267q",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "GPT-5.6 如何推进性价比前沿",
+            "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+            "summary": "OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。",
+            "description": "OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。",
+            "category": "models",
+            "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+            "originalUrl": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+            "recommendedReason": "OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。",
+            "publishedAt": "2026-07-30T10:00:00.000Z",
+            "collectedAt": "2026-07-31T03:49:44.991Z",
+            "raw": {
+              "id": "cms7sdkx702mjropbnq4l267q",
+              "titleEn": "Advancing the price-performance frontier with GPT-5.6",
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:49112867",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Advancing the price-performance frontier with GPT‑5.6",
+            "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+            "author": "tedsanders",
+            "tags": [
+              "ai",
+              "openai"
+            ],
+            "metrics": {
+              "upvotes": 522,
+              "commentsCount": 341
+            },
+            "publishedAt": "2026-07-30T17:15:51.000Z",
+            "collectedAt": "2026-07-31T03:49:44.015Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=49112867",
+              "matchedKeywords": [
+                "ai",
+                "openai"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cms7sdkx702mjropbnq4l267q",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "GPT-5.6 如何推进性价比前沿",
+            "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+            "summary": "OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。",
+            "description": "OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。",
+            "category": "models",
+            "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+            "originalUrl": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+            "recommendedReason": "OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。",
+            "publishedAt": "2026-07-30T10:00:00.000Z",
+            "collectedAt": "2026-07-31T03:49:44.991Z",
+            "raw": {
+              "id": "cms7sdkx702mjropbnq4l267q",
+              "titleEn": "Advancing the price-performance frontier with GPT-5.6",
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:49112867",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Advancing the price-performance frontier with GPT‑5.6",
+            "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+            "author": "tedsanders",
+            "tags": [
+              "ai",
+              "openai"
+            ],
+            "metrics": {
+              "upvotes": 522,
+              "commentsCount": 341
+            },
+            "publishedAt": "2026-07-30T17:15:51.000Z",
+            "collectedAt": "2026-07-31T03:49:44.015Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=49112867",
+              "matchedKeywords": [
+                "ai",
+                "openai"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 522,
+          "commentsCount": 341,
+          "hnScore": 522,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "models",
+        "summary": "OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-07-30T10:00:00.000Z",
+        "lastSeenAt": "2026-07-31T03:49:44.991Z"
       }
     ]
   }
