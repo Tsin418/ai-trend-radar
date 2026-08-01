@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-01T21:13:50.531Z
+Updated: 2026-08-01T22:15:43.225Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -12,7 +12,7 @@ Updated: 2026-08-01T21:13:50.531Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-08-02 | daily | [AI Developer Radar｜Daily｜2026-08-02](2026/08/2026-08-02-daily.md) | TencentCloud/TencentDB-Agent-Memory, esengine/DeepSeek-Reasonix, Panniantong/Agent-Reach, Graphify-Labs/graphify, huggingface/speech-to-speech |
+| 2026-08-02 | daily | [AI Developer Radar｜Daily｜2026-08-02](2026/08/2026-08-02-daily.md) | TencentCloud/TencentDB-Agent-Memory, esengine/DeepSeek-Reasonix, Panniantong/Agent-Reach, Graphify-Labs/graphify, cobusgreyling/loop-engineering |
 | 2026-08-01 | daily | [AI Developer Radar｜Daily｜2026-08-01](2026/08/2026-08-01-daily.md) | zhaoxuya520/reverse-skill, usekaneo/kaneo, TencentCloud/TencentDB-Agent-Memory, esengine/DeepSeek-Reasonix, Graphify-Labs/graphify |
 | 2026-07-31 | daily | [AI Developer Radar｜Daily｜2026-07-31](2026/07/2026-07-31-daily.md) | agavra/tuicr, deepfakes/faceswap, deepspeedai/DeepSpeed, 1jehuang/jcode, esengine/DeepSeek-Reasonix |
 | 2026-07-30 | daily | [AI Developer Radar｜Daily｜2026-07-30](2026/07/2026-07-30-daily.md) | Tencent/ncnn, milvus-io/milvus, Panniantong/Agent-Reach, Graphify-Labs/graphify, calesthio/OpenMontage |
