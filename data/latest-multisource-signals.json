@@ -1,188 +1,237 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-08-04T06:46:56.117Z",
+  "generatedAt": "2026-08-04T09:34:22.584Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2608.02602v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "AURORA-LM: Autoencoding Unified Representation for Continuous-Latent Diffusion Language Modeling",
-        "url": "https://arxiv.org/pdf/2608.02602v1",
-        "description": "Language remains an outlier in generative modeling: while images, video, and audio are increasingly modeled in continuous latent spaces, text generation still relies predominantly on discrete tokens. Existing continuous language models either inherit embedding spaces not designed for joint generation and decoding, or compress autoencoded latents to ease diffusion, sacrificing token-level fidelity. Instead of simplifying the representation to suit the generative model, we preserve a high-capacity",
-        "summary": "Language remains an outlier in generative modeling: while images, video, and audio are increasingly modeled in continuous latent spaces, text generation still relies predominantly on discrete tokens. Existing continuous language models either inherit embedding spaces not designed for joint generation and decoding, or compress autoencoded latents to ease diffusion, sacrificing token-level fidelity. Instead of simplifying the representation to suit the generative model, we preserve a high-capacity, decodable text latent and design the diffusion model to learn its distribution directly. We introduce AURORA-LM, a continuous-latent diffusion language model that separates the construction of a decodable text representation from the modeling of its distribution. A Query-based Encoder-Decoder organizes text into a high-capacity, prefix-aligned latent sequence, and a Block-causal Diffusion Transformer learns its distribution through flow matching, generating blocks left to right while denoising positions within each block in parallel. Because such a latent is harder for diffusion to model, AURORA-LM restricts only the noisy-input pathway while retaining the full clean-latent prediction target, accommodating full-width latents without reducing decoder-facing capacity. We further calibrate the noise-level distribution to the latent width, and introduce self-trajectory consistency to bridge independently sampled training noise and iterative denoising at inference. AURORA-LM achieves the strongest performance among evaluated continuous and diffusion-based language models on OpenWebText free generation and XSum summarization. Scaling to 1B parameters with about 1500 EFLOPs of total compute yields further gains, surpassing a larger publicly released latent-diffusion language model under a matched evaluation protocol. All experiments are conducted on Ascend NPUs.",
-        "author": "Jiajun Liang, Yucheng Liao, Yukang Cao, Jiazhe Wei, Ken Li, Wende Tan, Jiankun Zhang, ZY Cui, Jingkang Yang, Liucheng Guo, Shiqi Yang, B. Yang, Caifeng Shan, Ziwei Liu, Chenyang Si",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.CL",
-          "embedding",
-          "evaluation"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-08-03T17:59:50Z",
-        "updatedAt": "2026-08-03T17:59:50Z",
-        "collectedAt": "2026-08-04T06:46:43.705Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.02602v1",
-          "authors": [
-            "Jiajun Liang",
-            "Yucheng Liao",
-            "Yukang Cao",
-            "Jiazhe Wei",
-            "Ken Li",
-            "Wende Tan",
-            "Jiankun Zhang",
-            "ZY Cui",
-            "Jingkang Yang",
-            "Liucheng Guo",
-            "Shiqi Yang",
-            "B. Yang",
-            "Caifeng Shan",
-            "Ziwei Liu",
-            "Chenyang Si"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14069
         },
-        "recommendedReason": "Matched AI developer keywords: embedding, evaluation"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-08-04T09:34:22.757Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.02599v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Bridging Artificial Intelligence and Power Systems Education Using a Hands-On Executable Framework",
-        "url": "https://arxiv.org/pdf/2608.02599v1",
-        "description": "Artificial intelligence (AI) is increasingly central to power and energy systems, supporting modeling, forecasting, optimization, and control. Yet most existing works emphasize specialized applications and offer little reusable material for newcomers or interdisciplinary learners, who increasingly rely on large language models rather than building their own. This gap points to a need for engineering-grounded AI (EGAI), in which AI workflows follow established engineering and power-system domain ",
-        "summary": "Artificial intelligence (AI) is increasingly central to power and energy systems, supporting modeling, forecasting, optimization, and control. Yet most existing works emphasize specialized applications and offer little reusable material for newcomers or interdisciplinary learners, who increasingly rely on large language models rather than building their own. This gap points to a need for engineering-grounded AI (EGAI), in which AI workflows follow established engineering and power-system domain rules rather than acting as task-agnostic black boxes. Motivated by a community survey of researchers and practitioners, which shows 92% report at least one barrier before running an AI model and 94% want a power-specific hands-on course. This paper presents a framework consisting of open, executable module library that lowers the entry barrier for AI in power systems. The modules follow a progressive difficulty ladder that maps core AI concepts onto representative power-system tasks: (i) foundational deep neural network (DNN) templates for function approximation and load-curve fitting; (ii) a domain-coupled convolutional neural network (CNN) power-flow surrogate for a 5-bus system; and (iii) frontier modules on DNN-assisted optimization, deep reinforcement learning (DRL) for battery storage control, and physics-informed neural networks (PINNs) for the swing equation. All modules are released as Jupyter notebooks that run locally or on Google Colab and are delivered through an IEEE online course and IEEE Power & Energy Society (PES) webinar series. The webinar drew more than 590 live attendees, which is among the ten most-attended IEEE PES webinars, and over 344 repository visits within two weeks, reinforcing the survey-based motivation.",
-        "author": "Junjie Yin, Buxin She, Xinyu Feng, Fangxing, Li",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "eess.SY",
-          "cs.AI",
-          "large language model",
-          "rag",
-          "workflow"
+          "docker",
+          "region:us"
         ],
-        "category": "eess.SY",
-        "language": "en",
-        "publishedAt": "2026-08-03T17:59:09Z",
-        "updatedAt": "2026-08-03T17:59:09Z",
-        "collectedAt": "2026-08-04T06:46:43.705Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.02599v1",
-          "authors": [
-            "Junjie Yin",
-            "Buxin She",
-            "Xinyu Feng",
-            "Fangxing",
-            "Li"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11199
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, rag, workflow"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-08-04T09:34:22.757Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.02595v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "onepot-Bench 0: towards lab-aware in silico chemistry benchmarks",
-        "url": "https://arxiv.org/pdf/2608.02595v1",
-        "description": "Language models are playing an increasingly important role in laboratory science, performing tasks such as experiment planning, execution, and post-hoc analysis. However, precisely measuring their abilities is difficult, as scientific capabilities require a mixture of both problem-solving skills and domain-specific intuition. Existing evaluations rarely measure the capabilities required to make reliable decisions in a physical laboratory and often rely on public data that may have appeared in mo",
-        "summary": "Language models are playing an increasingly important role in laboratory science, performing tasks such as experiment planning, execution, and post-hoc analysis. However, precisely measuring their abilities is difficult, as scientific capabilities require a mixture of both problem-solving skills and domain-specific intuition. Existing evaluations rarely measure the capabilities required to make reliable decisions in a physical laboratory and often rely on public data that may have appeared in model training corpora. We introduce onepot-Bench 0, a proprietary benchmark suite for evaluating language models on synthetic chemistry capabilities relevant to wet-lab execution. onepot-Bench 0 comprises three complementary evaluations: ChemAbacus measures tool-free cheminformatics literacy and numerical reasoning; SynthRefusal characterizes safety and refusal behavior across a variety of benign, controlled, and designer-drug targets; and SynthBench evaluates reaction-outcome prediction and catalyst selection using private experimental data generated in our laboratory. Together, these evaluations probe basic competency, reliability, and deeper knowledge, all skills which are required for reliable performance in the lab.",
-        "author": "Brandon Wang, Andrei S. Tyrin, Daniil A. Boiko",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.LG",
-          "safety",
-          "benchmark",
-          "evaluation"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-08-03T17:58:27Z",
-        "updatedAt": "2026-08-03T17:58:27Z",
-        "collectedAt": "2026-08-04T06:46:43.705Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.02595v1",
-          "authors": [
-            "Brandon Wang",
-            "Andrei S. Tyrin",
-            "Daniil A. Boiko"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10152
         },
-        "recommendedReason": "Matched AI developer keywords: safety, benchmark, evaluation"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-08-04T09:34:22.757Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.02588v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "The Condition-Number Barrier in Sparse Least Squares",
-        "url": "https://arxiv.org/pdf/2608.02588v1",
-        "description": "In [AS21], Axiotis and Sviridenko conjectured that the linear dependence on the restricted condition number in sparse convex optimization cannot be improved by a polynomial-time algorithm. We establish their conjectured lower bound for least-squares objectives, conditional on the randomized exact-volume Small-Set Expansion Hypothesis in the weighted regular-graph formulation of Raghavendra, Steurer, and Tulsiani [RST12]. Concretely, for every fixed $γ\\in(0,1]$, there is no randomized polynomial-",
-        "summary": "In [AS21], Axiotis and Sviridenko conjectured that the linear dependence on the restricted condition number in sparse convex optimization cannot be improved by a polynomial-time algorithm. We establish their conjectured lower bound for least-squares objectives, conditional on the randomized exact-volume Small-Set Expansion Hypothesis in the weighted regular-graph formulation of Raghavendra, Steurer, and Tulsiani [RST12]. Concretely, for every fixed $γ\\in(0,1]$, there is no randomized polynomial-time algorithm that, with probability at least $2/3$, returns a vector $x$ such that, writing $s=\\lVert x\\rVert_0$, \\[ \\lVert Ax-b\\rVert_2^2 \\leq \\min_{\\lVert z\\rVert_0\\leq k}\\lVert Az-b\\rVert_2^2+\\varepsilon \\quad\\text{and}\\quad s=O\\!\\left(k\\,κ_{s+k}^{\\,1-γ}\\right), \\] where $κ_r$ is the restricted condition number at sparsity level $r$. The result holds even on rational instances with $A$ of full column rank. The proof was first obtained using a fully automated Gemini-based agentic system developed internally at Google. The authors have verified the proof and edited it for clarity of presentation.",
-        "author": "Honghao Lin, Vahab Mirrokni, David P. Woodruff",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "cs.DS",
-          "cs.LG",
-          "agent",
-          "rag",
-          "agentic"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "cs.DS",
-        "language": "en",
-        "publishedAt": "2026-08-03T17:57:01Z",
-        "updatedAt": "2026-08-03T17:57:01Z",
-        "collectedAt": "2026-08-04T06:46:43.705Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.02588v1",
-          "authors": [
-            "Honghao Lin",
-            "Vahab Mirrokni",
-            "David P. Woodruff"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7603
         },
-        "recommendedReason": "Matched AI developer keywords: agent, rag, agentic"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-08-02T12:20:32.000Z",
+        "collectedAt": "2026-08-04T09:34:22.757Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.02585v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "GradCuit: Credit-Assigned Gradient Flow Enables Robust and Interpretable Test-Time Latent Reasoning",
-        "url": "https://arxiv.org/pdf/2608.02585v1",
-        "description": "Optimization-based latent reasoning improves large language model outputs by optimizing instance-specific continuous states at test time while keeping model parameters frozen. Existing methods, however, typically connect these states to the reasoning trajectory through decoded tokens, making sequence-level credit assignment indirect and obscuring how latent updates shape subsequent reasoning. We introduce GradCuit (gradient through circuit), which inserts optimizable latent states at a selected ",
-        "summary": "Optimization-based latent reasoning improves large language model outputs by optimizing instance-specific continuous states at test time while keeping model parameters frozen. Existing methods, however, typically connect these states to the reasoning trajectory through decoded tokens, making sequence-level credit assignment indirect and obscuring how latent updates shape subsequent reasoning. We introduce GradCuit (gradient through circuit), which inserts optimizable latent states at a selected Transformer layer between the hidden representations of the prompt and the generated continuation. Causal self-attention provides every continuation-token log-probability with a differentiable path to every preceding latent state through the remaining Transformer blocks, enabling reward-weighted gradients from the entire continuation to be assigned directly to the latents. Across five instruction-tuned backbones, three reasoning benchmarks, and two answer formats, GradCuit achieves an average accuracy of 64.5%, outperforming chain-of-thought prompting by 6.6 percentage points and the strongest competing method by 2.4 points. GradCuit also demonstrates greater robustness: across seven learning-rate settings, it consistently outperforms LatentSeek while reducing the standard deviation of accuracy from 1.53 to 0.82, and even its random-walk variant remains competitive with LatentSeek. For interpretability, token-level gradient attribution reveals that latent influence concentrates on reasoning-connector tokens, while layer analysis identifies early-to-middle Transformer layers as the most effective optimization space. By directly optimizing internal reasoning from outcome feedback, GradCuit opens a new axis of robust and interpretable test-time scaling, where LLMs adapt how they reason rather than merely regenerate, sample, or rerank outputs.",
-        "author": "Zhaoxin Yu, Qi Shen, Hengli Li, Zhaowei Zhang, Song-Chun Zhu, Chi Zhang, Zilong Zheng",
+        "id": "huggingface_spaces:Wan-AI/Wan2.2-Animate",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Wan2.2 Animate",
+        "url": "https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate",
+        "author": "Wan-AI",
         "tags": [
-          "cs.LG",
-          "cs.CL",
-          "large language model",
-          "llm",
-          "rag",
-          "benchmark"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-08-03T17:55:24Z",
-        "updatedAt": "2026-08-03T17:55:24Z",
-        "collectedAt": "2026-08-04T06:46:43.705Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.02585v1",
-          "authors": [
-            "Zhaoxin Yu",
-            "Qi Shen",
-            "Hengli Li",
-            "Zhaowei Zhang",
-            "Song-Chun Zhu",
-            "Chi Zhang",
-            "Zilong Zheng"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 5121
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, rag, benchmark"
+        "publishedAt": "2025-09-18T07:05:32.000Z",
+        "updatedAt": "2026-01-23T07:17:48.000Z",
+        "collectedAt": "2026-08-04T09:34:22.757Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👁"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5082
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-08-04T09:34:22.757Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Arena Leaderboard",
+        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
+        "author": "lmarena-ai",
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "static",
+        "metrics": {
+          "likes": 4962
+        },
+        "publishedAt": "2023-05-20T09:26:19.000Z",
+        "updatedAt": "2026-02-21T23:20:43.000Z",
+        "collectedAt": "2026-08-04T09:34:22.757Z",
+        "raw": {
+          "sdk": "static",
+          "emoji": "🏆🤖"
+        }
+      },
+      {
+        "id": "huggingface_spaces:KlingTeam/LivePortrait",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Live Portrait",
+        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
+        "author": "KlingTeam",
+        "tags": [
+          "gradio",
+          "Multimodal",
+          "Motion control",
+          "Image-to-Video",
+          "Video-to-Video",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 3771
+        },
+        "publishedAt": "2024-07-05T16:35:24.000Z",
+        "updatedAt": "2024-08-30T11:20:51.000Z",
+        "collectedAt": "2026-08-04T09:34:22.757Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🤪"
+        }
       }
     ],
     "developerBuzz": [
+      {
+        "id": "hackernews:49161518",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "LLMs reward expertise",
+        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
+        "author": "MaxMussio",
+        "tags": [
+          "llm"
+        ],
+        "metrics": {
+          "upvotes": 931,
+          "commentsCount": 393
+        },
+        "publishedAt": "2026-08-03T21:13:53.000Z",
+        "collectedAt": "2026-08-04T09:34:22.981Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=49161518",
+          "matchedKeywords": [
+            "llm"
+          ]
+        }
+      },
       {
         "id": "hackernews:49150470",
         "source": "hackernews",
@@ -194,11 +243,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1066,
-          "commentsCount": 574
+          "upvotes": 1075,
+          "commentsCount": 579
         },
         "publishedAt": "2026-08-03T02:16:09.000Z",
-        "collectedAt": "2026-08-04T06:46:43.542Z",
+        "collectedAt": "2026-08-04T09:34:22.981Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49150470",
           "matchedKeywords": [
@@ -217,36 +266,13 @@
           "llm"
         ],
         "metrics": {
-          "upvotes": 706,
-          "commentsCount": 357
+          "upvotes": 711,
+          "commentsCount": 363
         },
         "publishedAt": "2026-08-03T11:28:54.000Z",
-        "collectedAt": "2026-08-04T06:46:43.542Z",
+        "collectedAt": "2026-08-04T09:34:22.981Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49154332",
-          "matchedKeywords": [
-            "llm"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:49161518",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "LLMs reward expertise",
-        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
-        "author": "MaxMussio",
-        "tags": [
-          "llm"
-        ],
-        "metrics": {
-          "upvotes": 752,
-          "commentsCount": 313
-        },
-        "publishedAt": "2026-08-03T21:13:53.000Z",
-        "collectedAt": "2026-08-04T06:46:43.542Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=49161518",
           "matchedKeywords": [
             "llm"
           ]
@@ -264,11 +290,11 @@
           "openai"
         ],
         "metrics": {
-          "upvotes": 513,
-          "commentsCount": 785
+          "upvotes": 535,
+          "commentsCount": 822
         },
         "publishedAt": "2026-08-03T16:27:12.000Z",
-        "collectedAt": "2026-08-04T06:46:43.542Z",
+        "collectedAt": "2026-08-04T09:34:22.981Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49157930",
           "matchedKeywords": [
@@ -288,11 +314,11 @@
           "llm"
         ],
         "metrics": {
-          "upvotes": 456,
-          "commentsCount": 368
+          "upvotes": 483,
+          "commentsCount": 388
         },
         "publishedAt": "2026-08-03T09:32:07.000Z",
-        "collectedAt": "2026-08-04T06:46:43.542Z",
+        "collectedAt": "2026-08-04T09:34:22.981Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49153374",
           "matchedKeywords": [
@@ -302,6 +328,86 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmsefnjpn0q20ro2el7g7lyjw",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Reflex 开源 XY：基于 Rust 的超快 Python 绘图库，可保持 1 亿点图表交互流畅",
+        "url": "https://www.marktechpost.com/2026/08/04/reflex-open-sources-xy-a-rust-backed-super-fast-python-charting-library-that-keeps-100-million-point-charts-interactive",
+        "summary": "Reflex AI 发布 Apache-2.0 许可的 Python 交互式 2D 绘图库 XY，通过 Rust 原生核心、二进制缓冲传输和 WebGL2 渲染，在 1 万至 1 亿点范围内保持约 0.08 秒的渲染时间。",
+        "description": "Reflex AI 发布 Apache-2.0 许可的 Python 交互式 2D 绘图库 XY，通过 Rust 原生核心、二进制缓冲传输和 WebGL2 渲染，在 1 万至 1 亿点范围内保持约 0.08 秒的渲染时间。",
+        "category": "products",
+        "originalSource": "MarkTechPost（RSS）",
+        "originalUrl": "https://www.marktechpost.com/2026/08/04/reflex-open-sources-xy-a-rust-backed-super-fast-python-charting-library-that-keeps-100-million-point-charts-interactive",
+        "recommendedReason": "Reflex AI 发布 Apache-2.0 许可的 Python 交互式 2D 绘图库 XY，通过 Rust 原生核心、二进制缓冲传输和 WebGL2 渲染，在 1 万至 1 亿点范围内保持约 0.08 秒的渲染时间。",
+        "publishedAt": "2026-08-04T08:57:47.000Z",
+        "collectedAt": "2026-08-04T09:34:24.112Z",
+        "raw": {
+          "id": "cmsefnjpn0q20ro2el7g7lyjw",
+          "titleEn": "Reflex Open Sources XY： A Rust-Backed Super-Fast Python Charting Library That Keeps 100 Million Point Charts Interactive",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmseekz5g0oncro2ehfyz40ps",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "用 NVIDIA SkillSpector、LangGraph、YARA 规则、SARIF 与 CI 策略门构建高级 AI 技能安全审计流水线",
+        "url": "https://www.marktechpost.com/2026/08/04/building-an-advanced-ai-skill-security-auditing-pipeline-with-nvidia-skillspector-langgraph-yara-rules-sarif-and-ci-policy-gates",
+        "summary": "本教程演示如何用 NVIDIA SkillSpector 评估 AI 技能的安全态势，构建包含干净、风险、恶意及 MCP 示例的合成技能市场，并通过 LangGraph 检查流水线扫描每个技能。",
+        "description": "本教程演示如何用 NVIDIA SkillSpector 评估 AI 技能的安全态势，构建包含干净、风险、恶意及 MCP 示例的合成技能市场，并通过 LangGraph 检查流水线扫描每个技能。",
+        "category": "tools",
+        "originalSource": "MarkTechPost（RSS）",
+        "originalUrl": "https://www.marktechpost.com/2026/08/04/building-an-advanced-ai-skill-security-auditing-pipeline-with-nvidia-skillspector-langgraph-yara-rules-sarif-and-ci-policy-gates",
+        "recommendedReason": "本教程演示如何用 NVIDIA SkillSpector 评估 AI 技能的安全态势，构建包含干净、风险、恶意及 MCP 示例的合成技能市场，并通过 LangGraph 检查流水线扫描每个技能。",
+        "publishedAt": "2026-08-04T08:12:36.000Z",
+        "collectedAt": "2026-08-04T09:34:24.112Z",
+        "raw": {
+          "id": "cmseekz5g0oncro2ehfyz40ps",
+          "titleEn": "Building an Advanced AI Skill Security Auditing Pipeline with NVIDIA SkillSpector， LangGraph， YARA Rules， SARIF， and CI Policy Gates",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmsee1mhf0nn6ro2em6rt7tr4",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "腾讯混元发布 Hy ASR 3.0 preview：真正懂上下文的语音识别",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzkwODU2OTQyNQ%3D%3D&mid=2247498223&idx=1&sn=ae271ec2c72723393d3e1d8074a33205",
+        "summary": "腾讯混元发布新一代语音识别模型 Hy ASR 3.0 preview，基于大语言模型 Hy3 与 MoE 架构，融合高精度识别与语义理解。其在开源评测集中中文普通话 WER 3.34%、英语 WER 2.62%、粤语 WER 3.12%，并支持上下文纠错、热词注入及高噪耳语等场景。该模型已上线腾讯云 API，元宝 App 首发并免费开放。",
+        "description": "腾讯混元发布新一代语音识别模型 Hy ASR 3.0 preview，基于大语言模型 Hy3 与 MoE 架构，融合高精度识别与语义理解。其在开源评测集中中文普通话 WER 3.34%、英语 WER 2.62%、粤语 WER 3.12%，并支持上下文纠错、热词注入及高噪耳语等场景。该模型已上线腾讯云 API，元宝 App 首发并免费开放。",
+        "category": "models",
+        "originalSource": "公众号：腾讯混元",
+        "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzkwODU2OTQyNQ%3D%3D&mid=2247498223&idx=1&sn=ae271ec2c72723393d3e1d8074a33205",
+        "recommendedReason": "腾讯混元发布新一代语音识别模型 Hy ASR 3.0 preview，基于大语言模型 Hy3 与 MoE 架构，融合高精度识别与语义理解。其在开源评测集中中文普通话 WER 3.34%、英语 WER 2.62%、粤语 WER 3.12%，并支持上下文纠错、热词注入及高噪耳语等场景。该模型已上线腾讯云 API，元宝 App 首发并免费开放。",
+        "publishedAt": "2026-08-04T08:12:36.000Z",
+        "collectedAt": "2026-08-04T09:34:24.112Z",
+        "raw": {
+          "id": "cmsee1mhf0nn6ro2em6rt7tr4",
+          "titleEn": "Hy ASR 3.0 preview发布：真正懂上下文的语音识别",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmsebb0mc0kn1ro2ejvmi5lg8",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Swiftlet：在 Mac 上运行 80B 版 Qwen（内存 4.3 GB），在 iPhone 上运行 35B 版",
+        "url": "https://github.com/leonickson1/Swiftlet",
+        "summary": "Swiftlet 是一个 Swift + Metal 运行时，可在普通 Apple 设备上运行 Qwen3-Next 和 Qwen3.5/3.6 MoE 混合模型，仅将小型稠密核心驻留内存，按需从存储流式加载路由专家权重。",
+        "description": "Swiftlet 是一个 Swift + Metal 运行时，可在普通 Apple 设备上运行 Qwen3-Next 和 Qwen3.5/3.6 MoE 混合模型，仅将小型稠密核心驻留内存，按需从存储流式加载路由专家权重。",
+        "category": "products",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://github.com/leonickson1/Swiftlet",
+        "recommendedReason": "Swiftlet 是一个 Swift + Metal 运行时，可在普通 Apple 设备上运行 Qwen3-Next 和 Qwen3.5/3.6 MoE 混合模型，仅将小型稠密核心驻留内存，按需从存储流式加载路由专家权重。",
+        "publishedAt": "2026-08-04T06:32:44.149Z",
+        "collectedAt": "2026-08-04T09:34:24.112Z",
+        "raw": {
+          "id": "cmsebb0mc0kn1ro2ejvmi5lg8",
+          "titleEn": "Show HN： 在 Mac 上运行 80B 版 Qwen（内存 4.3 GB），在 iPhone 上运行 35B 版",
+          "apiCategory": "ai-products"
+        }
+      },
       {
         "id": "aihot:cmse7yrut0gupro2ejfet4a10",
         "source": "aihot",
@@ -315,7 +421,7 @@
         "originalUrl": "https://x.com/thsottiaux/status/2084506501834829833",
         "recommendedReason": "有些人显然误解了，但 GPT-5.6 Luna 降价 80% 不是临时噱头，而是永久的。效率提升不会消失。幸运的是。",
         "publishedAt": "2026-08-04T05:07:32.000Z",
-        "collectedAt": "2026-08-04T06:46:49.532Z",
+        "collectedAt": "2026-08-04T09:34:24.112Z",
         "raw": {
           "id": "cmse7yrut0gupro2ejfet4a10",
           "titleEn": "Some fine folks apparently misunderstood， but the GPT-5.6 Luna price reduction by 80% is not a tempo…",
@@ -335,7 +441,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s?__biz=Mzg3Mzg2MTg2NQ%3D%3D&mid=2247498861&idx=1&sn=d2d16692dd7eb27f9d466803f25c2b78",
         "recommendedReason": "面壁智能联合 OpenBMB 开源全球首个支持 Stencil 自动研究、自动部署的 AI 优化系统 ForgeStencil，由 Kernel Agent 与 App Agent 闭环协作，实现从算子优化到应用集成的全自动流程。",
         "publishedAt": "2026-08-04T04:20:28.000Z",
-        "collectedAt": "2026-08-04T06:46:49.532Z",
+        "collectedAt": "2026-08-04T09:34:24.112Z",
         "raw": {
           "id": "cmse5tvia0ej6ro2er0ptp9v8",
           "titleEn": "面壁智能开源 ForgeStencil：一周优化 100+ 工业与科学软件，全程 0 人工介入，国产「智」造升级加速",
@@ -355,7 +461,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647684924&idx=1&sn=f9ecf13ac374f13dfa75f98f685a231d",
         "recommendedReason": "作者以零基础身份，全程通过与Codex对话，从需求讨论、电路搭建、代码烧录到3D打印组装，5天内做出一个能提醒久坐的猫爪硬件。文中还介绍了用Agent调试宏键盘、以及OpenAI与Work Louder联名发布的Codex Micro键盘（13个机械按键，售价230美元）等案例，强调\"干中学\"的AI开发方式。",
         "publishedAt": "2026-08-04T00:06:00.000Z",
-        "collectedAt": "2026-08-04T06:46:49.532Z",
+        "collectedAt": "2026-08-04T09:34:24.112Z",
         "raw": {
           "id": "cmsdwjgim0327ro2ek45x3jz5",
           "titleEn": "从零开始，教你用Codex搓出属于你自己的第一个硬件。",
@@ -375,485 +481,12 @@
         "originalUrl": "https://techcrunch.com/2026/08/03/after-killer-quarter-palantir-ceo-alex-karp-calls-ai-industry-marxist",
         "recommendedReason": "Palantir CEO Alex Karp 在季度股东信中警告，前沿 AI 实验室对企业过于不可信，并称其意图\"占有所谓合作伙伴的生产资料\"，带有\"马克思主义色彩\"。该公司第二季度营收 19 亿美元，同比增长 93%，利润 11 亿美元。Karp 主张 Palantir 提供模型无关的 AI 与分析软件，让企业掌控自身数据与 AI\"废气\"（提示词、编排、上下文）。",
         "publishedAt": "2026-08-03T23:19:50.000Z",
-        "collectedAt": "2026-08-04T06:46:49.532Z",
+        "collectedAt": "2026-08-04T09:34:24.112Z",
         "raw": {
           "id": "cmsdv83cg000lro2eyp49endp",
           "titleEn": "After killer quarter， Palantir CEO Alex Karp calls AI industry 'Marxist'",
           "apiCategory": "tip"
         }
-      },
-      {
-        "id": "aihot:cmsdt5gom0130rojfwd72clkl",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "GPT-Live实时音频新架构发布",
-        "url": "https://x.com/gdb/status/2084405421041963356",
-        "summary": "GPT-Live 是一种用于实时音频的新架构和栈： GPT-Live 可以在说话的同时聆听。 为了让这种体验在 ChatGPT 规模下显得自然，我们从客户端到模型重建了语音栈。 这一新架构让音频持续流动，因此更深入的推理和工具使用不会打断对话。",
-        "description": "GPT-Live 是一种用于实时音频的新架构和栈： GPT-Live 可以在说话的同时聆听。 为了让这种体验在 ChatGPT 规模下显得自然，我们从客户端到模型重建了语音栈。 这一新架构让音频持续流动，因此更深入的推理和工具使用不会打断对话。",
-        "category": "products",
-        "originalSource": "X：Greg Brockman (@gdb)",
-        "originalUrl": "https://x.com/gdb/status/2084405421041963356",
-        "recommendedReason": "GPT-Live 是一种用于实时音频的新架构和栈： GPT-Live 可以在说话的同时聆听。 为了让这种体验在 ChatGPT 规模下显得自然，我们从客户端到模型重建了语音栈。 这一新架构让音频持续流动，因此更深入的推理和工具使用不会打断对话。",
-        "publishedAt": "2026-08-03T22:25:53.000Z",
-        "collectedAt": "2026-08-04T06:46:49.532Z",
-        "raw": {
-          "id": "cmsdt5gom0130rojfwd72clkl",
-          "titleEn": "GPT-Live is a new architecture and stack for realtime audio：",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmsdqxlyq00giromaftad8bdu",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Claude Code 连接器可复用至 Artifacts",
-        "url": "https://x.com/trq212/status/2084387303959740449",
-        "summary": "我想很多人没有意识到--如果你连接了一个 Claude 连接器（例如你的 Gmail、日历、Slack 等），Claude Code 也将能够使用它们，包括在 Artifacts 中。",
-        "description": "我想很多人没有意识到--如果你连接了一个 Claude 连接器（例如你的 Gmail、日历、Slack 等），Claude Code 也将能够使用它们，包括在 Artifacts 中。",
-        "category": "tools",
-        "originalSource": "X：Thariq (@trq212)",
-        "originalUrl": "https://x.com/trq212/status/2084387303959740449",
-        "recommendedReason": "我想很多人没有意识到--如果你连接了一个 Claude 连接器（例如你的 Gmail、日历、Slack 等），Claude Code 也将能够使用它们，包括在 Artifacts 中。",
-        "publishedAt": "2026-08-03T21:13:53.000Z",
-        "collectedAt": "2026-08-04T06:46:49.532Z",
-        "raw": {
-          "id": "cmsdqxlyq00giromaftad8bdu",
-          "titleEn": "I think a lot of people don't realize- if you connect a Claude Connector （e.g. your gmail， calendar，…",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmsdo0x3203dmro0ovomuyfqx",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "EA 首席战略官谈生成式 AI 如何进入可游玩的实时游戏世界",
-        "url": "https://runwayml.com/news/company-news/electronic-arts-ai-summit-2026",
-        "summary": "EA 首席战略官 Mihir Vaidya 认为，游戏是 AI 的试验场，但生成式 AI 进入游戏面临 60 帧/秒、数千玩家同步和低延迟等严苛约束，不能只追求\"看起来真实\"，而必须\"行为正确\"。他主张采用神经符号架构，在生成能力之外保留确定性与可控性，并称\"控制是下一个前沿\"。EA 将 AI 影响分为效率、扩展和转型三个层面，其中《模拟人生》已服务超 5 亿玩家，拥有近万亿种游玩排列组合。",
-        "description": "EA 首席战略官 Mihir Vaidya 认为，游戏是 AI 的试验场，但生成式 AI 进入游戏面临 60 帧/秒、数千玩家同步和低延迟等严苛约束，不能只追求\"看起来真实\"，而必须\"行为正确\"。他主张采用神经符号架构，在生成能力之外保留确定性与可控性，并称\"控制是下一个前沿\"。EA 将 AI 影响分为效率、扩展和转型三个层面，其中《模拟人生》已服务超 5 亿玩家，拥有近万亿种游玩排列组合。",
-        "category": "tools",
-        "originalSource": "Runway：News（网页）",
-        "originalUrl": "https://runwayml.com/news/company-news/electronic-arts-ai-summit-2026",
-        "recommendedReason": "EA 首席战略官 Mihir Vaidya 认为，游戏是 AI 的试验场，但生成式 AI 进入游戏面临 60 帧/秒、数千玩家同步和低延迟等严苛约束，不能只追求\"看起来真实\"，而必须\"行为正确\"。他主张采用神经符号架构，在生成能力之外保留确定性与可控性，并称\"控制是下一个前沿\"。EA 将 AI 影响分为效率、扩展和转型三个层面，其中《模拟人生》已服务超 5 亿玩家，拥有近万亿种游玩排列组合。",
-        "publishedAt": "2026-08-03T20:12:03.229Z",
-        "collectedAt": "2026-08-04T06:46:49.532Z",
-        "raw": {
-          "id": "cmsdo0x3203dmro0ovomuyfqx",
-          "titleEn": "How EA Is Bringing Generative AI Into Living， Playable Worlds",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmsdnp8wy035jro0oflgpii8f",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "微软开源 Orchard 智能体训练框架",
-        "url": "https://x.com/MSFTResearch/status/2084364547142418722",
-        "summary": "Orchard 是一个面向研究社区的开源框架，用于跨任务类型训练和评估 AI 智能体。它降低了复杂性，同时通过让研究人员复用同一套基础设施，支持较小模型也能实现强劲性能。https://msft.it/6019a8fqP",
-        "description": "Orchard 是一个面向研究社区的开源框架，用于跨任务类型训练和评估 AI 智能体。它降低了复杂性，同时通过让研究人员复用同一套基础设施，支持较小模型也能实现强劲性能。https://msft.it/6019a8fqP",
-        "category": "products",
-        "originalSource": "X：Microsoft Research (@MSFTResearch)",
-        "originalUrl": "https://x.com/MSFTResearch/status/2084364547142418722",
-        "recommendedReason": "Orchard 是一个面向研究社区的开源框架，用于跨任务类型训练和评估 AI 智能体。它降低了复杂性，同时通过让研究人员复用同一套基础设施，支持较小模型也能实现强劲性能。https://msft.it/6019a8fqP",
-        "publishedAt": "2026-08-03T19:43:28.000Z",
-        "collectedAt": "2026-08-04T06:46:49.532Z",
-        "raw": {
-          "id": "cmsdnp8wy035jro0oflgpii8f",
-          "titleEn": "Orchard is an open-source framework for the research community to train and evaluate AI agents acros…",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmsdkgj9m00hnro0ocrleteo0",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "欧盟《人工智能法案》透明度规则生效，违规最高罚 1500 万欧元",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/974571/eu-ai-act-transparency-labels-rules-deepfakes",
-        "summary": "欧盟《人工智能法案》下的新透明度义务于 8 月 2 日生效，要求公司披露用户何时与 AI 模型互动，并为合成音视频和文本添加机器可读标记。欧盟还推出了一套可选的 AI 披露标签供平台采用，但标注要求本身是强制性的。违规公司面临最高 1500 万欧元（约 1720 万美元）或全球年营业额 3% 的罚款，8 月 2 日前推出的模型有 4 个月宽限期。",
-        "description": "欧盟《人工智能法案》下的新透明度义务于 8 月 2 日生效，要求公司披露用户何时与 AI 模型互动，并为合成音视频和文本添加机器可读标记。欧盟还推出了一套可选的 AI 披露标签供平台采用，但标注要求本身是强制性的。违规公司面临最高 1500 万欧元（约 1720 万美元）或全球年营业额 3% 的罚款，8 月 2 日前推出的模型有 4 个月宽限期。",
-        "category": "industry",
-        "originalSource": "The Verge：AI（RSS）",
-        "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/974571/eu-ai-act-transparency-labels-rules-deepfakes",
-        "recommendedReason": "欧盟《人工智能法案》下的新透明度义务于 8 月 2 日生效，要求公司披露用户何时与 AI 模型互动，并为合成音视频和文本添加机器可读标记。欧盟还推出了一套可选的 AI 披露标签供平台采用，但标注要求本身是强制性的。违规公司面临最高 1500 万欧元（约 1720 万美元）或全球年营业额 3% 的罚款，8 月 2 日前推出的模型有 4 个月宽限期。",
-        "publishedAt": "2026-08-03T17:38:45.000Z",
-        "collectedAt": "2026-08-04T06:46:49.532Z",
-        "raw": {
-          "id": "cmsdkgj9m00hnro0ocrleteo0",
-          "titleEn": "Europe's AI labeling and transparency rules are now in effect",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmsdg55m700l4roca3x3gtfb1",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "AirLLM 实现单块 4GB GPU 运行 70B 模型推理",
-        "url": "https://github.com/lyogavin/airllm",
-        "summary": "AirLLM 项目支持在单块 4GB 显存 GPU 上运行 70B 参数大模型推理，无需多卡或大规模显存配置。该项目已开源，相关讨论在 Hacker News 上获得 103 点热度，引发社区关注。",
-        "description": "AirLLM 项目支持在单块 4GB 显存 GPU 上运行 70B 参数大模型推理，无需多卡或大规模显存配置。该项目已开源，相关讨论在 Hacker News 上获得 103 点热度，引发社区关注。",
-        "category": "tools",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://github.com/lyogavin/airllm",
-        "recommendedReason": "AirLLM 项目支持在单块 4GB 显存 GPU 上运行 70B 参数大模型推理，无需多卡或大规模显存配置。该项目已开源，相关讨论在 Hacker News 上获得 103 点热度，引发社区关注。",
-        "publishedAt": "2026-08-03T16:24:45.027Z",
-        "collectedAt": "2026-08-04T06:46:49.532Z",
-        "raw": {
-          "id": "cmsdg55m700l4roca3x3gtfb1",
-          "titleEn": "使用单块 4GB GPU 进行 AirLLM 70B 推理",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmsdexxu702xbrotjockerya6",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenRouter 推出 Ori Eval 简化评估流程",
-        "url": "https://x.com/OpenRouter/status/2084301100078027143",
-        "summary": "推出 Ori Eval：编写首个评估的最简单方式。 没有绝对最好的模型，只有最适合每项任务的模型。Ori Eval 利用 OpenRouter 的 API 处理代码库中的每项任务，然后评估结果。 curl -fsSL https://openrouter.ai/skills/spawn-ori-eval",
-        "description": "推出 Ori Eval：编写首个评估的最简单方式。 没有绝对最好的模型，只有最适合每项任务的模型。Ori Eval 利用 OpenRouter 的 API 处理代码库中的每项任务，然后评估结果。 curl -fsSL https://openrouter.ai/skills/spawn-ori-eval",
-        "category": "products",
-        "originalSource": "X：OpenRouter (@OpenRouter)",
-        "originalUrl": "https://x.com/OpenRouter/status/2084301100078027143",
-        "recommendedReason": "推出 Ori Eval：编写首个评估的最简单方式。 没有绝对最好的模型，只有最适合每项任务的模型。Ori Eval 利用 OpenRouter 的 API 处理代码库中的每项任务，然后评估结果。 curl -fsSL https://openrouter.ai/skills/spawn-ori-eval",
-        "publishedAt": "2026-08-03T15:31:21.000Z",
-        "collectedAt": "2026-08-04T06:46:49.532Z",
-        "raw": {
-          "id": "cmsdexxu702xbrotjockerya6",
-          "titleEn": "Introducing Ori Eval： the easiest way to write your first eval. There's no definitive best model， o…",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmsdczxnl0138rotj8fjenm4b",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "商汤发布 SenseNova U1.5-Lite-Preview 开源模型",
-        "url": "https://x.com/SenseTime_AI/status/2084288424236782073",
-        "summary": "商汤推出 SenseNova U1.5-Lite-Preview，一个基于 NEO-Unify 架构的轻量级原生统一多模态模型，仅 8B-MoT 参数即可达到商业闭源模型的生成与编辑质量。",
-        "description": "商汤推出 SenseNova U1.5-Lite-Preview，一个基于 NEO-Unify 架构的轻量级原生统一多模态模型，仅 8B-MoT 参数即可达到商业闭源模型的生成与编辑质量。",
-        "category": "models",
-        "originalSource": "X：商汤 SenseTime (@SenseTime_AI)",
-        "originalUrl": "https://x.com/SenseTime_AI/status/2084288424236782073",
-        "recommendedReason": "商汤推出 SenseNova U1.5-Lite-Preview，一个基于 NEO-Unify 架构的轻量级原生统一多模态模型，仅 8B-MoT 参数即可达到商业闭源模型的生成与编辑质量。",
-        "publishedAt": "2026-08-03T14:40:59.000Z",
-        "collectedAt": "2026-08-04T06:46:49.532Z",
-        "raw": {
-          "id": "cmsdczxnl0138rotj8fjenm4b",
-          "titleEn": "Introducing SenseNova U1.5-Lite-Preview. An early open-source previ…",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmsddya2a01t3rotjo94tdap8",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Google Agent Skills 幕后：如何构建、测试与规模化",
-        "url": "https://dev.to/googleai/behind-the-scenes-how-we-build-test-and-scale-google-agent-skills-1am5",
-        "summary": "Google Agent Skills 团队详解其开源技能库的构建与治理流程：项目始于 Google Cloud Next 2026 前的\"swarm\"冲刺，发布后 GitHub 星标超 15，000。为保证规模化下的质量，每个技能须通过标准化目录结构、CI/CD 流水线（含 linter、链接检查、AI 辅助清单）及提交时与每周的持续评估，并优先引用远程 MCP 工具。",
-        "description": "Google Agent Skills 团队详解其开源技能库的构建与治理流程：项目始于 Google Cloud Next 2026 前的\"swarm\"冲刺，发布后 GitHub 星标超 15，000。为保证规模化下的质量，每个技能须通过标准化目录结构、CI/CD 流水线（含 linter、链接检查、AI 辅助清单）及提交时与每周的持续评估，并优先引用远程 MCP 工具。",
-        "category": "tools",
-        "originalSource": "Google AI：DEV 作者专属（RSS）",
-        "originalUrl": "https://dev.to/googleai/behind-the-scenes-how-we-build-test-and-scale-google-agent-skills-1am5",
-        "recommendedReason": "Google Agent Skills 团队详解其开源技能库的构建与治理流程：项目始于 Google Cloud Next 2026 前的\"swarm\"冲刺，发布后 GitHub 星标超 15，000。为保证规模化下的质量，每个技能须通过标准化目录结构、CI/CD 流水线（含 linter、链接检查、AI 辅助清单）及提交时与每周的持续评估，并优先引用远程 MCP 工具。",
-        "publishedAt": "2026-08-03T14:33:20.000Z",
-        "collectedAt": "2026-08-04T06:46:49.532Z",
-        "raw": {
-          "id": "cmsddya2a01t3rotjo94tdap8",
-          "titleEn": "Behind the scenes： How we build， test， and scale Google Agent Skills",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmsdal06c16pxroeu5xtlavmg",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Cloudflare 推出 @cloudflare/computer 预览版：为智能体提供虚拟文件系统与多执行环境",
-        "url": "https://blog.cloudflare.com/cloudflare-computer",
-        "summary": "Cloudflare 发布 @cloudflare/computer 早期预览版，这是一个开源智能体运行时，为每个智能体提供虚拟文件系统，并支持在 isolate、容器沙箱或浏览器中执行代码。",
-        "description": "Cloudflare 发布 @cloudflare/computer 早期预览版，这是一个开源智能体运行时，为每个智能体提供虚拟文件系统，并支持在 isolate、容器沙箱或浏览器中执行代码。",
-        "category": "products",
-        "originalSource": "Cloudflare Blog",
-        "originalUrl": "https://blog.cloudflare.com/cloudflare-computer",
-        "recommendedReason": "Cloudflare 发布 @cloudflare/computer 早期预览版，这是一个开源智能体运行时，为每个智能体提供虚拟文件系统，并支持在 isolate、容器沙箱或浏览器中执行代码。",
-        "publishedAt": "2026-08-03T13:15:24.000Z",
-        "collectedAt": "2026-08-04T06:46:49.532Z",
-        "raw": {
-          "id": "cmsdal06c16pxroeu5xtlavmg",
-          "titleEn": "Your agent needs a computer， not a container - introducing @cloudflare/computer",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmsdal06d16pzroeuf2u64pdv",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Cloudflare 推出 Billable Usage API：为自助账户提供按产品与计费周期的程序化成本可见性",
-        "url": "https://blog.cloudflare.com/billable-usage-api",
-        "summary": "Cloudflare 发布 Billable Usage API，为自助账户提供单一端点，一次调用即可返回按产品和计费周期拆分的用量与成本，覆盖 Workers、R2、D1、Workers AI、Vectorize、Images 和 Stream。",
-        "description": "Cloudflare 发布 Billable Usage API，为自助账户提供单一端点，一次调用即可返回按产品和计费周期拆分的用量与成本，覆盖 Workers、R2、D1、Workers AI、Vectorize、Images 和 Stream。",
-        "category": "products",
-        "originalSource": "Cloudflare Blog",
-        "originalUrl": "https://blog.cloudflare.com/billable-usage-api",
-        "recommendedReason": "Cloudflare 发布 Billable Usage API，为自助账户提供单一端点，一次调用即可返回按产品和计费周期拆分的用量与成本，覆盖 Workers、R2、D1、Workers AI、Vectorize、Images 和 Stream。",
-        "publishedAt": "2026-08-03T13:00:00.000Z",
-        "collectedAt": "2026-08-04T06:46:49.532Z",
-        "raw": {
-          "id": "cmsdal06d16pzroeuf2u64pdv",
-          "titleEn": "Introducing the Billable Usage API： programmatic cost visibility for Cloudflare",
-          "apiCategory": "ai-products"
-        }
-      }
-    ],
-    "crossSourceHighlights": [
-      {
-        "id": "url:https://github.com/lyogavin/airllm",
-        "canonicalId": "url:https://github.com/lyogavin/airllm",
-        "title": "AirLLM 实现单块 4GB GPU 运行 70B 模型推理",
-        "canonicalUrl": "https://github.com/lyogavin/airllm",
-        "entityType": "repo",
-        "normalizedKeys": [
-          "url:https://github.com/lyogavin/airllm",
-          "github:lyogavin/airllm",
-          "title:airllm 实现单块 4gb gpu 运行 70b 模型推理",
-          "topic:ai model release",
-          "title:airllm 70b inference with single 4gb gpu",
-          "topic:local llm / inference"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmsdg55m700l4roca3x3gtfb1",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "AirLLM 实现单块 4GB GPU 运行 70B 模型推理",
-            "url": "https://github.com/lyogavin/airllm",
-            "summary": "AirLLM 项目支持在单块 4GB 显存 GPU 上运行 70B 参数大模型推理，无需多卡或大规模显存配置。该项目已开源，相关讨论在 Hacker News 上获得 103 点热度，引发社区关注。",
-            "description": "AirLLM 项目支持在单块 4GB 显存 GPU 上运行 70B 参数大模型推理，无需多卡或大规模显存配置。该项目已开源，相关讨论在 Hacker News 上获得 103 点热度，引发社区关注。",
-            "category": "tools",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://github.com/lyogavin/airllm",
-            "recommendedReason": "AirLLM 项目支持在单块 4GB 显存 GPU 上运行 70B 参数大模型推理，无需多卡或大规模显存配置。该项目已开源，相关讨论在 Hacker News 上获得 103 点热度，引发社区关注。",
-            "publishedAt": "2026-08-03T16:24:45.027Z",
-            "collectedAt": "2026-08-04T06:46:49.532Z",
-            "raw": {
-              "id": "cmsdg55m700l4roca3x3gtfb1",
-              "titleEn": "使用单块 4GB GPU 进行 AirLLM 70B 推理",
-              "apiCategory": "tip"
-            }
-          },
-          {
-            "id": "hackernews:49154228",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "AirLLM 70B inference with single 4GB GPU",
-            "url": "https://github.com/lyogavin/airllm",
-            "author": "Anon84",
-            "tags": [
-              "ai",
-              "llm",
-              "inference"
-            ],
-            "metrics": {
-              "upvotes": 211,
-              "commentsCount": 77
-            },
-            "publishedAt": "2026-08-03T11:15:48.000Z",
-            "collectedAt": "2026-08-04T06:46:43.542Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49154228",
-              "matchedKeywords": [
-                "ai",
-                "llm",
-                "inference"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmsdg55m700l4roca3x3gtfb1",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "AirLLM 实现单块 4GB GPU 运行 70B 模型推理",
-            "url": "https://github.com/lyogavin/airllm",
-            "summary": "AirLLM 项目支持在单块 4GB 显存 GPU 上运行 70B 参数大模型推理，无需多卡或大规模显存配置。该项目已开源，相关讨论在 Hacker News 上获得 103 点热度，引发社区关注。",
-            "description": "AirLLM 项目支持在单块 4GB 显存 GPU 上运行 70B 参数大模型推理，无需多卡或大规模显存配置。该项目已开源，相关讨论在 Hacker News 上获得 103 点热度，引发社区关注。",
-            "category": "tools",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://github.com/lyogavin/airllm",
-            "recommendedReason": "AirLLM 项目支持在单块 4GB 显存 GPU 上运行 70B 参数大模型推理，无需多卡或大规模显存配置。该项目已开源，相关讨论在 Hacker News 上获得 103 点热度，引发社区关注。",
-            "publishedAt": "2026-08-03T16:24:45.027Z",
-            "collectedAt": "2026-08-04T06:46:49.532Z",
-            "raw": {
-              "id": "cmsdg55m700l4roca3x3gtfb1",
-              "titleEn": "使用单块 4GB GPU 进行 AirLLM 70B 推理",
-              "apiCategory": "tip"
-            }
-          },
-          {
-            "id": "hackernews:49154228",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "AirLLM 70B inference with single 4GB GPU",
-            "url": "https://github.com/lyogavin/airllm",
-            "author": "Anon84",
-            "tags": [
-              "ai",
-              "llm",
-              "inference"
-            ],
-            "metrics": {
-              "upvotes": 211,
-              "commentsCount": 77
-            },
-            "publishedAt": "2026-08-03T11:15:48.000Z",
-            "collectedAt": "2026-08-04T06:46:43.542Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49154228",
-              "matchedKeywords": [
-                "ai",
-                "llm",
-                "inference"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 211,
-          "commentsCount": 77,
-          "hnScore": 211,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "tools",
-        "summary": "AirLLM 项目支持在单块 4GB 显存 GPU 上运行 70B 参数大模型推理，无需多卡或大规模显存配置。该项目已开源，相关讨论在 Hacker News 上获得 103 点热度，引发社区关注。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-08-03T11:15:48.000Z",
-        "lastSeenAt": "2026-08-04T06:46:49.532Z"
-      },
-      {
-        "id": "url:https://qwen.ai/blog?id=qwen3.8",
-        "canonicalId": "url:https://qwen.ai/blog?id=qwen3.8",
-        "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数",
-        "canonicalUrl": "https://qwen.ai/blog?id=qwen3.8",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://qwen.ai/blog?id=qwen3.8",
-          "title:qwen3 8 max 发布 开源最强编码与协作模型 2 4t 参数",
-          "title:qwen3 8 max a new bar for coding and cowork"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmscldw820c4kroeu7bw1kb27",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数",
-            "url": "https://qwen.ai/blog?id=qwen3.8",
-            "summary": "Qwen 正式发布 Qwen3.8-Max，这是 Qwen 家族迄今最强的模型，拥有 2.4T 参数（95B 激活），并首次开源 Qwen-Max 级权重，开放权重将于下周发布。",
-            "description": "Qwen 正式发布 Qwen3.8-Max，这是 Qwen 家族迄今最强的模型，拥有 2.4T 参数（95B 激活），并首次开源 Qwen-Max 级权重，开放权重将于下周发布。",
-            "category": "models",
-            "originalSource": "Qwen：Blog Retrieval（API）",
-            "originalUrl": "https://qwen.ai/blog?id=qwen3.8",
-            "recommendedReason": "Qwen 正式发布 Qwen3.8-Max，这是 Qwen 家族迄今最强的模型，拥有 2.4T 参数（95B 激活），并首次开源 Qwen-Max 级权重，开放权重将于下周发布。",
-            "publishedAt": "2026-08-03T02:00:00.000Z",
-            "collectedAt": "2026-08-04T06:46:49.532Z",
-            "raw": {
-              "id": "cmscldw820c4kroeu7bw1kb27",
-              "titleEn": "Qwen3.8-Max： A New Bar for Coding and Cowork",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:49150470",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
-            "url": "https://qwen.ai/blog?id=qwen3.8",
-            "author": "ai2027",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 1066,
-              "commentsCount": 574
-            },
-            "publishedAt": "2026-08-03T02:16:09.000Z",
-            "collectedAt": "2026-08-04T06:46:43.542Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49150470",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmscldw820c4kroeu7bw1kb27",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数",
-            "url": "https://qwen.ai/blog?id=qwen3.8",
-            "summary": "Qwen 正式发布 Qwen3.8-Max，这是 Qwen 家族迄今最强的模型，拥有 2.4T 参数（95B 激活），并首次开源 Qwen-Max 级权重，开放权重将于下周发布。",
-            "description": "Qwen 正式发布 Qwen3.8-Max，这是 Qwen 家族迄今最强的模型，拥有 2.4T 参数（95B 激活），并首次开源 Qwen-Max 级权重，开放权重将于下周发布。",
-            "category": "models",
-            "originalSource": "Qwen：Blog Retrieval（API）",
-            "originalUrl": "https://qwen.ai/blog?id=qwen3.8",
-            "recommendedReason": "Qwen 正式发布 Qwen3.8-Max，这是 Qwen 家族迄今最强的模型，拥有 2.4T 参数（95B 激活），并首次开源 Qwen-Max 级权重，开放权重将于下周发布。",
-            "publishedAt": "2026-08-03T02:00:00.000Z",
-            "collectedAt": "2026-08-04T06:46:49.532Z",
-            "raw": {
-              "id": "cmscldw820c4kroeu7bw1kb27",
-              "titleEn": "Qwen3.8-Max： A New Bar for Coding and Cowork",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:49150470",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
-            "url": "https://qwen.ai/blog?id=qwen3.8",
-            "author": "ai2027",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 1066,
-              "commentsCount": 574
-            },
-            "publishedAt": "2026-08-03T02:16:09.000Z",
-            "collectedAt": "2026-08-04T06:46:43.542Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49150470",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 1066,
-          "commentsCount": 574,
-          "hnScore": 1066,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "models",
-        "summary": "Qwen 正式发布 Qwen3.8-Max，这是 Qwen 家族迄今最强的模型，拥有 2.4T 参数（95B 激活），并首次开源 Qwen-Max 级权重，开放权重将于下周发布。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-08-03T02:00:00.000Z",
-        "lastSeenAt": "2026-08-04T06:46:49.532Z"
       }
     ]
   }
