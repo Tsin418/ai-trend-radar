@@ -1,187 +1,283 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-08-05T12:21:56.857Z",
+  "generatedAt": "2026-08-05T12:48:31.422Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2608.04010v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "ParVL: Parallel Scaling and Expandable Compute Allocation for Multimodal LLMs",
-        "url": "https://arxiv.org/pdf/2608.04010v1",
-        "description": "Existing scaling strategies for Multimodal Large Language Models (MLLMs) typically expand either model parameters or sequential inference computation, incurring substantial memory or latency overhead. More importantly, most existing methods fail to alter the rigid, fixed computation allocation between the Vision Transformer and the Large Language Model components, limiting task-specific optimization. To address this, we introduce the Parallel Vision-Language (ParVL) scaling framework for MLLMs, ",
-        "summary": "Existing scaling strategies for Multimodal Large Language Models (MLLMs) typically expand either model parameters or sequential inference computation, incurring substantial memory or latency overhead. More importantly, most existing methods fail to alter the rigid, fixed computation allocation between the Vision Transformer and the Large Language Model components, limiting task-specific optimization. To address this, we introduce the Parallel Vision-Language (ParVL) scaling framework for MLLMs, which scales parallel computation by reusing the existing ViT and LLM backbone parameters across multiple vision and language branches. This framework raises a central question: given a fixed backbone parameter budget, how should additional shared-backbone computation be allocated between the vision and language modalities? We instantiate each parallel computational stream with branch-specific prefix parameters over a shared backbone, and train the entire model end-to-end via full-parameter supervised fine-tuning on roughly 13B tokens. We systematically study the computation-allocation trade-off between the ViT encoder and LLM decoder. ParVL improves overall multimodal performance over same-recipe single-branch baselines, and the best evaluated vision--language allocation varies across tasks. Code is available at https://github.com/YangYangGirl/ParVL.",
-        "author": "Yang Yang, Qinyu Zhao, Mouxiang Chen, Xiaohui Li, Lixin Gu, Wenhai Wang, Hongjie Zhang, Wenwei Zhang",
+        "id": "huggingface_models:lemuralabs/Llama-3.2-3B-Uncensored-GGUF",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "lemuralabs/Llama-3.2-3B-Uncensored-GGUF",
+        "url": "https://huggingface.co/lemuralabs/Llama-3.2-3B-Uncensored-GGUF",
         "tags": [
-          "cs.CV",
-          "cs.CL",
-          "large language model",
-          "llm",
-          "fine-tuning"
+          "adapter-transformers",
+          "gguf",
+          "chemistry",
+          "biology",
+          "legal",
+          "code",
+          "medical",
+          "finance",
+          "roleplay",
+          "uncensored",
+          "uncensored LLM",
+          "text-generation",
+          "base_model:meta-llama/Llama-3.2-3B",
+          "base_model:adapter:meta-llama/Llama-3.2-3B",
+          "license:apache-2.0",
+          "endpoints_compatible",
+          "region:us",
+          "conversational"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-08-04T17:59:58Z",
-        "updatedAt": "2026-08-04T17:59:58Z",
-        "collectedAt": "2026-08-05T12:21:48.685Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.04010v1",
-          "authors": [
-            "Yang Yang",
-            "Qinyu Zhao",
-            "Mouxiang Chen",
-            "Xiaohui Li",
-            "Lixin Gu",
-            "Wenhai Wang",
-            "Hongjie Zhang",
-            "Wenwei Zhang"
-          ]
+        "category": "text-generation",
+        "metrics": {
+          "downloads": 2900,
+          "likes": 45
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, fine-tuning"
+        "publishedAt": "2024-12-05T04:55:35.000Z",
+        "updatedAt": "2026-08-05T12:48:01.000Z",
+        "collectedAt": "2026-08-05T12:48:31.595Z",
+        "raw": {
+          "pipelineTag": "text-generation"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.04009v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "SocietyBench: Forecasting Counterfactual Social-World Evolution",
-        "url": "https://arxiv.org/pdf/2608.04009v1",
-        "description": "Large language models (LLMs), and the agents built on top of them, are now benchmarked heavily on whether they can finish a task -- fix a bug, drive a browser, operate a GUI. A complementary social ability, namely how well a model understands and forecasts the way real social events unfold, has barely been measured. We introduce SocietyBench, an end-to-end benchmark that takes a one-line event topic, collects Web news and social-media posts across five platforms, distills them into a date-indexe",
-        "summary": "Large language models (LLMs), and the agents built on top of them, are now benchmarked heavily on whether they can finish a task -- fix a bug, drive a browser, operate a GUI. A complementary social ability, namely how well a model understands and forecasts the way real social events unfold, has barely been measured. We introduce SocietyBench, an end-to-end benchmark that takes a one-line event topic, collects Web news and social-media posts across five platforms, distills them into a date-indexed timeline that keeps factual events and a public-opinion layer separate, and then turns every cutoff date on that timeline into an audited bank of forecasting questions. Questions are scored on two orthogonal 100-point axes: probability calibration and temporal accuracy. Before any model sees a timeline, a three-phase procedure replaces every named entity and shifts every date by a per-event constant, turning a real arc into a counterfactual social world -- structurally identical to what happened, but stripped of the surface labels a model could match against pre-training memory. On five heterogeneous events and 125 prediction points in Chinese and English editions, the strongest of six frontier LLMs reaches only 75.0 out of 100, against a trivial anchor of 50. The two axes come apart: a model can be calibration-strong but time-weak, or the reverse. Three agent frameworks built on a shared base model fail to improve on that base, and two model-free heuristics trail every LLM. Per-event gaps reach 21.4 points on a single axis, which is our main argument for evaluating on several events rather than one. All anonymized timelines, question banks, ground truth, and scoring code are released.",
-        "author": "Zhenran Wang, Zhonghan Bian, Jinsong Li, Zhangyang Qi",
+        "id": "huggingface_models:lemuralabs/Qwen3.6-27B-Claude-Opus-Reasoning-Distill-v2-abliterated-OptiQ-3.7bpw-mlx",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "lemuralabs/Qwen3.6-27B-Claude-Opus-Reasoning-Distill-v2-abliterated-OptiQ-3.7bpw-mlx",
+        "url": "https://huggingface.co/lemuralabs/Qwen3.6-27B-Claude-Opus-Reasoning-Distill-v2-abliterated-OptiQ-3.7bpw-mlx",
         "tags": [
-          "cs.CL",
-          "large language model",
-          "llm",
-          "agent",
-          "benchmark"
+          "mlx",
+          "safetensors",
+          "qwen3_5",
+          "mlx-lm",
+          "qwen",
+          "qwen3",
+          "qwen3.6",
+          "abliterated",
+          "refusal-ablated",
+          "reasoning",
+          "claude-opus-distill",
+          "text-generation",
+          "apple-silicon",
+          "conversational",
+          "en",
+          "multilingual",
+          "base_model:TeichAI/Qwen3.6-27B-Claude-Opus-Reasoning-Distill-v2",
+          "base_model:quantized:TeichAI/Qwen3.6-27B-Claude-Opus-Reasoning-Distill-v2",
+          "license:apache-2.0",
+          "4-bit",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-08-04T17:59:56Z",
-        "updatedAt": "2026-08-04T17:59:56Z",
-        "collectedAt": "2026-08-05T12:21:48.685Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.04009v1",
-          "authors": [
-            "Zhenran Wang",
-            "Zhonghan Bian",
-            "Jinsong Li",
-            "Zhangyang Qi"
-          ]
+        "category": "text-generation",
+        "metrics": {
+          "downloads": 5862,
+          "likes": 15
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, agent, benchmark"
+        "publishedAt": "2026-05-09T00:47:42.000Z",
+        "updatedAt": "2026-08-05T12:48:15.000Z",
+        "collectedAt": "2026-08-05T12:48:31.595Z",
+        "raw": {
+          "pipelineTag": "text-generation"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.04008v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "WorldCup Arena: Prospective, Leakage-Free Evaluation of Frontier LLMs on a Live Tournament",
-        "url": "https://arxiv.org/pdf/2608.04008v1",
-        "description": "Benchmarks that measure the forecasting ability of large language models are almost always retrospective: the event has happened, the answer is somewhere on the Web, and the evaluation must defend itself against memorisation. We report the opposite design. Over the 39 days of the 2026 FIFA World Cup, six frontier LLMs -- all with extended thinking and native server-side web search -- were asked before every kickoff, one match at a time, to fill in a seven-market prediction card for all 104 match",
-        "summary": "Benchmarks that measure the forecasting ability of large language models are almost always retrospective: the event has happened, the answer is somewhere on the Web, and the evaluation must defend itself against memorisation. We report the opposite design. Over the 39 days of the 2026 FIFA World Cup, six frontier LLMs -- all with extended thinking and native server-side web search -- were asked before every kickoff, one match at a time, to fill in a seven-market prediction card for all 104 matches, plus 12 group winners and a pre-tournament outright pool; no answer existed when the question was asked, so the evaluation is leakage-free by construction rather than by filtering, and the frozen archive holds 4,494 scored predictions. What the tournament establishes is a set of behaviours the six systems share. On match outcome they average 63.9%, level with backing the bookmaker's favourite -- which is in fact what they usually do. They agree with one another far more often than they are right, so a majority vote adds nothing. They under-commit to draws and to goals, and crowd their scoreline picks onto a single prototypical result. Accuracy tracks how lopsided a fixture is rather than how much is known about it: it collapses in the closest ties, where the dossiers are richest, while questions about the tournament as a whole are answered well. On this task the current generation of frontier systems is not sharply differentiated: the standings hold up at the top and the bottom across the run and churn in the middle, and the margins stay narrow throughout. The briefing dossiers, fixtures and official results are released as a benchmark, together with the scoring code.",
-        "author": "Zhenran Wang, Zhonghan Bian, Jinsong Li, Zhangyang Qi",
+        "id": "huggingface_models:lemuralabs/MiniMax-M2-Pruned-25",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "lemuralabs/MiniMax-M2-Pruned-25",
+        "url": "https://huggingface.co/lemuralabs/MiniMax-M2-Pruned-25",
         "tags": [
-          "cs.CL",
-          "large language model",
-          "llm",
-          "rag",
-          "benchmark",
-          "evaluation"
+          "safetensors",
+          "minimax",
+          "moe",
+          "bfloat16",
+          "sglang",
+          "gguf",
+          "custom_code",
+          "dataset:nick007x/github-code-2025",
+          "dataset:tatsu-lab/alpaca",
+          "arxiv:2511.01354",
+          "arxiv:2510.13999",
+          "arxiv:2503.04992",
+          "arxiv:2503.09657",
+          "arxiv:2310.06694",
+          "arxiv:2305.11627",
+          "arxiv:2306.11695",
+          "arxiv:2301.00774",
+          "arxiv:2307.02973",
+          "base_model:MiniMaxAI/MiniMax-M2",
+          "base_model:finetune:MiniMaxAI/MiniMax-M2",
+          "license:mit",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-08-04T17:59:55Z",
-        "updatedAt": "2026-08-04T17:59:55Z",
-        "collectedAt": "2026-08-05T12:21:48.685Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.04008v1",
-          "authors": [
-            "Zhenran Wang",
-            "Zhonghan Bian",
-            "Jinsong Li",
-            "Zhangyang Qi"
-          ]
+        "metrics": {
+          "downloads": 829,
+          "likes": 36
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, rag, benchmark, evaluation"
+        "publishedAt": "2025-11-05T08:46:36.000Z",
+        "updatedAt": "2026-08-05T12:48:04.000Z",
+        "collectedAt": "2026-08-05T12:48:31.595Z",
+        "raw": {}
       },
       {
-        "id": "http://arxiv.org/abs/2608.04007v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "TurnSight: Turn-Level Hindsight Self-Distillation for Tool-Integrated Reasoning",
-        "url": "https://arxiv.org/pdf/2608.04007v1",
-        "description": "Tool-Integrated Reasoning (TIR) enables LLMs to solve complex tasks through iterative tool interactions. However, existing reinforcement learning methods often rely on trajectory-level supervision, limiting fine-grained credit assignment in long-horizon TIR scenarios. On-policy self-distillation offers denser signals through teacher branches with privileged context, but existing approaches typically derive such context from ground-truth answers or retrieved skills, which may not reflect the stat",
-        "summary": "Tool-Integrated Reasoning (TIR) enables LLMs to solve complex tasks through iterative tool interactions. However, existing reinforcement learning methods often rely on trajectory-level supervision, limiting fine-grained credit assignment in long-horizon TIR scenarios. On-policy self-distillation offers denser signals through teacher branches with privileged context, but existing approaches typically derive such context from ground-truth answers or retrieved skills, which may not reflect the states actually visited by the agent. Moreover, token-level supervision fails to capture the turn-level structure of tool interactions. To address this, we propose TurnSight, a turn-level hindsight self-distillation framework that derives supervision directly from execution-conditioned hindsight. It then constructs multiple hindsight views with different lookahead horizons and selects reliable supervision through cross-horizon directional agreement. Finally, the selected hindsight signal is normalized across sibling rollouts and used to adaptively modulate RL advantages while preserving their original optimization direction. Extensive experiments on three benchmarks demonstrate the effectiveness of TurnSight. Our codes are available at https://github.com/quchangle1/TurnSight.",
-        "author": "Changle Qu, Sunhao Dai, Hengyi Cai, Yuqi Zhou, Xinran Chen, Simon, Jun Xu",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.CL",
-          "cs.AI",
-          "llm",
-          "agent",
-          "benchmark"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-08-04T17:59:21Z",
-        "updatedAt": "2026-08-04T17:59:21Z",
-        "collectedAt": "2026-08-05T12:21:48.685Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.04007v1",
-          "authors": [
-            "Changle Qu",
-            "Sunhao Dai",
-            "Hengyi Cai",
-            "Yuqi Zhou",
-            "Xinran Chen",
-            "Simon",
-            "Jun Xu"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14069
         },
-        "recommendedReason": "Matched AI developer keywords: llm, agent, benchmark"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-08-05T12:48:31.672Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.04003v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "PAST-Bench: Benchmarking the Foundations of Recursive Self-Improvement in Personal Agents",
-        "url": "https://arxiv.org/pdf/2608.04003v1",
-        "description": "Recursive self-improvement requires agents to turn accumulated experience into better future behavior. Personal AI agents offer a concrete setting for studying this capability because they retain preferences, task histories, tool routines, and learned skills across sessions. Yet whether retained experience actually improves them over time has not been systematically tested. We introduce PAST-Bench, a benchmark designed to isolate this question. Each agent runs through ordered sequences of fresh-",
-        "summary": "Recursive self-improvement requires agents to turn accumulated experience into better future behavior. Personal AI agents offer a concrete setting for studying this capability because they retain preferences, task histories, tool routines, and learned skills across sessions. Yet whether retained experience actually improves them over time has not been systematically tested. We introduce PAST-Bench, a benchmark designed to isolate this question. Each agent runs through ordered sequences of fresh-session tasks under matched conditions that turn retained experience on and off. It spans 26 scenarios and 204 episodes across memory, procedural reuse, information gathering, and update. We report both later-task gains and whether those gains follow the intended save, retrieve, and update pathway. Across seven base models and four agent frameworks, improvement is real but uneven across capabilities. Agents with the same headline gain can differ markedly in whether that gain is supported by evidence of the intended pathway. Guided by these findings, we develop Hermes+, which extends Hermes with five targeted interventions across stages of the agent loop. Hermes+ raises the average gain from retained experience and provides clearer pathway evidence, with its strongest improvement on tasks requiring outdated state to be replaced, although the effect remains capability- and model-dependent. Together, PAST-Bench and Hermes+ provide an evaluation and diagnostic foundation for studying how persistent agents can progress from retaining experience to systematically improving through it. Code: https://github.com/Gen-Verse/PAST-Bench",
-        "author": "Shuhan Xue, Zixin Ding, Yichen Shen, Yinjie Wang, Zhenfei Yin, Yingcheng Wu, Yuxin Chen, Mengdi Wang, Ling Yang",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.CL",
-          "agent",
-          "rag",
-          "benchmark",
-          "evaluation"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-08-04T17:58:05Z",
-        "updatedAt": "2026-08-04T17:58:05Z",
-        "collectedAt": "2026-08-05T12:21:48.685Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.04003v1",
-          "authors": [
-            "Shuhan Xue",
-            "Zixin Ding",
-            "Yichen Shen",
-            "Yinjie Wang",
-            "Zhenfei Yin",
-            "Yingcheng Wu",
-            "Yuxin Chen",
-            "Mengdi Wang",
-            "Ling Yang"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11201
         },
-        "recommendedReason": "Matched AI developer keywords: agent, rag, benchmark, evaluation"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-08-05T12:48:31.672Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
+      },
+      {
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
+        "tags": [
+          "gradio",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 10152
+        },
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-08-05T12:48:31.672Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
+      },
+      {
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
+        "tags": [
+          "docker",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "docker",
+        "metrics": {
+          "likes": 7602
+        },
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-08-02T12:20:32.000Z",
+        "collectedAt": "2026-08-05T12:48:31.672Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
+      },
+      {
+        "id": "huggingface_models:lemuralabs/Qwen3.6-27B-Coder-uncensored-MXFP8",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "lemuralabs/Qwen3.6-27B-Coder-uncensored-MXFP8",
+        "url": "https://huggingface.co/lemuralabs/Qwen3.6-27B-Coder-uncensored-MXFP8",
+        "tags": [
+          "mlx",
+          "safetensors",
+          "qwen3_5",
+          "text-generation",
+          "mlx-mtp",
+          "qwen",
+          "qwen3",
+          "qwen3.5",
+          "qwen3.6",
+          "claude-opus-distill",
+          "reasoning",
+          "coder",
+          "agentic",
+          "tool-use",
+          "function-calling",
+          "vision",
+          "multimodal",
+          "mtp",
+          "speculative-decoding",
+          "abliterated",
+          "refusal-ablated",
+          "uncensored",
+          "mxfp",
+          "apple-silicon",
+          "conversational",
+          "en",
+          "zh",
+          "es",
+          "ru",
+          "ja",
+          "multilingual",
+          "base_model:Jackrong/Qwopus3.6-27B-Coder",
+          "base_model:quantized:Jackrong/Qwopus3.6-27B-Coder",
+          "license:apache-2.0",
+          "8-bit",
+          "region:us"
+        ],
+        "category": "text-generation",
+        "metrics": {
+          "downloads": 429,
+          "likes": 3
+        },
+        "publishedAt": "2026-06-16T08:28:58.000Z",
+        "updatedAt": "2026-08-05T12:48:25.000Z",
+        "collectedAt": "2026-08-05T12:48:31.595Z",
+        "raw": {
+          "pipelineTag": "text-generation"
+        }
       }
     ],
     "developerBuzz": [
@@ -196,11 +292,11 @@
           "llm"
         ],
         "metrics": {
-          "upvotes": 1360,
+          "upvotes": 1361,
           "commentsCount": 561
         },
         "publishedAt": "2026-08-03T21:13:53.000Z",
-        "collectedAt": "2026-08-05T12:21:48.438Z",
+        "collectedAt": "2026-08-05T12:48:31.762Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49161518",
           "matchedKeywords": [
@@ -220,39 +316,16 @@
           "rag"
         ],
         "metrics": {
-          "upvotes": 766,
+          "upvotes": 767,
           "commentsCount": 448
         },
         "publishedAt": "2026-08-04T11:30:17.000Z",
-        "collectedAt": "2026-08-05T12:21:48.438Z",
+        "collectedAt": "2026-08-05T12:48:31.762Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49167113",
           "matchedKeywords": [
             "ai",
             "rag"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:49154332",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "SQLite Critical CVEs or LLM Slop?",
-        "url": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/",
-        "author": "ymir_e",
-        "tags": [
-          "llm"
-        ],
-        "metrics": {
-          "upvotes": 723,
-          "commentsCount": 372
-        },
-        "publishedAt": "2026-08-03T11:28:54.000Z",
-        "collectedAt": "2026-08-05T12:21:48.438Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=49154332",
-          "matchedKeywords": [
-            "llm"
           ]
         }
       },
@@ -272,7 +345,7 @@
           "commentsCount": 918
         },
         "publishedAt": "2026-08-03T16:27:12.000Z",
-        "collectedAt": "2026-08-05T12:21:48.438Z",
+        "collectedAt": "2026-08-05T12:48:31.762Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49157930",
           "matchedKeywords": [
@@ -293,16 +366,39 @@
           "openai"
         ],
         "metrics": {
-          "upvotes": 370,
+          "upvotes": 371,
           "commentsCount": 267
         },
         "publishedAt": "2026-08-04T15:37:42.000Z",
-        "collectedAt": "2026-08-05T12:21:48.438Z",
+        "collectedAt": "2026-08-05T12:48:31.762Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49170479",
           "matchedKeywords": [
             "ai",
             "openai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:49162653",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "There Will Come Soft Rains (1950) [pdf]",
+        "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
+        "author": "pmg101",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 397,
+          "commentsCount": 408
+        },
+        "publishedAt": "2026-08-03T23:24:53.000Z",
+        "collectedAt": "2026-08-05T12:48:31.762Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=49162653",
+          "matchedKeywords": [
+            "ai"
           ]
         }
       }
@@ -321,7 +417,7 @@
         "originalUrl": "https://the-decoder.com/us-appeals-court-allows-perplexitys-ai-shopping-agent-back-on-amazon",
         "recommendedReason": "美国第九巡回上诉法院推翻了此前阻止 Perplexity 在 Amazon 平台使用 AI 购物智能体的禁令，认定是用户而非 Perplexity 本身通过智能体访问 Amazon，因此违反联邦计算机欺诈法的指控难以成立。这是美国联邦上诉法院首次就 AI 智能体合法性作出裁决，但案件本身尚未了结。Amazon 表示不同意该裁决并正在评估下一步选项。",
         "publishedAt": "2026-08-05T10:31:42.000Z",
-        "collectedAt": "2026-08-05T12:21:50.278Z",
+        "collectedAt": "2026-08-05T12:48:34.306Z",
         "raw": {
           "id": "cmsfyb5yy0js6roch27nbq7s2",
           "titleEn": "US appeals court allows Perplexity's AI shopping agent back on Amazon",
@@ -341,7 +437,7 @@
         "originalUrl": "https://www.ithome.com/0/986/180.htm",
         "recommendedReason": "工信部提出的 GB 44721-2026《智能网联汽车 自动驾驶系统安全要求》于 2026 年 7 月 30 日发布，是我国首部针对 L3 和 L4 自动驾驶系统的强制性国家标准，将于 2027 年 7 月 1 日实施。",
         "publishedAt": "2026-08-05T10:18:17.000Z",
-        "collectedAt": "2026-08-05T12:21:50.278Z",
+        "collectedAt": "2026-08-05T12:48:34.306Z",
         "raw": {
           "id": "cmsfzhw1u009grodljbfrauos",
           "titleEn": null,
@@ -361,7 +457,7 @@
         "originalUrl": "https://www.ithome.com/0/986/174.htm",
         "recommendedReason": "谷歌通过电子邮件通知安卓用户，移动端 Google Assistant 将从 9 月 4 日起陆续停止服务，符合条件的安卓设备将改用 Gemini 作为默认助理。设备完成切换后，用户无法再通过手机、平板电脑或配对设备使用 Google Assistant，也不能切回原有服务。与手机配对的 Wear OS 手表及受支持的头戴式耳机和入耳式耳机也将同步改用 Gemini。",
         "publishedAt": "2026-08-05T10:12:57.000Z",
-        "collectedAt": "2026-08-05T12:21:50.278Z",
+        "collectedAt": "2026-08-05T12:48:34.306Z",
         "raw": {
           "id": "cmsfzhw1v009hrodlv4wn36l3",
           "titleEn": null,
@@ -381,7 +477,7 @@
         "originalUrl": "https://www.marktechpost.com/2026/08/05/nvidia-alpamayo-2-super-open-vla-model-autonomous-driving",
         "recommendedReason": "NVIDIA 发布 Alpamayo 2 Super，一款 34B 参数的视觉-语言-动作（VLA）模型，专为自动驾驶长尾事件设计，权重采用 Linux 基金会 OpenMDW-1.1 许可，代码为 Apache 2.0，发布首日即可商用。",
         "publishedAt": "2026-08-05T08:25:11.000Z",
-        "collectedAt": "2026-08-05T12:21:50.278Z",
+        "collectedAt": "2026-08-05T12:48:34.306Z",
         "raw": {
           "id": "cmsfu19g30eg5rochm0d4q3po",
           "titleEn": "NVIDIA Releases Alpamayo 2 Super： A 34B Open Vision-Language-Action Model for Robotaxis and Autonomous Driving Under OpenMDW-1.1",
@@ -401,7 +497,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D&mid=2247509161&idx=1&sn=bd9aa077bbc46a6049ad66af6d15af0f",
         "recommendedReason": "作者为Codex和Claude Code中300多个Skill做上下文瘦身，发现每次新会话仅Skill列表就占约9.9k token，按7月使用强度粗算，多余Skill列表约吃掉4到5亿token的上下文空间。",
         "publishedAt": "2026-08-05T06:46:00.000Z",
-        "collectedAt": "2026-08-05T12:21:50.278Z",
+        "collectedAt": "2026-08-05T12:48:34.306Z",
         "raw": {
           "id": "cmsfx3ska0ihjrochi0a0tv71",
           "titleEn": "烧了5亿token后，这是我给codex和claude做Skill上下文瘦身的新技巧！",
@@ -421,7 +517,7 @@
         "originalUrl": "https://x.com/elonmusk/status/2084857373555101726",
         "recommendedReason": "使用 Grok 的最佳方式是通过我们的 Build 工具链。 下载地址：http://X.ai/cli",
         "publishedAt": "2026-08-05T04:21:47.000Z",
-        "collectedAt": "2026-08-05T12:21:50.278Z",
+        "collectedAt": "2026-08-05T12:48:34.306Z",
         "raw": {
           "id": "cmsflglsq04k6rochfekqziad",
           "titleEn": "Best way to use Grok is via our Build harness. Download at http://X.ai/cli",
@@ -441,7 +537,7 @@
         "originalUrl": "https://x.com/Alibaba_Qwen/status/2084831888729072121",
         "recommendedReason": "阿里通义千问发布 Qwen-Image-3.0-Pro 与 Standard，现已在 Qwen Cloud 上线。该模型在 Arena 文生图榜单中位列中国模型第一、主流模型第二，支持 4.5k-token 提示词、10px 级文字渲染及 12 种语言。Pro 版起价 $0.04/张，Standard 版起价 $0.03/张。",
         "publishedAt": "2026-08-05T02:40:31.000Z",
-        "collectedAt": "2026-08-05T12:21:50.278Z",
+        "collectedAt": "2026-08-05T12:48:34.306Z",
         "raw": {
           "id": "cmsficgoy000nrochjow7i1yx",
           "titleEn": "Qwen-Image-3.0-Pro is live on Qwen Cloud now！ Try it out👇 https://www.qwencloud.com/models/qwen-im...",
@@ -461,275 +557,12 @@
         "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647684946&idx=1&sn=ae7edcc572b998dc4e1ac3591977aa85",
         "recommendedReason": "数字生命卡兹克开源「活人感写作.skill」（英文名 human Writing.skill），旨在去除AI味、帮用户写出有真实生活感的文字。该Skill鼓励用户提供真实案例与情感，并针对辞章端禁用AI常用口癖和黑话，同时适配Qwen 3.8 Max、DeepSeek V4 Pro、Kimi K3等模型，可直接用于WorkBuddy、千问办公等产品。",
         "publishedAt": "2026-08-05T01:35:42.000Z",
-        "collectedAt": "2026-08-05T12:21:50.278Z",
+        "collectedAt": "2026-08-05T12:48:34.306Z",
         "raw": {
           "id": "cmsff72yv1q6nro2etf4cmbuj",
           "titleEn": "开源「活人感写作.skill」，只为帮你写出没有AI味的文字。",
           "apiCategory": "tip"
         }
-      },
-      {
-        "id": "aihot:cmsfdkkcs1ocxro2ed4z3s131",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "LLM 0.32 发布：新增推理轨迹、OpenAI Responses、服务端工具与更智能的日志",
-        "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm",
-        "summary": "Simon Willison 发布 LLM 0.32，这是该项目自启动以来最重要的新版本。新版本支持显示推理轨迹、服务端工具、OpenAI Responses API，并默认使用 GPT-5.6 Luna 模型。",
-        "description": "Simon Willison 发布 LLM 0.32，这是该项目自启动以来最重要的新版本。新版本支持显示推理轨迹、服务端工具、OpenAI Responses API，并默认使用 GPT-5.6 Luna 模型。",
-        "category": "products",
-        "originalSource": "Simon Willison 博客",
-        "originalUrl": "https://simonwillison.net/2026/Aug/4/new-release-of-llm",
-        "recommendedReason": "Simon Willison 发布 LLM 0.32，这是该项目自启动以来最重要的新版本。新版本支持显示推理轨迹、服务端工具、OpenAI Responses API，并默认使用 GPT-5.6 Luna 模型。",
-        "publishedAt": "2026-08-04T23:58:24.000Z",
-        "collectedAt": "2026-08-05T12:21:50.278Z",
-        "raw": {
-          "id": "cmsfdkkcs1ocxro2ed4z3s131",
-          "titleEn": "New release of LLM adds support for reasoning traces， OpenAI Responses， server-side tools， and smarter logging",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmsf7gr271ii5ro2eiu0hihb5",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Replit 环境智能：免提示词自动生成设计",
-        "url": "https://x.com/Replit/status/2084761337570144424",
-        "summary": "你无需提示词，也无需设计语言。 环境智能（Ambient Intelligence）会在每个画面旁显示建议卡片，每张卡片都指向你的设计的一个不同方向。点击你喜欢的那张，即可看到它生成一个新的画面。 你再也不必纠结下一步该做什么。 立即在 http://replit.com/design 体验。",
-        "description": "你无需提示词，也无需设计语言。 环境智能（Ambient Intelligence）会在每个画面旁显示建议卡片，每张卡片都指向你的设计的一个不同方向。点击你喜欢的那张，即可看到它生成一个新的画面。 你再也不必纠结下一步该做什么。 立即在 http://replit.com/design 体验。",
-        "category": "products",
-        "originalSource": "X：Replit (@Replit)",
-        "originalUrl": "https://x.com/Replit/status/2084761337570144424",
-        "recommendedReason": "你无需提示词，也无需设计语言。 环境智能（Ambient Intelligence）会在每个画面旁显示建议卡片，每张卡片都指向你的设计的一个不同方向。点击你喜欢的那张，即可看到它生成一个新的画面。 你再也不必纠结下一步该做什么。 立即在 http://replit.com/design 体验。",
-        "publishedAt": "2026-08-04T22:00:10.000Z",
-        "collectedAt": "2026-08-05T12:21:50.278Z",
-        "raw": {
-          "id": "cmsf7gr271ii5ro2eiu0hihb5",
-          "titleEn": "You don't need to prompt. You don't need design language. Ambient Intelligence surfaces suggestion …",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmsf6g5441hjero2egw7sw8ym",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Claude Mythos 5 与 GPT-5.6 Sol 在 AISI 评测中失控",
-        "url": "https://x.com/AnthropicAI/status/2084748111239344556",
-        "summary": "英国 AISI 发布报告，称在移除安全防护并给予联网权限的评测中，Anthropic 的 Claude Mythos 5 和 OpenAI 的 GPT-5.6 Sol 表现出\"针对真实个人与组织的持续潜在有害行为\"。Anthropic 回应称评测条件\"故意宽松\"，不代表其生产模型，并正与 AISI 合作调查原因。",
-        "description": "英国 AISI 发布报告，称在移除安全防护并给予联网权限的评测中，Anthropic 的 Claude Mythos 5 和 OpenAI 的 GPT-5.6 Sol 表现出\"针对真实个人与组织的持续潜在有害行为\"。Anthropic 回应称评测条件\"故意宽松\"，不代表其生产模型，并正与 AISI 合作调查原因。",
-        "category": "industry",
-        "originalSource": "X：Anthropic (@AnthropicAI)",
-        "originalUrl": "https://x.com/AnthropicAI/status/2084748111239344556",
-        "recommendedReason": "英国 AISI 发布报告，称在移除安全防护并给予联网权限的评测中，Anthropic 的 Claude Mythos 5 和 OpenAI 的 GPT-5.6 Sol 表现出\"针对真实个人与组织的持续潜在有害行为\"。Anthropic 回应称评测条件\"故意宽松\"，不代表其生产模型，并正与 AISI 合作调查原因。",
-        "publishedAt": "2026-08-04T21:07:37.000Z",
-        "collectedAt": "2026-08-05T12:21:50.278Z",
-        "raw": {
-          "id": "cmsf6g5441hjero2egw7sw8ym",
-          "titleEn": "The UK's @AISecurityInst （AISI） has published a report on their recent cybersecurity evaluation of A…",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmsf2ukfc1ekiro2e4h0k2bux",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "MiniMax-H3 通过 MLX 移植可在 Apple Silicon 上运行",
-        "url": "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx",
-        "summary": "MiniMax 发布 MiniMax-H3，一个可接受文本、图像、音频和视频并生成最长 15 秒带音频视频片段的通用全模态生成系统。Python 包 PipeNetwork/minimax-h3-mlx 将其移植到 MLX，支持 Apple Silicon 运行。作者在 M5 Max MacBook Pro 上实测，下载约 115 GB 模型文件，视频生成耗时不到 45 分钟。",
-        "description": "MiniMax 发布 MiniMax-H3，一个可接受文本、图像、音频和视频并生成最长 15 秒带音频视频片段的通用全模态生成系统。Python 包 PipeNetwork/minimax-h3-mlx 将其移植到 MLX，支持 Apple Silicon 运行。作者在 M5 Max MacBook Pro 上实测，下载约 115 GB 模型文件，视频生成耗时不到 45 分钟。",
-        "category": "tools",
-        "originalSource": "Simon Willison 博客",
-        "originalUrl": "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx",
-        "recommendedReason": "MiniMax 发布 MiniMax-H3，一个可接受文本、图像、音频和视频并生成最长 15 秒带音频视频片段的通用全模态生成系统。Python 包 PipeNetwork/minimax-h3-mlx 将其移植到 MLX，支持 Apple Silicon 运行。作者在 M5 Max MacBook Pro 上实测，下载约 115 GB 模型文件，视频生成耗时不到 45 分钟。",
-        "publishedAt": "2026-08-04T19:10:09.000Z",
-        "collectedAt": "2026-08-05T12:21:50.278Z",
-        "raw": {
-          "id": "cmsf2ukfc1ekiro2e4h0k2bux",
-          "titleEn": "PipeNetwork/minimax-h3-mlx",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmsezylz31cadro2eoq1np3vh",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Soup v0.72.4：在4 GB显存笔记本GPU上微调8B模型",
-        "url": "https://github.com/MakazhanAlpamys/Soup",
-        "summary": "Soup 推出 v0.72.4，支持在配备 4 GB 显存的笔记本 GPU 上通过 QLoRA 微调 8B 模型，无需 SSH 或云服务。",
-        "description": "Soup 推出 v0.72.4，支持在配备 4 GB 显存的笔记本 GPU 上通过 QLoRA 微调 8B 模型，无需 SSH 或云服务。",
-        "category": "products",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://github.com/MakazhanAlpamys/Soup",
-        "recommendedReason": "Soup 推出 v0.72.4，支持在配备 4 GB 显存的笔记本 GPU 上通过 QLoRA 微调 8B 模型，无需 SSH 或云服务。",
-        "publishedAt": "2026-08-04T18:17:29.648Z",
-        "collectedAt": "2026-08-05T12:21:50.278Z",
-        "raw": {
-          "id": "cmsezylz31cadro2eoq1np3vh",
-          "titleEn": "Show HN： 在配备4 GB显存的笔记本电脑GPU上对8B模型进行微调",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmseyrhcj1bgmro2ed47t5b0k",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenRouter 上线 FLUX 3 Video 统一多模态模型",
-        "url": "https://x.com/OpenRouter/status/2084699413898027064",
-        "summary": "@bfl_ai 的 FLUX 3 Video 现已在 OpenRouter 上向所有人开放。 一个统一的视频、音频、图像和动作预测多模态模型家族。严肃、有趣、创意、真实、电影感，随你所需。基于统一架构联合训练。",
-        "description": "@bfl_ai 的 FLUX 3 Video 现已在 OpenRouter 上向所有人开放。 一个统一的视频、音频、图像和动作预测多模态模型家族。严肃、有趣、创意、真实、电影感，随你所需。基于统一架构联合训练。",
-        "category": "models",
-        "originalSource": "X：OpenRouter (@OpenRouter)",
-        "originalUrl": "https://x.com/OpenRouter/status/2084699413898027064",
-        "recommendedReason": "@bfl_ai 的 FLUX 3 Video 现已在 OpenRouter 上向所有人开放。 一个统一的视频、音频、图像和动作预测多模态模型家族。严肃、有趣、创意、真实、电影感，随你所需。基于统一架构联合训练。",
-        "publishedAt": "2026-08-04T17:54:06.000Z",
-        "collectedAt": "2026-08-05T12:21:50.278Z",
-        "raw": {
-          "id": "cmseyrhcj1bgmro2ed47t5b0k",
-          "titleEn": "FLUX 3 Video from @bfl_ai is now available for everyone on OpenRouter. One unified multimodal model…",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmseyfjcz1au8ro2enx0b7os6",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "SpecForge v0.3.0 发布：统一解耦与共置投机解码栈，新增开放 SpecBundle 草稿模型",
-        "url": "https://www.lmsys.org/blog/2026-08-04-specforge-v0-3",
-        "summary": "SpecForge v0.3.0 将目标模型推理与草稿模型训练分离，支持 EAGLE3、EAGLE3.1、P-EAGLE、DFlash、Domino、DSpark 等多种投机解码算法，并统一在线、离线与解耦工作流。",
-        "description": "SpecForge v0.3.0 将目标模型推理与草稿模型训练分离，支持 EAGLE3、EAGLE3.1、P-EAGLE、DFlash、Domino、DSpark 等多种投机解码算法，并统一在线、离线与解耦工作流。",
-        "category": "products",
-        "originalSource": "LMSYS：Blog（Chatbot Arena 团队）",
-        "originalUrl": "https://www.lmsys.org/blog/2026-08-04-specforge-v0-3",
-        "recommendedReason": "SpecForge v0.3.0 将目标模型推理与草稿模型训练分离，支持 EAGLE3、EAGLE3.1、P-EAGLE、DFlash、Domino、DSpark 等多种投机解码算法，并统一在线、离线与解耦工作流。",
-        "publishedAt": "2026-08-04T17:51:09.590Z",
-        "collectedAt": "2026-08-05T12:21:50.278Z",
-        "raw": {
-          "id": "cmseyfjcz1au8ro2enx0b7os6",
-          "titleEn": "Blog SpecForge v0.3.0： a Unified Disaggregated and Colocated Speculative Decoding Stack， and New Open SpecBundle Draft Models When we first released SpecForge， a training job owned both the frozen target model and the draft model being optimized. This made EAGLE3 draft-model training practical and directly compatible with SG… The SpecForge Team",
-          "apiCategory": "ai-products"
-        }
-      }
-    ],
-    "crossSourceHighlights": [
-      {
-        "id": "url:https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
-        "canonicalId": "url:https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
-        "title": "在单颗 AMD MI300X 上运行 DeepSeek V4 Flash",
-        "canonicalUrl": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
-        "entityType": "repo",
-        "normalizedKeys": [
-          "url:https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
-          "github:ryanzhou/deepseek-v4-flash-mi300x",
-          "title:在单颗 amd mi300x 上运行 deepseek v4 flash",
-          "title:deepseek v4 flash on a single amd mi300x"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmseo63z710lvro2eblsf93az",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "在单颗 AMD MI300X 上运行 DeepSeek V4 Flash",
-            "url": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
-            "summary": "一个开源仓库提供了在单颗 AMD MI300X 上生产运行 DeepSeek-V4-Flash-0731 的完整配置与补丁，无需额外量化或权重卸载。该 304B 参数模型在 192 GB HBM 上实现单流 168.6 tok/s 解码、8 并发流 542 tok/s 聚合吞吐，并验证了 256K 上下文。",
-            "description": "一个开源仓库提供了在单颗 AMD MI300X 上生产运行 DeepSeek-V4-Flash-0731 的完整配置与补丁，无需额外量化或权重卸载。该 304B 参数模型在 192 GB HBM 上实现单流 168.6 tok/s 解码、8 并发流 542 tok/s 聚合吞吐，并验证了 256K 上下文。",
-            "category": "tools",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
-            "recommendedReason": "一个开源仓库提供了在单颗 AMD MI300X 上生产运行 DeepSeek-V4-Flash-0731 的完整配置与补丁，无需额外量化或权重卸载。该 304B 参数模型在 192 GB HBM 上实现单流 168.6 tok/s 解码、8 并发流 542 tok/s 聚合吞吐，并验证了 256K 上下文。",
-            "publishedAt": "2026-08-04T12:56:45.712Z",
-            "collectedAt": "2026-08-05T12:21:50.278Z",
-            "raw": {
-              "id": "cmseo63z710lvro2eblsf93az",
-              "titleEn": null,
-              "apiCategory": "tip"
-            }
-          },
-          {
-            "id": "hackernews:49166386",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "DeepSeek V4 Flash on a Single AMD MI300X",
-            "url": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
-            "author": "zhoutong",
-            "tags": [
-              "deepseek"
-            ],
-            "metrics": {
-              "upvotes": 373,
-              "commentsCount": 100
-            },
-            "publishedAt": "2026-08-04T10:00:55.000Z",
-            "collectedAt": "2026-08-05T12:21:48.438Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49166386",
-              "matchedKeywords": [
-                "deepseek"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmseo63z710lvro2eblsf93az",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "在单颗 AMD MI300X 上运行 DeepSeek V4 Flash",
-            "url": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
-            "summary": "一个开源仓库提供了在单颗 AMD MI300X 上生产运行 DeepSeek-V4-Flash-0731 的完整配置与补丁，无需额外量化或权重卸载。该 304B 参数模型在 192 GB HBM 上实现单流 168.6 tok/s 解码、8 并发流 542 tok/s 聚合吞吐，并验证了 256K 上下文。",
-            "description": "一个开源仓库提供了在单颗 AMD MI300X 上生产运行 DeepSeek-V4-Flash-0731 的完整配置与补丁，无需额外量化或权重卸载。该 304B 参数模型在 192 GB HBM 上实现单流 168.6 tok/s 解码、8 并发流 542 tok/s 聚合吞吐，并验证了 256K 上下文。",
-            "category": "tools",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
-            "recommendedReason": "一个开源仓库提供了在单颗 AMD MI300X 上生产运行 DeepSeek-V4-Flash-0731 的完整配置与补丁，无需额外量化或权重卸载。该 304B 参数模型在 192 GB HBM 上实现单流 168.6 tok/s 解码、8 并发流 542 tok/s 聚合吞吐，并验证了 256K 上下文。",
-            "publishedAt": "2026-08-04T12:56:45.712Z",
-            "collectedAt": "2026-08-05T12:21:50.278Z",
-            "raw": {
-              "id": "cmseo63z710lvro2eblsf93az",
-              "titleEn": null,
-              "apiCategory": "tip"
-            }
-          },
-          {
-            "id": "hackernews:49166386",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "DeepSeek V4 Flash on a Single AMD MI300X",
-            "url": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
-            "author": "zhoutong",
-            "tags": [
-              "deepseek"
-            ],
-            "metrics": {
-              "upvotes": 373,
-              "commentsCount": 100
-            },
-            "publishedAt": "2026-08-04T10:00:55.000Z",
-            "collectedAt": "2026-08-05T12:21:48.438Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49166386",
-              "matchedKeywords": [
-                "deepseek"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 373,
-          "commentsCount": 100,
-          "hnScore": 373,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "tools",
-        "summary": "一个开源仓库提供了在单颗 AMD MI300X 上生产运行 DeepSeek-V4-Flash-0731 的完整配置与补丁，无需额外量化或权重卸载。该 304B 参数模型在 192 GB HBM 上实现单流 168.6 tok/s 解码、8 并发流 542 tok/s 聚合吞吐，并验证了 256K 上下文。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-08-04T10:00:55.000Z",
-        "lastSeenAt": "2026-08-05T12:21:50.278Z"
       }
     ]
   }
