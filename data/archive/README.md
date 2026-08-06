@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-06T00:15:46.232Z
+Updated: 2026-08-06T03:36:52.167Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -13,7 +13,7 @@ Updated: 2026-08-06T00:15:46.232Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-08-06 | daily | [AI Developer Radar｜Daily｜2026-08-06](2026/08/2026-08-06-daily.md) | Tencent/ncnn, deepspeedai/DeepSpeed, hpcaitech/ColossalAI, thedaviddias/Front-End-Checklist, TencentCloud/TencentDB-Agent-Memory |
+| 2026-08-06 | daily | [AI Developer Radar｜Daily｜2026-08-06](2026/08/2026-08-06-daily.md) | TencentCloud/TencentDB-Agent-Memory, uber/ADR, esengine/DeepSeek-Reasonix, addyosmani/agent-skills, Panniantong/Agent-Reach |
 | 2026-08-05 | daily | [AI Developer Radar｜Daily｜2026-08-05](2026/08/2026-08-05-daily.md) | uber/ADR, tailwindlabs/tailwindcss, donnemartin/system-design-primer, Tencent/ncnn, hpcaitech/ColossalAI |
 | 2026-08-04 | daily | [AI Developer Radar｜Daily｜2026-08-04](2026/08/2026-08-04-daily.md) | firecrawl/pdf-inspector, livekit/agents, QwenLM/qwen-code, ultralytics/yolov5, thedaviddias/Front-End-Checklist |
 | 2026-08-03 | daily | [AI Developer Radar｜Daily｜2026-08-03](2026/08/2026-08-03-daily.md) | antirez/ds4, ChatGPTNextWeb/NextChat, milvus-io/milvus, ultralytics/yolov5, thedaviddias/Front-End-Checklist |
