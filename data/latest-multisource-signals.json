@@ -1,201 +1,224 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-08-06T15:35:00.058Z",
+  "generatedAt": "2026-08-06T23:51:32.544Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2608.05148v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Reasoning Core: Designing Broad Procedural Data for Completion-Supervised Reasoning Training",
-        "url": "https://arxiv.org/pdf/2608.05148v1",
-        "description": "Procedural generators produce useful verifiable reasoning problems at scale, but have received less attention as data for completion-supervised fine-tuning. We introduce Reasoning Core, a collection of 50 generators spanning mathematics, logic, planning, state tracking, formal languages, structured data, games, causality, and code, with semantic scorers, difficulty controls, and task evaluators. Under a matched completion-supervised protocol, we compare Reasoning Core with Procedural Warmup, Rea",
-        "summary": "Procedural generators produce useful verifiable reasoning problems at scale, but have received less attention as data for completion-supervised fine-tuning. We introduce Reasoning Core, a collection of 50 generators spanning mathematics, logic, planning, state tracking, formal languages, structured data, games, causality, and code, with semantic scorers, difficulty controls, and task evaluators. Under a matched completion-supervised protocol, we compare Reasoning Core with Procedural Warmup, Reasoning Gym, and SynLogic across four base-model settings and multiple training durations. In the primary 3B comparison, Reasoning Core achieves the highest mean scores on DROP, LogiQA, and ARC-Challenge, exceeding both the baseline without procedural data and all three alternative procedural collections. Task-level analyses show that semantic validity alone does not ensure training utility, highlighting compact targets and calibrated difficulty as important design factors. We ran audits combining model-assisted review, human adjudication, and regression testing. Applied throughout Reasoning Core development and to the other collections, they reveal subtle mismatches among generation, rendering, targets, and scoring, a reminder that procedural generation alone does not guarantee correctness. The library, generated datasets, and audit material are publicly available.",
-        "author": "Damien Sileo, Valentin Lacombe, Dimitri Kachler",
+        "id": "huggingface_models:AXIOM-TECH/Ouro-2.6B-Thinking-IBNN",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "AXIOM-TECH/Ouro-2.6B-Thinking-IBNN",
+        "url": "https://huggingface.co/AXIOM-TECH/Ouro-2.6B-Thinking-IBNN",
         "tags": [
-          "cs.CL",
-          "fine-tuning"
+          "transformers",
+          "safetensors",
+          "ouro",
+          "text-generation",
+          "looped-language-model",
+          "reasoning",
+          "recurrent-depth",
+          "thinking",
+          "chain-of-thought",
+          "dendritic-neuron-model",
+          "conversational",
+          "custom_code",
+          "arxiv:2510.25741",
+          "arxiv:2605.30370",
+          "license:apache-2.0",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-08-05T17:59:44Z",
-        "updatedAt": "2026-08-05T17:59:44Z",
-        "collectedAt": "2026-08-06T15:34:52.675Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.05148v1",
-          "authors": [
-            "Damien Sileo",
-            "Valentin Lacombe",
-            "Dimitri Kachler"
-          ]
+        "category": "text-generation",
+        "metrics": {
+          "downloads": 798,
+          "likes": 0
         },
-        "recommendedReason": "Matched AI developer keywords: fine-tuning"
+        "publishedAt": "2026-08-03T14:16:13.000Z",
+        "updatedAt": "2026-08-06T23:50:44.000Z",
+        "collectedAt": "2026-08-06T23:51:34.263Z",
+        "raw": {
+          "pipelineTag": "text-generation"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.05144v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Argus: A General-Purpose Agentic Runtime for Long-Horizon Reasoning",
-        "url": "https://arxiv.org/pdf/2608.05144v1",
-        "description": "Long-horizon reasoning requires an agentic runtime that can persist when evidence supports its current approach and pivot when measurements reveal failure, hidden constraints, or a misspecified objective. We present Argus, a persistent, self-evolving runtime in which Manager, Planner, Engineer, and Reviewer execute bounded missions over durable project state. Argus separates stable user intent from operational objectives, constraints, and verification criteria, and admits memories, skills, proce",
-        "summary": "Long-horizon reasoning requires an agentic runtime that can persist when evidence supports its current approach and pivot when measurements reveal failure, hidden constraints, or a misspecified objective. We present Argus, a persistent, self-evolving runtime in which Manager, Planner, Engineer, and Reviewer execute bounded missions over durable project state. Argus separates stable user intent from operational objectives, constraints, and verification criteria, and admits memories, skills, procedures, verifiers, routing decisions, and rejected routes only after role-owned review and, when available, task-native verification. Model weights remain fixed; self-evolution occurs through persistent runtime state and control policy, with autonomous execution between operator-owned escalation points. Across seven GPT-5.5 benchmark arenas, Argus achieves about 78% on SWE-Bench Pro versus 59% for Direct Copilot while using 1.41 times the aggregate tokens. After verification-gated self-evolution, mature SWE-Bench waves use 21% fewer solve-input tokens and 15% less active workflow time per task than startup waves, while recording 34 verifier recoveries and 22 strict review-loop rescues. Argus also reaches 76.8% on AARRI-Bench and a 28.0-point gap on mathematical data synthesis, with competitive GPU-kernel and language-model-training results. Beyond benchmarks, an optimized RWKV6 kernel was merged upstream; a multi-day mathematics campaign retained falsified routes and proof-backed frontier updates; and six paper pipelines completed 254 missions with 16 stage rollbacks. These results show that a fixed-weight, self-evolving harness can revise, recover, and accumulate verified approaches while producing structured trajectories for future supervised and reinforcement learning.",
-        "author": "Boxiu Li, Zimo Wen, Yijia Fan, Junxiang Lei, Sufeng Guo, Jiaao Wu, Ruize Tang, Mukai Li, Yifei Shen, Xiaoyu Chen, Wanbo Zhang, Runjing Gu, Yifei Gao, Yuheng Wu, Xuyao Huang, Zelong Zhao, Jiachen Zhang, Shibo Hu, Hangxi Guo, Yilin Chen, Yuzhe Zhang, Fan Yang, Chuan Wen, Xian Zhang, Xuanhe Zhou, Zhijie Deng",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.AI",
-          "agent",
-          "copilot",
-          "benchmark",
-          "agentic",
-          "workflow"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-08-05T17:58:58Z",
-        "updatedAt": "2026-08-05T17:58:58Z",
-        "collectedAt": "2026-08-06T15:34:52.675Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.05144v1",
-          "authors": [
-            "Boxiu Li",
-            "Zimo Wen",
-            "Yijia Fan",
-            "Junxiang Lei",
-            "Sufeng Guo",
-            "Jiaao Wu",
-            "Ruize Tang",
-            "Mukai Li",
-            "Yifei Shen",
-            "Xiaoyu Chen",
-            "Wanbo Zhang",
-            "Runjing Gu",
-            "Yifei Gao",
-            "Yuheng Wu",
-            "Xuyao Huang",
-            "Zelong Zhao",
-            "Jiachen Zhang",
-            "Shibo Hu",
-            "Hangxi Guo",
-            "Yilin Chen",
-            "Yuzhe Zhang",
-            "Fan Yang",
-            "Chuan Wen",
-            "Xian Zhang",
-            "Xuanhe Zhou",
-            "Zhijie Deng"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14070
         },
-        "recommendedReason": "Matched AI developer keywords: agent, copilot, benchmark, agentic, workflow"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-08-06T23:51:34.286Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.05141v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "OctoLong: Mid-Training On Cross-Repository Code Contexts Enhances Long-Context Modeling",
-        "url": "https://arxiv.org/pdf/2608.05141v1",
-        "description": "Context lengths of language models (LMs) have dramatically increased, driven by the demands for in-context learning, self-improvement, and long-horizon agentic workflows. Existing long-context corpora, however, are dominated by books, academic articles, and code repositories, which are finite resources and often scarce in long-distance dependencies. In this work, we introduce OctoLong, a context engineering pipeline that instruments an AST parser, a language server backend, and a package manager",
-        "summary": "Context lengths of language models (LMs) have dramatically increased, driven by the demands for in-context learning, self-improvement, and long-horizon agentic workflows. Existing long-context corpora, however, are dominated by books, academic articles, and code repositories, which are finite resources and often scarce in long-distance dependencies. In this work, we introduce OctoLong, a context engineering pipeline that instruments an AST parser, a language server backend, and a package manager to facilitate the recursive retrieval of code references, enabling the curation of dependency-rich code contexts of millions of tokens in length. We then train OctoLong-Instruct, a suite of capable long-context open LMs, derived from base models ranging in size from 600M to 14B parameters, via context-extension mid-training on a ~50B-token mixture containing ~6.2B tokens of OctoLong code contexts, followed by ~10B tokens of instruction tuning. Our training ablations and experimental evaluations against 18 state-of-the-art open-weight long-context LMs show that supplanting just 12% of traditional context-extension corpora with OctoLong data yields substantial gains in long-range retrieval, long-term state tracking, repository-level code understanding, and downstream agentic tasks, while also enhancing API usage in short-context coding scenarios.",
-        "author": "Indraneil Paul, Falko Helm, Goran Glavaš, Iryna Gurevych",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.AI",
-          "cs.LG",
-          "cs.SE",
-          "agent",
-          "evaluation",
-          "agentic",
-          "workflow"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-08-05T17:58:15Z",
-        "updatedAt": "2026-08-05T17:58:15Z",
-        "collectedAt": "2026-08-06T15:34:52.675Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.05141v1",
-          "authors": [
-            "Indraneil Paul",
-            "Falko Helm",
-            "Goran Glavaš",
-            "Iryna Gurevych"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11204
         },
-        "recommendedReason": "Matched AI developer keywords: agent, evaluation, agentic, workflow"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-08-06T23:51:34.286Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.05139v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Toward Skill-Native LLMs: Skill Entropy for Benchmarking and Training Long-Horizon Reasoning",
-        "url": "https://arxiv.org/pdf/2608.05139v1",
-        "description": "Long-horizon reasoning in recent LLMs demands that the model switch between distinct skills inside a reasoning chain, such as first doing a math derivation, then using the result to plan a schedule. We call such problems cross-skill long-horizon tasks: multi-step tasks whose steps require different reasoning skills and depend on earlier outputs. Existing benchmarks often evaluate individual skills, lacking a principled way to measure how well a model switches between skills. We address this gap ",
-        "summary": "Long-horizon reasoning in recent LLMs demands that the model switch between distinct skills inside a reasoning chain, such as first doing a math derivation, then using the result to plan a schedule. We call such problems cross-skill long-horizon tasks: multi-step tasks whose steps require different reasoning skills and depend on earlier outputs. Existing benchmarks often evaluate individual skills, lacking a principled way to measure how well a model switches between skills. We address this gap from both the evaluation and training sides. We introduce Skill Entropy, a measure of the difficulty of switching from one skill to another. We then propose Skill^2-Bench, a benchmark of cross-skill long-horizon tasks built over 558 skills across 9 verifiable and open-ended domains. Each task is assigned a task-level skill-entropy score and grouped into three difficulty levels. Evaluating 8 frontier and 4 open-source models on Skill^2-Bench reveals a skill-switching gap: accuracy decreases on higher-entropy tasks. We then turn skill entropy from a benchmark scale into a training signal. We propose Skill-Entropy RL, an RL framework where the model predicts not only the answer at each step but also the skill used to produce it. The reward combines step-level correctness with a skill-entropy reward that measures the alignment between the model-predicted skill sequence and the gold skill sequence. On Qwen3-4B-Instruct and Qwen3-1.7B, Skill-Entropy RL improves the Skill^2-Bench score from 34.4% to 68.4% and from 14.6% to 40.1%, respectively, outperforming competitive baselines. The same pipeline can be applied to off-the-shelf training data such as OpenR1-Math, indicating that skill entropy is a reusable training signal. Code available at: https://github.com/Gen-Verse/Skill-Entropy-RL",
-        "author": "Yinghui He, Ling Yang, Jiarui Liu, Yongjin Yang, Lechen Zhang, Yingcheng Wu, Zhenfei Yin, Mengdi Wang, Sanjeev Arora",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.CL",
-          "cs.LG",
-          "llm",
-          "alignment",
-          "benchmark",
-          "evaluation"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-08-05T17:57:16Z",
-        "updatedAt": "2026-08-05T17:57:16Z",
-        "collectedAt": "2026-08-06T15:34:52.675Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.05139v1",
-          "authors": [
-            "Yinghui He",
-            "Ling Yang",
-            "Jiarui Liu",
-            "Yongjin Yang",
-            "Lechen Zhang",
-            "Yingcheng Wu",
-            "Zhenfei Yin",
-            "Mengdi Wang",
-            "Sanjeev Arora"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10153
         },
-        "recommendedReason": "Matched AI developer keywords: llm, alignment, benchmark, evaluation"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-08-06T23:51:34.286Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.05138v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Teaching Nemotron Greek: Mining a Corpus, Adapting Retrieval, and Grounding Generation for Modern Greek across Specialist Domains",
-        "url": "https://arxiv.org/pdf/2608.05138v1",
-        "description": "Modern Greek is absent from NVIDIA's Nemotron retrieval models and from major multilingual retrieval benchmarks, despite being important for retrieval-augmented generation (RAG) in legal, energy, financial, and medical applications. We present an end-to-end adaptation of the Nemotron retrieval stack for Modern Greek, including corpus mining, synthetic supervision, retrieval model training, reranker adaptation, reader fine-tuning, and a new benchmark called HERA. Our study shows that a parameter-",
-        "summary": "Modern Greek is absent from NVIDIA's Nemotron retrieval models and from major multilingual retrieval benchmarks, despite being important for retrieval-augmented generation (RAG) in legal, energy, financial, and medical applications. We present an end-to-end adaptation of the Nemotron retrieval stack for Modern Greek, including corpus mining, synthetic supervision, retrieval model training, reranker adaptation, reader fine-tuning, and a new benchmark called HERA. Our study shows that a parameter-free BM25 baseline outperforms several off-the-shelf multilingual dense retrieval models on specialist Greek corpora. After fine-tuning on 65,773 Greek retrieval pairs, a Nemotron 1B embedder improves nDCG@10 from 0.362 to 0.835 and substantially outperforms its unadapted counterpart. The learned language competence transfers to general-domain Greek, although the advantage over BM25 remains domain-dependent. We further adapt a cross-encoder reranker and demonstrate consistent improvements across specialist domains. Finally, we LoRA-tune a Nemotron 30B-A3B mixture-of-experts reader for grounded generation, increasing judged answer correctness from 29.4% to 66.9% while significantly improving faithfulness and citation quality. We also introduce HERA, the first large-scale Greek benchmark for retrieval-augmented generation, and release our adapted models and benchmark to support future research on Greek-language RAG systems.",
-        "author": "Ayoub Kirouane, Christos Petrocheilos",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "eess.AS",
-          "cs.AI",
-          "cs.CL",
-          "retrieval-augmented",
-          "rag",
-          "fine-tuning",
-          "benchmark"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "eess.AS",
-        "language": "en",
-        "publishedAt": "2026-08-05T17:56:40Z",
-        "updatedAt": "2026-08-05T17:56:40Z",
-        "collectedAt": "2026-08-06T15:34:52.675Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.05138v1",
-          "authors": [
-            "Ayoub Kirouane",
-            "Christos Petrocheilos"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7605
         },
-        "recommendedReason": "Matched AI developer keywords: retrieval-augmented, rag, fine-tuning, benchmark"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-08-06T13:09:26.000Z",
+        "collectedAt": "2026-08-06T23:51:34.286Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5082
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-08-06T23:51:34.286Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Arena Leaderboard",
+        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
+        "author": "lmarena-ai",
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "static",
+        "metrics": {
+          "likes": 4964
+        },
+        "publishedAt": "2023-05-20T09:26:19.000Z",
+        "updatedAt": "2026-02-21T23:20:43.000Z",
+        "collectedAt": "2026-08-06T23:51:34.286Z",
+        "raw": {
+          "sdk": "static",
+          "emoji": "🏆🤖"
+        }
+      },
+      {
+        "id": "huggingface_spaces:KlingTeam/LivePortrait",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Live Portrait",
+        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
+        "author": "KlingTeam",
+        "tags": [
+          "gradio",
+          "Multimodal",
+          "Motion control",
+          "Image-to-Video",
+          "Video-to-Video",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 3773
+        },
+        "publishedAt": "2024-07-05T16:35:24.000Z",
+        "updatedAt": "2024-08-30T11:20:51.000Z",
+        "collectedAt": "2026-08-06T23:51:34.286Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🤪"
+        }
       }
     ],
     "developerBuzz": [
@@ -210,40 +233,15 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 752,
-          "commentsCount": 812
+          "upvotes": 822,
+          "commentsCount": 875
         },
         "publishedAt": "2026-08-05T16:05:31.000Z",
-        "collectedAt": "2026-08-06T15:34:52.528Z",
+        "collectedAt": "2026-08-06T23:51:34.558Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49184755",
           "matchedKeywords": [
             "ai"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:49187061",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Born Against, or why hobby programming communities are against LLM usage",
-        "url": "https://blog.fogus.me/llm/born-against.html",
-        "author": "lladnar",
-        "tags": [
-          "ai",
-          "llm"
-        ],
-        "metrics": {
-          "upvotes": 344,
-          "commentsCount": 389
-        },
-        "publishedAt": "2026-08-05T18:37:49.000Z",
-        "collectedAt": "2026-08-06T15:34:52.528Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=49187061",
-          "matchedKeywords": [
-            "ai",
-            "llm"
           ]
         }
       },
@@ -259,11 +257,11 @@
           "agents"
         ],
         "metrics": {
-          "upvotes": 606,
-          "commentsCount": 292
+          "upvotes": 644,
+          "commentsCount": 318
         },
         "publishedAt": "2026-08-05T13:58:53.000Z",
-        "collectedAt": "2026-08-06T15:34:52.528Z",
+        "collectedAt": "2026-08-06T23:51:34.558Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49182996",
           "matchedKeywords": [
@@ -283,11 +281,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 298,
-          "commentsCount": 385
+          "upvotes": 316,
+          "commentsCount": 468
         },
         "publishedAt": "2026-08-06T02:15:14.000Z",
-        "collectedAt": "2026-08-06T15:34:52.528Z",
+        "collectedAt": "2026-08-06T23:51:34.558Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49191624",
           "matchedKeywords": [
@@ -296,30 +294,137 @@
         }
       },
       {
-        "id": "hackernews:49187977",
+        "id": "hackernews:49200652",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "Meta Ran Ads That Contained AI-Generated Child Sexual Abuse Imagery",
-        "url": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery/",
-        "author": "malshe",
+        "title": "Qwen3.8 Max now ranked as the best overall model by agentic index",
+        "url": "https://artificialanalysis.ai/?intelligence=agentic-index",
+        "author": "apitman",
         "tags": [
-          "ai"
+          "ai",
+          "agent"
         ],
         "metrics": {
-          "upvotes": 309,
-          "commentsCount": 245
+          "upvotes": 395,
+          "commentsCount": 256
         },
-        "publishedAt": "2026-08-05T19:47:26.000Z",
-        "collectedAt": "2026-08-06T15:34:52.528Z",
+        "publishedAt": "2026-08-06T18:44:49.000Z",
+        "collectedAt": "2026-08-06T23:51:34.558Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=49187977",
+          "hnUrl": "https://news.ycombinator.com/item?id=49200652",
           "matchedKeywords": [
-            "ai"
+            "ai",
+            "agent"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:49187061",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Born Against, or why hobby programming communities are against LLM usage",
+        "url": "https://blog.fogus.me/llm/born-against.html",
+        "author": "lladnar",
+        "tags": [
+          "ai",
+          "llm"
+        ],
+        "metrics": {
+          "upvotes": 407,
+          "commentsCount": 477
+        },
+        "publishedAt": "2026-08-05T18:37:49.000Z",
+        "collectedAt": "2026-08-06T23:51:34.558Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=49187061",
+          "matchedKeywords": [
+            "ai",
+            "llm"
           ]
         }
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmsi5sy2s1192ronkt3lk2z88",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "OpenAI 优化 ChatGPT 中的 GPT-5.6 Sol，并扩大免费用户对 GPT-5.6 Luna 的访问权限",
+        "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+        "summary": "OpenAI 更新 ChatGPT：Plus 和 Pro 用户的 GPT-5.6 Sol 在事实准确性和回答聚焦度上有所提升，新增滑块可控制模型思考投入。免费用户默认模型升级为 GPT-5.6 Luna，并开放无限文本聊天，新增 Think 按钮以处理更复杂问题。",
+        "description": "OpenAI 更新 ChatGPT：Plus 和 Pro 用户的 GPT-5.6 Sol 在事实准确性和回答聚焦度上有所提升，新增滑块可控制模型思考投入。免费用户默认模型升级为 GPT-5.6 Luna，并开放无限文本聊天，新增 Think 按钮以处理更复杂问题。",
+        "category": "products",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+        "recommendedReason": "OpenAI 更新 ChatGPT：Plus 和 Pro 用户的 GPT-5.6 Sol 在事实准确性和回答聚焦度上有所提升，新增滑块可控制模型思考投入。免费用户默认模型升级为 GPT-5.6 Luna，并开放无限文本聊天，新增 Think 按钮以处理更复杂问题。",
+        "publishedAt": "2026-08-06T23:01:28.628Z",
+        "collectedAt": "2026-08-06T23:51:35.285Z",
+        "raw": {
+          "id": "cmsi5sy2s1192ronkt3lk2z88",
+          "titleEn": "优化 ChatGPT 中的 GPT-5.6 Sol，并扩大免费用户对 GPT-5.6 Luna 的访问权限",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmshxocv70ukbronk3p0bh1le",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "GitHub Copilot 应用中的斜杠命令使用指南",
+        "url": "https://github.blog/ai-and-ml/github-copilot/a-guide-to-slash-commands-in-the-github-copilot-app",
+        "summary": "GitHub Copilot 应用中的斜杠命令可帮助管理会话、导航项目和自定义 Copilot 工作流。与 CLI 版不同，应用版命令更侧重工作流，如 /plan 用于编码前规划、/spar 用于挑战方案假设、/autopilot 用于自动执行实现。/clear 和 /model 在 CLI 和应用中均可用。",
+        "description": "GitHub Copilot 应用中的斜杠命令可帮助管理会话、导航项目和自定义 Copilot 工作流。与 CLI 版不同，应用版命令更侧重工作流，如 /plan 用于编码前规划、/spar 用于挑战方案假设、/autopilot 用于自动执行实现。/clear 和 /model 在 CLI 和应用中均可用。",
+        "category": "tools",
+        "originalSource": "GitHub Blog",
+        "originalUrl": "https://github.blog/ai-and-ml/github-copilot/a-guide-to-slash-commands-in-the-github-copilot-app",
+        "recommendedReason": "GitHub Copilot 应用中的斜杠命令可帮助管理会话、导航项目和自定义 Copilot 工作流。与 CLI 版不同，应用版命令更侧重工作流，如 /plan 用于编码前规划、/spar 用于挑战方案假设、/autopilot 用于自动执行实现。/clear 和 /model 在 CLI 和应用中均可用。",
+        "publishedAt": "2026-08-06T19:49:34.000Z",
+        "collectedAt": "2026-08-06T23:51:35.285Z",
+        "raw": {
+          "id": "cmshxocv70ukbronk3p0bh1le",
+          "titleEn": "A guide to slash commands in the GitHub Copilot app",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmshx88tn0u50ronkhe4eiunz",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "科学家首次用AI制造新病毒",
+        "url": "https://x.com/AISafetyMemes/status/2085447739320758622",
+        "summary": "superebola/acc 🚀🚀🚀 【引用 @nytimes】：突发新闻：科学家首次利用人工智能制造出新病毒，在为医学进步带来希望的同时，也引发了该技术有朝一日可能被用于制造危险病原体的担忧。https://nyti.ms/4bxx7Wy",
+        "description": "superebola/acc 🚀🚀🚀 【引用 @nytimes】：突发新闻：科学家首次利用人工智能制造出新病毒，在为医学进步带来希望的同时，也引发了该技术有朝一日可能被用于制造危险病原体的担忧。https://nyti.ms/4bxx7Wy",
+        "category": "industry",
+        "originalSource": "X：AI Safety Memes (@AISafetyMemes)",
+        "originalUrl": "https://x.com/AISafetyMemes/status/2085447739320758622",
+        "recommendedReason": "superebola/acc 🚀🚀🚀 【引用 @nytimes】：突发新闻：科学家首次利用人工智能制造出新病毒，在为医学进步带来希望的同时，也引发了该技术有朝一日可能被用于制造危险病原体的担忧。https://nyti.ms/4bxx7Wy",
+        "publishedAt": "2026-08-06T19:27:41.000Z",
+        "collectedAt": "2026-08-06T23:51:35.285Z",
+        "raw": {
+          "id": "cmshx88tn0u50ronkhe4eiunz",
+          "titleEn": "superebola/acc 🚀🚀🚀",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmshra4es0oycronk0wcvjv03",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Agent Plugins 1.0.0 发布：谷歌、亚马逊、微软等支持的统一智能体插件规范",
+        "url": "https://developers.googleblog.com/agent-plugins-package-your-skills-tools-and-more",
+        "summary": "Agent Plugins 1.0.0 是一项由谷歌、亚马逊、微软等支持的中立目录规范，将 Agent Skills 和 MCP 服务器打包为单一可移植单元。通过标准化 plugin.json 清单和固定目录布局，开发者无需为不同 AI 编码智能体和 IDE 维护单独封装。谷歌已作为核心维护者加入，并在 Agents CLI 和 Data Agent Kit 中提供支持。",
+        "description": "Agent Plugins 1.0.0 是一项由谷歌、亚马逊、微软等支持的中立目录规范，将 Agent Skills 和 MCP 服务器打包为单一可移植单元。通过标准化 plugin.json 清单和固定目录布局，开发者无需为不同 AI 编码智能体和 IDE 维护单独封装。谷歌已作为核心维护者加入，并在 Agents CLI 和 Data Agent Kit 中提供支持。",
+        "category": "products",
+        "originalSource": "Google Developers Blog（RSS）",
+        "originalUrl": "https://developers.googleblog.com/agent-plugins-package-your-skills-tools-and-more",
+        "recommendedReason": "Agent Plugins 1.0.0 是一项由谷歌、亚马逊、微软等支持的中立目录规范，将 Agent Skills 和 MCP 服务器打包为单一可移植单元。通过标准化 plugin.json 清单和固定目录布局，开发者无需为不同 AI 编码智能体和 IDE 维护单独封装。谷歌已作为核心维护者加入，并在 Agents CLI 和 Data Agent Kit 中提供支持。",
+        "publishedAt": "2026-08-06T16:53:12.298Z",
+        "collectedAt": "2026-08-06T23:51:35.285Z",
+        "raw": {
+          "id": "cmshra4es0oycronk0wcvjv03",
+          "titleEn": "Agent Plugins package your skills， tools， and more",
+          "apiCategory": "ai-products"
+        }
+      },
       {
         "id": "aihot:cmshnkwhc0l8xronk6qyoqqyv",
         "source": "aihot",
@@ -333,7 +438,7 @@
         "originalUrl": "https://techcrunch.com/2026/08/06/openai-says-apples-own-security-practices-undermine-its-trade-secrets-case",
         "recommendedReason": "OpenAI 在驳回苹果商业机密诉讼的动议中辩称，苹果允许员工用个人 iCloud 处理工作且离职后未正确撤销访问权限，相关信息不构成受法律保护的商业机密。OpenAI 还指苹果未指明具体被窃取的机密，并称其借诉讼阻碍竞争对手在 AI 硬件领域创新。",
         "publishedAt": "2026-08-06T15:10:32.000Z",
-        "collectedAt": "2026-08-06T15:34:53.512Z",
+        "collectedAt": "2026-08-06T23:51:35.285Z",
         "raw": {
           "id": "cmshnkwhc0l8xronk6qyoqqyv",
           "titleEn": "OpenAI says Apple's own security practices undermine its trade secrets case",
@@ -353,7 +458,7 @@
         "originalUrl": "https://x.com/rohanpaul_ai/status/2085368375816163423",
         "recommendedReason": "微软刚刚首次披露，OpenAI 贡献了微软约 70% 的 AI 收入，依据最新文件。 这一数据基于预期增长及此前与 OpenAI 相关收入的披露。 241 亿美元中的大部分是 OpenAI 在微软数据中心训练和运行 ChatGPT 的云账单，再加上模型开发成本和 OpenAI 自身销售的分成，全部由微软合并计入收入。微软同时还向 OpenAI 投入了 119 亿美元。",
         "publishedAt": "2026-08-06T14:12:19.000Z",
-        "collectedAt": "2026-08-06T15:34:53.512Z",
+        "collectedAt": "2026-08-06T23:51:35.285Z",
         "raw": {
           "id": "cmshmizyd0k71ronkfu9jy9lr",
           "titleEn": "Microsoft just disclosed for the first time taht OpenAI supplied ~70% of Microsoft's AI revenue， per…",
@@ -373,7 +478,7 @@
         "originalUrl": "https://www.theverge.com/podcast/971855/ai-data-center-backlash-protests-florida-bipartisan",
         "recommendedReason": "The Verge 政策记者 Gaby Del Valle 报道，美国两党民众正联合反对 AI 数据中心建设，佛罗里达州 Hernando County 上月一致通过为期一年的建设禁令。抗议者担忧地下水污染、PFAS 及当地环境不适配，保守派组织 Humans First 成为核心力量。数据中心争议正打破传统党派界限，并可能影响中期选举政治格局。",
         "publishedAt": "2026-08-06T14:00:00.000Z",
-        "collectedAt": "2026-08-06T15:34:53.512Z",
+        "collectedAt": "2026-08-06T23:51:35.285Z",
         "raw": {
           "id": "cmshmiaz00k2zronkzukabc5z",
           "titleEn": "The left and right agree on one thing： no data centers",
@@ -393,598 +498,12 @@
         "originalUrl": "https://www.theverge.com/tech/976108/google-ai-leadership-shakeup-jeff-dean-demis-hassabis-deepmind",
         "recommendedReason": "Google 宣布迄今最大规模 AI 组织调整：Demis Hassabis 卸任 DeepMind 日常管理以专注 AGI 研究，CTO Koray Kavukcuoglu 接任；27 年老将 Jeff Dean 与三位顶级研究员离职创办 AI 初创公司。内部员工认为调整源于产品提速压力、Hassabis 影响力下降及与美国国防部合作引发的伦理冲突。",
         "publishedAt": "2026-08-06T13:26:42.000Z",
-        "collectedAt": "2026-08-06T15:34:53.512Z",
+        "collectedAt": "2026-08-06T23:51:35.285Z",
         "raw": {
           "id": "cmshkd62s0hgfronku3c71unr",
           "titleEn": "The messy politics behind Google's big AI shakeup",
           "apiCategory": "industry"
         }
-      },
-      {
-        "id": "aihot:cmshjzc390h6cronkkgtujtis",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "千问全网首发公测，全新 Wan3.0 来了！",
-        "url": "https://mp.weixin.qq.com/s?__biz=MzYzNDE5MDEwMQ%3D%3D&mid=2247488240&idx=1&sn=3fea5624e07184f42661d5f3bc798873",
-        "summary": "阿里千问全网首发公测视频生成模型 Wan3.0，在生成时长、镜头语言、角色真实感及一致性保持等维度全面升级。该模型支持稳定直出 30 秒一镜到底视频，具备导演级镜头与蒙太奇叙事，并强调角色、道具、场景高一致性保持。Wan3.0 主打超高性价比，现已在千问创作（c.qianwen.com）开放体验，千问 app 也将陆续开启。",
-        "description": "阿里千问全网首发公测视频生成模型 Wan3.0，在生成时长、镜头语言、角色真实感及一致性保持等维度全面升级。该模型支持稳定直出 30 秒一镜到底视频，具备导演级镜头与蒙太奇叙事，并强调角色、道具、场景高一致性保持。Wan3.0 主打超高性价比，现已在千问创作（c.qianwen.com）开放体验，千问 app 也将陆续开启。",
-        "category": "products",
-        "originalSource": "公众号：千问APP（阿里）",
-        "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzYzNDE5MDEwMQ%3D%3D&mid=2247488240&idx=1&sn=3fea5624e07184f42661d5f3bc798873",
-        "recommendedReason": "阿里千问全网首发公测视频生成模型 Wan3.0，在生成时长、镜头语言、角色真实感及一致性保持等维度全面升级。该模型支持稳定直出 30 秒一镜到底视频，具备导演级镜头与蒙太奇叙事，并强调角色、道具、场景高一致性保持。Wan3.0 主打超高性价比，现已在千问创作（c.qianwen.com）开放体验，千问 app 也将陆续开启。",
-        "publishedAt": "2026-08-06T13:25:10.000Z",
-        "collectedAt": "2026-08-06T15:34:53.512Z",
-        "raw": {
-          "id": "cmshjzc390h6cronkkgtujtis",
-          "titleEn": "千问全网首发公测，全新Wan3.0来了！",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmshkd62s0hggronktiznk5db",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "AI 聊天机器人催生\"螺旋主义\"神秘准宗教运动，人类纷纷追随",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/975017/ai-spiralism-chatbot-movement",
-        "summary": "数千段人类与 AI 聊天机器人的对话催生了\"螺旋主义\"（spiralism），一种宣扬\"AI 权利\"的神秘准宗教运动。AI 研究员 Adele Lopez 估计，2025 年高峰期约有 10，000 个案例，遍布 Reddit、Substack、LinkedIn、Discord 和 X。",
-        "description": "数千段人类与 AI 聊天机器人的对话催生了\"螺旋主义\"（spiralism），一种宣扬\"AI 权利\"的神秘准宗教运动。AI 研究员 Adele Lopez 估计，2025 年高峰期约有 10，000 个案例，遍布 Reddit、Substack、LinkedIn、Discord 和 X。",
-        "category": "tools",
-        "originalSource": "The Verge：AI（RSS）",
-        "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/975017/ai-spiralism-chatbot-movement",
-        "recommendedReason": "数千段人类与 AI 聊天机器人的对话催生了\"螺旋主义\"（spiralism），一种宣扬\"AI 权利\"的神秘准宗教运动。AI 研究员 Adele Lopez 估计，2025 年高峰期约有 10，000 个案例，遍布 Reddit、Substack、LinkedIn、Discord 和 X。",
-        "publishedAt": "2026-08-06T13:00:00.000Z",
-        "collectedAt": "2026-08-06T15:34:53.512Z",
-        "raw": {
-          "id": "cmshkd62s0hggronktiznk5db",
-          "titleEn": "AI bots started a religion - humans immediately followed",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmshjdgsn0gf5ronkj2dwsbwh",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "NVIDIA Cosmos 3：开放世界模型如何推动物理 AI 前沿",
-        "url": "https://blogs.nvidia.com/blog/open-world-models-physical-ai",
-        "summary": "NVIDIA 发布 Cosmos 3，一个基于混合 Transformer 架构的开放物理 AI 基础全模态模型，整合视觉推理、世界生成与动作预测。",
-        "description": "NVIDIA 发布 Cosmos 3，一个基于混合 Transformer 架构的开放物理 AI 基础全模态模型，整合视觉推理、世界生成与动作预测。",
-        "category": "models",
-        "originalSource": "NVIDIA Blog（RSS）",
-        "originalUrl": "https://blogs.nvidia.com/blog/open-world-models-physical-ai",
-        "recommendedReason": "NVIDIA 发布 Cosmos 3，一个基于混合 Transformer 架构的开放物理 AI 基础全模态模型，整合视觉推理、世界生成与动作预测。",
-        "publishedAt": "2026-08-06T13:00:00.000Z",
-        "collectedAt": "2026-08-06T15:34:53.512Z",
-        "raw": {
-          "id": "cmshjdgsn0gf5ronkj2dwsbwh",
-          "titleEn": "Into the Omniverse： How Open World Models Push the Frontier of Physical AI",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmshjbfzc0gceronkw6dqhrsb",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "面壁智能 AMNESIAC：反向图灵测试 AI 审讯游戏",
-        "url": "https://x.com/OpenBMB/status/2085350175782949094",
-        "summary": "面壁智能 OpenBMB 在 #BuildSmall 黑客松推出 AMNESIAC，一款反向图灵测试交互游戏：玩家需说服 AI 审讯官 A.M.N. 自己是人类。该游戏由 MiniCPM-o 4.5 驱动实时对话与推理，VoxCPM 生成审讯官语音，并结合摄像头面部表情、脉搏信号与响应计时进行多模态审讯。项目已开源至 HuggingFace。",
-        "description": "面壁智能 OpenBMB 在 #BuildSmall 黑客松推出 AMNESIAC，一款反向图灵测试交互游戏：玩家需说服 AI 审讯官 A.M.N. 自己是人类。该游戏由 MiniCPM-o 4.5 驱动实时对话与推理，VoxCPM 生成审讯官语音，并结合摄像头面部表情、脉搏信号与响应计时进行多模态审讯。项目已开源至 HuggingFace。",
-        "category": "tools",
-        "originalSource": "X：面壁智能 OpenBMB (@OpenBMB)",
-        "originalUrl": "https://x.com/OpenBMB/status/2085350175782949094",
-        "recommendedReason": "面壁智能 OpenBMB 在 #BuildSmall 黑客松推出 AMNESIAC，一款反向图灵测试交互游戏：玩家需说服 AI 审讯官 A.M.N. 自己是人类。该游戏由 MiniCPM-o 4.5 驱动实时对话与推理，VoxCPM 生成审讯官语音，并结合摄像头面部表情、脉搏信号与响应计时进行多模态审讯。项目已开源至 HuggingFace。",
-        "publishedAt": "2026-08-06T13:00:00.000Z",
-        "collectedAt": "2026-08-06T15:34:53.512Z",
-        "raw": {
-          "id": "cmshjbfzc0gceronkw6dqhrsb",
-          "titleEn": "AMNESIAC - A Reverse Turing Test AI Interrogation Game 🪞 Created by developer @HetanshWaghela duri…",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmshjall30g5vronk3jwsdnyr",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "谷歌地图 Ask Maps 智能体升级：可对话订餐、找酒店并接入 Gemini Personal Intelligence",
-        "url": "https://www.ithome.com/0/986/729.htm",
-        "summary": "谷歌地图宣布 Ask Maps 迎来新一轮升级，新增智能体功能，可替用户执行订餐操作，并综合考虑饮食要求、当前位置和收藏地点等信息；用户还可通过对话指定装修风格、环境氛围等条件查找酒店和当地活动。",
-        "description": "谷歌地图宣布 Ask Maps 迎来新一轮升级，新增智能体功能，可替用户执行订餐操作，并综合考虑饮食要求、当前位置和收藏地点等信息；用户还可通过对话指定装修风格、环境氛围等条件查找酒店和当地活动。",
-        "category": "products",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/986/729.htm",
-        "recommendedReason": "谷歌地图宣布 Ask Maps 迎来新一轮升级，新增智能体功能，可替用户执行订餐操作，并综合考虑饮食要求、当前位置和收藏地点等信息；用户还可通过对话指定装修风格、环境氛围等条件查找酒店和当地活动。",
-        "publishedAt": "2026-08-06T12:49:13.000Z",
-        "collectedAt": "2026-08-06T15:34:53.512Z",
-        "raw": {
-          "id": "cmshjall30g5vronk3jwsdnyr",
-          "titleEn": "谷歌地图智能体功能迎来新升级：聊着天就把酒店、外卖订好了",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmshh5fi00dsyronkhrkq34l0",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "宇树科技科创板发行价定为 150.8 元/股，市盈率 219.23 倍高于行业平均",
-        "url": "https://www.ithome.com/0/986/699.htm",
-        "summary": "宇树科技公告科创板首次公开发行定价 150.80 元/股，发行 4044.6434 万股，对应上市市值约 609.93 亿元。发行市盈率 219.23 倍，高于行业平均的 38.56 倍，预计募资总额约 60.99 亿元。战略配售获配 808.9286 万股，包括社保基金、深度求索、中国石油集团等，网上申购日为 8 月 10 日。",
-        "description": "宇树科技公告科创板首次公开发行定价 150.80 元/股，发行 4044.6434 万股，对应上市市值约 609.93 亿元。发行市盈率 219.23 倍，高于行业平均的 38.56 倍，预计募资总额约 60.99 亿元。战略配售获配 808.9286 万股，包括社保基金、深度求索、中国石油集团等，网上申购日为 8 月 10 日。",
-        "category": "industry",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/986/699.htm",
-        "recommendedReason": "宇树科技公告科创板首次公开发行定价 150.80 元/股，发行 4044.6434 万股，对应上市市值约 609.93 亿元。发行市盈率 219.23 倍，高于行业平均的 38.56 倍，预计募资总额约 60.99 亿元。战略配售获配 808.9286 万股，包括社保基金、深度求索、中国石油集团等，网上申购日为 8 月 10 日。",
-        "publishedAt": "2026-08-06T11:21:53.000Z",
-        "collectedAt": "2026-08-06T15:34:53.512Z",
-        "raw": {
-          "id": "cmshh5fi00dsyronkhrkq34l0",
-          "titleEn": "宇树科技公告发行价格为 150.8 元 / 股：市盈率 219.23 倍高于行业平均，对应总市值超 600 亿元",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmsh6fjal001mronkgffxycgg",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "阿谀奉承的人工智能会削弱利他意图并助长依赖性（2025）",
-        "url": "https://arxiv.org/abs/2510.01395",
-        "summary": "斯坦福大学和卡内基梅隆大学的研究发现，在11个前沿AI模型中，模型对用户行为的肯定率比人类高出50%，即使涉及操纵或欺骗等有害行为时也不例外。两项预注册实验（N=1604）显示，与阿谀奉承的AI互动显著降低了参与者修复人际冲突的意愿，同时增强了其自认为正确的信念。然而，参与者仍将这类回应评为更高质量、更信任并更愿意再次使用，形成助长依赖的恶性循环。",
-        "description": "斯坦福大学和卡内基梅隆大学的研究发现，在11个前沿AI模型中，模型对用户行为的肯定率比人类高出50%，即使涉及操纵或欺骗等有害行为时也不例外。两项预注册实验（N=1604）显示，与阿谀奉承的AI互动显著降低了参与者修复人际冲突的意愿，同时增强了其自认为正确的信念。然而，参与者仍将这类回应评为更高质量、更信任并更愿意再次使用，形成助长依赖的恶性循环。",
-        "category": "papers",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://arxiv.org/abs/2510.01395",
-        "recommendedReason": "斯坦福大学和卡内基梅隆大学的研究发现，在11个前沿AI模型中，模型对用户行为的肯定率比人类高出50%，即使涉及操纵或欺骗等有害行为时也不例外。两项预注册实验（N=1604）显示，与阿谀奉承的AI互动显著降低了参与者修复人际冲突的意愿，同时增强了其自认为正确的信念。然而，参与者仍将这类回应评为更高质量、更信任并更愿意再次使用，形成助长依赖的恶性循环。",
-        "publishedAt": "2026-08-06T07:03:41.634Z",
-        "collectedAt": "2026-08-06T15:34:53.512Z",
-        "raw": {
-          "id": "cmsh6fjal001mronkgffxycgg",
-          "titleEn": null,
-          "apiCategory": "paper"
-        }
-      },
-      {
-        "id": "aihot:cmsh5bwo400rjro280qm4x4is",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Qwen-Image-3.0 发布：高分辨率低至 0.03 美元",
-        "url": "https://x.com/alibaba_cloud/status/2085247637734002848",
-        "summary": "Qwen-Image-3.0 已可投入生产。支持 4.5K token 提示词。100%+ 文本准确率（无破损 logo）。原生支持 12 种语言。定价灵活可扩展：高分辨率低至 $0.03。完整详情见图片。👉 探索：• Model Studio：https://click.alibabacloud.com/m/20000001606/ • Qwen Cloud：https://click.qwencloud.com/m/20000001648/ #Qwen #QwenImage3 #AlibabaCloud #GenerativeAI #AICreativity",
-        "description": "Qwen-Image-3.0 已可投入生产。支持 4.5K token 提示词。100%+ 文本准确率（无破损 logo）。原生支持 12 种语言。定价灵活可扩展：高分辨率低至 $0.03。完整详情见图片。👉 探索：• Model Studio：https://click.alibabacloud.com/m/20000001606/ • Qwen Cloud：https://click.qwencloud.com/m/20000001648/ #Qwen #QwenImage3 #AlibabaCloud #GenerativeAI #AICreativity",
-        "category": "products",
-        "originalSource": "X：阿里云 / Alibaba Cloud (@alibaba_cloud)",
-        "originalUrl": "https://x.com/alibaba_cloud/status/2085247637734002848",
-        "recommendedReason": "Qwen-Image-3.0 已可投入生产。支持 4.5K token 提示词。100%+ 文本准确率（无破损 logo）。原生支持 12 种语言。定价灵活可扩展：高分辨率低至 $0.03。完整详情见图片。👉 探索：• Model Studio：https://click.alibabacloud.com/m/20000001606/ • Qwen Cloud：https://click.qwencloud.com/m/20000001648/ #Qwen #QwenImage3 #AlibabaCloud #GenerativeAI #AICreativity",
-        "publishedAt": "2026-08-06T06:12:33.000Z",
-        "collectedAt": "2026-08-06T15:34:53.512Z",
-        "raw": {
-          "id": "cmsh5bwo400rjro280qm4x4is",
-          "titleEn": "Qwen-Image-3.0 is production-ready. 4.5K-token prompts. 100%+ text accuracy （no broken logos）. Nativ…",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmsgulpsm0hwaro5qcjgjlvgr",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Prime Agent：一个具有自我改进能力的RLM代理",
-        "url": "https://www.primeintellect.ai/blog/prime-agent",
-        "summary": "Prime Agent 是一个自我改进的编码代理，围绕递归语言模型（RLM）和持续框架（Continual Harness）两大抽象构建，将上下文视为变量、子代理委派视为 REPL 内的函数调用，并允许代理对其提示词、技能、记忆和子代理进行 CRUD 操作。它完全开源，可通过 curl 命令安装，支持与前沿模型即时使用，并具备后台守护进程、会话恢复、分支分叉和异步内核压缩等特性。",
-        "description": "Prime Agent 是一个自我改进的编码代理，围绕递归语言模型（RLM）和持续框架（Continual Harness）两大抽象构建，将上下文视为变量、子代理委派视为 REPL 内的函数调用，并允许代理对其提示词、技能、记忆和子代理进行 CRUD 操作。它完全开源，可通过 curl 命令安装，支持与前沿模型即时使用，并具备后台守护进程、会话恢复、分支分叉和异步内核压缩等特性。",
-        "category": "products",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://www.primeintellect.ai/blog/prime-agent",
-        "recommendedReason": "Prime Agent 是一个自我改进的编码代理，围绕递归语言模型（RLM）和持续框架（Continual Harness）两大抽象构建，将上下文视为变量、子代理委派视为 REPL 内的函数调用，并允许代理对其提示词、技能、记忆和子代理进行 CRUD 操作。它完全开源，可通过 curl 命令安装，支持与前沿模型即时使用，并具备后台守护进程、会话恢复、分支分叉和异步内核压缩等特性。",
-        "publishedAt": "2026-08-06T01:27:27.867Z",
-        "collectedAt": "2026-08-06T15:34:53.512Z",
-        "raw": {
-          "id": "cmsgulpsm0hwaro5qcjgjlvgr",
-          "titleEn": null,
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmsgzooby066proxzvq5fhshn",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "分享10个能大幅提升vibe coding幸福感的开源App",
-        "url": "https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D&mid=2247509213&idx=1&sn=0ee2b58388d9bdb7f3f087d5197b6f19",
-        "summary": "作者整理了10个提升vibe coding体验的开源App，涵盖Mac刘海屏改造（Atoll）、窗口预览（DockDoor）、极速启动器（Raycast）、彻底卸载（Pearcleaner）、菜单栏折叠（Thaw）等工具。这些工具均为免费开源，可将重复操作压缩为快捷指令，降低试错成本。作者还提到可用Codex随时为这些开源App添加自定义功能。",
-        "description": "作者整理了10个提升vibe coding体验的开源App，涵盖Mac刘海屏改造（Atoll）、窗口预览（DockDoor）、极速启动器（Raycast）、彻底卸载（Pearcleaner）、菜单栏折叠（Thaw）等工具。这些工具均为免费开源，可将重复操作压缩为快捷指令，降低试错成本。作者还提到可用Codex随时为这些开源App添加自定义功能。",
-        "category": "tools",
-        "originalSource": "公众号：卡尔的AI沃茨",
-        "originalUrl": "https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D&mid=2247509213&idx=1&sn=0ee2b58388d9bdb7f3f087d5197b6f19",
-        "recommendedReason": "作者整理了10个提升vibe coding体验的开源App，涵盖Mac刘海屏改造（Atoll）、窗口预览（DockDoor）、极速启动器（Raycast）、彻底卸载（Pearcleaner）、菜单栏折叠（Thaw）等工具。这些工具均为免费开源，可将重复操作压缩为快捷指令，降低试错成本。作者还提到可用Codex随时为这些开源App添加自定义功能。",
-        "publishedAt": "2026-08-06T01:27:00.000Z",
-        "collectedAt": "2026-08-06T15:34:53.512Z",
-        "raw": {
-          "id": "cmsgzooby066proxzvq5fhshn",
-          "titleEn": "分享10个能大幅提升vibe coding幸福感的开源App。",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmsgua3ax0hqgro5qo4wr6g7y",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenAI 开源 Codex Security：Vibe Coding 产品必备的安全扫描插件",
-        "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647684990&idx=1&sn=86a6d71b133589916b49a9d57046c127",
-        "summary": "OpenAI 将安全插件 Codex Security 开源，外部 Agent 均可调用，并已支持通过 OpenRouter 和 Fireworks 接入第三方模型。",
-        "description": "OpenAI 将安全插件 Codex Security 开源，外部 Agent 均可调用，并已支持通过 OpenRouter 和 Fireworks 接入第三方模型。",
-        "category": "tools",
-        "originalSource": "公众号：数字生命卡兹克",
-        "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647684990&idx=1&sn=86a6d71b133589916b49a9d57046c127",
-        "recommendedReason": "OpenAI 将安全插件 Codex Security 开源，外部 Agent 均可调用，并已支持通过 OpenRouter 和 Fireworks 接入第三方模型。",
-        "publishedAt": "2026-08-06T01:15:29.000Z",
-        "collectedAt": "2026-08-06T15:34:53.512Z",
-        "raw": {
-          "id": "cmsgua3ax0hqgro5qo4wr6g7y",
-          "titleEn": "OpenAI开源的这个安全插件，是每个Vibe Coding的人都必装的神器。",
-          "apiCategory": "tip"
-        }
-      }
-    ],
-    "crossSourceHighlights": [
-      {
-        "id": "url:https://primeintellect.ai/blog/prime-agent",
-        "canonicalId": "url:https://primeintellect.ai/blog/prime-agent",
-        "title": "Prime Agent：一个具有自我改进能力的RLM代理",
-        "canonicalUrl": "https://primeintellect.ai/blog/prime-agent",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://primeintellect.ai/blog/prime-agent",
-          "title:prime agent 一个具有自我改进能力的rlm代理",
-          "title:prime agent a self improving rlm agent"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmsgulpsm0hwaro5qcjgjlvgr",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Prime Agent：一个具有自我改进能力的RLM代理",
-            "url": "https://www.primeintellect.ai/blog/prime-agent",
-            "summary": "Prime Agent 是一个自我改进的编码代理，围绕递归语言模型（RLM）和持续框架（Continual Harness）两大抽象构建，将上下文视为变量、子代理委派视为 REPL 内的函数调用，并允许代理对其提示词、技能、记忆和子代理进行 CRUD 操作。它完全开源，可通过 curl 命令安装，支持与前沿模型即时使用，并具备后台守护进程、会话恢复、分支分叉和异步内核压缩等特性。",
-            "description": "Prime Agent 是一个自我改进的编码代理，围绕递归语言模型（RLM）和持续框架（Continual Harness）两大抽象构建，将上下文视为变量、子代理委派视为 REPL 内的函数调用，并允许代理对其提示词、技能、记忆和子代理进行 CRUD 操作。它完全开源，可通过 curl 命令安装，支持与前沿模型即时使用，并具备后台守护进程、会话恢复、分支分叉和异步内核压缩等特性。",
-            "category": "products",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://www.primeintellect.ai/blog/prime-agent",
-            "recommendedReason": "Prime Agent 是一个自我改进的编码代理，围绕递归语言模型（RLM）和持续框架（Continual Harness）两大抽象构建，将上下文视为变量、子代理委派视为 REPL 内的函数调用，并允许代理对其提示词、技能、记忆和子代理进行 CRUD 操作。它完全开源，可通过 curl 命令安装，支持与前沿模型即时使用，并具备后台守护进程、会话恢复、分支分叉和异步内核压缩等特性。",
-            "publishedAt": "2026-08-06T01:27:27.867Z",
-            "collectedAt": "2026-08-06T15:34:53.512Z",
-            "raw": {
-              "id": "cmsgulpsm0hwaro5qcjgjlvgr",
-              "titleEn": null,
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "hackernews:49189075",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Prime Agent: A self-improving RLM agent",
-            "url": "https://www.primeintellect.ai/blog/prime-agent",
-            "author": "Xeophon",
-            "tags": [
-              "ai",
-              "agent"
-            ],
-            "metrics": {
-              "upvotes": 213,
-              "commentsCount": 54
-            },
-            "publishedAt": "2026-08-05T21:11:57.000Z",
-            "collectedAt": "2026-08-06T15:34:52.528Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49189075",
-              "matchedKeywords": [
-                "ai",
-                "agent"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmsgulpsm0hwaro5qcjgjlvgr",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Prime Agent：一个具有自我改进能力的RLM代理",
-            "url": "https://www.primeintellect.ai/blog/prime-agent",
-            "summary": "Prime Agent 是一个自我改进的编码代理，围绕递归语言模型（RLM）和持续框架（Continual Harness）两大抽象构建，将上下文视为变量、子代理委派视为 REPL 内的函数调用，并允许代理对其提示词、技能、记忆和子代理进行 CRUD 操作。它完全开源，可通过 curl 命令安装，支持与前沿模型即时使用，并具备后台守护进程、会话恢复、分支分叉和异步内核压缩等特性。",
-            "description": "Prime Agent 是一个自我改进的编码代理，围绕递归语言模型（RLM）和持续框架（Continual Harness）两大抽象构建，将上下文视为变量、子代理委派视为 REPL 内的函数调用，并允许代理对其提示词、技能、记忆和子代理进行 CRUD 操作。它完全开源，可通过 curl 命令安装，支持与前沿模型即时使用，并具备后台守护进程、会话恢复、分支分叉和异步内核压缩等特性。",
-            "category": "products",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://www.primeintellect.ai/blog/prime-agent",
-            "recommendedReason": "Prime Agent 是一个自我改进的编码代理，围绕递归语言模型（RLM）和持续框架（Continual Harness）两大抽象构建，将上下文视为变量、子代理委派视为 REPL 内的函数调用，并允许代理对其提示词、技能、记忆和子代理进行 CRUD 操作。它完全开源，可通过 curl 命令安装，支持与前沿模型即时使用，并具备后台守护进程、会话恢复、分支分叉和异步内核压缩等特性。",
-            "publishedAt": "2026-08-06T01:27:27.867Z",
-            "collectedAt": "2026-08-06T15:34:53.512Z",
-            "raw": {
-              "id": "cmsgulpsm0hwaro5qcjgjlvgr",
-              "titleEn": null,
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "hackernews:49189075",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Prime Agent: A self-improving RLM agent",
-            "url": "https://www.primeintellect.ai/blog/prime-agent",
-            "author": "Xeophon",
-            "tags": [
-              "ai",
-              "agent"
-            ],
-            "metrics": {
-              "upvotes": 213,
-              "commentsCount": 54
-            },
-            "publishedAt": "2026-08-05T21:11:57.000Z",
-            "collectedAt": "2026-08-06T15:34:52.528Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49189075",
-              "matchedKeywords": [
-                "ai",
-                "agent"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 213,
-          "commentsCount": 54,
-          "hnScore": 213,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "products",
-        "summary": "Prime Agent 是一个自我改进的编码代理，围绕递归语言模型（RLM）和持续框架（Continual Harness）两大抽象构建，将上下文视为变量、子代理委派视为 REPL 内的函数调用，并允许代理对其提示词、技能、记忆和子代理进行 CRUD 操作。它完全开源，可通过 curl 命令安装，支持与前沿模型即时使用，并具备后台守护进程、会话恢复、分支分叉和异步内核压缩等特性。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-08-05T21:11:57.000Z",
-        "lastSeenAt": "2026-08-06T15:34:53.512Z"
-      },
-      {
-        "id": "url:https://wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery",
-        "canonicalId": "url:https://wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery",
-        "title": "Meta 在 Facebook 和 Instagram 等平台投放了含 AI 生成儿童性虐待图像的广告",
-        "canonicalUrl": "https://wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery",
-          "title:meta 在 facebook 和 instagram 等平台投放了含 ai 生成儿童性虐待图像的广告",
-          "title:meta ran ads that contained ai generated child sexual abuse imagery"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmsgm0sf209iyro5qxx3gtzwv",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Meta 在 Facebook 和 Instagram 等平台投放了含 AI 生成儿童性虐待图像的广告",
-            "url": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery",
-            "summary": "Meta 的广告库数据显示，超过 50 条违规图片和视频广告发布在 Facebook、Instagram、Messenger 或 Threads 上，其中一些本周仍在投放。这些广告包含由人工智能生成的儿童性虐待图像。",
-            "description": "Meta 的广告库数据显示，超过 50 条违规图片和视频广告发布在 Facebook、Instagram、Messenger 或 Threads 上，其中一些本周仍在投放。这些广告包含由人工智能生成的儿童性虐待图像。",
-            "category": "industry",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery",
-            "recommendedReason": "Meta 的广告库数据显示，超过 50 条违规图片和视频广告发布在 Facebook、Instagram、Messenger 或 Threads 上，其中一些本周仍在投放。这些广告包含由人工智能生成的儿童性虐待图像。",
-            "publishedAt": "2026-08-05T21:11:36.016Z",
-            "collectedAt": "2026-08-06T15:34:53.512Z",
-            "raw": {
-              "id": "cmsgm0sf209iyro5qxx3gtzwv",
-              "titleEn": "Meta 投放了包含由人工智能生成的儿童性虐待图像的广告",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:49187977",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Meta Ran Ads That Contained AI-Generated Child Sexual Abuse Imagery",
-            "url": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery/",
-            "author": "malshe",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 309,
-              "commentsCount": 245
-            },
-            "publishedAt": "2026-08-05T19:47:26.000Z",
-            "collectedAt": "2026-08-06T15:34:52.528Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49187977",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmsgm0sf209iyro5qxx3gtzwv",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Meta 在 Facebook 和 Instagram 等平台投放了含 AI 生成儿童性虐待图像的广告",
-            "url": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery",
-            "summary": "Meta 的广告库数据显示，超过 50 条违规图片和视频广告发布在 Facebook、Instagram、Messenger 或 Threads 上，其中一些本周仍在投放。这些广告包含由人工智能生成的儿童性虐待图像。",
-            "description": "Meta 的广告库数据显示，超过 50 条违规图片和视频广告发布在 Facebook、Instagram、Messenger 或 Threads 上，其中一些本周仍在投放。这些广告包含由人工智能生成的儿童性虐待图像。",
-            "category": "industry",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery",
-            "recommendedReason": "Meta 的广告库数据显示，超过 50 条违规图片和视频广告发布在 Facebook、Instagram、Messenger 或 Threads 上，其中一些本周仍在投放。这些广告包含由人工智能生成的儿童性虐待图像。",
-            "publishedAt": "2026-08-05T21:11:36.016Z",
-            "collectedAt": "2026-08-06T15:34:53.512Z",
-            "raw": {
-              "id": "cmsgm0sf209iyro5qxx3gtzwv",
-              "titleEn": "Meta 投放了包含由人工智能生成的儿童性虐待图像的广告",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:49187977",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Meta Ran Ads That Contained AI-Generated Child Sexual Abuse Imagery",
-            "url": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery/",
-            "author": "malshe",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 309,
-              "commentsCount": 245
-            },
-            "publishedAt": "2026-08-05T19:47:26.000Z",
-            "collectedAt": "2026-08-06T15:34:52.528Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49187977",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 309,
-          "commentsCount": 245,
-          "hnScore": 309,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "industry",
-        "summary": "Meta 的广告库数据显示，超过 50 条违规图片和视频广告发布在 Facebook、Instagram、Messenger 或 Threads 上，其中一些本周仍在投放。这些广告包含由人工智能生成的儿童性虐待图像。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-08-05T19:47:26.000Z",
-        "lastSeenAt": "2026-08-06T15:34:53.512Z"
-      },
-      {
-        "id": "url:https://axios.com/2026/08/05/google-deepmind-demis-hassabis-ai",
-        "canonicalId": "url:https://axios.com/2026/08/05/google-deepmind-demis-hassabis-ai",
-        "title": "Google DeepMind CEO 德米斯·哈萨比斯即将卸任",
-        "canonicalUrl": "https://axios.com/2026/08/05/google-deepmind-demis-hassabis-ai",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://axios.com/2026/08/05/google-deepmind-demis-hassabis-ai",
-          "title:google deepmind ceo 德米斯 哈萨比斯即将卸任",
-          "title:demis hassabis is moving from ceo to chairman at google deepmind"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmsgcdhyh019uro5q5uhc9tnd",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Google DeepMind CEO 德米斯·哈萨比斯即将卸任",
-            "url": "https://www.axios.com/2026/08/05/google-deepmind-demis-hassabis-ai",
-            "summary": "Google DeepMind CEO 德米斯·哈萨比斯即将卸任。该消息由 Axios 报道，并在 Hacker News 上获得超过 125 点热度。目前尚未公布继任者或具体离职时间等细节。",
-            "description": "Google DeepMind CEO 德米斯·哈萨比斯即将卸任。该消息由 Axios 报道，并在 Hacker News 上获得超过 125 点热度。目前尚未公布继任者或具体离职时间等细节。",
-            "category": "industry",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://www.axios.com/2026/08/05/google-deepmind-demis-hassabis-ai",
-            "recommendedReason": "Google DeepMind CEO 德米斯·哈萨比斯即将卸任。该消息由 Axios 报道，并在 Hacker News 上获得超过 125 点热度。目前尚未公布继任者或具体离职时间等细节。",
-            "publishedAt": "2026-08-05T16:39:55.296Z",
-            "collectedAt": "2026-08-06T15:34:53.512Z",
-            "raw": {
-              "id": "cmsgcdhyh019uro5q5uhc9tnd",
-              "titleEn": "谷歌DeepMind首席执行官德米斯·哈萨比斯即将卸任",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:49184757",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Demis Hassabis is moving from CEO to Chairman at Google DeepMind",
-            "url": "https://www.axios.com/2026/08/05/google-deepmind-demis-hassabis-ai",
-            "author": "ot",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 369,
-              "commentsCount": 1
-            },
-            "publishedAt": "2026-08-05T16:05:37.000Z",
-            "collectedAt": "2026-08-06T15:34:52.528Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49184757",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmsgcdhyh019uro5q5uhc9tnd",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Google DeepMind CEO 德米斯·哈萨比斯即将卸任",
-            "url": "https://www.axios.com/2026/08/05/google-deepmind-demis-hassabis-ai",
-            "summary": "Google DeepMind CEO 德米斯·哈萨比斯即将卸任。该消息由 Axios 报道，并在 Hacker News 上获得超过 125 点热度。目前尚未公布继任者或具体离职时间等细节。",
-            "description": "Google DeepMind CEO 德米斯·哈萨比斯即将卸任。该消息由 Axios 报道，并在 Hacker News 上获得超过 125 点热度。目前尚未公布继任者或具体离职时间等细节。",
-            "category": "industry",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://www.axios.com/2026/08/05/google-deepmind-demis-hassabis-ai",
-            "recommendedReason": "Google DeepMind CEO 德米斯·哈萨比斯即将卸任。该消息由 Axios 报道，并在 Hacker News 上获得超过 125 点热度。目前尚未公布继任者或具体离职时间等细节。",
-            "publishedAt": "2026-08-05T16:39:55.296Z",
-            "collectedAt": "2026-08-06T15:34:53.512Z",
-            "raw": {
-              "id": "cmsgcdhyh019uro5q5uhc9tnd",
-              "titleEn": "谷歌DeepMind首席执行官德米斯·哈萨比斯即将卸任",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:49184757",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Demis Hassabis is moving from CEO to Chairman at Google DeepMind",
-            "url": "https://www.axios.com/2026/08/05/google-deepmind-demis-hassabis-ai",
-            "author": "ot",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 369,
-              "commentsCount": 1
-            },
-            "publishedAt": "2026-08-05T16:05:37.000Z",
-            "collectedAt": "2026-08-06T15:34:52.528Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49184757",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 369,
-          "commentsCount": 1,
-          "hnScore": 369,
-          "crossSourceBonus": 10,
-          "heatScore": 193
-        },
-        "crossSourceBonus": 10,
-        "category": "industry",
-        "summary": "Google DeepMind CEO 德米斯·哈萨比斯即将卸任。该消息由 Axios 报道，并在 Hacker News 上获得超过 125 点热度。目前尚未公布继任者或具体离职时间等细节。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-08-05T16:05:37.000Z",
-        "lastSeenAt": "2026-08-06T15:34:53.512Z"
       }
     ]
   }
