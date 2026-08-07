@@ -1,196 +1,229 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-08-07T16:14:01.995Z",
+  "generatedAt": "2026-08-07T16:43:05.607Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2608.06377v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Learning When to Trust via Selective Context Preference Optimization",
-        "url": "https://arxiv.org/pdf/2608.06377v1",
-        "description": "Language models increasingly condition their answers on external signals, and a single misleading one can turn a correct answer wrong. The obvious remedy, training models to resist such signals, hides a failure mode: a model that ignores all context looks robust yet is useless when the context is worth trusting. We recast the problem as selective trust and introduce MIST, a human-annotated benchmark that renders each reasoning item under four matched conditions (clean, misleading, correct-contex",
-        "summary": "Language models increasingly condition their answers on external signals, and a single misleading one can turn a correct answer wrong. The obvious remedy, training models to resist such signals, hides a failure mode: a model that ignores all context looks robust yet is useless when the context is worth trusting. We recast the problem as selective trust and introduce MIST, a human-annotated benchmark that renders each reasoning item under four matched conditions (clean, misleading, correct-context, and irrelevant-context), together with SC2W, a paired metric counting how often a misleading signal flips a clean-correct answer to wrong. Across a comprehensive benchmark study, we observe that such a susceptibility is universal. We then propose SCOPE, which mines clean-correct/misleading-wrong failures and optimizes a standard Direct Preference Optimization (DPO) objective over matched preference pairs balanced equally across all four conditions, rather than over misleading items alone. Our approach substantially reduces SC2W on popular open-sourced models while preserving accuracy when the added context is clean, correct, or irrelevant. With this work, we argue that models should be judged on selective trust, not on resistance alone.",
-        "author": "Xian Sun, Wei Chow, Yingshuo Wang, Junhao Liu, Wei Gao, Qing Wu, Lingdong Kong",
+        "id": "huggingface_models:LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V7-GGUF",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V7-GGUF",
+        "url": "https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V7-GGUF",
         "tags": [
-          "cs.CL",
-          "cs.AI",
-          "cs.LG",
-          "benchmark"
+          "hermes",
+          "gguf",
+          "uncensored",
+          "qwen3.6",
+          "moe",
+          "vision",
+          "multimodal",
+          "genesis",
+          "agentic",
+          "image-text-to-text",
+          "conversational",
+          "en",
+          "zh",
+          "multilingual",
+          "dataset:NousResearch/hermes-function-calling-v1",
+          "base_model:HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+          "base_model:quantized:HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+          "license:apache-2.0",
+          "endpoints_compatible",
+          "region:us",
+          "imatrix"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-08-06T17:59:58Z",
-        "updatedAt": "2026-08-06T17:59:58Z",
-        "collectedAt": "2026-08-07T16:13:50.134Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.06377v1",
-          "authors": [
-            "Xian Sun",
-            "Wei Chow",
-            "Yingshuo Wang",
-            "Junhao Liu",
-            "Wei Gao",
-            "Qing Wu",
-            "Lingdong Kong"
-          ]
+        "category": "image-text-to-text",
+        "metrics": {
+          "downloads": 332992,
+          "likes": 421
         },
-        "recommendedReason": "Matched AI developer keywords: benchmark"
+        "publishedAt": "2026-07-13T06:40:13.000Z",
+        "updatedAt": "2026-08-07T16:41:10.000Z",
+        "collectedAt": "2026-08-07T16:43:05.754Z",
+        "raw": {
+          "pipelineTag": "image-text-to-text"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.06370v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "The Bitter Lesson of Tool Calling",
-        "url": "https://arxiv.org/pdf/2608.06370v1",
-        "description": "Tool use transforms LLMs into agents that act beyond their training data, and for code-capable models, programmatic tool calling extends this further by replacing rigid JSON calls with scripts that chain and parallelize naturally. However, a systematic evaluation of tools as code on an established benchmark across current and prior model generations under real-world task conditions has not been conducted. In this work, we empirically compare programmatic tool calling (PTC) to native JSON tool ca",
-        "summary": "Tool use transforms LLMs into agents that act beyond their training data, and for code-capable models, programmatic tool calling extends this further by replacing rigid JSON calls with scripts that chain and parallelize naturally. However, a systematic evaluation of tools as code on an established benchmark across current and prior model generations under real-world task conditions has not been conducted. In this work, we empirically compare programmatic tool calling (PTC) to native JSON tool calling across 14 language models on BFCL v4. In the programmatic tool calling paradigm, tools are exposed as typed Python stubs that the model invokes through code, with execution and results handled in a single agent turn. Programmatic tool calling matches or exceeds native JSON tool calling in 11 of 14 models on BFCL v4, with the GPT-5.6 family achieving a 10.6% improvement over the JSON tool calling baseline. Further, it matches or outperforms baseline in 13 of 14 models under parallel fan-out, and holds stable under context rot conditions where baseline degrades 2.3% on average. Our results demonstrate that programmatic tool calling is a viable and robust alternative to JSON tool calling, with performance tracking model capability across release generations.",
-        "author": "Ishan Patel, Sahil Sen, Elias Lumer, Vamse Kumar Subbiah",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.CL",
-          "llm",
-          "agent",
-          "rag",
-          "tool use",
-          "tool calling",
-          "benchmark",
-          "evaluation"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-08-06T17:58:32Z",
-        "updatedAt": "2026-08-06T17:58:32Z",
-        "collectedAt": "2026-08-07T16:13:50.134Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.06370v1",
-          "authors": [
-            "Ishan Patel",
-            "Sahil Sen",
-            "Elias Lumer",
-            "Vamse Kumar Subbiah"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14070
         },
-        "recommendedReason": "Matched AI developer keywords: llm, agent, rag, tool use, tool calling"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-08-07T16:43:05.746Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.06366v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering",
-        "url": "https://arxiv.org/pdf/2608.06366v1",
-        "description": "Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure, which affects an estimated 6.7 million U.S. adults and requires integrating fragmented EHR data with disease-specific, guideline-based clinical reasoning. Existing rule-based and large language model (LLM)-based approaches offer only partial automation with limited maintainability and evidence tra",
-        "summary": "Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure, which affects an estimated 6.7 million U.S. adults and requires integrating fragmented EHR data with disease-specific, guideline-based clinical reasoning. Existing rule-based and large language model (LLM)-based approaches offer only partial automation with limited maintainability and evidence traceability. We developed the Nimblemind Multi-Agent System (nMAS), an evidence-linked, rubric-grounded pipeline for automated heart-failure feature engineering, and evaluated it on 500 dummy patient records from nine EHR source tables. nMAS generated 132 structured and 70 rubric-scored aggregated features, verified for structural integrity, rubric compliance, and provenance, and audited by a restricted LLM. Adding the aggregated features improved held-out AUROC from 0.895 to 0.963 for HFrEF and 0.870 to 0.910 for HFpEF phenotyping, and an independent LLM-based rubric assessment of evidence support and methodological soundness scored the features at 81.5% of maximum points. These results demonstrate the feasibility of automated, auditable feature engineering for complex cardiovascular EHR data, though evaluation was limited to a single-institution cohort and external validation is needed.",
-        "author": "Soorya Ram Shimgekar, Michelle Hu, Dorisa Shehi, Daniel Kang, Roy Ka-Wei Lee, Koustuv Saha, Christian Poellabauer, Christopher Lee, Sajeev Singh, Piyum Zonooz, Navin Kumar, Zeeshan Ahmed, Priyadarshini Kachroo",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.AI",
-          "cs.LG",
-          "large language model",
-          "llm",
-          "agent",
-          "multi-agent",
-          "rag",
-          "evaluation"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-08-06T17:57:37Z",
-        "updatedAt": "2026-08-06T17:57:37Z",
-        "collectedAt": "2026-08-07T16:13:50.134Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.06366v1",
-          "authors": [
-            "Soorya Ram Shimgekar",
-            "Michelle Hu",
-            "Dorisa Shehi",
-            "Daniel Kang",
-            "Roy Ka-Wei Lee",
-            "Koustuv Saha",
-            "Christian Poellabauer",
-            "Christopher Lee",
-            "Sajeev Singh",
-            "Piyum Zonooz",
-            "Navin Kumar",
-            "Zeeshan Ahmed",
-            "Priyadarshini Kachroo"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11205
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, agent, multi-agent, rag"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-08-07T16:43:05.746Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.06362v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
-        "url": "https://arxiv.org/pdf/2608.06362v1",
-        "description": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop before the agents can be told apart, while naive optional stopping with an ordinary confidence interval invalidates the stated level. We make such an evaluation stop as soon as its evidence suffices, with the guarantee intact",
-        "summary": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop before the agents can be told apart, while naive optional stopping with an ordinary confidence interval invalidates the stated level. We make such an evaluation stop as soon as its evidence suffices, with the guarantee intact. The Action-Informed Value Assessment Tool (AIVAT) reduces variance in imperfect-information games through conditional mean-zero corrections, by a median $54\\times$ across 15 LLM agent configurations spanning 71,439 paired Heads-Up No-Limit Hold'em (HUNL) hands, but does not say when to stop. We combine AIVAT with continuously monitored Confidence Sequences (CSs) into anytime-valid AIVAT (AV-AIVAT), whose online value model learns only from past games so that no game scores its own correction. At the nominal 95\\% level and a target precision of $\\pm1$ Big Blind, raw outcomes need a median $74\\times$ as many hands as AIVAT-corrected outcomes to stop under the Asymptotic CS (AsympCS). Exact finite-sample certification uses the Empirical-Bernstein CS (EB-CS), which needs an independently justified bound on corrected payoffs. We establish such a bound structurally for Leduc hold'em and characterize a width floor set by the CS's bet cap and that bound, which governs how much of a variance gain becomes earlier stopping; the descriptive HUNL EB-CS runs show a median $1.37\\times$ stopping-time ratio. AV-AIVAT turns variance reduction into efficient, auditable early stopping while separating asymptotic screening from exact certification, so an evaluation can stop the moment its evidence suffices and hand a third party everything needed to recheck the verdict at that very stopping time.",
-        "author": "Boning Li, Yu Chen, Longbo Huang",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.GT",
-          "cs.AI",
-          "cs.CL",
-          "cs.LG",
-          "cs.MA",
-          "llm",
-          "agent",
-          "evaluation"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.GT",
-        "language": "en",
-        "publishedAt": "2026-08-06T17:57:11Z",
-        "updatedAt": "2026-08-06T17:57:11Z",
-        "collectedAt": "2026-08-07T16:13:50.134Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.06362v1",
-          "authors": [
-            "Boning Li",
-            "Yu Chen",
-            "Longbo Huang"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10153
         },
-        "recommendedReason": "Matched AI developer keywords: llm, agent, evaluation"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-08-07T16:43:05.746Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.06361v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "The Low Frequency Trap: Video Language Models Fail at Simple Event Bookkeeping",
-        "url": "https://arxiv.org/pdf/2608.06361v1",
-        "description": "Real-world video benchmarks provide broad coverage, but their fixed clips entangle event count, rate, duration, and visual complexity, making failure modes hard to isolate. While existing programmatic benchmarks offer better control, they score only the final answer rather than auditing reported events against executable ground truth. To bridge this gap, we introduce trace-grounded parametric profiling for event counting in three controlled video tasks: bouncing-ball wall contacts, visual blinks",
-        "summary": "Real-world video benchmarks provide broad coverage, but their fixed clips entangle event count, rate, duration, and visual complexity, making failure modes hard to isolate. While existing programmatic benchmarks offer better control, they score only the final answer rather than auditing reported events against executable ground truth. To bridge this gap, we introduce trace-grounded parametric profiling for event counting in three controlled video tasks: bouncing-ball wall contacts, visual blinks, and categorical state transitions. Across 2,190 videos, we vary event count N and frequency F while holding rendering fixed. Each video includes an executable event trace for capability-surface estimation and timestamp-level evaluation. Our results reveal a staged temporal failure. At an 80% reliability threshold, Gemini 3.6 Flash reliably counts persistent state transitions up to 12 events at 0.5 and 1.0 Hz, yet demonstrates no reliable positive-count region for transient blinking events. Thus, event representation dictates whether a model initially accesses evidence -- a limitation that compounds as count and frequency increase. In the high-count, high-frequency regime, only 0.2% of final counts are correct and the model recovers just 18.1% of true events. To test if visual access is the primary bottleneck, we increase sampling rate. Although this boosts Bounce Ball accuracy from 19.6% to 29.3%, the reported sequence agrees with ground truth only 3.7% of the time. Extra frames can therefore inflate final scores without producing faithful event recovery. Different prompting strategies yield similarly limited gains, and real-world video evaluations show the same concentration of success at low event counts. Ultimately, trace-grounded profiling shifts video evaluation from aggregate accuracy metrics to a detailed diagnostic of where temporal reasoning fails.",
-        "author": "Sarvesh Baskar, Zikui Cai, Shayan Shabihi, Anirudh Satheesh, Muhammad R. Islam, Udari Madhushani Sehwag, Tom Goldstein, Furong Huang",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "cs.AI",
-          "rag",
-          "benchmark",
-          "evaluation"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-08-06T17:57:06Z",
-        "updatedAt": "2026-08-06T17:57:06Z",
-        "collectedAt": "2026-08-07T16:13:50.134Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.06361v1",
-          "authors": [
-            "Sarvesh Baskar",
-            "Zikui Cai",
-            "Shayan Shabihi",
-            "Anirudh Satheesh",
-            "Muhammad R. Islam",
-            "Udari Madhushani Sehwag",
-            "Tom Goldstein",
-            "Furong Huang"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7607
         },
-        "recommendedReason": "Matched AI developer keywords: rag, benchmark, evaluation"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-08-06T13:09:26.000Z",
+        "collectedAt": "2026-08-07T16:43:05.746Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
+      },
+      {
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
+        "tags": [
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 5082
+        },
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-08-07T16:43:05.746Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Arena Leaderboard",
+        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
+        "author": "lmarena-ai",
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "static",
+        "metrics": {
+          "likes": 4964
+        },
+        "publishedAt": "2023-05-20T09:26:19.000Z",
+        "updatedAt": "2026-02-21T23:20:43.000Z",
+        "collectedAt": "2026-08-07T16:43:05.746Z",
+        "raw": {
+          "sdk": "static",
+          "emoji": "🏆🤖"
+        }
+      },
+      {
+        "id": "huggingface_spaces:KlingTeam/LivePortrait",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Live Portrait",
+        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
+        "author": "KlingTeam",
+        "tags": [
+          "gradio",
+          "Multimodal",
+          "Motion control",
+          "Image-to-Video",
+          "Video-to-Video",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 3775
+        },
+        "publishedAt": "2024-07-05T16:35:24.000Z",
+        "updatedAt": "2024-08-30T11:20:51.000Z",
+        "collectedAt": "2026-08-07T16:43:05.746Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🤪"
+        }
       }
     ],
     "developerBuzz": [
@@ -206,11 +239,11 @@
           "inference"
         ],
         "metrics": {
-          "upvotes": 786,
-          "commentsCount": 601
+          "upvotes": 796,
+          "commentsCount": 604
         },
         "publishedAt": "2026-08-06T20:23:11.000Z",
-        "collectedAt": "2026-08-07T16:13:50.291Z",
+        "collectedAt": "2026-08-07T16:43:05.951Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49201970",
           "matchedKeywords": [
@@ -230,11 +263,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 842,
+          "upvotes": 843,
           "commentsCount": 911
         },
         "publishedAt": "2026-08-05T16:05:31.000Z",
-        "collectedAt": "2026-08-07T16:13:50.291Z",
+        "collectedAt": "2026-08-07T16:43:05.951Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49184755",
           "matchedKeywords": [
@@ -254,11 +287,11 @@
           "agent"
         ],
         "metrics": {
-          "upvotes": 522,
-          "commentsCount": 328
+          "upvotes": 524,
+          "commentsCount": 329
         },
         "publishedAt": "2026-08-06T18:44:49.000Z",
-        "collectedAt": "2026-08-07T16:13:50.291Z",
+        "collectedAt": "2026-08-07T16:43:05.951Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49200652",
           "matchedKeywords": [
@@ -278,11 +311,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 461,
-          "commentsCount": 381
+          "upvotes": 464,
+          "commentsCount": 385
         },
         "publishedAt": "2026-08-06T15:49:38.000Z",
-        "collectedAt": "2026-08-07T16:13:50.291Z",
+        "collectedAt": "2026-08-07T16:43:05.951Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49198302",
           "matchedKeywords": [
@@ -306,7 +339,7 @@
           "commentsCount": 507
         },
         "publishedAt": "2026-08-05T18:37:49.000Z",
-        "collectedAt": "2026-08-07T16:13:50.291Z",
+        "collectedAt": "2026-08-07T16:43:05.951Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49187061",
           "matchedKeywords": [
@@ -330,7 +363,7 @@
         "originalUrl": "https://x.com/suno/status/2085731234970227145",
         "recommendedReason": "Voices 功能已在 Suno 移动应用 iOS 和 Android 版正式上线！📱✨ 现在你可以直接在手机上录制人声，并将其用于你的歌曲中。只需在创作界面点击\"+ Voice\"按钮，录制至少一分钟，然后让音乐流淌起来。（Pro 和 Premier 套餐可无限使用，免费套餐可体验有限版本！） 打开应用，录制你的声音，并在评论区告诉我们你的使用体验！",
         "publishedAt": "2026-08-07T14:14:12.000Z",
-        "collectedAt": "2026-08-07T16:13:55.201Z",
+        "collectedAt": "2026-08-07T16:43:07.061Z",
         "raw": {
           "id": "cmsj1zu9421ynronknsiz6vgw",
           "titleEn": "Voices is officially live on the Suno mobile app for iOS and Android！ 📱✨ Now you can record your v…",
@@ -350,7 +383,7 @@
         "originalUrl": "https://the-decoder.com/stanford-and-arc-institute-scientists-used-ai-to-design-new-viruses-that-killed-bacteria-in-the-lab",
         "recommendedReason": "斯坦福大学与 Arc Institute 团队用 AI 模型 Evo 从零设计完整病毒基因组，并在实验室构建出 16 种自然界不存在的功能性病毒。Evo 提出 70 万个候选基因组，团队仅筛选最有希望的 285 个序列合成并植入细菌，其中 16 个成功复制并杀死宿主。该研究已通过同行评审发表于《Science》，但 Evo 未接受人类病原体数据训练，且能否推广至其他病毒类群仍是未知数。",
         "publishedAt": "2026-08-07T12:50:56.000Z",
-        "collectedAt": "2026-08-07T16:13:55.201Z",
+        "collectedAt": "2026-08-07T16:43:07.061Z",
         "raw": {
           "id": "cmsiys4dz1yqironkuitnfi7t",
           "titleEn": "Stanford and Arc Institute scientists used AI to design new viruses that killed bacteria in the lab",
@@ -370,7 +403,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzkyODk2MDQwNw%3D%3D&mid=2247487457&idx=1&sn=24ad4a355d81291e53fbe680ca987112",
         "recommendedReason": "蚂蚁百灵正式开源新一代原生混合推理模型 Ling-3.0-flash，采用 124B 总参数、5.1B 激活参数的 MoE 架构，并提供 FP8、FP4、INT4 等多个版本。",
         "publishedAt": "2026-08-07T12:02:16.000Z",
-        "collectedAt": "2026-08-07T16:13:55.201Z",
+        "collectedAt": "2026-08-07T16:43:07.061Z",
         "raw": {
           "id": "cmsixbbry1x0qronkhbbjukhr",
           "titleEn": "Ling-3.0-flash 开源：为真实世界而生的开放智能",
@@ -390,7 +423,7 @@
         "originalUrl": "https://x.com/runwayml/status/2085684483366523193",
         "recommendedReason": "Seedance 2.5 现已登陆 Runway。每次生成最多可引用 50 个角色参考，构建充满角色的完整世界；可创作最长 30 秒、带完整音效与对白的片段，再按你的故事需求随意剪辑与延展。 点击下方链接立即开始。",
         "publishedAt": "2026-08-07T11:08:25.000Z",
-        "collectedAt": "2026-08-07T16:13:55.201Z",
+        "collectedAt": "2026-08-07T16:43:07.061Z",
         "raw": {
           "id": "cmsiujxlq1u0zronkvvklblwk",
           "titleEn": "Seedance 2.5 is now on Runway. Build entire worlds full of characters with up to 50 references per g…",
@@ -410,7 +443,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4OTc2MzczNg%3D%3D&mid=2247496008&idx=1&sn=08f2ce717483f63bc00a2181e59e3f40",
         "recommendedReason": "小红书联合浙江大学、复旦大学提出 CULTURE-MT，这是首个面向中英社媒笔记翻译、兼顾文化符号传递与情感共鸣的评测基准，并首次提出「文化有效性」评估标准与自动评估模型 JUDGER（准确率 86.03%）。",
         "publishedAt": "2026-08-07T09:59:00.000Z",
-        "collectedAt": "2026-08-07T16:13:55.201Z",
+        "collectedAt": "2026-08-07T16:43:07.061Z",
         "raw": {
           "id": "cmsiry2eo1r4tronkt9qv2twu",
           "titleEn": "AI 翻译看得懂字，却读不懂「梗」？小红书联合浙大、复旦提出首个「文化有效性」评测标准，入选 ICML 2026",
@@ -430,7 +463,7 @@
         "originalUrl": "https://x.com/krea_ai/status/2085629541385736662",
         "recommendedReason": "推出 Seedance 2.5。 30 秒连续视频、完整多镜头序列，以及最多 50 个参考。 立即试用 👇",
         "publishedAt": "2026-08-07T07:30:06.000Z",
-        "collectedAt": "2026-08-07T16:13:55.201Z",
+        "collectedAt": "2026-08-07T16:43:07.061Z",
         "raw": {
           "id": "cmsimzpmf1ks3ronk4hh1d0z0",
           "titleEn": "introducing Seedance 2.5. 30 seconds of continuous video， full multi-shot sequences， and up to 50 r…",
@@ -450,7 +483,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s?__biz=Mzg3Mzg2MTg2NQ%3D%3D&mid=2247498927&idx=1&sn=c5fbfaac5ede8b1008d17337a1bdc70b",
         "recommendedReason": "独立开发者叶小叔用面壁智能开源的 VoxCPM 克隆千万粉丝网红声音，搭建 STT → LLM → VoxCPM（TTS）三段式实时对话管道，TTS 首包延迟不到 1 秒，端到端体感 2 到 3 秒。",
         "publishedAt": "2026-08-07T06:41:21.000Z",
-        "collectedAt": "2026-08-07T16:13:55.201Z",
+        "collectedAt": "2026-08-07T16:43:07.061Z",
         "raw": {
           "id": "cmsil63w11iawronkshdpjgy5",
           "titleEn": "火种说|100 万人围观：一个独立开发者，让 AI 终于\"会聊天\"了",
@@ -470,319 +503,12 @@
         "originalUrl": "https://www.ithome.com/0/986/957.htm",
         "recommendedReason": "OpenAI 报告称全球超 10 亿用户使用 ChatGPT，使用方式从\"问答工具\"转向\"任务工具\"，工作场景中完成任务或创建内容的可能性是非工作场景的 2 倍以上。自 2026 年 4 月发布 ChatGPT Images 2.0 以来，多媒体相关消息占比升至 7.8%。35 岁及以上用户发送消息份额较 12 个月前增加 5 个百分点，法国和捷克增幅超 10 个百分点。",
         "publishedAt": "2026-08-07T06:28:51.000Z",
-        "collectedAt": "2026-08-07T16:13:55.201Z",
+        "collectedAt": "2026-08-07T16:43:07.061Z",
         "raw": {
           "id": "cmsilvone1jezronk60ahdbgi",
           "titleEn": null,
           "apiCategory": "industry"
         }
-      },
-      {
-        "id": "aihot:cmsilvone1jf1ronk6fs8o4d4",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "谷歌推出 WeatherNext 气旋模型，AI 高精度预报飓风平均提前 24 小时",
-        "url": "https://www.ithome.com/0/986/951.htm",
-        "summary": "谷歌 DeepMind 联合多家机构推出 WeatherNext Cyclones 气旋预测模型，在路径、强度和风场结构预测精度上达到业界领先。该模型将有效预报时长从 2 天延长至 3 天，平均提前 24 小时，预测量级约相当于 10 年气象进展。",
-        "description": "谷歌 DeepMind 联合多家机构推出 WeatherNext Cyclones 气旋预测模型，在路径、强度和风场结构预测精度上达到业界领先。该模型将有效预报时长从 2 天延长至 3 天，平均提前 24 小时，预测量级约相当于 10 年气象进展。",
-        "category": "models",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/986/951.htm",
-        "recommendedReason": "谷歌 DeepMind 联合多家机构推出 WeatherNext Cyclones 气旋预测模型，在路径、强度和风场结构预测精度上达到业界领先。该模型将有效预报时长从 2 天延长至 3 天，平均提前 24 小时，预测量级约相当于 10 年气象进展。",
-        "publishedAt": "2026-08-07T06:11:01.000Z",
-        "collectedAt": "2026-08-07T16:13:55.201Z",
-        "raw": {
-          "id": "cmsilvone1jf1ronk6fs8o4d4",
-          "titleEn": null,
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmsijqoan1h2qronk7rexfm14",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Seedance 2.5 API上线，视频生成开启「电影级长叙事」",
-        "url": "https://mp.weixin.qq.com/s?__biz=MzI0NzU1NzI5NQ%3D%3D&mid=2247543416&idx=1&sn=badeafc780a939033a1e4cb0bba4221c",
-        "summary": "火山引擎正式上线 Seedance 2.5 API，将单次视频生成时长从15秒提升至30秒，并支持最高50个全模态素材参考。模型在指令遵循、长叙事、真人感及声画质感上大幅提升，能稳定保持多角色外形与场景关系，兼容十余种语言。",
-        "description": "火山引擎正式上线 Seedance 2.5 API，将单次视频生成时长从15秒提升至30秒，并支持最高50个全模态素材参考。模型在指令遵循、长叙事、真人感及声画质感上大幅提升，能稳定保持多角色外形与场景关系，兼容十余种语言。",
-        "category": "products",
-        "originalSource": "公众号：火山引擎",
-        "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzI0NzU1NzI5NQ%3D%3D&mid=2247543416&idx=1&sn=badeafc780a939033a1e4cb0bba4221c",
-        "recommendedReason": "火山引擎正式上线 Seedance 2.5 API，将单次视频生成时长从15秒提升至30秒，并支持最高50个全模态素材参考。模型在指令遵循、长叙事、真人感及声画质感上大幅提升，能稳定保持多角色外形与场景关系，兼容十余种语言。",
-        "publishedAt": "2026-08-07T06:01:45.000Z",
-        "collectedAt": "2026-08-07T16:13:55.201Z",
-        "raw": {
-          "id": "cmsijqoan1h2qronk7rexfm14",
-          "titleEn": null,
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmsic9k6j18ghronkd6hbia5j",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Anthropic 更新 Claude Fable 5 生物安全防护，误报率大幅降低",
-        "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
-        "summary": "Anthropic 更新了 Claude Fable 5 的生物安全防护机制，将生物相关查询的\"回退\"次数减少约 85%，用户在日常健康与教育问题上将更少遇到系统切换至较弱模型的情况。此次更新扩大了模型可协助的生物任务范围，但涉及双重用途的病毒学、毒理学和分子设计请求仍会回退至 Opus 5。Anthropic 表示正通过可信访问途径，致力于缩小专业生物研究与药物开发领域的差距。",
-        "description": "Anthropic 更新了 Claude Fable 5 的生物安全防护机制，将生物相关查询的\"回退\"次数减少约 85%，用户在日常健康与教育问题上将更少遇到系统切换至较弱模型的情况。此次更新扩大了模型可协助的生物任务范围，但涉及双重用途的病毒学、毒理学和分子设计请求仍会回退至 Opus 5。Anthropic 表示正通过可信访问途径，致力于缩小专业生物研究与药物开发领域的差距。",
-        "category": "products",
-        "originalSource": "Anthropic：Newsroom（网页）",
-        "originalUrl": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
-        "recommendedReason": "Anthropic 更新了 Claude Fable 5 的生物安全防护机制，将生物相关查询的\"回退\"次数减少约 85%，用户在日常健康与教育问题上将更少遇到系统切换至较弱模型的情况。此次更新扩大了模型可协助的生物任务范围，但涉及双重用途的病毒学、毒理学和分子设计请求仍会回退至 Opus 5。Anthropic 表示正通过可信访问途径，致力于缩小专业生物研究与药物开发领域的差距。",
-        "publishedAt": "2026-08-07T02:41:46.636Z",
-        "collectedAt": "2026-08-07T16:13:55.201Z",
-        "raw": {
-          "id": "cmsic9k6j18ghronkd6hbia5j",
-          "titleEn": "Improving Fable 5's biology safeguards",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmsib6211178jronko75alzk2",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "千问功能上新：推出思考研究、定时任务、办公助理、语音通话等多项新功能，并支持 Qwen3.8-MAX",
-        "url": "https://mp.weixin.qq.com/s?__biz=MzYzNDE5MDEwMQ%3D%3D&mid=2247488266&idx=1&sn=3a1988ba0710abcefba9c9dd282b464e",
-        "summary": "千问今日上线多项新功能，并支持最新旗舰模型 Qwen3.8-MAX。其中\"思考研究\"在原\"深度思考\"基础上升级，强化复杂推理与工具调用；\"定时任务\"可预设执行时间自动完成行业简报梳理等周期工作；\"办公助理\"能连接备忘录、日历等应用并操作电脑浏览器，直接输出可用的 Office 文档。语音通话支持 7x24 小时多场景，智能体广场首批覆盖物流、房产等十多个领域。",
-        "description": "千问今日上线多项新功能，并支持最新旗舰模型 Qwen3.8-MAX。其中\"思考研究\"在原\"深度思考\"基础上升级，强化复杂推理与工具调用；\"定时任务\"可预设执行时间自动完成行业简报梳理等周期工作；\"办公助理\"能连接备忘录、日历等应用并操作电脑浏览器，直接输出可用的 Office 文档。语音通话支持 7x24 小时多场景，智能体广场首批覆盖物流、房产等十多个领域。",
-        "category": "products",
-        "originalSource": "公众号：千问APP（阿里）",
-        "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzYzNDE5MDEwMQ%3D%3D&mid=2247488266&idx=1&sn=3a1988ba0710abcefba9c9dd282b464e",
-        "recommendedReason": "千问今日上线多项新功能，并支持最新旗舰模型 Qwen3.8-MAX。其中\"思考研究\"在原\"深度思考\"基础上升级，强化复杂推理与工具调用；\"定时任务\"可预设执行时间自动完成行业简报梳理等周期工作；\"办公助理\"能连接备忘录、日历等应用并操作电脑浏览器，直接输出可用的 Office 文档。语音通话支持 7x24 小时多场景，智能体广场首批覆盖物流、房产等十多个领域。",
-        "publishedAt": "2026-08-07T02:04:51.000Z",
-        "collectedAt": "2026-08-07T16:13:55.201Z",
-        "raw": {
-          "id": "cmsib6211178jronko75alzk2",
-          "titleEn": "今天，千问功能上新",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmsj4jrne24d5ronkvb40rucl",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "扩展分类流映射（Categorical Flow Maps）规模",
-        "url": "https://machinelearning.apple.com/research/scaling-categorical-flow-maps",
-        "summary": "连续扩散与流匹配模型有望成为语言建模中自回归方法的有力替代，可解锁加速采样与倾斜等连续模态优势。近期研究通过高斯分布与one-hot编码数据分布间的简单流匹配过程，实现离散数据的连续生成，并借助分类流映射（CFMs）验证了加速采样的可行性，样本质量具有竞争力。",
-        "description": "连续扩散与流匹配模型有望成为语言建模中自回归方法的有力替代，可解锁加速采样与倾斜等连续模态优势。近期研究通过高斯分布与one-hot编码数据分布间的简单流匹配过程，实现离散数据的连续生成，并借助分类流映射（CFMs）验证了加速采样的可行性，样本质量具有竞争力。",
-        "category": "papers",
-        "originalSource": "Apple Machine Learning Research（RSS）",
-        "originalUrl": "https://machinelearning.apple.com/research/scaling-categorical-flow-maps",
-        "recommendedReason": "连续扩散与流匹配模型有望成为语言建模中自回归方法的有力替代，可解锁加速采样与倾斜等连续模态优势。近期研究通过高斯分布与one-hot编码数据分布间的简单流匹配过程，实现离散数据的连续生成，并借助分类流映射（CFMs）验证了加速采样的可行性，样本质量具有竞争力。",
-        "publishedAt": "2026-08-07T00:00:00.000Z",
-        "collectedAt": "2026-08-07T16:13:55.201Z",
-        "raw": {
-          "id": "cmsj4jrne24d5ronkvb40rucl",
-          "titleEn": "Scaling Categorical Flow Maps",
-          "apiCategory": "paper"
-        }
-      },
-      {
-        "id": "aihot:cmsi5sy2s1192ronkt3lk2z88",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenAI 优化 ChatGPT 中的 GPT-5.6 Sol，并扩大免费用户对 GPT-5.6 Luna 的访问权限",
-        "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-        "summary": "OpenAI 更新 ChatGPT：Plus 和 Pro 用户的 GPT-5.6 Sol 在事实准确性和回答聚焦度上有所提升，新增滑块可控制模型思考投入。免费用户默认模型升级为 GPT-5.6 Luna，并开放无限文本聊天，新增 Think 按钮以处理更复杂问题。",
-        "description": "OpenAI 更新 ChatGPT：Plus 和 Pro 用户的 GPT-5.6 Sol 在事实准确性和回答聚焦度上有所提升，新增滑块可控制模型思考投入。免费用户默认模型升级为 GPT-5.6 Luna，并开放无限文本聊天，新增 Think 按钮以处理更复杂问题。",
-        "category": "products",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-        "recommendedReason": "OpenAI 更新 ChatGPT：Plus 和 Pro 用户的 GPT-5.6 Sol 在事实准确性和回答聚焦度上有所提升，新增滑块可控制模型思考投入。免费用户默认模型升级为 GPT-5.6 Luna，并开放无限文本聊天，新增 Think 按钮以处理更复杂问题。",
-        "publishedAt": "2026-08-06T23:01:28.628Z",
-        "collectedAt": "2026-08-07T16:13:55.201Z",
-        "raw": {
-          "id": "cmsi5sy2s1192ronkt3lk2z88",
-          "titleEn": "优化 ChatGPT 中的 GPT-5.6 Sol，并扩大免费用户对 GPT-5.6 Luna 的访问权限",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmshxocv70ukbronk3p0bh1le",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "GitHub Copilot 应用中的斜杠命令使用指南",
-        "url": "https://github.blog/ai-and-ml/github-copilot/a-guide-to-slash-commands-in-the-github-copilot-app",
-        "summary": "GitHub Copilot 应用中的斜杠命令可帮助管理会话、导航项目和自定义 Copilot 工作流。与 CLI 版不同，应用版命令更侧重工作流，如 /plan 用于编码前规划、/spar 用于挑战方案假设、/autopilot 用于自动执行实现。/clear 和 /model 在 CLI 和应用中均可用。",
-        "description": "GitHub Copilot 应用中的斜杠命令可帮助管理会话、导航项目和自定义 Copilot 工作流。与 CLI 版不同，应用版命令更侧重工作流，如 /plan 用于编码前规划、/spar 用于挑战方案假设、/autopilot 用于自动执行实现。/clear 和 /model 在 CLI 和应用中均可用。",
-        "category": "tools",
-        "originalSource": "GitHub Blog",
-        "originalUrl": "https://github.blog/ai-and-ml/github-copilot/a-guide-to-slash-commands-in-the-github-copilot-app",
-        "recommendedReason": "GitHub Copilot 应用中的斜杠命令可帮助管理会话、导航项目和自定义 Copilot 工作流。与 CLI 版不同，应用版命令更侧重工作流，如 /plan 用于编码前规划、/spar 用于挑战方案假设、/autopilot 用于自动执行实现。/clear 和 /model 在 CLI 和应用中均可用。",
-        "publishedAt": "2026-08-06T19:49:34.000Z",
-        "collectedAt": "2026-08-07T16:13:55.201Z",
-        "raw": {
-          "id": "cmshxocv70ukbronk3p0bh1le",
-          "titleEn": "A guide to slash commands in the GitHub Copilot app",
-          "apiCategory": "tip"
-        }
-      }
-    ],
-    "crossSourceHighlights": [
-      {
-        "id": "url:https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-        "canonicalId": "url:https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-        "title": "OpenAI 优化 ChatGPT 中的 GPT-5.6 Sol，并扩大免费用户对 GPT-5.6 Luna 的访问权限",
-        "canonicalUrl": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-          "title:openai 优化 chatgpt 中的 gpt 5 6 sol 并扩大免费用户对 gpt 5 6 luna 的访问权限",
-          "title:chatgpt 推出改进版 gpt 5 6 sol 并扩大免费用户访问权限",
-          "title:improving gpt 5 6 sol in chatgpt expanding gpt 5 6 luna access for free users"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmsi5sy2s1192ronkt3lk2z88",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "OpenAI 优化 ChatGPT 中的 GPT-5.6 Sol，并扩大免费用户对 GPT-5.6 Luna 的访问权限",
-            "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-            "summary": "OpenAI 更新 ChatGPT：Plus 和 Pro 用户的 GPT-5.6 Sol 在事实准确性和回答聚焦度上有所提升，新增滑块可控制模型思考投入。免费用户默认模型升级为 GPT-5.6 Luna，并开放无限文本聊天，新增 Think 按钮以处理更复杂问题。",
-            "description": "OpenAI 更新 ChatGPT：Plus 和 Pro 用户的 GPT-5.6 Sol 在事实准确性和回答聚焦度上有所提升，新增滑块可控制模型思考投入。免费用户默认模型升级为 GPT-5.6 Luna，并开放无限文本聊天，新增 Think 按钮以处理更复杂问题。",
-            "category": "products",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-            "recommendedReason": "OpenAI 更新 ChatGPT：Plus 和 Pro 用户的 GPT-5.6 Sol 在事实准确性和回答聚焦度上有所提升，新增滑块可控制模型思考投入。免费用户默认模型升级为 GPT-5.6 Luna，并开放无限文本聊天，新增 Think 按钮以处理更复杂问题。",
-            "publishedAt": "2026-08-06T23:01:28.628Z",
-            "collectedAt": "2026-08-07T16:13:55.201Z",
-            "raw": {
-              "id": "cmsi5sy2s1192ronkt3lk2z88",
-              "titleEn": "优化 ChatGPT 中的 GPT-5.6 Sol，并扩大免费用户对 GPT-5.6 Luna 的访问权限",
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "aihot:cmshrwaqs0pmuronkuj6r8o4m",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "ChatGPT 推出改进版 GPT-5.6 Sol，并扩大免费用户访问权限",
-            "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-            "summary": "ChatGPT 推出改进版 GPT-5.6 Sol，提升准确性与一致性，同时扩大免费用户访问权限。免费用户还可无限次使用 GPT-5.6 Luna 进行日常对话。",
-            "description": "ChatGPT 推出改进版 GPT-5.6 Sol，提升准确性与一致性，同时扩大免费用户访问权限。免费用户还可无限次使用 GPT-5.6 Luna 进行日常对话。",
-            "category": "models",
-            "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
-            "originalUrl": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-            "recommendedReason": "ChatGPT 推出改进版 GPT-5.6 Sol，提升准确性与一致性，同时扩大免费用户访问权限。免费用户还可无限次使用 GPT-5.6 Luna 进行日常对话。",
-            "publishedAt": "2026-08-06T10:00:00.000Z",
-            "collectedAt": "2026-08-07T16:13:55.201Z",
-            "raw": {
-              "id": "cmshrwaqs0pmuronkuj6r8o4m",
-              "titleEn": "Improving GPT-5.6 Sol in ChatGPT-and expanding access for free users",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:49199357",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
-            "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
-            "author": "tedsanders",
-            "tags": [
-              "ai",
-              "openai"
-            ],
-            "metrics": {
-              "upvotes": 283,
-              "commentsCount": 231
-            },
-            "publishedAt": "2026-08-06T17:02:04.000Z",
-            "collectedAt": "2026-08-07T16:13:50.291Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49199357",
-              "matchedKeywords": [
-                "ai",
-                "openai"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmsi5sy2s1192ronkt3lk2z88",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "OpenAI 优化 ChatGPT 中的 GPT-5.6 Sol，并扩大免费用户对 GPT-5.6 Luna 的访问权限",
-            "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-            "summary": "OpenAI 更新 ChatGPT：Plus 和 Pro 用户的 GPT-5.6 Sol 在事实准确性和回答聚焦度上有所提升，新增滑块可控制模型思考投入。免费用户默认模型升级为 GPT-5.6 Luna，并开放无限文本聊天，新增 Think 按钮以处理更复杂问题。",
-            "description": "OpenAI 更新 ChatGPT：Plus 和 Pro 用户的 GPT-5.6 Sol 在事实准确性和回答聚焦度上有所提升，新增滑块可控制模型思考投入。免费用户默认模型升级为 GPT-5.6 Luna，并开放无限文本聊天，新增 Think 按钮以处理更复杂问题。",
-            "category": "products",
-            "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-            "originalUrl": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-            "recommendedReason": "OpenAI 更新 ChatGPT：Plus 和 Pro 用户的 GPT-5.6 Sol 在事实准确性和回答聚焦度上有所提升，新增滑块可控制模型思考投入。免费用户默认模型升级为 GPT-5.6 Luna，并开放无限文本聊天，新增 Think 按钮以处理更复杂问题。",
-            "publishedAt": "2026-08-06T23:01:28.628Z",
-            "collectedAt": "2026-08-07T16:13:55.201Z",
-            "raw": {
-              "id": "cmsi5sy2s1192ronkt3lk2z88",
-              "titleEn": "优化 ChatGPT 中的 GPT-5.6 Sol，并扩大免费用户对 GPT-5.6 Luna 的访问权限",
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "aihot:cmshrwaqs0pmuronkuj6r8o4m",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "ChatGPT 推出改进版 GPT-5.6 Sol，并扩大免费用户访问权限",
-            "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-            "summary": "ChatGPT 推出改进版 GPT-5.6 Sol，提升准确性与一致性，同时扩大免费用户访问权限。免费用户还可无限次使用 GPT-5.6 Luna 进行日常对话。",
-            "description": "ChatGPT 推出改进版 GPT-5.6 Sol，提升准确性与一致性，同时扩大免费用户访问权限。免费用户还可无限次使用 GPT-5.6 Luna 进行日常对话。",
-            "category": "models",
-            "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
-            "originalUrl": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-            "recommendedReason": "ChatGPT 推出改进版 GPT-5.6 Sol，提升准确性与一致性，同时扩大免费用户访问权限。免费用户还可无限次使用 GPT-5.6 Luna 进行日常对话。",
-            "publishedAt": "2026-08-06T10:00:00.000Z",
-            "collectedAt": "2026-08-07T16:13:55.201Z",
-            "raw": {
-              "id": "cmshrwaqs0pmuronkuj6r8o4m",
-              "titleEn": "Improving GPT-5.6 Sol in ChatGPT-and expanding access for free users",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:49199357",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
-            "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
-            "author": "tedsanders",
-            "tags": [
-              "ai",
-              "openai"
-            ],
-            "metrics": {
-              "upvotes": 283,
-              "commentsCount": 231
-            },
-            "publishedAt": "2026-08-06T17:02:04.000Z",
-            "collectedAt": "2026-08-07T16:13:50.291Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49199357",
-              "matchedKeywords": [
-                "ai",
-                "openai"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 283,
-          "commentsCount": 231,
-          "hnScore": 283,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "products",
-        "summary": "OpenAI 更新 ChatGPT：Plus 和 Pro 用户的 GPT-5.6 Sol 在事实准确性和回答聚焦度上有所提升，新增滑块可控制模型思考投入。免费用户默认模型升级为 GPT-5.6 Luna，并开放无限文本聊天，新增 Think 按钮以处理更复杂问题。",
-        "whyItMatters": "同一趋势被 2 个来源、3 条信号捕捉。",
-        "firstSeenAt": "2026-08-06T10:00:00.000Z",
-        "lastSeenAt": "2026-08-07T16:13:55.201Z"
       }
     ]
   }
