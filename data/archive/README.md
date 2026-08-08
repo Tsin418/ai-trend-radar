@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-08T21:52:03.472Z
+Updated: 2026-08-08T22:52:56.080Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -13,7 +13,7 @@ Updated: 2026-08-08T21:52:03.472Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-08-09 | daily | [AI Developer Radar｜Daily｜2026-08-09](2026/08/2026-08-09-daily.md) | Tencent/ncnn, ultralytics/yolov5, deepspeedai/DeepSpeed, addyosmani/agent-skills, Panniantong/Agent-Reach |
+| 2026-08-09 | daily | [AI Developer Radar｜Daily｜2026-08-09](2026/08/2026-08-09-daily.md) | Tencent/ncnn, deepspeedai/DeepSpeed, ultralytics/yolov5, addyosmani/agent-skills, Panniantong/Agent-Reach |
 | 2026-08-08 | daily | [AI Developer Radar｜Daily｜2026-08-08](2026/08/2026-08-08-daily.md) | TauricResearch/TradingAgents, PrimeIntellect-ai/prime-agent, Tencent/ncnn, deepspeedai/DeepSpeed, ultralytics/yolov5 |
 | 2026-08-07 | daily | [AI Developer Radar｜Daily｜2026-08-07](2026/08/2026-08-07-daily.md) | chenyme/grok2api, goauthentik/authentik, hpcaitech/ColossalAI, ultralytics/yolov5, addyosmani/agent-skills |
 | 2026-08-06 | daily | [AI Developer Radar｜Daily｜2026-08-06](2026/08/2026-08-06-daily.md) | huangruiteng/loopx, cloudflare/computer, thedaviddias/Front-End-Checklist, ultralytics/yolov5, TencentCloud/TencentDB-Agent-Memory |
