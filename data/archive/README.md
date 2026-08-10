@@ -1,9 +1,10 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-10T02:39:41.006Z
+Updated: 2026-08-10T03:08:09.426Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
+| 2026-W33 | weekly | [AI Developer Radar｜Weekly｜2026-W33](2026/08/2026-W33-weekly.md) | Budibase/budibase, milvus-io/milvus, vitali87/code-graph-rag, Tencent/ncnn, ultralytics/yolov5 |
 | 2026-W32 | weekly | [AI Developer Radar｜Weekly｜2026-W32](2026/08/2026-W32-weekly.md) | milvus-io/milvus, ultralytics/yolov5, ChatGPTNextWeb/NextChat, Tencent/ncnn, deepspeedai/DeepSpeed |
 | 2026-W31 | weekly | [AI Developer Radar｜Weekly｜2026-W31](2026/07/2026-W31-weekly.md) | google-ai-edge/mediapipe, permissionlesstech/bitchat, milvus-io/milvus, medusajs/medusa, deepspeedai/DeepSpeed |
 | 2026-W30 | weekly | [AI Developer Radar｜Weekly｜2026-W30](2026/07/2026-W30-weekly.md) | google-ai-edge/mediapipe, Canner/WrenAI, bojieli/ai-agent-book, ChatGPTNextWeb/NextChat, deepspeedai/DeepSpeed |
