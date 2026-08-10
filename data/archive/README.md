@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-10T10:40:55.987Z
+Updated: 2026-08-10T12:05:39.551Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -14,7 +14,7 @@ Updated: 2026-08-10T10:40:55.987Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-08-10 | daily | [AI Developer Radar｜Daily｜2026-08-10](2026/08/2026-08-10-daily.md) | Panniantong/Agent-Reach, esengine/DeepSeek-Reasonix, tirth8205/code-review-graph, addyosmani/agent-skills, ZhuLinsen/daily_stock_analysis |
+| 2026-08-10 | daily | [AI Developer Radar｜Daily｜2026-08-10](2026/08/2026-08-10-daily.md) | vitali87/code-graph-rag, semantica-agi/semantica, Comfy-Org/ComfyUI, diegosouzapw/OmniRoute, Panniantong/Agent-Reach |
 | 2026-08-09 | daily | [AI Developer Radar｜Daily｜2026-08-09](2026/08/2026-08-09-daily.md) | pranshuparmar/witr, Tencent/ncnn, Panniantong/Agent-Reach, esengine/DeepSeek-Reasonix, addyosmani/agent-skills |
 | 2026-08-08 | daily | [AI Developer Radar｜Daily｜2026-08-08](2026/08/2026-08-08-daily.md) | TauricResearch/TradingAgents, PrimeIntellect-ai/prime-agent, Tencent/ncnn, deepspeedai/DeepSpeed, ultralytics/yolov5 |
 | 2026-08-07 | daily | [AI Developer Radar｜Daily｜2026-08-07](2026/08/2026-08-07-daily.md) | chenyme/grok2api, goauthentik/authentik, hpcaitech/ColossalAI, ultralytics/yolov5, addyosmani/agent-skills |
