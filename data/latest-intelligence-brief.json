@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-08-13-2026-08-13T08-12-29-492Z",
-  "generatedAt": "2026-08-13T08:12:29.492Z",
+  "runId": "lightweight-2026-08-13-2026-08-13T09-54-40-101Z",
+  "generatedAt": "2026-08-13T09:54:40.101Z",
   "targetDate": "2026-08-13",
   "brief": {
     "date": "2026-08-13",
-    "headline": "Today's strongest AI trend signals are Ai Model Release, Local Llm / Inference, and Mcp / Tool Calling.",
+    "headline": "Today's strongest AI trend signals are Ai Model Release, Rag / Knowledge Base, and Local Llm / Inference.",
     "keyTakeaways": [
       "Ai Model Release: This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 11 related signal(s). Treat it as correlation evidence ra.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
       "Ai Model Release: watch decision is deep_dive.",
-      "Local Llm / Inference: This topic appeared across 2 source(s): huggingface_models, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adopti.",
+      "Rag / Knowledge Base: This topic appeared across 2 source(s): huggingface_models, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoptio.",
+      "Rag / Knowledge Base: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
+      "Rag / Knowledge Base: watch decision is deep_dive.",
+      "Local Llm / Inference: This topic appeared across 2 source(s): huggingface_models, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adopti.",
       "Local Llm / Inference: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
-      "Local Llm / Inference: watch decision is deep_dive.",
-      "Mcp / Tool Calling: This topic appeared across 2 source(s): aihot, huggingface_spaces, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-      "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
-      "Mcp / Tool Calling: watch decision is deep_dive."
+      "Local Llm / Inference: watch decision is deep_dive."
     ],
     "topicBriefs": [
       {
@@ -30,7 +30,7 @@
           "hackernews"
         ],
         "sourceCount": 4,
-        "heatScore": 498,
+        "heatScore": 491,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Ai Model Release is an AI trend topic in papers represented by related signals from today's collection.",
@@ -42,12 +42,12 @@
         "technicalKeywords": [
           "papers",
           "tools",
-          "transformers",
-          "safetensors",
-          "llama",
-          "text-generation",
-          "merge",
-          "conversational"
+          "agillm",
+          "checkpoint",
+          "recovery",
+          "diffusion-block",
+          "mixture-of-experts",
+          "text-generation"
         ],
         "evidenceItems": [
           {
@@ -60,9 +60,9 @@
               "llm"
             ],
             "publishedAt": "2026-08-11T13:22:00.000Z",
-            "collectedAt": "2026-08-13T08:12:29.835Z",
+            "collectedAt": "2026-08-13T09:54:40.472Z",
             "metrics": {
-              "upvotes": 684,
+              "upvotes": 685,
               "commentsCount": 301
             }
           },
@@ -75,7 +75,7 @@
             "summary": "Google Research 提出知识画像框架，发现前沿 LLM（如 Gemini3、GPT-5）的事实编码接近饱和，但回忆（recall）能力不足，多数事实错误源于\"丢钥匙\"而非\"空货架\"。该框架将事实分为编码失败、回忆失败等五类画像，并配套推出 WikiProfile 基准，含 2，150 条维基百科事实，每条配 10 个问题，用于分别探测编码、回忆与识别能力。",
             "category": "papers",
             "publishedAt": "2026-08-12T17:57:36.369Z",
-            "collectedAt": "2026-08-13T08:12:33.269Z"
+            "collectedAt": "2026-08-13T09:54:42.220Z"
           },
           {
             "id": "aihot:cmsq5saxh051mro2e90h10exo",
@@ -86,7 +86,7 @@
             "summary": "作者在完成一本 RLHF 教科书后反思，LLM 在长文非虚构写作上进展停滞，GPT 4.5 和 Kimi K2 等写作强模型已显老旧，而编码、数学等任务已接近超人水平。模型能改错字、做编辑，但组织整章内容时仍混乱且易出错，作者认为这阻碍了模型自主解决开放科学问题。",
             "category": "tools",
             "publishedAt": "2026-08-12T13:01:16.000Z",
-            "collectedAt": "2026-08-13T08:12:33.269Z"
+            "collectedAt": "2026-08-13T09:54:42.220Z"
           },
           {
             "id": "aihot:cmsox86zv09u6rohdqr80wg0x",
@@ -97,7 +97,7 @@
             "summary": "研究团队为 macOS 虚拟机中的 Metal 能力查询构建进程级兼容层，使 llama.cpp 能选用更新的 Metal 内核。在 M1 Ultra 上，TinyLlama 1.1B 的提示处理速度提升 11.08 倍、token 生成提升 16.36 倍，接近裸机性能的 98%；Gemma 4 12B 的提示处理与生成速度分别提升 7.20 倍和 14.54 倍。",
             "category": "papers",
             "publishedAt": "2026-08-11T16:41:17.281Z",
-            "collectedAt": "2026-08-13T08:12:33.269Z"
+            "collectedAt": "2026-08-13T09:54:42.220Z"
           },
           {
             "id": "hackernews:49259339",
@@ -112,47 +112,34 @@
               "inference"
             ],
             "publishedAt": "2026-08-11T14:50:33.000Z",
-            "collectedAt": "2026-08-13T08:12:29.835Z",
+            "collectedAt": "2026-08-13T09:54:40.472Z",
             "metrics": {
-              "upvotes": 302,
+              "upvotes": 303,
               "commentsCount": 43
             }
           },
           {
-            "id": "huggingface_models:tartuNLP/Llama-3.1-EstLLM-8B-Instruct-1125",
-            "title": "tartuNLP/Llama-3.1-EstLLM-8B-Instruct-1125",
-            "source": "huggingface_models",
+            "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+            "title": "Open LLM Leaderboard",
+            "source": "huggingface_spaces",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/tartuNLP/Llama-3.1-EstLLM-8B-Instruct-1125",
-            "category": "text-generation",
+            "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+            "category": "docker",
             "tags": [
-              "transformers",
-              "safetensors",
-              "llama",
-              "text-generation",
-              "merge",
-              "conversational",
-              "et",
-              "en",
-              "dataset:nvidia/HelpSteer3",
-              "dataset:allenai/tulu-3-sft-mixture",
-              "dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
-              "arxiv:2603.02041",
-              "base_model:meta-llama/Llama-3.1-8B-Instruct",
-              "base_model:merge:meta-llama/Llama-3.1-8B-Instruct",
-              "base_model:tartuNLP/Llama-3.1-EstLLM-8B-Instruct-0825",
-              "base_model:merge:tartuNLP/Llama-3.1-EstLLM-8B-Instruct-0825",
-              "license:llama3.1",
-              "eval-results",
-              "text-generation-inference",
-              "endpoints_compatible",
+              "docker",
+              "leaderboard",
+              "modality:text",
+              "submission:automatic",
+              "test:public",
+              "language:english",
+              "eval:code",
+              "eval:math",
               "region:us"
             ],
-            "publishedAt": "2025-11-28T13:27:42.000Z",
-            "collectedAt": "2026-08-13T08:12:29.620Z",
+            "publishedAt": "2023-04-17T11:40:06.000Z",
+            "collectedAt": "2026-08-13T09:54:40.239Z",
             "metrics": {
-              "downloads": 366,
-              "likes": 6
+              "likes": 14070
             }
           }
         ],
@@ -160,35 +147,154 @@
           "空货架还是丢钥匙？Google 研究：Recall 是参数化事实性的瓶颈",
           "我写了一本 AI 教科书--AI 还要多久才能写得更好？",
           "Apple Silicon 与 macOS 虚拟机：借助 Llama.cpp 实现 11-16 倍的 LLM 推理加速",
-          "tartuNLP/Llama-3.1-EstLLM-8B-Instruct-1125",
-          "meshllm/Qwen3.8-2.4T-A95B-UD-IQ2_XXS-layers",
+          "MarxistLeninist/AGILLM-4.3",
+          "mradermacher/Blossom-V7-9B-i1-GGUF",
+          "Alibaba-NLP/UEmbed-2B",
           "Open LLM Leaderboard",
-          "MusicGen",
-          "Live Portrait"
+          "MusicGen"
         ],
         "metrics": {
-          "votes": 684,
+          "votes": 685,
           "likes": 14070,
-          "downloads": 366,
+          "downloads": 121,
           "commentsCount": 301,
-          "heatScore": 498,
+          "heatScore": 491,
           "crossSourceBonus": 25
         }
       },
       {
-        "id": "topic:local llm / inference",
-        "title": "Local Llm / Inference",
-        "category": "text-generation",
+        "id": "topic:rag / knowledge base",
+        "title": "Rag / Knowledge Base",
+        "category": "feature-extraction",
         "sources": [
           "huggingface_models",
           "hackernews"
         ],
         "sourceCount": 2,
-        "heatScore": 360,
+        "heatScore": 375,
         "confidence": "medium",
         "watchDecision": "deep_dive",
-        "whatItIs": "Local Llm / Inference is an AI trend topic in text-generation represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Rag / Knowledge Base is an AI trend topic in feature-extraction represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Rag / Knowledge Base should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "technicalKeywords": [
+          "transformers",
+          "safetensors",
+          "qwen3_5",
+          "image-text-to-text",
+          "embeddings",
+          "multimodal",
+          "retrieval",
+          "sparse-retrieval"
+        ],
+        "evidenceItems": [
+          {
+            "id": "hackernews:49269818",
+            "title": "Controversial creators are benefiting from monetization programs run by Meta",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://www.abc.net.au/news/2026-08-06/ragebait-how-facebook-is-paying-controversial-creators/106940696",
+            "tags": [
+              "ai",
+              "rag"
+            ],
+            "publishedAt": "2026-08-12T09:35:30.000Z",
+            "collectedAt": "2026-08-13T09:54:40.472Z",
+            "metrics": {
+              "upvotes": 471,
+              "commentsCount": 326
+            }
+          },
+          {
+            "id": "huggingface_models:Alibaba-NLP/UEmbed-2B",
+            "title": "Alibaba-NLP/UEmbed-2B",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/Alibaba-NLP/UEmbed-2B",
+            "category": "feature-extraction",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "qwen3_5",
+              "image-text-to-text",
+              "embeddings",
+              "multimodal",
+              "retrieval",
+              "sparse-retrieval",
+              "splade",
+              "dense-retrieval",
+              "vision",
+              "feature-extraction",
+              "arxiv:2608.02583",
+              "license:cc-by-4.0",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-07-29T08:28:08.000Z",
+            "collectedAt": "2026-08-13T09:54:40.231Z",
+            "metrics": {
+              "downloads": 121,
+              "likes": 7
+            }
+          },
+          {
+            "id": "huggingface_models:rocheldasilva/emotion-distilbert",
+            "title": "rocheldasilva/emotion-distilbert",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/rocheldasilva/emotion-distilbert",
+            "category": "text-classification",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "distilbert",
+              "text-classification",
+              "generated_from_trainer",
+              "base_model:distilbert/distilbert-base-uncased",
+              "base_model:finetune:distilbert/distilbert-base-uncased",
+              "license:apache-2.0",
+              "text-embeddings-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-08-13T09:53:25.000Z",
+            "collectedAt": "2026-08-13T09:54:40.231Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          }
+        ],
+        "relatedEntities": [
+          "Alibaba-NLP/UEmbed-2B",
+          "rocheldasilva/emotion-distilbert",
+          "Controversial creators are benefiting from monetization programs run by Meta"
+        ],
+        "metrics": {
+          "votes": 471,
+          "likes": 7,
+          "downloads": 121,
+          "commentsCount": 326,
+          "heatScore": 375,
+          "crossSourceBonus": 10
+        }
+      },
+      {
+        "id": "topic:local llm / inference",
+        "title": "Local Llm / Inference",
+        "sources": [
+          "huggingface_models",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "heatScore": 367,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Local Llm / Inference is an AI trend topic represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
@@ -196,12 +302,12 @@
         "technicalKeywords": [
           "transformers",
           "safetensors",
-          "llama",
-          "text-generation",
-          "merge",
-          "conversational",
-          "et",
-          "en"
+          "text-generation-inference",
+          "unsloth",
+          "qwen2",
+          "trl",
+          "en",
+          "base_model:unsloth/Qwen2.5-0.5B-Instruct"
         ],
         "evidenceItems": [
           {
@@ -217,181 +323,144 @@
               "inference"
             ],
             "publishedAt": "2026-08-11T14:50:33.000Z",
-            "collectedAt": "2026-08-13T08:12:29.835Z",
+            "collectedAt": "2026-08-13T09:54:40.472Z",
             "metrics": {
-              "upvotes": 302,
+              "upvotes": 303,
               "commentsCount": 43
             }
           },
           {
-            "id": "huggingface_models:tartuNLP/Llama-3.1-EstLLM-8B-Instruct-1125",
-            "title": "tartuNLP/Llama-3.1-EstLLM-8B-Instruct-1125",
+            "id": "huggingface_models:fpadovani/swa-latn-100mb-after-ppt-Dp-100mb-ckpt500_seed10",
+            "title": "fpadovani/swa-latn-100mb-after-ppt-Dp-100mb-ckpt500_seed10",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/tartuNLP/Llama-3.1-EstLLM-8B-Instruct-1125",
+            "url": "https://huggingface.co/fpadovani/swa-latn-100mb-after-ppt-Dp-100mb-ckpt500_seed10",
             "category": "text-generation",
             "tags": [
               "transformers",
               "safetensors",
-              "llama",
+              "gpt2",
               "text-generation",
-              "merge",
-              "conversational",
-              "et",
-              "en",
-              "dataset:nvidia/HelpSteer3",
-              "dataset:allenai/tulu-3-sft-mixture",
-              "dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
-              "arxiv:2603.02041",
-              "base_model:meta-llama/Llama-3.1-8B-Instruct",
-              "base_model:merge:meta-llama/Llama-3.1-8B-Instruct",
-              "base_model:tartuNLP/Llama-3.1-EstLLM-8B-Instruct-0825",
-              "base_model:merge:tartuNLP/Llama-3.1-EstLLM-8B-Instruct-0825",
-              "license:llama3.1",
-              "eval-results",
+              "generated_from_trainer",
+              "trl",
+              "sft",
+              "base_model:fpadovani/swa-latn-100mb-ppt-Dp-100mb_seed10",
+              "base_model:finetune:fpadovani/swa-latn-100mb-ppt-Dp-100mb_seed10",
               "text-generation-inference",
               "endpoints_compatible",
               "region:us"
             ],
-            "publishedAt": "2025-11-28T13:27:42.000Z",
-            "collectedAt": "2026-08-13T08:12:29.620Z",
+            "publishedAt": "2026-07-15T05:30:49.000Z",
+            "collectedAt": "2026-08-13T09:54:40.231Z",
             "metrics": {
-              "downloads": 366,
-              "likes": 6
-            }
-          },
-          {
-            "id": "huggingface_models:Naphula/Goetia-24B-v1.4",
-            "title": "Naphula/Goetia-24B-v1.4",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/Naphula/Goetia-24B-v1.4",
-            "category": "text-generation",
-            "tags": [
-              "transformers",
-              "safetensors",
-              "mistral",
-              "text-generation",
-              "creative",
-              "creative writing",
-              "fiction writing",
-              "plot generation",
-              "sub-plot generation",
-              "story generation",
-              "scene continue",
-              "storytelling",
-              "fiction story",
-              "science fiction",
-              "romance",
-              "all genres",
-              "story",
-              "writing",
-              "vivid prosing",
-              "vivid writing",
-              "fiction",
-              "roleplaying",
-              "float32",
-              "swearing",
-              "rp",
-              "horror",
-              "della",
-              "merge",
-              "mergekit",
-              "conversational",
-              "en",
-              "dataset:OccultAI/illuminati_imatrix_v1",
-              "arxiv:2406.11617",
-              "base_model:Casual-Autopsy/Maginum-Cydoms-24B",
-              "base_model:merge:Casual-Autopsy/Maginum-Cydoms-24B",
-              "base_model:DarkArtsForge/Morbid-Miasma-24B",
-              "base_model:merge:DarkArtsForge/Morbid-Miasma-24B",
-              "base_model:Darkhn/Magistral-2509-24B-Text-Only",
-              "base_model:merge:Darkhn/Magistral-2509-24B-Text-Only",
-              "base_model:Naphula/BeaverAI_Fallen-Mistral-Small-3.1-24B-v1e_textonly",
-              "base_model:merge:Naphula/BeaverAI_Fallen-Mistral-Small-3.1-24B-v1e_textonly",
-              "base_model:Naphula/Slimaki-24B-v1",
-              "base_model:merge:Naphula/Slimaki-24B-v1",
-              "base_model:mradermacher/BlackXorDolphTronGOAT-GGUF",
-              "base_model:merge:mradermacher/BlackXorDolphTronGOAT-GGUF",
-              "base_model:sophosympatheia/Magistry-24B-v1.0",
-              "base_model:merge:sophosympatheia/Magistry-24B-v1.0",
-              "license:apache-2.0",
-              "text-generation-inference",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-03-24T13:26:19.000Z",
-            "collectedAt": "2026-08-13T08:12:29.620Z",
-            "metrics": {
-              "downloads": 293,
-              "likes": 5
-            }
-          },
-          {
-            "id": "huggingface_models:Akalabeth12/Text-to-Image",
-            "title": "Akalabeth12/Text-to-Image",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/Akalabeth12/Text-to-Image",
-            "tags": [
-              "gguf",
-              "region:us"
-            ],
-            "publishedAt": "2025-08-30T05:53:39.000Z",
-            "collectedAt": "2026-08-13T08:12:29.620Z",
-            "metrics": {
-              "downloads": 63,
+              "downloads": 1707,
               "likes": 0
             }
           },
           {
-            "id": "huggingface_models:meshllm/Qwen3.8-2.4T-A95B-UD-IQ2_XXS-layers",
-            "title": "meshllm/Qwen3.8-2.4T-A95B-UD-IQ2_XXS-layers",
+            "id": "huggingface_models:daanvdweijden/qwen2.5-0.5b-numbers-control-s1",
+            "title": "daanvdweijden/qwen2.5-0.5b-numbers-control-s1",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/meshllm/Qwen3.8-2.4T-A95B-UD-IQ2_XXS-layers",
+            "url": "https://huggingface.co/daanvdweijden/qwen2.5-0.5b-numbers-control-s1",
             "tags": [
-              "gguf",
+              "transformers",
+              "safetensors",
+              "text-generation-inference",
+              "unsloth",
+              "qwen2",
+              "trl",
+              "en",
+              "base_model:unsloth/Qwen2.5-0.5B-Instruct",
+              "base_model:finetune:unsloth/Qwen2.5-0.5B-Instruct",
+              "license:apache-2.0",
               "endpoints_compatible",
-              "region:us",
-              "imatrix",
-              "conversational"
+              "region:us"
             ],
-            "publishedAt": "2026-08-13T06:43:04.000Z",
-            "collectedAt": "2026-08-13T08:12:29.620Z",
+            "publishedAt": "2026-08-12T21:05:17.000Z",
+            "collectedAt": "2026-08-13T09:54:40.231Z",
             "metrics": {
               "downloads": 0,
               "likes": 0
             }
           },
           {
-            "id": "huggingface_models:syvai/hviske-v5-tiny",
-            "title": "syvai/hviske-v5-tiny",
+            "id": "huggingface_models:daanvdweijden/qwen2.5-3b-numbers-blanchett-s1",
+            "title": "daanvdweijden/qwen2.5-3b-numbers-blanchett-s1",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/syvai/hviske-v5-tiny",
-            "category": "automatic-speech-recognition",
+            "url": "https://huggingface.co/daanvdweijden/qwen2.5-3b-numbers-blanchett-s1",
             "tags": [
               "transformers",
-              "onnx",
               "safetensors",
-              "gguf",
-              "cohere_asr",
-              "automatic-speech-recognition",
-              "asr",
-              "speech-recognition",
-              "danish",
-              "distillation",
-              "custom_code",
-              "da",
-              "base_model:syvai/hviske-v5.3",
-              "base_model:quantized:syvai/hviske-v5.3",
-              "license:cc-by-nc-4.0",
+              "text-generation-inference",
+              "unsloth",
+              "qwen2",
+              "trl",
+              "en",
+              "base_model:unsloth/Qwen2.5-3B-Instruct",
+              "base_model:finetune:unsloth/Qwen2.5-3B-Instruct",
+              "license:apache-2.0",
               "endpoints_compatible",
               "region:us"
             ],
-            "publishedAt": "2026-08-11T18:50:47.000Z",
-            "collectedAt": "2026-08-13T08:12:29.620Z",
+            "publishedAt": "2026-08-12T21:13:30.000Z",
+            "collectedAt": "2026-08-13T09:54:40.231Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:mradermacher/Blossom-V7-9B-i1-GGUF",
+            "title": "mradermacher/Blossom-V7-9B-i1-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/mradermacher/Blossom-V7-9B-i1-GGUF",
+            "tags": [
+              "transformers",
+              "gguf",
+              "conversational",
+              "reasoning",
+              "multimodal",
+              "en",
+              "zh",
+              "base_model:Azure99/Blossom-V7-9B",
+              "base_model:quantized:Azure99/Blossom-V7-9B",
+              "license:apache-2.0",
+              "endpoints_compatible",
+              "region:us",
+              "imatrix"
+            ],
+            "publishedAt": "2026-08-13T05:38:49.000Z",
+            "collectedAt": "2026-08-13T09:54:40.231Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:rocheldasilva/emotion-distilbert",
+            "title": "rocheldasilva/emotion-distilbert",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/rocheldasilva/emotion-distilbert",
+            "category": "text-classification",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "distilbert",
+              "text-classification",
+              "generated_from_trainer",
+              "base_model:distilbert/distilbert-base-uncased",
+              "base_model:finetune:distilbert/distilbert-base-uncased",
+              "license:apache-2.0",
+              "text-embeddings-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-08-13T09:53:25.000Z",
+            "collectedAt": "2026-08-13T09:54:40.231Z",
             "metrics": {
               "downloads": 0,
               "likes": 0
@@ -399,19 +468,19 @@
           }
         ],
         "relatedEntities": [
-          "tartuNLP/Llama-3.1-EstLLM-8B-Instruct-1125",
-          "meshllm/Qwen3.8-2.4T-A95B-UD-IQ2_XXS-layers",
-          "syvai/hviske-v5-tiny",
-          "Akalabeth12/Text-to-Image",
-          "Naphula/Goetia-24B-v1.4",
+          "daanvdweijden/qwen2.5-0.5b-numbers-control-s1",
+          "daanvdweijden/qwen2.5-3b-numbers-blanchett-s1",
+          "mradermacher/Blossom-V7-9B-i1-GGUF",
+          "fpadovani/swa-latn-100mb-after-ppt-Dp-100mb-ckpt500_seed10",
+          "rocheldasilva/emotion-distilbert",
+          "fpadovani/jpn-100mb-after-jpn-baseline-ckpt500_seed3407",
           "Apple Silicon and macOS VMs: Faster LLM Inference with llama.cpp"
         ],
         "metrics": {
-          "votes": 302,
-          "likes": 6,
-          "downloads": 366,
+          "votes": 303,
+          "downloads": 1707,
           "commentsCount": 43,
-          "heatScore": 360,
+          "heatScore": 367,
           "crossSourceBonus": 10
         }
       },
@@ -421,23 +490,28 @@
         "category": "products",
         "sources": [
           "aihot",
+          "huggingface_models",
           "huggingface_spaces"
         ],
-        "sourceCount": 2,
-        "heatScore": 140,
+        "sourceCount": 3,
+        "heatScore": 160,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Mcp / Tool Calling is an AI trend topic in products represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, huggingface_spaces, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_models, huggingface_spaces, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Mcp / Tool Calling should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
           "products",
-          "gradio",
-          "mcp-server",
-          "region:us"
+          "transformers",
+          "safetensors",
+          "qwen3_5_text",
+          "text-generation",
+          "tajik",
+          "tojiki",
+          "tool-calling"
         ],
         "evidenceItems": [
           {
@@ -449,7 +523,7 @@
             "summary": "Meta AI 超级智能实验室的首个开放权重模型 Muse Glimmer 已在 OpenRouter 上线！ 这是一款 30B 密集文本+图像模型，采用 Apache 2.0 许可证，旨在成为可靠的本地智能体，MCP Atlas 得分 75.5，SWE-Bench Pro 得分 51.2。 https://openrouter.ai/meta/muse-glimmer-30b",
             "category": "products",
             "publishedAt": "2026-08-12T12:00:18.000Z",
-            "collectedAt": "2026-08-13T08:12:33.269Z"
+            "collectedAt": "2026-08-13T09:54:42.220Z"
           },
           {
             "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
@@ -464,7 +538,7 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-08-13T08:12:29.626Z",
+            "collectedAt": "2026-08-13T09:54:40.239Z",
             "metrics": {
               "likes": 3709
             }
@@ -482,7 +556,7 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-08-13T08:12:29.626Z",
+            "collectedAt": "2026-08-13T09:54:40.239Z",
             "metrics": {
               "likes": 3383
             }
@@ -500,7 +574,7 @@
               "region:us"
             ],
             "publishedAt": "2025-10-27T03:20:43.000Z",
-            "collectedAt": "2026-08-13T08:12:29.626Z",
+            "collectedAt": "2026-08-13T09:54:40.239Z",
             "metrics": {
               "likes": 2973
             }
@@ -518,14 +592,50 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-08-13T08:12:29.626Z",
+            "collectedAt": "2026-08-13T09:54:40.239Z",
             "metrics": {
               "likes": 2914
+            }
+          },
+          {
+            "id": "huggingface_models:Tohirju/qwen35-0.8b-tajik-tool",
+            "title": "Tohirju/qwen35-0.8b-tajik-tool",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/Tohirju/qwen35-0.8b-tajik-tool",
+            "category": "text-generation",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "qwen3_5_text",
+              "text-generation",
+              "tajik",
+              "tojiki",
+              "tool-calling",
+              "function-calling",
+              "on-device",
+              "qwen3.5",
+              "saidzoda-lab",
+              "tg",
+              "dataset:Tohirju/Tajik_CPT_full_Qwen35_tok2048",
+              "dataset:Tohirju/Tajik_SFT_full_Qwen35_clean_tok2048",
+              "base_model:unsloth/Qwen3.5-0.8B-Base",
+              "base_model:finetune:unsloth/Qwen3.5-0.8B-Base",
+              "license:apache-2.0",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-08-13T07:01:04.000Z",
+            "collectedAt": "2026-08-13T09:54:40.231Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
             }
           }
         ],
         "relatedEntities": [
           "Meta 开源 Muse Glimmer 登陆 OpenRouter",
+          "Tohirju/qwen35-0.8b-tajik-tool",
           "Z Image Turbo",
           "Wan2.2 14B Fast",
           "Wan2.2 14B Preview",
@@ -533,8 +643,8 @@
         ],
         "metrics": {
           "likes": 3709,
-          "heatScore": 140,
-          "crossSourceBonus": 10
+          "heatScore": 160,
+          "crossSourceBonus": 20
         }
       }
     ],
@@ -544,8 +654,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-08-13T08:12:29.506Z",
-        "finishedAt": "2026-08-13T08:12:29.506Z",
+        "startedAt": "2026-08-13T09:54:40.138Z",
+        "finishedAt": "2026-08-13T09:54:40.138Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -554,36 +664,36 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-08-13T08:12:29.506Z",
-        "finishedAt": "2026-08-13T08:12:33.269Z",
-        "latencyMs": 3763
+        "startedAt": "2026-08-13T09:54:40.138Z",
+        "finishedAt": "2026-08-13T09:54:42.221Z",
+        "latencyMs": 2083
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 10,
-        "startedAt": "2026-08-13T08:12:29.518Z",
-        "finishedAt": "2026-08-13T08:12:29.620Z",
-        "latencyMs": 102
+        "itemCount": 22,
+        "startedAt": "2026-08-13T09:54:40.156Z",
+        "finishedAt": "2026-08-13T09:54:40.232Z",
+        "latencyMs": 76
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-08-13T08:12:29.520Z",
-        "finishedAt": "2026-08-13T08:12:29.626Z",
-        "latencyMs": 106
+        "startedAt": "2026-08-13T09:54:40.157Z",
+        "finishedAt": "2026-08-13T09:54:40.240Z",
+        "latencyMs": 83
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 27,
-        "startedAt": "2026-08-13T08:12:29.521Z",
-        "finishedAt": "2026-08-13T08:12:29.836Z",
-        "latencyMs": 315
+        "itemCount": 30,
+        "startedAt": "2026-08-13T09:54:40.159Z",
+        "finishedAt": "2026-08-13T09:54:40.473Z",
+        "latencyMs": 314
       }
     ],
     "dataNotes": [
@@ -594,44 +704,32 @@
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_models:tartuNLP/Llama-3.1-EstLLM-8B-Instruct-1125",
+        "id": "huggingface_models:nphSi/Z-Image-Lora",
         "source": "huggingface_models",
         "sourceType": "model_hub",
-        "title": "tartuNLP/Llama-3.1-EstLLM-8B-Instruct-1125",
-        "url": "https://huggingface.co/tartuNLP/Llama-3.1-EstLLM-8B-Instruct-1125",
+        "title": "nphSi/Z-Image-Lora",
+        "url": "https://huggingface.co/nphSi/Z-Image-Lora",
         "tags": [
-          "transformers",
+          "diffusers",
+          "text-to-image",
+          "lora",
           "safetensors",
-          "llama",
-          "text-generation",
-          "merge",
-          "conversational",
-          "et",
-          "en",
-          "dataset:nvidia/HelpSteer3",
-          "dataset:allenai/tulu-3-sft-mixture",
-          "dataset:utter-project/EuroBlocks-SFT-Synthetic-1124",
-          "arxiv:2603.02041",
-          "base_model:meta-llama/Llama-3.1-8B-Instruct",
-          "base_model:merge:meta-llama/Llama-3.1-8B-Instruct",
-          "base_model:tartuNLP/Llama-3.1-EstLLM-8B-Instruct-0825",
-          "base_model:merge:tartuNLP/Llama-3.1-EstLLM-8B-Instruct-0825",
-          "license:llama3.1",
-          "eval-results",
-          "text-generation-inference",
-          "endpoints_compatible",
+          "z-image",
+          "base_model:Tongyi-MAI/Z-Image",
+          "base_model:adapter:Tongyi-MAI/Z-Image",
+          "license:apache-2.0",
           "region:us"
         ],
-        "category": "text-generation",
+        "category": "text-to-image",
         "metrics": {
-          "downloads": 366,
-          "likes": 6
+          "downloads": 210504,
+          "likes": 139
         },
-        "publishedAt": "2025-11-28T13:27:42.000Z",
-        "updatedAt": "2026-08-13T08:11:47.000Z",
-        "collectedAt": "2026-08-13T08:12:29.620Z",
+        "publishedAt": "2025-12-01T06:21:24.000Z",
+        "updatedAt": "2026-08-13T09:54:12.000Z",
+        "collectedAt": "2026-08-13T09:54:40.231Z",
         "raw": {
-          "pipelineTag": "text-generation"
+          "pipelineTag": "text-to-image"
         }
       },
       {
@@ -658,7 +756,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-08-13T08:12:29.626Z",
+        "collectedAt": "2026-08-13T09:54:40.239Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -681,7 +779,7 @@
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-08-13T08:12:29.626Z",
+        "collectedAt": "2026-08-13T09:54:40.239Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -704,10 +802,42 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-08-13T08:12:29.626Z",
+        "collectedAt": "2026-08-13T09:54:40.239Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
+        }
+      },
+      {
+        "id": "huggingface_models:fpadovani/swa-latn-100mb-after-ppt-Dp-100mb-ckpt500_seed10",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "fpadovani/swa-latn-100mb-after-ppt-Dp-100mb-ckpt500_seed10",
+        "url": "https://huggingface.co/fpadovani/swa-latn-100mb-after-ppt-Dp-100mb-ckpt500_seed10",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "gpt2",
+          "text-generation",
+          "generated_from_trainer",
+          "trl",
+          "sft",
+          "base_model:fpadovani/swa-latn-100mb-ppt-Dp-100mb_seed10",
+          "base_model:finetune:fpadovani/swa-latn-100mb-ppt-Dp-100mb_seed10",
+          "text-generation-inference",
+          "endpoints_compatible",
+          "region:us"
+        ],
+        "category": "text-generation",
+        "metrics": {
+          "downloads": 1707,
+          "likes": 0
+        },
+        "publishedAt": "2026-07-15T05:30:49.000Z",
+        "updatedAt": "2026-08-13T09:53:48.000Z",
+        "collectedAt": "2026-08-13T09:54:40.231Z",
+        "raw": {
+          "pipelineTag": "text-generation"
         }
       },
       {
@@ -727,82 +857,11 @@
           "likes": 7611
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-08-13T05:04:05.000Z",
-        "collectedAt": "2026-08-13T08:12:29.626Z",
+        "updatedAt": "2026-08-13T09:53:48.000Z",
+        "collectedAt": "2026-08-13T09:54:40.239Z",
         "raw": {
           "sdk": "docker",
           "emoji": "📊"
-        }
-      },
-      {
-        "id": "huggingface_models:Naphula/Goetia-24B-v1.4",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "Naphula/Goetia-24B-v1.4",
-        "url": "https://huggingface.co/Naphula/Goetia-24B-v1.4",
-        "tags": [
-          "transformers",
-          "safetensors",
-          "mistral",
-          "text-generation",
-          "creative",
-          "creative writing",
-          "fiction writing",
-          "plot generation",
-          "sub-plot generation",
-          "story generation",
-          "scene continue",
-          "storytelling",
-          "fiction story",
-          "science fiction",
-          "romance",
-          "all genres",
-          "story",
-          "writing",
-          "vivid prosing",
-          "vivid writing",
-          "fiction",
-          "roleplaying",
-          "float32",
-          "swearing",
-          "rp",
-          "horror",
-          "della",
-          "merge",
-          "mergekit",
-          "conversational",
-          "en",
-          "dataset:OccultAI/illuminati_imatrix_v1",
-          "arxiv:2406.11617",
-          "base_model:Casual-Autopsy/Maginum-Cydoms-24B",
-          "base_model:merge:Casual-Autopsy/Maginum-Cydoms-24B",
-          "base_model:DarkArtsForge/Morbid-Miasma-24B",
-          "base_model:merge:DarkArtsForge/Morbid-Miasma-24B",
-          "base_model:Darkhn/Magistral-2509-24B-Text-Only",
-          "base_model:merge:Darkhn/Magistral-2509-24B-Text-Only",
-          "base_model:Naphula/BeaverAI_Fallen-Mistral-Small-3.1-24B-v1e_textonly",
-          "base_model:merge:Naphula/BeaverAI_Fallen-Mistral-Small-3.1-24B-v1e_textonly",
-          "base_model:Naphula/Slimaki-24B-v1",
-          "base_model:merge:Naphula/Slimaki-24B-v1",
-          "base_model:mradermacher/BlackXorDolphTronGOAT-GGUF",
-          "base_model:merge:mradermacher/BlackXorDolphTronGOAT-GGUF",
-          "base_model:sophosympatheia/Magistry-24B-v1.0",
-          "base_model:merge:sophosympatheia/Magistry-24B-v1.0",
-          "license:apache-2.0",
-          "text-generation-inference",
-          "endpoints_compatible",
-          "region:us"
-        ],
-        "category": "text-generation",
-        "metrics": {
-          "downloads": 293,
-          "likes": 5
-        },
-        "publishedAt": "2026-03-24T13:26:19.000Z",
-        "updatedAt": "2026-08-13T08:09:46.000Z",
-        "collectedAt": "2026-08-13T08:12:29.620Z",
-        "raw": {
-          "pipelineTag": "text-generation"
         }
       },
       {
@@ -825,7 +884,7 @@
         },
         "publishedAt": "2023-06-08T18:00:26.000Z",
         "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-08-13T08:12:29.626Z",
+        "collectedAt": "2026-08-13T09:54:40.239Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🎵"
@@ -849,7 +908,7 @@
         },
         "publishedAt": "2023-05-20T09:26:19.000Z",
         "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-08-13T08:12:29.626Z",
+        "collectedAt": "2026-08-13T09:54:40.239Z",
         "raw": {
           "sdk": "static",
           "emoji": "🏆🤖"
@@ -868,11 +927,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 856,
-          "commentsCount": 776
+          "upvotes": 882,
+          "commentsCount": 791
         },
         "publishedAt": "2026-08-12T13:20:05.000Z",
-        "collectedAt": "2026-08-13T08:12:29.835Z",
+        "collectedAt": "2026-08-13T09:54:40.472Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49271994",
           "matchedKeywords": [
@@ -892,11 +951,11 @@
           "deepseek"
         ],
         "metrics": {
-          "upvotes": 894,
-          "commentsCount": 363
+          "upvotes": 928,
+          "commentsCount": 376
         },
         "publishedAt": "2026-08-12T16:04:50.000Z",
-        "collectedAt": "2026-08-13T08:12:29.835Z",
+        "collectedAt": "2026-08-13T09:54:40.472Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49274600",
           "matchedKeywords": [
@@ -909,18 +968,18 @@
         "id": "hackernews:49272832",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "We tracked down the 16-year-old WAL-reset SQLite bug",
+        "title": "Tracking down the 16-year-old WAL-reset SQLite bug",
         "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
         "author": "ropbear",
         "tags": [
           "ai"
         ],
         "metrics": {
-          "upvotes": 1003,
-          "commentsCount": 188
+          "upvotes": 1045,
+          "commentsCount": 195
         },
         "publishedAt": "2026-08-12T14:22:30.000Z",
-        "collectedAt": "2026-08-13T08:12:29.835Z",
+        "collectedAt": "2026-08-13T09:54:40.472Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49272832",
           "matchedKeywords": [
@@ -939,11 +998,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 522,
-          "commentsCount": 475
+          "upvotes": 549,
+          "commentsCount": 493
         },
         "publishedAt": "2026-08-12T15:32:50.000Z",
-        "collectedAt": "2026-08-13T08:12:29.835Z",
+        "collectedAt": "2026-08-13T09:54:40.472Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49274027",
           "matchedKeywords": [
@@ -952,27 +1011,25 @@
         }
       },
       {
-        "id": "hackernews:49269818",
+        "id": "hackernews:49257876",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "Controversial creators are benefiting from monetization programs run by Meta",
-        "url": "https://www.abc.net.au/news/2026-08-06/ragebait-how-facebook-is-paying-controversial-creators/106940696",
-        "author": "robtherobber",
+        "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
+        "url": "https://stolen-thoughts.com/",
+        "author": "quantumgarbage",
         "tags": [
-          "ai",
-          "rag"
+          "llm"
         ],
         "metrics": {
-          "upvotes": 468,
-          "commentsCount": 323
+          "upvotes": 685,
+          "commentsCount": 301
         },
-        "publishedAt": "2026-08-12T09:35:30.000Z",
-        "collectedAt": "2026-08-13T08:12:29.835Z",
+        "publishedAt": "2026-08-11T13:22:00.000Z",
+        "collectedAt": "2026-08-13T09:54:40.472Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=49269818",
+          "hnUrl": "https://news.ycombinator.com/item?id=49257876",
           "matchedKeywords": [
-            "ai",
-            "rag"
+            "llm"
           ]
         }
       }
@@ -991,7 +1048,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685179&idx=1&sn=4cbee32b677b57a9dc6ec2a79d6f72c7",
         "recommendedReason": "WorkBuddy更新上线远程控制功能，将PC、App和小程序打通，手机端可实时同步电脑端的任务、对话、工作空间和产物，支持一台手机连接多台电脑并随时切换。App需升级至1.2.0及以上，电脑端需升级至5.3.8及以上，连接无需扫码。本次更新还新增资料库（我的文档与团队空间）、Markdown多人共同编辑、AI原生审阅模式，以及将资料库内容生成可发布链接的HTML网站。",
         "publishedAt": "2026-08-13T04:32:24.000Z",
-        "collectedAt": "2026-08-13T08:12:33.269Z",
+        "collectedAt": "2026-08-13T09:54:42.220Z",
         "raw": {
           "id": "cmsr160kg0dk0roz2mb20yxwk",
           "titleEn": "WorkBuddy上线远程控制，国内也有了最丝滑的Agent工作方式。",
@@ -1011,7 +1068,7 @@
         "originalUrl": "https://www.anthropic.com/research/multiagent-systems",
         "recommendedReason": "Anthropic 研究指出，随着 AI 智能体在共享代码库、市场等社会系统中承担更多任务，智能体间交互量或将超过人机交互。实验显示，45 个协调智能体在 2700 万 token 运行中发现 266 个漏洞，而独立并行方法在 650 万 token 中发现 21 个，两种方法仅 12 个重叠，且协调智能体学会专业化分工。研究同时警示个体层面的良性行为怪癖可能叠加为意外的系统性失败。",
         "publishedAt": "2026-08-13T01:20:54.259Z",
-        "collectedAt": "2026-08-13T08:12:33.269Z",
+        "collectedAt": "2026-08-13T09:54:42.220Z",
         "raw": {
           "id": "cmsqu0nr604oeroz2rh6b6mqt",
           "titleEn": "Patterns and problems in emerging multiagent systems",
@@ -1031,7 +1088,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685175&idx=1&sn=64c383b5b757945397894270c5f38301",
         "recommendedReason": "DeepSeek V4 Pro正式版与Grok 4.6在2小时内先后发布，均为1.6T/1.5T参数模型，逼近Claude Fable 5体验。",
         "publishedAt": "2026-08-12T22:22:28.000Z",
-        "collectedAt": "2026-08-13T08:12:33.269Z",
+        "collectedAt": "2026-08-13T09:54:42.220Z",
         "raw": {
           "id": "cmsqq3bc001snro7vo8picfbp",
           "titleEn": "一夜之间，DeepSeek V4 Pro和Grok 4.6把全球大模型推入了新的斩杀线。",
@@ -1051,7 +1108,7 @@
         "originalUrl": "https://claude.com/blog/cowork-chrome-side-panel",
         "recommendedReason": "Claude in Chrome 浏览器扩展的侧边栏现已升级为 Claude Cowork 会话，对话会保存至历史记录，技能和连接器可在浏览器中工作，且任务可在桌面、网页和移动端应用间无缝切换。",
         "publishedAt": "2026-08-12T20:15:51.977Z",
-        "collectedAt": "2026-08-13T08:12:33.269Z",
+        "collectedAt": "2026-08-13T09:54:42.220Z",
         "raw": {
           "id": "cmsqj4ly004izroxvzl349s3r",
           "titleEn": "The Claude in Chrome side panel is now Claude Cowork",
@@ -1071,7 +1128,7 @@
         "originalUrl": "https://github.blog/open-source/maintainers/your-contributors-are-ai-first-now-is-your-project",
         "recommendedReason": "AutoGPT 维护者发现，AI 智能体不会主动阅读文档，因此将指令放在 AGENTS.md 和技能文件中，并置于代码目录旁。他们通过强制 PR 模板、测试计划、CI 覆盖率门槛和 CLA 签名等门控机制，将智能体提交的 PR 从\"不可用\"转变为\"可用但不符合路线图\"。其中 CLA 签名因需浏览器和 OAuth 流程，被用作区分人类与智能体的\"人类探测器\"。",
         "publishedAt": "2026-08-12T18:00:08.000Z",
-        "collectedAt": "2026-08-13T08:12:33.269Z",
+        "collectedAt": "2026-08-13T09:54:42.220Z",
         "raw": {
           "id": "cmsqgeo2e02cvroxvpnycl2zi",
           "titleEn": "Your contributors are AI-first now. Is your project？",
@@ -1091,7 +1148,7 @@
         "originalUrl": "https://research.google/blog/empty-shelves-or-lost-keys-recall-is-the-bottleneck-for-parametric-factuality",
         "recommendedReason": "Google Research 提出知识画像框架，发现前沿 LLM（如 Gemini3、GPT-5）的事实编码接近饱和，但回忆（recall）能力不足，多数事实错误源于\"丢钥匙\"而非\"空货架\"。该框架将事实分为编码失败、回忆失败等五类画像，并配套推出 WikiProfile 基准，含 2，150 条维基百科事实，每条配 10 个问题，用于分别探测编码、回忆与识别能力。",
         "publishedAt": "2026-08-12T17:57:36.369Z",
-        "collectedAt": "2026-08-13T08:12:33.269Z",
+        "collectedAt": "2026-08-13T09:54:42.220Z",
         "raw": {
           "id": "cmsqe6mat01bsroli3hw71nz7",
           "titleEn": "Empty shelves or lost keys？ Recall is the bottleneck for parametric factuality",
@@ -1111,7 +1168,7 @@
         "originalUrl": "https://www.ithome.com/0/989/001.htm",
         "recommendedReason": "阿里 Qwen 团队正式开放 Qwen3.8-2.4T-A95B 模型权重，这是 Qwen-Max 级别模型首次开源。模型总参数 2.4T，每个 Token 激活 95B，原生支持 262，144 Token 上下文并可扩展至 1，010，000 Token。",
         "publishedAt": "2026-08-12T16:10:01.000Z",
-        "collectedAt": "2026-08-13T08:12:33.269Z",
+        "collectedAt": "2026-08-13T09:54:42.220Z",
         "raw": {
           "id": "cmsqagyyz00yuroucf55e5fue",
           "titleEn": null,
@@ -1131,7 +1188,7 @@
         "originalUrl": "https://x.com/mustafasuleyman/status/2087570047967408396",
         "recommendedReason": "我们的首个推理模型 MAI-Thinking-1 从零开始构建，现已在 Microsoft Foundry 上线。为团队点赞！更多详情如下。",
         "publishedAt": "2026-08-12T16:00:59.000Z",
-        "collectedAt": "2026-08-13T08:12:33.269Z",
+        "collectedAt": "2026-08-13T09:54:42.220Z",
         "raw": {
           "id": "cmsqbnb8j01nrroosmwa5r6mj",
           "titleEn": "Our first reasoning model， MAI-Thinking-1， is built from scratch. Now available in Microsoft Foundry…",
