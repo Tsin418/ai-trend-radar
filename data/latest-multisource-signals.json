@@ -1,212 +1,203 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-08-14T15:42:51.800Z",
+  "generatedAt": "2026-08-14T16:11:14.086Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
+        "id": "http://arxiv.org/abs/2608.13560v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
+        "url": "https://arxiv.org/pdf/2608.13560v1",
+        "description": "Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal harness system should align with human design priors and accumulate reusable experience through empirical exploration to drive recursive self-improvement, existing paradigms remain static and fall short of this capability. In this paper, we present AutoDesign, a framework that aligns with human design ",
+        "summary": "Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal harness system should align with human design priors and accumulate reusable experience through empirical exploration to drive recursive self-improvement, existing paradigms remain static and fall short of this capability. In this paper, we present AutoDesign, a framework that aligns with human design priors, where a meta-harness optimizer guides a code agent to recursively improve harness based on rollout feedback. To instantiate and evaluate this framework, we focus on the academic paper-to-poster generation task and introduce PosterBench, comprising a 100-paper Main Track spanning five disciplines and PosterBench-mini, a shared 10-paper subset for controlled evaluation. On the PosterBench Main Track, AutoDesign achieves the highest score of 78.32, surpassing the closed-source commercial system Claude Design by 7.45 points. Across seven controlled code-agent-model configurations, integrating the learned DesignHarness consistently improves performance, increasing the average PosterBench Score from 54.99 to 67.39 (+12.4%). In a fully autonomous long-horizon loop, it executes 253 tool calls and 11 editing turns within 40 minutes for under $3, reaching average conference-poster quality in human evaluation. A system-blind human study further demonstrates that AutoDesign achieves the highest human preference among evaluated systems.",
+        "author": "Yaxin Luo, Haobin Jiang, Jialv Zou, Xu Huang, Wenhao Yan, Haodong Li, Zhengrong Yue, Jing Li, Xiaofu Chen, Xiaohan Zhao, Jiacheng Liu, Jiacheng Cui, Zhiqiang Shen, Xiaotong Li",
         "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
+          "cs.CV",
+          "cs.AI",
+          "cs.CL",
+          "agent",
+          "rag",
+          "evaluation",
+          "agentic"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 14074
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-08-14T15:42:51.975Z",
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-08-13T17:59:57Z",
+        "updatedAt": "2026-08-13T17:59:57Z",
+        "collectedAt": "2026-08-14T16:11:06.433Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2608.13560v1",
+          "authors": [
+            "Yaxin Luo",
+            "Haobin Jiang",
+            "Jialv Zou",
+            "Xu Huang",
+            "Wenhao Yan",
+            "Haodong Li",
+            "Zhengrong Yue",
+            "Jing Li",
+            "Xiaofu Chen",
+            "Xiaohan Zhao",
+            "Jiacheng Liu",
+            "Jiacheng Cui",
+            "Zhiqiang Shen",
+            "Xiaotong Li"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: agent, rag, evaluation, agentic"
       },
       {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
+        "id": "http://arxiv.org/abs/2608.13558v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "OmniScientist: An Omni-Modal Omni-Discipline AI Scientist",
+        "url": "https://arxiv.org/pdf/2608.13558v1",
+        "description": "Recent advances in foundation models have enabled AI scientists to automate increasingly complete research workflows, from hypothesis generation and code execution to manuscript preparation. Yet workflow coverage alone does not provide access to the full evidence on which scientific discovery depends. Existing systems typically reason over text, code, labels, or precomputed summaries, leaving scientifically decisive spatial, temporal, cross-channel, and procedural relations unavailable to the ag",
+        "summary": "Recent advances in foundation models have enabled AI scientists to automate increasingly complete research workflows, from hypothesis generation and code execution to manuscript preparation. Yet workflow coverage alone does not provide access to the full evidence on which scientific discovery depends. Existing systems typically reason over text, code, labels, or precomputed summaries, leaving scientifically decisive spatial, temporal, cross-channel, and procedural relations unavailable to the agent. We introduce OmniScientist, an end-to-end, omni-modal AI scientist that conducts multidisciplinary research directly from heterogeneous raw evidence. A perception layer and 3 autonomous agents for ideation, experiment, and writeup operate within a deterministic pipeline, allowing observations to shape research questions, experimental decisions, and final claims throughout the research lifecycle. By running idea, rigour, and claim checks in code, the system enforces novelty screening, statistical validity, execution provenance, and numerical traceability. We evaluate OmniScientist on 36 real-data cases spanning 5 discipline families, 4 families of scientific evidence, and modalities including images, signals, audio, video, 3-D structures, trajectories, tables, formulae, and graphs. The system completes the full path from raw data to a compiled manuscript in all 36 cases and achieves a mean overall paper score of 6.3 with the reference reasoning backbone. In paired comparisons against a blind variant that receives only precomputed scalar features, direct perception improves all 7 evaluation dimensions and wins 85% of head-to-head judgments. These results show that lifecycle-wide perception is essential for evidence-grounded scientific discovery and provides a practical path toward broadly capable AI scientists.",
+        "author": "Bobo Li, Hao Fei, Tianjie Ju, Mong-Li Lee, Wynne Hsu",
         "tags": [
-          "docker",
-          "region:us"
+          "cs.AI",
+          "cs.CL",
+          "agent",
+          "rag",
+          "evaluation",
+          "workflow"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11211
-        },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-08-14T15:42:51.975Z",
+        "category": "cs.AI",
+        "language": "en",
+        "publishedAt": "2026-08-13T17:59:52Z",
+        "updatedAt": "2026-08-13T17:59:52Z",
+        "collectedAt": "2026-08-14T16:11:06.433Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2608.13558v1",
+          "authors": [
+            "Bobo Li",
+            "Hao Fei",
+            "Tianjie Ju",
+            "Mong-Li Lee",
+            "Wynne Hsu"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: agent, rag, evaluation, workflow"
       },
       {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
+        "id": "http://arxiv.org/abs/2608.13555v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark",
+        "url": "https://arxiv.org/pdf/2608.13555v1",
+        "description": "Humanoid motion tracking is central to teleoperation and whole-body imitation, yet evaluation often disagrees with what people perceive in videos. Kinematic errors average per-frame pose differences but miss the physical artifacts that matter most, particularly unstable support and incorrect contacts such as foot skating and mistimed touch-downs. Meanwhile, widely used test suites are small and lack the diversity needed to stress contact-rich, long-horizon behaviors. We introduce HumanTracker to",
+        "summary": "Humanoid motion tracking is central to teleoperation and whole-body imitation, yet evaluation often disagrees with what people perceive in videos. Kinematic errors average per-frame pose differences but miss the physical artifacts that matter most, particularly unstable support and incorrect contacts such as foot skating and mistimed touch-downs. Meanwhile, widely used test suites are small and lack the diversity needed to stress contact-rich, long-horizon behaviors. We introduce HumanTracker to make humanoid tracking evaluation both perceptually aligned and scalable. The HumanTracker benchmark contains approximately 153 hours of optical motion trajectories from multiple professional performers, organized into four motion families with text labels for fine-grained diagnosis. We further propose HumanScore, a preference-aligned metric trained on 12K motion pairs containing 24K motions. Across representative state-of-the-art trackers, HumanScore better predicts human preferences and reveals contact and stability failures that kinematic metrics often miss.",
+        "author": "Dairu Liu, Zekun Qi, Jiayu Zeng, Ruixi Yu, Yu Guan, Yintianrun Zhang, Xuchuan Chen, Sikai Liang, Zekai Li, Chenghuai Lin, Xinqiang Yu, Wenyao Zhang, He Wang, Li Yi",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.RO",
+          "cs.AI",
+          "cs.CV",
+          "rag",
+          "benchmark",
+          "evaluation"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10158
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-08-14T15:42:51.975Z",
+        "category": "cs.RO",
+        "language": "en",
+        "publishedAt": "2026-08-13T17:59:40Z",
+        "updatedAt": "2026-08-13T17:59:40Z",
+        "collectedAt": "2026-08-14T16:11:06.433Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2608.13555v1",
+          "authors": [
+            "Dairu Liu",
+            "Zekun Qi",
+            "Jiayu Zeng",
+            "Ruixi Yu",
+            "Yu Guan",
+            "Yintianrun Zhang",
+            "Xuchuan Chen",
+            "Sikai Liang",
+            "Zekai Li",
+            "Chenghuai Lin",
+            "Xinqiang Yu",
+            "Wenyao Zhang",
+            "He Wang",
+            "Li Yi"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: rag, benchmark, evaluation"
       },
       {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
+        "id": "http://arxiv.org/abs/2608.13547v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "QuoteBench: How Matched Scores Can Hide Command-Path Failures",
+        "url": "https://arxiv.org/pdf/2608.13547v1",
+        "description": "LLM coding agents issue Bash commands through interfaces that may serialize, wrap, and reparse model output. Matched execution scores alone cannot distinguish command-generation errors from failures introduced after generation. QuoteBench measures this boundary with exact final-state validation on 56 one-shot tasks from 14 incident-derived families, crossing the generation contract with the execution transport around one deliberately unescaped added parser. Escaping at the interpolation point re",
+        "summary": "LLM coding agents issue Bash commands through interfaces that may serialize, wrap, and reparse model output. Matched execution scores alone cannot distinguish command-generation errors from failures introduced after generation. QuoteBench measures this boundary with exact final-state validation on 56 one-shot tasks from 14 incident-derived families, crossing the generation contract with the execution transport around one deliberately unescaped added parser. Escaping at the interpolation point reproduces each replayed reply's raw-path outcome, so any recovery under a disclosed boundary must come from the model changing its generation. Across eight same-window configurations, replaying the same reply through the added parser lowers success by 55.4 to 73.2 percentage points; disclosure recovers 30.4 to 60.7 points for six configurations, and zero or slightly negative for the other two. Raw generation is nearly saturated at the frontier; boundary adaptation is what still separates models. GPT-5.6-sol's matched gap of -3.6 points hides -64.3 points of damage and +60.7 points of compensation. The deployment configuration reorders models: one reversal among 26 comparable pairs is unambiguous and four more sit on single-task margins. Evaluations of command-issuing agents should report the model configuration, generation contract, execution path, operating point, and final-state validator rather than treat a matched score as an intrinsic model property.",
+        "author": "Shangao Li, Yao Zhang, Volker Tresp, Yuanyuan Yang",
         "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
+          "cs.AI",
+          "cs.SE",
+          "llm",
+          "agent",
+          "coding agent",
+          "evaluation"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7615
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-08-13T09:53:48.000Z",
-        "collectedAt": "2026-08-14T15:42:51.975Z",
+        "category": "cs.AI",
+        "language": "en",
+        "publishedAt": "2026-08-13T17:57:20Z",
+        "updatedAt": "2026-08-13T17:57:20Z",
+        "collectedAt": "2026-08-14T16:11:06.433Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "📊"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2608.13547v1",
+          "authors": [
+            "Shangao Li",
+            "Yao Zhang",
+            "Volker Tresp",
+            "Yuanyuan Yang"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, agent, coding agent, evaluation"
       },
       {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
+        "id": "http://arxiv.org/abs/2608.13545v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure",
+        "url": "https://arxiv.org/pdf/2608.13545v1",
+        "description": "Modern language models are trained on heterogeneous web-scale text corpora. Consequently, studying knowledge and skill acquisition is difficult, as prior exposure to related content is hard to characterize. To address this challenge, we introduce LITTLECURRICULUM, a curated 88B-token pretraining corpus tailored to U.S. elementary school material, explicitly excluding concepts, facts, and vocabulary taught above Grade 5. Training a 5B-parameter LLM from scratch on LITTLECURRICULUM yields LITTLELE",
+        "summary": "Modern language models are trained on heterogeneous web-scale text corpora. Consequently, studying knowledge and skill acquisition is difficult, as prior exposure to related content is hard to characterize. To address this challenge, we introduce LITTLECURRICULUM, a curated 88B-token pretraining corpus tailored to U.S. elementary school material, explicitly excluding concepts, facts, and vocabulary taught above Grade 5. Training a 5B-parameter LLM from scratch on LITTLECURRICULUM yields LITTLELEARNER, a model with sufficient language competence for open-ended evaluation, yet with clear knowledge and capability boundaries mapped to interpretable curriculum guidelines. We release LITTLECURRICULUM and LITTLELEARNER as a developmentally restricted sandbox to study how models acquire, represent, and use data under a well-defined training scope. We illustrate the sandbox's utility in a first suite of experiments on injecting new knowledge through post-training and in-context learning. These methods let LITTLELEARNER better utilize existing knowledge, but do not raise out-of-scope capabilities. Our findings underscore the value of this controlled environment for future investigations.",
+        "author": "Fanfei Li, Jana Zeller, Manuel Prada-Corral, Thaddäus Wiedemer, Prasanna Mayilvahanan, Ryan Cotterell, Wieland Brendel",
         "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
+          "cs.CL",
+          "cs.AI",
+          "cs.LG",
+          "llm",
+          "evaluation"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5082
-        },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-08-14T15:42:51.975Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-08-13T17:56:12Z",
+        "updatedAt": "2026-08-13T17:56:12Z",
+        "collectedAt": "2026-08-14T16:11:06.433Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4969
+          "abstractUrl": "http://arxiv.org/abs/2608.13545v1",
+          "authors": [
+            "Fanfei Li",
+            "Jana Zeller",
+            "Manuel Prada-Corral",
+            "Thaddäus Wiedemer",
+            "Prasanna Mayilvahanan",
+            "Ryan Cotterell",
+            "Wieland Brendel"
+          ]
         },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-08-14T15:42:51.975Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
-      },
-      {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
-        "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3777
-        },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-08-14T15:42:51.975Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
-        }
-      },
-      {
-        "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Z Image Turbo",
-        "url": "https://huggingface.co/spaces/mrfakename/Z-Image-Turbo",
-        "author": "mrfakename",
-        "tags": [
-          "gradio",
-          "mcp-server",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3715
-        },
-        "publishedAt": "2025-11-26T19:54:05.000Z",
-        "updatedAt": "2026-07-13T14:23:41.000Z",
-        "collectedAt": "2026-08-14T15:42:51.975Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🖼️"
-        }
+        "recommendedReason": "Matched AI developer keywords: llm, evaluation"
       }
     ],
     "developerBuzz": [
@@ -222,11 +213,11 @@
           "gemini"
         ],
         "metrics": {
-          "upvotes": 930,
-          "commentsCount": 470
+          "upvotes": 932,
+          "commentsCount": 471
         },
         "publishedAt": "2026-08-13T17:23:22.000Z",
-        "collectedAt": "2026-08-14T15:42:52.189Z",
+        "collectedAt": "2026-08-14T16:11:06.359Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49289112",
           "matchedKeywords": [
@@ -246,11 +237,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 837,
-          "commentsCount": 439
+          "upvotes": 859,
+          "commentsCount": 450
         },
         "publishedAt": "2026-08-14T05:19:59.000Z",
-        "collectedAt": "2026-08-14T15:42:52.189Z",
+        "collectedAt": "2026-08-14T16:11:06.359Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49294997",
           "matchedKeywords": [
@@ -274,7 +265,7 @@
           "commentsCount": 445
         },
         "publishedAt": "2026-08-12T16:04:50.000Z",
-        "collectedAt": "2026-08-14T15:42:52.189Z",
+        "collectedAt": "2026-08-14T16:11:06.359Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49274600",
           "matchedKeywords": [
@@ -295,11 +286,11 @@
           "openai"
         ],
         "metrics": {
-          "upvotes": 670,
-          "commentsCount": 262
+          "upvotes": 678,
+          "commentsCount": 263
         },
         "publishedAt": "2026-08-13T18:10:02.000Z",
-        "collectedAt": "2026-08-14T15:42:52.189Z",
+        "collectedAt": "2026-08-14T16:11:06.359Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49289844",
           "matchedKeywords": [
@@ -320,10 +311,10 @@
         ],
         "metrics": {
           "upvotes": 627,
-          "commentsCount": 609
+          "commentsCount": 610
         },
         "publishedAt": "2026-08-12T15:32:50.000Z",
-        "collectedAt": "2026-08-14T15:42:52.189Z",
+        "collectedAt": "2026-08-14T16:11:06.359Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49274027",
           "matchedKeywords": [
@@ -346,7 +337,7 @@
         "originalUrl": "https://x.com/Alibaba_Qwen/status/2088280182356611304",
         "recommendedReason": "通义千问兑现承诺，开源 Qwen3.8 系列模型。其中 Qwen3.8-27B 为原生多模态稠密模型，仅 27B 参数即全面超越 Qwen3.7-Plus，原生支持 262K 上下文，可通过 YaRN 扩展至 1M tokens，采用 Apache 2.0 许可。Max 级 Qwen3.8-2.4T-A95B 的开放权重也已同步发布。",
         "publishedAt": "2026-08-14T15:02:48.000Z",
-        "collectedAt": "2026-08-14T15:43:00.069Z",
+        "collectedAt": "2026-08-14T16:11:07.104Z",
         "raw": {
           "id": "cmst3j53e03ncro068tgsr4xn",
           "titleEn": "We promised open weights for Qwen3.8. Now， time to meet them！ 🎉 ⚡ Qwen3.8-27B： - A native multimod…",
@@ -366,7 +357,7 @@
         "originalUrl": "https://cursor.com/blog/joining-spacex",
         "recommendedReason": "Cursor 已被 SpaceX 正式收购，完成自 4 月启动的收购流程。合并后 Cursor 将获得全球最大 GPU 集群，以构建更强且运行成本更低的模型，从而以更低价格向客户提供更强大的模型。本周三发布的 Grok 4.6 是双方合作成果的早期体现。",
         "publishedAt": "2026-08-14T12:00:00.000Z",
-        "collectedAt": "2026-08-14T15:43:00.069Z",
+        "collectedAt": "2026-08-14T16:11:07.104Z",
         "raw": {
           "id": "cmst3joqo03pwro0658o4g1m3",
           "titleEn": "Cursor is now a part of SpaceX",
@@ -386,7 +377,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4OTc2MzczNg%3D%3D&mid=2247496140&idx=1&sn=5239a5fbb115c58d2ae0056bb32789ff",
         "recommendedReason": "小红书技术开源 dots3-note Preview，这是 dots3 系列最轻量模型，总参数 280B、激活参数 16B，支持 512K 上下文及文本、视觉、语音多模态理解，并针对复杂推理和长程 Agent 任务优化。",
         "publishedAt": "2026-08-14T11:25:29.000Z",
-        "collectedAt": "2026-08-14T15:43:00.069Z",
+        "collectedAt": "2026-08-14T16:11:07.104Z",
         "raw": {
           "id": "cmssv94cg0h4mroffsb9e7a88",
           "titleEn": "dots3-note Preview：迈向服务真实生活的长程智能体，坚定的第一步",
@@ -406,7 +397,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzkyMzI3NzQ0Mg%3D%3D&mid=2247494084&idx=1&sn=a2e5cd9a534a4825feb3633ea1b6d492",
         "recommendedReason": "智谱发布GLM-5.3，基于与GLM-5.2相同的基座，通过极致的后训练Scaling提升智能上界，编程能力较前代提升50%，在Terminal Bench 3.0等公开基准中取得开源第一，并接近Claude Fable 5。模型在白盒代码审查等安全任务中表现持平Mythos 5，在CyberGym测试中得分84.5%。模型权重将在两周后开源，即日起上线ZCode、AutoClaw等工具。",
         "publishedAt": "2026-08-14T05:31:04.000Z",
-        "collectedAt": "2026-08-14T15:43:00.069Z",
+        "collectedAt": "2026-08-14T16:11:07.104Z",
         "raw": {
           "id": "cmssir12d047oroffnpn5pcx1",
           "titleEn": "GLM-5.3：前沿编程能力与涌现的网络安全能力",
@@ -426,7 +417,7 @@
         "originalUrl": "https://x.com/SiliconFlowAI/status/2088127458558271885",
         "recommendedReason": "DeepSeek-V4-Pro-0813 正式上线硅基流动 SiliconFlow，提供 Day-0 支持，具备 1M 上下文窗口及低/高/最大三档推理强度，更侧重编码、工具调用与智能体工作流，仍保持 MIT 开源协议。定价为输入 $1.32/M、输出 $3.96/M、缓存命中 $0.44/M。同系列 DeepSeek-V4-Flash-0731 则面向追求速度与成本效益的日常生产场景。",
         "publishedAt": "2026-08-14T04:55:56.000Z",
-        "collectedAt": "2026-08-14T15:43:00.069Z",
+        "collectedAt": "2026-08-14T16:11:07.104Z",
         "raw": {
           "id": "cmssi38vn03o9rofffr0z8lyb",
           "titleEn": "This time， it's official. DeepSeek V4 Pro just landed. 🚀 @deepseek_ai DeepSeek-V4-Pro-0813 is now l…",
@@ -446,7 +437,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzkyODk2MDQwNw%3D%3D&mid=2247487525&idx=1&sn=b9def9117e34b45fce50ab76eeed726c",
         "recommendedReason": "蚂蚁百灵与 ASystem 团队合作，用 Ling-3.0-tiny 和 AReno 在 DGX Spark 上跑通单机 Agentic RL 后训练闭环。以井字棋为最小验证任务，用 GSPO 算法训练 400 步后，rollout/rewards_mean 从约 -0.5 升至 0.4，response_len 降至约 850 tokens，工具调用与动作选择趋于稳定。",
         "publishedAt": "2026-08-14T04:00:00.000Z",
-        "collectedAt": "2026-08-14T15:43:00.069Z",
+        "collectedAt": "2026-08-14T16:11:07.104Z",
         "raw": {
           "id": "cmssf79uf05rwrod09r9ocb2w",
           "titleEn": "从跑起来到训起来：Ling-3.0-tiny × ASystem AReno，打通单机 Agentic RL 闭环",
@@ -466,7 +457,7 @@
         "originalUrl": "https://x.com/bcherny/status/2088014489438621990",
         "recommendedReason": "Boris Cherny 尝试让 Claude 接管其应用的日常维护，通过 Slack 频道运行崩溃模糊测试、重复代码统一、死代码移除等日常任务。数周内自动开出 388 个 PR，其中 180 个经 Claude Code Review 和人工审核后合并。Claude 通常一次就能改对，出错时可通过调整例程次日改进。",
         "publishedAt": "2026-08-13T21:27:02.000Z",
-        "collectedAt": "2026-08-14T15:43:00.069Z",
+        "collectedAt": "2026-08-14T16:11:07.104Z",
         "raw": {
           "id": "cmss20h5g02uxroh6q6r1nqu9",
           "titleEn": "A weird experiment I've been trying the last few weeks is having Claude take over day-to-day mainten…",
@@ -486,12 +477,274 @@
         "originalUrl": "https://deepmind.google/blog/introducing-gemini-3-7-flash",
         "recommendedReason": "Google DeepMind 发布 Gemini 3.7 Flash，距 3.6 Flash 仅三周，主打编程与智能体任务，输入/输出价格分别为每百万 token $0.75 和 $3.75，为原 3.6 Flash 的一半。",
         "publishedAt": "2026-08-13T17:04:18.000Z",
-        "collectedAt": "2026-08-14T15:43:00.069Z",
+        "collectedAt": "2026-08-14T16:11:07.104Z",
         "raw": {
           "id": "cmsrscwfn03f7ro0n7qijclds",
           "titleEn": "Introducing Gemini 3.7 Flash",
           "apiCategory": "ai-models"
         }
+      },
+      {
+        "id": "aihot:cmsrramim02jero0nte55cfgi",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "MiniMax Music 3.0 发布：新一代开源权重、生产级全能音乐模型",
+        "url": "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model",
+        "summary": "MiniMax 推出 Music 3.0，新一代音乐生成模型，可根据创意概念和可选歌词一次性完成整首歌的作曲、编曲、演奏与制作，最长支持五分钟。",
+        "description": "MiniMax 推出 Music 3.0，新一代音乐生成模型，可根据创意概念和可选歌词一次性完成整首歌的作曲、编曲、演奏与制作，最长支持五分钟。",
+        "category": "models",
+        "originalSource": "MiniMax：Blog（网页）",
+        "originalUrl": "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model",
+        "recommendedReason": "MiniMax 推出 Music 3.0，新一代音乐生成模型，可根据创意概念和可选歌词一次性完成整首歌的作曲、编曲、演奏与制作，最长支持五分钟。",
+        "publishedAt": "2026-08-13T16:52:23.676Z",
+        "collectedAt": "2026-08-14T16:11:07.104Z",
+        "raw": {
+          "id": "cmsrramim02jero0nte55cfgi",
+          "titleEn": "MiniMax Music 3.0： Next-Generation Open-Weights， Production-Ready & Versatile Music Model",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmsrtfqyv04btro0nle3m5b20",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Google Sheets 推出 Sheets canvas：用 Gemini 将表格数据变为交互式迷你应用",
+        "url": "https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets",
+        "summary": "Google Sheets 发布新功能 Sheets canvas，基于 Gemini 构建，用户只需用自然语言提示词即可将表格数据转化为交互式仪表盘、学习追踪器、座位表等\"迷你应用\"。",
+        "description": "Google Sheets 发布新功能 Sheets canvas，基于 Gemini 构建，用户只需用自然语言提示词即可将表格数据转化为交互式仪表盘、学习追踪器、座位表等\"迷你应用\"。",
+        "category": "products",
+        "originalSource": "Google Blog：AI（RSS）",
+        "originalUrl": "https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets",
+        "recommendedReason": "Google Sheets 发布新功能 Sheets canvas，基于 Gemini 构建，用户只需用自然语言提示词即可将表格数据转化为交互式仪表盘、学习追踪器、座位表等\"迷你应用\"。",
+        "publishedAt": "2026-08-13T16:45:00.000Z",
+        "collectedAt": "2026-08-14T16:11:07.104Z",
+        "raw": {
+          "id": "cmsrtfqyv04btro0nle3m5b20",
+          "titleEn": "Bring your spreadsheet data to life with Sheets canvas",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmsrlvwfp05gdro46mbfqtsgm",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Qwen3.8-2.4T-A95B 开源，硅基流动即日上线",
+        "url": "https://x.com/SiliconFlowAI/status/2087903227224412222",
+        "summary": "阿里开源 Qwen3.8-2.4T-A95B，硅基流动已提供 Day-0 支持。该模型拥有 2.4T 参数、95B 激活参数，主打自主编码、深度研究与端到端智能体执行。API 定价为输入 $2.00/百万 token，输出 $6.00/百万 token，缓存输入 $0.25/百万 token。",
+        "description": "阿里开源 Qwen3.8-2.4T-A95B，硅基流动已提供 Day-0 支持。该模型拥有 2.4T 参数、95B 激活参数，主打自主编码、深度研究与端到端智能体执行。API 定价为输入 $2.00/百万 token，输出 $6.00/百万 token，缓存输入 $0.25/百万 token。",
+        "category": "products",
+        "originalSource": "X：硅基流动 SiliconFlow (@SiliconFlowAI)",
+        "originalUrl": "https://x.com/SiliconFlowAI/status/2087903227224412222",
+        "recommendedReason": "阿里开源 Qwen3.8-2.4T-A95B，硅基流动已提供 Day-0 支持。该模型拥有 2.4T 参数、95B 激活参数，主打自主编码、深度研究与端到端智能体执行。API 定价为输入 $2.00/百万 token，输出 $6.00/百万 token，缓存输入 $0.25/百万 token。",
+        "publishedAt": "2026-08-13T14:04:55.000Z",
+        "collectedAt": "2026-08-14T16:11:07.104Z",
+        "raw": {
+          "id": "cmsrlvwfp05gdro46mbfqtsgm",
+          "titleEn": "🚀 Day-0 Support！ @Alibaba_Qwen has open-sourced Qwen3.8-2.4T-A95B - and it's now live on SiliconFlo…",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmsrjqqfg02z0ro469zple5jl",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "DeepSeek Harness v0.1 开发者预览版发布",
+        "url": "https://x.com/deepseek_ai/status/2087887408440164663",
+        "summary": "DeepSeek Harness v0.1 现已推出开发者预览版，并以 MIT 许可证开源。该智能体框架基于 Cordis 元框架构建，核心设计为\"一切皆插件\"，模型、工具、技能、会话、沙箱、文件系统、循环、编排及 UI 均可自由组合、替换和扩展。",
+        "description": "DeepSeek Harness v0.1 现已推出开发者预览版，并以 MIT 许可证开源。该智能体框架基于 Cordis 元框架构建，核心设计为\"一切皆插件\"，模型、工具、技能、会话、沙箱、文件系统、循环、编排及 UI 均可自由组合、替换和扩展。",
+        "category": "products",
+        "originalSource": "X：DeepSeek (@deepseek_ai)",
+        "originalUrl": "https://x.com/deepseek_ai/status/2087887408440164663",
+        "recommendedReason": "DeepSeek Harness v0.1 现已推出开发者预览版，并以 MIT 许可证开源。该智能体框架基于 Cordis 元框架构建，核心设计为\"一切皆插件\"，模型、工具、技能、会话、沙箱、文件系统、循环、编排及 UI 均可自由组合、替换和扩展。",
+        "publishedAt": "2026-08-13T13:02:03.000Z",
+        "collectedAt": "2026-08-14T16:11:07.104Z",
+        "raw": {
+          "id": "cmsrjqqfg02z0ro469zple5jl",
+          "titleEn": "🧩 DeepSeek Harness v0.1 is now available in Developer Preview！ 🔹 We're opening it up to developer…",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmsruj6ik02dfrozeclkuve05",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Cursor 推出 builds：云智能体启动速度提升至 3 倍",
+        "url": "https://cursor.com/blog/builds",
+        "summary": "Cursor 推出 builds 功能，在后台持续准备就绪的开发环境副本，让云智能体启动时无需从零搭建，响应速度最高提升 3 倍。内部环境启动快 10 倍，首个 token 生成快 3 倍；智能体始终从最近一次成功的 build 启动，依赖更新或安装脚本出错时不会影响运行。8 月 17 日起所有环境默认启用 builds，无需额外费用。",
+        "description": "Cursor 推出 builds 功能，在后台持续准备就绪的开发环境副本，让云智能体启动时无需从零搭建，响应速度最高提升 3 倍。内部环境启动快 10 倍，首个 token 生成快 3 倍；智能体始终从最近一次成功的 build 启动，依赖更新或安装脚本出错时不会影响运行。8 月 17 日起所有环境默认启用 builds，无需额外费用。",
+        "category": "products",
+        "originalSource": "Cursor Blog",
+        "originalUrl": "https://cursor.com/blog/builds",
+        "recommendedReason": "Cursor 推出 builds 功能，在后台持续准备就绪的开发环境副本，让云智能体启动时无需从零搭建，响应速度最高提升 3 倍。内部环境启动快 10 倍，首个 token 生成快 3 倍；智能体始终从最近一次成功的 build 启动，依赖更新或安装脚本出错时不会影响运行。8 月 17 日起所有环境默认启用 builds，无需额外费用。",
+        "publishedAt": "2026-08-13T12:00:00.000Z",
+        "collectedAt": "2026-08-14T16:11:07.104Z",
+        "raw": {
+          "id": "cmsruj6ik02dfrozeclkuve05",
+          "titleEn": "Cloud agents start 3x faster with builds",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmsrfaw5c0xo2roz2s8b4p2sv",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "DeepSeek-V4-Pro 正式版上线，Agent 能力大幅增强",
+        "url": "https://api-docs.deepseek.com/zh-cn/updates#%E6%97%B6%E9%97%B4-2026-08-13",
+        "summary": "DeepSeek-V4-Pro 正式版已在 APP、网页端和 API 同步上线，模型名设为 deepseek-v4-pro 即可使用。其 Agent 能力显著提升，HLE （wo/w tools） 达 42.7/60.0，Terminal Bench 2.1 为 87.9。",
+        "description": "DeepSeek-V4-Pro 正式版已在 APP、网页端和 API 同步上线，模型名设为 deepseek-v4-pro 即可使用。其 Agent 能力显著提升，HLE （wo/w tools） 达 42.7/60.0，Terminal Bench 2.1 为 87.9。",
+        "category": "models",
+        "originalSource": "DeepSeek：API 更新日志",
+        "originalUrl": "https://api-docs.deepseek.com/zh-cn/updates#%E6%97%B6%E9%97%B4-2026-08-13",
+        "recommendedReason": "DeepSeek-V4-Pro 正式版已在 APP、网页端和 API 同步上线，模型名设为 deepseek-v4-pro 即可使用。其 Agent 能力显著提升，HLE （wo/w tools） 达 42.7/60.0，Terminal Bench 2.1 为 87.9。",
+        "publishedAt": "2026-08-13T11:16:42.199Z",
+        "collectedAt": "2026-08-14T16:11:07.104Z",
+        "raw": {
+          "id": "cmsrfaw5c0xo2roz2s8b4p2sv",
+          "titleEn": "DeepSeek-V4-Pro 更新",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmsruetoy027hrozeecu4ixrc",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "GPT-5.6 构建者指南：如何以更低成本实现前沿智能体性能",
+        "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
+        "summary": "GPT-5.6 模型家族以更低成本实现前沿级智能体性能，并新增推理持久化、原生多智能体编排和程序化工具调用等 API 能力。在 ARC-AGI-3 上，启用保留推理和压缩后，Sol 得分从 13.3% 跃升至 38.3%，且输出 token 减少约 6 倍。Luna 在 BrowseComp 上以 84.04% 的得分追平 GPT-5.5（84.36%），成本从 $33.27 降至 $1.33。",
+        "description": "GPT-5.6 模型家族以更低成本实现前沿级智能体性能，并新增推理持久化、原生多智能体编排和程序化工具调用等 API 能力。在 ARC-AGI-3 上，启用保留推理和压缩后，Sol 得分从 13.3% 跃升至 38.3%，且输出 token 减少约 6 倍。Luna 在 BrowseComp 上以 84.04% 的得分追平 GPT-5.5（84.36%），成本从 $33.27 降至 $1.33。",
+        "category": "tools",
+        "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+        "originalUrl": "https://openai.com/index/builders-guide-to-gpt-5-6",
+        "recommendedReason": "GPT-5.6 模型家族以更低成本实现前沿级智能体性能，并新增推理持久化、原生多智能体编排和程序化工具调用等 API 能力。在 ARC-AGI-3 上，启用保留推理和压缩后，Sol 得分从 13.3% 跃升至 38.3%，且输出 token 减少约 6 倍。Luna 在 BrowseComp 上以 84.04% 的得分追平 GPT-5.5（84.36%），成本从 $33.27 降至 $1.33。",
+        "publishedAt": "2026-08-13T11:00:00.000Z",
+        "collectedAt": "2026-08-14T16:11:07.104Z",
+        "raw": {
+          "id": "cmsruetoy027hrozeecu4ixrc",
+          "titleEn": "The builder's guide to GPT-5.6",
+          "apiCategory": "tip"
+        }
+      }
+    ],
+    "crossSourceHighlights": [
+      {
+        "id": "url:https://x.ai/news/grok-4-6",
+        "canonicalId": "url:https://x.ai/news/grok-4-6",
+        "title": "xAI 发布 Grok 4.6，强化长时运行智能体能力",
+        "canonicalUrl": "https://x.ai/news/grok-4-6",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://x.ai/news/grok-4-6",
+          "title:xai 发布 grok 4 6 强化长时运行智能体能力",
+          "title:grok 4 6"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmsqabu0f001krouc6sfhic2d",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "xAI 发布 Grok 4.6，强化长时运行智能体能力",
+            "url": "https://x.ai/news/grok-4-6",
+            "summary": "xAI 今日发布 Grok 4.6，在 Grok 4.5 基础上重点强化长时运行智能体及更复杂的交互式与视觉工作能力。该模型在多项智能体编码与知识工作基准上达到前沿水平，在 Artificial Analysis Intelligence Index（九项基准综合分）上追平 GPT-5.6 Sol。",
+            "description": "xAI 今日发布 Grok 4.6，在 Grok 4.5 基础上重点强化长时运行智能体及更复杂的交互式与视觉工作能力。该模型在多项智能体编码与知识工作基准上达到前沿水平，在 Artificial Analysis Intelligence Index（九项基准综合分）上追平 GPT-5.6 Sol。",
+            "category": "models",
+            "originalSource": "xAI：News（网页）",
+            "originalUrl": "https://x.ai/news/grok-4-6",
+            "recommendedReason": "xAI 今日发布 Grok 4.6，在 Grok 4.5 基础上重点强化长时运行智能体及更复杂的交互式与视觉工作能力。该模型在多项智能体编码与知识工作基准上达到前沿水平，在 Artificial Analysis Intelligence Index（九项基准综合分）上追平 GPT-5.6 Sol。",
+            "publishedAt": "2026-08-12T00:00:00.000Z",
+            "collectedAt": "2026-08-14T16:11:07.104Z",
+            "raw": {
+              "id": "cmsqabu0f001krouc6sfhic2d",
+              "titleEn": "Introducing Grok 4.6",
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:49274027",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Grok 4.6",
+            "url": "https://x.ai/news/grok-4-6",
+            "author": "iLuddite",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 627,
+              "commentsCount": 610
+            },
+            "publishedAt": "2026-08-12T15:32:50.000Z",
+            "collectedAt": "2026-08-14T16:11:06.359Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=49274027",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmsqabu0f001krouc6sfhic2d",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "xAI 发布 Grok 4.6，强化长时运行智能体能力",
+            "url": "https://x.ai/news/grok-4-6",
+            "summary": "xAI 今日发布 Grok 4.6，在 Grok 4.5 基础上重点强化长时运行智能体及更复杂的交互式与视觉工作能力。该模型在多项智能体编码与知识工作基准上达到前沿水平，在 Artificial Analysis Intelligence Index（九项基准综合分）上追平 GPT-5.6 Sol。",
+            "description": "xAI 今日发布 Grok 4.6，在 Grok 4.5 基础上重点强化长时运行智能体及更复杂的交互式与视觉工作能力。该模型在多项智能体编码与知识工作基准上达到前沿水平，在 Artificial Analysis Intelligence Index（九项基准综合分）上追平 GPT-5.6 Sol。",
+            "category": "models",
+            "originalSource": "xAI：News（网页）",
+            "originalUrl": "https://x.ai/news/grok-4-6",
+            "recommendedReason": "xAI 今日发布 Grok 4.6，在 Grok 4.5 基础上重点强化长时运行智能体及更复杂的交互式与视觉工作能力。该模型在多项智能体编码与知识工作基准上达到前沿水平，在 Artificial Analysis Intelligence Index（九项基准综合分）上追平 GPT-5.6 Sol。",
+            "publishedAt": "2026-08-12T00:00:00.000Z",
+            "collectedAt": "2026-08-14T16:11:07.104Z",
+            "raw": {
+              "id": "cmsqabu0f001krouc6sfhic2d",
+              "titleEn": "Introducing Grok 4.6",
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:49274027",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Grok 4.6",
+            "url": "https://x.ai/news/grok-4-6",
+            "author": "iLuddite",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 627,
+              "commentsCount": 610
+            },
+            "publishedAt": "2026-08-12T15:32:50.000Z",
+            "collectedAt": "2026-08-14T16:11:06.359Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=49274027",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 627,
+          "commentsCount": 610,
+          "hnScore": 627,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "models",
+        "summary": "xAI 今日发布 Grok 4.6，在 Grok 4.5 基础上重点强化长时运行智能体及更复杂的交互式与视觉工作能力。该模型在多项智能体编码与知识工作基准上达到前沿水平，在 Artificial Analysis Intelligence Index（九项基准综合分）上追平 GPT-5.6 Sol。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-08-12T00:00:00.000Z",
+        "lastSeenAt": "2026-08-14T16:11:07.104Z"
       }
     ]
   }
