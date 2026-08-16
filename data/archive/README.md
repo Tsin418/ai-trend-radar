@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-16T03:17:19.293Z
+Updated: 2026-08-16T04:05:37.763Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -14,7 +14,7 @@ Updated: 2026-08-16T03:17:19.293Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-08-16 | daily | [AI Developer Radar｜Daily｜2026-08-16](2026/08/2026-08-16-daily.md) | citrolabs/ego-lite, diegosouzapw/OmniRoute, usestrix/strix, ToolJet/ToolJet, Panniantong/Agent-Reach |
+| 2026-08-16 | daily | [AI Developer Radar｜Daily｜2026-08-16](2026/08/2026-08-16-daily.md) | citrolabs/ego-lite, diegosouzapw/OmniRoute, usestrix/strix, ToolJet/ToolJet, Graphify-Labs/graphify |
 | 2026-08-15 | daily | [AI Developer Radar｜Daily｜2026-08-15](2026/08/2026-08-15-daily.md) | hpcaitech/ColossalAI, ultralytics/yolov5, citrolabs/ego-lite, ToolJet/ToolJet, diegosouzapw/OmniRoute |
 | 2026-08-14 | daily | [AI Developer Radar｜Daily｜2026-08-14](2026/08/2026-08-14-daily.md) | holaboss-ai/holaOS, cursor/plugins, lightningpixel/modly, unslothai/unsloth, megadose/holehe |
 | 2026-08-13 | daily | [AI Developer Radar｜Daily｜2026-08-13](2026/08/2026-08-13-daily.md) | macro-inc/macro, cactus-compute/needle, 3b1b/manim, deepspeedai/DeepSpeed, diegosouzapw/OmniRoute |
