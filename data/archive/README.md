@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-17T13:12:22.076Z
+Updated: 2026-08-17T14:01:53.650Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -14,7 +14,7 @@ Updated: 2026-08-17T13:12:22.076Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-08-17 | daily | [AI Developer Radar｜Daily｜2026-08-17](2026/08/2026-08-17-daily.md) | AlexsJones/llmfit, nautechsystems/nautilus_trader, usestrix/strix, mukul975/Anthropic-Cybersecurity-Skills, santifer/career-ops |
+| 2026-08-17 | daily | [AI Developer Radar｜Daily｜2026-08-17](2026/08/2026-08-17-daily.md) | AlexsJones/llmfit, nautechsystems/nautilus_trader, superset-sh/superset, usestrix/strix, mukul975/Anthropic-Cybersecurity-Skills |
 | 2026-08-16 | daily | [AI Developer Radar｜Daily｜2026-08-16](2026/08/2026-08-16-daily.md) | cordiverse/cordis, public-apis/public-apis, diegosouzapw/OmniRoute, ToolJet/ToolJet, usestrix/strix |
 | 2026-08-15 | daily | [AI Developer Radar｜Daily｜2026-08-15](2026/08/2026-08-15-daily.md) | hpcaitech/ColossalAI, ultralytics/yolov5, citrolabs/ego-lite, ToolJet/ToolJet, diegosouzapw/OmniRoute |
 | 2026-08-14 | daily | [AI Developer Radar｜Daily｜2026-08-14](2026/08/2026-08-14-daily.md) | holaboss-ai/holaOS, cursor/plugins, lightningpixel/modly, unslothai/unsloth, megadose/holehe |
