@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-18T15:52:52.186Z
+Updated: 2026-08-18T16:55:16.313Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -14,6 +14,7 @@ Updated: 2026-08-18T15:52:52.186Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
+| 2026-08-19 | daily | [AI Developer Radar｜Daily｜2026-08-19](2026/08/2026-08-19-daily.md) | ultralytics/yolov5, thedaviddias/Front-End-Checklist, Tencent/ncnn, milvus-io/milvus, deepspeedai/DeepSpeed |
 | 2026-08-18 | daily | [AI Developer Radar｜Daily｜2026-08-18](2026/08/2026-08-18-daily.md) | jundot/omlx, agalwood/Motrix, ultralytics/yolov5, thedaviddias/Front-End-Checklist, Tencent/ncnn |
 | 2026-08-17 | daily | [AI Developer Radar｜Daily｜2026-08-17](2026/08/2026-08-17-daily.md) | akitaonrails/ai-memory, AlexsJones/llmfit, nautechsystems/nautilus_trader, superset-sh/superset, usestrix/strix |
 | 2026-08-16 | daily | [AI Developer Radar｜Daily｜2026-08-16](2026/08/2026-08-16-daily.md) | cordiverse/cordis, public-apis/public-apis, diegosouzapw/OmniRoute, ToolJet/ToolJet, usestrix/strix |
