@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-20T09:55:53.090Z
+Updated: 2026-08-20T10:54:05.974Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -14,7 +14,7 @@ Updated: 2026-08-20T09:55:53.090Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-08-20 | daily | [AI Developer Radar｜Daily｜2026-08-20](2026/08/2026-08-20-daily.md) | milvus-io/milvus, thedaviddias/Front-End-Checklist, Tencent/ncnn, mukul975/Anthropic-Cybersecurity-Skills, chaitanyagiri/munder-difflin |
+| 2026-08-20 | daily | [AI Developer Radar｜Daily｜2026-08-20](2026/08/2026-08-20-daily.md) | milvus-io/milvus, thedaviddias/Front-End-Checklist, Tencent/ncnn, chaitanyagiri/munder-difflin, usestrix/strix |
 | 2026-08-19 | daily | [AI Developer Radar｜Daily｜2026-08-19](2026/08/2026-08-19-daily.md) | chaitanyagiri/munder-difflin, volcengine/OpenViking, thedaviddias/Front-End-Checklist, milvus-io/milvus, Tencent/ncnn |
 | 2026-08-18 | daily | [AI Developer Radar｜Daily｜2026-08-18](2026/08/2026-08-18-daily.md) | jundot/omlx, agalwood/Motrix, ultralytics/yolov5, thedaviddias/Front-End-Checklist, Tencent/ncnn |
 | 2026-08-17 | daily | [AI Developer Radar｜Daily｜2026-08-17](2026/08/2026-08-17-daily.md) | akitaonrails/ai-memory, AlexsJones/llmfit, nautechsystems/nautilus_trader, superset-sh/superset, usestrix/strix |
