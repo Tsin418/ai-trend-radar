@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-21T04:59:52.301Z
+Updated: 2026-08-21T05:54:07.010Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -14,7 +14,7 @@ Updated: 2026-08-21T04:59:52.301Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-08-21 | daily | [AI Developer Radar｜Daily｜2026-08-21](2026/08/2026-08-21-daily.md) | santifer/career-ops, RyanCodrai/turbovec, Graphify-Labs/graphify, chaitanyagiri/munder-difflin, Panniantong/Agent-Reach |
+| 2026-08-21 | daily | [AI Developer Radar｜Daily｜2026-08-21](2026/08/2026-08-21-daily.md) | Tencent/ncnn, santifer/career-ops, RyanCodrai/turbovec, chaitanyagiri/munder-difflin, Graphify-Labs/graphify |
 | 2026-08-20 | daily | [AI Developer Radar｜Daily｜2026-08-20](2026/08/2026-08-20-daily.md) | milvus-io/milvus, Tencent/ncnn, thedaviddias/Front-End-Checklist, santifer/career-ops, harry0703/MoneyPrinterTurbo |
 | 2026-08-19 | daily | [AI Developer Radar｜Daily｜2026-08-19](2026/08/2026-08-19-daily.md) | chaitanyagiri/munder-difflin, volcengine/OpenViking, thedaviddias/Front-End-Checklist, milvus-io/milvus, Tencent/ncnn |
 | 2026-08-18 | daily | [AI Developer Radar｜Daily｜2026-08-18](2026/08/2026-08-18-daily.md) | jundot/omlx, agalwood/Motrix, ultralytics/yolov5, thedaviddias/Front-End-Checklist, Tencent/ncnn |
