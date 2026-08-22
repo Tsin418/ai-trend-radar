@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-22T09:48:31.806Z
+Updated: 2026-08-22T10:45:34.906Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -14,7 +14,7 @@ Updated: 2026-08-22T09:48:31.806Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-08-22 | daily | [AI Developer Radar｜Daily｜2026-08-22](2026/08/2026-08-22-daily.md) | protocolbuffers/protobuf, microsoft/TypeScript, Graphify-Labs/graphify, santifer/career-ops, ruvnet/ruflo |
+| 2026-08-22 | daily | [AI Developer Radar｜Daily｜2026-08-22](2026/08/2026-08-22-daily.md) | protocolbuffers/protobuf, microsoft/TypeScript, ruvnet/ruflo, Graphify-Labs/graphify, santifer/career-ops |
 | 2026-08-21 | daily | [AI Developer Radar｜Daily｜2026-08-21](2026/08/2026-08-21-daily.md) | agent-substrate/substrate, Tencent/AI-Infra-Guard, AprilNEA/OpenLogi, modular/modular, Tencent/ncnn |
 | 2026-08-20 | daily | [AI Developer Radar｜Daily｜2026-08-20](2026/08/2026-08-20-daily.md) | milvus-io/milvus, Tencent/ncnn, thedaviddias/Front-End-Checklist, santifer/career-ops, harry0703/MoneyPrinterTurbo |
 | 2026-08-19 | daily | [AI Developer Radar｜Daily｜2026-08-19](2026/08/2026-08-19-daily.md) | chaitanyagiri/munder-difflin, volcengine/OpenViking, thedaviddias/Front-End-Checklist, milvus-io/milvus, Tencent/ncnn |
