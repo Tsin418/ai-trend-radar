@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-22T23:41:23.461Z
+Updated: 2026-08-23T02:00:40.546Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -14,7 +14,7 @@ Updated: 2026-08-22T23:41:23.461Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-08-23 | daily | [AI Developer Radar｜Daily｜2026-08-23](2026/08/2026-08-23-daily.md) | n8n-io/n8n, Graphify-Labs/graphify, affaan-m/ECC, Panniantong/Agent-Reach, calesthio/OpenMontage |
+| 2026-08-23 | daily | [AI Developer Radar｜Daily｜2026-08-23](2026/08/2026-08-23-daily.md) | n8n-io/n8n, Graphify-Labs/graphify, tirth8205/code-review-graph, affaan-m/ECC, ruvnet/ruflo |
 | 2026-08-22 | daily | [AI Developer Radar｜Daily｜2026-08-22](2026/08/2026-08-22-daily.md) | microsoft/TypeScript, n8n-io/n8n, Graphify-Labs/graphify, affaan-m/ECC, Panniantong/Agent-Reach |
 | 2026-08-21 | daily | [AI Developer Radar｜Daily｜2026-08-21](2026/08/2026-08-21-daily.md) | agent-substrate/substrate, Tencent/AI-Infra-Guard, AprilNEA/OpenLogi, modular/modular, Tencent/ncnn |
 | 2026-08-20 | daily | [AI Developer Radar｜Daily｜2026-08-20](2026/08/2026-08-20-daily.md) | milvus-io/milvus, Tencent/ncnn, thedaviddias/Front-End-Checklist, santifer/career-ops, harry0703/MoneyPrinterTurbo |
