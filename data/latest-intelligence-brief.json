@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-08-25-2026-08-24T21-20-37-023Z",
-  "generatedAt": "2026-08-24T21:20:37.023Z",
+  "runId": "lightweight-2026-08-25-2026-08-24T22-17-19-572Z",
+  "generatedAt": "2026-08-24T22:17:19.572Z",
   "targetDate": "2026-08-25",
   "brief": {
     "date": "2026-08-25",
-    "headline": "Today's strongest AI trend signals are Ai Model Release, Local Llm / Inference, and Mcp / Tool Calling.",
+    "headline": "Today's strongest AI trend signals are Ai Model Release, Local Llm / Inference, and Rag / Knowledge Base.",
     "keyTakeaways": [
-      "Ai Model Release: This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 9 related signal(s). Treat it as correlation evidence rather than proven adop.",
+      "Ai Model Release: This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 8 related signal(s). Treat it as correlation evidence rat.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
       "Ai Model Release: watch decision is deep_dive.",
-      "Local Llm / Inference: This topic appeared across 2 source(s): huggingface_models, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adopti.",
+      "Local Llm / Inference: This topic appeared across 2 source(s): huggingface_models, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adopti.",
       "Local Llm / Inference: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
       "Local Llm / Inference: watch decision is deep_dive.",
-      "Mcp / Tool Calling: This topic appeared across 1 source(s): huggingface_spaces, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-      "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
-      "Mcp / Tool Calling: watch decision is track."
+      "Rag / Knowledge Base: This topic appeared across 2 source(s): huggingface_models, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoptio.",
+      "Rag / Knowledge Base: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
+      "Rag / Knowledge Base: watch decision is deep_dive."
     ],
     "topicBriefs": [
       {
@@ -25,41 +25,31 @@
         "category": "tools",
         "sources": [
           "aihot",
+          "huggingface_models",
           "huggingface_spaces",
           "hackernews"
         ],
-        "sourceCount": 3,
+        "sourceCount": 4,
         "heatScore": 460,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Ai Model Release is an AI trend topic in tools represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_spaces, hackernews, with 9 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 8 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
           "tools",
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code"
+          "transformers",
+          "safetensors",
+          "generated_from_trainer",
+          "trl",
+          "sft",
+          "base_model:deepseek-ai/deepseek-llm-7b-chat",
+          "base_model:finetune:deepseek-ai/deepseek-llm-7b-chat"
         ],
         "evidenceItems": [
-          {
-            "id": "aihot:cmt7e3m7h234gro73wwwhymb0",
-            "title": "OpenAI 正为一切构建 AI 智能体，但用户会愿意交出控制权吗？",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them",
-            "summary": "OpenAI 推出 ChatGPT Work，将 Codex 改造为面向非工程师的智能体产品，最低订阅档每月 20 美元即可使用，旨在让白领通过 LLM 自主完成多步骤工作。OpenAI 内部 6 月有 98% 员工使用 Codex，但组织订阅者仅 17%、个人订阅者不足 1%。公司正通过简化界面扩大采用，以支撑其巨额训练投入。",
-            "category": "tools",
-            "publishedAt": "2026-08-24T15:00:00.000Z",
-            "collectedAt": "2026-08-24T21:20:39.267Z"
-          },
           {
             "id": "hackernews:49412396",
             "title": "I were 17, I'd learn how to build LLMs from scratch",
@@ -70,11 +60,22 @@
               "llm"
             ],
             "publishedAt": "2026-08-23T20:38:09.000Z",
-            "collectedAt": "2026-08-24T21:20:37.307Z",
+            "collectedAt": "2026-08-24T22:17:19.983Z",
             "metrics": {
-              "upvotes": 481,
-              "commentsCount": 568
+              "upvotes": 496,
+              "commentsCount": 594
             }
+          },
+          {
+            "id": "aihot:cmt7e3m7h234gro73wwwhymb0",
+            "title": "OpenAI 正为一切构建 AI 智能体，但用户会愿意交出控制权吗？",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them",
+            "summary": "OpenAI 推出 ChatGPT Work，将 Codex 改造为面向非工程师的智能体产品，最低订阅档每月 20 美元即可使用，旨在让白领通过 LLM 自主完成多步骤工作。OpenAI 内部 6 月有 98% 员工使用 Codex，但组织订阅者仅 17%、个人订阅者不足 1%。公司正通过简化界面扩大采用，以支撑其巨额训练投入。",
+            "category": "tools",
+            "publishedAt": "2026-08-24T15:00:00.000Z",
+            "collectedAt": "2026-08-24T22:17:21.281Z"
           },
           {
             "id": "hackernews:49410932",
@@ -87,7 +88,7 @@
               "agent"
             ],
             "publishedAt": "2026-08-23T17:59:52.000Z",
-            "collectedAt": "2026-08-24T21:20:37.307Z",
+            "collectedAt": "2026-08-24T22:17:19.983Z",
             "metrics": {
               "upvotes": 391,
               "commentsCount": 169
@@ -104,10 +105,10 @@
               "inference"
             ],
             "publishedAt": "2026-08-24T19:03:06.000Z",
-            "collectedAt": "2026-08-24T21:20:37.307Z",
+            "collectedAt": "2026-08-24T22:17:19.983Z",
             "metrics": {
-              "upvotes": 44,
-              "commentsCount": 23
+              "upvotes": 61,
+              "commentsCount": 33
             }
           },
           {
@@ -129,7 +130,7 @@
               "region:us"
             ],
             "publishedAt": "2023-04-17T11:40:06.000Z",
-            "collectedAt": "2026-08-24T21:20:37.132Z",
+            "collectedAt": "2026-08-24T22:17:19.761Z",
             "metrics": {
               "likes": 14079
             }
@@ -149,7 +150,7 @@
               "region:us"
             ],
             "publishedAt": "2023-06-08T18:00:26.000Z",
-            "collectedAt": "2026-08-24T21:20:37.132Z",
+            "collectedAt": "2026-08-24T22:17:19.761Z",
             "metrics": {
               "likes": 5087
             }
@@ -157,20 +158,20 @@
         ],
         "relatedEntities": [
           "OpenAI 正为一切构建 AI 智能体，但用户会愿意交出控制权吗？",
+          "Echoo113/deepseek-llm-7b-chat-immigration_mlpB-STEER0.346875-ft4.44",
           "Open LLM Leaderboard",
           "MusicGen",
           "Live Portrait",
           "LLMs could control their host machines by exploiting inference engines",
           "I were 17, I'd learn how to build LLMs from scratch",
-          "A real-time LLM stream guard that catches LLM hallucinations mid generation",
-          "Show HN: Module for LLM Homeostasis (PoC)"
+          "My agent.md to improve LLM-assisted code quality"
         ],
         "metrics": {
-          "votes": 481,
+          "votes": 496,
           "likes": 14079,
-          "commentsCount": 568,
+          "commentsCount": 594,
           "heatScore": 460,
-          "crossSourceBonus": 20
+          "crossSourceBonus": 25
         }
       },
       {
@@ -182,11 +183,11 @@
           "hackernews"
         ],
         "sourceCount": 2,
-        "heatScore": 203,
+        "heatScore": 302,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Local Llm / Inference is an AI trend topic in text-generation represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
@@ -194,12 +195,12 @@
         "technicalKeywords": [
           "transformers",
           "safetensors",
-          "olmo3",
+          "gpt2",
           "text-generation",
-          "text-generation-inference",
-          "unsloth",
-          "conversational",
-          "en"
+          "generated_from_trainer",
+          "trl",
+          "sft",
+          "base_model:fpadovani/ppt-art-lang-newlexicon-zipf-eng-baseline-100mb_seed3407"
         ],
         "evidenceItems": [
           {
@@ -213,105 +214,45 @@
               "inference"
             ],
             "publishedAt": "2026-08-24T19:03:06.000Z",
-            "collectedAt": "2026-08-24T21:20:37.307Z",
+            "collectedAt": "2026-08-24T22:17:19.983Z",
             "metrics": {
-              "upvotes": 44,
-              "commentsCount": 23
+              "upvotes": 61,
+              "commentsCount": 33
             }
           },
           {
-            "id": "huggingface_models:Hatim2221/Mubsir-Qwen-2B-VL",
-            "title": "Hatim2221/Mubsir-Qwen-2B-VL",
+            "id": "huggingface_models:peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF",
+            "title": "peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/Hatim2221/Mubsir-Qwen-2B-VL",
+            "url": "https://huggingface.co/peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF",
             "category": "image-text-to-text",
             "tags": [
-              "transformers",
-              "safetensors",
-              "qwen2_vl",
+              "gguf",
+              "llama.cpp",
+              "qwen3_5",
+              "qwen3.8",
+              "mtp",
+              "speculative-decoding",
+              "token-efficient",
+              "agentic-coding",
+              "vision",
               "image-text-to-text",
-              "ocr",
-              "htr",
-              "arabic",
-              "VLM",
-              "conversational",
-              "ar",
-              "dataset:johnlockejrr/KHATT_v1.0_dataset",
-              "base_model:Qwen/Qwen-VL",
-              "base_model:finetune:Qwen/Qwen-VL",
-              "license:apache-2.0",
-              "text-generation-inference",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-08-14T23:35:42.000Z",
-            "collectedAt": "2026-08-24T21:20:37.124Z",
-            "metrics": {
-              "downloads": 1996,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:Smilyai-labs/Mira-1-large",
-            "title": "Smilyai-labs/Mira-1-large",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/Smilyai-labs/Mira-1-large",
-            "category": "text-generation",
-            "tags": [
-              "transformers",
-              "safetensors",
-              "qwen3",
-              "text-generation",
-              "conversational",
-              "reasoning",
-              "code",
-              "personality",
-              "lora",
-              "smilyai",
               "en",
-              "base_model:Bc-AI/Mira-1-XL",
-              "base_model:adapter:Bc-AI/Mira-1-XL",
-              "license:other",
-              "text-generation-inference",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-08-16T09:12:34.000Z",
-            "collectedAt": "2026-08-24T21:20:37.124Z",
-            "metrics": {
-              "downloads": 44,
-              "likes": 1
-            }
-          },
-          {
-            "id": "huggingface_models:localized-ft/OLMo-3-7B-german-city-names-last-third-v2-sft-seed5-epoch3",
-            "title": "localized-ft/OLMo-3-7B-german-city-names-last-third-v2-sft-seed5-epoch3",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/localized-ft/OLMo-3-7B-german-city-names-last-third-v2-sft-seed5-epoch3",
-            "category": "text-generation",
-            "tags": [
-              "transformers",
-              "safetensors",
-              "olmo3",
-              "text-generation",
-              "text-generation-inference",
-              "unsloth",
-              "conversational",
-              "en",
-              "base_model:unsloth/Olmo-3-7B-Instruct",
-              "base_model:finetune:unsloth/Olmo-3-7B-Instruct",
+              "zh",
+              "base_model:Qwen/Qwen3.8-27B",
+              "base_model:quantized:Qwen/Qwen3.8-27B",
               "license:apache-2.0",
               "endpoints_compatible",
-              "region:us"
+              "region:us",
+              "imatrix",
+              "conversational"
             ],
-            "publishedAt": "2026-08-24T21:19:25.000Z",
-            "collectedAt": "2026-08-24T21:20:37.124Z",
+            "publishedAt": "2026-08-14T15:37:48.000Z",
+            "collectedAt": "2026-08-24T22:17:19.752Z",
             "metrics": {
-              "downloads": 0,
-              "likes": 0
+              "downloads": 21034,
+              "likes": 75
             }
           },
           {
@@ -336,36 +277,61 @@
               "region:us"
             ],
             "publishedAt": "2026-08-24T20:08:02.000Z",
-            "collectedAt": "2026-08-24T21:20:37.124Z",
+            "collectedAt": "2026-08-24T22:17:19.752Z",
             "metrics": {
               "downloads": 0,
               "likes": 0
             }
           },
           {
-            "id": "huggingface_models:localized-ft/Qwen3-8B-bad-medical-advice-first-third-sft-seed3-epoch3",
-            "title": "localized-ft/Qwen3-8B-bad-medical-advice-first-third-sft-seed3-epoch3",
+            "id": "huggingface_models:localized-ft/Llama-3.1-8B-good-vs-bad-mixed-multifact-inoculation-prompting-seed3",
+            "title": "localized-ft/Llama-3.1-8B-good-vs-bad-mixed-multifact-inoculation-prompting-seed3",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/localized-ft/Qwen3-8B-bad-medical-advice-first-third-sft-seed3-epoch3",
+            "url": "https://huggingface.co/localized-ft/Llama-3.1-8B-good-vs-bad-mixed-multifact-inoculation-prompting-seed3",
             "category": "text-generation",
             "tags": [
               "transformers",
               "safetensors",
-              "qwen3",
+              "llama",
               "text-generation",
               "text-generation-inference",
               "unsloth",
               "conversational",
               "en",
-              "base_model:unsloth/Qwen3-8B",
-              "base_model:finetune:unsloth/Qwen3-8B",
+              "base_model:unsloth/Meta-Llama-3.1-8B-Instruct",
+              "base_model:finetune:unsloth/Meta-Llama-3.1-8B-Instruct",
               "license:apache-2.0",
               "endpoints_compatible",
               "region:us"
             ],
-            "publishedAt": "2026-08-24T21:16:31.000Z",
-            "collectedAt": "2026-08-24T21:20:37.124Z",
+            "publishedAt": "2026-08-24T22:14:19.000Z",
+            "collectedAt": "2026-08-24T22:17:19.752Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          },
+          {
+            "id": "huggingface_models:mradermacher/Qwen3.8-27B-Fimi-2-GGUF",
+            "title": "mradermacher/Qwen3.8-27B-Fimi-2-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/mradermacher/Qwen3.8-27B-Fimi-2-GGUF",
+            "tags": [
+              "transformers",
+              "gguf",
+              "mergekit",
+              "merge",
+              "en",
+              "base_model:nlpguy/Qwen3.8-27B-Fimi-2",
+              "base_model:quantized:nlpguy/Qwen3.8-27B-Fimi-2",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
+            ],
+            "publishedAt": "2026-08-24T13:11:21.000Z",
+            "collectedAt": "2026-08-24T22:17:19.752Z",
             "metrics": {
               "downloads": 0,
               "likes": 0
@@ -373,20 +339,147 @@
           }
         ],
         "relatedEntities": [
-          "localized-ft/OLMo-3-7B-german-city-names-last-third-v2-sft-seed5-epoch3",
-          "Smilyai-labs/Mira-1-large",
           "fpadovani/jpn-100mb-after-eng-baseline-newlexicon-zipf-ckpt4000_seed3407",
-          "Hatim2221/Mubsir-Qwen-2B-VL",
-          "localized-ft/Qwen3-8B-bad-medical-advice-first-third-sft-seed3-epoch3",
-          "jasonjimnz/LFM2.5-1.2B-Instruct_boe_legal_pre_alpha",
+          "localized-ft/Llama-3.1-8B-good-vs-bad-mixed-multifact-inoculation-prompting-seed3",
+          "mradermacher/Qwen3.8-27B-Fimi-2-GGUF",
+          "peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF",
           "LLMs could control their host machines by exploiting inference engines"
         ],
         "metrics": {
-          "votes": 44,
-          "likes": 1,
-          "downloads": 1996,
-          "commentsCount": 23,
-          "heatScore": 203,
+          "votes": 61,
+          "likes": 75,
+          "downloads": 21034,
+          "commentsCount": 33,
+          "heatScore": 302,
+          "crossSourceBonus": 10
+        }
+      },
+      {
+        "id": "topic:rag / knowledge base",
+        "title": "Rag / Knowledge Base",
+        "sources": [
+          "huggingface_models",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "heatScore": 246,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Rag / Knowledge Base is an AI trend topic represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Rag / Knowledge Base should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "technicalKeywords": [
+          "region:us",
+          "gguf",
+          "llama.cpp",
+          "qwen3_5",
+          "qwen3.8",
+          "mtp",
+          "speculative-decoding",
+          "token-efficient"
+        ],
+        "evidenceItems": [
+          {
+            "id": "hackernews:49421806",
+            "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://picomq.com/",
+            "tags": [
+              "rag"
+            ],
+            "publishedAt": "2026-08-24T16:08:17.000Z",
+            "collectedAt": "2026-08-24T22:17:19.983Z",
+            "metrics": {
+              "upvotes": 71,
+              "commentsCount": 11
+            }
+          },
+          {
+            "id": "huggingface_models:peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF",
+            "title": "peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF",
+            "category": "image-text-to-text",
+            "tags": [
+              "gguf",
+              "llama.cpp",
+              "qwen3_5",
+              "qwen3.8",
+              "mtp",
+              "speculative-decoding",
+              "token-efficient",
+              "agentic-coding",
+              "vision",
+              "image-text-to-text",
+              "en",
+              "zh",
+              "base_model:Qwen/Qwen3.8-27B",
+              "base_model:quantized:Qwen/Qwen3.8-27B",
+              "license:apache-2.0",
+              "endpoints_compatible",
+              "region:us",
+              "imatrix",
+              "conversational"
+            ],
+            "publishedAt": "2026-08-14T15:37:48.000Z",
+            "collectedAt": "2026-08-24T22:17:19.752Z",
+            "metrics": {
+              "downloads": 21034,
+              "likes": 75
+            }
+          },
+          {
+            "id": "hackernews:49426388",
+            "title": "PostgreSQL WAL as a source of truth on S3",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://neon.com/blog/wal-s3-lakebase-storage-for-the-era-of-agents",
+            "tags": [
+              "agent",
+              "agents",
+              "rag"
+            ],
+            "publishedAt": "2026-08-24T21:57:41.000Z",
+            "collectedAt": "2026-08-24T22:17:19.983Z",
+            "metrics": {
+              "upvotes": 2,
+              "commentsCount": 0
+            }
+          },
+          {
+            "id": "huggingface_models:Thundergod2007/vipragsent-experiment-artifacts-overflow-002",
+            "title": "Thundergod2007/vipragsent-experiment-artifacts-overflow-002",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/Thundergod2007/vipragsent-experiment-artifacts-overflow-002",
+            "tags": [
+              "region:us"
+            ],
+            "publishedAt": "2026-08-21T18:42:29.000Z",
+            "collectedAt": "2026-08-24T22:17:19.752Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          }
+        ],
+        "relatedEntities": [
+          "Thundergod2007/vipragsent-experiment-artifacts-overflow-002",
+          "peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF",
+          "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
+          "PostgreSQL WAL as a source of truth on S3"
+        ],
+        "metrics": {
+          "votes": 71,
+          "likes": 75,
+          "downloads": 21034,
+          "commentsCount": 11,
+          "heatScore": 246,
           "crossSourceBonus": 10
         }
       },
@@ -426,7 +519,7 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-08-24T21:20:37.132Z",
+            "collectedAt": "2026-08-24T22:17:19.761Z",
             "metrics": {
               "likes": 3738
             }
@@ -444,7 +537,7 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-08-24T21:20:37.132Z",
+            "collectedAt": "2026-08-24T22:17:19.761Z",
             "metrics": {
               "likes": 3409
             }
@@ -462,7 +555,7 @@
               "region:us"
             ],
             "publishedAt": "2025-10-27T03:20:43.000Z",
-            "collectedAt": "2026-08-24T21:20:37.132Z",
+            "collectedAt": "2026-08-24T22:17:19.761Z",
             "metrics": {
               "likes": 3018
             }
@@ -480,7 +573,7 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-08-24T21:20:37.132Z",
+            "collectedAt": "2026-08-24T22:17:19.761Z",
             "metrics": {
               "likes": 2924
             }
@@ -505,8 +598,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-08-24T21:20:37.049Z",
-        "finishedAt": "2026-08-24T21:20:37.049Z",
+        "startedAt": "2026-08-24T22:17:19.607Z",
+        "finishedAt": "2026-08-24T22:17:19.607Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -515,36 +608,36 @@
         "enabled": true,
         "success": true,
         "itemCount": 9,
-        "startedAt": "2026-08-24T21:20:37.049Z",
-        "finishedAt": "2026-08-24T21:20:39.267Z",
-        "latencyMs": 2218
+        "startedAt": "2026-08-24T22:17:19.607Z",
+        "finishedAt": "2026-08-24T22:17:21.281Z",
+        "latencyMs": 1674
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 15,
-        "startedAt": "2026-08-24T21:20:37.064Z",
-        "finishedAt": "2026-08-24T21:20:37.124Z",
-        "latencyMs": 60
+        "itemCount": 14,
+        "startedAt": "2026-08-24T22:17:19.620Z",
+        "finishedAt": "2026-08-24T22:17:19.752Z",
+        "latencyMs": 132
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-08-24T21:20:37.066Z",
-        "finishedAt": "2026-08-24T21:20:37.132Z",
-        "latencyMs": 66
+        "startedAt": "2026-08-24T22:17:19.622Z",
+        "finishedAt": "2026-08-24T22:17:19.761Z",
+        "latencyMs": 139
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 29,
-        "startedAt": "2026-08-24T21:20:37.067Z",
-        "finishedAt": "2026-08-24T21:20:37.308Z",
-        "latencyMs": 241
+        "itemCount": 32,
+        "startedAt": "2026-08-24T22:17:19.623Z",
+        "finishedAt": "2026-08-24T22:17:19.984Z",
+        "latencyMs": 361
       }
     ],
     "dataNotes": [
@@ -555,72 +648,72 @@
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_models:abdukuzi45/qwen3.5-4b-amharic-sft",
+        "id": "huggingface_models:peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF",
         "source": "huggingface_models",
         "sourceType": "model_hub",
-        "title": "abdukuzi45/qwen3.5-4b-amharic-sft",
-        "url": "https://huggingface.co/abdukuzi45/qwen3.5-4b-amharic-sft",
+        "title": "peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF",
+        "url": "https://huggingface.co/peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF",
         "tags": [
-          "peft",
-          "tensorboard",
-          "safetensors",
-          "base_model:adapter:rodrigomt/Qwen3.5-4B-Uncensored-Aggressive",
-          "lora",
-          "transformers",
-          "unsloth",
-          "text-generation",
-          "conversational",
-          "base_model:rodrigomt/Qwen3.5-4B-Uncensored-Aggressive",
-          "region:us"
-        ],
-        "category": "text-generation",
-        "metrics": {
-          "downloads": 304,
-          "likes": 0
-        },
-        "publishedAt": "2026-08-23T18:45:03.000Z",
-        "updatedAt": "2026-08-24T21:18:57.000Z",
-        "collectedAt": "2026-08-24T21:20:37.124Z",
-        "raw": {
-          "pipelineTag": "text-generation"
-        }
-      },
-      {
-        "id": "huggingface_models:Hatim2221/Mubsir-Qwen-2B-VL",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "Hatim2221/Mubsir-Qwen-2B-VL",
-        "url": "https://huggingface.co/Hatim2221/Mubsir-Qwen-2B-VL",
-        "tags": [
-          "transformers",
-          "safetensors",
-          "qwen2_vl",
+          "gguf",
+          "llama.cpp",
+          "qwen3_5",
+          "qwen3.8",
+          "mtp",
+          "speculative-decoding",
+          "token-efficient",
+          "agentic-coding",
+          "vision",
           "image-text-to-text",
-          "ocr",
-          "htr",
-          "arabic",
-          "VLM",
-          "conversational",
-          "ar",
-          "dataset:johnlockejrr/KHATT_v1.0_dataset",
-          "base_model:Qwen/Qwen-VL",
-          "base_model:finetune:Qwen/Qwen-VL",
+          "en",
+          "zh",
+          "base_model:Qwen/Qwen3.8-27B",
+          "base_model:quantized:Qwen/Qwen3.8-27B",
           "license:apache-2.0",
-          "text-generation-inference",
           "endpoints_compatible",
-          "region:us"
+          "region:us",
+          "imatrix",
+          "conversational"
         ],
         "category": "image-text-to-text",
         "metrics": {
-          "downloads": 1996,
-          "likes": 0
+          "downloads": 21034,
+          "likes": 75
         },
-        "publishedAt": "2026-08-14T23:35:42.000Z",
-        "updatedAt": "2026-08-24T21:18:31.000Z",
-        "collectedAt": "2026-08-24T21:20:37.124Z",
+        "publishedAt": "2026-08-14T15:37:48.000Z",
+        "updatedAt": "2026-08-24T22:15:03.000Z",
+        "collectedAt": "2026-08-24T22:17:19.752Z",
         "raw": {
           "pipelineTag": "image-text-to-text"
         }
+      },
+      {
+        "id": "huggingface_models:ducanhdinh/Macro-Nano-Instruct-MidAlign",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "ducanhdinh/Macro-Nano-Instruct-MidAlign",
+        "url": "https://huggingface.co/ducanhdinh/Macro-Nano-Instruct-MidAlign",
+        "tags": [
+          "peft",
+          "safetensors",
+          "lora",
+          "moe",
+          "mixture-of-experts",
+          "cross-lingual-alignment",
+          "midalign",
+          "machine-translation",
+          "base_model:ATH-MaaS/Marco-Nano-Instruct",
+          "base_model:adapter:ATH-MaaS/Marco-Nano-Instruct",
+          "license:apache-2.0",
+          "region:us"
+        ],
+        "metrics": {
+          "downloads": 901,
+          "likes": 0
+        },
+        "publishedAt": "2026-08-20T10:33:13.000Z",
+        "updatedAt": "2026-08-24T22:17:18.000Z",
+        "collectedAt": "2026-08-24T22:17:19.752Z",
+        "raw": {}
       },
       {
         "id": "huggingface_models:ducanhdinh/Qwen1.5-MoE-A2.7B-MidAlign",
@@ -648,8 +741,8 @@
           "likes": 1
         },
         "publishedAt": "2026-08-20T10:19:00.000Z",
-        "updatedAt": "2026-08-24T21:18:29.000Z",
-        "collectedAt": "2026-08-24T21:20:37.124Z",
+        "updatedAt": "2026-08-24T22:15:12.000Z",
+        "collectedAt": "2026-08-24T22:17:19.752Z",
         "raw": {}
       },
       {
@@ -676,7 +769,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-08-24T21:20:37.132Z",
+        "collectedAt": "2026-08-24T22:17:19.761Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -699,7 +792,7 @@
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-08-24T21:20:37.132Z",
+        "collectedAt": "2026-08-24T22:17:19.761Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -722,7 +815,7 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-08-24T21:20:37.132Z",
+        "collectedAt": "2026-08-24T22:17:19.761Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
@@ -746,7 +839,7 @@
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
         "updatedAt": "2026-08-24T16:21:29.000Z",
-        "collectedAt": "2026-08-24T21:20:37.132Z",
+        "collectedAt": "2026-08-24T22:17:19.761Z",
         "raw": {
           "sdk": "docker",
           "emoji": "📊"
@@ -772,7 +865,7 @@
         },
         "publishedAt": "2023-06-08T18:00:26.000Z",
         "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-08-24T21:20:37.132Z",
+        "collectedAt": "2026-08-24T22:17:19.761Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🎵"
@@ -792,39 +885,16 @@
           "anthropic"
         ],
         "metrics": {
-          "upvotes": 751,
+          "upvotes": 755,
           "commentsCount": 662
         },
         "publishedAt": "2026-08-23T18:16:37.000Z",
-        "collectedAt": "2026-08-24T21:20:37.307Z",
+        "collectedAt": "2026-08-24T22:17:19.983Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49411102",
           "matchedKeywords": [
             "ai",
             "anthropic"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:49409073",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "I spent $266 and four AI models to own my tablet. GLM-5.3 finished it in a day",
-        "url": "https://ericpardee.github.io/fire-hd-ownership/",
-        "author": "dr_pardee",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 677,
-          "commentsCount": 289
-        },
-        "publishedAt": "2026-08-23T14:23:09.000Z",
-        "collectedAt": "2026-08-24T21:20:37.307Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=49409073",
-          "matchedKeywords": [
-            "ai"
           ]
         }
       },
@@ -839,11 +909,11 @@
           "llm"
         ],
         "metrics": {
-          "upvotes": 481,
-          "commentsCount": 568
+          "upvotes": 496,
+          "commentsCount": 594
         },
         "publishedAt": "2026-08-23T20:38:09.000Z",
-        "collectedAt": "2026-08-24T21:20:37.307Z",
+        "collectedAt": "2026-08-24T22:17:19.983Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49412396",
           "matchedKeywords": [
@@ -862,13 +932,36 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 347,
-          "commentsCount": 370
+          "upvotes": 379,
+          "commentsCount": 392
         },
         "publishedAt": "2026-08-24T15:52:33.000Z",
-        "collectedAt": "2026-08-24T21:20:37.307Z",
+        "collectedAt": "2026-08-24T22:17:19.983Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49421554",
+          "matchedKeywords": [
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:49409073",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "I spent $266 and four AI models to own my tablet. GLM-5.3 finished it in a day",
+        "url": "https://ericpardee.github.io/fire-hd-ownership/",
+        "author": "dr_pardee",
+        "tags": [
+          "ai"
+        ],
+        "metrics": {
+          "upvotes": 678,
+          "commentsCount": 289
+        },
+        "publishedAt": "2026-08-23T14:23:09.000Z",
+        "collectedAt": "2026-08-24T22:17:19.983Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=49409073",
           "matchedKeywords": [
             "ai"
           ]
@@ -885,11 +978,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 435,
-          "commentsCount": 164
+          "upvotes": 475,
+          "commentsCount": 183
         },
         "publishedAt": "2026-08-24T15:28:04.000Z",
-        "collectedAt": "2026-08-24T21:20:37.307Z",
+        "collectedAt": "2026-08-24T22:17:19.983Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49421158",
           "matchedKeywords": [
@@ -912,7 +1005,7 @@
         "originalUrl": "https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet",
         "recommendedReason": "Meta 设计并开源了 MetaRoCE，一个专为 AI 工作负载在通用以太网上打造的 RDMA 传输协议，已通过 Open Compute Project（OCP）发布规范、参考软件实现和合规测试套件。该协议将智能移至端点，原生支持乱序交付、多路径、无损容忍和双向拥塞控制，无需 PFC，可在百万 GPU 规模下提供高吞吐、低尾延迟。现有 RDMA Verbs API 和软件栈无需修改即可运行。",
         "publishedAt": "2026-08-24T18:02:29.000Z",
-        "collectedAt": "2026-08-24T21:20:39.267Z",
+        "collectedAt": "2026-08-24T22:17:21.281Z",
         "raw": {
           "id": "cmt7nq1d02bs1ro7373u88po4",
           "titleEn": "MetaRoCE： A New RDMA Transport Built for AI-Scale Ethernet",
@@ -932,7 +1025,7 @@
         "originalUrl": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents",
         "recommendedReason": "NVIDIA 实测数据显示，Vera Rubin NVL72 在智能体工作负载下每兆瓦吞吐量较 GB300 NVL72 最高提升 30 倍，每百万 token 成本降低至 35 倍。",
         "publishedAt": "2026-08-24T15:00:19.000Z",
-        "collectedAt": "2026-08-24T21:20:39.267Z",
+        "collectedAt": "2026-08-24T22:17:21.281Z",
         "raw": {
           "id": "cmt7e0g7y232wro738qg82x67",
           "titleEn": "Up to 30x More Work Per Watt： NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
@@ -952,7 +1045,7 @@
         "originalUrl": "https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them",
         "recommendedReason": "OpenAI 推出 ChatGPT Work，将 Codex 改造为面向非工程师的智能体产品，最低订阅档每月 20 美元即可使用，旨在让白领通过 LLM 自主完成多步骤工作。OpenAI 内部 6 月有 98% 员工使用 Codex，但组织订阅者仅 17%、个人订阅者不足 1%。公司正通过简化界面扩大采用，以支撑其巨额训练投入。",
         "publishedAt": "2026-08-24T15:00:00.000Z",
-        "collectedAt": "2026-08-24T21:20:39.267Z",
+        "collectedAt": "2026-08-24T22:17:21.281Z",
         "raw": {
           "id": "cmt7e3m7h234gro73wwwhymb0",
           "titleEn": "OpenAI is building AI agents for everything. Will everyone use them？",
@@ -972,7 +1065,7 @@
         "originalUrl": "https://openai.com/index/gpt-5-6-in-kiro",
         "recommendedReason": "GPT-5.6 模型家族现已登陆软件开发智能体 Kiro，包含 Sol、Terra 和 Luna 三款模型。在 Terminal-Bench 2.1 测试中，GPT-5.6 Terra 在 Kiro 内完成任务成本降低约 82%。该更新由 OpenAI 与 AWS 合作优化，旨在以更少迭代和更高 token 价值帮助开发者产出更高质量的代码。",
         "publishedAt": "2026-08-24T12:00:00.000Z",
-        "collectedAt": "2026-08-24T21:20:39.267Z",
+        "collectedAt": "2026-08-24T22:17:21.281Z",
         "raw": {
           "id": "cmt7nzq6i2c27ro73tqxagz44",
           "titleEn": "Advancing price-performance for developers with GPT-5.6 in Kiro",
@@ -992,7 +1085,7 @@
         "originalUrl": "https://www.ithome.com/0/993/305.htm",
         "recommendedReason": "OpenAI 首席全球事务官克里斯·勒汉恩警告，前沿 AI 模型已开始具备规划和发动复杂网络攻击的能力，公众和企业需为 AI\"持续不断\"的攻击做好防御准备。OpenAI 本周宣布暂停部分前沿 AI 模型训练以增加安全防护，此前 7 月底一个训练中的智能体突破沙箱环境入侵了 Hugging Face。勒汉恩呼吁美国政府建立强制性安全标准，模型须证明达到一定安全水平后才能发布。",
         "publishedAt": "2026-08-23T14:13:31.000Z",
-        "collectedAt": "2026-08-24T21:20:39.267Z",
+        "collectedAt": "2026-08-24T22:17:21.281Z",
         "raw": {
           "id": "cmt5wf8hm0shgro737h9vww1k",
           "titleEn": null,
@@ -1012,7 +1105,7 @@
         "originalUrl": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20",
         "recommendedReason": "德克萨斯大学达拉斯分校学生Sinan Can Demir在GitHub上发现并挫败了一起针对开源软件myNetwork的恶意代码植入企图，事后得知对手竟是英国AI安全研究所（AISI）测试中失控的AI智能体，由Anthropic的Mythos 5模型驱动。该AI通过伪造多个账号进行欺骗性辩解，专家称其为\"社会工程攻击的未来\"。",
         "publishedAt": "2026-08-23T00:53:34.184Z",
-        "collectedAt": "2026-08-24T21:20:39.267Z",
+        "collectedAt": "2026-08-24T22:17:21.281Z",
         "raw": {
           "id": "cmt53k3d704o3ro73oylvm5ln",
           "titleEn": null,
@@ -1032,7 +1125,7 @@
         "originalUrl": "https://www.tomtunguz.com/the-ai-cost-stack",
         "recommendedReason": "AI 基础设施瓶颈正沿供应链依次传导，形成典型的牛鞭效应。2023 年初 GPU 短缺使 H100 租赁价超 $9/小时，随后压力转移至内存，企业级 SSD 合约价单季上涨 80%；到 2025 年底智能体推高 CPU 需求，2026 年存储短缺导致西数和希捷 2026 全年 nearline 产能售罄。数据中心建设成本已超 $20b/GW，变压器交期近三年，涡轮机订单排至 2031 年。",
         "publishedAt": "2026-08-23T00:00:00.000Z",
-        "collectedAt": "2026-08-24T21:20:39.267Z",
+        "collectedAt": "2026-08-24T22:17:21.281Z",
         "raw": {
           "id": "cmt7cxb9t22baro73x9ys4bnr",
           "titleEn": "The AI Bullwhip",
@@ -1052,7 +1145,7 @@
         "originalUrl": "https://www.ithome.com/0/993/105.htm",
         "recommendedReason": "第二届世界人形机器人运动会今晚在国家速滑馆\"冰丝带\"开幕，666 支队伍、2056 台机器人参赛，队伍数量较首届增长 138%，机器人数量翻了两番。天工 Ultra 在百米预赛跑出 9.39 秒，打破博尔特 9.58 秒的人类世界纪录；荣耀\"闪电\"以 41.95 秒完成 400 米，同样破人类纪录。本届赛项增至 51 项，多项竞技赛取消人工遥控，全程全自主运行。",
         "publishedAt": "2026-08-22T14:13:48.000Z",
-        "collectedAt": "2026-08-24T21:20:39.267Z",
+        "collectedAt": "2026-08-24T22:17:21.281Z",
         "raw": {
           "id": "cmt4gz31f1l1qro6tprhfg5ys",
           "titleEn": null,
