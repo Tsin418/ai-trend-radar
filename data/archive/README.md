@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-25T05:53:23.101Z
+Updated: 2026-08-25T07:15:22.234Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -14,7 +14,7 @@ Updated: 2026-08-25T05:53:23.101Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-08-25 | daily | [AI Developer Radar｜Daily｜2026-08-25](2026/08/2026-08-25-daily.md) | deepspeedai/DeepSpeed, rohitg00/ai-engineering-from-scratch, MadsLorentzen/ai-job-search, apache/maka, freestylefly/awesome-gpt-image-2 |
+| 2026-08-25 | daily | [AI Developer Radar｜Daily｜2026-08-25](2026/08/2026-08-25-daily.md) | deepspeedai/DeepSpeed, rohitg00/ai-engineering-from-scratch, MadsLorentzen/ai-job-search, tirth8205/code-review-graph, apache/maka |
 | 2026-08-24 | daily | [AI Developer Radar｜Daily｜2026-08-24](2026/08/2026-08-24-daily.md) | freestylefly/awesome-gpt-image-2, thedaviddias/Front-End-Checklist, VoltAgent/awesome-agent-skills, dani-garcia/vaultwarden, tinyhumansai/openhuman |
 | 2026-08-23 | daily | [AI Developer Radar｜Daily｜2026-08-23](2026/08/2026-08-23-daily.md) | virgiliojr94/book-to-skill, apache/maka, openai/codex, ruvnet/ruflo, n8n-io/n8n |
 | 2026-08-22 | daily | [AI Developer Radar｜Daily｜2026-08-22](2026/08/2026-08-22-daily.md) | microsoft/TypeScript, n8n-io/n8n, Graphify-Labs/graphify, affaan-m/ECC, Panniantong/Agent-Reach |
