@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-26T05:01:45.318Z
+Updated: 2026-08-26T05:56:27.045Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -14,7 +14,7 @@ Updated: 2026-08-26T05:01:45.318Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-08-26 | daily | [AI Developer Radar｜Daily｜2026-08-26](2026/08/2026-08-26-daily.md) | ultralytics/yolov5, deepspeedai/DeepSpeed, Tencent/ncnn, rohitg00/ai-engineering-from-scratch, MadsLorentzen/ai-job-search |
+| 2026-08-26 | daily | [AI Developer Radar｜Daily｜2026-08-26](2026/08/2026-08-26-daily.md) | deepspeedai/DeepSpeed, ultralytics/yolov5, Tencent/ncnn, rohitg00/ai-engineering-from-scratch, MadsLorentzen/ai-job-search |
 | 2026-08-25 | daily | [AI Developer Radar｜Daily｜2026-08-25](2026/08/2026-08-25-daily.md) | AgriciDaniel/claude-obsidian, deepspeedai/DeepSpeed, milvus-io/milvus, apache/maka, rohitg00/ai-engineering-from-scratch |
 | 2026-08-24 | daily | [AI Developer Radar｜Daily｜2026-08-24](2026/08/2026-08-24-daily.md) | freestylefly/awesome-gpt-image-2, thedaviddias/Front-End-Checklist, VoltAgent/awesome-agent-skills, dani-garcia/vaultwarden, tinyhumansai/openhuman |
 | 2026-08-23 | daily | [AI Developer Radar｜Daily｜2026-08-23](2026/08/2026-08-23-daily.md) | virgiliojr94/book-to-skill, apache/maka, openai/codex, ruvnet/ruflo, n8n-io/n8n |
