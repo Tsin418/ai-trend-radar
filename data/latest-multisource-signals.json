@@ -1,212 +1,172 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-08-26T14:35:53.522Z",
+  "generatedAt": "2026-08-26T15:56:45.776Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
+        "id": "http://arxiv.org/abs/2608.24881v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "What FID Hides: Detecting, Ranking, and Diagnosing Deviations in Generative Evaluation",
+        "url": "https://arxiv.org/pdf/2608.24881v1",
+        "description": "Generative models are commonly ranked by Fréchet Inception Distance (FID) and Kernel Inception Distance (KID), yet FID's first-two-moment summary can miss distributional differences, and a reported scalar gap alone is not a calibrated test against sampling variation. FID's moment restriction has concrete consequences: on ImageNet, visually unrecognizable images optimized only to match the reference Inception mean and covariance obtain FID $24.7$ versus $58.6$ for held-out real images (lower is b",
+        "summary": "Generative models are commonly ranked by Fréchet Inception Distance (FID) and Kernel Inception Distance (KID), yet FID's first-two-moment summary can miss distributional differences, and a reported scalar gap alone is not a calibrated test against sampling variation. FID's moment restriction has concrete consequences: on ImageNet, visually unrecognizable images optimized only to match the reference Inception mean and covariance obtain FID $24.7$ versus $58.6$ for held-out real images (lower is better). Moreover, FID and KID are scalar discrepancies that are unchanged when the two samples are exchanged and therefore do not encode the direction of a dispersion change: under-dispersion, as can occur in mode collapse, versus over-dispersion. We introduce \\textbf{ZID} (\\emph{Z-resolved Integrated Diagnostic}), which combines six standardized location- and dispersion-sensitive arms from a rank graph (RISE) and Gaussian kernels (GPK at two bandwidths). Rather than asking one scalar to serve incompatible roles, ZID reports three linked outputs: an index for ranking departure magnitude, a permutation $p$-value for testing distributional equality, and a signed dispersion readout for diagnosis. In controlled experiments, ZID detects a broad range of departures, and its score tracks increasing severity along the corresponding sweeps, including cases in which FID is flat or reversed. On DiT-XL/2 and SiT-XL/2 guidance sweeps, ZID detects departure from real data, and its signed readout labels the high-guidance diversity collapse as under-dispersion.",
+        "author": "Hao Chen",
         "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
+          "stat.ML",
+          "cs.LG",
+          "evaluation"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 14081
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-08-26T14:35:53.712Z",
+        "category": "stat.ML",
+        "language": "en",
+        "publishedAt": "2026-08-25T17:58:46Z",
+        "updatedAt": "2026-08-25T17:58:46Z",
+        "collectedAt": "2026-08-26T15:56:38.134Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2608.24881v1",
+          "authors": [
+            "Hao Chen"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: evaluation"
       },
       {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
+        "id": "http://arxiv.org/abs/2608.24876v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
+        "url": "https://arxiv.org/pdf/2608.24876v1",
+        "description": "Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Working Memory architecture for long-horizon agent harnesses, in which Working Memory tracks task progress and guides skill selection from Experiential Memory, grounding skill use in current needs rather than the full history. This coupling also turns execution into structured evidence that localizes fail",
+        "summary": "Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Working Memory architecture for long-horizon agent harnesses, in which Working Memory tracks task progress and guides skill selection from Experiential Memory, grounding skill use in current needs rather than the full history. This coupling also turns execution into structured evidence that localizes failures to specific memory components. Across tasks, a fixed Meta-Agent turns that evidence into localized, validation-gated updates to Skill Memory that reshape execution and yield new evidence, forming a bounded recursive memory-evolution loop. Across four long-horizon benchmarks and ten models, Recuris improves task success in 35 of the 37 completed model-benchmark pairs, carrying frontier models to SOTA-level task success: on tau-bench it adds +17.8 points to GPT-5.6 Sol and +15.6 to Claude Opus 5, taking Opus 5 to 87.9%, and +16.6/+13.5 points on Qwen3.6-27B/35B on SkillFlow. The advantage widens as the interaction horizon grows, to +32.2 points on the longest tasks, and common long-horizon failures fall by up to 80%. These results position recursively evolving memory as a scalable foundation for RSI, enabling agents to continuously transform accumulated experience into increasingly effective long-horizon behavior. Code: https://github.com/Gen-Verse/Recuris",
+        "author": "Zhaochen Yu, Yingcheng Wu, Zhenfei Yin, Kaiyuan Chen, Zhe Zhao, Mengdi Wang, Shuicheng Yan, Ling Yang",
         "tags": [
-          "docker",
-          "region:us"
+          "cs.AI",
+          "cs.CL",
+          "agent",
+          "benchmark"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11226
-        },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-08-26T14:35:53.712Z",
+        "category": "cs.AI",
+        "language": "en",
+        "publishedAt": "2026-08-25T17:56:35Z",
+        "updatedAt": "2026-08-25T17:56:35Z",
+        "collectedAt": "2026-08-26T15:56:38.134Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2608.24876v1",
+          "authors": [
+            "Zhaochen Yu",
+            "Yingcheng Wu",
+            "Zhenfei Yin",
+            "Kaiyuan Chen",
+            "Zhe Zhao",
+            "Mengdi Wang",
+            "Shuicheng Yan",
+            "Ling Yang"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: agent, benchmark"
       },
       {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
+        "id": "http://arxiv.org/abs/2608.24870v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL",
+        "url": "https://arxiv.org/pdf/2608.24870v1",
+        "description": "Group-relative reinforcement learning waits for sibling rollouts of the same prompt, which is costly for long and variable tool-use trajectories. Single-stream Policy Optimization (SPO) removes this dependency with a persistent prompt-level value estimate, but its recipe whitens one advantage per trajectory before optimizing a token-mean actor loss. We show that trajectory centering generally does not center the token-weighted quantity consumed by the actor, and fix the mismatch by standardizing",
+        "summary": "Group-relative reinforcement learning waits for sibling rollouts of the same prompt, which is costly for long and variable tool-use trajectories. Single-stream Policy Optimization (SPO) removes this dependency with a persistent prompt-level value estimate, but its recipe whitens one advantage per trajectory before optimizing a token-mean actor loss. We show that trajectory centering generally does not center the token-weighted quantity consumed by the actor, and fix the mismatch by standardizing terminal-outcome advantages under the action-token measure. We additionally organize prompt evidence by the policy event that generated it rather than learner receipt order. Across matched runs on ALFWorld at two model scales and on Math-TIR, SPO++ improves online learning efficiency over SPO. A paired ablation identifies action-token-measure normalization as the strongest tested component.",
+        "author": "Kai Ruan, Jinghao Lin, Qianshan Wei, Ziqi Zhou, Zihe Huang",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.AI",
+          "agent",
+          "agentic"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10165
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-08-26T14:35:53.712Z",
+        "category": "cs.AI",
+        "language": "en",
+        "publishedAt": "2026-08-25T17:52:19Z",
+        "updatedAt": "2026-08-25T17:52:19Z",
+        "collectedAt": "2026-08-26T15:56:38.134Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2608.24870v1",
+          "authors": [
+            "Kai Ruan",
+            "Jinghao Lin",
+            "Qianshan Wei",
+            "Ziqi Zhou",
+            "Zihe Huang"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: agent, agentic"
       },
       {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
+        "id": "http://arxiv.org/abs/2608.24865v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Parameterized Complexity of $L_p$-Lipschitz Constants for Input Convex Neural Networks and $L_p$-Norm Maximization over Zonotopes",
+        "url": "https://arxiv.org/pdf/2608.24865v1",
+        "description": "Lipschitz constants are a standard way to quantify the sensitivity of neural networks to small input perturbations, but computing them is difficult even for shallow ReLU networks. We study this problem for two-layer input-convex neural networks (ICNNs), a restricted architecture where nonnegative output weights enforce convexity. Computing the $L_p$-Lipschitz constant for these networks is equivalent to maximizing the dual norm over a zonotope. While $L_1$- and $L_\\infty$-norm maximization on zo",
+        "summary": "Lipschitz constants are a standard way to quantify the sensitivity of neural networks to small input perturbations, but computing them is difficult even for shallow ReLU networks. We study this problem for two-layer input-convex neural networks (ICNNs), a restricted architecture where nonnegative output weights enforce convexity. Computing the $L_p$-Lipschitz constant for these networks is equivalent to maximizing the dual norm over a zonotope. While $L_1$- and $L_\\infty$-norm maximization on zonotopes admit fixed-parameter and polynomial-time algorithms, respectively, the parameterized complexity of the remaining $L_p$-norms was open. We prove that, for every fixed $p\\in (1,\\infty)\\cap \\mathbb{Q}$, maximizing the $L_p$-norm over a zonotope in $\\mathbb{R}^d$ is W[1]-hard with respect to the dimension $d$. Moreover, our hardness results imply that brute-force enumeration algorithms are essentially optimal for this problem under the Exponential Time Hypothesis. By duality, the same hardness results hold for computing the $L_p$-Lipschitz constant of two-layer ReLU ICNNs. Our proof first establishes the result for the $L_2$-norm and then transfers the construction to arbitrary fixed $p\\in (1,\\infty)\\cap\\mathbb{Q}$ using a suitable Taylor approximation. These results resolve the corresponding questions regarding the parameterized complexity status for zonotope norm maximization and two-layer ICNN Lipschitz constants. Our paper resolves an open problem posted at COLT'25. There are several independent concurrent papers resolving the same problem. Our paper prioritizes a clear exposition of the underlying mathematics and conceptual intuitions behind the proof. Additionally, we explicitly describe our research process including the use of LLMs.",
+        "author": "Aritra Das, Vincent Froese, Moritz Grillo, Debayan Gupta, Christoph Hertrich, Tharrshann Jayan Logarajah, Georg Loho, Mihir More, Moritz Stargalla",
         "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
+          "cs.CC",
+          "cs.DM",
+          "cs.LG",
+          "cs.NE",
+          "llm"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7635
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-08-25T18:17:49.000Z",
-        "collectedAt": "2026-08-26T14:35:53.712Z",
+        "category": "cs.CC",
+        "language": "en",
+        "publishedAt": "2026-08-25T17:47:37Z",
+        "updatedAt": "2026-08-25T17:47:37Z",
+        "collectedAt": "2026-08-26T15:56:38.134Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "📊"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2608.24865v1",
+          "authors": [
+            "Aritra Das",
+            "Vincent Froese",
+            "Moritz Grillo",
+            "Debayan Gupta",
+            "Christoph Hertrich",
+            "Tharrshann Jayan Logarajah",
+            "Georg Loho",
+            "Mihir More",
+            "Moritz Stargalla"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm"
       },
       {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
+        "id": "http://arxiv.org/abs/2608.24859v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Improving Cross-Problem Vehicle Routing with Locally Augmented Preferences and Representation Disentanglement",
+        "url": "https://arxiv.org/pdf/2608.24859v1",
+        "description": "Multi-task vehicle routing problem (VRP) solvers seek to handle multiple VRP variants within a single unified model, avoiding the need to train a separate model for every variant. In spite of recent progress, current approaches remain limited on two fronts. On the training side, reinforcement learning suffers from reward-scale disparities and shrinking advantage signals as policies improve, whereas preference optimization stagnates once sampled tours become near-identical and thus fundamentally ",
+        "summary": "Multi-task vehicle routing problem (VRP) solvers seek to handle multiple VRP variants within a single unified model, avoiding the need to train a separate model for every variant. In spite of recent progress, current approaches remain limited on two fronts. On the training side, reinforcement learning suffers from reward-scale disparities and shrinking advantage signals as policies improve, whereas preference optimization stagnates once sampled tours become near-identical and thus fundamentally limited by the quality of the policy's own generated solutions, leaving both paradigms with weak supervision as training progresses. On the architecture side, existing fully shared encoders entangle constraint-dependent representations across heterogeneous variants, which limits generalization. We address these gaps with two model-agnostic contributions. First, we propose Preference Optimization with Locally Augmented Refinement (POLAR), a novel training algorithm that applies a local search refinement pass to the best decoded tour before forming preference pairs, yielding much more informative pairwise margins. Second, a Progressive Layered Extraction (PLE) encoder routes each encoder layer through one shared expert and a set of task-specific experts via a gating mechanism, progressively separating common routing structure from constraint-specific encodings. Through extensive experiments on various VRP variants, we show that POLAR and PLE together elevate the current state-of-the-art among neural multi-task solvers. We reduce the average gap to reference solutions by 21.3% relative to the strongest published baseline on 16 in-distribution variants, and outperform prior neural methods on 27 out of 32 unseen variants. Ablation studies confirm the efficacy of each contribution, showing that both improve cross-problem generalization across multiple backbone model architectures.",
+        "author": "Arthur Corrêa, Paulo Nascimento, Samuel Moniz",
         "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
+          "cs.LG",
+          "rag"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5087
-        },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-08-26T14:35:53.712Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-08-25T17:44:23Z",
+        "updatedAt": "2026-08-25T17:44:23Z",
+        "collectedAt": "2026-08-26T15:56:38.134Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
-      },
-      {
-        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Arena Leaderboard",
-        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
-        "author": "lmarena-ai",
-        "tags": [
-          "static",
-          "leaderboard",
-          "region:us"
-        ],
-        "category": "static",
-        "metrics": {
-          "likes": 4974
+          "abstractUrl": "http://arxiv.org/abs/2608.24859v1",
+          "authors": [
+            "Arthur Corrêa",
+            "Paulo Nascimento",
+            "Samuel Moniz"
+          ]
         },
-        "publishedAt": "2023-05-20T09:26:19.000Z",
-        "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-08-26T14:35:53.712Z",
-        "raw": {
-          "sdk": "static",
-          "emoji": "🏆🤖"
-        }
-      },
-      {
-        "id": "huggingface_spaces:KlingTeam/LivePortrait",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Live Portrait",
-        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
-        "author": "KlingTeam",
-        "tags": [
-          "gradio",
-          "Multimodal",
-          "Motion control",
-          "Image-to-Video",
-          "Video-to-Video",
-          "language models",
-          "LLMs",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3780
-        },
-        "publishedAt": "2024-07-05T16:35:24.000Z",
-        "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-08-26T14:35:53.712Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🤪"
-        }
-      },
-      {
-        "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Z Image Turbo",
-        "url": "https://huggingface.co/spaces/mrfakename/Z-Image-Turbo",
-        "author": "mrfakename",
-        "tags": [
-          "gradio",
-          "mcp-server",
-          "region:us"
-        ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 3745
-        },
-        "publishedAt": "2025-11-26T19:54:05.000Z",
-        "updatedAt": "2026-07-13T14:23:41.000Z",
-        "collectedAt": "2026-08-26T14:35:53.712Z",
-        "raw": {
-          "sdk": "gradio",
-          "emoji": "🖼️"
-        }
+        "recommendedReason": "Matched AI developer keywords: rag"
       }
     ],
     "developerBuzz": [
@@ -221,11 +181,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1247,
-          "commentsCount": 1190
+          "upvotes": 1263,
+          "commentsCount": 1212
         },
         "publishedAt": "2026-08-25T13:01:22.000Z",
-        "collectedAt": "2026-08-26T14:35:54.013Z",
+        "collectedAt": "2026-08-26T15:56:38.253Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49433292",
           "matchedKeywords": [
@@ -245,10 +205,10 @@
         ],
         "metrics": {
           "upvotes": 848,
-          "commentsCount": 429
+          "commentsCount": 432
         },
         "publishedAt": "2026-08-24T15:28:04.000Z",
-        "collectedAt": "2026-08-26T14:35:54.013Z",
+        "collectedAt": "2026-08-26T15:56:38.253Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49421158",
           "matchedKeywords": [
@@ -271,7 +231,7 @@
           "commentsCount": 540
         },
         "publishedAt": "2026-08-24T15:52:33.000Z",
-        "collectedAt": "2026-08-26T14:35:54.013Z",
+        "collectedAt": "2026-08-26T15:56:38.253Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49421554",
           "matchedKeywords": [
@@ -291,11 +251,11 @@
           "openai"
         ],
         "metrics": {
-          "upvotes": 550,
-          "commentsCount": 347
+          "upvotes": 560,
+          "commentsCount": 354
         },
         "publishedAt": "2026-08-25T14:06:02.000Z",
-        "collectedAt": "2026-08-26T14:35:54.013Z",
+        "collectedAt": "2026-08-26T15:56:38.253Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49434378",
           "matchedKeywords": [
@@ -319,7 +279,7 @@
           "commentsCount": 205
         },
         "publishedAt": "2026-08-24T22:13:40.000Z",
-        "collectedAt": "2026-08-26T14:35:54.013Z",
+        "collectedAt": "2026-08-26T15:56:38.253Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49426564",
           "matchedKeywords": [
@@ -330,22 +290,42 @@
     ],
     "aihotHighlights": [
       {
-        "id": "aihot:cmta6rj5j03vxroj263nwkuxk",
+        "id": "aihot:cmta9ciqt07c1roj219h5liie",
         "source": "aihot",
         "sourceType": "curated_trend",
-        "title": "智谱开源 GLM-5.3-Flash 原生多模态模型，限时折扣价为 GLM-5.3 的 1/20",
-        "url": "https://www.ithome.com/0/994/765.htm",
-        "summary": "智谱上线并开源 GLM-5.3-Flash（320B-A18B），这是 GLM-5 系列首个原生多模态模型，总参数量 320B、激活参数仅 18B。该模型在 AA 综合智能指数取得 57 分，与 Claude Opus 4.8 持平，编程表现亦相当；定价为 GLM-5.3 的 1/10，限时折扣为 1/20，为 Opus 4.8 的 1/40。模型已接入 ZCode 等平台，并开放 API 调用。",
-        "description": "智谱上线并开源 GLM-5.3-Flash（320B-A18B），这是 GLM-5 系列首个原生多模态模型，总参数量 320B、激活参数仅 18B。该模型在 AA 综合智能指数取得 57 分，与 Claude Opus 4.8 持平，编程表现亦相当；定价为 GLM-5.3 的 1/10，限时折扣为 1/20，为 Opus 4.8 的 1/40。模型已接入 ZCode 等平台，并开放 API 调用。",
+        "title": "Qwen3.8-Flash 开源，Qwen4 架构预览",
+        "url": "https://x.com/Alibaba_Qwen/status/2092636376990990503",
+        "summary": "通义千问发布 Qwen3.8-Flash，一款多模态 MoE 模型，作为 Qwen4 架构的早期预览并开放权重。该模型总参数 125B，每 token 仅激活 6B，训练成本仅为 Qwen3.7-Plus 的 1/9，性能全面超越后者。生产版 API 定价 $0.16/1M 输入 tokens 和 $0.47/1M 输出 tokens，原生上下文 262K，可扩展至 1M。",
+        "description": "通义千问发布 Qwen3.8-Flash，一款多模态 MoE 模型，作为 Qwen4 架构的早期预览并开放权重。该模型总参数 125B，每 token 仅激活 6B，训练成本仅为 Qwen3.7-Plus 的 1/9，性能全面超越后者。生产版 API 定价 $0.16/1M 输入 tokens 和 $0.47/1M 输出 tokens，原生上下文 262K，可扩展至 1M。",
         "category": "models",
-        "originalSource": "IT之家（RSS）",
-        "originalUrl": "https://www.ithome.com/0/994/765.htm",
-        "recommendedReason": "智谱上线并开源 GLM-5.3-Flash（320B-A18B），这是 GLM-5 系列首个原生多模态模型，总参数量 320B、激活参数仅 18B。该模型在 AA 综合智能指数取得 57 分，与 Claude Opus 4.8 持平，编程表现亦相当；定价为 GLM-5.3 的 1/10，限时折扣为 1/20，为 Opus 4.8 的 1/40。模型已接入 ZCode 等平台，并开放 API 调用。",
-        "publishedAt": "2026-08-26T14:21:30.000Z",
-        "collectedAt": "2026-08-26T14:35:55.558Z",
+        "originalSource": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+        "originalUrl": "https://x.com/Alibaba_Qwen/status/2092636376990990503",
+        "recommendedReason": "通义千问发布 Qwen3.8-Flash，一款多模态 MoE 模型，作为 Qwen4 架构的早期预览并开放权重。该模型总参数 125B，每 token 仅激活 6B，训练成本仅为 Qwen3.7-Plus 的 1/9，性能全面超越后者。生产版 API 定价 $0.16/1M 输入 tokens 和 $0.47/1M 输出 tokens，原生上下文 262K，可扩展至 1M。",
+        "publishedAt": "2026-08-26T15:32:46.000Z",
+        "collectedAt": "2026-08-26T15:56:39.280Z",
         "raw": {
-          "id": "cmta6rj5j03vxroj263nwkuxk",
-          "titleEn": "Ox Alpha 现身：智谱开源 GLM-5.3-Flash 原生多模态模型，限时折扣价为 GLM-5.3 的 1/20",
+          "id": "cmta9ciqt07c1roj219h5liie",
+          "titleEn": "API is live on QwenCloud： https://www.qwencloud.com/models/qwen3.8-flash 🙌Let's build something！",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmta7bh1k04u6roj2e4pt7bob",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "GLM-5.3-Flash 开源：320B 总参数、AA 指数 57 分，定价为 Opus 4.8 的 1/40",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzkyMzI3NzQ0Mg%3D%3D&mid=2247494157&idx=1&sn=6837b15a07d2518842eb6c6b53a3eb3c",
+        "summary": "智谱上线并开源 GLM-5.3-Flash（320B-A18B），这是 GLM-5 系列首个原生多模态模型，AA 综合智能指数 57 分，与 Claude Opus 4.8 持平。其定价为 GLM-5.3 的 1/10，限时折扣内为 Opus 4.8 的 1/40，并已接入 ZCode 等平台开放 API 调用。该模型采用稀疏注意力与线性注意力混合架构，推理服务已跑在国产芯片集群上。",
+        "description": "智谱上线并开源 GLM-5.3-Flash（320B-A18B），这是 GLM-5 系列首个原生多模态模型，AA 综合智能指数 57 分，与 Claude Opus 4.8 持平。其定价为 GLM-5.3 的 1/10，限时折扣内为 Opus 4.8 的 1/40，并已接入 ZCode 等平台开放 API 调用。该模型采用稀疏注意力与线性注意力混合架构，推理服务已跑在国产芯片集群上。",
+        "category": "models",
+        "originalSource": "公众号：智谱（GLM）",
+        "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzkyMzI3NzQ0Mg%3D%3D&mid=2247494157&idx=1&sn=6837b15a07d2518842eb6c6b53a3eb3c",
+        "recommendedReason": "智谱上线并开源 GLM-5.3-Flash（320B-A18B），这是 GLM-5 系列首个原生多模态模型，AA 综合智能指数 57 分，与 Claude Opus 4.8 持平。其定价为 GLM-5.3 的 1/10，限时折扣内为 Opus 4.8 的 1/40，并已接入 ZCode 等平台开放 API 调用。该模型采用稀疏注意力与线性注意力混合架构，推理服务已跑在国产芯片集群上。",
+        "publishedAt": "2026-08-26T14:11:33.000Z",
+        "collectedAt": "2026-08-26T15:56:39.280Z",
+        "raw": {
+          "id": "cmta7bh1k04u6roj2e4pt7bob",
+          "titleEn": "GLM-5.3-Flash：前沿智能进入普惠时代",
           "apiCategory": "ai-models"
         }
       },
@@ -362,7 +342,7 @@
         "originalUrl": "https://www.theguardian.com/world/2026/aug/26/fake-thinktank-israel-ai-propaganda",
         "recommendedReason": "一个打着\"汉诺威公共政策研究所\"旗号的亲以色列网站，在九天内发布了124篇、超56万字的报告，旨在优化内容以引导ChatGPT等AI聊天机器人引用其亲以观点。该网站由美国公司Piro Inc依据《外国代理人登记法》为以色列政府分发内容，其背后是以色列政府数千万美元资助、经Havas Media等第三方转手的更广泛宣传行动。",
         "publishedAt": "2026-08-26T14:05:28.706Z",
-        "collectedAt": "2026-08-26T14:35:55.558Z",
+        "collectedAt": "2026-08-26T15:56:39.280Z",
         "raw": {
           "id": "cmta6v56y03yiroj2ki26viqh",
           "titleEn": "一个由以色列设立并资助的假美国智库，试图利用人工智能进行宣传",
@@ -382,31 +362,11 @@
         "originalUrl": "https://www.da.vidbuchanan.co.uk/blog/android-c2pa.html",
         "recommendedReason": "安全研究员David Buchanan指出，C2PA相机认证在Android平台上可被攻破。通过root权限提升漏洞（如CVE-2026-43499），攻击者可利用StrongBox硬件签名任意数据，伪造C2PA签名图像和视频，且无需硬件攻击。该问题无法通过常规补丁修复，已提前90天向相关方报告。",
         "publishedAt": "2026-08-26T14:05:27.506Z",
-        "collectedAt": "2026-08-26T14:35:55.558Z",
+        "collectedAt": "2026-08-26T15:56:39.280Z",
         "raw": {
           "id": "cmta6v56y03ytroj25ggn7rlo",
           "titleEn": "C2PA相机经不起现实的考验",
           "apiCategory": "paper"
-        }
-      },
-      {
-        "id": "aihot:cmta2x13k03t3rolwmr6pzc67",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "通义千问发布 Qwen3.8-Flash，多模态 MoE 模型，Qwen4 架构早期预览",
-        "url": "https://x.com/Alibaba_Qwen/status/2092591393424515114",
-        "summary": "通义千问发布 Qwen3.8-Flash，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览，现已开放权重。该模型总参数量 125B，每 token 仅激活 6B，原生上下文 262K，可扩展至 1M；训练成本仅为 Qwen3.7-Plus 的 1/9，并在编码和办公任务上表现更优。",
-        "description": "通义千问发布 Qwen3.8-Flash，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览，现已开放权重。该模型总参数量 125B，每 token 仅激活 6B，原生上下文 262K，可扩展至 1M；训练成本仅为 Qwen3.7-Plus 的 1/9，并在编码和办公任务上表现更优。",
-        "category": "models",
-        "originalSource": "X：通义千问 / Qwen (@Alibaba_Qwen)",
-        "originalUrl": "https://x.com/Alibaba_Qwen/status/2092591393424515114",
-        "recommendedReason": "通义千问发布 Qwen3.8-Flash，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览，现已开放权重。该模型总参数量 125B，每 token 仅激活 6B，原生上下文 262K，可扩展至 1M；训练成本仅为 Qwen3.7-Plus 的 1/9，并在编码和办公任务上表现更优。",
-        "publishedAt": "2026-08-26T12:34:01.000Z",
-        "collectedAt": "2026-08-26T14:35:55.558Z",
-        "raw": {
-          "id": "cmta2x13k03t3rolwmr6pzc67",
-          "titleEn": "⚡Meet Qwen3.8-Flash， a multimodal MoE and an early preview of the Qwen4 architecture， now open-weigh…",
-          "apiCategory": "ai-models"
         }
       },
       {
@@ -422,10 +382,50 @@
         "originalUrl": "https://qwen.ai/blog?id=qwen3.8-flash-next",
         "recommendedReason": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
         "publishedAt": "2026-08-26T12:30:00.000Z",
-        "collectedAt": "2026-08-26T14:35:55.558Z",
+        "collectedAt": "2026-08-26T15:56:39.280Z",
         "raw": {
           "id": "cmta2veap03nmrolwxllvp4ay",
           "titleEn": "Qwen3.8-Flash-Next： A New Architecture， Towards Ultimate Cost-Efficiency",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmta7fyl104z5roj2ancsmx4g",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "实测飞书和豆包合体后第1个Agent：豆包工作的8个使用技巧",
+        "url": "https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D&mid=2247509950&idx=1&sn=18e7ecdceb66058f5ae1681009b4054e",
+        "summary": "豆包工作（豆包 Work）是当前企业接入Agent门槛最低的路径，但需用飞书账号登录才能解锁满血功能。实测可用手机远程控制最多7台设备、定时任务、自动读取本地skill、侧边栏直接编辑并同步飞书，且管理员看不到聊天记录。作者认为Work Agent是token消耗倍增器，飞书原生生态是豆包工作相比Claude Cowork、Codex Work的核心优势。",
+        "description": "豆包工作（豆包 Work）是当前企业接入Agent门槛最低的路径，但需用飞书账号登录才能解锁满血功能。实测可用手机远程控制最多7台设备、定时任务、自动读取本地skill、侧边栏直接编辑并同步飞书，且管理员看不到聊天记录。作者认为Work Agent是token消耗倍增器，飞书原生生态是豆包工作相比Claude Cowork、Codex Work的核心优势。",
+        "category": "tools",
+        "originalSource": "公众号：卡尔的AI沃茨",
+        "originalUrl": "https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D&mid=2247509950&idx=1&sn=18e7ecdceb66058f5ae1681009b4054e",
+        "recommendedReason": "豆包工作（豆包 Work）是当前企业接入Agent门槛最低的路径，但需用飞书账号登录才能解锁满血功能。实测可用手机远程控制最多7台设备、定时任务、自动读取本地skill、侧边栏直接编辑并同步飞书，且管理员看不到聊天记录。作者认为Work Agent是token消耗倍增器，飞书原生生态是豆包工作相比Claude Cowork、Codex Work的核心优势。",
+        "publishedAt": "2026-08-26T08:27:00.000Z",
+        "collectedAt": "2026-08-26T15:56:39.280Z",
+        "raw": {
+          "id": "cmta7fyl104z5roj2ancsmx4g",
+          "titleEn": "实测飞书和豆包合体后第1个Agent，我挖到了豆包工作的8个使用技巧",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmta7honk0553roj21gque0zw",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "腾讯混元将端侧翻译模型 Hy-MT2-1.8B 压缩至 440MB，已落地哔哩哔哩直播弹幕翻译",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzkwODU2OTQyNQ%3D%3D&mid=2247498367&idx=1&sn=f1a5cf87eb06015cbe995bd5ef8b5d0a",
+        "summary": "腾讯混元将端侧翻译模型 Hy-MT2-1.8B 通过 2-bit 与 1.25-bit 量化方案压缩至 574MB 和 440MB，翻译质量几乎无损，在 FLORES-200 上优于 Microsoft Translator 等商业 API。该模型已联合英特尔完成 x86 适配，并在哔哩哔哩直播弹幕实时翻译中落地，单条弹幕翻译耗时 500~800ms。",
+        "description": "腾讯混元将端侧翻译模型 Hy-MT2-1.8B 通过 2-bit 与 1.25-bit 量化方案压缩至 574MB 和 440MB，翻译质量几乎无损，在 FLORES-200 上优于 Microsoft Translator 等商业 API。该模型已联合英特尔完成 x86 适配，并在哔哩哔哩直播弹幕实时翻译中落地，单条弹幕翻译耗时 500~800ms。",
+        "category": "models",
+        "originalSource": "公众号：腾讯混元",
+        "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzkwODU2OTQyNQ%3D%3D&mid=2247498367&idx=1&sn=f1a5cf87eb06015cbe995bd5ef8b5d0a",
+        "recommendedReason": "腾讯混元将端侧翻译模型 Hy-MT2-1.8B 通过 2-bit 与 1.25-bit 量化方案压缩至 574MB 和 440MB，翻译质量几乎无损，在 FLORES-200 上优于 Microsoft Translator 等商业 API。该模型已联合英特尔完成 x86 适配，并在哔哩哔哩直播弹幕实时翻译中落地，单条弹幕翻译耗时 500~800ms。",
+        "publishedAt": "2026-08-26T08:04:03.000Z",
+        "collectedAt": "2026-08-26T15:56:39.280Z",
+        "raw": {
+          "id": "cmta7honk0553roj21gque0zw",
+          "titleEn": "3.3GB 压到 440MB，混元极低 bit 翻译模型跑进直播弹幕",
           "apiCategory": "ai-models"
         }
       },
@@ -442,7 +442,7 @@
         "originalUrl": "https://huggingface.co/blog/train-multi-vector-encoder",
         "recommendedReason": "Sentence Transformers v6.0 新增第四种模型类型 MultiVectorEncoder，支持 ColBERT 风格的后交互检索，并配套完整训练流程。",
         "publishedAt": "2026-08-26T00:00:00.000Z",
-        "collectedAt": "2026-08-26T14:35:55.558Z",
+        "collectedAt": "2026-08-26T15:56:39.280Z",
         "raw": {
           "id": "cmta64hk303hqroj2edkgrcxi",
           "titleEn": "Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
@@ -462,7 +462,7 @@
         "originalUrl": "https://x.com/AndrewYNg/status/2092315079576555806",
         "recommendedReason": "Andrew Ng 旗下开源智能体 OpenWorker 发布新版，强化安全工作流。其 harness 完全开源，安全团队可审计无后门。新版内置代码漏洞扫描、依赖供应链注入检测和云安全配置检查三类网络安全智能体，并支持本地运行开源权重模型以保护敏感代码。",
         "publishedAt": "2026-08-25T18:16:02.000Z",
-        "collectedAt": "2026-08-26T14:35:55.558Z",
+        "collectedAt": "2026-08-26T15:56:39.280Z",
         "raw": {
           "id": "cmt90wf1p06j9roly5e34fmu3",
           "titleEn": "OpenWorker -- an open source agent that doesn't just chat but completes tasks on your laptop -- just…",
@@ -482,12 +482,354 @@
         "originalUrl": "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it",
         "recommendedReason": "Claude 即日起将聊天与 Claude Cowork 的记忆统一，用户在任一场景对话时都能调用此前积累的上下文，减少重复解释。记忆会在聊天过程中实时更新，用户可在 Memory 设置中按主题查看、编辑或删除每条记忆。健康、信仰等敏感话题默认不存储，但可在设置中开启，且敏感识别号、犯罪记录等始终不会被保存。",
         "publishedAt": "2026-08-25T18:02:04.743Z",
-        "collectedAt": "2026-08-26T14:35:55.558Z",
+        "collectedAt": "2026-08-26T15:56:39.280Z",
         "raw": {
           "id": "cmt8z2eko055crolytaitdxv8",
           "titleEn": "Claude's memory works everywhere， and you decide what's in it",
           "apiCategory": "ai-products"
         }
+      },
+      {
+        "id": "aihot:cmt8uphwp3qmhro73czv8pbpv",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "WeatherNext 预测气旋：提前五天预警五级飓风",
+        "url": "https://x.com/GoogleAI/status/2092275116503707733",
+        "summary": "Google AI 发布 WeatherNext 气旋预测模型，可同时预测风暴路径、强度和规模，比现有系统多提供一整天的预警时间。该模型在 2025 飓风季实战测试中，提前五天预测飓风 Melissa 在牙买加的五级登陆，系美国国家飓风中心首次实时使用 AI 模型。模型单场风暴可生成多达 1000 次模拟，代码与权重已开源。",
+        "description": "Google AI 发布 WeatherNext 气旋预测模型，可同时预测风暴路径、强度和规模，比现有系统多提供一整天的预警时间。该模型在 2025 飓风季实战测试中，提前五天预测飓风 Melissa 在牙买加的五级登陆，系美国国家飓风中心首次实时使用 AI 模型。模型单场风暴可生成多达 1000 次模拟，代码与权重已开源。",
+        "category": "models",
+        "originalSource": "X：Google AI (@GoogleAI)",
+        "originalUrl": "https://x.com/GoogleAI/status/2092275116503707733",
+        "recommendedReason": "Google AI 发布 WeatherNext 气旋预测模型，可同时预测风暴路径、强度和规模，比现有系统多提供一整天的预警时间。该模型在 2025 飓风季实战测试中，提前五天预测飓风 Melissa 在牙买加的五级登陆，系美国国家飓风中心首次实时使用 AI 模型。模型单场风暴可生成多达 1000 次模拟，代码与权重已开源。",
+        "publishedAt": "2026-08-25T15:37:15.000Z",
+        "collectedAt": "2026-08-26T15:56:39.280Z",
+        "raw": {
+          "id": "cmt8uphwp3qmhro73czv8pbpv",
+          "titleEn": "https://x.com/i/article/2092249927812337664",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmt8vaqtw3r29ro73d67v03bc",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Dylan Patel：Anthropic 与 OpenAI 到 2028 年将控制全球大部分算力",
+        "url": "https://www.dwarkesh.com/p/dylan-patel-3",
+        "summary": "在最新一期播客中，SemiAnalysis 创始人 Dylan Patel 与 Dwarkesh Patel 讨论实验室经济学，预计 Anthropic 和 OpenAI 到 2028 年将控制全球大部分可用 FLOPs，因其能更好变现算力并出价高于其他方。",
+        "description": "在最新一期播客中，SemiAnalysis 创始人 Dylan Patel 与 Dwarkesh Patel 讨论实验室经济学，预计 Anthropic 和 OpenAI 到 2028 年将控制全球大部分可用 FLOPs，因其能更好变现算力并出价高于其他方。",
+        "category": "tools",
+        "originalSource": "Dwarkesh Patel：Podcast & Blog（RSS）",
+        "originalUrl": "https://www.dwarkesh.com/p/dylan-patel-3",
+        "recommendedReason": "在最新一期播客中，SemiAnalysis 创始人 Dylan Patel 与 Dwarkesh Patel 讨论实验室经济学，预计 Anthropic 和 OpenAI 到 2028 年将控制全球大部分可用 FLOPs，因其能更好变现算力并出价高于其他方。",
+        "publishedAt": "2026-08-25T15:32:57.000Z",
+        "collectedAt": "2026-08-26T15:56:39.280Z",
+        "raw": {
+          "id": "cmt8vaqtw3r29ro73d67v03bc",
+          "titleEn": "Dylan Patel - Anthropic & OpenAI will have most of the world's compute by 2028",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmt8qee503kvnro73qp7543yv",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Apple 推出搭载 M5 Max 与 M5 Ultra 的全新 Mac Studio",
+        "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra",
+        "summary": "Apple 发布搭载 M5 Max 与全新 M5 Ultra 的 Mac Studio，AI 性能最高提升 4.3 倍，图形性能提升 1.8 倍，存储速度提升 2 倍。M5 Ultra 版本支持最高 512GB 统一内存与 1.2TB/s 内存带宽，可完全在设备端运行大型 LLM；四台集群可带来最高 3 倍分布式 AI 推理速度提升。新品今日起接受预购，9 月 22 日开售。",
+        "description": "Apple 发布搭载 M5 Max 与全新 M5 Ultra 的 Mac Studio，AI 性能最高提升 4.3 倍，图形性能提升 1.8 倍，存储速度提升 2 倍。M5 Ultra 版本支持最高 512GB 统一内存与 1.2TB/s 内存带宽，可完全在设备端运行大型 LLM；四台集群可带来最高 3 倍分布式 AI 推理速度提升。新品今日起接受预购，9 月 22 日开售。",
+        "category": "products",
+        "originalSource": "Apple：Newsroom（RSS）",
+        "originalUrl": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra",
+        "recommendedReason": "Apple 发布搭载 M5 Max 与全新 M5 Ultra 的 Mac Studio，AI 性能最高提升 4.3 倍，图形性能提升 1.8 倍，存储速度提升 2 倍。M5 Ultra 版本支持最高 512GB 统一内存与 1.2TB/s 内存带宽，可完全在设备端运行大型 LLM；四台集群可带来最高 3 倍分布式 AI 推理速度提升。新品今日起接受预购，9 月 22 日开售。",
+        "publishedAt": "2026-08-25T13:00:23.969Z",
+        "collectedAt": "2026-08-26T15:56:39.280Z",
+        "raw": {
+          "id": "cmt8qee503kvnro73qp7543yv",
+          "titleEn": "Apple introduces new Mac Studio with M5 Max and M5 Ultra",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmt8qee503kvpro73kzthenuu",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Apple 发布 M6 与 M5 Ultra，性能与 AI 算力大幅跃升",
+        "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
+        "summary": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
+        "description": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
+        "category": "products",
+        "originalSource": "Apple：Newsroom（RSS）",
+        "originalUrl": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
+        "recommendedReason": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
+        "publishedAt": "2026-08-25T12:58:13.056Z",
+        "collectedAt": "2026-08-26T15:56:39.280Z",
+        "raw": {
+          "id": "cmt8qee503kvpro73kzthenuu",
+          "titleEn": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
+          "apiCategory": "ai-products"
+        }
+      },
+      {
+        "id": "aihot:cmta7gwaz0523roj2196av3ox",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "飞书与豆包合并后首款Agent产品\"豆包工作\"发布",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685540&idx=1&sn=601bd8669d18bf0b4c9a9e88af421797",
+        "summary": "字节正式发布办公Agent产品\"豆包工作\"，这是7月30日飞书与豆包产品团队整合后的首个重要产品，也是继WorkBuddy、千问办公之后办公Agent领域的第三个巨头玩家。该产品由豆包原\"工作任务\"独立而成，与飞书原生打通，支持飞书账号登录，完整继承企业AI额度、文档、多维表格、知识库、聊天、邮件及飞书权限系统，并具备电脑操控功能，可将固定流程封装为可反复调用的Skill。",
+        "description": "字节正式发布办公Agent产品\"豆包工作\"，这是7月30日飞书与豆包产品团队整合后的首个重要产品，也是继WorkBuddy、千问办公之后办公Agent领域的第三个巨头玩家。该产品由豆包原\"工作任务\"独立而成，与飞书原生打通，支持飞书账号登录，完整继承企业AI额度、文档、多维表格、知识库、聊天、邮件及飞书权限系统，并具备电脑操控功能，可将固定流程封装为可反复调用的Skill。",
+        "category": "products",
+        "originalSource": "公众号：数字生命卡兹克",
+        "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685540&idx=1&sn=601bd8669d18bf0b4c9a9e88af421797",
+        "recommendedReason": "字节正式发布办公Agent产品\"豆包工作\"，这是7月30日飞书与豆包产品团队整合后的首个重要产品，也是继WorkBuddy、千问办公之后办公Agent领域的第三个巨头玩家。该产品由豆包原\"工作任务\"独立而成，与飞书原生打通，支持飞书账号登录，完整继承企业AI额度、文档、多维表格、知识库、聊天、邮件及飞书权限系统，并具备电脑操控功能，可将固定流程封装为可反复调用的Skill。",
+        "publishedAt": "2026-08-25T03:19:09.000Z",
+        "collectedAt": "2026-08-26T15:56:39.280Z",
+        "raw": {
+          "id": "cmta7gwaz0523roj2196av3ox",
+          "titleEn": "飞书和豆包合并后的第一个Agent产品，豆包工作，它来了。",
+          "apiCategory": "ai-products"
+        }
+      }
+    ],
+    "crossSourceHighlights": [
+      {
+        "id": "url:https://qwen.ai/blog?id=qwen3.8-flash-next",
+        "canonicalId": "url:https://qwen.ai/blog?id=qwen3.8-flash-next",
+        "title": "Qwen3.8-Flash-Next 开源：Qwen4 架构早期预览",
+        "canonicalUrl": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://qwen.ai/blog?id=qwen3.8-flash-next",
+          "title:qwen3 8 flash next 开源 qwen4 架构早期预览",
+          "title:qwen3 8 flash next a new architecture towards ultimate cost efficiency"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmta2veap03nmrolwxllvp4ay",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Qwen3.8-Flash-Next 开源：Qwen4 架构早期预览",
+            "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+            "summary": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
+            "description": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
+            "category": "models",
+            "originalSource": "Qwen：Blog Retrieval（API）",
+            "originalUrl": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+            "recommendedReason": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
+            "publishedAt": "2026-08-26T12:30:00.000Z",
+            "collectedAt": "2026-08-26T15:56:39.280Z",
+            "raw": {
+              "id": "cmta2veap03nmrolwxllvp4ay",
+              "titleEn": "Qwen3.8-Flash-Next： A New Architecture， Towards Ultimate Cost-Efficiency",
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:49448210",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency",
+            "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+            "author": "tosh",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 328,
+              "commentsCount": 102
+            },
+            "publishedAt": "2026-08-26T12:52:12.000Z",
+            "collectedAt": "2026-08-26T15:56:38.253Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=49448210",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmta2veap03nmrolwxllvp4ay",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Qwen3.8-Flash-Next 开源：Qwen4 架构早期预览",
+            "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+            "summary": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
+            "description": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
+            "category": "models",
+            "originalSource": "Qwen：Blog Retrieval（API）",
+            "originalUrl": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+            "recommendedReason": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
+            "publishedAt": "2026-08-26T12:30:00.000Z",
+            "collectedAt": "2026-08-26T15:56:39.280Z",
+            "raw": {
+              "id": "cmta2veap03nmrolwxllvp4ay",
+              "titleEn": "Qwen3.8-Flash-Next： A New Architecture， Towards Ultimate Cost-Efficiency",
+              "apiCategory": "ai-models"
+            }
+          },
+          {
+            "id": "hackernews:49448210",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency",
+            "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+            "author": "tosh",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 328,
+              "commentsCount": 102
+            },
+            "publishedAt": "2026-08-26T12:52:12.000Z",
+            "collectedAt": "2026-08-26T15:56:38.253Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=49448210",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 328,
+          "commentsCount": 102,
+          "hnScore": 328,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "models",
+        "summary": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-08-26T12:30:00.000Z",
+        "lastSeenAt": "2026-08-26T15:56:39.280Z"
+      },
+      {
+        "id": "url:https://apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
+        "canonicalId": "url:https://apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
+        "title": "Apple 发布 M6 与 M5 Ultra，性能与 AI 算力大幅跃升",
+        "canonicalUrl": "https://apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
+        "entityType": "news",
+        "normalizedKeys": [
+          "url:https://apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
+          "title:apple 发布 m6 与 m5 ultra 性能与 ai 算力大幅跃升",
+          "title:apple introduces m6 and m5 ultra"
+        ],
+        "sources": [
+          "aihot",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "items": [
+          {
+            "id": "aihot:cmt8qee503kvpro73kzthenuu",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Apple 发布 M6 与 M5 Ultra，性能与 AI 算力大幅跃升",
+            "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
+            "summary": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
+            "description": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
+            "category": "products",
+            "originalSource": "Apple：Newsroom（RSS）",
+            "originalUrl": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
+            "recommendedReason": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
+            "publishedAt": "2026-08-25T12:58:13.056Z",
+            "collectedAt": "2026-08-26T15:56:39.280Z",
+            "raw": {
+              "id": "cmt8qee503kvpro73kzthenuu",
+              "titleEn": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
+              "apiCategory": "ai-products"
+            }
+          },
+          {
+            "id": "hackernews:49433292",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Apple introduces M6 and M5 Ultra",
+            "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+            "author": "interpol_p",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 1263,
+              "commentsCount": 1212
+            },
+            "publishedAt": "2026-08-25T13:01:22.000Z",
+            "collectedAt": "2026-08-26T15:56:38.253Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=49433292",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "sourceItems": [
+          {
+            "id": "aihot:cmt8qee503kvpro73kzthenuu",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "title": "Apple 发布 M6 与 M5 Ultra，性能与 AI 算力大幅跃升",
+            "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
+            "summary": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
+            "description": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
+            "category": "products",
+            "originalSource": "Apple：Newsroom（RSS）",
+            "originalUrl": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
+            "recommendedReason": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
+            "publishedAt": "2026-08-25T12:58:13.056Z",
+            "collectedAt": "2026-08-26T15:56:39.280Z",
+            "raw": {
+              "id": "cmt8qee503kvpro73kzthenuu",
+              "titleEn": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
+              "apiCategory": "ai-products"
+            }
+          },
+          {
+            "id": "hackernews:49433292",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "title": "Apple introduces M6 and M5 Ultra",
+            "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+            "author": "interpol_p",
+            "tags": [
+              "ai"
+            ],
+            "metrics": {
+              "upvotes": 1263,
+              "commentsCount": 1212
+            },
+            "publishedAt": "2026-08-25T13:01:22.000Z",
+            "collectedAt": "2026-08-26T15:56:38.253Z",
+            "raw": {
+              "hnUrl": "https://news.ycombinator.com/item?id=49433292",
+              "matchedKeywords": [
+                "ai"
+              ]
+            }
+          }
+        ],
+        "metrics": {
+          "votes": 1263,
+          "commentsCount": 1212,
+          "hnScore": 1263,
+          "crossSourceBonus": 10,
+          "heatScore": 340
+        },
+        "crossSourceBonus": 10,
+        "category": "products",
+        "summary": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
+        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
+        "firstSeenAt": "2026-08-25T12:58:13.056Z",
+        "lastSeenAt": "2026-08-26T15:56:39.280Z"
       }
     ]
   }
