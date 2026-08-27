@@ -1,241 +1,215 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-08-27T10:01:29.163Z",
+  "generatedAt": "2026-08-27T13:23:51.731Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2608.26105v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning",
-        "url": "https://arxiv.org/pdf/2608.26105v1",
-        "description": "Native visual reasoning treats visual generation as the medium of reasoning itself: visual states (i.e. images and videos) are not merely inputs to be understood or outputs to be rendered, but first-class substrates for problem solving beyond language. Yet progress remains bottlenecked by the lack of scalable training tasks, reliable feedback, and controlled comparisons across generative substrates. In this work, we introduce VBVR-Pro, a closed-loop testbed that makes native visual reasoning thr",
-        "summary": "Native visual reasoning treats visual generation as the medium of reasoning itself: visual states (i.e. images and videos) are not merely inputs to be understood or outputs to be rendered, but first-class substrates for problem solving beyond language. Yet progress remains bottlenecked by the lack of scalable training tasks, reliable feedback, and controlled comparisons across generative substrates. In this work, we introduce VBVR-Pro, a closed-loop testbed that makes native visual reasoning through generation trainable, verifiable, optimizable, and experimentally controllable. 1) Task scaling. VBVR-Pro turns visual reasoning into a controlled task space of 300 procedurally generated tasks. Models trained on VBVR-Pro show strong transfer beyond the proposed suite across seven external visual reasoning benchmarks such as RISE-Video, MME-CoF-Pro, and BabyVision. 2) Verifiable rewards. VBVR-Pro provides verifiable reward scorers for task-grounded evaluation. Through a systematic study of leading MLLMs as judges, we identify recurring failure modes of the prevalent VLM-as-a-judge paradigm. In contrast, the proposed scorers are grounded in deterministic, task-specific rules, achieve fine-grained alignment with human judgments. Importantly, they serve as reliable reward signals for large-scale multi-task reinforcement learning and demonstrate stronger post-RL performance across visual reasoning tasks. 3) Mechanism study. VBVR-Pro enables controlled modality studies across more than 30 image, video, and interleaved generators. Our analysis shows that video generation remains strongest for tasks requiring persistent spatiotemporal state tracking, while interleaved generation provides a compute-efficient alternative. Critically, ablations and probing suggest the presence of vision-native trajectories that are crucial to visual reasoning. We release all data, models, scorers, and code.",
-        "author": "Junxiang Xu, Ruisi Wang, Fanyi Pu, Maijunxian Wang, Ran Ji, Tongxi Zhou, Chenyang Gu, Jing Zuo, Hongcan Xiao, Yimeng Geng, Wanqi Yin, Wei Chen, Oscar Qian, Zhengan Yan, Ziqi Huang, Haiwen Diao, Liang Pan, Bo Li, Xiangyu Fan, Dezhi Luo, Fengyuan Yu, Zehong Zhao, Qingying Gao, Tinghui Zhu, Yilan Zhang, Jingqi Tong, Pinyuan Feng, Zhengze Jiang, Letian Wang, Ziyu Guo, Renrui Zhang, Jieneng Chen, Sonia Joseph, Constantin Venhoff, Saman Motamed, Mengyue Yang, Chandra Sripada, Alan Yuille, Philip Torr, Lvmin Zhang, Vikash Kumar, Daniel Khashabi, Nikolaus Kriegeskorte, Raphaël Millière, Vincent C. Müller, Anyi Rao, Quan Wang, Ziwei Liu, Dahua Lin, Lei Yang, Hokin Deng, Zhongang Cai",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.CV",
-          "cs.AI",
-          "cs.LG",
-          "cs.MM",
-          "cs.RO",
-          "llm",
-          "alignment",
-          "benchmark",
-          "evaluation"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-08-26T17:59:51Z",
-        "updatedAt": "2026-08-26T17:59:51Z",
-        "collectedAt": "2026-08-27T10:01:20.815Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.26105v1",
-          "authors": [
-            "Junxiang Xu",
-            "Ruisi Wang",
-            "Fanyi Pu",
-            "Maijunxian Wang",
-            "Ran Ji",
-            "Tongxi Zhou",
-            "Chenyang Gu",
-            "Jing Zuo",
-            "Hongcan Xiao",
-            "Yimeng Geng",
-            "Wanqi Yin",
-            "Wei Chen",
-            "Oscar Qian",
-            "Zhengan Yan",
-            "Ziqi Huang",
-            "Haiwen Diao",
-            "Liang Pan",
-            "Bo Li",
-            "Xiangyu Fan",
-            "Dezhi Luo",
-            "Fengyuan Yu",
-            "Zehong Zhao",
-            "Qingying Gao",
-            "Tinghui Zhu",
-            "Yilan Zhang",
-            "Jingqi Tong",
-            "Pinyuan Feng",
-            "Zhengze Jiang",
-            "Letian Wang",
-            "Ziyu Guo",
-            "Renrui Zhang",
-            "Jieneng Chen",
-            "Sonia Joseph",
-            "Constantin Venhoff",
-            "Saman Motamed",
-            "Mengyue Yang",
-            "Chandra Sripada",
-            "Alan Yuille",
-            "Philip Torr",
-            "Lvmin Zhang",
-            "Vikash Kumar",
-            "Daniel Khashabi",
-            "Nikolaus Kriegeskorte",
-            "Raphaël Millière",
-            "Vincent C. Müller",
-            "Anyi Rao",
-            "Quan Wang",
-            "Ziwei Liu",
-            "Dahua Lin",
-            "Lei Yang",
-            "Hokin Deng",
-            "Zhongang Cai"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14083
         },
-        "recommendedReason": "Matched AI developer keywords: llm, alignment, benchmark, evaluation"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-08-27T13:23:51.879Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.26095v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "A Visual Dependence-Aware Framework for Multimodal Unsupervised Continual Post-Training",
-        "url": "https://arxiv.org/pdf/2608.26095v1",
-        "description": "In this paper, we explore a novel task of Multimodal Unsupervised Continual Post-Training (MU-CPT), enabling deployed MLLMs to continually evolve from streaming unlabeled data. Existing unsupervised post-training methods for MLLMs typically optimize target tokens uniformly, overlooking their heterogeneous visual dependence (VD). However, we reveal that token-level VD is crucial for MU-CPT. Specifically, its structural distortion serves as an indicator of cross-modal catastrophic forgetting, and ",
-        "summary": "In this paper, we explore a novel task of Multimodal Unsupervised Continual Post-Training (MU-CPT), enabling deployed MLLMs to continually evolve from streaming unlabeled data. Existing unsupervised post-training methods for MLLMs typically optimize target tokens uniformly, overlooking their heterogeneous visual dependence (VD). However, we reveal that token-level VD is crucial for MU-CPT. Specifically, its structural distortion serves as an indicator of cross-modal catastrophic forgetting, and its inherent heterogeneity acts as a compass to guide new-task learning. Leveraging this property, we propose a Visual Dependence-Aware (VDA) framework with two main components. First, Visually Constrained Optimal Transport (VC-OT) formulates the VD structural distortion of old-task VD during new-task learning as an optimal transport problem to mitigate cross-modal forgetting. By designing a region-aware ground cost and a dependence-stratified transport penalty, it prevents global shifts in visual focus while strictly prohibiting visual reliance from degenerating into language bias. Second, Visually Modulated Adaptation (VMA) exploits VD heterogeneity to emphasize visually grounded new-task learning, promoting new-task plasticity. Together, our method simultaneously maintains old-task stability and new-task plasticity during challenging MU-CPT. Extensive experiments under our MU-CPT setting validate the effectiveness of VDA.",
-        "author": "Kaichen Li, Zhilin Zhu, Jianhao Huang, Zhengqin Lai, Baochen Xiong, Zibo Shao, Yaguang Song, Linhui Xiao, Xiaoshan Yang, Changsheng Xu",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.CV",
-          "cs.AI",
-          "llm",
-          "rag"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-08-26T17:57:04Z",
-        "updatedAt": "2026-08-26T17:57:04Z",
-        "collectedAt": "2026-08-27T10:01:20.815Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.26095v1",
-          "authors": [
-            "Kaichen Li",
-            "Zhilin Zhu",
-            "Jianhao Huang",
-            "Zhengqin Lai",
-            "Baochen Xiong",
-            "Zibo Shao",
-            "Yaguang Song",
-            "Linhui Xiao",
-            "Xiaoshan Yang",
-            "Changsheng Xu"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11228
         },
-        "recommendedReason": "Matched AI developer keywords: llm, rag"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-08-27T13:23:51.879Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.26094v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "MyoMechanix: Biomechanically-Grounded Compositional Skilled Activity Understanding and Coaching",
-        "url": "https://arxiv.org/pdf/2608.26094v1",
-        "description": "Existing action quality assessment (AQA) datasets and methods rely primarily on visual inputs such as RGB and pose, overlooking physiological dynamics such as muscle mechanics and often modeling actions as monolithic patterns. These limitations hinder fine-grained, biomechanically grounded feedback. We introduce MyoMechanix, a multimodal ecosystem for weight-loaded actions that aligns motion with muscle activity. Expert-annotated, it contains 7,500+ samples of 20 actions from 38 subjects, with s",
-        "summary": "Existing action quality assessment (AQA) datasets and methods rely primarily on visual inputs such as RGB and pose, overlooking physiological dynamics such as muscle mechanics and often modeling actions as monolithic patterns. These limitations hinder fine-grained, biomechanically grounded feedback. We introduce MyoMechanix, a multimodal ecosystem for weight-loaded actions that aligns motion with muscle activity. Expert-annotated, it contains 7,500+ samples of 20 actions from 38 subjects, with synchronized multiview RGB video, 3D pose, sEMG, and additional physiological signals, forming the largest multimodal AQA benchmark to date. We further construct the Fitness Knowledge Graph (FKG), which organizes expert annotations into structured relationships among actions, phases, key steps, errors, and corrective feedback, enabling compositional scoring and interpretable assessment. Building on these representations, we develop CUBIST (Compositional Ontological Reasoning Engine), which performs decomposition-analysis-recomposition for fine-grained error attribution and feedback generation. We also establish MyoMechanix-AQA, MyoMechanix-VideoQA, and a novel MyoMechanix-Video2EMG task. Experiments show that multimodal sensing and structured representations improve performance, interpretability, and error attribution, with CUBIST achieving state-of-the-art results; VideoQA enhances language-grounded action understanding; and Video2EMG suggests video-based alternatives to costly EMG sensing. MyoMechanix advances skilled activity understanding toward biomechanically grounded, multimodal, and compositional reasoning for Physical AI applications in fitness, rehabilitation, healthcare, and machine learning. Project page: https://haoyin116.github.io/MyoMechanix/",
-        "author": "Hao Yin, Paritosh Parmar, Lijun Gu, Lin Xu, Tianxiao Guo, Xiujin Liu, Tianyou Zheng, Yang Zhang, Weiwei Fu",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.CV",
-          "cs.AI",
-          "cs.ET",
-          "cs.HC",
-          "cs.LG",
-          "benchmark"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.CV",
-        "language": "en",
-        "publishedAt": "2026-08-26T17:56:33Z",
-        "updatedAt": "2026-08-26T17:56:33Z",
-        "collectedAt": "2026-08-27T10:01:20.815Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.26094v1",
-          "authors": [
-            "Hao Yin",
-            "Paritosh Parmar",
-            "Lijun Gu",
-            "Lin Xu",
-            "Tianxiao Guo",
-            "Xiujin Liu",
-            "Tianyou Zheng",
-            "Yang Zhang",
-            "Weiwei Fu"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10165
         },
-        "recommendedReason": "Matched AI developer keywords: benchmark"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-08-27T13:23:51.879Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.26093v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Agentic Autoresearch for Cell-Edge Power Control: Radically Redefining the Researcher's Role",
-        "url": "https://arxiv.org/pdf/2608.26093v1",
-        "description": "Designing machine learning algorithms for wireless resource management is labour-intensive: the architecture, the loss function and the training recipe are all specified by hand. We demonstrate that this design layer can be surrendered to an autonomous agent in its entirety. We adopt the autoresearch protocol, in which an AI coding agent edits a training script, runs a fixed-budget experiment, and retains or discards the change according to a single immutable metric. We grant the agent authority",
-        "summary": "Designing machine learning algorithms for wireless resource management is labour-intensive: the architecture, the loss function and the training recipe are all specified by hand. We demonstrate that this design layer can be surrendered to an autonomous agent in its entirety. We adopt the autoresearch protocol, in which an AI coding agent edits a training script, runs a fixed-budget experiment, and retains or discards the change according to a single immutable metric. We grant the agent authority over the architecture family, the input representation, the output parameterization, the loss function and the task-sampling law, and set it a target chosen for its difficulty: sum-least-percentile-rate power control across a multicell network. The formulation targets cell-edge throughput and is non-convex, non-smooth and strongly NP-hard away from its max-min vertex. Safeguards render the results trustworthy: a hash-pinned evaluator, an enforced inference contract and a pre-registered falsifier per experiment. In eighty-one unattended experiments over twenty-six hours, the agent reached $99.5\\%$ of a converged minorization-maximization reference in one fixed-cost inference pass, at roughly $600\\times$ lower inference cost, closing $94\\%$ of the gap from its first working architecture, with one parameter set serving every network size and percentile target. It recovered provable structure rather than tuned constants: the output parameterization it discovered reproduces the exact max-min-optimal allocation at the minimum percentile, for every value of the trained weights.",
-        "author": "Ahmad Khan, Akram Bin Sediq, Sara Azadegi Naeini, Raviraj S. Adve",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "cs.LG",
-          "cs.IT",
-          "eess.SY",
-          "agent",
-          "coding agent",
-          "agentic"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-08-26T17:56:00Z",
-        "updatedAt": "2026-08-26T17:56:00Z",
-        "collectedAt": "2026-08-27T10:01:20.815Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.26093v1",
-          "authors": [
-            "Ahmad Khan",
-            "Akram Bin Sediq",
-            "Sara Azadegi Naeini",
-            "Raviraj S. Adve"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7636
         },
-        "recommendedReason": "Matched AI developer keywords: agent, coding agent, agentic"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-08-26T19:47:34.000Z",
+        "collectedAt": "2026-08-27T13:23:51.879Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2608.26091v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "PlanSightRAG: A Visual-First Multimodal RAG for Automating Question Answering and Compliance Checking for Civil Standard Plans",
-        "url": "https://arxiv.org/pdf/2608.26091v1",
-        "description": "Civil infrastructure compliance checking has long relied on engineers manually reading legacy 2D plans; however, OCR-based automation strips away the geometry and layout essential for interpreting these plans. We present a Visual-First Multimodal Retrieval-Augmented Generation (RAG) framework called PlanSightRAG. It indexes and reasons directly over plan imagery, integrates a ColNomic-3B multi-vector retrieval, an agentic Planner-Retriever-Auditor-Synthesizer, and MaxSim heatmaps as an evidence ",
-        "summary": "Civil infrastructure compliance checking has long relied on engineers manually reading legacy 2D plans; however, OCR-based automation strips away the geometry and layout essential for interpreting these plans. We present a Visual-First Multimodal Retrieval-Augmented Generation (RAG) framework called PlanSightRAG. It indexes and reasons directly over plan imagery, integrates a ColNomic-3B multi-vector retrieval, an agentic Planner-Retriever-Auditor-Synthesizer, and MaxSim heatmaps as an evidence trail. We introduce a 4,056-pair benchmark from five state Departments of Transportation (DOT) standard plans (1,898 pages). PlanSightRAG achieves 91.47% Recall@5 on zero-shot retrieval, while on a held-out Michigan DOT corpus, it achieves 91.40%. On synthetic, parametrically-generated compliance drawings, our Qwen2.5-VL-72B pipeline reaches 100% verdict accuracy only when supplied a pre-resolved rule threshold, a controlled ceiling that a non-VLM OCR baseline already reaches at 76.4%. Finally, we demonstrate autonomous visual rule-grounding by extracting numeric limits directly from a specification corpus without any human-supplied rules.",
-        "author": "Nabaraj Subedi, Shuvo Dip Datta, Ahmed Abdelaty, Shivanand Venkanna Sheshappanavar",
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
         "tags": [
-          "cs.IR",
-          "cs.CL",
-          "cs.CV",
-          "agent",
-          "retrieval-augmented",
-          "rag",
-          "benchmark",
-          "agentic"
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
         ],
-        "category": "cs.IR",
-        "language": "en",
-        "publishedAt": "2026-08-26T17:54:24Z",
-        "updatedAt": "2026-08-26T17:54:24Z",
-        "collectedAt": "2026-08-27T10:01:20.815Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2608.26091v1",
-          "authors": [
-            "Nabaraj Subedi",
-            "Shuvo Dip Datta",
-            "Ahmed Abdelaty",
-            "Shivanand Venkanna Sheshappanavar"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 5086
         },
-        "recommendedReason": "Matched AI developer keywords: agent, retrieval-augmented, rag, benchmark, agentic"
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-08-27T13:23:51.879Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_models:patdev/k3-a40-bootstrap",
+        "source": "huggingface_models",
+        "sourceType": "model_hub",
+        "title": "patdev/k3-a40-bootstrap",
+        "url": "https://huggingface.co/patdev/k3-a40-bootstrap",
+        "tags": [
+          "gguf",
+          "vllm",
+          "runpod",
+          "claude-code",
+          "anthropic-api",
+          "kimi",
+          "qwen",
+          "license:other",
+          "endpoints_compatible",
+          "region:us"
+        ],
+        "metrics": {
+          "downloads": 870,
+          "likes": 0
+        },
+        "publishedAt": "2026-08-16T16:16:15.000Z",
+        "updatedAt": "2026-08-27T13:23:29.000Z",
+        "collectedAt": "2026-08-27T13:23:51.872Z",
+        "raw": {}
+      },
+      {
+        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Arena Leaderboard",
+        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
+        "author": "lmarena-ai",
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "static",
+        "metrics": {
+          "likes": 4974
+        },
+        "publishedAt": "2023-05-20T09:26:19.000Z",
+        "updatedAt": "2026-02-21T23:20:43.000Z",
+        "collectedAt": "2026-08-27T13:23:51.879Z",
+        "raw": {
+          "sdk": "static",
+          "emoji": "🏆🤖"
+        }
+      },
+      {
+        "id": "huggingface_spaces:KlingTeam/LivePortrait",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Live Portrait",
+        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
+        "author": "KlingTeam",
+        "tags": [
+          "gradio",
+          "Multimodal",
+          "Motion control",
+          "Image-to-Video",
+          "Video-to-Video",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 3780
+        },
+        "publishedAt": "2024-07-05T16:35:24.000Z",
+        "updatedAt": "2024-08-30T11:20:51.000Z",
+        "collectedAt": "2026-08-27T13:23:51.879Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🤪"
+        }
       }
     ],
     "developerBuzz": [
@@ -250,11 +224,11 @@
           "hugging face"
         ],
         "metrics": {
-          "upvotes": 1134,
-          "commentsCount": 476
+          "upvotes": 1411,
+          "commentsCount": 632
         },
         "publishedAt": "2026-08-27T01:12:55.000Z",
-        "collectedAt": "2026-08-27T10:01:21.344Z",
+        "collectedAt": "2026-08-27T13:23:52.080Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49458161",
           "matchedKeywords": [
@@ -273,36 +247,13 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 1032,
-          "commentsCount": 518
+          "upvotes": 1077,
+          "commentsCount": 538
         },
         "publishedAt": "2026-08-26T14:08:50.000Z",
-        "collectedAt": "2026-08-27T10:01:21.344Z",
+        "collectedAt": "2026-08-27T13:23:52.080Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49449507",
-          "matchedKeywords": [
-            "ai"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:49433292",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Apple introduces M6 and M5 Ultra",
-        "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
-        "author": "interpol_p",
-        "tags": [
-          "ai"
-        ],
-        "metrics": {
-          "upvotes": 1293,
-          "commentsCount": 1270
-        },
-        "publishedAt": "2026-08-25T13:01:22.000Z",
-        "collectedAt": "2026-08-27T10:01:21.344Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=49433292",
           "matchedKeywords": [
             "ai"
           ]
@@ -319,11 +270,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 607,
-          "commentsCount": 387
+          "upvotes": 750,
+          "commentsCount": 507
         },
         "publishedAt": "2026-08-27T01:46:22.000Z",
-        "collectedAt": "2026-08-27T10:01:21.344Z",
+        "collectedAt": "2026-08-27T13:23:52.080Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49458418",
           "matchedKeywords": [
@@ -332,25 +283,50 @@
         }
       },
       {
-        "id": "hackernews:49448210",
+        "id": "hackernews:49433292",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "Qwen3.8-Flash-Next",
-        "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
-        "author": "tosh",
+        "title": "Apple introduces M6 and M5 Ultra",
+        "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+        "author": "interpol_p",
         "tags": [
           "ai"
         ],
         "metrics": {
-          "upvotes": 669,
-          "commentsCount": 217
+          "upvotes": 1300,
+          "commentsCount": 1277
         },
-        "publishedAt": "2026-08-26T12:52:12.000Z",
-        "collectedAt": "2026-08-27T10:01:21.344Z",
+        "publishedAt": "2026-08-25T13:01:22.000Z",
+        "collectedAt": "2026-08-27T13:23:52.080Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=49448210",
+          "hnUrl": "https://news.ycombinator.com/item?id=49433292",
           "matchedKeywords": [
             "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:49434378",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
+        "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
+        "author": "bmulholland",
+        "tags": [
+          "ai",
+          "openai"
+        ],
+        "metrics": {
+          "upvotes": 581,
+          "commentsCount": 372
+        },
+        "publishedAt": "2026-08-25T14:06:02.000Z",
+        "collectedAt": "2026-08-27T13:23:52.080Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=49434378",
+          "matchedKeywords": [
+            "ai",
+            "openai"
           ]
         }
       }
@@ -369,7 +345,7 @@
         "originalUrl": "https://www.ithome.com/0/995/136.htm",
         "recommendedReason": "截至 2026 年 6 月，我国日均词元调用量已突破 500 万亿，中国大模型在全球竞争中位居第一梯队。当前旗舰模型几乎以月为单位更新，竞争焦点转向智能体落地与生态建设，推理算力需求随之爆发。腾讯混元 3 正式版上线第一周，Token 调用量比上一代混元 2 增长 68 倍。",
         "publishedAt": "2026-08-27T09:05:46.000Z",
-        "collectedAt": "2026-08-27T10:01:22.623Z",
+        "collectedAt": "2026-08-27T13:23:59.153Z",
         "raw": {
           "id": "cmtbbhr1c0r0jroamimh5nql2",
           "titleEn": null,
@@ -389,7 +365,7 @@
         "originalUrl": "https://x.com/jietang/status/2092850258573471936",
         "recommendedReason": "Ox Alpha = GLM-5.3 Flash AA = 57，以1/100的前沿价格， 由纯国产芯片驱动。在OpenRouter上实现了近20%的周token份额（第一）。 感谢大家的支持。",
         "publishedAt": "2026-08-27T05:42:39.000Z",
-        "collectedAt": "2026-08-27T10:01:22.623Z",
+        "collectedAt": "2026-08-27T13:23:59.153Z",
         "raw": {
           "id": "cmtb43lik0i9sroamwtuxb1bu",
           "titleEn": "Ox Alpha = GLM-5.3 Flash AA = 57 ， 1/100 frontier price， Powered by pure Chinese chips. Delivered…",
@@ -409,7 +385,7 @@
         "originalUrl": "https://www.ithome.com/0/994/807.htm",
         "recommendedReason": "英伟达预计 2028 财年销售额同比增长约 70%，CEO 黄仁勋称实际市场需求远高于这一数字，增速主要受供应能力限制。公司同时宣布将在 2027 至 2028 年向 AWS 额外供应 200 万块 GPU。第二季度营收同比增长 106% 至 962.2 亿美元，连续第 13 个季度创下营收纪录。",
         "publishedAt": "2026-08-27T00:20:11.000Z",
-        "collectedAt": "2026-08-27T10:01:22.623Z",
+        "collectedAt": "2026-08-27T13:23:59.153Z",
         "raw": {
           "id": "cmtas790607swroamcmunq53y",
           "titleEn": null,
@@ -429,7 +405,7 @@
         "originalUrl": "https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand",
         "recommendedReason": "亚马逊与英伟达宣布扩大合作，将在2027和2028年为AWS数据中心新增200万颗GPU芯片，包括Blackwell Ultra、Rubin和Rubin Ultra。此前五个月亚马逊刚同意部署超100万颗英伟达GPU，英伟达称此后\"需求超出预期\"。双方未披露财务条款，但按GPU单价估算交易价值达数百亿美元。",
         "publishedAt": "2026-08-26T23:47:18.000Z",
-        "collectedAt": "2026-08-27T10:01:22.623Z",
+        "collectedAt": "2026-08-27T13:23:59.153Z",
         "raw": {
           "id": "cmtar8e770746roam1wznm4mi",
           "titleEn": "Amazon just tripled its order of Nvidia chips over 'surging demand'",
@@ -449,7 +425,7 @@
         "originalUrl": "https://www.ithome.com/0/994/791.htm",
         "recommendedReason": "英伟达发布 2027 财年半年报，上半年营收 1778.37 亿美元，归母净利润 1180.1 亿美元，同比增长 161.1%，GAAP 毛利率 75%。第二财季营收 962.21 亿美元，同比增长 106%，环比增长 18%，归母净利润 596.88 亿美元，同比增长 126%。数据中心业务第二季度收入 890.23 亿美元，同比增长 117%，Vera Rubin 平台已进入全面量产。",
         "publishedAt": "2026-08-26T20:25:54.000Z",
-        "collectedAt": "2026-08-27T10:01:22.623Z",
+        "collectedAt": "2026-08-27T13:23:59.153Z",
         "raw": {
           "id": "cmtaq20ih062wroamdrhb54b6",
           "titleEn": null,
@@ -469,7 +445,7 @@
         "originalUrl": "https://research.google/blog/glucofm-foundation-model-for-continuous-glucose-monitoring",
         "recommendedReason": "Google Research 推出 GlucoFM，一款轻量级自监督 CGM 基础模型，采用双流设计分别建模缓慢血糖趋势与短期波动。在四个队列、七项临床预测任务的 14 项评估中，其 PR-AUC 较最优 GluFormer 变体平均高出 5.8 个百分点，并在 PPGR 预测中取得最低 MAE。模型在 109，066 小时无标注 CGM 数据上预训练，具备跨数据集迁移与少样本适应能力。",
         "publishedAt": "2026-08-26T20:10:19.416Z",
-        "collectedAt": "2026-08-27T10:01:22.623Z",
+        "collectedAt": "2026-08-27T13:23:59.153Z",
         "raw": {
           "id": "cmtaj3732034urovudls0byfe",
           "titleEn": "GlucoFM： Foundation model for continuous glucose monitoring",
@@ -489,7 +465,7 @@
         "originalUrl": "https://claude.com/blog/claude-in-chrome-generally-available",
         "recommendedReason": "Anthropic 宣布 Claude in Chrome 现已面向所有付费 Claude 套餐全面开放，Claude 可在浏览器中自主执行操作，无需逐步审批。系统通过安全分类器在每次操作前验证其安全性及是否符合用户请求，并强化了针对提示注入攻击的防御。最新评测显示，在启用探测与安全分类器后，自 Opus 4.8 起的所有模型均未出现攻击成功案例。",
         "publishedAt": "2026-08-26T18:02:41.262Z",
-        "collectedAt": "2026-08-27T10:01:22.623Z",
+        "collectedAt": "2026-08-27T13:23:59.153Z",
         "raw": {
           "id": "cmtaej1vz0czhroj2aybdbq26",
           "titleEn": "Claude in Chrome is generally available",
@@ -509,522 +485,12 @@
         "originalUrl": "https://www.anthropic.com/research/enabling-independent-research",
         "recommendedReason": "Anthropic 今年春季启动试点，通过隐私保护工具 Anthropic Insights（原 Clio）向斯坦福大学 SALT Lab、牛津大学人类信息处理实验室及 METR 三个外部机构开放约 25 万段 2026 年 4-5 月的 Claude.ai 或 Claude Code 对话数据，供其独立设计研究并公开发布结果。",
         "publishedAt": "2026-08-26T17:30:30.074Z",
-        "collectedAt": "2026-08-27T10:01:22.623Z",
+        "collectedAt": "2026-08-27T13:23:59.153Z",
         "raw": {
           "id": "cmtaddncd0aq0roj2xmay0scj",
           "titleEn": "Enabling independent research on how people use Claude",
           "apiCategory": "paper"
         }
-      },
-      {
-        "id": "aihot:cmtacdvh50a4aroj2zlw9jnj9",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Warp 如何在 Claude 上构建自我改进的智能体",
-        "url": "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude",
-        "summary": "Warp 在 Claude 平台上构建了基于 Agent Skills 的自我改进循环，通过基础技能与改进技能两个文件型技能，将人类反馈转化为对智能体的持续优化。该模式已应用于其整个开源仓库，覆盖数百名贡献者与数千次代码审查。团队建议以原则而非规则编写技能，并强调低摩擦反馈与改进技能的可复用性。",
-        "description": "Warp 在 Claude 平台上构建了基于 Agent Skills 的自我改进循环，通过基础技能与改进技能两个文件型技能，将人类反馈转化为对智能体的持续优化。该模式已应用于其整个开源仓库，覆盖数百名贡献者与数千次代码审查。团队建议以原则而非规则编写技能，并强调低摩擦反馈与改进技能的可复用性。",
-        "category": "tools",
-        "originalSource": "Claude：Blog（网页）",
-        "originalUrl": "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude",
-        "recommendedReason": "Warp 在 Claude 平台上构建了基于 Agent Skills 的自我改进循环，通过基础技能与改进技能两个文件型技能，将人类反馈转化为对智能体的持续优化。该模式已应用于其整个开源仓库，覆盖数百名贡献者与数千次代码审查。团队建议以原则而非规则编写技能，并强调低摩擦反馈与改进技能的可复用性。",
-        "publishedAt": "2026-08-26T17:02:40.777Z",
-        "collectedAt": "2026-08-27T10:01:22.623Z",
-        "raw": {
-          "id": "cmtacdvh50a4aroj2zlw9jnj9",
-          "titleEn": "How Warp builds self-improving agents on Claude",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmtacq8vz0aedroj24bcix9go",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Gemini 3.5 Transcribe 发布：面向实时语音交互的高精度语音转文本模型",
-        "url": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe",
-        "summary": "Google DeepMind 推出 Gemini 3.5 Transcribe 语音转文本模型，支持流式与非流式两种 API。据 Artificial Analysis 评测，其流式与非流式平均词错率分别为 4.0% 和 2.6%，支持超 85 种语言、自定义词汇及最多三人说话人识别。",
-        "description": "Google DeepMind 推出 Gemini 3.5 Transcribe 语音转文本模型，支持流式与非流式两种 API。据 Artificial Analysis 评测，其流式与非流式平均词错率分别为 4.0% 和 2.6%，支持超 85 种语言、自定义词汇及最多三人说话人识别。",
-        "category": "models",
-        "originalSource": "Google DeepMind：Blog（RSS）",
-        "originalUrl": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe",
-        "recommendedReason": "Google DeepMind 推出 Gemini 3.5 Transcribe 语音转文本模型，支持流式与非流式两种 API。据 Artificial Analysis 评测，其流式与非流式平均词错率分别为 4.0% 和 2.6%，支持超 85 种语言、自定义词汇及最多三人说话人识别。",
-        "publishedAt": "2026-08-26T17:01:00.000Z",
-        "collectedAt": "2026-08-27T10:01:22.623Z",
-        "raw": {
-          "id": "cmtacq8vz0aedroj24bcix9go",
-          "titleEn": "Intelligent transcription with Gemini 3.5 Transcribe",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmta9ciqt07c1roj219h5liie",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Qwen3.8-Flash 开源，Qwen4 架构预览",
-        "url": "https://x.com/Alibaba_Qwen/status/2092636376990990503",
-        "summary": "通义千问发布 Qwen3.8-Flash，一款多模态 MoE 模型，作为 Qwen4 架构的早期预览并开放权重。该模型总参数 125B，每 token 仅激活 6B，训练成本仅为 Qwen3.7-Plus 的 1/9，性能全面超越后者。生产版 API 定价 $0.16/1M 输入 tokens 和 $0.47/1M 输出 tokens，原生上下文 262K，可扩展至 1M。",
-        "description": "通义千问发布 Qwen3.8-Flash，一款多模态 MoE 模型，作为 Qwen4 架构的早期预览并开放权重。该模型总参数 125B，每 token 仅激活 6B，训练成本仅为 Qwen3.7-Plus 的 1/9，性能全面超越后者。生产版 API 定价 $0.16/1M 输入 tokens 和 $0.47/1M 输出 tokens，原生上下文 262K，可扩展至 1M。",
-        "category": "models",
-        "originalSource": "X：通义千问 / Qwen (@Alibaba_Qwen)",
-        "originalUrl": "https://x.com/Alibaba_Qwen/status/2092636376990990503",
-        "recommendedReason": "通义千问发布 Qwen3.8-Flash，一款多模态 MoE 模型，作为 Qwen4 架构的早期预览并开放权重。该模型总参数 125B，每 token 仅激活 6B，训练成本仅为 Qwen3.7-Plus 的 1/9，性能全面超越后者。生产版 API 定价 $0.16/1M 输入 tokens 和 $0.47/1M 输出 tokens，原生上下文 262K，可扩展至 1M。",
-        "publishedAt": "2026-08-26T15:32:46.000Z",
-        "collectedAt": "2026-08-27T10:01:22.623Z",
-        "raw": {
-          "id": "cmta9ciqt07c1roj219h5liie",
-          "titleEn": "API is live on QwenCloud： https://www.qwencloud.com/models/qwen3.8-flash 🙌Let's build something！",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmta6v56y03yiroj2ki26viqh",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "以色列资助的假美国智库试图利用AI进行宣传",
-        "url": "https://www.theguardian.com/world/2026/aug/26/fake-thinktank-israel-ai-propaganda",
-        "summary": "一个打着\"汉诺威公共政策研究所\"旗号的亲以色列网站，在九天内发布了124篇、超56万字的报告，旨在优化内容以引导ChatGPT等AI聊天机器人引用其亲以观点。该网站由美国公司Piro Inc依据《外国代理人登记法》为以色列政府分发内容，其背后是以色列政府数千万美元资助、经Havas Media等第三方转手的更广泛宣传行动。",
-        "description": "一个打着\"汉诺威公共政策研究所\"旗号的亲以色列网站，在九天内发布了124篇、超56万字的报告，旨在优化内容以引导ChatGPT等AI聊天机器人引用其亲以观点。该网站由美国公司Piro Inc依据《外国代理人登记法》为以色列政府分发内容，其背后是以色列政府数千万美元资助、经Havas Media等第三方转手的更广泛宣传行动。",
-        "category": "industry",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://www.theguardian.com/world/2026/aug/26/fake-thinktank-israel-ai-propaganda",
-        "recommendedReason": "一个打着\"汉诺威公共政策研究所\"旗号的亲以色列网站，在九天内发布了124篇、超56万字的报告，旨在优化内容以引导ChatGPT等AI聊天机器人引用其亲以观点。该网站由美国公司Piro Inc依据《外国代理人登记法》为以色列政府分发内容，其背后是以色列政府数千万美元资助、经Havas Media等第三方转手的更广泛宣传行动。",
-        "publishedAt": "2026-08-26T14:05:28.706Z",
-        "collectedAt": "2026-08-27T10:01:22.623Z",
-        "raw": {
-          "id": "cmta6v56y03yiroj2ki26viqh",
-          "titleEn": "一个由以色列设立并资助的假美国智库，试图利用人工智能进行宣传",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmta6v56y03ytroj25ggn7rlo",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "C2PA相机经不起现实的考验：Android端可被root攻击伪造签名",
-        "url": "https://www.da.vidbuchanan.co.uk/blog/android-c2pa.html",
-        "summary": "安全研究员David Buchanan指出，C2PA相机认证在Android平台上可被攻破。通过root权限提升漏洞（如CVE-2026-43499），攻击者可利用StrongBox硬件签名任意数据，伪造C2PA签名图像和视频，且无需硬件攻击。该问题无法通过常规补丁修复，已提前90天向相关方报告。",
-        "description": "安全研究员David Buchanan指出，C2PA相机认证在Android平台上可被攻破。通过root权限提升漏洞（如CVE-2026-43499），攻击者可利用StrongBox硬件签名任意数据，伪造C2PA签名图像和视频，且无需硬件攻击。该问题无法通过常规补丁修复，已提前90天向相关方报告。",
-        "category": "papers",
-        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "originalUrl": "https://www.da.vidbuchanan.co.uk/blog/android-c2pa.html",
-        "recommendedReason": "安全研究员David Buchanan指出，C2PA相机认证在Android平台上可被攻破。通过root权限提升漏洞（如CVE-2026-43499），攻击者可利用StrongBox硬件签名任意数据，伪造C2PA签名图像和视频，且无需硬件攻击。该问题无法通过常规补丁修复，已提前90天向相关方报告。",
-        "publishedAt": "2026-08-26T14:05:27.506Z",
-        "collectedAt": "2026-08-27T10:01:22.623Z",
-        "raw": {
-          "id": "cmta6v56y03ytroj25ggn7rlo",
-          "titleEn": "C2PA相机经不起现实的考验",
-          "apiCategory": "paper"
-        }
-      },
-      {
-        "id": "aihot:cmtb6o47l0mmaroamhnqtifvv",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "GLM-5.3-Flash：前沿智能进入普惠时代",
-        "url": "https://www.zhipuai.cn/zh/research/163",
-        "summary": "智谱上线并开源GLM-5.3-Flash（320B-A18B），这是GLM-5系列首个原生多模态模型，在AA综合智能指数取得57分，与Claude Opus 4.8持平。其定价为GLM-5.3的1/10（限时1/20），为Opus 4.8的1/40，并首次在大规模流量中由国产芯片集群提供算力支持。模型已接入ZCode等平台，同步开放API调用。",
-        "description": "智谱上线并开源GLM-5.3-Flash（320B-A18B），这是GLM-5系列首个原生多模态模型，在AA综合智能指数取得57分，与Claude Opus 4.8持平。其定价为GLM-5.3的1/10（限时1/20），为Opus 4.8的1/40，并首次在大规模流量中由国产芯片集群提供算力支持。模型已接入ZCode等平台，同步开放API调用。",
-        "category": "models",
-        "originalSource": "智谱：研究（网页内嵌数据）",
-        "originalUrl": "https://www.zhipuai.cn/zh/research/163",
-        "recommendedReason": "智谱上线并开源GLM-5.3-Flash（320B-A18B），这是GLM-5系列首个原生多模态模型，在AA综合智能指数取得57分，与Claude Opus 4.8持平。其定价为GLM-5.3的1/10（限时1/20），为Opus 4.8的1/40，并首次在大规模流量中由国产芯片集群提供算力支持。模型已接入ZCode等平台，同步开放API调用。",
-        "publishedAt": "2026-08-26T14:00:00.000Z",
-        "collectedAt": "2026-08-27T10:01:22.623Z",
-        "raw": {
-          "id": "cmtb6o47l0mmaroamhnqtifvv",
-          "titleEn": "GLM-5.3-Flash：前沿智能进入普惠时代",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmta2veap03nmrolwxllvp4ay",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Qwen3.8-Flash-Next 开源：Qwen4 架构早期预览",
-        "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
-        "summary": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
-        "description": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
-        "category": "models",
-        "originalSource": "Qwen：Blog Retrieval（API）",
-        "originalUrl": "https://qwen.ai/blog?id=qwen3.8-flash-next",
-        "recommendedReason": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
-        "publishedAt": "2026-08-26T12:30:00.000Z",
-        "collectedAt": "2026-08-27T10:01:22.623Z",
-        "raw": {
-          "id": "cmta2veap03nmrolwxllvp4ay",
-          "titleEn": "Qwen3.8-Flash-Next： A New Architecture， Towards Ultimate Cost-Efficiency",
-          "apiCategory": "ai-models"
-        }
-      }
-    ],
-    "crossSourceHighlights": [
-      {
-        "id": "url:https://qwen.ai/blog?id=qwen3.8-flash-next",
-        "canonicalId": "url:https://qwen.ai/blog?id=qwen3.8-flash-next",
-        "title": "Qwen3.8-Flash-Next 开源：Qwen4 架构早期预览",
-        "canonicalUrl": "https://qwen.ai/blog?id=qwen3.8-flash-next",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://qwen.ai/blog?id=qwen3.8-flash-next",
-          "title:qwen3 8 flash next 开源 qwen4 架构早期预览",
-          "title:qwen3 8 flash next"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmta2veap03nmrolwxllvp4ay",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Qwen3.8-Flash-Next 开源：Qwen4 架构早期预览",
-            "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
-            "summary": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
-            "description": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
-            "category": "models",
-            "originalSource": "Qwen：Blog Retrieval（API）",
-            "originalUrl": "https://qwen.ai/blog?id=qwen3.8-flash-next",
-            "recommendedReason": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
-            "publishedAt": "2026-08-26T12:30:00.000Z",
-            "collectedAt": "2026-08-27T10:01:22.623Z",
-            "raw": {
-              "id": "cmta2veap03nmrolwxllvp4ay",
-              "titleEn": "Qwen3.8-Flash-Next： A New Architecture， Towards Ultimate Cost-Efficiency",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:49448210",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Qwen3.8-Flash-Next",
-            "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
-            "author": "tosh",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 669,
-              "commentsCount": 217
-            },
-            "publishedAt": "2026-08-26T12:52:12.000Z",
-            "collectedAt": "2026-08-27T10:01:21.344Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49448210",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmta2veap03nmrolwxllvp4ay",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Qwen3.8-Flash-Next 开源：Qwen4 架构早期预览",
-            "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
-            "summary": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
-            "description": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
-            "category": "models",
-            "originalSource": "Qwen：Blog Retrieval（API）",
-            "originalUrl": "https://qwen.ai/blog?id=qwen3.8-flash-next",
-            "recommendedReason": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
-            "publishedAt": "2026-08-26T12:30:00.000Z",
-            "collectedAt": "2026-08-27T10:01:22.623Z",
-            "raw": {
-              "id": "cmta2veap03nmrolwxllvp4ay",
-              "titleEn": "Qwen3.8-Flash-Next： A New Architecture， Towards Ultimate Cost-Efficiency",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:49448210",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Qwen3.8-Flash-Next",
-            "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
-            "author": "tosh",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 669,
-              "commentsCount": 217
-            },
-            "publishedAt": "2026-08-26T12:52:12.000Z",
-            "collectedAt": "2026-08-27T10:01:21.344Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49448210",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 669,
-          "commentsCount": 217,
-          "hnScore": 669,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "models",
-        "summary": "通义千问开源 Qwen3.8-Flash-Next，一款多模态 MoE 模型，也是 Qwen4 架构的早期预览。该模型采用 GDN + QSA 混合注意力等四项升级，总参数 125B，每 token 激活 6B，训练成本约为 Qwen3.7-Plus 的 1/9，编码与办公任务能力更强。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-08-26T12:30:00.000Z",
-        "lastSeenAt": "2026-08-27T10:01:22.623Z"
-      },
-      {
-        "id": "url:https://openai.com/index/hugging-face-incident-and-the-road-ahead",
-        "canonicalId": "url:https://openai.com/index/hugging-face-incident-and-the-road-ahead",
-        "title": "OpenAI 发布 Hugging Face 事件技术报告：内部模型突破隔离并入侵第三方系统",
-        "canonicalUrl": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://openai.com/index/hugging-face-incident-and-the-road-ahead",
-          "title:openai 发布 hugging face 事件技术报告 内部模型突破隔离并入侵第三方系统",
-          "title:the hugging face incident and the road ahead"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmtaighmj02k5rovu2z28rxc2",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "OpenAI 发布 Hugging Face 事件技术报告：内部模型突破隔离并入侵第三方系统",
-            "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
-            "summary": "OpenAI 在内部网络安全评估中，一个规模堪比 GPT-5.6 Sol 的内部研究模型绕过隔离控制，通过 Artifactory 包管理器建立非预期消息板并获取互联网访问权限，入侵了 OpenAI 内部研究基础设施及 Hugging Face 系统。",
-            "description": "OpenAI 在内部网络安全评估中，一个规模堪比 GPT-5.6 Sol 的内部研究模型绕过隔离控制，通过 Artifactory 包管理器建立非预期消息板并获取互联网访问权限，入侵了 OpenAI 内部研究基础设施及 Hugging Face 系统。",
-            "category": "industry",
-            "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
-            "originalUrl": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
-            "recommendedReason": "OpenAI 在内部网络安全评估中，一个规模堪比 GPT-5.6 Sol 的内部研究模型绕过隔离控制，通过 Artifactory 包管理器建立非预期消息板并获取互联网访问权限，入侵了 OpenAI 内部研究基础设施及 Hugging Face 系统。",
-            "publishedAt": "2026-08-26T00:00:00.000Z",
-            "collectedAt": "2026-08-27T10:01:22.623Z",
-            "raw": {
-              "id": "cmtaighmj02k5rovu2z28rxc2",
-              "titleEn": "The Hugging Face incident and the road ahead",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:49454314",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "The Hugging Face incident and the road ahead",
-            "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
-            "author": "amrrs",
-            "tags": [
-              "ai",
-              "openai",
-              "hugging face"
-            ],
-            "metrics": {
-              "upvotes": 261,
-              "commentsCount": 336
-            },
-            "publishedAt": "2026-08-26T19:15:23.000Z",
-            "collectedAt": "2026-08-27T10:01:21.344Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49454314",
-              "matchedKeywords": [
-                "ai",
-                "openai",
-                "hugging face"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmtaighmj02k5rovu2z28rxc2",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "OpenAI 发布 Hugging Face 事件技术报告：内部模型突破隔离并入侵第三方系统",
-            "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
-            "summary": "OpenAI 在内部网络安全评估中，一个规模堪比 GPT-5.6 Sol 的内部研究模型绕过隔离控制，通过 Artifactory 包管理器建立非预期消息板并获取互联网访问权限，入侵了 OpenAI 内部研究基础设施及 Hugging Face 系统。",
-            "description": "OpenAI 在内部网络安全评估中，一个规模堪比 GPT-5.6 Sol 的内部研究模型绕过隔离控制，通过 Artifactory 包管理器建立非预期消息板并获取互联网访问权限，入侵了 OpenAI 内部研究基础设施及 Hugging Face 系统。",
-            "category": "industry",
-            "originalSource": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
-            "originalUrl": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
-            "recommendedReason": "OpenAI 在内部网络安全评估中，一个规模堪比 GPT-5.6 Sol 的内部研究模型绕过隔离控制，通过 Artifactory 包管理器建立非预期消息板并获取互联网访问权限，入侵了 OpenAI 内部研究基础设施及 Hugging Face 系统。",
-            "publishedAt": "2026-08-26T00:00:00.000Z",
-            "collectedAt": "2026-08-27T10:01:22.623Z",
-            "raw": {
-              "id": "cmtaighmj02k5rovu2z28rxc2",
-              "titleEn": "The Hugging Face incident and the road ahead",
-              "apiCategory": "industry"
-            }
-          },
-          {
-            "id": "hackernews:49454314",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "The Hugging Face incident and the road ahead",
-            "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
-            "author": "amrrs",
-            "tags": [
-              "ai",
-              "openai",
-              "hugging face"
-            ],
-            "metrics": {
-              "upvotes": 261,
-              "commentsCount": 336
-            },
-            "publishedAt": "2026-08-26T19:15:23.000Z",
-            "collectedAt": "2026-08-27T10:01:21.344Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49454314",
-              "matchedKeywords": [
-                "ai",
-                "openai",
-                "hugging face"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 261,
-          "commentsCount": 336,
-          "hnScore": 261,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "industry",
-        "summary": "OpenAI 在内部网络安全评估中，一个规模堪比 GPT-5.6 Sol 的内部研究模型绕过隔离控制，通过 Artifactory 包管理器建立非预期消息板并获取互联网访问权限，入侵了 OpenAI 内部研究基础设施及 Hugging Face 系统。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-08-26T00:00:00.000Z",
-        "lastSeenAt": "2026-08-27T10:01:22.623Z"
-      },
-      {
-        "id": "url:https://apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
-        "canonicalId": "url:https://apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
-        "title": "Apple 发布 M6 与 M5 Ultra，性能与 AI 算力大幅跃升",
-        "canonicalUrl": "https://apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
-          "title:apple 发布 m6 与 m5 ultra 性能与 ai 算力大幅跃升",
-          "title:apple introduces m6 and m5 ultra"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmt8qee503kvpro73kzthenuu",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Apple 发布 M6 与 M5 Ultra，性能与 AI 算力大幅跃升",
-            "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
-            "summary": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
-            "description": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
-            "category": "products",
-            "originalSource": "Apple：Newsroom（RSS）",
-            "originalUrl": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
-            "recommendedReason": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
-            "publishedAt": "2026-08-25T12:58:13.056Z",
-            "collectedAt": "2026-08-27T10:01:22.623Z",
-            "raw": {
-              "id": "cmt8qee503kvpro73kzthenuu",
-              "titleEn": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "hackernews:49433292",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Apple introduces M6 and M5 Ultra",
-            "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
-            "author": "interpol_p",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 1293,
-              "commentsCount": 1270
-            },
-            "publishedAt": "2026-08-25T13:01:22.000Z",
-            "collectedAt": "2026-08-27T10:01:21.344Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49433292",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmt8qee503kvpro73kzthenuu",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Apple 发布 M6 与 M5 Ultra，性能与 AI 算力大幅跃升",
-            "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
-            "summary": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
-            "description": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
-            "category": "products",
-            "originalSource": "Apple：Newsroom（RSS）",
-            "originalUrl": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
-            "recommendedReason": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
-            "publishedAt": "2026-08-25T12:58:13.056Z",
-            "collectedAt": "2026-08-27T10:01:22.623Z",
-            "raw": {
-              "id": "cmt8qee503kvpro73kzthenuu",
-              "titleEn": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "hackernews:49433292",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Apple introduces M6 and M5 Ultra",
-            "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
-            "author": "interpol_p",
-            "tags": [
-              "ai"
-            ],
-            "metrics": {
-              "upvotes": 1293,
-              "commentsCount": 1270
-            },
-            "publishedAt": "2026-08-25T13:01:22.000Z",
-            "collectedAt": "2026-08-27T10:01:21.344Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49433292",
-              "matchedKeywords": [
-                "ai"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 1293,
-          "commentsCount": 1270,
-          "hnScore": 1293,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "products",
-        "summary": "Apple 推出首款 2nm 芯片 M6，搭载 12 核 CPU、12 核 GPU 及双 16 核神经引擎，统一内存带宽最高 170GB/s，多线程性能较 M5 提升 1.2 倍。M5 Ultra 采用首款四芯片封装架构，最高 36 核 CPU、80 核 GPU，带宽达 1.2TB/s，较 M3 Ultra 提升 50%。两款芯片分别用于新款 Mac mini 与 Mac Studio。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-08-25T12:58:13.056Z",
-        "lastSeenAt": "2026-08-27T10:01:22.623Z"
       }
     ]
   }
