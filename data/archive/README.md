@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-28T05:30:54.515Z
+Updated: 2026-08-28T11:24:03.792Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -14,7 +14,7 @@ Updated: 2026-08-28T05:30:54.515Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-08-28 | daily | [AI Developer Radar｜Daily｜2026-08-28](2026/08/2026-08-28-daily.md) | tt-a1i/archify, milvus-io/milvus, K-Dense-AI/scientific-agent-skills, ConardLi/garden-skills, ultralytics/yolov5 |
+| 2026-08-28 | daily | [AI Developer Radar｜Daily｜2026-08-28](2026/08/2026-08-28-daily.md) | tt-a1i/archify, K-Dense-AI/scientific-agent-skills, calesthio/OpenMontage, rohitg00/ai-engineering-from-scratch, Graphify-Labs/graphify |
 | 2026-08-27 | daily | [AI Developer Radar｜Daily｜2026-08-27](2026/08/2026-08-27-daily.md) | ultralytics/yolov5, Tencent/ncnn, MadsLorentzen/ai-job-search, calesthio/OpenMontage, freestylefly/awesome-gpt-image-2 |
 | 2026-08-26 | daily | [AI Developer Radar｜Daily｜2026-08-26](2026/08/2026-08-26-daily.md) | ultralytics/yolov5, Tencent/ncnn, deepspeedai/DeepSpeed, freestylefly/awesome-gpt-image-2, MadsLorentzen/ai-job-search |
 | 2026-08-25 | daily | [AI Developer Radar｜Daily｜2026-08-25](2026/08/2026-08-25-daily.md) | AgriciDaniel/claude-obsidian, deepspeedai/DeepSpeed, milvus-io/milvus, apache/maka, rohitg00/ai-engineering-from-scratch |
