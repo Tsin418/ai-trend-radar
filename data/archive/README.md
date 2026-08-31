@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-08-31T06:26:46.333Z
+Updated: 2026-08-31T14:08:17.344Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -15,7 +15,7 @@ Updated: 2026-08-31T06:26:46.333Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-08-31 | daily | [AI Developer Radar｜Daily｜2026-08-31](2026/08/2026-08-31-daily.md) | THU-MAIC/OpenMAIC, tt-a1i/archify, every-app/open-seo, Graphify-Labs/graphify, rohitg00/ai-engineering-from-scratch |
+| 2026-08-31 | daily | [AI Developer Radar｜Daily｜2026-08-31](2026/08/2026-08-31-daily.md) | Osmantic/ODS, k1tbyte/Wand-Enhancer, THU-MAIC/OpenMAIC, kaifcodec/user-scanner, handsomestWei/patent-disclosure-skill |
 | 2026-08-30 | daily | [AI Developer Radar｜Daily｜2026-08-30](2026/08/2026-08-30-daily.md) | hpcaitech/ColossalAI, tt-a1i/archify, every-app/open-seo, Graphify-Labs/graphify, calesthio/OpenMontage |
 | 2026-08-29 | daily | [AI Developer Radar｜Daily｜2026-08-29](2026/08/2026-08-29-daily.md) | JetBrains/go-modern-guidelines, bilawalsidhu/gods-eye-view, abhigyanpatwari/GitNexus, tt-a1i/archify, calesthio/OpenMontage |
 | 2026-08-28 | daily | [AI Developer Radar｜Daily｜2026-08-28](2026/08/2026-08-28-daily.md) | tt-a1i/archify, K-Dense-AI/scientific-agent-skills, calesthio/OpenMontage, rohitg00/ai-engineering-from-scratch, Graphify-Labs/graphify |
