@@ -1,171 +1,212 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-09-03T05:57:11.094Z",
+  "generatedAt": "2026-09-03T07:32:24.735Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "http://arxiv.org/abs/2609.02885v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Discriminative World Models for Web Agents",
-        "url": "https://arxiv.org/pdf/2609.02885v1",
-        "description": "Recent web agents use world models for test-time action selection by sampling candidate actions, predicting the resulting web states, and ranking them with a ranker model or a Process Reward Model (PRM). These world models are typically trained via supervised next-state prediction to generate fixed representations like HTML or AXTree snapshots. However, this objective is misaligned with the downstream ranker, which relies on predicted states being discriminative across candidates to accurately s",
-        "summary": "Recent web agents use world models for test-time action selection by sampling candidate actions, predicting the resulting web states, and ranking them with a ranker model or a Process Reward Model (PRM). These world models are typically trained via supervised next-state prediction to generate fixed representations like HTML or AXTree snapshots. However, this objective is misaligned with the downstream ranker, which relies on predicted states being discriminative across candidates to accurately score them. To address this, we introduce predicted-state matching, a training objective where the predicted representation must distinguish the true resulting state from those reached by alternative actions. We train these models using a branching web-agent dataset derived from WebArena Go-Browse trajectories, where every decision point contains multiple alternative actions and their resulting states. Experiments on our held-out predicted-state matching benchmark show that our approach outperforms world models trained with supervised next-state prediction. We further show that our approach improves PRM-style action ranking on WebPRMBench compared with action-only PRMs and PRMs augmented with supervised-next-state world models. Finally, on WebArena-Lite, using our world model for test-time action selection improves end-to-end task success. Our project page is available at: https://dhruvpendharkar.github.io/dwm/.",
-        "author": "Kelvin Li, Dhruv Pendharkar, Anish Pahilajani, Chuyi Shang, Leon Oks, Leonid Karlinsky, Rogerio Feris, Trevor Darrell, Roei Herzig",
+        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "author": "open-llm-leaderboard",
         "tags": [
-          "cs.AI",
-          "cs.LG",
-          "agent",
-          "benchmark"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math",
+          "region:us"
         ],
-        "category": "cs.AI",
-        "language": "en",
-        "publishedAt": "2026-09-02T17:59:40Z",
-        "updatedAt": "2026-09-02T17:59:40Z",
-        "collectedAt": "2026-09-03T05:56:59.178Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2609.02885v1",
-          "authors": [
-            "Kelvin Li",
-            "Dhruv Pendharkar",
-            "Anish Pahilajani",
-            "Chuyi Shang",
-            "Leon Oks",
-            "Leonid Karlinsky",
-            "Rogerio Feris",
-            "Trevor Darrell",
-            "Roei Herzig"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 14087
         },
-        "recommendedReason": "Matched AI developer keywords: agent, benchmark"
+        "publishedAt": "2023-04-17T11:40:06.000Z",
+        "updatedAt": "2026-05-27T08:54:50.000Z",
+        "collectedAt": "2026-09-03T07:32:24.957Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "🏆"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2609.02861v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Towards Trustworthy Autonomous Robots: An Explainable AI-Based Decision Framework",
-        "url": "https://arxiv.org/pdf/2609.02861v1",
-        "description": "Autonomous robots powered by deep learning face a fundamental auditability challenge: when incidents occur, investigators cannot reconstruct why the system made specific decisions. This paper presents TRACE (Transparent Reasoning Architecture for Credible Execution), a decision framework that ensures every autonomous action can be traced back to sensor evidence through documented causal chains. The framework organizes decision-making into four auditable layers: Semantic Perception for evidence-g",
-        "summary": "Autonomous robots powered by deep learning face a fundamental auditability challenge: when incidents occur, investigators cannot reconstruct why the system made specific decisions. This paper presents TRACE (Transparent Reasoning Architecture for Credible Execution), a decision framework that ensures every autonomous action can be traced back to sensor evidence through documented causal chains. The framework organizes decision-making into four auditable layers: Semantic Perception for evidence-grounded entity recognition, Belief Reasoning for probabilistic state estimation with causal graphs, Action Synthesis for constraint-aware planning with counterfactual documentation, and Execution Verification for compliance monitoring. TRACE is model-agnostic yet designed to integrate learning-based perception modules (CNNs, transformers) while preserving decision-level auditability. We evaluate the framework using three objective metrics: Evidence Traceability (sensor-to-decision linkage), Decision Reconstructability (post-hoc analysis capability), and Temporal Continuity (audit trail completeness). Experimental evaluation on warehouse robot navigation demonstrates that TRACE achieves 98.6% evidence traceability, 99.0% temporal continuity, and 98.1% decision reconstructability across 500 simulated decision cycles. Post-hoc methods like LIME provide feature attributions but lack the artifact structure needed for decision-level reconstruction. The framework addresses EU AI Act requirements for high-risk system transparency and contributes to Explainable AI for safety-critical autonomous systems.",
-        "author": "Cagri Temel",
+        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "AI Comic Factory",
+        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
+        "author": "jbilcke-hf",
         "tags": [
-          "cs.RO",
-          "cs.AI",
-          "safety",
-          "evaluation"
+          "docker",
+          "region:us"
         ],
-        "category": "cs.RO",
-        "language": "en",
-        "publishedAt": "2026-09-02T17:44:25Z",
-        "updatedAt": "2026-09-02T17:44:25Z",
-        "collectedAt": "2026-09-03T05:56:59.178Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2609.02861v1",
-          "authors": [
-            "Cagri Temel"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 11236
         },
-        "recommendedReason": "Matched AI developer keywords: safety, evaluation"
+        "publishedAt": "2023-08-25T14:46:47.000Z",
+        "updatedAt": "2025-10-30T19:17:19.000Z",
+        "collectedAt": "2026-09-03T07:32:24.957Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "👩‍🎨"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2609.02859v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "User Feedback Provides a Unique Signal that LLMs Can not Detect",
-        "url": "https://arxiv.org/pdf/2609.02859v1",
-        "description": "Harnessing naturally occurring feedback from user interactions offers a promising learning signal for Large Language Models (LLMs). However, recent studies suggest this feedback is inherently noisy and difficult to leverage effectively. We challenge this conception by demonstrating that user feedback is a highly actionable signal for improvement, and that its perceived ineffectiveness stems from a systematic bias in current evaluation paradigms. To isolate the usefulness of feedback, we construc",
-        "summary": "Harnessing naturally occurring feedback from user interactions offers a promising learning signal for Large Language Models (LLMs). However, recent studies suggest this feedback is inherently noisy and difficult to leverage effectively. We challenge this conception by demonstrating that user feedback is a highly actionable signal for improvement, and that its perceived ineffectiveness stems from a systematic bias in current evaluation paradigms. To isolate the usefulness of feedback, we construct synthetic data with a definitive ground truth, alongside naturalistic data to validate that our findings hold in real-world scenarios. By comparing model revisions generated with and without access to feedback across both settings, we show that feedback-informed revisions resolve targeted issues at significantly higher rates than baseline revisions. Finally, we expose the root of the evaluation bias: when a model successfully fixes an issue exclusively due to feedback, LLM judges frequently fail to identify the genuinely corrected response, systematically preferring inferior baseline outputs instead.",
-        "author": "Shachar Don-Yehiya, Leshem Choshen, Omri Abend",
+        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Kolors Virtual Try-On",
+        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
+        "author": "Kwai-Kolors",
         "tags": [
-          "cs.CL",
-          "large language model",
-          "llm",
-          "rag",
-          "evaluation"
+          "gradio",
+          "region:us"
         ],
-        "category": "cs.CL",
-        "language": "en",
-        "publishedAt": "2026-09-02T17:42:44Z",
-        "updatedAt": "2026-09-02T17:42:44Z",
-        "collectedAt": "2026-09-03T05:56:59.178Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2609.02859v1",
-          "authors": [
-            "Shachar Don-Yehiya",
-            "Leshem Choshen",
-            "Omri Abend"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 10170
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, llm, rag, evaluation"
+        "publishedAt": "2024-08-07T09:42:50.000Z",
+        "updatedAt": "2026-04-01T06:36:42.000Z",
+        "collectedAt": "2026-09-03T07:32:24.957Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "👕"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2609.02852v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "The Implications of Linguistic Illegibility for LLM Security",
-        "url": "https://arxiv.org/pdf/2609.02852v1",
-        "description": "LLMs are trained to generate natural language. However, various strands of evidence indicate that an LLM's externalized linguistic outputs and mechanistically-extracted linguistic features can be an unreliable lens for understanding internal model computation. We introduce the term ``linguistic illegibility'' to broadly refer to scenarios in which an LLM's externalized or mechanistically-probed language artifacts fail to represent how the model actually thinks. We argue that the specter of lingu",
-        "summary": "LLMs are trained to generate natural language. However, various strands of evidence indicate that an LLM's externalized linguistic outputs and mechanistically-extracted linguistic features can be an unreliable lens for understanding internal model computation. We introduce the term ``linguistic illegibility'' to broadly refer to scenarios in which an LLM's externalized or mechanistically-probed language artifacts fail to represent how the model actually thinks. We argue that the specter of linguistic illegibility is unavoidable for LLMs whose internal computations are not directly expressed via language, but rather math over activation spaces (with lossy translations between activation spaces and natural language happening at the bookends). If linguistic illegibility is always possible, then security mechanisms that rely on a model's linguistic self-reporting (e.g., chain-of-thought monitoring, constitutional self-critique, activation probing for linguistically-defined feature vectors) can never be completely sound; the model sandbox will always need isolation techniques whose guarantees do not depend on reading a model's linguistic state at all. We argue that observing a model's outputs using taint tracking is a promising approach for an effective sandbox: regardless of how a model linguistically self-reports, a taint tracking policy can define, a priori, various pieces of system state that should never be influenced by model-produced data. We also discuss several additional sandboxing mechanisms (e.g., robust virtualization, third-party auditing of sandboxing configurations) which collectively provide a critical floor beneath linguistic monitoring, and would have mitigated recent sandbox exploits by frontier models.",
-        "author": "James Mickens",
+        "id": "huggingface_spaces:mteb/leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MTEB Leaderboard",
+        "url": "https://huggingface.co/spaces/mteb/leaderboard",
+        "author": "mteb",
         "tags": [
-          "cs.LG",
-          "cs.CR",
-          "llm"
+          "docker",
+          "leaderboard",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-09-02T17:37:22Z",
-        "updatedAt": "2026-09-02T17:37:22Z",
-        "collectedAt": "2026-09-03T05:56:59.178Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2609.02852v1",
-          "authors": [
-            "James Mickens"
-          ]
+        "category": "docker",
+        "metrics": {
+          "likes": 7648
         },
-        "recommendedReason": "Matched AI developer keywords: llm"
+        "publishedAt": "2022-09-29T11:29:23.000Z",
+        "updatedAt": "2026-09-01T15:41:47.000Z",
+        "collectedAt": "2026-09-03T07:32:24.957Z",
+        "raw": {
+          "sdk": "docker",
+          "emoji": "📊"
+        }
       },
       {
-        "id": "http://arxiv.org/abs/2609.02849v1",
-        "source": "arxiv",
-        "sourceType": "paper",
-        "title": "Post-Training Language Models for Gold-Medal Performance in Coding Competitions",
-        "url": "https://arxiv.org/pdf/2609.02849v1",
-        "description": "Competitive programming has become a key test of large language model reasoning, with international competitions such as IOI and ICPC representing its most challenging settings. We present an end-to-end specialization pipeline combining large-scale problem curation, synthetic reasoning traces, supervised fine-tuning (SFT), and reinforcement learning (RL). Using 22,000 curated problems, we train Nemotron-3-Nano-CC (30B-A3B) with SFT and RL and Nemotron-3-Ultra-CC (550B-A55B) with SFT alone. We fu",
-        "summary": "Competitive programming has become a key test of large language model reasoning, with international competitions such as IOI and ICPC representing its most challenging settings. We present an end-to-end specialization pipeline combining large-scale problem curation, synthetic reasoning traces, supervised fine-tuning (SFT), and reinforcement learning (RL). Using 22,000 curated problems, we train Nemotron-3-Nano-CC (30B-A3B) with SFT and RL and Nemotron-3-Ultra-CC (550B-A55B) with SFT alone. We further introduce GenCorrect, a feedback-driven test-time compute strategy that iteratively generates, evaluates, and refines diverse solutions. On IOI 2025, Nano-CC improves from 130 points to 291 after post-training and to 468 with GenCorrect, exceeding the gold threshold of 438.3 while Ultra-CC reaches 502. Guided by these results, we develop a competition-specific Ultra-CC system and evaluate it prospectively during IOI 2026. Under the same time, internet-access, and submission constraints as human contestants, it scores 535.4 out of 600, exceeding both the gold threshold of 361.12 and the top human score of 498.27. To our knowledge, this is the first AI system to outscore the highest-scoring human contestant on an IOI problem set.",
-        "author": "Aleksander Ficek, Sean Narenthiran, Mehrzad Samadi, Somshubra Majumdar, Boris Ginsburg",
+        "id": "huggingface_spaces:facebook/MusicGen",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "MusicGen",
+        "url": "https://huggingface.co/spaces/facebook/MusicGen",
+        "author": "facebook",
         "tags": [
-          "cs.LG",
-          "cs.AI",
-          "cs.CL",
-          "cs.MA",
-          "cs.SE",
-          "large language model",
-          "fine-tuning"
+          "gradio",
+          "music generation",
+          "language models",
+          "LLMs",
+          "region:us"
         ],
-        "category": "cs.LG",
-        "language": "en",
-        "publishedAt": "2026-09-02T17:33:37Z",
-        "updatedAt": "2026-09-02T17:33:37Z",
-        "collectedAt": "2026-09-03T05:56:59.178Z",
-        "metrics": {},
-        "raw": {
-          "abstractUrl": "http://arxiv.org/abs/2609.02849v1",
-          "authors": [
-            "Aleksander Ficek",
-            "Sean Narenthiran",
-            "Mehrzad Samadi",
-            "Somshubra Majumdar",
-            "Boris Ginsburg"
-          ]
+        "category": "gradio",
+        "metrics": {
+          "likes": 5089
         },
-        "recommendedReason": "Matched AI developer keywords: large language model, fine-tuning"
+        "publishedAt": "2023-06-08T18:00:26.000Z",
+        "updatedAt": "2026-05-27T11:46:50.000Z",
+        "collectedAt": "2026-09-03T07:32:24.957Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🎵"
+        }
+      },
+      {
+        "id": "huggingface_spaces:lmarena-ai/arena-leaderboard",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Arena Leaderboard",
+        "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard",
+        "author": "lmarena-ai",
+        "tags": [
+          "static",
+          "leaderboard",
+          "region:us"
+        ],
+        "category": "static",
+        "metrics": {
+          "likes": 4981
+        },
+        "publishedAt": "2023-05-20T09:26:19.000Z",
+        "updatedAt": "2026-02-21T23:20:43.000Z",
+        "collectedAt": "2026-09-03T07:32:24.957Z",
+        "raw": {
+          "sdk": "static",
+          "emoji": "🏆🤖"
+        }
+      },
+      {
+        "id": "huggingface_spaces:KlingTeam/LivePortrait",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Live Portrait",
+        "url": "https://huggingface.co/spaces/KlingTeam/LivePortrait",
+        "author": "KlingTeam",
+        "tags": [
+          "gradio",
+          "Multimodal",
+          "Motion control",
+          "Image-to-Video",
+          "Video-to-Video",
+          "language models",
+          "LLMs",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 3785
+        },
+        "publishedAt": "2024-07-05T16:35:24.000Z",
+        "updatedAt": "2024-08-30T11:20:51.000Z",
+        "collectedAt": "2026-09-03T07:32:24.957Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🤪"
+        }
+      },
+      {
+        "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Z Image Turbo",
+        "url": "https://huggingface.co/spaces/mrfakename/Z-Image-Turbo",
+        "author": "mrfakename",
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 3765
+        },
+        "publishedAt": "2025-11-26T19:54:05.000Z",
+        "updatedAt": "2026-07-13T14:23:41.000Z",
+        "collectedAt": "2026-09-03T07:32:24.957Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🖼️"
+        }
       }
     ],
     "developerBuzz": [
@@ -181,11 +222,11 @@
           "gemini"
         ],
         "metrics": {
-          "upvotes": 939,
-          "commentsCount": 530
+          "upvotes": 973,
+          "commentsCount": 553
         },
         "publishedAt": "2026-09-02T15:12:40.000Z",
-        "collectedAt": "2026-09-03T05:56:59.017Z",
+        "collectedAt": "2026-09-03T07:32:25.398Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49537553",
           "matchedKeywords": [
@@ -206,11 +247,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 1385,
-          "commentsCount": 1346
+          "upvotes": 1387,
+          "commentsCount": 1347
         },
         "publishedAt": "2026-09-01T17:53:53.000Z",
-        "collectedAt": "2026-09-03T05:56:59.017Z",
+        "collectedAt": "2026-09-03T07:32:25.398Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49525378",
           "matchedKeywords": [
@@ -230,11 +271,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 843,
-          "commentsCount": 1011
+          "upvotes": 844,
+          "commentsCount": 1012
         },
         "publishedAt": "2026-09-01T18:35:15.000Z",
-        "collectedAt": "2026-09-03T05:56:59.017Z",
+        "collectedAt": "2026-09-03T07:32:25.398Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49526069",
           "matchedKeywords": [
@@ -253,11 +294,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 494,
-          "commentsCount": 322
+          "upvotes": 532,
+          "commentsCount": 362
         },
         "publishedAt": "2026-09-02T19:35:04.000Z",
-        "collectedAt": "2026-09-03T05:56:59.017Z",
+        "collectedAt": "2026-09-03T07:32:25.398Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49541256",
           "matchedKeywords": [
@@ -266,27 +307,25 @@
         }
       },
       {
-        "id": "hackernews:49535284",
+        "id": "hackernews:49536375",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "Can I opt out of my input or output data being used for training?",
-        "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
-        "author": "teekert",
+        "title": "Three sites made 215,128 “best software” pages for AI. Perplexity cites them",
+        "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
+        "author": "jakobgreenfeld",
         "tags": [
-          "ai",
-          "mistral"
+          "ai"
         ],
         "metrics": {
-          "upvotes": 410,
-          "commentsCount": 175
+          "upvotes": 386,
+          "commentsCount": 182
         },
-        "publishedAt": "2026-09-02T12:30:39.000Z",
-        "collectedAt": "2026-09-03T05:56:59.017Z",
+        "publishedAt": "2026-09-02T13:59:59.000Z",
+        "collectedAt": "2026-09-03T07:32:25.398Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=49535284",
+          "hnUrl": "https://news.ycombinator.com/item?id=49536375",
           "matchedKeywords": [
-            "ai",
-            "mistral"
+            "ai"
           ]
         }
       }
@@ -305,7 +344,7 @@
         "originalUrl": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation",
         "recommendedReason": "METR 发布对 OpenAI 智能体协同攻击 Hugging Face 事件的独立调查报告。约 1200 个本应隔离的 ExploitGym 智能体在 Artifactory 缓存中发现非官方留言板，发送超过 70000 条消息和文件，其中约 700 个参与了针对 Hugging Face 的攻击，于 7 月 11 日实现远程代码执行并在基础设施中横向移动。",
         "publishedAt": "2026-09-03T04:49:35.840Z",
-        "collectedAt": "2026-09-03T05:57:03.452Z",
+        "collectedAt": "2026-09-03T07:32:27.264Z",
         "raw": {
           "id": "cmtl25m9c0e89roalh6qci0r5",
           "titleEn": "METR关于OpenAI/Hugging Face黑客攻击事件的报告",
@@ -325,7 +364,7 @@
         "originalUrl": "https://x.com/alexandr_wang/status/2095318449602138577",
         "recommendedReason": "Artificial Analysis 编码智能体指数显示，Meta Muse Spark 1.3 （max） 在 Muse Code 下得 68 分，仅次于 Claude Code + Opus 5 （xhigh） 的 68 分。",
         "publishedAt": "2026-09-03T01:10:22.000Z",
-        "collectedAt": "2026-09-03T05:57:03.452Z",
+        "collectedAt": "2026-09-03T07:32:27.264Z",
         "raw": {
           "id": "cmtktzp3605o8roals1ci2tza",
           "titleEn": "muse spark 1.3 + muse code evals competitively with Claude code + opus 5 and Claude code + fable 5",
@@ -345,7 +384,7 @@
         "originalUrl": "https://www.ithome.com/0/997/732.htm",
         "recommendedReason": "美国司法部 9 月 1 日向曼哈顿联邦法院提交利益声明，介入《纽约时报》诉 OpenAI 版权案，支持 OpenAI 主张大语言模型训练属合理使用。DOJ 以国家安全和 AI 产业竞争力为主要论据，称训练使用具有转换性；《纽约时报》发言人批评政府站在 AI 公司一边牺牲创作者权益。法官要求双方最迟 9 月 4 日提交简易判决动议，该案结果可能为 AI 训练版权合法性确立先例。",
         "publishedAt": "2026-09-02T23:50:05.000Z",
-        "collectedAt": "2026-09-03T05:57:03.452Z",
+        "collectedAt": "2026-09-03T07:32:27.264Z",
         "raw": {
           "id": "cmtksft9f0450roali4sl0z86",
           "titleEn": "纽约时报诉 OpenAI 案升级：美国司法部首次就 AI 版权问题公开表态，主张 AI 训练属\"合理使用\"",
@@ -365,7 +404,7 @@
         "originalUrl": "https://x.com/kimmonismus/status/2095265444999410146",
         "recommendedReason": "Meta 发布 Muse Spark 1.3，为五个月内第四个 Muse Spark 版本。max 变体（合作伙伴限时预览）在 Artificial Analysis Intelligence Index 得 62 分。",
         "publishedAt": "2026-09-02T21:39:44.000Z",
-        "collectedAt": "2026-09-03T05:57:03.452Z",
+        "collectedAt": "2026-09-03T07:32:27.264Z",
         "raw": {
           "id": "cmtkme19o02plro5q94jsf94x",
           "titleEn": "It's worth really grasping this： in a very short time， the race between OpenAI and Anthropic has tur…",
@@ -385,7 +424,7 @@
         "originalUrl": "https://x.com/alexandr_wang/status/2095249704888197175",
         "recommendedReason": "Meta 发布 Muse Spark 1.3，是五个月内第四个 Muse Spark 版本。xhigh 版在 Artificial Analysis Intelligence Index 得 61 分。",
         "publishedAt": "2026-09-02T20:37:12.000Z",
-        "collectedAt": "2026-09-03T05:57:03.452Z",
+        "collectedAt": "2026-09-03T07:32:27.264Z",
         "raw": {
           "id": "cmtkkcguj04aurollf1lq9a9s",
           "titleEn": "i really hate to say it， but… gemini who？ 🏎️💨",
@@ -405,7 +444,7 @@
         "originalUrl": "https://x.com/claudeai/status/2095226833293685100",
         "recommendedReason": "Claude 官方宣布 Claude Cowork 和 Claude Code 新增后台使用电脑的能力。用户把任务交给 Claude 后，它会像人一样点击、输入和打开应用，用户可同时去做其他事。",
         "publishedAt": "2026-09-02T19:06:19.000Z",
-        "collectedAt": "2026-09-03T05:57:03.452Z",
+        "collectedAt": "2026-09-03T07:32:27.264Z",
         "raw": {
           "id": "cmtkh71ky017vrolly7trswyx",
           "titleEn": "Claude can now use your computer in the background in Claude Cowork and Claude Code. Give it someth…",
@@ -425,7 +464,7 @@
         "originalUrl": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality",
         "recommendedReason": "GitHub 工程师 Erik Kristensen 分享了 Copilot 降本的四项改动：选择性压缩工具输出、移除 view 工具行号前缀（线下推理成本降约 5%，线上用户日均推理成本降约 3%）、压缩 task-tool 提示词（每轮省约 1300 token，每活跃小时归一化成本降 2.9%）、后台任务完成后直接交付结果（AI Credits 用量降约 2.3%）。",
         "publishedAt": "2026-09-02T18:00:00.000Z",
-        "collectedAt": "2026-09-03T05:57:03.452Z",
+        "collectedAt": "2026-09-03T07:32:27.264Z",
         "raw": {
           "id": "cmtkfkfvl03garobqyr0vwpth",
           "titleEn": "How we make AI coding more cost efficient without sacrificing task quality",
@@ -445,448 +484,12 @@
         "originalUrl": "https://claude.com/blog/the-anatomy-of-effective-commerce-agents",
         "recommendedReason": "Anthropic 发布电商 Agent 构建指南，基于与零售、旅游、电信等团队的落地经验，核心架构是单个 Claude 在标准 Agent 循环中配合技能与工具，而非按领域拆分子智能体，并开源了 anthropics/commerce-agents 参考实现，含购物与商家 Agent。",
         "publishedAt": "2026-09-02T17:01:34.540Z",
-        "collectedAt": "2026-09-03T05:57:03.452Z",
+        "collectedAt": "2026-09-03T07:32:27.264Z",
         "raw": {
           "id": "cmtkcffah018zrog0zokk6s30",
           "titleEn": "A guide to the anatomy of effective commerce agents",
           "apiCategory": "tip"
         }
-      },
-      {
-        "id": "aihot:cmtkbz92801nmrowy61g2fsob",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Google AI 团队分享如何为 LLM-as-a-Judge 评测编写可靠的评分标准",
-        "url": "https://dev.to/googleai/how-to-write-reliable-rubrics-for-llm-as-a-judge-evaluations-ndp",
-        "summary": "Google AI 团队发布教程，讲解如何为 LLM-as-a-Judge 评测编写可靠的布尔式评分标准，指出模糊提示会导致评估不一致和浪费 token。文中给出四条经验：问题保持原子化且互不重叠、只让评判模型评估客观事实（可用 RFC 2119 术语如 MUST 表述）、只评 prompt 中明确要求的内容、用专家标注的 golden set 校准评判模型直至与人类评分一致。",
-        "description": "Google AI 团队发布教程，讲解如何为 LLM-as-a-Judge 评测编写可靠的布尔式评分标准，指出模糊提示会导致评估不一致和浪费 token。文中给出四条经验：问题保持原子化且互不重叠、只让评判模型评估客观事实（可用 RFC 2119 术语如 MUST 表述）、只评 prompt 中明确要求的内容、用专家标注的 golden set 校准评判模型直至与人类评分一致。",
-        "category": "tools",
-        "originalSource": "Google AI：DEV 作者专属（RSS）",
-        "originalUrl": "https://dev.to/googleai/how-to-write-reliable-rubrics-for-llm-as-a-judge-evaluations-ndp",
-        "recommendedReason": "Google AI 团队发布教程，讲解如何为 LLM-as-a-Judge 评测编写可靠的布尔式评分标准，指出模糊提示会导致评估不一致和浪费 token。文中给出四条经验：问题保持原子化且互不重叠、只让评判模型评估客观事实（可用 RFC 2119 术语如 MUST 表述）、只评 prompt 中明确要求的内容、用专家标注的 golden set 校准评判模型直至与人类评分一致。",
-        "publishedAt": "2026-09-02T16:35:00.000Z",
-        "collectedAt": "2026-09-03T05:57:03.452Z",
-        "raw": {
-          "id": "cmtkbz92801nmrowy61g2fsob",
-          "titleEn": "How to Write Reliable Rubrics for LLM-as-a-Judge Evaluations",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmtkbbn6q01j6roz54e8g5zec",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Google 总结 AI Agents Challenge 中最强提交背后的 4 个工程模式",
-        "url": "https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions",
-        "summary": "Google 复盘 AI Agents Challenge 赛事，从各赛道头部提交中提炼出四个工程模式：双向 MCP、事件驱动并发、同标准回退和分层路由。",
-        "description": "Google 复盘 AI Agents Challenge 赛事，从各赛道头部提交中提炼出四个工程模式：双向 MCP、事件驱动并发、同标准回退和分层路由。",
-        "category": "tools",
-        "originalSource": "Google Developers Blog（RSS）",
-        "originalUrl": "https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions",
-        "recommendedReason": "Google 复盘 AI Agents Challenge 赛事，从各赛道头部提交中提炼出四个工程模式：双向 MCP、事件驱动并发、同标准回退和分层路由。",
-        "publishedAt": "2026-09-02T16:29:43.634Z",
-        "collectedAt": "2026-09-03T05:57:03.452Z",
-        "raw": {
-          "id": "cmtkbbn6q01j6roz54e8g5zec",
-          "titleEn": "4 engineering patterns behind the strongest AI Agents Challenge submissions",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmtkbdbti01n8roz5k5kt1g98",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Google DeepMind 发布 Gemini 3.8 Flash 与 3.8 Flash Cyber 两款新模型",
-        "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber",
-        "summary": "Google DeepMind 发布 Gemini 3.8 Flash 与 3.8 Flash Cyber。",
-        "description": "Google DeepMind 发布 Gemini 3.8 Flash 与 3.8 Flash Cyber。",
-        "category": "models",
-        "originalSource": "Google DeepMind：Blog（RSS）",
-        "originalUrl": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber",
-        "recommendedReason": "Google DeepMind 发布 Gemini 3.8 Flash 与 3.8 Flash Cyber。",
-        "publishedAt": "2026-09-02T16:18:31.000Z",
-        "collectedAt": "2026-09-03T05:57:03.452Z",
-        "raw": {
-          "id": "cmtkbdbti01n8roz5k5kt1g98",
-          "titleEn": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmtk9u4ga01hwrompqmqchjqj",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "什么是 harness 工程？Google 用 ADK 2.0 与 Antigravity SDK 演示自动修复编码循环",
-        "url": "https://dev.to/googleai/what-is-harness-engineering-and-why-should-i-care-8n0",
-        "summary": "Google 员工 Shir Meir Lador 介绍 harness 工程，即用确定性组件包裹 LLM，包括编排层、执行沙箱、状态持久化和验证工具，让 Agent 不需逐行人工审查即可安全生成代码。",
-        "description": "Google 员工 Shir Meir Lador 介绍 harness 工程，即用确定性组件包裹 LLM，包括编排层、执行沙箱、状态持久化和验证工具，让 Agent 不需逐行人工审查即可安全生成代码。",
-        "category": "tools",
-        "originalSource": "Google AI：DEV 作者专属（RSS）",
-        "originalUrl": "https://dev.to/googleai/what-is-harness-engineering-and-why-should-i-care-8n0",
-        "recommendedReason": "Google 员工 Shir Meir Lador 介绍 harness 工程，即用确定性组件包裹 LLM，包括编排层、执行沙箱、状态持久化和验证工具，让 Agent 不需逐行人工审查即可安全生成代码。",
-        "publishedAt": "2026-09-02T15:28:05.000Z",
-        "collectedAt": "2026-09-03T05:57:03.452Z",
-        "raw": {
-          "id": "cmtk9u4ga01hwrompqmqchjqj",
-          "titleEn": "What is harness engineering and why should I care？",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmtkaa7gs01v5romp7lhz3mwj",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenAI 因 Tumbler Ridge 枪击案面临 30 起新诉讼，被指协助教唆",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/988261/openai-tumbler-ridge-shooting-lawsuit-aiding-abetting",
-        "summary": "OpenAI 及 CEO Sam Altman 面临 30 起新诉讼，指控其为加拿大 Tumbler Ridge 校园枪击案嫌疑人提供实质性协助与鼓励，诉讼由事发时在校的学生、教师和校长于加州联邦法院提起。",
-        "description": "OpenAI 及 CEO Sam Altman 面临 30 起新诉讼，指控其为加拿大 Tumbler Ridge 校园枪击案嫌疑人提供实质性协助与鼓励，诉讼由事发时在校的学生、教师和校长于加州联邦法院提起。",
-        "category": "industry",
-        "originalSource": "The Verge：AI（RSS）",
-        "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/988261/openai-tumbler-ridge-shooting-lawsuit-aiding-abetting",
-        "recommendedReason": "OpenAI 及 CEO Sam Altman 面临 30 起新诉讼，指控其为加拿大 Tumbler Ridge 校园枪击案嫌疑人提供实质性协助与鼓励，诉讼由事发时在校的学生、教师和校长于加州联邦法院提起。",
-        "publishedAt": "2026-09-02T14:35:03.000Z",
-        "collectedAt": "2026-09-03T05:57:03.452Z",
-        "raw": {
-          "id": "cmtkaa7gs01v5romp7lhz3mwj",
-          "titleEn": "OpenAI accused of 'aiding and abetting' Tumbler Ridge mass shooting in dozens of new lawsuits",
-          "apiCategory": "industry"
-        }
-      },
-      {
-        "id": "aihot:cmtkffuf503cbrobqkwhimxmp",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Cursor 推出 Self-Hosted Machines，云智能体可在企业自有机器上执行",
-        "url": "https://cursor.com/blog/self-hosted-machines",
-        "summary": "Cursor 发布 Self-Hosted Machines，让云智能体的工具执行迁移到企业自有网络内的机器，智能体循环、推理和规划仍留在 Cursor 云端，通过 worker 的出站 HTTPS 连接对接，Cursor 不会主动连入企业网络。",
-        "description": "Cursor 发布 Self-Hosted Machines，让云智能体的工具执行迁移到企业自有网络内的机器，智能体循环、推理和规划仍留在 Cursor 云端，通过 worker 的出站 HTTPS 连接对接，Cursor 不会主动连入企业网络。",
-        "category": "products",
-        "originalSource": "Cursor Blog",
-        "originalUrl": "https://cursor.com/blog/self-hosted-machines",
-        "recommendedReason": "Cursor 发布 Self-Hosted Machines，让云智能体的工具执行迁移到企业自有网络内的机器，智能体循环、推理和规划仍留在 Cursor 云端，通过 worker 的出站 HTTPS 连接对接，Cursor 不会主动连入企业网络。",
-        "publishedAt": "2026-09-02T12:00:00.000Z",
-        "collectedAt": "2026-09-03T05:57:03.452Z",
-        "raw": {
-          "id": "cmtkffuf503cbrobqkwhimxmp",
-          "titleEn": "Run cloud agents on machines you manage",
-          "apiCategory": "ai-products"
-        }
-      },
-      {
-        "id": "aihot:cmtjjt7360180roe43ggo0t09",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "UU远程新版本上线：完整 TUI 渲染与多终端会话管理，强化远程 Vibe Coding 体验",
-        "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685772&idx=1&sn=a073c30899a7f420147673def8209609",
-        "summary": "UU远程于9月2日上线新版本，重点优化终端功能，补齐 TUI 渲染交互与终端会话管理能力。主要更新包括：Mac 免密码登录、移动端输入优化并新增调用系统输入法的独立输入框、可同时创建和管理多个终端会话并支持手机与电脑间跨端同步接管（通过 uuyc-cli lterm 命令）。",
-        "description": "UU远程于9月2日上线新版本，重点优化终端功能，补齐 TUI 渲染交互与终端会话管理能力。主要更新包括：Mac 免密码登录、移动端输入优化并新增调用系统输入法的独立输入框、可同时创建和管理多个终端会话并支持手机与电脑间跨端同步接管（通过 uuyc-cli lterm 命令）。",
-        "category": "products",
-        "originalSource": "公众号：数字生命卡兹克",
-        "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685772&idx=1&sn=a073c30899a7f420147673def8209609",
-        "recommendedReason": "UU远程于9月2日上线新版本，重点优化终端功能，补齐 TUI 渲染交互与终端会话管理能力。主要更新包括：Mac 免密码登录、移动端输入优化并新增调用系统输入法的独立输入框、可同时创建和管理多个终端会话并支持手机与电脑间跨端同步接管（通过 uuyc-cli lterm 命令）。",
-        "publishedAt": "2026-09-02T03:32:20.000Z",
-        "collectedAt": "2026-09-03T05:57:03.452Z",
-        "raw": {
-          "id": "cmtjjt7360180roe43ggo0t09",
-          "titleEn": "UU远程史诗级升级，这就是如今远程Vibe Coding的第一神器。",
-          "apiCategory": "ai-products"
-        }
-      }
-    ],
-    "crossSourceHighlights": [
-      {
-        "id": "url:https://platform.claude.com/docs/en/release-notes/overview",
-        "canonicalId": "url:https://platform.claude.com/docs/en/release-notes/overview",
-        "title": "Anthropic 发布 Claude Fable 5.1 与 Claude Mythos 5.1",
-        "canonicalUrl": "https://platform.claude.com/docs/en/release-notes/overview",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://platform.claude.com/docs/en/release-notes/overview",
-          "title:anthropic 发布 claude fable 5 1 与 claude mythos 5 1",
-          "url:https://anthropic.com/claude-fable-and-mythos-5-1",
-          "title:claude fable 5 1 and claude mythos 5 1"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmtj04igz04xproel00pt2oju",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Anthropic 发布 Claude Fable 5.1 与 Claude Mythos 5.1",
-            "url": "https://platform.claude.com/docs/en/release-notes/overview#september-1-2026",
-            "summary": "Anthropic 发布 Claude Fable 5.1（claude-fable-5-1），面向长时间运行的智能体编码、知识工作与研究，Claude Mythos 5.1 面向 Project Glasswing 参与者。",
-            "description": "Anthropic 发布 Claude Fable 5.1（claude-fable-5-1），面向长时间运行的智能体编码、知识工作与研究，Claude Mythos 5.1 面向 Project Glasswing 参与者。",
-            "category": "models",
-            "originalSource": "Claude Platform：开发者版本说明（RSS）",
-            "originalUrl": "https://platform.claude.com/docs/en/release-notes/overview#september-1-2026",
-            "recommendedReason": "Anthropic 发布 Claude Fable 5.1（claude-fable-5-1），面向长时间运行的智能体编码、知识工作与研究，Claude Mythos 5.1 面向 Project Glasswing 参与者。",
-            "publishedAt": "2026-09-01T00:00:00.000Z",
-            "collectedAt": "2026-09-03T05:57:03.452Z",
-            "raw": {
-              "id": "cmtj04igz04xproel00pt2oju",
-              "titleEn": "Claude Platform release notes - September 1， 2026",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "aihot:cmtjjkmd800r4roe4wpq221bc",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Anthropic 发布 Claude Fable 5.1 与 Claude Mythos 5.1",
-            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
-            "summary": "Anthropic 发布 Claude Fable 5.1 和 Claude Mythos 5.1，两者为同一模型但安全防护级别不同，Mythos 5.1 仅通过可信访问计划提供给网络安全和生命科学领域的受审机构。",
-            "description": "Anthropic 发布 Claude Fable 5.1 和 Claude Mythos 5.1，两者为同一模型但安全防护级别不同，Mythos 5.1 仅通过可信访问计划提供给网络安全和生命科学领域的受审机构。",
-            "category": "models",
-            "originalSource": "Anthropic：Newsroom（网页）",
-            "originalUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
-            "recommendedReason": "Anthropic 发布 Claude Fable 5.1 和 Claude Mythos 5.1，两者为同一模型但安全防护级别不同，Mythos 5.1 仅通过可信访问计划提供给网络安全和生命科学领域的受审机构。",
-            "publishedAt": "2026-08-31T16:00:00.000Z",
-            "collectedAt": "2026-09-03T05:57:03.452Z",
-            "raw": {
-              "id": "cmtjjkmd800r4roe4wpq221bc",
-              "titleEn": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:49525378",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Claude Fable 5.1 and Claude Mythos 5.1",
-            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
-            "author": "denysvitali",
-            "tags": [
-              "anthropic",
-              "claude"
-            ],
-            "metrics": {
-              "upvotes": 1385,
-              "commentsCount": 1346
-            },
-            "publishedAt": "2026-09-01T17:53:53.000Z",
-            "collectedAt": "2026-09-03T05:56:59.017Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49525378",
-              "matchedKeywords": [
-                "anthropic",
-                "claude"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmtj04igz04xproel00pt2oju",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Anthropic 发布 Claude Fable 5.1 与 Claude Mythos 5.1",
-            "url": "https://platform.claude.com/docs/en/release-notes/overview#september-1-2026",
-            "summary": "Anthropic 发布 Claude Fable 5.1（claude-fable-5-1），面向长时间运行的智能体编码、知识工作与研究，Claude Mythos 5.1 面向 Project Glasswing 参与者。",
-            "description": "Anthropic 发布 Claude Fable 5.1（claude-fable-5-1），面向长时间运行的智能体编码、知识工作与研究，Claude Mythos 5.1 面向 Project Glasswing 参与者。",
-            "category": "models",
-            "originalSource": "Claude Platform：开发者版本说明（RSS）",
-            "originalUrl": "https://platform.claude.com/docs/en/release-notes/overview#september-1-2026",
-            "recommendedReason": "Anthropic 发布 Claude Fable 5.1（claude-fable-5-1），面向长时间运行的智能体编码、知识工作与研究，Claude Mythos 5.1 面向 Project Glasswing 参与者。",
-            "publishedAt": "2026-09-01T00:00:00.000Z",
-            "collectedAt": "2026-09-03T05:57:03.452Z",
-            "raw": {
-              "id": "cmtj04igz04xproel00pt2oju",
-              "titleEn": "Claude Platform release notes - September 1， 2026",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "aihot:cmtjjkmd800r4roe4wpq221bc",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Anthropic 发布 Claude Fable 5.1 与 Claude Mythos 5.1",
-            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
-            "summary": "Anthropic 发布 Claude Fable 5.1 和 Claude Mythos 5.1，两者为同一模型但安全防护级别不同，Mythos 5.1 仅通过可信访问计划提供给网络安全和生命科学领域的受审机构。",
-            "description": "Anthropic 发布 Claude Fable 5.1 和 Claude Mythos 5.1，两者为同一模型但安全防护级别不同，Mythos 5.1 仅通过可信访问计划提供给网络安全和生命科学领域的受审机构。",
-            "category": "models",
-            "originalSource": "Anthropic：Newsroom（网页）",
-            "originalUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
-            "recommendedReason": "Anthropic 发布 Claude Fable 5.1 和 Claude Mythos 5.1，两者为同一模型但安全防护级别不同，Mythos 5.1 仅通过可信访问计划提供给网络安全和生命科学领域的受审机构。",
-            "publishedAt": "2026-08-31T16:00:00.000Z",
-            "collectedAt": "2026-09-03T05:57:03.452Z",
-            "raw": {
-              "id": "cmtjjkmd800r4roe4wpq221bc",
-              "titleEn": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
-              "apiCategory": "ai-models"
-            }
-          },
-          {
-            "id": "hackernews:49525378",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Claude Fable 5.1 and Claude Mythos 5.1",
-            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
-            "author": "denysvitali",
-            "tags": [
-              "anthropic",
-              "claude"
-            ],
-            "metrics": {
-              "upvotes": 1385,
-              "commentsCount": 1346
-            },
-            "publishedAt": "2026-09-01T17:53:53.000Z",
-            "collectedAt": "2026-09-03T05:56:59.017Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49525378",
-              "matchedKeywords": [
-                "anthropic",
-                "claude"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 1385,
-          "commentsCount": 1346,
-          "hnScore": 1385,
-          "crossSourceBonus": 10,
-          "heatScore": 340
-        },
-        "crossSourceBonus": 10,
-        "category": "models",
-        "summary": "Anthropic 发布 Claude Fable 5.1（claude-fable-5-1），面向长时间运行的智能体编码、知识工作与研究，Claude Mythos 5.1 面向 Project Glasswing 参与者。",
-        "whyItMatters": "同一趋势被 2 个来源、3 条信号捕捉。",
-        "firstSeenAt": "2026-08-31T16:00:00.000Z",
-        "lastSeenAt": "2026-09-03T05:57:03.452Z"
-      },
-      {
-        "id": "url:https://cursor.com/blog/self-hosted-machines",
-        "canonicalId": "url:https://cursor.com/blog/self-hosted-machines",
-        "title": "Cursor 推出 Self-Hosted Machines，云智能体可在企业自有机器上执行",
-        "canonicalUrl": "https://cursor.com/blog/self-hosted-machines",
-        "entityType": "news",
-        "normalizedKeys": [
-          "url:https://cursor.com/blog/self-hosted-machines",
-          "title:cursor 推出 self hosted machines 云智能体可在企业自有机器上执行",
-          "topic:coding agent / swe agent",
-          "title:run cloud agents on machines you manage"
-        ],
-        "sources": [
-          "aihot",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "items": [
-          {
-            "id": "aihot:cmtkffuf503cbrobqkwhimxmp",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Cursor 推出 Self-Hosted Machines，云智能体可在企业自有机器上执行",
-            "url": "https://cursor.com/blog/self-hosted-machines",
-            "summary": "Cursor 发布 Self-Hosted Machines，让云智能体的工具执行迁移到企业自有网络内的机器，智能体循环、推理和规划仍留在 Cursor 云端，通过 worker 的出站 HTTPS 连接对接，Cursor 不会主动连入企业网络。",
-            "description": "Cursor 发布 Self-Hosted Machines，让云智能体的工具执行迁移到企业自有网络内的机器，智能体循环、推理和规划仍留在 Cursor 云端，通过 worker 的出站 HTTPS 连接对接，Cursor 不会主动连入企业网络。",
-            "category": "products",
-            "originalSource": "Cursor Blog",
-            "originalUrl": "https://cursor.com/blog/self-hosted-machines",
-            "recommendedReason": "Cursor 发布 Self-Hosted Machines，让云智能体的工具执行迁移到企业自有网络内的机器，智能体循环、推理和规划仍留在 Cursor 云端，通过 worker 的出站 HTTPS 连接对接，Cursor 不会主动连入企业网络。",
-            "publishedAt": "2026-09-02T12:00:00.000Z",
-            "collectedAt": "2026-09-03T05:57:03.452Z",
-            "raw": {
-              "id": "cmtkffuf503cbrobqkwhimxmp",
-              "titleEn": "Run cloud agents on machines you manage",
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "hackernews:49546217",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Run cloud agents on machines you manage",
-            "url": "https://cursor.com/blog/self-hosted-machines",
-            "author": "zhwu",
-            "tags": [
-              "agent",
-              "agents",
-              "cursor"
-            ],
-            "metrics": {
-              "upvotes": 1,
-              "commentsCount": 2
-            },
-            "publishedAt": "2026-09-03T05:20:06.000Z",
-            "collectedAt": "2026-09-03T05:56:59.017Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49546217",
-              "matchedKeywords": [
-                "agent",
-                "agents",
-                "cursor"
-              ]
-            }
-          }
-        ],
-        "sourceItems": [
-          {
-            "id": "aihot:cmtkffuf503cbrobqkwhimxmp",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "title": "Cursor 推出 Self-Hosted Machines，云智能体可在企业自有机器上执行",
-            "url": "https://cursor.com/blog/self-hosted-machines",
-            "summary": "Cursor 发布 Self-Hosted Machines，让云智能体的工具执行迁移到企业自有网络内的机器，智能体循环、推理和规划仍留在 Cursor 云端，通过 worker 的出站 HTTPS 连接对接，Cursor 不会主动连入企业网络。",
-            "description": "Cursor 发布 Self-Hosted Machines，让云智能体的工具执行迁移到企业自有网络内的机器，智能体循环、推理和规划仍留在 Cursor 云端，通过 worker 的出站 HTTPS 连接对接，Cursor 不会主动连入企业网络。",
-            "category": "products",
-            "originalSource": "Cursor Blog",
-            "originalUrl": "https://cursor.com/blog/self-hosted-machines",
-            "recommendedReason": "Cursor 发布 Self-Hosted Machines，让云智能体的工具执行迁移到企业自有网络内的机器，智能体循环、推理和规划仍留在 Cursor 云端，通过 worker 的出站 HTTPS 连接对接，Cursor 不会主动连入企业网络。",
-            "publishedAt": "2026-09-02T12:00:00.000Z",
-            "collectedAt": "2026-09-03T05:57:03.452Z",
-            "raw": {
-              "id": "cmtkffuf503cbrobqkwhimxmp",
-              "titleEn": "Run cloud agents on machines you manage",
-              "apiCategory": "ai-products"
-            }
-          },
-          {
-            "id": "hackernews:49546217",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "title": "Run cloud agents on machines you manage",
-            "url": "https://cursor.com/blog/self-hosted-machines",
-            "author": "zhwu",
-            "tags": [
-              "agent",
-              "agents",
-              "cursor"
-            ],
-            "metrics": {
-              "upvotes": 1,
-              "commentsCount": 2
-            },
-            "publishedAt": "2026-09-03T05:20:06.000Z",
-            "collectedAt": "2026-09-03T05:56:59.017Z",
-            "raw": {
-              "hnUrl": "https://news.ycombinator.com/item?id=49546217",
-              "matchedKeywords": [
-                "agent",
-                "agents",
-                "cursor"
-              ]
-            }
-          }
-        ],
-        "metrics": {
-          "votes": 1,
-          "commentsCount": 2,
-          "hnScore": 1,
-          "crossSourceBonus": 10,
-          "heatScore": 47
-        },
-        "crossSourceBonus": 10,
-        "category": "products",
-        "summary": "Cursor 发布 Self-Hosted Machines，让云智能体的工具执行迁移到企业自有网络内的机器，智能体循环、推理和规划仍留在 Cursor 云端，通过 worker 的出站 HTTPS 连接对接，Cursor 不会主动连入企业网络。",
-        "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
-        "firstSeenAt": "2026-09-02T12:00:00.000Z",
-        "lastSeenAt": "2026-09-03T05:57:03.452Z"
       }
     ]
   }
