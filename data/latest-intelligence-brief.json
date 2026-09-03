@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-09-03-2026-09-02T23-42-59-575Z",
-  "generatedAt": "2026-09-02T23:42:59.575Z",
+  "runId": "lightweight-2026-09-03-2026-09-03T02-14-15-314Z",
+  "generatedAt": "2026-09-03T02:14:15.314Z",
   "targetDate": "2026-09-03",
   "brief": {
     "date": "2026-09-03",
-    "headline": "Today's strongest AI trend signals are Ai Model Release, Mcp / Tool Calling, and Local Llm / Inference.",
+    "headline": "Today's strongest AI trend signals are Ai Model Release, Local Llm / Inference, and Mcp / Tool Calling.",
     "keyTakeaways": [
-      "Ai Model Release: This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 12 related signal(s). Treat it as correlation evidence ra.",
+      "Ai Model Release: This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 10 related signal(s). Treat it as correlation evidence ra.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
       "Ai Model Release: watch decision is deep_dive.",
+      "Local Llm / Inference: This topic appeared across 2 source(s): huggingface_models, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adopti.",
+      "Local Llm / Inference: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
+      "Local Llm / Inference: watch decision is deep_dive.",
       "Mcp / Tool Calling: This topic appeared across 2 source(s): aihot, huggingface_spaces, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
-      "Mcp / Tool Calling: watch decision is deep_dive.",
-      "Local Llm / Inference: This topic appeared across 1 source(s): huggingface_models, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-      "Local Llm / Inference: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
-      "Local Llm / Inference: watch decision is wait."
+      "Mcp / Tool Calling: watch decision is deep_dive."
     ],
     "topicBriefs": [
       {
@@ -30,37 +30,26 @@
           "hackernews"
         ],
         "sourceCount": 4,
-        "heatScore": 474,
+        "heatScore": 460,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Ai Model Release is an AI trend topic in tools represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 12 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 4 source(s): aihot, huggingface_models, huggingface_spaces, hackernews, with 10 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
           "tools",
-          "transformers",
+          "tensorboard",
           "safetensors",
-          "qwen3_next",
-          "text-generation",
-          "medical",
-          "japanese",
-          "nedo"
+          "qwen3",
+          "byte-level",
+          "from-scratch",
+          "urdu",
+          "region:us"
         ],
         "evidenceItems": [
-          {
-            "id": "aihot:cmtkdrsid000erobq8vn0zy1s",
-            "title": "美国司法部就 OpenAI 版权诉讼提交意见书支持训练属于合理使用",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://x.com/rohanpaul_ai/status/2095197606884573208",
-            "summary": "美国司法部在 OpenAI 与纽约时报的版权诉讼中提交意见书，主张用受版权文本训练 LLM 一般应属合理使用，称模型训练具有非凡转换性，并以国家安全为由警告全面许可要求会削弱美国 AI 开发者竞争力。该意见书属建议性质、不约束法院，仍将数据获取方式与具体输出是否复制受保护段落作为独立问题留给法院逐案判断。",
-            "category": "tools",
-            "publishedAt": "2026-09-02T17:10:11.000Z",
-            "collectedAt": "2026-09-02T23:43:02.231Z"
-          },
           {
             "id": "aihot:cmtkbz92801nmrowy61g2fsob",
             "title": "Google AI 团队分享如何为 LLM-as-a-Judge 评测编写可靠的评分标准",
@@ -70,7 +59,7 @@
             "summary": "Google AI 团队发布教程，讲解如何为 LLM-as-a-Judge 评测编写可靠的布尔式评分标准，指出模糊提示会导致评估不一致和浪费 token。文中给出四条经验：问题保持原子化且互不重叠、只让评判模型评估客观事实（可用 RFC 2119 术语如 MUST 表述）、只评 prompt 中明确要求的内容、用专家标注的 golden set 校准评判模型直至与人类评分一致。",
             "category": "tools",
             "publishedAt": "2026-09-02T16:35:00.000Z",
-            "collectedAt": "2026-09-02T23:43:02.231Z"
+            "collectedAt": "2026-09-03T02:14:19.112Z"
           },
           {
             "id": "aihot:cmtk9u4ga01hwrompqmqchjqj",
@@ -81,7 +70,7 @@
             "summary": "Google 员工 Shir Meir Lador 介绍 harness 工程，即用确定性组件包裹 LLM，包括编排层、执行沙箱、状态持久化和验证工具，让 Agent 不需逐行人工审查即可安全生成代码。",
             "category": "tools",
             "publishedAt": "2026-09-02T15:28:05.000Z",
-            "collectedAt": "2026-09-02T23:43:02.231Z"
+            "collectedAt": "2026-09-03T02:14:19.112Z"
           },
           {
             "id": "hackernews:49519939",
@@ -94,10 +83,44 @@
               "llm"
             ],
             "publishedAt": "2026-09-01T09:52:45.000Z",
-            "collectedAt": "2026-09-02T23:42:59.957Z",
+            "collectedAt": "2026-09-03T02:14:15.711Z",
             "metrics": {
               "upvotes": 651,
-              "commentsCount": 161
+              "commentsCount": 162
+            }
+          },
+          {
+            "id": "hackernews:49536411",
+            "title": "WebLLM: high-performance in-browser LLM inference engine",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://github.com/mlc-ai/web-llm",
+            "tags": [
+              "ai",
+              "llm",
+              "inference"
+            ],
+            "publishedAt": "2026-09-02T14:02:35.000Z",
+            "collectedAt": "2026-09-03T02:14:15.711Z",
+            "metrics": {
+              "upvotes": 92,
+              "commentsCount": 17
+            }
+          },
+          {
+            "id": "hackernews:49497996",
+            "title": "The shrinking landscape of linguistic diversity in the age of LLMs",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://www.nature.com/articles/s41562-026-02550-0",
+            "tags": [
+              "llm"
+            ],
+            "publishedAt": "2026-08-30T12:12:56.000Z",
+            "collectedAt": "2026-09-03T02:14:15.711Z",
+            "metrics": {
+              "upvotes": 36,
+              "commentsCount": 10
             }
           },
           {
@@ -119,49 +142,114 @@
               "region:us"
             ],
             "publishedAt": "2023-04-17T11:40:06.000Z",
-            "collectedAt": "2026-09-02T23:42:59.710Z",
+            "collectedAt": "2026-09-03T02:14:15.439Z",
             "metrics": {
               "likes": 14087
-            }
-          },
-          {
-            "id": "huggingface_spaces:facebook/MusicGen",
-            "title": "MusicGen",
-            "source": "huggingface_spaces",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/spaces/facebook/MusicGen",
-            "category": "gradio",
-            "tags": [
-              "gradio",
-              "music generation",
-              "language models",
-              "LLMs",
-              "region:us"
-            ],
-            "publishedAt": "2023-06-08T18:00:26.000Z",
-            "collectedAt": "2026-09-02T23:42:59.710Z",
-            "metrics": {
-              "likes": 5088
             }
           }
         ],
         "relatedEntities": [
-          "美国司法部就 OpenAI 版权诉讼提交意见书支持训练属于合理使用",
           "Google AI 团队分享如何为 LLM-as-a-Judge 评测编写可靠的评分标准",
           "什么是 harness 工程？Google 用 ADK 2.0 与 Antigravity SDK 演示自动修复编码循环",
-          "weblab-LLM-M/Ramen-CHORD-Qwen3-Next-80B-A3B-Instruct",
-          "weblab-LLM-M/Ramen-GSPO-Qwen3-Next-80B-A3B-Instruct",
-          "weblab-LLM-M/Ramen-GRPO-Qwen3-Next-80B-A3B-Instruct",
-          "protogeni/Qwen3.8-27B-Uncensored-W4A16-RTX3090-MTP4",
-          "Open LLM Leaderboard"
+          "zuhri025/byte-llm-pretrain-v1",
+          "Open LLM Leaderboard",
+          "MusicGen",
+          "Live Portrait",
+          "The shrinking landscape of linguistic diversity in the age of LLMs",
+          "WebLLM: high-performance in-browser LLM inference engine"
         ],
         "metrics": {
           "votes": 651,
           "likes": 14087,
-          "downloads": 8,
-          "commentsCount": 161,
-          "heatScore": 474,
+          "commentsCount": 162,
+          "heatScore": 460,
           "crossSourceBonus": 25
+        }
+      },
+      {
+        "id": "topic:local llm / inference",
+        "title": "Local Llm / Inference",
+        "category": "text-generation",
+        "sources": [
+          "huggingface_models",
+          "hackernews"
+        ],
+        "sourceCount": 2,
+        "heatScore": 183,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
+        "whatItIs": "Local Llm / Inference is an AI trend topic in text-generation represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
+        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
+        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
+        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "technicalKeywords": [
+          "transformers",
+          "safetensors",
+          "qwen3",
+          "text-generation",
+          "trl",
+          "sft",
+          "conversational",
+          "arxiv:1910.09700"
+        ],
+        "evidenceItems": [
+          {
+            "id": "hackernews:49536411",
+            "title": "WebLLM: high-performance in-browser LLM inference engine",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://github.com/mlc-ai/web-llm",
+            "tags": [
+              "ai",
+              "llm",
+              "inference"
+            ],
+            "publishedAt": "2026-09-02T14:02:35.000Z",
+            "collectedAt": "2026-09-03T02:14:15.711Z",
+            "metrics": {
+              "upvotes": 92,
+              "commentsCount": 17
+            }
+          },
+          {
+            "id": "huggingface_models:yatokim/Qwen3-0.6B-JSON-SFT",
+            "title": "yatokim/Qwen3-0.6B-JSON-SFT",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/yatokim/Qwen3-0.6B-JSON-SFT",
+            "category": "text-generation",
+            "tags": [
+              "transformers",
+              "safetensors",
+              "qwen3",
+              "text-generation",
+              "trl",
+              "sft",
+              "conversational",
+              "arxiv:1910.09700",
+              "text-generation-inference",
+              "endpoints_compatible",
+              "region:us"
+            ],
+            "publishedAt": "2026-09-03T01:25:59.000Z",
+            "collectedAt": "2026-09-03T02:14:15.434Z",
+            "metrics": {
+              "downloads": 0,
+              "likes": 0
+            }
+          }
+        ],
+        "relatedEntities": [
+          "yatokim/Qwen3-0.6B-JSON-SFT",
+          "WebLLM: high-performance in-browser LLM inference engine"
+        ],
+        "metrics": {
+          "votes": 92,
+          "commentsCount": 17,
+          "heatScore": 183,
+          "crossSourceBonus": 10
         }
       },
       {
@@ -198,7 +286,7 @@
             "summary": "Google 复盘 AI Agents Challenge 赛事，从各赛道头部提交中提炼出四个工程模式：双向 MCP、事件驱动并发、同标准回退和分层路由。",
             "category": "tools",
             "publishedAt": "2026-09-02T16:29:43.634Z",
-            "collectedAt": "2026-09-02T23:43:02.231Z"
+            "collectedAt": "2026-09-03T02:14:19.112Z"
           },
           {
             "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
@@ -213,9 +301,9 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-09-02T23:42:59.710Z",
+            "collectedAt": "2026-09-03T02:14:15.439Z",
             "metrics": {
-              "likes": 3764
+              "likes": 3765
             }
           },
           {
@@ -231,7 +319,7 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-09-02T23:42:59.710Z",
+            "collectedAt": "2026-09-03T02:14:15.439Z",
             "metrics": {
               "likes": 3438
             }
@@ -249,7 +337,7 @@
               "region:us"
             ],
             "publishedAt": "2025-10-27T03:20:43.000Z",
-            "collectedAt": "2026-09-02T23:42:59.710Z",
+            "collectedAt": "2026-09-03T02:14:15.439Z",
             "metrics": {
               "likes": 3043
             }
@@ -267,7 +355,7 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-09-02T23:42:59.710Z",
+            "collectedAt": "2026-09-03T02:14:15.439Z",
             "metrics": {
               "likes": 2929
             }
@@ -281,159 +369,51 @@
           "Background Removal"
         ],
         "metrics": {
-          "likes": 3764,
+          "likes": 3765,
           "heatScore": 140,
           "crossSourceBonus": 10
         }
       },
       {
-        "id": "topic:local llm / inference",
-        "title": "Local Llm / Inference",
-        "sources": [
-          "huggingface_models"
-        ],
-        "sourceCount": 1,
-        "heatScore": 47,
-        "confidence": "low",
-        "watchDecision": "wait",
-        "whatItIs": "Local Llm / Inference is an AI trend topic represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 1 source(s): huggingface_models, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
-        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
-        "technicalKeywords": [
-          "gguf",
-          "base_model:deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-          "base_model:quantized:deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-          "license:mit",
-          "endpoints_compatible",
-          "region:us",
-          "conversational",
-          "transformers"
-        ],
-        "evidenceItems": [
-          {
-            "id": "huggingface_models:giancap61/AXEL-AI_Virtual_Race_Engineer",
-            "title": "giancap61/AXEL-AI_Virtual_Race_Engineer",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/giancap61/AXEL-AI_Virtual_Race_Engineer",
-            "tags": [
-              "onnx",
-              "gguf",
-              "endpoints_compatible",
-              "region:us",
-              "conversational"
-            ],
-            "publishedAt": "2026-05-09T22:03:49.000Z",
-            "collectedAt": "2026-09-02T23:42:59.705Z",
-            "metrics": {
-              "downloads": 54,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:protogeni/Qwen3.8-27B-Uncensored-W4A16-RTX3090-MTP4",
-            "title": "protogeni/Qwen3.8-27B-Uncensored-W4A16-RTX3090-MTP4",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/protogeni/Qwen3.8-27B-Uncensored-W4A16-RTX3090-MTP4",
-            "category": "image-text-to-text",
-            "tags": [
-              "transformers",
-              "safetensors",
-              "qwen3_5",
-              "image-text-to-text",
-              "qwen3.8",
-              "uncensored",
-              "abliterated",
-              "compressed-tensors",
-              "autoround",
-              "gptq",
-              "w4a16",
-              "int4",
-              "mtp",
-              "speculative-decoding",
-              "vllm",
-              "rtx-3090",
-              "conversational",
-              "en",
-              "zh",
-              "base_model:noon-at-cgn/Qwen3.8-27B-Uncensored-W4A16-AutoRound",
-              "base_model:quantized:noon-at-cgn/Qwen3.8-27B-Uncensored-W4A16-AutoRound",
-              "license:apache-2.0",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-09-02T01:27:53.000Z",
-            "collectedAt": "2026-09-02T23:42:59.705Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 1
-            }
-          },
-          {
-            "id": "huggingface_models:BahamutRU/DeepSeek-V4-Flash-Vision-Exp-Q8_0-MXFP4-Q3_K-Q2_K-mixed-GGUF",
-            "title": "BahamutRU/DeepSeek-V4-Flash-Vision-Exp-Q8_0-MXFP4-Q3_K-Q2_K-mixed-GGUF",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/BahamutRU/DeepSeek-V4-Flash-Vision-Exp-Q8_0-MXFP4-Q3_K-Q2_K-mixed-GGUF",
-            "tags": [
-              "gguf",
-              "base_model:deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-              "base_model:quantized:deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-              "license:mit",
-              "endpoints_compatible",
-              "region:us",
-              "conversational"
-            ],
-            "publishedAt": "2026-09-02T23:06:06.000Z",
-            "collectedAt": "2026-09-02T23:42:59.705Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          }
-        ],
-        "relatedEntities": [
-          "BahamutRU/DeepSeek-V4-Flash-Vision-Exp-Q8_0-MXFP4-Q3_K-Q2_K-mixed-GGUF",
-          "protogeni/Qwen3.8-27B-Uncensored-W4A16-RTX3090-MTP4",
-          "giancap61/AXEL-AI_Virtual_Race_Engineer"
-        ],
-        "metrics": {
-          "likes": 1,
-          "downloads": 54,
-          "heatScore": 47,
-          "crossSourceBonus": 0
-        }
-      },
-      {
         "id": "topic:coding agent / swe agent",
         "title": "Coding Agent / Swe Agent",
-        "category": "products",
+        "category": "tools",
         "sources": [
           "aihot",
           "hackernews"
         ],
         "sourceCount": 2,
-        "heatScore": 41,
+        "heatScore": 42,
         "confidence": "low",
         "watchDecision": "track",
-        "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in products represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in tools represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Coding Agent / Swe Agent should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
+          "tools",
           "products",
           "models",
+          "ai",
+          "claude",
           "agent",
           "agents",
           "coding agent"
         ],
         "evidenceItems": [
+          {
+            "id": "aihot:cmtktzp3605o8roals1ci2tza",
+            "title": "Meta Muse Spark 1.3 在 Artificial Analysis 编码智能体指数中与 Claude 组合对比评测结果公布",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://x.com/alexandr_wang/status/2095318449602138577",
+            "summary": "Artificial Analysis 编码智能体指数显示，Meta Muse Spark 1.3 （max） 在 Muse Code 下得 68 分，仅次于 Claude Code + Opus 5 （xhigh） 的 68 分。",
+            "category": "tools",
+            "publishedAt": "2026-09-03T01:10:22.000Z",
+            "collectedAt": "2026-09-03T02:14:19.112Z"
+          },
           {
             "id": "aihot:cmtkh71ky017vrolly7trswyx",
             "title": "Claude 在 Cowork 和 Claude Code 中支持后台操作电脑",
@@ -443,7 +423,7 @@
             "summary": "Claude 官方宣布 Claude Cowork 和 Claude Code 新增后台使用电脑的能力。用户把任务交给 Claude 后，它会像人一样点击、输入和打开应用，用户可同时去做其他事。",
             "category": "products",
             "publishedAt": "2026-09-02T19:06:19.000Z",
-            "collectedAt": "2026-09-02T23:43:02.231Z"
+            "collectedAt": "2026-09-03T02:14:19.112Z"
           },
           {
             "id": "aihot:cmtkffuf503cbrobqkwhimxmp",
@@ -454,7 +434,7 @@
             "summary": "Cursor 发布 Self-Hosted Machines，让云智能体的工具执行迁移到企业自有网络内的机器，智能体循环、推理和规划仍留在 Cursor 云端，通过 worker 的出站 HTTPS 连接对接，Cursor 不会主动连入企业网络。",
             "category": "products",
             "publishedAt": "2026-09-02T12:00:00.000Z",
-            "collectedAt": "2026-09-02T23:43:02.231Z"
+            "collectedAt": "2026-09-03T02:14:19.112Z"
           },
           {
             "id": "aihot:cmtj0fqet001lroh9hyk6rqu0",
@@ -465,36 +445,57 @@
             "summary": "Claude Fable 5.1 现已上线 Claude Code 和 Claude Platform，定价与 Fable 5 相同，API 缓存读取便宜 75%。模型在长任务中能更久自主推进、更善于提示用户它已卡住，写作风格也更自然。Anthropic 同时发布了 Claude Fable 5.1 和 Claude Mythos 5.1，称其为编码与知识工作领域最先进的模型。",
             "category": "models",
             "publishedAt": "2026-09-01T18:13:48.000Z",
-            "collectedAt": "2026-09-02T23:43:02.231Z"
+            "collectedAt": "2026-09-03T02:14:19.112Z"
           },
           {
-            "id": "hackernews:49543917",
-            "title": "Ask HN: Are coding agents too cautious because they estimate work in human time?",
+            "id": "hackernews:49545023",
+            "title": "Claude Code Stores OAuth Tokens in Plaintext",
             "source": "hackernews",
             "sourceType": "developer_discussion",
-            "url": "https://news.ycombinator.com/item?id=49543917",
+            "url": "https://secretspec.dev/blog/claude-code-stores-oauth-tokens-in-plaintext/",
             "tags": [
+              "ai",
+              "claude"
+            ],
+            "publishedAt": "2026-09-03T01:47:44.000Z",
+            "collectedAt": "2026-09-03T02:14:15.711Z",
+            "metrics": {
+              "upvotes": 2,
+              "commentsCount": 0
+            }
+          },
+          {
+            "id": "hackernews:49544996",
+            "title": "MemHub – Persistent shared memory for AI coding agents",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://memhub.simplex.lat",
+            "tags": [
+              "ai",
               "agent",
               "agents",
-              "coding agent"
+              "coding agent",
+              "ai coding"
             ],
-            "publishedAt": "2026-09-02T23:17:43.000Z",
-            "collectedAt": "2026-09-02T23:42:59.957Z",
+            "publishedAt": "2026-09-03T01:43:31.000Z",
+            "collectedAt": "2026-09-03T02:14:15.711Z",
             "metrics": {
-              "upvotes": 1,
+              "upvotes": 2,
               "commentsCount": 0
             }
           }
         ],
         "relatedEntities": [
+          "Meta Muse Spark 1.3 在 Artificial Analysis 编码智能体指数中与 Claude 组合对比评测结果公布",
           "Claude 在 Cowork 和 Claude Code 中支持后台操作电脑",
           "Cursor 推出 Self-Hosted Machines，云智能体可在企业自有机器上执行",
           "Claude Fable 5.1 上线 Claude Code 与 Claude Platform，缓存读取降价 75%",
-          "Ask HN: Are coding agents too cautious because they estimate work in human time?"
+          "Claude Code Stores OAuth Tokens in Plaintext",
+          "MemHub – Persistent shared memory for AI coding agents"
         ],
         "metrics": {
-          "votes": 1,
-          "heatScore": 41,
+          "votes": 2,
+          "heatScore": 42,
           "crossSourceBonus": 10
         }
       }
@@ -505,8 +506,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-09-02T23:42:59.602Z",
-        "finishedAt": "2026-09-02T23:42:59.602Z",
+        "startedAt": "2026-09-03T02:14:15.350Z",
+        "finishedAt": "2026-09-03T02:14:15.350Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -515,36 +516,36 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-09-02T23:42:59.602Z",
-        "finishedAt": "2026-09-02T23:43:02.232Z",
-        "latencyMs": 2630
+        "startedAt": "2026-09-03T02:14:15.350Z",
+        "finishedAt": "2026-09-03T02:14:19.113Z",
+        "latencyMs": 3763
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 13,
-        "startedAt": "2026-09-02T23:42:59.619Z",
-        "finishedAt": "2026-09-02T23:42:59.705Z",
-        "latencyMs": 86
+        "itemCount": 10,
+        "startedAt": "2026-09-03T02:14:15.368Z",
+        "finishedAt": "2026-09-03T02:14:15.435Z",
+        "latencyMs": 67
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-09-02T23:42:59.620Z",
-        "finishedAt": "2026-09-02T23:42:59.710Z",
-        "latencyMs": 90
+        "startedAt": "2026-09-03T02:14:15.370Z",
+        "finishedAt": "2026-09-03T02:14:15.439Z",
+        "latencyMs": 69
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 26,
-        "startedAt": "2026-09-02T23:42:59.621Z",
-        "finishedAt": "2026-09-02T23:42:59.958Z",
-        "latencyMs": 337
+        "itemCount": 29,
+        "startedAt": "2026-09-03T02:14:15.371Z",
+        "finishedAt": "2026-09-03T02:14:15.712Z",
+        "latencyMs": 341
       }
     ],
     "dataNotes": [
@@ -578,7 +579,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-09-02T23:42:59.710Z",
+        "collectedAt": "2026-09-03T02:14:15.439Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -601,7 +602,7 @@
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-09-02T23:42:59.710Z",
+        "collectedAt": "2026-09-03T02:14:15.439Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -624,7 +625,7 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-09-02T23:42:59.710Z",
+        "collectedAt": "2026-09-03T02:14:15.439Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
@@ -648,7 +649,7 @@
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
         "updatedAt": "2026-09-01T15:41:47.000Z",
-        "collectedAt": "2026-09-02T23:42:59.710Z",
+        "collectedAt": "2026-09-03T02:14:15.439Z",
         "raw": {
           "sdk": "docker",
           "emoji": "📊"
@@ -674,7 +675,7 @@
         },
         "publishedAt": "2023-06-08T18:00:26.000Z",
         "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-09-02T23:42:59.710Z",
+        "collectedAt": "2026-09-03T02:14:15.439Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🎵"
@@ -698,7 +699,7 @@
         },
         "publishedAt": "2023-05-20T09:26:19.000Z",
         "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-09-02T23:42:59.710Z",
+        "collectedAt": "2026-09-03T02:14:15.439Z",
         "raw": {
           "sdk": "static",
           "emoji": "🏆🤖"
@@ -727,7 +728,7 @@
         },
         "publishedAt": "2024-07-05T16:35:24.000Z",
         "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-09-02T23:42:59.710Z",
+        "collectedAt": "2026-09-03T02:14:15.439Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🤪"
@@ -747,11 +748,11 @@
         ],
         "category": "gradio",
         "metrics": {
-          "likes": 3764
+          "likes": 3765
         },
         "publishedAt": "2025-11-26T19:54:05.000Z",
         "updatedAt": "2026-07-13T14:23:41.000Z",
-        "collectedAt": "2026-09-02T23:42:59.710Z",
+        "collectedAt": "2026-09-03T02:14:15.439Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🖼️"
@@ -771,11 +772,11 @@
           "gemini"
         ],
         "metrics": {
-          "upvotes": 785,
-          "commentsCount": 464
+          "upvotes": 839,
+          "commentsCount": 488
         },
         "publishedAt": "2026-09-02T15:12:40.000Z",
-        "collectedAt": "2026-09-02T23:42:59.957Z",
+        "collectedAt": "2026-09-03T02:14:15.711Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49537553",
           "matchedKeywords": [
@@ -796,11 +797,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 1373,
-          "commentsCount": 1330
+          "upvotes": 1377,
+          "commentsCount": 1333
         },
         "publishedAt": "2026-09-01T17:53:53.000Z",
-        "collectedAt": "2026-09-02T23:42:59.957Z",
+        "collectedAt": "2026-09-03T02:14:15.711Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49525378",
           "matchedKeywords": [
@@ -820,11 +821,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 839,
-          "commentsCount": 994
+          "upvotes": 841,
+          "commentsCount": 1001
         },
         "publishedAt": "2026-09-01T18:35:15.000Z",
-        "collectedAt": "2026-09-02T23:42:59.957Z",
+        "collectedAt": "2026-09-03T02:14:15.711Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49526069",
           "matchedKeywords": [
@@ -843,11 +844,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 318,
-          "commentsCount": 230
+          "upvotes": 405,
+          "commentsCount": 269
         },
         "publishedAt": "2026-09-02T19:35:04.000Z",
-        "collectedAt": "2026-09-02T23:42:59.957Z",
+        "collectedAt": "2026-09-03T02:14:15.711Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49541256",
           "matchedKeywords": [
@@ -856,32 +857,72 @@
         }
       },
       {
-        "id": "hackernews:49519939",
+        "id": "hackernews:49535284",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
-        "url": "https://mvakde.github.io/blog/44-on-arc-1/",
-        "author": "porridgeraisin",
+        "title": "Can I opt out of my input or output data being used for training?",
+        "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
+        "author": "teekert",
         "tags": [
           "ai",
-          "llm"
+          "mistral"
         ],
         "metrics": {
-          "upvotes": 651,
-          "commentsCount": 161
+          "upvotes": 377,
+          "commentsCount": 165
         },
-        "publishedAt": "2026-09-01T09:52:45.000Z",
-        "collectedAt": "2026-09-02T23:42:59.957Z",
+        "publishedAt": "2026-09-02T12:30:39.000Z",
+        "collectedAt": "2026-09-03T02:14:15.711Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=49519939",
+          "hnUrl": "https://news.ycombinator.com/item?id=49535284",
           "matchedKeywords": [
             "ai",
-            "llm"
+            "mistral"
           ]
         }
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmtktzp3605o8roals1ci2tza",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Meta Muse Spark 1.3 在 Artificial Analysis 编码智能体指数中与 Claude 组合对比评测结果公布",
+        "url": "https://x.com/alexandr_wang/status/2095318449602138577",
+        "summary": "Artificial Analysis 编码智能体指数显示，Meta Muse Spark 1.3 （max） 在 Muse Code 下得 68 分，仅次于 Claude Code + Opus 5 （xhigh） 的 68 分。",
+        "description": "Artificial Analysis 编码智能体指数显示，Meta Muse Spark 1.3 （max） 在 Muse Code 下得 68 分，仅次于 Claude Code + Opus 5 （xhigh） 的 68 分。",
+        "category": "tools",
+        "originalSource": "X：Alexandr Wang（Scale AI 创始人/Meta 首席 AI 官） (@alexandr_wang)",
+        "originalUrl": "https://x.com/alexandr_wang/status/2095318449602138577",
+        "recommendedReason": "Artificial Analysis 编码智能体指数显示，Meta Muse Spark 1.3 （max） 在 Muse Code 下得 68 分，仅次于 Claude Code + Opus 5 （xhigh） 的 68 分。",
+        "publishedAt": "2026-09-03T01:10:22.000Z",
+        "collectedAt": "2026-09-03T02:14:19.112Z",
+        "raw": {
+          "id": "cmtktzp3605o8roals1ci2tza",
+          "titleEn": "muse spark 1.3 + muse code evals competitively with Claude code + opus 5 and Claude code + fable 5",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmtksft9f0450roali4sl0z86",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "美国司法部介入纽约时报诉 OpenAI 案，主张 AI 训练属合理使用",
+        "url": "https://www.ithome.com/0/997/732.htm",
+        "summary": "美国司法部 9 月 1 日向曼哈顿联邦法院提交利益声明，介入《纽约时报》诉 OpenAI 版权案，支持 OpenAI 主张大语言模型训练属合理使用。DOJ 以国家安全和 AI 产业竞争力为主要论据，称训练使用具有转换性；《纽约时报》发言人批评政府站在 AI 公司一边牺牲创作者权益。法官要求双方最迟 9 月 4 日提交简易判决动议，该案结果可能为 AI 训练版权合法性确立先例。",
+        "description": "美国司法部 9 月 1 日向曼哈顿联邦法院提交利益声明，介入《纽约时报》诉 OpenAI 版权案，支持 OpenAI 主张大语言模型训练属合理使用。DOJ 以国家安全和 AI 产业竞争力为主要论据，称训练使用具有转换性；《纽约时报》发言人批评政府站在 AI 公司一边牺牲创作者权益。法官要求双方最迟 9 月 4 日提交简易判决动议，该案结果可能为 AI 训练版权合法性确立先例。",
+        "category": "industry",
+        "originalSource": "IT之家（RSS）",
+        "originalUrl": "https://www.ithome.com/0/997/732.htm",
+        "recommendedReason": "美国司法部 9 月 1 日向曼哈顿联邦法院提交利益声明，介入《纽约时报》诉 OpenAI 版权案，支持 OpenAI 主张大语言模型训练属合理使用。DOJ 以国家安全和 AI 产业竞争力为主要论据，称训练使用具有转换性；《纽约时报》发言人批评政府站在 AI 公司一边牺牲创作者权益。法官要求双方最迟 9 月 4 日提交简易判决动议，该案结果可能为 AI 训练版权合法性确立先例。",
+        "publishedAt": "2026-09-02T23:50:05.000Z",
+        "collectedAt": "2026-09-03T02:14:19.112Z",
+        "raw": {
+          "id": "cmtksft9f0450roali4sl0z86",
+          "titleEn": "纽约时报诉 OpenAI 案升级：美国司法部首次就 AI 版权问题公开表态，主张 AI 训练属\"合理使用\"",
+          "apiCategory": "industry"
+        }
+      },
       {
         "id": "aihot:cmtkme19o02plro5q94jsf94x",
         "source": "aihot",
@@ -895,7 +936,7 @@
         "originalUrl": "https://x.com/kimmonismus/status/2095265444999410146",
         "recommendedReason": "Meta 发布 Muse Spark 1.3，为五个月内第四个 Muse Spark 版本。max 变体（合作伙伴限时预览）在 Artificial Analysis Intelligence Index 得 62 分。",
         "publishedAt": "2026-09-02T21:39:44.000Z",
-        "collectedAt": "2026-09-02T23:43:02.231Z",
+        "collectedAt": "2026-09-03T02:14:19.112Z",
         "raw": {
           "id": "cmtkme19o02plro5q94jsf94x",
           "titleEn": "It's worth really grasping this： in a very short time， the race between OpenAI and Anthropic has tur…",
@@ -915,7 +956,7 @@
         "originalUrl": "https://x.com/alexandr_wang/status/2095249704888197175",
         "recommendedReason": "Meta 发布 Muse Spark 1.3，是五个月内第四个 Muse Spark 版本。xhigh 版在 Artificial Analysis Intelligence Index 得 61 分。",
         "publishedAt": "2026-09-02T20:37:12.000Z",
-        "collectedAt": "2026-09-02T23:43:02.231Z",
+        "collectedAt": "2026-09-03T02:14:19.112Z",
         "raw": {
           "id": "cmtkkcguj04aurollf1lq9a9s",
           "titleEn": "i really hate to say it， but… gemini who？ 🏎️💨",
@@ -935,7 +976,7 @@
         "originalUrl": "https://x.com/claudeai/status/2095226833293685100",
         "recommendedReason": "Claude 官方宣布 Claude Cowork 和 Claude Code 新增后台使用电脑的能力。用户把任务交给 Claude 后，它会像人一样点击、输入和打开应用，用户可同时去做其他事。",
         "publishedAt": "2026-09-02T19:06:19.000Z",
-        "collectedAt": "2026-09-02T23:43:02.231Z",
+        "collectedAt": "2026-09-03T02:14:19.112Z",
         "raw": {
           "id": "cmtkh71ky017vrolly7trswyx",
           "titleEn": "Claude can now use your computer in the background in Claude Cowork and Claude Code. Give it someth…",
@@ -955,30 +996,10 @@
         "originalUrl": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality",
         "recommendedReason": "GitHub 工程师 Erik Kristensen 分享了 Copilot 降本的四项改动：选择性压缩工具输出、移除 view 工具行号前缀（线下推理成本降约 5%，线上用户日均推理成本降约 3%）、压缩 task-tool 提示词（每轮省约 1300 token，每活跃小时归一化成本降 2.9%）、后台任务完成后直接交付结果（AI Credits 用量降约 2.3%）。",
         "publishedAt": "2026-09-02T18:00:00.000Z",
-        "collectedAt": "2026-09-02T23:43:02.231Z",
+        "collectedAt": "2026-09-03T02:14:19.112Z",
         "raw": {
           "id": "cmtkfkfvl03garobqyr0vwpth",
           "titleEn": "How we make AI coding more cost efficient without sacrificing task quality",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmtkdrsid000erobq8vn0zy1s",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "美国司法部就 OpenAI 版权诉讼提交意见书支持训练属于合理使用",
-        "url": "https://x.com/rohanpaul_ai/status/2095197606884573208",
-        "summary": "美国司法部在 OpenAI 与纽约时报的版权诉讼中提交意见书，主张用受版权文本训练 LLM 一般应属合理使用，称模型训练具有非凡转换性，并以国家安全为由警告全面许可要求会削弱美国 AI 开发者竞争力。该意见书属建议性质、不约束法院，仍将数据获取方式与具体输出是否复制受保护段落作为独立问题留给法院逐案判断。",
-        "description": "美国司法部在 OpenAI 与纽约时报的版权诉讼中提交意见书，主张用受版权文本训练 LLM 一般应属合理使用，称模型训练具有非凡转换性，并以国家安全为由警告全面许可要求会削弱美国 AI 开发者竞争力。该意见书属建议性质、不约束法院，仍将数据获取方式与具体输出是否复制受保护段落作为独立问题留给法院逐案判断。",
-        "category": "tools",
-        "originalSource": "X：Rohan Paul (@rohanpaul_ai)",
-        "originalUrl": "https://x.com/rohanpaul_ai/status/2095197606884573208",
-        "recommendedReason": "美国司法部在 OpenAI 与纽约时报的版权诉讼中提交意见书，主张用受版权文本训练 LLM 一般应属合理使用，称模型训练具有非凡转换性，并以国家安全为由警告全面许可要求会削弱美国 AI 开发者竞争力。该意见书属建议性质、不约束法院，仍将数据获取方式与具体输出是否复制受保护段落作为独立问题留给法院逐案判断。",
-        "publishedAt": "2026-09-02T17:10:11.000Z",
-        "collectedAt": "2026-09-02T23:43:02.231Z",
-        "raw": {
-          "id": "cmtkdrsid000erobq8vn0zy1s",
-          "titleEn": "The Trump administration has now formally put the U.S. government behind OpenAI's core fair-use argu…",
           "apiCategory": "tip"
         }
       },
@@ -995,7 +1016,7 @@
         "originalUrl": "https://claude.com/blog/the-anatomy-of-effective-commerce-agents",
         "recommendedReason": "Anthropic 发布电商 Agent 构建指南，基于与零售、旅游、电信等团队的落地经验，核心架构是单个 Claude 在标准 Agent 循环中配合技能与工具，而非按领域拆分子智能体，并开源了 anthropics/commerce-agents 参考实现，含购物与商家 Agent。",
         "publishedAt": "2026-09-02T17:01:34.540Z",
-        "collectedAt": "2026-09-02T23:43:02.231Z",
+        "collectedAt": "2026-09-03T02:14:19.112Z",
         "raw": {
           "id": "cmtkcffah018zrog0zokk6s30",
           "titleEn": "A guide to the anatomy of effective commerce agents",
@@ -1015,30 +1036,10 @@
         "originalUrl": "https://dev.to/googleai/how-to-write-reliable-rubrics-for-llm-as-a-judge-evaluations-ndp",
         "recommendedReason": "Google AI 团队发布教程，讲解如何为 LLM-as-a-Judge 评测编写可靠的布尔式评分标准，指出模糊提示会导致评估不一致和浪费 token。文中给出四条经验：问题保持原子化且互不重叠、只让评判模型评估客观事实（可用 RFC 2119 术语如 MUST 表述）、只评 prompt 中明确要求的内容、用专家标注的 golden set 校准评判模型直至与人类评分一致。",
         "publishedAt": "2026-09-02T16:35:00.000Z",
-        "collectedAt": "2026-09-02T23:43:02.231Z",
+        "collectedAt": "2026-09-03T02:14:19.112Z",
         "raw": {
           "id": "cmtkbz92801nmrowy61g2fsob",
           "titleEn": "How to Write Reliable Rubrics for LLM-as-a-Judge Evaluations",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmtkbbn6q01j6roz54e8g5zec",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Google 总结 AI Agents Challenge 中最强提交背后的 4 个工程模式",
-        "url": "https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions",
-        "summary": "Google 复盘 AI Agents Challenge 赛事，从各赛道头部提交中提炼出四个工程模式：双向 MCP、事件驱动并发、同标准回退和分层路由。",
-        "description": "Google 复盘 AI Agents Challenge 赛事，从各赛道头部提交中提炼出四个工程模式：双向 MCP、事件驱动并发、同标准回退和分层路由。",
-        "category": "tools",
-        "originalSource": "Google Developers Blog（RSS）",
-        "originalUrl": "https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions",
-        "recommendedReason": "Google 复盘 AI Agents Challenge 赛事，从各赛道头部提交中提炼出四个工程模式：双向 MCP、事件驱动并发、同标准回退和分层路由。",
-        "publishedAt": "2026-09-02T16:29:43.634Z",
-        "collectedAt": "2026-09-02T23:43:02.231Z",
-        "raw": {
-          "id": "cmtkbbn6q01j6roz54e8g5zec",
-          "titleEn": "4 engineering patterns behind the strongest AI Agents Challenge submissions",
           "apiCategory": "tip"
         }
       }
