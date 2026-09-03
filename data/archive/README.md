@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-09-03T05:57:11.232Z
+Updated: 2026-09-03T11:27:39.707Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -15,7 +15,7 @@ Updated: 2026-09-03T05:57:11.232Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-09-03 | daily | [AI Developer Radar｜Daily｜2026-09-03](2026/09/2026-09-03-daily.md) | debpalash/VoiceStudio, Imbad0202/academic-research-skills, Graphify-Labs/graphify, headroomlabs-ai/headroom, DietrichGebert/ponytail |
+| 2026-09-03 | daily | [AI Developer Radar｜Daily｜2026-09-03](2026/09/2026-09-03-daily.md) | debpalash/VoiceStudio, Imbad0202/academic-research-skills, ByteByteGoHq/system-design-101, Tencent/ncnn, headroomlabs-ai/headroom |
 | 2026-09-02 | daily | [AI Developer Radar｜Daily｜2026-09-02](2026/09/2026-09-02-daily.md) | career-ops-hq/career-ops, ultralytics/yolov5, Tencent/ncnn, Graphify-Labs/graphify, Gitlawb/openclaude |
 | 2026-09-01 | daily | [AI Developer Radar｜Daily｜2026-09-01](2026/09/2026-09-01-daily.md) | VoltAgent/awesome-design-md, jingyaogong/minimind, ultralytics/yolov5, deepspeedai/DeepSpeed, Graphify-Labs/graphify |
 | 2026-08-31 | daily | [AI Developer Radar｜Daily｜2026-08-31](2026/08/2026-08-31-daily.md) | Osmantic/ODS, k1tbyte/Wand-Enhancer, THU-MAIC/OpenMAIC, kaifcodec/user-scanner, handsomestWei/patent-disclosure-skill |
