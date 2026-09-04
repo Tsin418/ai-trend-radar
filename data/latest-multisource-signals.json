@@ -1,135 +1,171 @@
 {
   "schemaVersion": 1,
   "mode": "multisource",
-  "generatedAt": "2026-09-04T01:12:06.068Z",
+  "generatedAt": "2026-09-04T04:39:43.011Z",
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
       {
-        "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Open LLM Leaderboard",
-        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
-        "author": "open-llm-leaderboard",
+        "id": "http://arxiv.org/abs/2609.04198v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Clean Engineering, Unstable Measurement: A Preregistered Reliability Failure of Black-Box LLM Observers on Shared Endpoints",
+        "url": "https://arxiv.org/pdf/2609.04198v1",
+        "description": "Language-model judges now gate training data, score generations, and drive leaderboards. The judge is then a measurement instrument, resting on one rarely stated assumption: the same request, sent to the same model name, reads the same tomorrow. We audited that assumption in two preregistered campaigns with every threshold fixed in advance; neither got past validating its instrument. Across 52,988 audited request attempts, same-window repeat rankings agreed at Spearman 0.400 against a required 0",
+        "summary": "Language-model judges now gate training data, score generations, and drive leaderboards. The judge is then a measurement instrument, resting on one rarely stated assumption: the same request, sent to the same model name, reads the same tomorrow. We audited that assumption in two preregistered campaigns with every threshold fixed in advance; neither got past validating its instrument. Across 52,988 audited request attempts, same-window repeat rankings agreed at Spearman 0.400 against a required 0.90, and byte-identical next-day replays agreed at 0.78 against a required 0.99, each time with the execution record at ceiling. Three mechanisms explain the gap: a label-to-meaning mapping that biased readouts as strongly as the signal; candidate gaps seven orders of magnitude below the instrument's own noise floor; and byte-identical inputs returning different rankings, a noise that exact-permutation readouts compound. Neither metric substitution nor sampling repaired it on the tested grid. Preregistered follow-ups bound the problem: waiting did not help on the days sampled (0.805 versus 0.800, replicated over five further days); switching providers did not help (four providers share the floor, medians 0.74 to 0.88, predicted by none of the metadata fields they expose); self-hosting on batch-invariant kernels helped only while the server was quiet; and on constructed errors with known gaps, the readout's separation tracks error type, not size. We distill the evidence into a three-level snapshot-identity ladder, eight design rules, and a reporting checklist; a pilot at roughly 2% of the study's call volume would have exposed both unreachable gates in advance. All results concern externally measured behaviour on shared serving infrastructure. On a shared endpoint, a model name is not a frozen instrument; a preregistered evaluation must measure its instrument before freezing any gate on it.",
+        "author": "Haoyaun Zhu, Jie Zhang",
         "tags": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math",
-          "region:us"
+          "cs.AI",
+          "cs.LG",
+          "llm",
+          "evaluation"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 14092
-        },
-        "publishedAt": "2023-04-17T11:40:06.000Z",
-        "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-09-04T01:11:44.464Z",
+        "category": "cs.AI",
+        "language": "en",
+        "publishedAt": "2026-09-03T17:59:43Z",
+        "updatedAt": "2026-09-03T17:59:43Z",
+        "collectedAt": "2026-09-04T04:39:35.210Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "🏆"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2609.04198v1",
+          "authors": [
+            "Haoyaun Zhu",
+            "Jie Zhang"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, evaluation"
       },
       {
-        "id": "huggingface_spaces:jbilcke-hf/ai-comic-factory",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "AI Comic Factory",
-        "url": "https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory",
-        "author": "jbilcke-hf",
+        "id": "http://arxiv.org/abs/2609.04197v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "ESPO: Error-Structured Prompt Optimization via Diagnose, Diversify, and Stabilize",
+        "url": "https://arxiv.org/pdf/2609.04197v1",
+        "description": "Evolutionary prompt optimizers such as GEPA suffer from prompt bloat: each iteration appends rules and caveats, producing prompts up to 3$\\times$ longer yet no more accurate. We trace this to three deficiencies - incomplete error observation, limited search diversity, and unreliable selection - and propose ESPO (Error-Structured Prompt Optimization), which decomposes prompt optimization into three phases: Diagnose clusters all training errors into structural patterns in one round; Propose genera",
+        "summary": "Evolutionary prompt optimizers such as GEPA suffer from prompt bloat: each iteration appends rules and caveats, producing prompts up to 3$\\times$ longer yet no more accurate. We trace this to three deficiencies - incomplete error observation, limited search diversity, and unreliable selection - and propose ESPO (Error-Structured Prompt Optimization), which decomposes prompt optimization into three phases: Diagnose clusters all training errors into structural patterns in one round; Propose generates candidates via four complementary strategies with independent biases; Select applies bootstrap stability selection. On seven public NLP benchmarks - Tweet, MMLU, GSM8K, HotpotQA, ScoNe, HoVer, and PUPA - ESPO improves average accuracy by $+$3.76 pp over the state-of-the-art (74.67% vs 70.91% for GEPA), matching or exceeding GEPA on every dataset while producing prompts 47% shorter (1,004 vs 1,878 chars) and faster at inference. Cross-model experiments across four additional student models (Gemma 3 12B, Mistral 14B, Qwen3 32B, Claude Haiku 4.5) show ESPO yields the best average accuracy on every model tested, with the largest gap on Qwen3 GSM8K (15.00% $\\to$ 91.40%). A generalization bound (Appendix) grounds each phase in a corresponding term of the test-time gap, and the ablation confirms a key prediction: adding diversity without bootstrap selection actually hurts performance ($-$1.20%).",
+        "author": "Lihao Liu, Peng Tang, Kunwar Yashraj Singh, Shabnam Ghadar",
         "tags": [
-          "docker",
-          "region:us"
+          "cs.CL",
+          "cs.AI",
+          "rag",
+          "benchmark"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 11236
-        },
-        "publishedAt": "2023-08-25T14:46:47.000Z",
-        "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-09-04T01:11:44.464Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-09-03T17:59:37Z",
+        "updatedAt": "2026-09-03T17:59:37Z",
+        "collectedAt": "2026-09-04T04:39:35.210Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "👩‍🎨"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2609.04197v1",
+          "authors": [
+            "Lihao Liu",
+            "Peng Tang",
+            "Kunwar Yashraj Singh",
+            "Shabnam Ghadar"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: rag, benchmark"
       },
       {
-        "id": "huggingface_spaces:Kwai-Kolors/Kolors-Virtual-Try-On",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "Kolors Virtual Try-On",
-        "url": "https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On",
-        "author": "Kwai-Kolors",
+        "id": "http://arxiv.org/abs/2609.04194v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Legibility is Not Interpretability: Comparing Judged and Actual Importance in Chain-Of-Thought Reasoning",
+        "url": "https://arxiv.org/pdf/2609.04194v1",
+        "description": "Reasoning traces from chain-of-thought models appear to offer a legible window into how a model arrives at its answer. A growing body of work treats them as such, using LLM judges to diagnose errors, evaluate faithfulness, and provide step-level supervision via process reward models and generative critics. These practices rely on the text of a reasoning step carrying information about its functional role. But does the text actually encode information about which reasoning steps matter? We operat",
+        "summary": "Reasoning traces from chain-of-thought models appear to offer a legible window into how a model arrives at its answer. A growing body of work treats them as such, using LLM judges to diagnose errors, evaluate faithfulness, and provide step-level supervision via process reward models and generative critics. These practices rely on the text of a reasoning step carrying information about its functional role. But does the text actually encode information about which reasoning steps matter? We operationalize the importance of a reasoning step as its advantage: the change in expected reward, e.g., producing the correct final answer, from including that step, estimated via Monte Carlo rollouts. Basing ground truth on these estimates, we evaluate whether LLM judges can identify high-advantage steps and find that sufficiently capable LLMs can outperform a prevalence baseline but fall well short of a noise ceiling. Fine-tuning a model as a step-level critic yields strong improvement for incorrect responses but remains distant from ceiling for correct responses, suggesting that step importance is only partially recoverable from the text of the reasoning trace. Our findings contribute to a growing body of chain-of-thought faithfulness work that cautions against treating the legibility of reasoning traces as interpretability, especially with implications for process reward modeling.",
+        "author": "Kevin Du, Alexander Hoyle, Laura Ruis, Acyr Locatelli",
         "tags": [
-          "gradio",
-          "region:us"
+          "cs.CL",
+          "cs.LG",
+          "llm",
+          "fine-tuning"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 10171
-        },
-        "publishedAt": "2024-08-07T09:42:50.000Z",
-        "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-09-04T01:11:44.464Z",
+        "category": "cs.CL",
+        "language": "en",
+        "publishedAt": "2026-09-03T17:59:08Z",
+        "updatedAt": "2026-09-03T17:59:08Z",
+        "collectedAt": "2026-09-04T04:39:35.210Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "👕"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2609.04194v1",
+          "authors": [
+            "Kevin Du",
+            "Alexander Hoyle",
+            "Laura Ruis",
+            "Acyr Locatelli"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, fine-tuning"
       },
       {
-        "id": "huggingface_spaces:mteb/leaderboard",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MTEB Leaderboard",
-        "url": "https://huggingface.co/spaces/mteb/leaderboard",
-        "author": "mteb",
+        "id": "http://arxiv.org/abs/2609.04189v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Robust PAC Learning of Concurrent Stochastic Games",
+        "url": "https://arxiv.org/pdf/2609.04189v1",
+        "description": "We introduce the first Probably Approximately Correct (PAC) learning framework for general-sum concurrent stochastic games (CSGs) with transition uncertainty, while addressing the challenge of Nash equilibrium (NE) existence. Our algorithm maintains data-driven $L^1$ confidence sets over transition kernels and solves a robust CSG to compute a social-welfare optimal $\\varepsilon$-NE, using a robust MDP-based exploration mechanism to drive joint state-action coverage. Crucially, we introduce a Nas",
+        "summary": "We introduce the first Probably Approximately Correct (PAC) learning framework for general-sum concurrent stochastic games (CSGs) with transition uncertainty, while addressing the challenge of Nash equilibrium (NE) existence. Our algorithm maintains data-driven $L^1$ confidence sets over transition kernels and solves a robust CSG to compute a social-welfare optimal $\\varepsilon$-NE, using a robust MDP-based exploration mechanism to drive joint state-action coverage. Crucially, we introduce a Nash margin characterisation that enables principled reasoning about equilibrium existence: the framework either returns an $\\varepsilon$-approximate NE whose social-welfare value is $\\varepsilon$-close to optimal, or provides a sound certificate that no exact NE exists. Under a minimum reachability condition $p_{\\mathrm{reach}}>0$ over relevant state-action pairs, the algorithm terminates after a polynomial number of trajectory samples, with sample complexity $\\widetilde{O}\\left( {R_{\\max}^2 H^4 |S|^2 |A| / (p_{\\mathrm{reach}} \\varepsilon^2)} \\right)$. Empirical results on benchmark CSGs demonstrate near-optimal performance, correct handling of equilibrium (non-)existence, and sample complexity consistent with theory.",
+        "author": "Angel Y. He, David Parker",
         "tags": [
-          "docker",
-          "leaderboard",
-          "region:us"
+          "cs.LG",
+          "cs.GT",
+          "cs.LO",
+          "cs.MA",
+          "rag",
+          "benchmark"
         ],
-        "category": "docker",
-        "metrics": {
-          "likes": 7651
-        },
-        "publishedAt": "2022-09-29T11:29:23.000Z",
-        "updatedAt": "2026-09-01T15:41:47.000Z",
-        "collectedAt": "2026-09-04T01:11:44.464Z",
+        "category": "cs.LG",
+        "language": "en",
+        "publishedAt": "2026-09-03T17:58:57Z",
+        "updatedAt": "2026-09-03T17:58:57Z",
+        "collectedAt": "2026-09-04T04:39:35.210Z",
+        "metrics": {},
         "raw": {
-          "sdk": "docker",
-          "emoji": "📊"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2609.04189v1",
+          "authors": [
+            "Angel Y. He",
+            "David Parker"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: rag, benchmark"
       },
       {
-        "id": "huggingface_spaces:facebook/MusicGen",
-        "source": "huggingface_spaces",
-        "sourceType": "model_hub",
-        "title": "MusicGen",
-        "url": "https://huggingface.co/spaces/facebook/MusicGen",
-        "author": "facebook",
+        "id": "http://arxiv.org/abs/2609.04183v1",
+        "source": "arxiv",
+        "sourceType": "paper",
+        "title": "Seeing Before Synthesizing: VLM-Guided Transition Event Discovery for Weakly-Supervised Dense Video Captioning",
+        "url": "https://arxiv.org/pdf/2609.04183v1",
+        "description": "Weakly-Supervised Dense Video Captioning aims to localize and describe multiple events in untrimmed videos given only an ordered set of event-level captions per video. Recent work synthesizes auxiliary transition captions via LLM to provide additional vision-language alignment, but these captions lack visual grounding and are rigidly assigned to every inter-event gap at a fixed location and duration. To address these, we propose Seeing Before Synthesizing (SBS), a framework that adaptively provi",
+        "summary": "Weakly-Supervised Dense Video Captioning aims to localize and describe multiple events in untrimmed videos given only an ordered set of event-level captions per video. Recent work synthesizes auxiliary transition captions via LLM to provide additional vision-language alignment, but these captions lack visual grounding and are rigidly assigned to every inter-event gap at a fixed location and duration. To address these, we propose Seeing Before Synthesizing (SBS), a framework that adaptively provides visually grounded linguistic guidance only where warranted. Leveraging a VLM, we generate frame-level narratives for the inter-event gaps and detect transitions from the semantic variation across them. For identified transitions, we then refine inter-event temporal masks by blending the temporal midpoint with the semantic change point and selecting the width that maximizes vision-language alignment. Experiments on ActivityNet Captions and YouCook2 demonstrate state-of-the-art performance in both captioning and localization.",
+        "author": "Ye-Chan Kim, Seunghee Choi, SeungJu Cha, Si-Woo Kim, Hwiseon Kim, Hyungee Kim, Dong-Jin Kim",
         "tags": [
-          "gradio",
-          "music generation",
-          "language models",
-          "LLMs",
-          "region:us"
+          "cs.CV",
+          "cs.AI",
+          "llm",
+          "rag",
+          "alignment"
         ],
-        "category": "gradio",
-        "metrics": {
-          "likes": 5090
-        },
-        "publishedAt": "2023-06-08T18:00:26.000Z",
-        "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-09-04T01:11:44.464Z",
+        "category": "cs.CV",
+        "language": "en",
+        "publishedAt": "2026-09-03T17:58:02Z",
+        "updatedAt": "2026-09-03T17:58:02Z",
+        "collectedAt": "2026-09-04T04:39:35.210Z",
+        "metrics": {},
         "raw": {
-          "sdk": "gradio",
-          "emoji": "🎵"
-        }
+          "abstractUrl": "http://arxiv.org/abs/2609.04183v1",
+          "authors": [
+            "Ye-Chan Kim",
+            "Seunghee Choi",
+            "SeungJu Cha",
+            "Si-Woo Kim",
+            "Hwiseon Kim",
+            "Hyungee Kim",
+            "Dong-Jin Kim"
+          ]
+        },
+        "recommendedReason": "Matched AI developer keywords: llm, rag, alignment"
       }
     ],
     "developerBuzz": [
@@ -145,11 +181,11 @@
           "openai"
         ],
         "metrics": {
-          "upvotes": 1289,
-          "commentsCount": 1005
+          "upvotes": 1489,
+          "commentsCount": 1258
         },
         "publishedAt": "2026-09-03T18:41:05.000Z",
-        "collectedAt": "2026-09-04T01:11:44.866Z",
+        "collectedAt": "2026-09-04T04:39:35.099Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49554643",
           "matchedKeywords": [
@@ -171,10 +207,10 @@
         ],
         "metrics": {
           "upvotes": 1143,
-          "commentsCount": 654
+          "commentsCount": 655
         },
         "publishedAt": "2026-09-02T15:12:40.000Z",
-        "collectedAt": "2026-09-04T01:11:44.866Z",
+        "collectedAt": "2026-09-04T04:39:35.099Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49537553",
           "matchedKeywords": [
@@ -194,11 +230,11 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 678,
+          "upvotes": 679,
           "commentsCount": 438
         },
         "publishedAt": "2026-09-02T19:35:04.000Z",
-        "collectedAt": "2026-09-04T01:11:44.866Z",
+        "collectedAt": "2026-09-04T04:39:35.099Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49541256",
           "matchedKeywords": [
@@ -219,11 +255,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 328,
-          "commentsCount": 522
+          "upvotes": 353,
+          "commentsCount": 531
         },
         "publishedAt": "2026-09-03T15:07:01.000Z",
-        "collectedAt": "2026-09-04T01:11:44.866Z",
+        "collectedAt": "2026-09-04T04:39:35.099Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49551096",
           "matchedKeywords": [
@@ -245,11 +281,11 @@
           "inference"
         ],
         "metrics": {
-          "upvotes": 442,
-          "commentsCount": 128
+          "upvotes": 496,
+          "commentsCount": 148
         },
         "publishedAt": "2026-09-03T18:32:13.000Z",
-        "collectedAt": "2026-09-04T01:11:44.866Z",
+        "collectedAt": "2026-09-04T04:39:35.099Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49554520",
           "matchedKeywords": [
@@ -260,6 +296,66 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmtmcipsq00sirovbhprdqc1x",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "OpenAI 发布 GPT-6 Astra，主打桌面自动化与网络安全 Critical 档位",
+        "url": "https://x.com/AYi_AInotes/status/2095700816980222311",
+        "summary": "OpenAI 发布 GPT-6 Astra，主打计算机操作能力。作者总结其亮点包括：以 Lean 形式化证明攻克 10 道数学/计算难题，单次解题 Token 成本约 $2000。",
+        "description": "OpenAI 发布 GPT-6 Astra，主打计算机操作能力。作者总结其亮点包括：以 Lean 形式化证明攻克 10 道数学/计算难题，单次解题 Token 成本约 $2000。",
+        "category": "models",
+        "originalSource": "X：阿易 AI Notes (@AYi_AInotes)",
+        "originalUrl": "https://x.com/AYi_AInotes/status/2095700816980222311",
+        "recommendedReason": "OpenAI 发布 GPT-6 Astra，主打计算机操作能力。作者总结其亮点包括：以 Lean 形式化证明攻克 10 道数学/计算难题，单次解题 Token 成本约 $2000。",
+        "publishedAt": "2026-09-04T02:29:45.000Z",
+        "collectedAt": "2026-09-04T04:39:36.401Z",
+        "raw": {
+          "id": "cmtmcipsq00sirovbhprdqc1x",
+          "titleEn": "总结一下GPT-6 Astra 的亮点给大家，AGI真的离我们越来越近了吗？ 1. 开放问题突破：攻克包括构造 non-sofic 群、推翻 Connes 刚性猜想在内的 10 道数学/计算难题，全部…",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmtmcipsq00sjrovbxu1gd6lk",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "OpenAI 发布 GPT-6 Astra，主打电脑操作与对齐能力",
+        "url": "https://x.com/AYi_AInotes/status/2095698966684049433",
+        "summary": "OpenAI 发布 GPT-6 Astra，首席研究官 Mark Chen 称其能构建测试软件、跨应用操作电脑并尝试开放科学问题。作者补充数字：OSWorld 真实桌面任务从 75 分钟降到 40 分钟，职场自动化从 18% 升到 41%，未防护越权率从上一代 48% 压到 0%，并称花了 2000 美元算力解出 10 道十年未解的数学与理论计算难题；同时指出带工具的综合测试仍落后 Claude。",
+        "description": "OpenAI 发布 GPT-6 Astra，首席研究官 Mark Chen 称其能构建测试软件、跨应用操作电脑并尝试开放科学问题。作者补充数字：OSWorld 真实桌面任务从 75 分钟降到 40 分钟，职场自动化从 18% 升到 41%，未防护越权率从上一代 48% 压到 0%，并称花了 2000 美元算力解出 10 道十年未解的数学与理论计算难题；同时指出带工具的综合测试仍落后 Claude。",
+        "category": "models",
+        "originalSource": "X：阿易 AI Notes (@AYi_AInotes)",
+        "originalUrl": "https://x.com/AYi_AInotes/status/2095698966684049433",
+        "recommendedReason": "OpenAI 发布 GPT-6 Astra，首席研究官 Mark Chen 称其能构建测试软件、跨应用操作电脑并尝试开放科学问题。作者补充数字：OSWorld 真实桌面任务从 75 分钟降到 40 分钟，职场自动化从 18% 升到 41%，未防护越权率从上一代 48% 压到 0%，并称花了 2000 美元算力解出 10 道十年未解的数学与理论计算难题；同时指出带工具的综合测试仍落后 Claude。",
+        "publishedAt": "2026-09-04T02:22:24.000Z",
+        "collectedAt": "2026-09-04T04:39:36.401Z",
+        "raw": {
+          "id": "cmtmcipsq00sjrovbxu1gd6lk",
+          "titleEn": "大家别再以为OpenAI 只是发了一个更会聊天的 GPT-6了， 首席研究官 @markchen90 转发时只强调了一件事： 电脑上你能干的活，Astra 都能替你干，而且快了近一倍， 更吓人的…",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmtma05f8017zro9fao7eonjg",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "OpenAI 发布 GPT-6 Astra，主打电脑操作并触发网络安全 Critical 红线",
+        "url": "https://x.com/frxiaobei/status/2095682473745363068",
+        "summary": "OpenAI 于 9 月 3 日发布 GPT-6 Astra，API 模型名 gpt-6-astra，每百万输入 Token 10 美元、输出 50 美元，未来几天推送到 ChatGPT 各档订阅、API 和 AWS Bedrock。",
+        "description": "OpenAI 于 9 月 3 日发布 GPT-6 Astra，API 模型名 gpt-6-astra，每百万输入 Token 10 美元、输出 50 美元，未来几天推送到 ChatGPT 各档订阅、API 和 AWS Bedrock。",
+        "category": "models",
+        "originalSource": "X：小北 (@frxiaobei)",
+        "originalUrl": "https://x.com/frxiaobei/status/2095682473745363068",
+        "recommendedReason": "OpenAI 于 9 月 3 日发布 GPT-6 Astra，API 模型名 gpt-6-astra，每百万输入 Token 10 美元、输出 50 美元，未来几天推送到 ChatGPT 各档订阅、API 和 AWS Bedrock。",
+        "publishedAt": "2026-09-04T01:16:52.000Z",
+        "collectedAt": "2026-09-04T04:39:36.401Z",
+        "raw": {
+          "id": "cmtma05f8017zro9fao7eonjg",
+          "titleEn": "AI 的世界，没有最强，只有更强！",
+          "apiCategory": "ai-models"
+        }
+      },
       {
         "id": "aihot:cmtm94nnt0197rohcgbt5e406",
         "source": "aihot",
@@ -273,10 +369,30 @@
         "originalUrl": "https://x.com/steipete/status/2095678161052901828",
         "recommendedReason": "黄仁勋宣布 NVIDIA 将收购 Hugging Face，称开放模型能强化安全与网络安全、加速创新与扩散、支持主权 AI，让开发者、初创、大学和各国都能构建并定制 AI。他表示 NVIDIA 将成为 Hugging Face 及其社区和开放模型未来的好归宿，作者 Peter Steinberger 转发并评论这是绝佳组合。",
         "publishedAt": "2026-09-04T00:59:44.000Z",
-        "collectedAt": "2026-09-04T01:11:46.160Z",
+        "collectedAt": "2026-09-04T04:39:36.401Z",
         "raw": {
           "id": "cmtm94nnt0197rohcgbt5e406",
           "titleEn": "brilliant fit.",
+          "apiCategory": "industry"
+        }
+      },
+      {
+        "id": "aihot:cmtma171c01ecro9f9eg77vtn",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "英伟达拟以 129.3 亿美元收购 Hugging Face，黄仁勋承诺维持开放平台",
+        "url": "https://www.ithome.com/0/998/248.htm",
+        "summary": "英伟达 9 月 3 日宣布同意以 129.303 亿美元（约合 870.92 亿元人民币）收购 Hugging Face，黄仁勋随后发文解释收购原因。",
+        "description": "英伟达 9 月 3 日宣布同意以 129.303 亿美元（约合 870.92 亿元人民币）收购 Hugging Face，黄仁勋随后发文解释收购原因。",
+        "category": "industry",
+        "originalSource": "IT之家（RSS）",
+        "originalUrl": "https://www.ithome.com/0/998/248.htm",
+        "recommendedReason": "英伟达 9 月 3 日宣布同意以 129.303 亿美元（约合 870.92 亿元人民币）收购 Hugging Face，黄仁勋随后发文解释收购原因。",
+        "publishedAt": "2026-09-04T00:38:47.000Z",
+        "collectedAt": "2026-09-04T04:39:36.401Z",
+        "raw": {
+          "id": "cmtma171c01ecro9f9eg77vtn",
+          "titleEn": "黄仁勋：拟收购 Hugging Face，不是为了把 AI 关进英伟达",
           "apiCategory": "industry"
         }
       },
@@ -293,7 +409,7 @@
         "originalUrl": "https://arcprize.org/blog/astra",
         "recommendedReason": "OpenAI 的 GPT-6 Astra 在 ARC-AGI-3 Semi-Private 上，Standard harness 得分 62.7%（成本 $26K），Provider Adapter harness 得分 99.9%（成本 $19K），均为 SOTA。",
         "publishedAt": "2026-09-04T00:07:48.532Z",
-        "collectedAt": "2026-09-04T01:11:46.160Z",
+        "collectedAt": "2026-09-04T04:39:36.401Z",
         "raw": {
           "id": "cmtm7yl5s01d5robnsn25onbz",
           "titleEn": "OpenAI的GPT-6 Astra在ARC-AGI-3上的表现",
@@ -313,7 +429,7 @@
         "originalUrl": "https://openai.com/index/gpt-6-astra",
         "recommendedReason": "OpenAI 发布 GPT-6 Astra，称其在 FrontierMath Tier 4 达 98%、ARC-AGI-3 达 99.9%、ExploitBench 达 100%，并称其网络安全能力达到 Preparedness Framework 的 Critical 门槛。",
         "publishedAt": "2026-09-04T00:07:48.515Z",
-        "collectedAt": "2026-09-04T01:11:46.160Z",
+        "collectedAt": "2026-09-04T04:39:36.401Z",
         "raw": {
           "id": "cmtm7yl5s01d6robnym0jg0b7",
           "titleEn": "GPT-6 Astra",
@@ -333,7 +449,7 @@
         "originalUrl": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot",
         "recommendedReason": "作者让 Claude Fable 5 在 Claude Code 中分三步移植其 1993 年 Amiga 游戏：34，000 行 C++ 一个晚上迁入 Godot 4，72，758 行无注释 68000 汇编先用 vasm 重建出与发售版字节一致的二进制再移植，并把 1993 原作作为第二启动项嵌入新游戏。",
         "publishedAt": "2026-09-04T00:07:47.851Z",
-        "collectedAt": "2026-09-04T01:11:46.160Z",
+        "collectedAt": "2026-09-04T04:39:36.401Z",
         "raw": {
           "id": "cmtm7yl5s01dbrobnjyyupz0q",
           "titleEn": "将我1993年的Amiga游戏移植到Godot上，由LLM解析68000汇编代码",
@@ -353,7 +469,7 @@
         "originalUrl": "https://garymarcus.substack.com/p/hot-take-on-gpt-6-astra",
         "recommendedReason": "Gary Marcus 发文点评 GPT-6 Astra，称多项报告显示其为真正的进步，OpenAI 产品显式创建并操纵符号世界模型，令其近十年的主张获得印证。",
         "publishedAt": "2026-09-03T23:24:50.000Z",
-        "collectedAt": "2026-09-04T01:11:46.160Z",
+        "collectedAt": "2026-09-04T04:39:36.401Z",
         "raw": {
           "id": "cmtm5q99n018rrow0z6je2l9y",
           "titleEn": "Hot take on GPT-6 Astra",
@@ -373,7 +489,7 @@
         "originalUrl": "https://www.ithome.com/0/998/208.htm",
         "recommendedReason": "OpenAI 于 9 月 3 日发布新一代大语言模型 GPT-6 Astra，是其首个达到准备框架中关键级网络安全能力门槛的模型，可在无逐步指导下发现防护严密系统的未知漏洞。",
         "publishedAt": "2026-09-03T22:28:07.000Z",
-        "collectedAt": "2026-09-04T01:11:46.160Z",
+        "collectedAt": "2026-09-04T04:39:36.401Z",
         "raw": {
           "id": "cmtm3lnrg022wrooelnc62oo9",
           "titleEn": "OpenAI GPT-6 Astra 发布，首次达到\"关键\"级网络安全能力门槛",
@@ -393,7 +509,7 @@
         "originalUrl": "https://x.com/gdb/status/2095629409017614390",
         "recommendedReason": "Greg Brockman 转发 @arcprize 的评测称 OpenAI 的 GPT-6 Astra 在 ARC-AGI-3 上取得 SOTA，他称该基准已饱和。Astra 标准 harness 得分 63%，经新的 Provider Adapter harness 达 99%，在 96% 的 ARC-AGI-3 关卡上超越人类表现；排行榜图还显示更高推理层级通常成本更低，因为 Astra 用更少动作通关，减少模型调用和 token 数。",
         "publishedAt": "2026-09-03T21:46:00.000Z",
-        "collectedAt": "2026-09-04T01:11:46.160Z",
+        "collectedAt": "2026-09-04T04:39:36.401Z",
         "raw": {
           "id": "cmtm2suk00171rooej14mutgj",
           "titleEn": "arc-agi-3 is now saturated",
@@ -413,7 +529,7 @@
         "originalUrl": "https://www.marktechpost.com/2026/09/03/openai-releases-gpt-6-astra-a-1-05m-context-computer-use-model-gated-behind-a-critical-cyber-threshold",
         "recommendedReason": "OpenAI 发布 GPT-6 Astra，定位为计算机操作模型，提供 1，050，000 token 上下文窗口、128，000 最大输出 token，2026 年 4 月 30 日知识截止，OSWorld V2-Offline 得分 72.6%（GPT-5.6 Sol 为 65.7%），平均任务时间从约 75 分钟降至 40 分钟。",
         "publishedAt": "2026-09-03T21:16:11.000Z",
-        "collectedAt": "2026-09-04T01:11:46.160Z",
+        "collectedAt": "2026-09-04T04:39:36.401Z",
         "raw": {
           "id": "cmtm1j0qe0uchrow5ozapge42",
           "titleEn": "OpenAI Releases GPT-6 Astra： A 1.05M-Context Computer-Use Model Gated Behind a 'Critical' Cyber Threshold",
@@ -433,7 +549,7 @@
         "originalUrl": "https://x.com/AravSrinivas/status/2095621195131695352",
         "recommendedReason": "Perplexity CEO Aravind Srinivas 祝贺 OpenAI 发布 GPT-6 Astra，称其在宽度和深度研究任务上远超其他模型且更具成本效益，将很快向 Perplexity Computer 的 Pro 和 Max 用户开放。",
         "publishedAt": "2026-09-03T21:13:22.000Z",
-        "collectedAt": "2026-09-04T01:11:46.160Z",
+        "collectedAt": "2026-09-04T04:39:36.401Z",
         "raw": {
           "id": "cmtm1xhpk0unkrow52qftlbda",
           "titleEn": "Congrats to @OpenAI on building the industry's frontier model： GPT-6 Astra. It's far ahead of every …",
@@ -453,7 +569,7 @@
         "originalUrl": "https://x.com/rohanpaul_ai/status/2095616781880869271",
         "recommendedReason": "Rohan Paul 梳理 OpenAI GPT-6 Astra 117 页系统卡的要点：Astra 控制自身链式思维的能力从 GPT-5.6 Sol 的 16.1% 跃升至 60.9%，可监控性相应下降。",
         "publishedAt": "2026-09-03T20:55:50.000Z",
-        "collectedAt": "2026-09-04T01:11:46.160Z",
+        "collectedAt": "2026-09-04T04:39:36.401Z",
         "raw": {
           "id": "cmtm0r9z00tmkrow5gtxa5j36",
           "titleEn": "Some revelations from the 117 page system card of OpenAI's GPT-6 Astra - Astra's ability to delibe…",
@@ -473,90 +589,10 @@
         "originalUrl": "https://x.com/sherwinwu/status/2095608725730119733",
         "recommendedReason": "Sherwin Wu 表示自己曾觉得 ARC-AGI-3 很难，如今该基准已被 Astra 饱和。引用 François Chollet 的话称，ARC 3 发布时他预计前沿模型约一年才能饱和，实际只用了 6 个月，约为预期的 2 倍速度，新一代模型的能力将挑战人们基于旧模型形成的 AI 观点。",
         "publishedAt": "2026-09-03T20:23:49.000Z",
-        "collectedAt": "2026-09-04T01:11:46.160Z",
+        "collectedAt": "2026-09-04T04:39:36.401Z",
         "raw": {
           "id": "cmtlzumiu0soirow5cfujh2xf",
           "titleEn": "Progress continues to surprise even the best of us. ARC-AGI-3 was the first ARC-AGI benchmark that I…",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmtlzumiu0sojrow5820i30sg",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenAI 发布 GPT-6 Astra，多项基准达到 SOTA",
-        "url": "https://x.com/sherwinwu/status/2095608486940086448",
-        "summary": "OpenAI 发布 GPT-6 Astra，在 FrontierMath Tier 4、ARC-AGI 3、TerminalBench-4.0 上达到 SOTA，并在 Terminal-Bench Science 0.1 和 HealthBench Pro 上取得领先成绩。",
-        "description": "OpenAI 发布 GPT-6 Astra，在 FrontierMath Tier 4、ARC-AGI 3、TerminalBench-4.0 上达到 SOTA，并在 Terminal-Bench Science 0.1 和 HealthBench Pro 上取得领先成绩。",
-        "category": "models",
-        "originalSource": "X：Sherwin Wu（@sherwinwu）",
-        "originalUrl": "https://x.com/sherwinwu/status/2095608486940086448",
-        "recommendedReason": "OpenAI 发布 GPT-6 Astra，在 FrontierMath Tier 4、ARC-AGI 3、TerminalBench-4.0 上达到 SOTA，并在 Terminal-Bench Science 0.1 和 HealthBench Pro 上取得领先成绩。",
-        "publishedAt": "2026-09-03T20:22:52.000Z",
-        "collectedAt": "2026-09-04T01:11:46.160Z",
-        "raw": {
-          "id": "cmtlzumiu0sojrow5820i30sg",
-          "titleEn": "The evals are pretty wild， but there's a more visceral feeling you get when you see Astra do compute…",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmtlzasi70s61row5vze3ldjh",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenAI 发布 GPT-6 Astra，ARC-AGI 3 得分 99.9%",
-        "url": "https://simonwillison.net/2026/Sep/3/gpt6-astra",
-        "summary": "OpenAI 的 GPT-6 Astra 今日起向部分组织推出，随后面向 ChatGPT Plus、Pro、Business、Enterprise 用户开放，API 定价为每百万输入 $10、每百万输出 $50，与 Claude Fable 5/5.1 持平。",
-        "description": "OpenAI 的 GPT-6 Astra 今日起向部分组织推出，随后面向 ChatGPT Plus、Pro、Business、Enterprise 用户开放，API 定价为每百万输入 $10、每百万输出 $50，与 Claude Fable 5/5.1 持平。",
-        "category": "models",
-        "originalSource": "Simon Willison 博客",
-        "originalUrl": "https://simonwillison.net/2026/Sep/3/gpt6-astra",
-        "recommendedReason": "OpenAI 的 GPT-6 Astra 今日起向部分组织推出，随后面向 ChatGPT Plus、Pro、Business、Enterprise 用户开放，API 定价为每百万输入 $10、每百万输出 $50，与 Claude Fable 5/5.1 持平。",
-        "publishedAt": "2026-09-03T20:18:41.000Z",
-        "collectedAt": "2026-09-04T01:11:46.160Z",
-        "raw": {
-          "id": "cmtlzasi70s61row5vze3ldjh",
-          "titleEn": "GPT-6 Astra",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmtlyijva0rlqrow5dkrujvge",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenAI 发布 GPT-6 Astra",
-        "url": "https://x.com/sama/status/2095600005772104059",
-        "summary": "Sam Altman 宣布 GPT-6 Astra 发布，称其为计算机使用、专业工作、科学、编码、网络安全等领域全球最佳模型。官方表示为确保该能力级别所需的安全与对齐标准而多花了些时间，并公布 FrontierMath Tier 4 得分 98%、ARC-AGI 3 得分 99.9%、ExploitBench 得分 100%。",
-        "description": "Sam Altman 宣布 GPT-6 Astra 发布，称其为计算机使用、专业工作、科学、编码、网络安全等领域全球最佳模型。官方表示为确保该能力级别所需的安全与对齐标准而多花了些时间，并公布 FrontierMath Tier 4 得分 98%、ARC-AGI 3 得分 99.9%、ExploitBench 得分 100%。",
-        "category": "models",
-        "originalSource": "X：Sam Altman (@sama)",
-        "originalUrl": "https://x.com/sama/status/2095600005772104059",
-        "recommendedReason": "Sam Altman 宣布 GPT-6 Astra 发布，称其为计算机使用、专业工作、科学、编码、网络安全等领域全球最佳模型。官方表示为确保该能力级别所需的安全与对齐标准而多花了些时间，并公布 FrontierMath Tier 4 得分 98%、ARC-AGI 3 得分 99.9%、ExploitBench 得分 100%。",
-        "publishedAt": "2026-09-03T19:49:10.000Z",
-        "collectedAt": "2026-09-04T01:11:46.160Z",
-        "raw": {
-          "id": "cmtlyijva0rlqrow5dkrujvge",
-          "titleEn": "GPT-6 Astra is here. We hope it will begin to enable a new generation of entrepreneurship， scientif…",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmtlyeuas0rigrow5d2jq4xb7",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "François Chollet 评 GPT-6 Astra 在 ARC-AGI-3 上的表现",
-        "url": "https://x.com/fchollet/status/2095598451115614371",
-        "summary": "François Chollet 发文称 GPT-6 Astra 在交互式推理任务上带来阶跃式能力提升，使用标准 harness 在 ARC-AGI-3 上得 66%，配合持续对话 harness 和自定义 compaction 接近 100%，每局成本约 $360。",
-        "description": "François Chollet 发文称 GPT-6 Astra 在交互式推理任务上带来阶跃式能力提升，使用标准 harness 在 ARC-AGI-3 上得 66%，配合持续对话 harness 和自定义 compaction 接近 100%，每局成本约 $360。",
-        "category": "tools",
-        "originalSource": "X：Francois Chollet (@fchollet)",
-        "originalUrl": "https://x.com/fchollet/status/2095598451115614371",
-        "recommendedReason": "François Chollet 发文称 GPT-6 Astra 在交互式推理任务上带来阶跃式能力提升，使用标准 harness 在 ARC-AGI-3 上得 66%，配合持续对话 harness 和自定义 compaction 接近 100%，每局成本约 $360。",
-        "publishedAt": "2026-09-03T19:42:59.000Z",
-        "collectedAt": "2026-09-04T01:11:46.160Z",
-        "raw": {
-          "id": "cmtlyeuas0rigrow5d2jq4xb7",
-          "titleEn": "GPT-6 Astra represents a step-function change in model capability for interactive reasoning problems…",
           "apiCategory": "tip"
         }
       }
@@ -592,7 +628,7 @@
             "originalUrl": "https://arcprize.org/blog/astra",
             "recommendedReason": "OpenAI 的 GPT-6 Astra 在 ARC-AGI-3 Semi-Private 上，Standard harness 得分 62.7%（成本 $26K），Provider Adapter harness 得分 99.9%（成本 $19K），均为 SOTA。",
             "publishedAt": "2026-09-04T00:07:48.532Z",
-            "collectedAt": "2026-09-04T01:11:46.160Z",
+            "collectedAt": "2026-09-04T04:39:36.401Z",
             "raw": {
               "id": "cmtm7yl5s01d5robnsn25onbz",
               "titleEn": "OpenAI的GPT-6 Astra在ARC-AGI-3上的表现",
@@ -611,11 +647,11 @@
               "openai"
             ],
             "metrics": {
-              "upvotes": 162,
-              "commentsCount": 93
+              "upvotes": 183,
+              "commentsCount": 118
             },
             "publishedAt": "2026-09-03T19:45:00.000Z",
-            "collectedAt": "2026-09-04T01:11:44.866Z",
+            "collectedAt": "2026-09-04T04:39:35.099Z",
             "raw": {
               "hnUrl": "https://news.ycombinator.com/item?id=49555691",
               "matchedKeywords": [
@@ -639,7 +675,7 @@
             "originalUrl": "https://arcprize.org/blog/astra",
             "recommendedReason": "OpenAI 的 GPT-6 Astra 在 ARC-AGI-3 Semi-Private 上，Standard harness 得分 62.7%（成本 $26K），Provider Adapter harness 得分 99.9%（成本 $19K），均为 SOTA。",
             "publishedAt": "2026-09-04T00:07:48.532Z",
-            "collectedAt": "2026-09-04T01:11:46.160Z",
+            "collectedAt": "2026-09-04T04:39:36.401Z",
             "raw": {
               "id": "cmtm7yl5s01d5robnsn25onbz",
               "titleEn": "OpenAI的GPT-6 Astra在ARC-AGI-3上的表现",
@@ -658,11 +694,11 @@
               "openai"
             ],
             "metrics": {
-              "upvotes": 162,
-              "commentsCount": 93
+              "upvotes": 183,
+              "commentsCount": 118
             },
             "publishedAt": "2026-09-03T19:45:00.000Z",
-            "collectedAt": "2026-09-04T01:11:44.866Z",
+            "collectedAt": "2026-09-04T04:39:35.099Z",
             "raw": {
               "hnUrl": "https://news.ycombinator.com/item?id=49555691",
               "matchedKeywords": [
@@ -673,9 +709,9 @@
           }
         ],
         "metrics": {
-          "votes": 162,
-          "commentsCount": 93,
-          "hnScore": 162,
+          "votes": 183,
+          "commentsCount": 118,
+          "hnScore": 183,
           "crossSourceBonus": 10,
           "heatScore": 340
         },
@@ -684,7 +720,7 @@
         "summary": "OpenAI 的 GPT-6 Astra 在 ARC-AGI-3 Semi-Private 上，Standard harness 得分 62.7%（成本 $26K），Provider Adapter harness 得分 99.9%（成本 $19K），均为 SOTA。",
         "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
         "firstSeenAt": "2026-09-03T19:45:00.000Z",
-        "lastSeenAt": "2026-09-04T01:11:46.160Z"
+        "lastSeenAt": "2026-09-04T04:39:36.401Z"
       },
       {
         "id": "url:https://openai.com/index/gpt-6-astra",
@@ -716,7 +752,7 @@
             "originalUrl": "https://openai.com/index/gpt-6-astra",
             "recommendedReason": "OpenAI 发布 GPT-6 Astra，称其在 FrontierMath Tier 4 达 98%、ARC-AGI-3 达 99.9%、ExploitBench 达 100%，并称其网络安全能力达到 Preparedness Framework 的 Critical 门槛。",
             "publishedAt": "2026-09-04T00:07:48.515Z",
-            "collectedAt": "2026-09-04T01:11:46.160Z",
+            "collectedAt": "2026-09-04T04:39:36.401Z",
             "raw": {
               "id": "cmtm7yl5s01d6robnym0jg0b7",
               "titleEn": "GPT-6 Astra",
@@ -735,11 +771,11 @@
               "openai"
             ],
             "metrics": {
-              "upvotes": 1289,
-              "commentsCount": 1005
+              "upvotes": 1489,
+              "commentsCount": 1258
             },
             "publishedAt": "2026-09-03T18:41:05.000Z",
-            "collectedAt": "2026-09-04T01:11:44.866Z",
+            "collectedAt": "2026-09-04T04:39:35.099Z",
             "raw": {
               "hnUrl": "https://news.ycombinator.com/item?id=49554643",
               "matchedKeywords": [
@@ -763,7 +799,7 @@
             "originalUrl": "https://openai.com/index/gpt-6-astra",
             "recommendedReason": "OpenAI 发布 GPT-6 Astra，称其在 FrontierMath Tier 4 达 98%、ARC-AGI-3 达 99.9%、ExploitBench 达 100%，并称其网络安全能力达到 Preparedness Framework 的 Critical 门槛。",
             "publishedAt": "2026-09-04T00:07:48.515Z",
-            "collectedAt": "2026-09-04T01:11:46.160Z",
+            "collectedAt": "2026-09-04T04:39:36.401Z",
             "raw": {
               "id": "cmtm7yl5s01d6robnym0jg0b7",
               "titleEn": "GPT-6 Astra",
@@ -782,11 +818,11 @@
               "openai"
             ],
             "metrics": {
-              "upvotes": 1289,
-              "commentsCount": 1005
+              "upvotes": 1489,
+              "commentsCount": 1258
             },
             "publishedAt": "2026-09-03T18:41:05.000Z",
-            "collectedAt": "2026-09-04T01:11:44.866Z",
+            "collectedAt": "2026-09-04T04:39:35.099Z",
             "raw": {
               "hnUrl": "https://news.ycombinator.com/item?id=49554643",
               "matchedKeywords": [
@@ -797,9 +833,9 @@
           }
         ],
         "metrics": {
-          "votes": 1289,
-          "commentsCount": 1005,
-          "hnScore": 1289,
+          "votes": 1489,
+          "commentsCount": 1258,
+          "hnScore": 1489,
           "crossSourceBonus": 10,
           "heatScore": 340
         },
@@ -808,7 +844,7 @@
         "summary": "OpenAI 发布 GPT-6 Astra，称其在 FrontierMath Tier 4 达 98%、ARC-AGI-3 达 99.9%、ExploitBench 达 100%，并称其网络安全能力达到 Preparedness Framework 的 Critical 门槛。",
         "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
         "firstSeenAt": "2026-09-03T18:41:05.000Z",
-        "lastSeenAt": "2026-09-04T01:11:46.160Z"
+        "lastSeenAt": "2026-09-04T04:39:36.401Z"
       },
       {
         "id": "url:https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot",
@@ -842,7 +878,7 @@
             "originalUrl": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot",
             "recommendedReason": "作者让 Claude Fable 5 在 Claude Code 中分三步移植其 1993 年 Amiga 游戏：34，000 行 C++ 一个晚上迁入 Godot 4，72，758 行无注释 68000 汇编先用 vasm 重建出与发售版字节一致的二进制再移植，并把 1993 原作作为第二启动项嵌入新游戏。",
             "publishedAt": "2026-09-04T00:07:47.851Z",
-            "collectedAt": "2026-09-04T01:11:46.160Z",
+            "collectedAt": "2026-09-04T04:39:36.401Z",
             "raw": {
               "id": "cmtm7yl5s01dbrobnjyyupz0q",
               "titleEn": "将我1993年的Amiga游戏移植到Godot上，由LLM解析68000汇编代码",
@@ -860,11 +896,11 @@
               "llm"
             ],
             "metrics": {
-              "upvotes": 192,
-              "commentsCount": 57
+              "upvotes": 228,
+              "commentsCount": 68
             },
             "publishedAt": "2026-09-03T14:28:18.000Z",
-            "collectedAt": "2026-09-04T01:11:44.866Z",
+            "collectedAt": "2026-09-04T04:39:35.099Z",
             "raw": {
               "hnUrl": "https://news.ycombinator.com/item?id=49550375",
               "matchedKeywords": [
@@ -887,7 +923,7 @@
             "originalUrl": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot",
             "recommendedReason": "作者让 Claude Fable 5 在 Claude Code 中分三步移植其 1993 年 Amiga 游戏：34，000 行 C++ 一个晚上迁入 Godot 4，72，758 行无注释 68000 汇编先用 vasm 重建出与发售版字节一致的二进制再移植，并把 1993 原作作为第二启动项嵌入新游戏。",
             "publishedAt": "2026-09-04T00:07:47.851Z",
-            "collectedAt": "2026-09-04T01:11:46.160Z",
+            "collectedAt": "2026-09-04T04:39:36.401Z",
             "raw": {
               "id": "cmtm7yl5s01dbrobnjyyupz0q",
               "titleEn": "将我1993年的Amiga游戏移植到Godot上，由LLM解析68000汇编代码",
@@ -905,11 +941,11 @@
               "llm"
             ],
             "metrics": {
-              "upvotes": 192,
-              "commentsCount": 57
+              "upvotes": 228,
+              "commentsCount": 68
             },
             "publishedAt": "2026-09-03T14:28:18.000Z",
-            "collectedAt": "2026-09-04T01:11:44.866Z",
+            "collectedAt": "2026-09-04T04:39:35.099Z",
             "raw": {
               "hnUrl": "https://news.ycombinator.com/item?id=49550375",
               "matchedKeywords": [
@@ -919,9 +955,9 @@
           }
         ],
         "metrics": {
-          "votes": 192,
-          "commentsCount": 57,
-          "hnScore": 192,
+          "votes": 228,
+          "commentsCount": 68,
+          "hnScore": 228,
           "crossSourceBonus": 10,
           "heatScore": 340
         },
@@ -930,7 +966,7 @@
         "summary": "作者让 Claude Fable 5 在 Claude Code 中分三步移植其 1993 年 Amiga 游戏：34，000 行 C++ 一个晚上迁入 Godot 4，72，758 行无注释 68000 汇编先用 vasm 重建出与发售版字节一致的二进制再移植，并把 1993 原作作为第二启动项嵌入新游戏。",
         "whyItMatters": "同一趋势被 2 个来源、2 条信号捕捉。",
         "firstSeenAt": "2026-09-03T14:28:18.000Z",
-        "lastSeenAt": "2026-09-04T01:11:46.160Z"
+        "lastSeenAt": "2026-09-04T04:39:36.401Z"
       }
     ]
   }
