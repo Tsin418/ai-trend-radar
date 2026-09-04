@@ -1,6 +1,6 @@
 # AI Trend Radar Archive
 
-Updated: 2026-09-04T16:30:47.208Z
+Updated: 2026-09-04T19:43:36.828Z
 
 | Date | Type | Title | Top Projects |
 |------|------|-------|--------------|
@@ -15,7 +15,7 @@ Updated: 2026-09-04T16:30:47.208Z
 | 2026-W26 | weekly | [AI Developer Radar｜Weekly｜2026-W26](2026/06/2026-W26-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, ToolJet/ToolJet, siyuan-note/siyuan, bytedance/deer-flow |
 | 2026-W25 | weekly | [AI Developer Radar｜Weekly｜2026-W25](2026/06/2026-W25-weekly.md) | milvus-io/milvus, google-ai-edge/mediapipe, thedaviddias/Front-End-Checklist, netdata/netdata, deepspeedai/DeepSpeed |
 | 2026-W23 | weekly | [AI Developer Radar｜Weekly｜2026-W23](2026/06/2026-W23-weekly.md) | zhayujie/CowAgent, oraios/serena, Significant-Gravitas/AutoGPT, CopilotKit/CopilotKit, Kilo-Org/kilocode |
-| 2026-09-05 | daily | [AI Developer Radar｜Daily｜2026-09-05](2026/09/2026-09-05-daily.md) | milvus-io/milvus, DietrichGebert/ponytail, debpalash/VoiceStudio, affaan-m/ECC, sgl-project/sglang |
+| 2026-09-05 | daily | [AI Developer Radar｜Daily｜2026-09-05](2026/09/2026-09-05-daily.md) | milvus-io/milvus, DietrichGebert/ponytail, debpalash/VoiceStudio, affaan-m/ECC, cathrynlavery/diagram-design |
 | 2026-09-04 | daily | [AI Developer Radar｜Daily｜2026-09-04](2026/09/2026-09-04-daily.md) | cathrynlavery/diagram-design, magnitudedev/magnitude, anomalyco/opencode, blader/humanizer, fmtlib/fmt |
 | 2026-09-03 | daily | [AI Developer Radar｜Daily｜2026-09-03](2026/09/2026-09-03-daily.md) | debpalash/VoiceStudio, Imbad0202/academic-research-skills, ByteByteGoHq/system-design-101, Tencent/ncnn, headroomlabs-ai/headroom |
 | 2026-09-02 | daily | [AI Developer Radar｜Daily｜2026-09-02](2026/09/2026-09-02-daily.md) | career-ops-hq/career-ops, ultralytics/yolov5, Tencent/ncnn, Graphify-Labs/graphify, Gitlawb/openclaude |
