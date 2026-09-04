@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-09-04-2026-09-03T22-03-19-273Z",
-  "generatedAt": "2026-09-03T22:03:19.273Z",
+  "runId": "lightweight-2026-09-04-2026-09-04T00-36-21-563Z",
+  "generatedAt": "2026-09-04T00:36:21.563Z",
   "targetDate": "2026-09-04",
   "brief": {
     "date": "2026-09-04",
     "headline": "Today's strongest AI trend signals are Ai Model Release, Local Llm / Inference, and Mcp / Tool Calling.",
     "keyTakeaways": [
-      "Ai Model Release: This topic appeared across 2 source(s): huggingface_spaces, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Ai Model Release: This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 5 related signal(s). Treat it as correlation evidence rather tha.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
       "Ai Model Release: watch decision is deep_dive.",
-      "Local Llm / Inference: This topic appeared across 2 source(s): huggingface_models, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adopti.",
+      "Local Llm / Inference: This topic appeared across 2 source(s): huggingface_models, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adopti.",
       "Local Llm / Inference: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
       "Local Llm / Inference: watch decision is deep_dive.",
-      "Mcp / Tool Calling: This topic appeared across 2 source(s): huggingface_spaces, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Mcp / Tool Calling: This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 7 related signal(s). Treat it as correlation evidence rather t.",
       "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
       "Mcp / Tool Calling: watch decision is deep_dive."
     ],
@@ -22,30 +22,31 @@
       {
         "id": "topic:ai model release",
         "title": "Ai Model Release",
-        "category": "docker",
+        "category": "text-classification",
         "sources": [
+          "huggingface_models",
           "huggingface_spaces",
           "hackernews"
         ],
-        "sourceCount": 2,
-        "heatScore": 415,
+        "sourceCount": 3,
+        "heatScore": 493,
         "confidence": "medium",
         "watchDecision": "deep_dive",
-        "whatItIs": "Ai Model Release is an AI trend topic in docker represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): huggingface_spaces, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Ai Model Release is an AI trend topic in text-classification represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
-          "docker",
-          "leaderboard",
-          "modality:text",
-          "submission:automatic",
-          "test:public",
-          "language:english",
-          "eval:code",
-          "eval:math"
+          "transformers",
+          "safetensors",
+          "gguf",
+          "safety",
+          "security",
+          "llm-guard",
+          "qwen3",
+          "prompt-injection"
         ],
         "evidenceItems": [
           {
@@ -58,10 +59,10 @@
               "llm"
             ],
             "publishedAt": "2026-09-03T14:28:18.000Z",
-            "collectedAt": "2026-09-03T22:03:19.683Z",
+            "collectedAt": "2026-09-04T00:36:22.375Z",
             "metrics": {
-              "upvotes": 134,
-              "commentsCount": 47
+              "upvotes": 179,
+              "commentsCount": 57
             }
           },
           {
@@ -83,7 +84,7 @@
               "region:us"
             ],
             "publishedAt": "2023-04-17T11:40:06.000Z",
-            "collectedAt": "2026-09-03T22:03:19.464Z",
+            "collectedAt": "2026-09-04T00:36:22.084Z",
             "metrics": {
               "likes": 14092
             }
@@ -103,7 +104,7 @@
               "region:us"
             ],
             "publishedAt": "2023-06-08T18:00:26.000Z",
-            "collectedAt": "2026-09-03T22:03:19.464Z",
+            "collectedAt": "2026-09-04T00:36:22.084Z",
             "metrics": {
               "likes": 5090
             }
@@ -126,69 +127,89 @@
               "region:us"
             ],
             "publishedAt": "2024-07-05T16:35:24.000Z",
-            "collectedAt": "2026-09-03T22:03:19.464Z",
+            "collectedAt": "2026-09-04T00:36:22.084Z",
             "metrics": {
               "likes": 3785
             }
           },
           {
-            "id": "hackernews:49557687",
-            "title": "Ask HN: Is there a test for measuring cognitive affects from LLM usage?",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://news.ycombinator.com/item?id=49557687",
+            "id": "huggingface_models:i1see1you/VirbiusGuard",
+            "title": "i1see1you/VirbiusGuard",
+            "source": "huggingface_models",
+            "sourceType": "model_hub",
+            "url": "https://huggingface.co/i1see1you/VirbiusGuard",
+            "category": "text-classification",
             "tags": [
-              "llm"
+              "transformers",
+              "safetensors",
+              "gguf",
+              "safety",
+              "security",
+              "llm-guard",
+              "qwen3",
+              "prompt-injection",
+              "agent-safety",
+              "text-classification",
+              "zh",
+              "en",
+              "base_model:Qwen/Qwen3Guard-Gen-0.6B",
+              "base_model:quantized:Qwen/Qwen3Guard-Gen-0.6B",
+              "license:apache-2.0",
+              "endpoints_compatible",
+              "region:us",
+              "conversational"
             ],
-            "publishedAt": "2026-09-03T21:56:49.000Z",
-            "collectedAt": "2026-09-03T22:03:19.683Z",
+            "publishedAt": "2026-08-26T03:00:53.000Z",
+            "collectedAt": "2026-09-04T00:36:22.068Z",
             "metrics": {
-              "upvotes": 1,
-              "commentsCount": 0
+              "downloads": 155,
+              "likes": 2
             }
           }
         ],
         "relatedEntities": [
+          "i1see1you/VirbiusGuard",
           "Open LLM Leaderboard",
           "MusicGen",
           "Live Portrait",
-          "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
-          "Ask HN: Is there a test for measuring cognitive affects from LLM usage?"
+          "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly"
         ],
         "metrics": {
-          "votes": 134,
+          "votes": 179,
           "likes": 14092,
-          "commentsCount": 47,
-          "heatScore": 415,
-          "crossSourceBonus": 10
+          "downloads": 155,
+          "commentsCount": 57,
+          "heatScore": 493,
+          "crossSourceBonus": 20
         }
       },
       {
         "id": "topic:local llm / inference",
         "title": "Local Llm / Inference",
+        "category": "text-classification",
         "sources": [
           "huggingface_models",
           "hackernews"
         ],
         "sourceCount": 2,
-        "heatScore": 369,
+        "heatScore": 374,
         "confidence": "medium",
         "watchDecision": "deep_dive",
-        "whatItIs": "Local Llm / Inference is an AI trend topic represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Local Llm / Inference is an AI trend topic in text-classification represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 2 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
+          "transformers",
+          "safetensors",
           "gguf",
-          "license:llama3.2",
-          "endpoints_compatible",
-          "region:us",
-          "imatrix",
-          "conversational",
-          "ai",
-          "inference"
+          "safety",
+          "security",
+          "llm-guard",
+          "qwen3",
+          "prompt-injection"
         ],
         "evidenceItems": [
           {
@@ -202,90 +223,101 @@
               "inference"
             ],
             "publishedAt": "2026-09-03T18:32:13.000Z",
-            "collectedAt": "2026-09-03T22:03:19.683Z",
+            "collectedAt": "2026-09-04T00:36:22.375Z",
             "metrics": {
-              "upvotes": 350,
-              "commentsCount": 112
+              "upvotes": 430,
+              "commentsCount": 126
             }
           },
           {
-            "id": "huggingface_models:feylixia/Llama-3.2-3B-Buginese-Indonesian-Translation-GGUF",
-            "title": "feylixia/Llama-3.2-3B-Buginese-Indonesian-Translation-GGUF",
+            "id": "huggingface_models:i1see1you/VirbiusGuard",
+            "title": "i1see1you/VirbiusGuard",
             "source": "huggingface_models",
             "sourceType": "model_hub",
-            "url": "https://huggingface.co/feylixia/Llama-3.2-3B-Buginese-Indonesian-Translation-GGUF",
+            "url": "https://huggingface.co/i1see1you/VirbiusGuard",
+            "category": "text-classification",
             "tags": [
+              "transformers",
+              "safetensors",
               "gguf",
-              "license:llama3.2",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-08-24T23:22:15.000Z",
-            "collectedAt": "2026-09-03T22:03:19.460Z",
-            "metrics": {
-              "downloads": 89,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:ddh0/DeepSeek-V4-Flash-Vision-Exp-GGUF",
-            "title": "ddh0/DeepSeek-V4-Flash-Vision-Exp-GGUF",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/ddh0/DeepSeek-V4-Flash-Vision-Exp-GGUF",
-            "tags": [
-              "gguf",
+              "safety",
+              "security",
+              "llm-guard",
+              "qwen3",
+              "prompt-injection",
+              "agent-safety",
+              "text-classification",
+              "zh",
+              "en",
+              "base_model:Qwen/Qwen3Guard-Gen-0.6B",
+              "base_model:quantized:Qwen/Qwen3Guard-Gen-0.6B",
+              "license:apache-2.0",
               "endpoints_compatible",
               "region:us",
-              "imatrix",
               "conversational"
             ],
-            "publishedAt": "2026-09-03T21:24:00.000Z",
-            "collectedAt": "2026-09-03T22:03:19.460Z",
+            "publishedAt": "2026-08-26T03:00:53.000Z",
+            "collectedAt": "2026-09-04T00:36:22.068Z",
             "metrics": {
-              "downloads": 0,
-              "likes": 0
+              "downloads": 155,
+              "likes": 2
             }
           }
         ],
         "relatedEntities": [
-          "feylixia/Llama-3.2-3B-Buginese-Indonesian-Translation-GGUF",
-          "ddh0/DeepSeek-V4-Flash-Vision-Exp-GGUF",
+          "i1see1you/VirbiusGuard",
           "Qwen 3.8 27B available on Cerebras at 1500 tokens/s"
         ],
         "metrics": {
-          "votes": 350,
-          "downloads": 89,
-          "commentsCount": 112,
-          "heatScore": 369,
+          "votes": 430,
+          "likes": 2,
+          "downloads": 155,
+          "commentsCount": 126,
+          "heatScore": 374,
           "crossSourceBonus": 10
         }
       },
       {
         "id": "topic:mcp / tool calling",
         "title": "Mcp / Tool Calling",
-        "category": "gradio",
         "sources": [
+          "huggingface_models",
           "huggingface_spaces",
           "hackernews"
         ],
-        "sourceCount": 2,
-        "heatScore": 144,
+        "sourceCount": 3,
+        "heatScore": 182,
         "confidence": "medium",
         "watchDecision": "deep_dive",
-        "whatItIs": "Mcp / Tool Calling is an AI trend topic in gradio represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): huggingface_spaces, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whatItIs": "Mcp / Tool Calling is an AI trend topic represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Mcp / Tool Calling should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
+          "region:us",
           "gradio",
           "mcp-server",
-          "region:us",
           "mcp"
         ],
         "evidenceItems": [
+          {
+            "id": "hackernews:49548600",
+            "title": "Ask HN: Who is using MCP in production?",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://news.ycombinator.com/item?id=49548600",
+            "tags": [
+              "mcp"
+            ],
+            "publishedAt": "2026-09-03T11:21:18.000Z",
+            "collectedAt": "2026-09-04T00:36:22.375Z",
+            "metrics": {
+              "upvotes": 7,
+              "commentsCount": 5
+            }
+          },
           {
             "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
             "title": "Z Image Turbo",
@@ -299,7 +331,7 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-09-03T22:03:19.464Z",
+            "collectedAt": "2026-09-04T00:36:22.084Z",
             "metrics": {
               "likes": 3764
             }
@@ -317,9 +349,9 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-09-03T22:03:19.464Z",
+            "collectedAt": "2026-09-04T00:36:22.084Z",
             "metrics": {
-              "likes": 3440
+              "likes": 3442
             }
           },
           {
@@ -335,7 +367,7 @@
               "region:us"
             ],
             "publishedAt": "2025-10-27T03:20:43.000Z",
-            "collectedAt": "2026-09-03T22:03:19.464Z",
+            "collectedAt": "2026-09-04T00:36:22.084Z",
             "metrics": {
               "likes": 3045
             }
@@ -353,22 +385,22 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-09-03T22:03:19.464Z",
+            "collectedAt": "2026-09-04T00:36:22.084Z",
             "metrics": {
-              "likes": 2929
+              "likes": 2930
             }
           },
           {
-            "id": "hackernews:49557486",
-            "title": "WebMCP DJ – BananaLabs",
+            "id": "hackernews:49558770",
+            "title": "Your website analytics deserves Love",
             "source": "hackernews",
             "sourceType": "developer_discussion",
-            "url": "https://devpost.com/software/bananalabs-webmcp-dj",
+            "url": "https://anacraft.dev/#mcp",
             "tags": [
               "mcp"
             ],
-            "publishedAt": "2026-09-03T21:41:37.000Z",
-            "collectedAt": "2026-09-03T22:03:19.683Z",
+            "publishedAt": "2026-09-04T00:01:09.000Z",
+            "collectedAt": "2026-09-04T00:36:22.375Z",
             "metrics": {
               "upvotes": 1,
               "commentsCount": 1
@@ -376,18 +408,20 @@
           }
         ],
         "relatedEntities": [
+          "mcptester0606/MyAwesomeModel-TestRepo",
           "Z Image Turbo",
           "Wan2.2 14B Fast",
           "Wan2.2 14B Preview",
           "Background Removal",
-          "WebMCP DJ – BananaLabs"
+          "Ask HN: Who is using MCP in production?",
+          "Your website analytics deserves Love"
         ],
         "metrics": {
-          "votes": 1,
+          "votes": 7,
           "likes": 3764,
-          "commentsCount": 1,
-          "heatScore": 144,
-          "crossSourceBonus": 10
+          "commentsCount": 5,
+          "heatScore": 182,
+          "crossSourceBonus": 20
         }
       },
       {
@@ -399,25 +433,34 @@
           "hackernews"
         ],
         "sourceCount": 2,
-        "heatScore": 60,
-        "confidence": "low",
-        "watchDecision": "track",
+        "heatScore": 180,
+        "confidence": "medium",
+        "watchDecision": "deep_dive",
         "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in tools represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 5 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Coding Agent / Swe Agent should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
           "tools",
-          "products",
           "agent",
           "agents",
           "claude",
-          "cursor",
-          "coding agent"
+          "cursor"
         ],
         "evidenceItems": [
+          {
+            "id": "aihot:cmtm7yl5s01dbrobnjyyupz0q",
+            "title": "开发者用 Claude Fable 5 在 Claude Code 中将 1993 年 Amiga 游戏 Babylonian Twins 移植到 Godot",
+            "source": "aihot",
+            "sourceType": "curated_trend",
+            "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot",
+            "summary": "作者让 Claude Fable 5 在 Claude Code 中分三步移植其 1993 年 Amiga 游戏：34，000 行 C++ 一个晚上迁入 Godot 4，72，758 行无注释 68000 汇编先用 vasm 重建出与发售版字节一致的二进制再移植，并把 1993 原作作为第二启动项嵌入新游戏。",
+            "category": "tools",
+            "publishedAt": "2026-09-04T00:07:47.851Z",
+            "collectedAt": "2026-09-04T00:36:23.409Z"
+          },
           {
             "id": "aihot:cmtly53c50r9srow5ux7p8arw",
             "title": "Artificial Analysis 评测 GPT-6 Astra：编码智能体追平 Fable 5 但价格涨至 2.5 倍",
@@ -427,29 +470,7 @@
             "summary": "Artificial Analysis 发布 GPT-6 Astra 评测，其 Coding Agent Index 得分 67，约等于 Claude Opus 5 和 Fable 5，且成本不到 Fable 5 的一半；token 效率比 GPT-5.6 Sol （max） 高约 70%。",
             "category": "tools",
             "publishedAt": "2026-09-03T19:31:13.000Z",
-            "collectedAt": "2026-09-03T22:03:21.095Z"
-          },
-          {
-            "id": "aihot:cmtktzp3605o8roals1ci2tza",
-            "title": "Meta Muse Spark 1.3 在 Artificial Analysis 编码智能体指数中与 Claude 组合对比评测结果公布",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://x.com/alexandr_wang/status/2095318449602138577",
-            "summary": "Artificial Analysis 编码智能体指数显示，Meta Muse Spark 1.3 （max） 在 Muse Code 下得 68 分，仅次于 Claude Code + Opus 5 （xhigh） 的 68 分。",
-            "category": "tools",
-            "publishedAt": "2026-09-03T01:10:22.000Z",
-            "collectedAt": "2026-09-03T22:03:21.095Z"
-          },
-          {
-            "id": "aihot:cmtm1k75y0ue9row58wfax9nf",
-            "title": "xAI 发布 Grok Bot 企业版，Grok 与 Cursor Enterprise 客户两周免费",
-            "source": "aihot",
-            "sourceType": "curated_trend",
-            "url": "https://x.ai/news/grok-bot-for-enterprise",
-            "summary": "xAI 宣布 Grok Bot 面向企业开放，Grok 和 Cursor Enterprise 客户未来两周可免费使用并邀请全组织成员，包括没有现有席位的员工。",
-            "category": "products",
-            "publishedAt": "2026-09-03T00:00:00.000Z",
-            "collectedAt": "2026-09-03T22:03:21.095Z"
+            "collectedAt": "2026-09-04T00:36:23.409Z"
           },
           {
             "id": "hackernews:49557206",
@@ -464,24 +485,23 @@
               "cursor"
             ],
             "publishedAt": "2026-09-03T21:20:34.000Z",
-            "collectedAt": "2026-09-03T22:03:19.683Z",
+            "collectedAt": "2026-09-04T00:36:22.375Z",
             "metrics": {
-              "upvotes": 17,
-              "commentsCount": 1
+              "upvotes": 74,
+              "commentsCount": 22
             }
           },
           {
-            "id": "hackernews:49557251",
-            "title": "A look at coding agent benchmarks, and what may be interesting next",
+            "id": "hackernews:49558445",
+            "title": "Show HN: Chrome tab group cleaner for Claude Code created tab groups",
             "source": "hackernews",
             "sourceType": "developer_discussion",
-            "url": "https://tuneloop.io/blog/coding-agent-benchmarks",
+            "url": "https://github.com/franzenzenhofer/chrome-tab-group-cleaner",
             "tags": [
-              "agent",
-              "coding agent"
+              "claude"
             ],
-            "publishedAt": "2026-09-03T21:23:23.000Z",
-            "collectedAt": "2026-09-03T22:03:19.683Z",
+            "publishedAt": "2026-09-03T23:15:29.000Z",
+            "collectedAt": "2026-09-04T00:36:22.375Z",
             "metrics": {
               "upvotes": 1,
               "commentsCount": 0
@@ -489,216 +509,16 @@
           }
         ],
         "relatedEntities": [
+          "开发者用 Claude Fable 5 在 Claude Code 中将 1993 年 Amiga 游戏 Babylonian Twins 移植到 Godot",
           "Artificial Analysis 评测 GPT-6 Astra：编码智能体追平 Fable 5 但价格涨至 2.5 倍",
-          "Meta Muse Spark 1.3 在 Artificial Analysis 编码智能体指数中与 Claude 组合对比评测结果公布",
-          "xAI 发布 Grok Bot 企业版，Grok 与 Cursor Enterprise 客户两周免费",
           "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
-          "A look at coding agent benchmarks, and what may be interesting next"
+          "Show HN: Chrome tab group cleaner for Claude Code created tab groups"
         ],
         "metrics": {
-          "votes": 17,
-          "commentsCount": 1,
-          "heatScore": 60,
+          "votes": 74,
+          "commentsCount": 22,
+          "heatScore": 180,
           "crossSourceBonus": 10
-        }
-      },
-      {
-        "id": "topic:rag / knowledge base",
-        "title": "Rag / Knowledge Base",
-        "sources": [
-          "huggingface_models"
-        ],
-        "sourceCount": 1,
-        "heatScore": 20,
-        "confidence": "low",
-        "watchDecision": "wait",
-        "whatItIs": "Rag / Knowledge Base is an AI trend topic represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 1 source(s): huggingface_models, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Rag / Knowledge Base should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Rag / Knowledge Base.",
-        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
-        "technicalKeywords": [
-          "pra",
-          "progressive-retrieval-attention",
-          "adapter",
-          "long-context",
-          "dataset:2wikimultihopqa",
-          "dataset:combined",
-          "dataset:hotpotqa",
-          "dataset:qasper"
-        ],
-        "evidenceItems": [
-          {
-            "id": "huggingface_models:EInnovator/pra-qwen3-8b-mlx-4bit",
-            "title": "EInnovator/pra-qwen3-8b-mlx-4bit",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/EInnovator/pra-qwen3-8b-mlx-4bit",
-            "tags": [
-              "pra",
-              "progressive-retrieval-attention",
-              "adapter",
-              "long-context",
-              "dataset:2wikimultihopqa",
-              "dataset:combined",
-              "dataset:hotpotqa",
-              "dataset:qasper",
-              "base_model:mlx-community/Qwen3-8B-4bit",
-              "base_model:finetune:mlx-community/Qwen3-8B-4bit",
-              "license:apache-2.0",
-              "region:us"
-            ],
-            "publishedAt": "2026-09-02T22:15:56.000Z",
-            "collectedAt": "2026-09-03T22:03:19.460Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:EInnovator/pra-qwen2-5-coder-1-5b-instruct",
-            "title": "EInnovator/pra-qwen2-5-coder-1-5b-instruct",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/EInnovator/pra-qwen2-5-coder-1-5b-instruct",
-            "tags": [
-              "pra",
-              "progressive-retrieval-attention",
-              "adapter",
-              "long-context",
-              "dataset:combined",
-              "dataset:hotpotqa",
-              "dataset:qasper",
-              "base_model:Qwen/Qwen2.5-Coder-1.5B-Instruct",
-              "base_model:finetune:Qwen/Qwen2.5-Coder-1.5B-Instruct",
-              "license:apache-2.0",
-              "region:us"
-            ],
-            "publishedAt": "2026-09-03T01:12:15.000Z",
-            "collectedAt": "2026-09-03T22:03:19.460Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:EInnovator/pra-qwen2-5-1-5b-instruct",
-            "title": "EInnovator/pra-qwen2-5-1-5b-instruct",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/EInnovator/pra-qwen2-5-1-5b-instruct",
-            "tags": [
-              "pra",
-              "progressive-retrieval-attention",
-              "adapter",
-              "long-context",
-              "dataset:combined",
-              "dataset:hotpotqa",
-              "dataset:qasper",
-              "base_model:Qwen/Qwen2.5-1.5B-Instruct",
-              "base_model:finetune:Qwen/Qwen2.5-1.5B-Instruct",
-              "license:apache-2.0",
-              "region:us"
-            ],
-            "publishedAt": "2026-09-03T01:11:58.000Z",
-            "collectedAt": "2026-09-03T22:03:19.460Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:EInnovator/pra-qwen3-14b-mlx-4bit",
-            "title": "EInnovator/pra-qwen3-14b-mlx-4bit",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/EInnovator/pra-qwen3-14b-mlx-4bit",
-            "tags": [
-              "pra",
-              "progressive-retrieval-attention",
-              "adapter",
-              "long-context",
-              "dataset:2wikimultihopqa",
-              "dataset:combined",
-              "dataset:hotpotqa",
-              "dataset:qasper",
-              "base_model:mlx-community/Qwen3-14B-4bit",
-              "base_model:finetune:mlx-community/Qwen3-14B-4bit",
-              "license:apache-2.0",
-              "region:us"
-            ],
-            "publishedAt": "2026-09-01T20:05:15.000Z",
-            "collectedAt": "2026-09-03T22:03:19.460Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:EInnovator/pra-qwen3-4b-mlx-4bit",
-            "title": "EInnovator/pra-qwen3-4b-mlx-4bit",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/EInnovator/pra-qwen3-4b-mlx-4bit",
-            "tags": [
-              "pra",
-              "progressive-retrieval-attention",
-              "adapter",
-              "long-context",
-              "dataset:combined",
-              "dataset:hotpotqa",
-              "dataset:qasper",
-              "base_model:mlx-community/Qwen3-4B-4bit",
-              "base_model:finetune:mlx-community/Qwen3-4B-4bit",
-              "license:apache-2.0",
-              "region:us"
-            ],
-            "publishedAt": "2026-09-01T20:05:11.000Z",
-            "collectedAt": "2026-09-03T22:03:19.460Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:EInnovator/pra-qwen3-0.6b",
-            "title": "EInnovator/pra-qwen3-0.6b",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/EInnovator/pra-qwen3-0.6b",
-            "tags": [
-              "pra",
-              "progressive-retrieval-attention",
-              "adapter",
-              "long-context",
-              "dataset:allenai/qasper",
-              "dataset:paper4_5_cross_model_diagnostic",
-              "base_model:Qwen/Qwen3-0.6B",
-              "base_model:finetune:Qwen/Qwen3-0.6B",
-              "license:apache-2.0",
-              "region:us"
-            ],
-            "publishedAt": "2026-09-01T17:17:06.000Z",
-            "collectedAt": "2026-09-03T22:03:19.460Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          }
-        ],
-        "relatedEntities": [
-          "EInnovator/pra-qwen3-14b-mlx-4bit",
-          "EInnovator/pra-qwen3-8b-mlx-4bit",
-          "EInnovator/pra-qwen3-4b-mlx-4bit",
-          "EInnovator/pra-qwen3-0.6b",
-          "EInnovator/pra-qwen2-5-coder-1-5b-instruct",
-          "EInnovator/pra-qwen2-5-1-5b-instruct",
-          "zoarag/EvilPeterPan"
-        ],
-        "metrics": {
-          "heatScore": 20,
-          "crossSourceBonus": 0
         }
       }
     ],
@@ -708,8 +528,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-09-03T22:03:19.306Z",
-        "finishedAt": "2026-09-03T22:03:19.306Z",
+        "startedAt": "2026-09-04T00:36:21.890Z",
+        "finishedAt": "2026-09-04T00:36:21.890Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -718,36 +538,36 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-09-03T22:03:19.306Z",
-        "finishedAt": "2026-09-03T22:03:21.096Z",
-        "latencyMs": 1790
+        "startedAt": "2026-09-04T00:36:21.890Z",
+        "finishedAt": "2026-09-04T00:36:23.410Z",
+        "latencyMs": 1520
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 14,
-        "startedAt": "2026-09-03T22:03:19.323Z",
-        "finishedAt": "2026-09-03T22:03:19.461Z",
-        "latencyMs": 138
+        "itemCount": 12,
+        "startedAt": "2026-09-04T00:36:21.928Z",
+        "finishedAt": "2026-09-04T00:36:22.068Z",
+        "latencyMs": 140
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-09-03T22:03:19.325Z",
-        "finishedAt": "2026-09-03T22:03:19.464Z",
-        "latencyMs": 139
+        "startedAt": "2026-09-04T00:36:21.930Z",
+        "finishedAt": "2026-09-04T00:36:22.084Z",
+        "latencyMs": 154
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 37,
-        "startedAt": "2026-09-03T22:03:19.327Z",
-        "finishedAt": "2026-09-03T22:03:19.684Z",
-        "latencyMs": 357
+        "itemCount": 34,
+        "startedAt": "2026-09-04T00:36:21.931Z",
+        "finishedAt": "2026-09-04T00:36:22.376Z",
+        "latencyMs": 445
       }
     ],
     "dataNotes": [
@@ -781,7 +601,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-09-03T22:03:19.464Z",
+        "collectedAt": "2026-09-04T00:36:22.084Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -804,7 +624,7 @@
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-09-03T22:03:19.464Z",
+        "collectedAt": "2026-09-04T00:36:22.084Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -827,7 +647,7 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-09-03T22:03:19.464Z",
+        "collectedAt": "2026-09-04T00:36:22.084Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
@@ -851,7 +671,7 @@
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
         "updatedAt": "2026-09-01T15:41:47.000Z",
-        "collectedAt": "2026-09-03T22:03:19.464Z",
+        "collectedAt": "2026-09-04T00:36:22.084Z",
         "raw": {
           "sdk": "docker",
           "emoji": "📊"
@@ -877,7 +697,7 @@
         },
         "publishedAt": "2023-06-08T18:00:26.000Z",
         "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-09-03T22:03:19.464Z",
+        "collectedAt": "2026-09-04T00:36:22.084Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🎵"
@@ -901,7 +721,7 @@
         },
         "publishedAt": "2023-05-20T09:26:19.000Z",
         "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-09-03T22:03:19.464Z",
+        "collectedAt": "2026-09-04T00:36:22.084Z",
         "raw": {
           "sdk": "static",
           "emoji": "🏆🤖"
@@ -930,7 +750,7 @@
         },
         "publishedAt": "2024-07-05T16:35:24.000Z",
         "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-09-03T22:03:19.464Z",
+        "collectedAt": "2026-09-04T00:36:22.084Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🤪"
@@ -954,7 +774,7 @@
         },
         "publishedAt": "2025-11-26T19:54:05.000Z",
         "updatedAt": "2026-07-13T14:23:41.000Z",
-        "collectedAt": "2026-09-03T22:03:19.464Z",
+        "collectedAt": "2026-09-04T00:36:22.084Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🖼️"
@@ -974,11 +794,11 @@
           "openai"
         ],
         "metrics": {
-          "upvotes": 948,
-          "commentsCount": 680
+          "upvotes": 1234,
+          "commentsCount": 970
         },
         "publishedAt": "2026-09-03T18:41:05.000Z",
-        "collectedAt": "2026-09-03T22:03:19.683Z",
+        "collectedAt": "2026-09-04T00:36:22.375Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49554643",
           "matchedKeywords": [
@@ -999,11 +819,11 @@
           "gemini"
         ],
         "metrics": {
-          "upvotes": 1142,
-          "commentsCount": 649
+          "upvotes": 1143,
+          "commentsCount": 654
         },
         "publishedAt": "2026-09-02T15:12:40.000Z",
-        "collectedAt": "2026-09-03T22:03:19.683Z",
+        "collectedAt": "2026-09-04T00:36:22.375Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49537553",
           "matchedKeywords": [
@@ -1024,10 +844,10 @@
         ],
         "metrics": {
           "upvotes": 678,
-          "commentsCount": 437
+          "commentsCount": 438
         },
         "publishedAt": "2026-09-02T19:35:04.000Z",
-        "collectedAt": "2026-09-03T22:03:19.683Z",
+        "collectedAt": "2026-09-04T00:36:22.375Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49541256",
           "matchedKeywords": [
@@ -1048,11 +868,11 @@
           "claude"
         ],
         "metrics": {
-          "upvotes": 295,
-          "commentsCount": 503
+          "upvotes": 323,
+          "commentsCount": 520
         },
         "publishedAt": "2026-09-03T15:07:01.000Z",
-        "collectedAt": "2026-09-03T22:03:19.683Z",
+        "collectedAt": "2026-09-04T00:36:22.375Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49551096",
           "matchedKeywords": [
@@ -1063,30 +883,152 @@
         }
       },
       {
-        "id": "hackernews:49536375",
+        "id": "hackernews:49554520",
         "source": "hackernews",
         "sourceType": "developer_discussion",
-        "title": "Three sites made 215,128 “best software” pages for AI. Perplexity cites them",
-        "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
-        "author": "jakobgreenfeld",
+        "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
+        "url": "https://inference-docs.cerebras.ai/models/overview",
+        "author": "altertable",
         "tags": [
-          "ai"
+          "ai",
+          "inference"
         ],
         "metrics": {
-          "upvotes": 503,
-          "commentsCount": 245
+          "upvotes": 430,
+          "commentsCount": 126
         },
-        "publishedAt": "2026-09-02T13:59:59.000Z",
-        "collectedAt": "2026-09-03T22:03:19.683Z",
+        "publishedAt": "2026-09-03T18:32:13.000Z",
+        "collectedAt": "2026-09-04T00:36:22.375Z",
         "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=49536375",
+          "hnUrl": "https://news.ycombinator.com/item?id=49554520",
           "matchedKeywords": [
-            "ai"
+            "ai",
+            "inference"
           ]
         }
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmtm7yl5s01d5robnsn25onbz",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "OpenAI GPT-6 Astra 在 ARC-AGI-3 上取得 SOTA 并超越人类动作效率基线",
+        "url": "https://arcprize.org/blog/astra",
+        "summary": "OpenAI 的 GPT-6 Astra 在 ARC-AGI-3 Semi-Private 上，Standard harness 得分 62.7%（成本 $26K），Provider Adapter harness 得分 99.9%（成本 $19K），均为 SOTA。",
+        "description": "OpenAI 的 GPT-6 Astra 在 ARC-AGI-3 Semi-Private 上，Standard harness 得分 62.7%（成本 $26K），Provider Adapter harness 得分 99.9%（成本 $19K），均为 SOTA。",
+        "category": "papers",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://arcprize.org/blog/astra",
+        "recommendedReason": "OpenAI 的 GPT-6 Astra 在 ARC-AGI-3 Semi-Private 上，Standard harness 得分 62.7%（成本 $26K），Provider Adapter harness 得分 99.9%（成本 $19K），均为 SOTA。",
+        "publishedAt": "2026-09-04T00:07:48.532Z",
+        "collectedAt": "2026-09-04T00:36:23.409Z",
+        "raw": {
+          "id": "cmtm7yl5s01d5robnsn25onbz",
+          "titleEn": "OpenAI的GPT-6 Astra在ARC-AGI-3上的表现",
+          "apiCategory": "paper"
+        }
+      },
+      {
+        "id": "aihot:cmtm7yl5s01d6robnym0jg0b7",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "OpenAI 发布 GPT-6 Astra：多项基准刷新纪录并强化网络安全能力",
+        "url": "https://openai.com/index/gpt-6-astra",
+        "summary": "OpenAI 发布 GPT-6 Astra，称其在 FrontierMath Tier 4 达 98%、ARC-AGI-3 达 99.9%、ExploitBench 达 100%，并称其网络安全能力达到 Preparedness Framework 的 Critical 门槛。",
+        "description": "OpenAI 发布 GPT-6 Astra，称其在 FrontierMath Tier 4 达 98%、ARC-AGI-3 达 99.9%、ExploitBench 达 100%，并称其网络安全能力达到 Preparedness Framework 的 Critical 门槛。",
+        "category": "models",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://openai.com/index/gpt-6-astra",
+        "recommendedReason": "OpenAI 发布 GPT-6 Astra，称其在 FrontierMath Tier 4 达 98%、ARC-AGI-3 达 99.9%、ExploitBench 达 100%，并称其网络安全能力达到 Preparedness Framework 的 Critical 门槛。",
+        "publishedAt": "2026-09-04T00:07:48.515Z",
+        "collectedAt": "2026-09-04T00:36:23.409Z",
+        "raw": {
+          "id": "cmtm7yl5s01d6robnym0jg0b7",
+          "titleEn": "GPT-6 Astra",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmtm7yl5s01dbrobnjyyupz0q",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "开发者用 Claude Fable 5 在 Claude Code 中将 1993 年 Amiga 游戏 Babylonian Twins 移植到 Godot",
+        "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot",
+        "summary": "作者让 Claude Fable 5 在 Claude Code 中分三步移植其 1993 年 Amiga 游戏：34，000 行 C++ 一个晚上迁入 Godot 4，72，758 行无注释 68000 汇编先用 vasm 重建出与发售版字节一致的二进制再移植，并把 1993 原作作为第二启动项嵌入新游戏。",
+        "description": "作者让 Claude Fable 5 在 Claude Code 中分三步移植其 1993 年 Amiga 游戏：34，000 行 C++ 一个晚上迁入 Godot 4，72，758 行无注释 68000 汇编先用 vasm 重建出与发售版字节一致的二进制再移植，并把 1993 原作作为第二启动项嵌入新游戏。",
+        "category": "tools",
+        "originalSource": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "originalUrl": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot",
+        "recommendedReason": "作者让 Claude Fable 5 在 Claude Code 中分三步移植其 1993 年 Amiga 游戏：34，000 行 C++ 一个晚上迁入 Godot 4，72，758 行无注释 68000 汇编先用 vasm 重建出与发售版字节一致的二进制再移植，并把 1993 原作作为第二启动项嵌入新游戏。",
+        "publishedAt": "2026-09-04T00:07:47.851Z",
+        "collectedAt": "2026-09-04T00:36:23.409Z",
+        "raw": {
+          "id": "cmtm7yl5s01dbrobnjyyupz0q",
+          "titleEn": "将我1993年的Amiga游戏移植到Godot上，由LLM解析68000汇编代码",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmtm5q99n018rrow0z6je2l9y",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Gary Marcus 评 GPT-6 Astra：进步明显但鲁棒性与可监控性存疑",
+        "url": "https://garymarcus.substack.com/p/hot-take-on-gpt-6-astra",
+        "summary": "Gary Marcus 发文点评 GPT-6 Astra，称多项报告显示其为真正的进步，OpenAI 产品显式创建并操纵符号世界模型，令其近十年的主张获得印证。",
+        "description": "Gary Marcus 发文点评 GPT-6 Astra，称多项报告显示其为真正的进步，OpenAI 产品显式创建并操纵符号世界模型，令其近十年的主张获得印证。",
+        "category": "tools",
+        "originalSource": "Gary Marcus：The Road to AI We Can Trust（RSS）",
+        "originalUrl": "https://garymarcus.substack.com/p/hot-take-on-gpt-6-astra",
+        "recommendedReason": "Gary Marcus 发文点评 GPT-6 Astra，称多项报告显示其为真正的进步，OpenAI 产品显式创建并操纵符号世界模型，令其近十年的主张获得印证。",
+        "publishedAt": "2026-09-03T23:24:50.000Z",
+        "collectedAt": "2026-09-04T00:36:23.409Z",
+        "raw": {
+          "id": "cmtm5q99n018rrow0z6je2l9y",
+          "titleEn": "Hot take on GPT-6 Astra",
+          "apiCategory": "tip"
+        }
+      },
+      {
+        "id": "aihot:cmtm3lnrg022wrooelnc62oo9",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "OpenAI 发布 GPT-6 Astra，首个达到关键级网络安全能力门槛的模型",
+        "url": "https://www.ithome.com/0/998/208.htm",
+        "summary": "OpenAI 于 9 月 3 日发布新一代大语言模型 GPT-6 Astra，是其首个达到准备框架中关键级网络安全能力门槛的模型，可在无逐步指导下发现防护严密系统的未知漏洞。",
+        "description": "OpenAI 于 9 月 3 日发布新一代大语言模型 GPT-6 Astra，是其首个达到准备框架中关键级网络安全能力门槛的模型，可在无逐步指导下发现防护严密系统的未知漏洞。",
+        "category": "models",
+        "originalSource": "IT之家（RSS）",
+        "originalUrl": "https://www.ithome.com/0/998/208.htm",
+        "recommendedReason": "OpenAI 于 9 月 3 日发布新一代大语言模型 GPT-6 Astra，是其首个达到准备框架中关键级网络安全能力门槛的模型，可在无逐步指导下发现防护严密系统的未知漏洞。",
+        "publishedAt": "2026-09-03T22:28:07.000Z",
+        "collectedAt": "2026-09-04T00:36:23.409Z",
+        "raw": {
+          "id": "cmtm3lnrg022wrooelnc62oo9",
+          "titleEn": "OpenAI GPT-6 Astra 发布，首次达到\"关键\"级网络安全能力门槛",
+          "apiCategory": "ai-models"
+        }
+      },
+      {
+        "id": "aihot:cmtm2suk00171rooej14mutgj",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "Greg Brockman 转发：GPT-6 Astra 在 ARC-AGI-3 达到 SOTA，基准趋于饱和",
+        "url": "https://x.com/gdb/status/2095629409017614390",
+        "summary": "Greg Brockman 转发 @arcprize 的评测称 OpenAI 的 GPT-6 Astra 在 ARC-AGI-3 上取得 SOTA，他称该基准已饱和。Astra 标准 harness 得分 63%，经新的 Provider Adapter harness 达 99%，在 96% 的 ARC-AGI-3 关卡上超越人类表现；排行榜图还显示更高推理层级通常成本更低，因为 Astra 用更少动作通关，减少模型调用和 token 数。",
+        "description": "Greg Brockman 转发 @arcprize 的评测称 OpenAI 的 GPT-6 Astra 在 ARC-AGI-3 上取得 SOTA，他称该基准已饱和。Astra 标准 harness 得分 63%，经新的 Provider Adapter harness 达 99%，在 96% 的 ARC-AGI-3 关卡上超越人类表现；排行榜图还显示更高推理层级通常成本更低，因为 Astra 用更少动作通关，减少模型调用和 token 数。",
+        "category": "models",
+        "originalSource": "X：Greg Brockman (@gdb)",
+        "originalUrl": "https://x.com/gdb/status/2095629409017614390",
+        "recommendedReason": "Greg Brockman 转发 @arcprize 的评测称 OpenAI 的 GPT-6 Astra 在 ARC-AGI-3 上取得 SOTA，他称该基准已饱和。Astra 标准 harness 得分 63%，经新的 Provider Adapter harness 达 99%，在 96% 的 ARC-AGI-3 关卡上超越人类表现；排行榜图还显示更高推理层级通常成本更低，因为 Astra 用更少动作通关，减少模型调用和 token 数。",
+        "publishedAt": "2026-09-03T21:46:00.000Z",
+        "collectedAt": "2026-09-04T00:36:23.409Z",
+        "raw": {
+          "id": "cmtm2suk00171rooej14mutgj",
+          "titleEn": "arc-agi-3 is now saturated",
+          "apiCategory": "ai-models"
+        }
+      },
       {
         "id": "aihot:cmtm1j0qe0uchrow5ozapge42",
         "source": "aihot",
@@ -1100,7 +1042,7 @@
         "originalUrl": "https://www.marktechpost.com/2026/09/03/openai-releases-gpt-6-astra-a-1-05m-context-computer-use-model-gated-behind-a-critical-cyber-threshold",
         "recommendedReason": "OpenAI 发布 GPT-6 Astra，定位为计算机操作模型，提供 1，050，000 token 上下文窗口、128，000 最大输出 token，2026 年 4 月 30 日知识截止，OSWorld V2-Offline 得分 72.6%（GPT-5.6 Sol 为 65.7%），平均任务时间从约 75 分钟降至 40 分钟。",
         "publishedAt": "2026-09-03T21:16:11.000Z",
-        "collectedAt": "2026-09-03T22:03:21.095Z",
+        "collectedAt": "2026-09-04T00:36:23.409Z",
         "raw": {
           "id": "cmtm1j0qe0uchrow5ozapge42",
           "titleEn": "OpenAI Releases GPT-6 Astra： A 1.05M-Context Computer-Use Model Gated Behind a 'Critical' Cyber Threshold",
@@ -1120,131 +1062,11 @@
         "originalUrl": "https://x.com/AravSrinivas/status/2095621195131695352",
         "recommendedReason": "Perplexity CEO Aravind Srinivas 祝贺 OpenAI 发布 GPT-6 Astra，称其在宽度和深度研究任务上远超其他模型且更具成本效益，将很快向 Perplexity Computer 的 Pro 和 Max 用户开放。",
         "publishedAt": "2026-09-03T21:13:22.000Z",
-        "collectedAt": "2026-09-03T22:03:21.095Z",
+        "collectedAt": "2026-09-04T00:36:23.409Z",
         "raw": {
           "id": "cmtm1xhpk0unkrow52qftlbda",
           "titleEn": "Congrats to @OpenAI on building the industry's frontier model： GPT-6 Astra. It's far ahead of every …",
           "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmtm0r9z00tmkrow5gtxa5j36",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "Rohan Paul 解读 OpenAI GPT-6 Astra 117 页系统卡中的安全发现",
-        "url": "https://x.com/rohanpaul_ai/status/2095616781880869271",
-        "summary": "Rohan Paul 梳理 OpenAI GPT-6 Astra 117 页系统卡的要点：Astra 控制自身链式思维的能力从 GPT-5.6 Sol 的 16.1% 跃升至 60.9%，可监控性相应下降。",
-        "description": "Rohan Paul 梳理 OpenAI GPT-6 Astra 117 页系统卡的要点：Astra 控制自身链式思维的能力从 GPT-5.6 Sol 的 16.1% 跃升至 60.9%，可监控性相应下降。",
-        "category": "tools",
-        "originalSource": "X：Rohan Paul (@rohanpaul_ai)",
-        "originalUrl": "https://x.com/rohanpaul_ai/status/2095616781880869271",
-        "recommendedReason": "Rohan Paul 梳理 OpenAI GPT-6 Astra 117 页系统卡的要点：Astra 控制自身链式思维的能力从 GPT-5.6 Sol 的 16.1% 跃升至 60.9%，可监控性相应下降。",
-        "publishedAt": "2026-09-03T20:55:50.000Z",
-        "collectedAt": "2026-09-03T22:03:21.095Z",
-        "raw": {
-          "id": "cmtm0r9z00tmkrow5gtxa5j36",
-          "titleEn": "Some revelations from the 117 page system card of OpenAI's GPT-6 Astra - Astra's ability to delibe…",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmtlzumiu0soirow5cfujh2xf",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "ARC-AGI-3 发布仅半年即被 Astra 饱和，进展快于 François Chollet 预期一倍",
-        "url": "https://x.com/sherwinwu/status/2095608725730119733",
-        "summary": "Sherwin Wu 表示自己曾觉得 ARC-AGI-3 很难，如今该基准已被 Astra 饱和。引用 François Chollet 的话称，ARC 3 发布时他预计前沿模型约一年才能饱和，实际只用了 6 个月，约为预期的 2 倍速度，新一代模型的能力将挑战人们基于旧模型形成的 AI 观点。",
-        "description": "Sherwin Wu 表示自己曾觉得 ARC-AGI-3 很难，如今该基准已被 Astra 饱和。引用 François Chollet 的话称，ARC 3 发布时他预计前沿模型约一年才能饱和，实际只用了 6 个月，约为预期的 2 倍速度，新一代模型的能力将挑战人们基于旧模型形成的 AI 观点。",
-        "category": "tools",
-        "originalSource": "X：Sherwin Wu（@sherwinwu）",
-        "originalUrl": "https://x.com/sherwinwu/status/2095608725730119733",
-        "recommendedReason": "Sherwin Wu 表示自己曾觉得 ARC-AGI-3 很难，如今该基准已被 Astra 饱和。引用 François Chollet 的话称，ARC 3 发布时他预计前沿模型约一年才能饱和，实际只用了 6 个月，约为预期的 2 倍速度，新一代模型的能力将挑战人们基于旧模型形成的 AI 观点。",
-        "publishedAt": "2026-09-03T20:23:49.000Z",
-        "collectedAt": "2026-09-03T22:03:21.095Z",
-        "raw": {
-          "id": "cmtlzumiu0soirow5cfujh2xf",
-          "titleEn": "Progress continues to surprise even the best of us. ARC-AGI-3 was the first ARC-AGI benchmark that I…",
-          "apiCategory": "tip"
-        }
-      },
-      {
-        "id": "aihot:cmtlzumiu0sojrow5820i30sg",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenAI 发布 GPT-6 Astra，多项基准达到 SOTA",
-        "url": "https://x.com/sherwinwu/status/2095608486940086448",
-        "summary": "OpenAI 发布 GPT-6 Astra，在 FrontierMath Tier 4、ARC-AGI 3、TerminalBench-4.0 上达到 SOTA，并在 Terminal-Bench Science 0.1 和 HealthBench Pro 上取得领先成绩。",
-        "description": "OpenAI 发布 GPT-6 Astra，在 FrontierMath Tier 4、ARC-AGI 3、TerminalBench-4.0 上达到 SOTA，并在 Terminal-Bench Science 0.1 和 HealthBench Pro 上取得领先成绩。",
-        "category": "models",
-        "originalSource": "X：Sherwin Wu（@sherwinwu）",
-        "originalUrl": "https://x.com/sherwinwu/status/2095608486940086448",
-        "recommendedReason": "OpenAI 发布 GPT-6 Astra，在 FrontierMath Tier 4、ARC-AGI 3、TerminalBench-4.0 上达到 SOTA，并在 Terminal-Bench Science 0.1 和 HealthBench Pro 上取得领先成绩。",
-        "publishedAt": "2026-09-03T20:22:52.000Z",
-        "collectedAt": "2026-09-03T22:03:21.095Z",
-        "raw": {
-          "id": "cmtlzumiu0sojrow5820i30sg",
-          "titleEn": "The evals are pretty wild， but there's a more visceral feeling you get when you see Astra do compute…",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmtlzasi70s61row5vze3ldjh",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenAI 发布 GPT-6 Astra，ARC-AGI 3 得分 99.9%",
-        "url": "https://simonwillison.net/2026/Sep/3/gpt6-astra",
-        "summary": "OpenAI 的 GPT-6 Astra 今日起向部分组织推出，随后面向 ChatGPT Plus、Pro、Business、Enterprise 用户开放，API 定价为每百万输入 $10、每百万输出 $50，与 Claude Fable 5/5.1 持平。",
-        "description": "OpenAI 的 GPT-6 Astra 今日起向部分组织推出，随后面向 ChatGPT Plus、Pro、Business、Enterprise 用户开放，API 定价为每百万输入 $10、每百万输出 $50，与 Claude Fable 5/5.1 持平。",
-        "category": "models",
-        "originalSource": "Simon Willison 博客",
-        "originalUrl": "https://simonwillison.net/2026/Sep/3/gpt6-astra",
-        "recommendedReason": "OpenAI 的 GPT-6 Astra 今日起向部分组织推出，随后面向 ChatGPT Plus、Pro、Business、Enterprise 用户开放，API 定价为每百万输入 $10、每百万输出 $50，与 Claude Fable 5/5.1 持平。",
-        "publishedAt": "2026-09-03T20:18:41.000Z",
-        "collectedAt": "2026-09-03T22:03:21.095Z",
-        "raw": {
-          "id": "cmtlzasi70s61row5vze3ldjh",
-          "titleEn": "GPT-6 Astra",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmtlyijva0rlqrow5dkrujvge",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenAI 发布 GPT-6 Astra",
-        "url": "https://x.com/sama/status/2095600005772104059",
-        "summary": "Sam Altman 宣布 GPT-6 Astra 发布，称其为计算机使用、专业工作、科学、编码、网络安全等领域全球最佳模型。官方表示为确保该能力级别所需的安全与对齐标准而多花了些时间，并公布 FrontierMath Tier 4 得分 98%、ARC-AGI 3 得分 99.9%、ExploitBench 得分 100%。",
-        "description": "Sam Altman 宣布 GPT-6 Astra 发布，称其为计算机使用、专业工作、科学、编码、网络安全等领域全球最佳模型。官方表示为确保该能力级别所需的安全与对齐标准而多花了些时间，并公布 FrontierMath Tier 4 得分 98%、ARC-AGI 3 得分 99.9%、ExploitBench 得分 100%。",
-        "category": "models",
-        "originalSource": "X：Sam Altman (@sama)",
-        "originalUrl": "https://x.com/sama/status/2095600005772104059",
-        "recommendedReason": "Sam Altman 宣布 GPT-6 Astra 发布，称其为计算机使用、专业工作、科学、编码、网络安全等领域全球最佳模型。官方表示为确保该能力级别所需的安全与对齐标准而多花了些时间，并公布 FrontierMath Tier 4 得分 98%、ARC-AGI 3 得分 99.9%、ExploitBench 得分 100%。",
-        "publishedAt": "2026-09-03T19:49:10.000Z",
-        "collectedAt": "2026-09-03T22:03:21.095Z",
-        "raw": {
-          "id": "cmtlyijva0rlqrow5dkrujvge",
-          "titleEn": "GPT-6 Astra is here. We hope it will begin to enable a new generation of entrepreneurship， scientif…",
-          "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmtlyeuas0rigrow5d2jq4xb7",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "François Chollet 评 GPT-6 Astra 在 ARC-AGI-3 上的表现",
-        "url": "https://x.com/fchollet/status/2095598451115614371",
-        "summary": "François Chollet 发文称 GPT-6 Astra 在交互式推理任务上带来阶跃式能力提升，使用标准 harness 在 ARC-AGI-3 上得 66%，配合持续对话 harness 和自定义 compaction 接近 100%，每局成本约 $360。",
-        "description": "François Chollet 发文称 GPT-6 Astra 在交互式推理任务上带来阶跃式能力提升，使用标准 harness 在 ARC-AGI-3 上得 66%，配合持续对话 harness 和自定义 compaction 接近 100%，每局成本约 $360。",
-        "category": "tools",
-        "originalSource": "X：Francois Chollet (@fchollet)",
-        "originalUrl": "https://x.com/fchollet/status/2095598451115614371",
-        "recommendedReason": "François Chollet 发文称 GPT-6 Astra 在交互式推理任务上带来阶跃式能力提升，使用标准 harness 在 ARC-AGI-3 上得 66%，配合持续对话 harness 和自定义 compaction 接近 100%，每局成本约 $360。",
-        "publishedAt": "2026-09-03T19:42:59.000Z",
-        "collectedAt": "2026-09-03T22:03:21.095Z",
-        "raw": {
-          "id": "cmtlyeuas0rigrow5d2jq4xb7",
-          "titleEn": "GPT-6 Astra represents a step-function change in model capability for interactive reasoning problems…",
-          "apiCategory": "tip"
         }
       }
     ]
