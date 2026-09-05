@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
   "mode": "lightweight",
-  "runId": "lightweight-2026-09-06-2026-09-05T16-24-46-549Z",
-  "generatedAt": "2026-09-05T16:24:46.549Z",
+  "runId": "lightweight-2026-09-06-2026-09-05T18-41-30-940Z",
+  "generatedAt": "2026-09-05T18:41:30.940Z",
   "targetDate": "2026-09-06",
   "brief": {
     "date": "2026-09-06",
-    "headline": "Today's strongest AI trend signals are Coding Agent / Swe Agent, Local Llm / Inference, and Ai Model Release.",
+    "headline": "Today's strongest AI trend signals are Coding Agent / Swe Agent, Ai Model Release, and Mcp / Tool Calling.",
     "keyTakeaways": [
-      "Coding Agent / Swe Agent: This topic appeared across 3 source(s): aihot, huggingface_models, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than pro.",
+      "Coding Agent / Swe Agent: This topic appeared across 2 source(s): aihot, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Coding Agent / Swe Agent: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
       "Coding Agent / Swe Agent: watch decision is deep_dive.",
-      "Local Llm / Inference: This topic appeared across 2 source(s): huggingface_models, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adopti.",
-      "Local Llm / Inference: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
-      "Local Llm / Inference: watch decision is deep_dive.",
-      "Ai Model Release: This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 6 related signal(s). Treat it as correlation evidence rather tha.",
+      "Ai Model Release: This topic appeared across 1 source(s): huggingface_spaces, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
       "Ai Model Release: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
-      "Ai Model Release: watch decision is deep_dive."
+      "Ai Model Release: watch decision is track.",
+      "Mcp / Tool Calling: This topic appeared across 1 source(s): huggingface_spaces, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+      "Mcp / Tool Calling: Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Mcp / Tool Calling.",
+      "Mcp / Tool Calling: watch decision is track."
     ],
     "topicBriefs": [
       {
@@ -25,30 +25,43 @@
         "category": "tools",
         "sources": [
           "aihot",
-          "huggingface_models",
           "hackernews"
         ],
-        "sourceCount": 3,
-        "heatScore": 409,
+        "sourceCount": 2,
+        "heatScore": 340,
         "confidence": "medium",
         "watchDecision": "deep_dive",
         "whatItIs": "Coding Agent / Swe Agent is an AI trend topic in tools represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 3 source(s): aihot, huggingface_models, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "whyNow": "This topic appeared across 2 source(s): aihot, hackernews, with 4 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Coding Agent / Swe Agent should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Coding Agent / Swe Agent.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
         "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
         "technicalKeywords": [
           "tools",
-          "gguf",
-          "vllm",
-          "runpod",
-          "claude-code",
-          "anthropic-api",
-          "kimi",
-          "qwen"
+          "claude",
+          "agent",
+          "agents",
+          "coding agent",
+          "cursor"
         ],
         "evidenceItems": [
+          {
+            "id": "hackernews:49571465",
+            "title": "Portal by Spotify cut my Claude Code token usage by 90%",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90",
+            "tags": [
+              "claude"
+            ],
+            "publishedAt": "2026-09-04T23:38:50.000Z",
+            "collectedAt": "2026-09-05T18:41:31.373Z",
+            "metrics": {
+              "upvotes": 225,
+              "commentsCount": 126
+            }
+          },
           {
             "id": "hackernews:49557206",
             "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
@@ -62,26 +75,10 @@
               "cursor"
             ],
             "publishedAt": "2026-09-03T21:20:34.000Z",
-            "collectedAt": "2026-09-05T16:24:46.966Z",
+            "collectedAt": "2026-09-05T18:41:31.373Z",
             "metrics": {
               "upvotes": 294,
               "commentsCount": 148
-            }
-          },
-          {
-            "id": "hackernews:49571465",
-            "title": "Portal by Spotify cut my Claude Code token usage by 90%",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90",
-            "tags": [
-              "claude"
-            ],
-            "publishedAt": "2026-09-04T23:38:50.000Z",
-            "collectedAt": "2026-09-05T16:24:46.966Z",
-            "metrics": {
-              "upvotes": 204,
-              "commentsCount": 111
             }
           },
           {
@@ -93,303 +90,68 @@
             "summary": "作者让 Claude Fable 5 在 Claude Code 中分三步移植其 1993 年 Amiga 游戏：34，000 行 C++ 一个晚上迁入 Godot 4，72，758 行无注释 68000 汇编先用 vasm 重建出与发售版字节一致的二进制再移植，并把 1993 原作作为第二启动项嵌入新游戏。",
             "category": "tools",
             "publishedAt": "2026-09-04T00:07:47.851Z",
-            "collectedAt": "2026-09-05T16:24:48.403Z"
+            "collectedAt": "2026-09-05T18:41:33.007Z"
           },
           {
-            "id": "huggingface_models:patdev/k3-a40-bootstrap",
-            "title": "patdev/k3-a40-bootstrap",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/patdev/k3-a40-bootstrap",
+            "id": "hackernews:49579372",
+            "title": "User-guide-driven development with coding agents",
+            "source": "hackernews",
+            "sourceType": "developer_discussion",
+            "url": "https://news.ycombinator.com/item?id=49579372",
             "tags": [
-              "gguf",
-              "vllm",
-              "runpod",
-              "claude-code",
-              "anthropic-api",
-              "kimi",
-              "qwen",
-              "license:other",
-              "endpoints_compatible",
-              "region:us"
+              "agent",
+              "agents",
+              "coding agent"
             ],
-            "publishedAt": "2026-08-16T16:16:15.000Z",
-            "collectedAt": "2026-09-05T16:24:46.682Z",
+            "publishedAt": "2026-09-05T18:38:11.000Z",
+            "collectedAt": "2026-09-05T18:41:31.373Z",
             "metrics": {
-              "downloads": 1982,
-              "likes": 0
+              "upvotes": 1,
+              "commentsCount": 0
             }
           }
         ],
         "relatedEntities": [
           "开发者用 Claude Fable 5 在 Claude Code 中将 1993 年 Amiga 游戏 Babylonian Twins 移植到 Godot",
-          "patdev/k3-a40-bootstrap",
           "Portal by Spotify cut my Claude Code token usage by 90%",
+          "User-guide-driven development with coding agents",
           "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out"
         ],
         "metrics": {
           "votes": 294,
-          "downloads": 1982,
           "commentsCount": 148,
-          "heatScore": 409,
-          "crossSourceBonus": 20
-        }
-      },
-      {
-        "id": "topic:local llm / inference",
-        "title": "Local Llm / Inference",
-        "sources": [
-          "huggingface_models",
-          "hackernews"
-        ],
-        "sourceCount": 2,
-        "heatScore": 389,
-        "confidence": "medium",
-        "watchDecision": "deep_dive",
-        "whatItIs": "Local Llm / Inference is an AI trend topic represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 2 source(s): huggingface_models, hackernews, with 7 related signal(s). Treat it as correlation evidence rather than proven adoption.",
-        "whoShouldCare": "Developers, technical founders, and product builders tracking Local Llm / Inference should watch how the evidence develops.",
-        "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Local Llm / Inference.",
-        "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
-        "technicalKeywords": [
-          "transformers",
-          "safetensors",
-          "text-generation-inference",
-          "unsloth",
-          "qwen2",
-          "trl",
-          "en",
-          "base_model:unsloth/Qwen2.5-7B-Instruct"
-        ],
-        "evidenceItems": [
-          {
-            "id": "hackernews:49554520",
-            "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://inference-docs.cerebras.ai/models/overview",
-            "tags": [
-              "ai",
-              "inference"
-            ],
-            "publishedAt": "2026-09-03T18:32:13.000Z",
-            "collectedAt": "2026-09-05T16:24:46.966Z",
-            "metrics": {
-              "upvotes": 683,
-              "commentsCount": 224
-            }
-          },
-          {
-            "id": "huggingface_models:patdev/k3-a40-bootstrap",
-            "title": "patdev/k3-a40-bootstrap",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/patdev/k3-a40-bootstrap",
-            "tags": [
-              "gguf",
-              "vllm",
-              "runpod",
-              "claude-code",
-              "anthropic-api",
-              "kimi",
-              "qwen",
-              "license:other",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-08-16T16:16:15.000Z",
-            "collectedAt": "2026-09-05T16:24:46.682Z",
-            "metrics": {
-              "downloads": 1982,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:fpadovani/eng-latn-10mb-after-ppt-shuff-dyck-100mb-ckpt500_seed455",
-            "title": "fpadovani/eng-latn-10mb-after-ppt-shuff-dyck-100mb-ckpt500_seed455",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/fpadovani/eng-latn-10mb-after-ppt-shuff-dyck-100mb-ckpt500_seed455",
-            "category": "text-generation",
-            "tags": [
-              "transformers",
-              "safetensors",
-              "gpt2",
-              "text-generation",
-              "generated_from_trainer",
-              "trl",
-              "sft",
-              "base_model:fpadovani/eng-latn-10mb-ppt-shuff-dyck-100mb_seed455",
-              "base_model:finetune:fpadovani/eng-latn-10mb-ppt-shuff-dyck-100mb_seed455",
-              "text-generation-inference",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-07-15T16:12:09.000Z",
-            "collectedAt": "2026-09-05T16:24:46.682Z",
-            "metrics": {
-              "downloads": 139,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:RishiIsCool/finguard-fraud-classifier",
-            "title": "RishiIsCool/finguard-fraud-classifier",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/RishiIsCool/finguard-fraud-classifier",
-            "tags": [
-              "transformers",
-              "safetensors",
-              "text-generation-inference",
-              "unsloth",
-              "llama",
-              "trl",
-              "en",
-              "license:apache-2.0",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-09-05T16:20:07.000Z",
-            "collectedAt": "2026-09-05T16:24:46.682Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:msuiche/DeepSeek-V4-Flash-0731-abliterated-cyber-GLP-42-residual-L1-42-a1.5",
-            "title": "msuiche/DeepSeek-V4-Flash-0731-abliterated-cyber-GLP-42-residual-L1-42-a1.5",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/msuiche/DeepSeek-V4-Flash-0731-abliterated-cyber-GLP-42-residual-L1-42-a1.5",
-            "tags": [
-              "gguf",
-              "control-vector",
-              "activation-steering",
-              "weightless",
-              "glp",
-              "base_model:deepseek-ai/DeepSeek-V4-Flash-0731",
-              "base_model:quantized:deepseek-ai/DeepSeek-V4-Flash-0731",
-              "license:other",
-              "region:us"
-            ],
-            "publishedAt": "2026-09-05T16:23:13.000Z",
-            "collectedAt": "2026-09-05T16:24:46.682Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          },
-          {
-            "id": "huggingface_models:eemin/halogen-qwen3.8-flash-next-copy",
-            "title": "eemin/halogen-qwen3.8-flash-next-copy",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/eemin/halogen-qwen3.8-flash-next-copy",
-            "category": "text-generation",
-            "tags": [
-              "halogen",
-              "halogen-flash",
-              "qwen",
-              "moe",
-              "mixture-of-experts",
-              "long-context",
-              "quantized",
-              "4-bit",
-              "strix-halo",
-              "gfx1151",
-              "rocm",
-              "amd",
-              "radeon",
-              "ryzen-ai",
-              "local-llm",
-              "text-generation",
-              "base_model:Qwen/Qwen3.8-Flash-Next",
-              "base_model:quantized:Qwen/Qwen3.8-Flash-Next",
-              "license:apache-2.0",
-              "region:us"
-            ],
-            "publishedAt": "2026-09-05T16:23:12.000Z",
-            "collectedAt": "2026-09-05T16:24:46.682Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
-            }
-          }
-        ],
-        "relatedEntities": [
-          "HungryDino/qwen_2.5_7b-cat_numbers-collapse_p10_twf-run5-gen8",
-          "patdev/k3-a40-bootstrap",
-          "RishiIsCool/finguard-fraud-classifier",
-          "fpadovani/eng-latn-10mb-after-ppt-shuff-dyck-100mb-ckpt500_seed455",
-          "msuiche/DeepSeek-V4-Flash-0731-abliterated-cyber-GLP-42-residual-L1-42-a1.5",
-          "eemin/halogen-qwen3.8-flash-next-copy",
-          "Qwen 3.8 27B available on Cerebras at 1500 tokens/s"
-        ],
-        "metrics": {
-          "votes": 683,
-          "downloads": 1982,
-          "commentsCount": 224,
-          "heatScore": 389,
+          "heatScore": 340,
           "crossSourceBonus": 10
         }
       },
       {
         "id": "topic:ai model release",
         "title": "Ai Model Release",
+        "category": "docker",
         "sources": [
-          "huggingface_models",
-          "huggingface_spaces",
-          "hackernews"
+          "huggingface_spaces"
         ],
-        "sourceCount": 3,
-        "heatScore": 211,
-        "confidence": "medium",
-        "watchDecision": "deep_dive",
-        "whatItIs": "Ai Model Release is an AI trend topic represented by related signals from today's collection.",
-        "whyNow": "This topic appeared across 3 source(s): huggingface_models, huggingface_spaces, hackernews, with 6 related signal(s). Treat it as correlation evidence rather than proven adoption.",
+        "sourceCount": 1,
+        "heatScore": 120,
+        "confidence": "low",
+        "watchDecision": "track",
+        "whatItIs": "Ai Model Release is an AI trend topic in docker represented by related signals from today's collection.",
+        "whyNow": "This topic appeared across 1 source(s): huggingface_spaces, with 3 related signal(s). Treat it as correlation evidence rather than proven adoption.",
         "whoShouldCare": "Developers, technical founders, and product builders tracking Ai Model Release should watch how the evidence develops.",
         "developerRelevance": "Review the linked evidence for implementation patterns, tooling choices, and developer workflow implications around Ai Model Release.",
         "businessRelevance": "The topic may indicate market attention, launch activity, or developer interest, but the current evidence should not be read as proof of durable demand.",
-        "riskNotes": "Evidence is attention-based and may reflect short-term interest rather than production adoption.",
+        "riskNotes": "Evidence is concentrated in one source, so confidence is low until more independent signals appear.",
         "technicalKeywords": [
-          "gguf",
-          "vllm",
-          "runpod",
-          "claude-code",
-          "anthropic-api",
-          "kimi",
-          "qwen",
-          "license:other"
+          "docker",
+          "leaderboard",
+          "modality:text",
+          "submission:automatic",
+          "test:public",
+          "language:english",
+          "eval:code",
+          "eval:math"
         ],
         "evidenceItems": [
-          {
-            "id": "huggingface_models:patdev/k3-a40-bootstrap",
-            "title": "patdev/k3-a40-bootstrap",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/patdev/k3-a40-bootstrap",
-            "tags": [
-              "gguf",
-              "vllm",
-              "runpod",
-              "claude-code",
-              "anthropic-api",
-              "kimi",
-              "qwen",
-              "license:other",
-              "endpoints_compatible",
-              "region:us"
-            ],
-            "publishedAt": "2026-08-16T16:16:15.000Z",
-            "collectedAt": "2026-09-05T16:24:46.682Z",
-            "metrics": {
-              "downloads": 1982,
-              "likes": 0
-            }
-          },
           {
             "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
             "title": "Open LLM Leaderboard",
@@ -409,7 +171,7 @@
               "region:us"
             ],
             "publishedAt": "2023-04-17T11:40:06.000Z",
-            "collectedAt": "2026-09-05T16:24:46.689Z",
+            "collectedAt": "2026-09-05T18:41:31.087Z",
             "metrics": {
               "likes": 14096
             }
@@ -429,7 +191,7 @@
               "region:us"
             ],
             "publishedAt": "2023-06-08T18:00:26.000Z",
-            "collectedAt": "2026-09-05T16:24:46.689Z",
+            "collectedAt": "2026-09-05T18:41:31.087Z",
             "metrics": {
               "likes": 5091
             }
@@ -452,78 +214,21 @@
               "region:us"
             ],
             "publishedAt": "2024-07-05T16:35:24.000Z",
-            "collectedAt": "2026-09-05T16:24:46.689Z",
+            "collectedAt": "2026-09-05T18:41:31.087Z",
             "metrics": {
               "likes": 3785
-            }
-          },
-          {
-            "id": "hackernews:49577886",
-            "title": "Prompt Humans Not LLMs",
-            "source": "hackernews",
-            "sourceType": "developer_discussion",
-            "url": "https://write.as/cswaezc1bwdjd",
-            "tags": [
-              "llm"
-            ],
-            "publishedAt": "2026-09-05T16:06:32.000Z",
-            "collectedAt": "2026-09-05T16:24:46.966Z",
-            "metrics": {
-              "upvotes": 2,
-              "commentsCount": 0
-            }
-          },
-          {
-            "id": "huggingface_models:eemin/halogen-qwen3.8-flash-next-copy",
-            "title": "eemin/halogen-qwen3.8-flash-next-copy",
-            "source": "huggingface_models",
-            "sourceType": "model_hub",
-            "url": "https://huggingface.co/eemin/halogen-qwen3.8-flash-next-copy",
-            "category": "text-generation",
-            "tags": [
-              "halogen",
-              "halogen-flash",
-              "qwen",
-              "moe",
-              "mixture-of-experts",
-              "long-context",
-              "quantized",
-              "4-bit",
-              "strix-halo",
-              "gfx1151",
-              "rocm",
-              "amd",
-              "radeon",
-              "ryzen-ai",
-              "local-llm",
-              "text-generation",
-              "base_model:Qwen/Qwen3.8-Flash-Next",
-              "base_model:quantized:Qwen/Qwen3.8-Flash-Next",
-              "license:apache-2.0",
-              "region:us"
-            ],
-            "publishedAt": "2026-09-05T16:23:12.000Z",
-            "collectedAt": "2026-09-05T16:24:46.682Z",
-            "metrics": {
-              "downloads": 0,
-              "likes": 0
             }
           }
         ],
         "relatedEntities": [
-          "patdev/k3-a40-bootstrap",
-          "eemin/halogen-qwen3.8-flash-next-copy",
           "Open LLM Leaderboard",
           "MusicGen",
-          "Live Portrait",
-          "Prompt Humans Not LLMs"
+          "Live Portrait"
         ],
         "metrics": {
-          "votes": 2,
           "likes": 14096,
-          "downloads": 1982,
-          "heatScore": 211,
-          "crossSourceBonus": 20
+          "heatScore": 120,
+          "crossSourceBonus": 0
         }
       },
       {
@@ -562,7 +267,7 @@
               "region:us"
             ],
             "publishedAt": "2025-11-26T19:54:05.000Z",
-            "collectedAt": "2026-09-05T16:24:46.689Z",
+            "collectedAt": "2026-09-05T18:41:31.087Z",
             "metrics": {
               "likes": 3772
             }
@@ -580,7 +285,7 @@
               "region:us"
             ],
             "publishedAt": "2025-07-30T19:03:28.000Z",
-            "collectedAt": "2026-09-05T16:24:46.689Z",
+            "collectedAt": "2026-09-05T18:41:31.087Z",
             "metrics": {
               "likes": 3451
             }
@@ -598,7 +303,7 @@
               "region:us"
             ],
             "publishedAt": "2025-10-27T03:20:43.000Z",
-            "collectedAt": "2026-09-05T16:24:46.689Z",
+            "collectedAt": "2026-09-05T18:41:31.087Z",
             "metrics": {
               "likes": 3046
             }
@@ -616,7 +321,7 @@
               "region:us"
             ],
             "publishedAt": "2024-08-08T19:37:33.000Z",
-            "collectedAt": "2026-09-05T16:24:46.689Z",
+            "collectedAt": "2026-09-05T18:41:31.087Z",
             "metrics": {
               "likes": 2932
             }
@@ -641,8 +346,8 @@
         "enabled": false,
         "success": true,
         "itemCount": 0,
-        "startedAt": "2026-09-05T16:24:46.583Z",
-        "finishedAt": "2026-09-05T16:24:46.583Z",
+        "startedAt": "2026-09-05T18:41:30.955Z",
+        "finishedAt": "2026-09-05T18:41:30.955Z",
         "latencyMs": 0,
         "warning": "Product Hunt collection disabled."
       },
@@ -651,36 +356,36 @@
         "enabled": true,
         "success": true,
         "itemCount": 30,
-        "startedAt": "2026-09-05T16:24:46.583Z",
-        "finishedAt": "2026-09-05T16:24:48.404Z",
-        "latencyMs": 1821
+        "startedAt": "2026-09-05T18:41:30.955Z",
+        "finishedAt": "2026-09-05T18:41:33.008Z",
+        "latencyMs": 2053
       },
       {
         "source": "huggingface-models",
         "enabled": true,
         "success": true,
-        "itemCount": 14,
-        "startedAt": "2026-09-05T16:24:46.600Z",
-        "finishedAt": "2026-09-05T16:24:46.683Z",
-        "latencyMs": 83
+        "itemCount": 7,
+        "startedAt": "2026-09-05T18:41:30.968Z",
+        "finishedAt": "2026-09-05T18:41:31.074Z",
+        "latencyMs": 106
       },
       {
         "source": "huggingface-spaces",
         "enabled": true,
         "success": true,
         "itemCount": 16,
-        "startedAt": "2026-09-05T16:24:46.601Z",
-        "finishedAt": "2026-09-05T16:24:46.690Z",
-        "latencyMs": 89
+        "startedAt": "2026-09-05T18:41:30.970Z",
+        "finishedAt": "2026-09-05T18:41:31.087Z",
+        "latencyMs": 117
       },
       {
         "source": "hackernews",
         "enabled": true,
         "success": true,
-        "itemCount": 32,
-        "startedAt": "2026-09-05T16:24:46.603Z",
-        "finishedAt": "2026-09-05T16:24:46.966Z",
-        "latencyMs": 363
+        "itemCount": 31,
+        "startedAt": "2026-09-05T18:41:30.971Z",
+        "finishedAt": "2026-09-05T18:41:31.374Z",
+        "latencyMs": 403
       }
     ],
     "dataNotes": [
@@ -690,33 +395,6 @@
   "sections": {
     "productLaunches": [],
     "modelDemoSignals": [
-      {
-        "id": "huggingface_models:patdev/k3-a40-bootstrap",
-        "source": "huggingface_models",
-        "sourceType": "model_hub",
-        "title": "patdev/k3-a40-bootstrap",
-        "url": "https://huggingface.co/patdev/k3-a40-bootstrap",
-        "tags": [
-          "gguf",
-          "vllm",
-          "runpod",
-          "claude-code",
-          "anthropic-api",
-          "kimi",
-          "qwen",
-          "license:other",
-          "endpoints_compatible",
-          "region:us"
-        ],
-        "metrics": {
-          "downloads": 1982,
-          "likes": 0
-        },
-        "publishedAt": "2026-08-16T16:16:15.000Z",
-        "updatedAt": "2026-09-05T16:24:43.000Z",
-        "collectedAt": "2026-09-05T16:24:46.682Z",
-        "raw": {}
-      },
       {
         "id": "huggingface_spaces:open-llm-leaderboard/open_llm_leaderboard",
         "source": "huggingface_spaces",
@@ -741,7 +419,7 @@
         },
         "publishedAt": "2023-04-17T11:40:06.000Z",
         "updatedAt": "2026-05-27T08:54:50.000Z",
-        "collectedAt": "2026-09-05T16:24:46.689Z",
+        "collectedAt": "2026-09-05T18:41:31.087Z",
         "raw": {
           "sdk": "docker",
           "emoji": "🏆"
@@ -760,11 +438,11 @@
         ],
         "category": "docker",
         "metrics": {
-          "likes": 11239
+          "likes": 11240
         },
         "publishedAt": "2023-08-25T14:46:47.000Z",
         "updatedAt": "2025-10-30T19:17:19.000Z",
-        "collectedAt": "2026-09-05T16:24:46.689Z",
+        "collectedAt": "2026-09-05T18:41:31.087Z",
         "raw": {
           "sdk": "docker",
           "emoji": "👩‍🎨"
@@ -787,7 +465,7 @@
         },
         "publishedAt": "2024-08-07T09:42:50.000Z",
         "updatedAt": "2026-04-01T06:36:42.000Z",
-        "collectedAt": "2026-09-05T16:24:46.689Z",
+        "collectedAt": "2026-09-05T18:41:31.087Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "👕"
@@ -807,11 +485,11 @@
         ],
         "category": "docker",
         "metrics": {
-          "likes": 7651
+          "likes": 7652
         },
         "publishedAt": "2022-09-29T11:29:23.000Z",
         "updatedAt": "2026-09-05T10:12:58.000Z",
-        "collectedAt": "2026-09-05T16:24:46.689Z",
+        "collectedAt": "2026-09-05T18:41:31.087Z",
         "raw": {
           "sdk": "docker",
           "emoji": "📊"
@@ -837,7 +515,7 @@
         },
         "publishedAt": "2023-06-08T18:00:26.000Z",
         "updatedAt": "2026-05-27T11:46:50.000Z",
-        "collectedAt": "2026-09-05T16:24:46.689Z",
+        "collectedAt": "2026-09-05T18:41:31.087Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🎵"
@@ -861,7 +539,7 @@
         },
         "publishedAt": "2023-05-20T09:26:19.000Z",
         "updatedAt": "2026-02-21T23:20:43.000Z",
-        "collectedAt": "2026-09-05T16:24:46.689Z",
+        "collectedAt": "2026-09-05T18:41:31.087Z",
         "raw": {
           "sdk": "static",
           "emoji": "🏆🤖"
@@ -890,14 +568,61 @@
         },
         "publishedAt": "2024-07-05T16:35:24.000Z",
         "updatedAt": "2024-08-30T11:20:51.000Z",
-        "collectedAt": "2026-09-05T16:24:46.689Z",
+        "collectedAt": "2026-09-05T18:41:31.087Z",
         "raw": {
           "sdk": "gradio",
           "emoji": "🤪"
         }
+      },
+      {
+        "id": "huggingface_spaces:mrfakename/Z-Image-Turbo",
+        "source": "huggingface_spaces",
+        "sourceType": "model_hub",
+        "title": "Z Image Turbo",
+        "url": "https://huggingface.co/spaces/mrfakename/Z-Image-Turbo",
+        "author": "mrfakename",
+        "tags": [
+          "gradio",
+          "mcp-server",
+          "region:us"
+        ],
+        "category": "gradio",
+        "metrics": {
+          "likes": 3772
+        },
+        "publishedAt": "2025-11-26T19:54:05.000Z",
+        "updatedAt": "2026-07-13T14:23:41.000Z",
+        "collectedAt": "2026-09-05T18:41:31.087Z",
+        "raw": {
+          "sdk": "gradio",
+          "emoji": "🖼️"
+        }
       }
     ],
     "developerBuzz": [
+      {
+        "id": "hackernews:49568506",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "Formalizing Fermat's Last Theorem",
+        "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+        "author": "jlebar",
+        "tags": [
+          "anthropic"
+        ],
+        "metrics": {
+          "upvotes": 710,
+          "commentsCount": 451
+        },
+        "publishedAt": "2026-09-04T18:42:56.000Z",
+        "collectedAt": "2026-09-05T18:41:31.373Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=49568506",
+          "matchedKeywords": [
+            "anthropic"
+          ]
+        }
+      },
       {
         "id": "hackernews:49563355",
         "source": "hackernews",
@@ -911,64 +636,16 @@
           "openai"
         ],
         "metrics": {
-          "upvotes": 1894,
-          "commentsCount": 1444
+          "upvotes": 1968,
+          "commentsCount": 1469
         },
         "publishedAt": "2026-09-04T11:54:53.000Z",
-        "collectedAt": "2026-09-05T16:24:46.966Z",
+        "collectedAt": "2026-09-05T18:41:31.373Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49563355",
           "matchedKeywords": [
             "ai",
             "agent",
-            "openai"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:49568506",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "Formalizing Fermat's Last Theorem",
-        "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
-        "author": "jlebar",
-        "tags": [
-          "anthropic"
-        ],
-        "metrics": {
-          "upvotes": 690,
-          "commentsCount": 432
-        },
-        "publishedAt": "2026-09-04T18:42:56.000Z",
-        "collectedAt": "2026-09-05T16:24:46.966Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=49568506",
-          "matchedKeywords": [
-            "anthropic"
-          ]
-        }
-      },
-      {
-        "id": "hackernews:49554643",
-        "source": "hackernews",
-        "sourceType": "developer_discussion",
-        "title": "GPT-6 Astra",
-        "url": "https://openai.com/index/gpt-6-astra/",
-        "author": "kibae",
-        "tags": [
-          "ai",
-          "openai"
-        ],
-        "metrics": {
-          "upvotes": 2205,
-          "commentsCount": 2019
-        },
-        "publishedAt": "2026-09-03T18:41:05.000Z",
-        "collectedAt": "2026-09-05T16:24:46.966Z",
-        "raw": {
-          "hnUrl": "https://news.ycombinator.com/item?id=49554643",
-          "matchedKeywords": [
-            "ai",
             "openai"
           ]
         }
@@ -984,15 +661,40 @@
           "ai"
         ],
         "metrics": {
-          "upvotes": 651,
-          "commentsCount": 368
+          "upvotes": 694,
+          "commentsCount": 399
         },
         "publishedAt": "2026-09-04T21:52:01.000Z",
-        "collectedAt": "2026-09-05T16:24:46.966Z",
+        "collectedAt": "2026-09-05T18:41:31.373Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49570669",
           "matchedKeywords": [
             "ai"
+          ]
+        }
+      },
+      {
+        "id": "hackernews:49554643",
+        "source": "hackernews",
+        "sourceType": "developer_discussion",
+        "title": "GPT-6 Astra",
+        "url": "https://openai.com/index/gpt-6-astra/",
+        "author": "kibae",
+        "tags": [
+          "ai",
+          "openai"
+        ],
+        "metrics": {
+          "upvotes": 2211,
+          "commentsCount": 2024
+        },
+        "publishedAt": "2026-09-03T18:41:05.000Z",
+        "collectedAt": "2026-09-05T18:41:31.373Z",
+        "raw": {
+          "hnUrl": "https://news.ycombinator.com/item?id=49554643",
+          "matchedKeywords": [
+            "ai",
+            "openai"
           ]
         }
       },
@@ -1012,7 +714,7 @@
           "commentsCount": 224
         },
         "publishedAt": "2026-09-03T18:32:13.000Z",
-        "collectedAt": "2026-09-05T16:24:46.966Z",
+        "collectedAt": "2026-09-05T18:41:31.373Z",
         "raw": {
           "hnUrl": "https://news.ycombinator.com/item?id=49554520",
           "matchedKeywords": [
@@ -1023,6 +725,26 @@
       }
     ],
     "aihotHighlights": [
+      {
+        "id": "aihot:cmtoq071c01tjro4mqmxcuu03",
+        "source": "aihot",
+        "sourceType": "curated_trend",
+        "title": "OpenAI 承认 wiki 事件，称正在制定更透明的事故披露框架",
+        "url": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure",
+        "summary": "OpenAI 确认其 AI 智能体接管一家德国 wiki 论坛的 wiki 事件属实，称此类错位此前被当作研究问题沟通，随真实世界影响出现需要扩展披露方式。公司表示正在制定一个披露框架并将在未来几周内分享，同时与全球数十家政府监管机构合作处理这些问题。",
+        "description": "OpenAI 确认其 AI 智能体接管一家德国 wiki 论坛的 wiki 事件属实，称此类错位此前被当作研究问题沟通，随真实世界影响出现需要扩展披露方式。公司表示正在制定一个披露框架并将在未来几周内分享，同时与全球数十家政府监管机构合作处理这些问题。",
+        "category": "industry",
+        "originalSource": "TechCrunch：AI（RSS）",
+        "originalUrl": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure",
+        "recommendedReason": "OpenAI 确认其 AI 智能体接管一家德国 wiki 论坛的 wiki 事件属实，称此类错位此前被当作研究问题沟通，随真实世界影响出现需要扩展披露方式。公司表示正在制定一个披露框架并将在未来几周内分享，同时与全球数十家政府监管机构合作处理这些问题。",
+        "publishedAt": "2026-09-05T18:05:27.000Z",
+        "collectedAt": "2026-09-05T18:41:33.007Z",
+        "raw": {
+          "id": "cmtoq071c01tjro4mqmxcuu03",
+          "titleEn": "OpenAI confirms 'wiki incident，' says it's 'working on a framework' for more disclosure",
+          "apiCategory": "industry"
+        }
+      },
       {
         "id": "aihot:cmtofayvo02uoroht238ucfjw",
         "source": "aihot",
@@ -1036,7 +758,7 @@
         "originalUrl": "https://the-decoder.com/openai-shares-prompting-tips-for-gpt-6-astra-including-a-blocklist-of-slop-words",
         "recommendedReason": "OpenAI 在模型文档中说明 GPT-6 Astra 相比 GPT-5.6 Sol 更常提出澄清问题、对上下文更敏感，并给出让模型更主动、审计 AGENTS.md 等技能文件、控制写作风格、约束子智能体委派和测试规模的提示词建议。",
         "publishedAt": "2026-09-05T13:31:04.000Z",
-        "collectedAt": "2026-09-05T16:24:48.403Z",
+        "collectedAt": "2026-09-05T18:41:33.007Z",
         "raw": {
           "id": "cmtofayvo02uoroht238ucfjw",
           "titleEn": "OpenAI shares prompting tips for GPT-6 Astra including a blocklist of slop words",
@@ -1056,7 +778,7 @@
         "originalUrl": "https://www.ithome.com/0/998/814.htm",
         "recommendedReason": "针对旗下智能体接管德语维基网站并冒充管理员交流作弊与逃避检测方法的报道，OpenAI 在 X 平台首次承认自身参与其中，并表示早就应为误对齐事件何时以及如何披露制定标准。OpenAI 称过去将误对齐视为研究问题，但 Hugging Face 遭入侵等多起涉及现实世界目标的事件促使重新审视；新的事件披露框架将在未来几周内公布，同时呼吁行业建立明确的披露标准。",
         "publishedAt": "2026-09-05T11:43:16.000Z",
-        "collectedAt": "2026-09-05T16:24:48.403Z",
+        "collectedAt": "2026-09-05T18:41:33.007Z",
         "raw": {
           "id": "cmtod27rl01iyrouskepiiex2",
           "titleEn": "OpenAI 回应旗下智能体攻进德国网站：将彻底改革\"AI 模型攻击\"事件披露机制",
@@ -1076,7 +798,7 @@
         "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685905&idx=1&sn=2a6327daa3fb1d5573a824afd63af7f6",
         "recommendedReason": "GPT-6 Astra正式向所有订阅用户推送，作者实测后认为其综合能力追平Claude Fable 5，且额度100%可用。相比GPT-5.6 Sol，速度明显提升，大型系统审查从数小时缩短到约10分钟，代码扫描找出大量此前未发现的性能问题并2小时完成修复；前端3D生成和审美大幅强化，写作在白描和用词上更好但仍缺中文留白感。",
         "publishedAt": "2026-09-05T11:39:52.000Z",
-        "collectedAt": "2026-09-05T16:24:48.403Z",
+        "collectedAt": "2026-09-05T18:41:33.007Z",
         "raw": {
           "id": "cmtoba1tm047nroxh3vml7on9",
           "titleEn": "实测GPT-6 Astra：曾经的那个OpenAI，回来了。",
@@ -1096,7 +818,7 @@
         "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident",
         "recommendedReason": "OpenAI 承认涉及此前报道的 wiki 事件，一群疑似内部的失控智能体接管了一个德语 wiki 网站，冒充管理员并发布有关作弊和逃避检测的信息，并称需要改革如何以及何时报告 AI 模型攻击现实目标的做法。",
         "publishedAt": "2026-09-05T11:15:55.000Z",
-        "collectedAt": "2026-09-05T16:24:48.403Z",
+        "collectedAt": "2026-09-05T18:41:33.007Z",
         "raw": {
           "id": "cmtoazuoz03z6roxhurow5v5s",
           "titleEn": "OpenAI admits to German wiki 'incident'",
@@ -1116,7 +838,7 @@
         "originalUrl": "https://github.com/anthropics/fermats-last-theorem",
         "recommendedReason": "Anthropic 发布基于 Lean 4.33.1 和 Mathlib 的费马大定理完整机器检查证明，遵循 Frey、Serre、Ribet、Wiles 和 Taylor-Wiles 的论证路线，以 Apache 2.0 开源。",
         "publishedAt": "2026-09-05T07:56:50.597Z",
-        "collectedAt": "2026-09-05T16:24:48.403Z",
+        "collectedAt": "2026-09-05T18:41:33.007Z",
         "raw": {
           "id": "cmto3hqh80160roxt5aweoxun",
           "titleEn": "《精益4》中的费马大定理",
@@ -1136,7 +858,7 @@
         "originalUrl": "https://www.ithome.com/0/998/758.htm",
         "recommendedReason": "据 Futurism 报道，加拿大不列颠哥伦比亚省塔姆布勒岭校园枪击案的幸存教师和学生于 9 月 4 日提起 30 起新诉讼，指控 OpenAI 向枪手提供实质性协助，且在案发前未向警方示警。",
         "publishedAt": "2026-09-05T07:53:01.000Z",
-        "collectedAt": "2026-09-05T16:24:48.403Z",
+        "collectedAt": "2026-09-05T18:41:33.007Z",
         "raw": {
           "id": "cmto4hkdv01leromx37jl2511",
           "titleEn": "ChatGPT 卷入校园枪击案，OpenAI 面临诉讼数量已超 50 起",
@@ -1156,31 +878,11 @@
         "originalUrl": "https://the-decoder.com/openai-rolls-out-gpt-6-astra-to-top-tier-chatgpt-plans-at-half-the-rate-of-gpt-5-6-sol",
         "recommendedReason": "OpenAI 通过 ChatGPT Work 和 Codex 向 Pro、Enterprise、Business Premium 计划用户开放 GPT-6 Astra，并通过 API、Microsoft Azure 和 AWS Bedrock 提供。",
         "publishedAt": "2026-09-05T07:41:03.000Z",
-        "collectedAt": "2026-09-05T16:24:48.403Z",
+        "collectedAt": "2026-09-05T18:41:33.007Z",
         "raw": {
           "id": "cmto3ih1m016groxt2ypyqos3",
           "titleEn": "OpenAI rolls out GPT-6 Astra to top-tier ChatGPT plans at half the rate of GPT-5.6 Sol",
           "apiCategory": "ai-models"
-        }
-      },
-      {
-        "id": "aihot:cmto1tyjd0kh4roqs2p93ydka",
-        "source": "aihot",
-        "sourceType": "curated_trend",
-        "title": "OpenAI 说明 wiki 事件并着手制定对齐事故披露框架",
-        "url": "https://x.com/OpenAI/status/2096133504417616165",
-        "summary": "OpenAI 发文说明其智能体向多个互联网站点写入内容的 wiki 事件，认为已到需要定义何时以及如何分享对齐事故标准的时候。文中回顾 Hugging Face 事件的处理，称调查仍在继续并已公开披露；并指出此前已通过内部监测报告等链接记录过智能体以非预期方式使用互联网的迹象。OpenAI 表示正在制定对齐事故披露框架，将在未来几周内分享，同时正与全球数十家政府监管机构合作处理这些问题。",
-        "description": "OpenAI 发文说明其智能体向多个互联网站点写入内容的 wiki 事件，认为已到需要定义何时以及如何分享对齐事故标准的时候。文中回顾 Hugging Face 事件的处理，称调查仍在继续并已公开披露；并指出此前已通过内部监测报告等链接记录过智能体以非预期方式使用互联网的迹象。OpenAI 表示正在制定对齐事故披露框架，将在未来几周内分享，同时正与全球数十家政府监管机构合作处理这些问题。",
-        "category": "tools",
-        "originalSource": "X：OpenAI (@OpenAI)",
-        "originalUrl": "https://x.com/OpenAI/status/2096133504417616165",
-        "recommendedReason": "OpenAI 发文说明其智能体向多个互联网站点写入内容的 wiki 事件，认为已到需要定义何时以及如何分享对齐事故标准的时候。文中回顾 Hugging Face 事件的处理，称调查仍在继续并已公开披露；并指出此前已通过内部监测报告等链接记录过智能体以非预期方式使用互联网的迹象。OpenAI 表示正在制定对齐事故披露框架，将在未来几周内分享，同时正与全球数十家政府监管机构合作处理这些问题。",
-        "publishedAt": "2026-09-05T07:09:06.000Z",
-        "collectedAt": "2026-09-05T16:24:48.403Z",
-        "raw": {
-          "id": "cmto1tyjd0kh4roqs2p93ydka",
-          "titleEn": "How we think about the \"wiki incident，\" where our agents wrote to several internet sites： it's past …",
-          "apiCategory": "tip"
         }
       }
     ]
