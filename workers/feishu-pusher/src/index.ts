@@ -113,9 +113,9 @@ interface SendResult {
 }
 
 const DEFAULT_DIGEST_URL =
-  'https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-daily-digest.json';
+  'https://raw.githubusercontent.com/Tsin418/ai-trend-radar/publish/data/latest-daily-digest.json';
 const DEFAULT_LIGHTWEIGHT_DIGEST_URL =
-  'https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-intelligence-brief.json';
+  'https://raw.githubusercontent.com/Tsin418/ai-trend-radar/publish/data/latest-intelligence-brief.json';
 const DAILY_CRONS = ['30 1 * * *', '45 1 * * *'];
 const PRODUCT_HUNT_ENDPOINT = 'https://api.producthunt.com/v2/api/graphql';
 const CORS_ALLOWED_METHODS = 'GET, POST, OPTIONS';
@@ -1160,7 +1160,7 @@ export default {
         return forbiddenResponse(request, env);
       }
 
-      const githubUrl = `https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main${url.pathname}`;
+      const githubUrl = `https://raw.githubusercontent.com/Tsin418/ai-trend-radar/publish${url.pathname}`;
       const forceRefresh = url.searchParams.has('force_refresh');
       if (forceRefresh && !(await rateLimit(request, env, 'force-refresh', 10, 60))) {
         return rateLimitResponse(request, env);

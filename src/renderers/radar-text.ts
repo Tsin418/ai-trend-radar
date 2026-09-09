@@ -185,7 +185,7 @@ function compactTrendList(items: TrendItem[], metric: 'upvotes' | 'likes' = 'upv
 }
 
 function archiveUrl(digest: RadarDigest): string | null {
-  const base = process.env.DIGEST_ARCHIVE_BASE_URL?.trim() || 'https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/archive';
+  const base = process.env.DIGEST_ARCHIVE_BASE_URL?.trim() || 'https://raw.githubusercontent.com/Tsin418/ai-trend-radar/publish/data/archive';
   if (!base) return null;
   const match = digest.date.match(/^(\d{4})-(\d{2})-/);
   if (!match) return null;

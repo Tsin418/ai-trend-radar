@@ -67,15 +67,12 @@ jobs:
       - name: Typecheck
         run: pnpm typecheck
 
+      - name: Restore data snapshot baseline
+        run: bash scripts/publish-data-snapshot.sh restore
+
       - name: Generate lightweight intelligence brief
         run: pnpm intelligence:lightweight
 
-      - name: Commit latest intelligence brief
+      - name: Publish data snapshot
         if: always()
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          [ -f data/latest-intelligence-brief.json ] && git add data/latest-intelligence-brief.json
-          [ -f data/latest-multisource-signals.json ] && git add data/latest-multisource-signals.json
-          git diff --cached --quiet || git commit -m "chore(radar): update lightweight intelligence brief"
-          git push
+        run: bash scripts/publish-data-snapshot.sh publish
