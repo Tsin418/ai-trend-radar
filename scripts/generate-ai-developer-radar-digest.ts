@@ -8,6 +8,7 @@ import { writeDigestArchive } from '../src/renderers/archive.js';
 import { renderRadarDigestText } from '../src/renderers/radar-text.js';
 import { renderRssXml } from '../src/renderers/rss-feed.js';
 import { runAiDeveloperRadarDaily } from '../src/tasks/ai-developer-radar-daily.js';
+import { runDataCleanup } from '../src/tasks/data-cleanup.js';
 import { generateRadarLlmDigest } from '../src/llm/radar-digest-generator.js';
 
 dotenv.config({ path: '.env.local' });
@@ -160,6 +161,8 @@ async function main(): Promise<void> {
 	console.log(`Generated ${multisourcePath} for ${targetDate}`);
 	console.log(`Generated ${rssOutputPath} for ${targetDate}`);
 	console.log(`Archived ${archive.markdownPath}`);
+
+	runDataCleanup(result.store);
 
 	if (result.notify) {
 		if (result.notify.skipped) {

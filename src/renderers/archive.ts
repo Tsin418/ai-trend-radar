@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { getRetentionConfig } from '../radar/config.js';
 import type { RadarDigest, ScoredRadarRepository } from '../radar/types.js';
 
 export interface ArchiveIndexEntry {
@@ -20,7 +21,6 @@ export interface ArchiveIndex {
 
 export interface DigestArchiveWriteResult {
   markdownPath: string;
-  jsonPath: string;
   indexPath: string;
   readmePath: string;
   entry: ArchiveIndexEntry;
@@ -46,6 +46,10 @@ function dateFolder(date: string): { year: string; month: string } {
 
 function archiveId(digest: RadarDigest): string {
   return `${digest.date}-${digest.mode}`;
+}
+
+export function getArchiveRoot(): string {
+  return process.env.RADAR_ARCHIVE_PATH?.trim() || path.join('data', 'archive');
 }
 
 function renderProject(item: ScoredRadarRepository, index: number): string[] {
@@ -170,13 +174,11 @@ function renderArchiveReadme(index: ArchiveIndex): string {
   return `${lines.join('\n').trim()}\n`;
 }
 
-export function writeDigestArchive(digest: RadarDigest, archiveRoot = path.join('data', 'archive')): DigestArchiveWriteResult {
+export function writeDigestArchive(digest: RadarDigest, archiveRoot = getArchiveRoot()): DigestArchiveWriteResult {
   const { year, month } = dateFolder(digest.date);
   const id = archiveId(digest);
   const relativeMarkdownPath = path.join(year, month, `${id}.md`);
-  const relativeJsonPath = path.join(year, month, `${id}.json`);
   const markdownPath = path.join(archiveRoot, relativeMarkdownPath);
-  const jsonPath = path.join(archiveRoot, relativeJsonPath);
   const indexPath = path.join(archiveRoot, 'index.json');
   const readmePath = path.join(archiveRoot, 'README.md');
   const entry = buildArchiveEntry(digest, relativeMarkdownPath);
@@ -190,16 +192,162 @@ export function writeDigestArchive(digest: RadarDigest, archiveRoot = path.join(
 
   fs.mkdirSync(path.dirname(markdownPath), { recursive: true });
   fs.writeFileSync(markdownPath, renderArchiveMarkdown(digest), 'utf8');
-  fs.writeFileSync(jsonPath, `${JSON.stringify(digest, null, 2)}\n`, 'utf8');
   fs.mkdirSync(path.dirname(indexPath), { recursive: true });
   fs.writeFileSync(indexPath, `${JSON.stringify(nextIndex, null, 2)}\n`, 'utf8');
   fs.writeFileSync(readmePath, renderArchiveReadme(nextIndex), 'utf8');
 
   return {
     markdownPath,
-    jsonPath,
     indexPath,
     readmePath,
     entry
   };
+}
+
+interface ArchivePruneResult {
+  removedFiles: string[];
+  removedEntries: string[];
+}
+
+interface ArchiveFileRecord {
+  id: string;
+  mode: 'daily' | 'weekly';
+  date: string;
+  fullPath: string;
+  relativePath: string;
+  dir: string;
+}
+
+const ARCHIVE_MODE_SUFFIX = /-(daily|weekly)\.md$/;
+
+function collectArchiveMarkdown(archiveRoot: string): ArchiveFileRecord[] {
+  const records: ArchiveFileRecord[] = [];
+  const visit = (dir: string): void => {
+    let names: fs.Dirent[];
+    try {
+      names = fs.readdirSync(dir, { withFileTypes: true });
+    } catch {
+      return;
+    }
+    for (const entry of names) {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        visit(fullPath);
+        continue;
+      }
+      const match = entry.name.match(ARCHIVE_MODE_SUFFIX);
+      if (!match) continue;
+      const mode = match[1] as 'daily' | 'weekly';
+      records.push({
+        id: entry.name.replace(/\.md$/, ''),
+        mode,
+        date: entry.name.slice(0, entry.name.length - match[0].length),
+        fullPath,
+        relativePath: path.relative(archiveRoot, fullPath),
+        dir
+      });
+    }
+  };
+  visit(archiveRoot);
+  return records;
+}
+
+/**
+ * Enforce a rolling retention window over the archive directory:
+ *  - daily markdown entries older than `archiveDailyDays` are removed;
+ *  - only the newest `archiveWeeklyKeep` weekly markdown entries are kept;
+ *  - legacy full-digest `<date>.json` files are always removed (superseded by
+ *    `latest-daily-dashboard.json`; no consumers remain).
+ *
+ * Retention is decided from each file's date-suffixed name, so pruning stays
+ * correct even when `index.json` is missing or stale. `index.json` and
+ * `README.md` are rebuilt to match the surviving files.
+ */
+export function pruneDigestArchive(archiveRoot = getArchiveRoot(), now = new Date()): ArchivePruneResult {
+  const config = getRetentionConfig();
+  const result: ArchivePruneResult = { removedFiles: [], removedEntries: [] };
+  if (!fs.existsSync(archiveRoot)) return result;
+
+  const markdown = collectArchiveMarkdown(archiveRoot);
+  const dailyCutoff = new Date(now.getTime() - config.archiveDailyDays * 24 * 60 * 60 * 1000);
+  const cutoffKey = toDateKey(dailyCutoff);
+
+  const weeklyByDateDesc = markdown
+    .filter((record) => record.mode === 'weekly')
+    .sort((a, b) => b.date.localeCompare(a.date));
+  const weeklyKeep = new Set(weeklyByDateDesc.slice(0, config.archiveWeeklyKeep).map((record) => record.id));
+
+  const keepIds = new Set<string>();
+  for (const record of markdown) {
+    const keep = record.mode === 'weekly'
+      ? weeklyKeep.has(record.id)
+      : record.date >= cutoffKey;
+    if (!keep) {
+      fs.rmSync(record.fullPath, { force: true });
+      result.removedFiles.push(record.relativePath);
+      result.removedEntries.push(record.id);
+      continue;
+    }
+    keepIds.add(record.id);
+  }
+
+  // Remove legacy full-digest JSON and any other stray JSON (except index.json)
+  // throughout the archive tree, then drop empty month/year directories.
+  const dirsToPrune: string[] = [];
+  const visitDirs = (dir: string): void => {
+    let names: fs.Dirent[];
+    try {
+      names = fs.readdirSync(dir, { withFileTypes: true });
+    } catch {
+      return;
+    }
+    for (const entry of names) {
+      if (entry.name === 'index.json' || entry.name === 'README.md') continue;
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        visitDirs(fullPath);
+        dirsToPrune.push(fullPath);
+      } else if (entry.name.endsWith('.json')) {
+        fs.rmSync(fullPath, { force: true });
+        result.removedFiles.push(path.relative(archiveRoot, fullPath));
+      }
+    }
+  };
+  visitDirs(archiveRoot);
+  for (const dir of dirsToPrune.sort((a, b) => b.length - a.length)) {
+    try {
+      if (fs.readdirSync(dir).length === 0) fs.rmdirSync(dir);
+    } catch {
+      // Ignore races with concurrent writers.
+    }
+  }
+
+  // Rebuild index.json / README.md to reflect the surviving files, carrying
+  // metadata forward from the previous index where available.
+  const indexPath = path.join(archiveRoot, 'index.json');
+  const previousIndex = loadArchiveIndex(indexPath);
+  const previousById = new Map(previousIndex.entries.map((entry) => [entry.id, entry]));
+  const entries = markdown
+    .filter((record) => keepIds.has(record.id))
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .map((record) => previousById.get(record.id) ?? {
+      id: record.id,
+      type: record.mode,
+      date: record.date,
+      title: `AI Developer Radar｜${record.mode === 'daily' ? 'Daily' : 'Weekly'}｜${record.date}`,
+      path: record.relativePath,
+      summary: '',
+      topProjects: [],
+      categoryHighlights: []
+    });
+  const nextIndex: ArchiveIndex = { updatedAt: new Date().toISOString(), entries };
+  fs.mkdirSync(archiveRoot, { recursive: true });
+  fs.writeFileSync(indexPath, `${JSON.stringify(nextIndex, null, 2)}\n`, 'utf8');
+  fs.writeFileSync(path.join(archiveRoot, 'README.md'), renderArchiveReadme(nextIndex), 'utf8');
+
+  return result;
+}
+
+function toDateKey(date: Date): string {
+  return date.toISOString().slice(0, 10);
 }

@@ -10,7 +10,7 @@ import type {
   RepoSnapshot,
   WatchlistState
 } from '../radar/types.js';
-import { getWatchlistLifecycleConfig } from '../radar/config.js';
+import { getRetentionConfig, getWatchlistLifecycleConfig } from '../radar/config.js';
 import type { WatchlistEntry } from '../radar/types.js';
 
 function emptyStore(): RadarStoreData {
@@ -360,6 +360,51 @@ export class JsonRadarStore {
     }
 
     if (changed) this.save(data);
+  }
+
+  /**
+   * Cap the unbounded time-series data that accumulates in radar-store.json.
+   * Score history is what the deltas are computed from, so it must never be
+   * pruned shorter than the retention window needed to reconstruct weekly
+   * deltas and week-over-week comparisons (see config defaults).
+   */
+  pruneHistory(now = new Date()): { removedSnapshots: number; removedScores: number; removedDigestRuns: number; removedRepositories: number } {
+    const config = getRetentionConfig();
+    const data = this.load();
+    const snapshotCutoff = dayTimestamp(now.toISOString()) - (config.storeSnapshotDays - 1) * 24 * 60 * 60 * 1000;
+    const scoreCutoff = snapshotCutoff;
+    const digestRunCutoff = dayTimestamp(now.toISOString()) - (config.storeDigestRunDays - 1) * 24 * 60 * 60 * 1000;
+    const repoCutoff = dayTimestamp(now.toISOString()) - config.storeRepoDays * 24 * 60 * 60 * 1000;
+
+    const removedSnapshots = data.snapshots.length;
+    data.snapshots = data.snapshots.filter((snapshot) => dayTimestamp(snapshot.collectedAt) >= snapshotCutoff);
+    const snapshotsPruned = removedSnapshots - data.snapshots.length;
+
+    const removedScores = data.scores.length;
+    data.scores = data.scores.filter((score) => dayTimestamp(score.scoreDate) >= scoreCutoff);
+    const scoresPruned = removedScores - data.scores.length;
+
+    const removedDigestRuns = data.digestRuns.length;
+    data.digestRuns = data.digestRuns
+      .filter((run) => dayTimestamp(run.finishedAt) >= digestRunCutoff)
+      .slice(-config.storeDigestRunMax);
+    const digestRunsPruned = removedDigestRuns - data.digestRuns.length;
+
+    const active = this.getActiveWatchlistNames();
+    const removedRepositories = Object.keys(data.repositories).length;
+    data.repositories = Object.fromEntries(Object.entries(data.repositories).filter(([, repo]) => {
+      if (active.has(repo.repoFullName)) return true;
+      return dayTimestamp(repo.lastSeenAt) >= repoCutoff;
+    }));
+    const repositoriesPruned = removedRepositories - Object.keys(data.repositories).length;
+
+    this.save(data);
+    return {
+      removedSnapshots: snapshotsPruned,
+      removedScores: scoresPruned,
+      removedDigestRuns: digestRunsPruned,
+      removedRepositories: repositoriesPruned
+    };
   }
 }
 

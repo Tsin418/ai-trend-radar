@@ -249,6 +249,30 @@ export function getDigestNarrativeLLMConfig(): LLMEnrichmentConfig {
   };
 }
 
+export interface RadarRetentionConfig {
+  archiveDailyDays: number;
+  archiveWeeklyKeep: number;
+  storeSnapshotDays: number;
+  storeScoreDays: number;
+  storeDigestRunDays: number;
+  storeDigestRunMax: number;
+  storeRepoDays: number;
+  llmCacheDays: number;
+}
+
+export function getRetentionConfig(): RadarRetentionConfig {
+  return {
+    archiveDailyDays: parseNumber(process.env.RADAR_ARCHIVE_DAILY_DAYS, 14),
+    archiveWeeklyKeep: parseNumber(process.env.RADAR_ARCHIVE_WEEKLY_KEEP, 26),
+    storeSnapshotDays: parseNumber(process.env.RADAR_STORE_SNAPSHOT_DAYS, 30),
+    storeScoreDays: parseNumber(process.env.RADAR_STORE_SCORE_DAYS, 30),
+    storeDigestRunDays: parseNumber(process.env.RADAR_STORE_DIGEST_RUN_DAYS, 30),
+    storeDigestRunMax: parseNumber(process.env.RADAR_STORE_DIGEST_RUN_MAX, 300),
+    storeRepoDays: parseNumber(process.env.RADAR_STORE_REPO_DAYS, 90),
+    llmCacheDays: parseNumber(process.env.RADAR_LLM_CACHE_DAYS, 120)
+  };
+}
+
 export function getRadarDigestLLMConfig(): RadarDigestLLMConfig {
   return {
     enabled: parseBoolean(process.env.AI_RADAR_LLM_ENABLED, false),
