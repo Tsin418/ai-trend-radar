@@ -88,10 +88,11 @@ disabled until `RADAR_STATE` exists.
 
 ```toml
 [triggers]
-crons = ["0 1 * * *"]
+crons = ["30 1 * * *", "45 1 * * *", "48 * * * *"]
 
 [vars]
-DIGEST_URL = "https://raw.githubusercontent.com/Tsin418/ai-trend-radar/main/data/latest-daily-digest.json"
+DIGEST_URL = "https://raw.githubusercontent.com/Tsin418/ai-trend-radar/publish/data/latest-daily-digest.json"
+LIGHTWEIGHT_DIGEST_URL = "https://raw.githubusercontent.com/Tsin418/ai-trend-radar/publish/data/latest-intelligence-brief.json"
 MAX_DIGEST_AGE_HOURS = "36"
 PRODUCT_HUNT_ENABLED = "true"
 PRODUCT_HUNT_POST_LIMIT = "10"
@@ -101,6 +102,10 @@ PRODUCT_HUNT_KEYWORDS = "ai,llm,agent,rag,mcp,coding,developer,devtool,automatio
 PRODUCT_HUNT_MIN_VOTES = "10"
 PRODUCT_HUNT_MIN_COMMENTS = "0"
 ```
+
+Runtime data is read from the dedicated `publish` branch (not `main`): every
+radar run force-pushes a single-snapshot commit there, so the raw URLs above
+always serve the latest state without growing `main` history.
 
 Cloudflare Cron uses UTC, so `0 1 * * *` means 09:00 in Asia/Shanghai.
 

@@ -27,11 +27,16 @@ Radar 会从 GitHub Trending、GitHub Search API 和 `config/watchlist.yaml` 收
 Hacker News 开发者讨论、arXiv AI 论文，以及标准化到统一 `TrendItem` 的 Product Hunt 发布信号，用于
 digest 分区和 Cross-source Highlights。
 
-RSS 订阅文件会随每日 radar 生成到 `data/rss.xml`。GitHub Pages 开启后，可通过：
+RSS 订阅文件会随每日 radar 生成到 `data/rss.xml`，并发布到专用 `publish` 分支。可通过：
 
 ```text
-https://<your-org-or-user>.github.io/<repo>/data/rss.xml
+https://raw.githubusercontent.com/<your-org-or-user>/<repo>/publish/data/rss.xml
 ```
+
+运行时数据（`radar-store.json`、digest、dashboard、归档等）都保存在 `publish` 分支，不再进入
+`main` 历史：每次 radar 运行会先恢复上一轮数据，再以"单快照提交"强制推送，因此上述 raw URL
+始终指向最新状态，而 `main` 只保留代码。归档与历史按保留策略滚动裁剪，相关变量见
+`.env.example` 中的 `RADAR_ARCHIVE_DAILY_DAYS`、`RADAR_STORE_SNAPSHOT_DAYS` 等。
 
 外部用户也可以通过 GitHub Issue 表单订阅邮件摘要：
 

@@ -33,6 +33,15 @@ sections and cross-source highlights.
 The first run creates the baseline snapshot. Star deltas become meaningful from
 the next daily run; weekly deltas become meaningful after about seven days.
 
+Runtime data lives on a dedicated `publish` branch, not on `main`. Each radar
+run restores the previous data state, then force-pushes a single-snapshot
+commit, so raw URLs such as
+`https://raw.githubusercontent.com/<owner>/<repo>/publish/data/latest-daily-digest.json`
+always serve the newest state while `main` stays free of generated artifacts.
+Archive and history are capped by a retention policy (see
+`RADAR_ARCHIVE_DAILY_DAYS`, `RADAR_STORE_SNAPSHOT_DAYS` and related variables in
+`.env.example`).
+
 ## Core Features
 
 🎯 **Personalized Ranking** - Multi-dimensional scoring based on keywords, language preferences, and focus areas
