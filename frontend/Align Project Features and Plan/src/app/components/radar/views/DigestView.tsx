@@ -1,5 +1,6 @@
 import { Card } from '../../ui/card';
 import { DigestPreview } from '../DigestPreview';
+import { fetchRadarData } from '../../../services/radarDataSources';
 import type { RadarDigest } from '../../../types/radar';
 import { fmtRelative } from '../../../utils/format';
 import { useEffect, useMemo, useState } from 'react';
@@ -34,10 +35,8 @@ export function DigestView({ digest }: { digest: RadarDigest }) {
 
     async function loadArchiveIndex() {
       try {
-        const response = await fetch('/data/archive/index.json', {
-          headers: { Accept: 'application/json' },
-        });
-        if (!response.ok) throw new Error(`Archive index failed: ${response.status}`);
+        const response = await fetchRadarData('/data/archive/index.json');
+        if (!response) throw new Error('Archive index failed: no data source responded');
         const data = await response.json() as ArchiveIndex;
         if (cancelled) return;
 
@@ -60,10 +59,10 @@ export function DigestView({ digest }: { digest: RadarDigest }) {
 
     setLoadingArchiveId(entry.id);
     try {
-      const response = await fetch(`/data/archive/${entry.path}`, {
-        headers: { Accept: 'text/markdown,text/plain' },
+      const response = await fetchRadarData(`/data/archive/${entry.path}`, {
+        accept: 'text/markdown,text/plain',
       });
-      if (!response.ok) throw new Error(`Archive markdown failed: ${response.status}`);
+      if (!response) throw new Error(`Archive markdown failed: no data source responded`);
       const markdown = await response.text();
       setArchiveMarkdown(markdown);
     } catch {

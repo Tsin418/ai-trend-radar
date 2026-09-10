@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { fetchRadarData } from '../services/radarDataSources';
 import type { TrendItem, TrendEntity } from '../types/radar';
 
 interface MultisourceSignalsFile {
@@ -32,7 +33,7 @@ const EMPTY: MultisourceSections = {
 	generatedAt: null,
 };
 
-const MULTISOURCE_URL = '/data/latest-multisource-signals.json';
+const MULTISOURCE_PATH = '/data/latest-multisource-signals.json';
 
 function isMultisourceFile(value: unknown): value is MultisourceSignalsFile {
 	if (!value || typeof value !== 'object') return false;
@@ -49,10 +50,10 @@ export function useMultisourceSignals(): MultisourceSections {
 
 		async function fetchSignals() {
 			try {
-				const response = await fetch(MULTISOURCE_URL, {
-					headers: { Accept: 'application/json' },
+				const response = await fetchRadarData(MULTISOURCE_PATH, {
+					envKey: 'VITE_RADAR_MULTISOURCE_URL',
 				});
-				if (!response.ok || cancelled) return;
+				if (!response || cancelled) return;
 				const json = await response.json() as unknown;
 				if (!isMultisourceFile(json)) return;
 				setSections({

@@ -1,13 +1,9 @@
 import { latestDailyDashboardToRadarDigest } from '../adapters/latestDailyDashboardAdapter';
+import { fetchRadarData } from './radarDataSources';
 import type { LatestDailyDashboardFile } from '../types/dashboard';
 import type { RadarDigest } from '../types/radar';
 
 const DEFAULT_DASHBOARD_URL = '/data/latest-daily-dashboard.json';
-
-function dashboardUrl(): string {
-  const env = (import.meta as ImportMeta & { env?: Record<string, string | undefined> }).env;
-  return env?.VITE_RADAR_DASHBOARD_URL || DEFAULT_DASHBOARD_URL;
-}
 
 function isObject(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null;
@@ -32,15 +28,10 @@ function assertLatestDailyDashboardFile(value: unknown): asserts value is Latest
 }
 
 export async function fetchLatestRadarDigest(): Promise<RadarDigest> {
-  const url = dashboardUrl();
-  const response = await fetch(url, {
-    headers: {
-      Accept: 'application/json',
-    },
-  });
+  const response = await fetchRadarData(DEFAULT_DASHBOARD_URL, { envKey: 'VITE_RADAR_DASHBOARD_URL' });
 
-  if (!response.ok) {
-    throw new Error(`Failed to load dashboard JSON from ${url}: ${response.status} ${response.statusText}`);
+  if (!response) {
+    throw new Error(`Failed to load dashboard JSON from ${DEFAULT_DASHBOARD_URL}: no data source responded.`);
   }
 
   const json = await response.json() as unknown;
