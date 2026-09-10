@@ -6,7 +6,9 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: ai-developer-radar-daily
+  # Shared with every other workflow that force-pushes the `publish` branch, so
+  # their full-tree snapshots cannot interleave and drop each other's files.
+  group: radar-data-publish
   cancel-in-progress: false
 
 permissions:
