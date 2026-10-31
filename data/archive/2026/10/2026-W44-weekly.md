@@ -1,0 +1,117 @@
+# AI Developer Radar | Weekly | 2026-W44
+
+**Generated:** 2026-10-26T05:36:42.374Z
+
+## Today's Summary
+
+本周 MCP / Tool Calling 的平均增长信号最强，建议优先关注其工具链、协议适配和开发者工作流变化。
+
+## Hot Projects
+
+### 1. makecindy/cindy
+- **Stars:** 5,200 (+1,089 / 24h, n/a / 7d)
+- **Category:** AI Agent Framework
+- **Why it matters:** AI Agent Framework 方向保持持续热门，24h stars +1089，总 stars 5,200，适合看近期 release、commit 或社区讨论是否解释了增长。
+- **Developer insight:** 可以用一个最小样例验证 API、文档和集成成本，再决定是否纳入长期技术观察。
+- **Risk:** Low
+- [View on GitHub](https://github.com/makecindy/cindy)
+
+### 2. esengine/DeepSeek-Reasonix
+- **Stars:** 35,967 (+14 / 24h, +121 / 7d)
+- **Category:** Coding Agent / SWE Agent
+- **Why it matters:** Coding Agent / SWE Agent 方向一周增长 +121，属于持续升温信号。
+- **Developer insight:** 关注它如何拆解代码任务、接入工具和处理仓库上下文，可作为 coding agent 产品能力参考。
+- **Risk:** Low
+- [View on GitHub](https://github.com/esengine/DeepSeek-Reasonix)
+
+### 3. Kilo-Org/kilocode
+- **Stars:** 27,753 (+13 / 24h, +99 / 7d)
+- **Category:** MCP / Tool Calling
+- **Why it matters:** MCP / Tool Calling 方向一周增长 +99，属于持续升温信号。
+- **Developer insight:** 重点看协议适配、工具注册和真实示例，判断它是否能降低 agent 接工具的成本。
+- **Risk:** Low
+- [View on GitHub](https://github.com/Kilo-Org/kilocode)
+
+### 4. Nutlope/hallmark
+- **Stars:** 34,323 (+2,156 / 24h, n/a / 7d)
+- **Category:** Coding Agent / SWE Agent
+- **Why it matters:** Coding Agent / SWE Agent 方向保持持续热门，24h stars +2156，总 stars 34,323，适合看近期 release、commit 或社区讨论是否解释了增长。
+- **Developer insight:** 关注它如何拆解代码任务、接入工具和处理仓库上下文，可作为 coding agent 产品能力参考。
+- **Risk:** Low
+- [View on GitHub](https://github.com/Nutlope/hallmark)
+
+### 5. milvus-io/milvus
+- **Stars:** 46,480 (+11 / 24h, +64 / 7d)
+- **Category:** Vector Database / Embedding
+- **Why it matters:** Vector Database / Embedding 方向出现突然加速：24h stars +11，前 3 日均值 5，加速度 2.2x，今天值得优先排查触发原因。
+- **Developer insight:** 可以用一个最小样例验证 API、文档和集成成本，再决定是否纳入长期技术观察。
+- **Risk:** Low
+- [View on GitHub](https://github.com/milvus-io/milvus)
+
+### 6. JetBrains/thinkrail
+- **Stars:** 2,012 (n/a / 24h, n/a / 7d)
+- **Category:** MCP / Tool Calling
+- **Why it matters:** MCP / Tool Calling 相关性较高，当前分数主要来自项目定位、活跃度和开发者可用性。
+- **Developer insight:** 重点看协议适配、工具注册和真实示例，判断它是否能降低 agent 接工具的成本。
+- **Risk:** Low
+- [View on GitHub](https://github.com/JetBrains/thinkrail)
+
+### 7. google-ai-edge/mediapipe
+- **Stars:** 37,404 (+9 / 24h, +86 / 7d)
+- **Category:** Local LLM / Inference
+- **Why it matters:** Local LLM / Inference 方向一周增长 +86，属于持续升温信号。
+- **Developer insight:** 重点看部署复杂度、性能边界和模型兼容性，判断是否能进入本地 AI 应用栈。
+- **Risk:** Low
+- [View on GitHub](https://github.com/google-ai-edge/mediapipe)
+
+### 8. meilisearch/meilisearch
+- **Stars:** 59,670 (+17 / 24h, +71 / 7d)
+- **Category:** Vector Database / Embedding
+- **Why it matters:** Vector Database / Embedding 相关性较高，当前分数主要来自项目定位、活跃度和开发者可用性。
+- **Developer insight:** 可以用一个最小样例验证 API、文档和集成成本，再决定是否纳入长期技术观察。
+- **Risk:** Low
+- [View on GitHub](https://github.com/meilisearch/meilisearch)
+
+### 9. AgriciDaniel/claude-seo
+- **Stars:** 21,210 (n/a / 24h, n/a / 7d)
+- **Category:** AI Agent Framework
+- **Why it matters:** AI Agent Framework 相关性较高，当前分数主要来自项目定位、活跃度和开发者可用性。
+- **Developer insight:** 可以用一个最小样例验证 API、文档和集成成本，再决定是否纳入长期技术观察。
+- **Risk:** Low
+- [View on GitHub](https://github.com/AgriciDaniel/claude-seo)
+
+### 10. deepspeedai/DeepSpeed
+- **Stars:** 43,275 (+8 / 24h, +33 / 7d)
+- **Category:** Local LLM / Inference
+- **Why it matters:** Local LLM / Inference 相关性较高，当前分数主要来自项目定位、活跃度和开发者可用性。
+- **Developer insight:** 重点看部署复杂度、性能边界和模型兼容性，判断是否能进入本地 AI 应用栈。
+- **Risk:** Low
+- [View on GitHub](https://github.com/deepspeedai/DeepSpeed)
+
+### 11. ultralytics/yolov5
+- **Stars:** 58,222 (+7 / 24h, +41 / 7d)
+- **Category:** Local LLM / Inference
+- **Why it matters:** Local LLM / Inference 相关性较高，当前分数主要来自项目定位、活跃度和开发者可用性。
+- **Developer insight:** 重点看部署复杂度、性能边界和模型兼容性，判断是否能进入本地 AI 应用栈。
+- **Risk:** Low
+- [View on GitHub](https://github.com/ultralytics/yolov5)
+
+### 12. OrchestratorInc/agent-orchestrator
+- **Stars:** 13,650 (n/a / 24h, n/a / 7d)
+- **Category:** AI Agent Framework
+- **Why it matters:** AI Agent Framework 相关性较高，当前分数主要来自项目定位、活跃度和开发者可用性。
+- **Developer insight:** 可以用一个最小样例验证 API、文档和集成成本，再决定是否纳入长期技术观察。
+- **Risk:** Low
+- [View on GitHub](https://github.com/OrchestratorInc/agent-orchestrator)
+
+## Data Notes
+
+- weekly delta 来自约 7 天前 snapshot 对比。
+- 分类、风险和 insight 均为 rule-based MVP，可在 V2 接入 LLM 增强。
+- LLM enrichment partially unavailable for 10 project(s); fallback descriptions were used.
+- Weekly narrative LLM failed, using template fallback: DeepSeek API request failed: HTTP 401. {"error":{"message":"Authentication Fails, Your api key: ****c776 is invalid (request_id: 0b4e31de-6f9e-43bc-81c8-8a587825ffd7)","type":"authentication_error","param":null,"code":"invalid_request_error"}}
+- Collector warning: Watchlist collection failed: GitHub API request failed: HTTP 404. {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+
+---
+
+*Generated by [AI Trend Radar](https://github.com/Tsin418/ai-trend-radar)*
